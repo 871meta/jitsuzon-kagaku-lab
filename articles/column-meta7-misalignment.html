@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-meta7-misalignment.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>「天命で稼ぐ」という誤配列に気づいた話｜Meta7で見抜いた深層構造の罠 | 実存科学研究所</title>
+  <meta name="description" content="「天命で稼ぐ」という誤配列。Meta7で見抜いた深層構造の罠と、天命の商業化が孕む危険性。">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --text: rgba(235, 232, 225, 0.92); --text-secondary: rgba(235, 232, 225, 0.55); --bg: #080610; --border: rgba(192, 168, 120, 0.15); --accent: #c0a878; --highlight: rgba(192, 168, 120, 0.06); --blockquote-border: rgba(192, 168, 120, 0.4); --definition-bg: rgba(192, 168, 120, 0.04); --max-width: 780px; }
+    html { font-size: 17px; scroll-behavior: smooth; }
+    body { font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif; color: var(--text); background: var(--bg); line-height: 2; -webkit-font-smoothing: antialiased; }
+    .page-container { max-width: var(--max-width); margin: 0 auto; padding: 3rem 1.5rem 6rem; }
+    .page-header { text-align: center; padding: 4rem 0 3rem; border-bottom: 2px solid var(--accent); margin-bottom: 3rem; }
+    .page-header .label { font-size: 0.85rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 0.8rem; font-family: "Noto Sans JP", sans-serif; }
+    .page-header .category-tag { font-family: "Noto Sans JP", sans-serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; background: var(--accent); padding: 0.15rem 0.6rem; display: inline-block; margin-bottom: 1rem; }
+    .page-header h1 { font-size: 1.4rem; font-weight: 700; line-height: 1.6; margin-bottom: 0.3rem; }
+    .page-header .subtitle { font-size: 0.95rem; color: var(--text-secondary); }
+    p { margin-bottom: 1rem; text-align: justify; }
+    strong { font-weight: 700; }
+    h2.section-heading { font-size: 1.2rem; font-weight: 700; margin-top: 3.5rem; margin-bottom: 1rem; line-height: 1.6; border-bottom: 2px solid var(--accent); padding-bottom: 0.6rem; }
+    h3.subsection-heading { font-size: 1rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.8rem; line-height: 1.6; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
+    blockquote { border-left: 3px solid var(--blockquote-border); padding: 0.8rem 1.5rem; margin: 1.5rem 0; color: var(--text-secondary); background: rgba(255,255,255,0.03); }
+    blockquote p:last-child { margin-bottom: 0; }
+    .item-list { margin: 1rem 0 1rem 1.5rem; line-height: 2; }
+    .item-list li { margin-bottom: 0.4rem; }
+    .core-insight { background: var(--definition-bg); border: 1px solid var(--border); border-left: 4px solid var(--accent); padding: 1.5rem 2rem; margin: 2rem 0; font-size: 1.1rem; font-weight: 700; text-align: center; line-height: 1.8; }
+    hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
+    .back-nav { margin-top: 4rem; padding: 1.5rem 2rem; background: var(--highlight); border: 1px solid var(--border); text-align: center; }
+    .back-nav a { color: var(--accent); text-decoration: none; font-weight: 700; }
+    .back-nav a:hover { opacity: 0.7; }
+    @media (max-width: 600px) { html { font-size: 15px; } .page-container { padding: 2rem 1rem 4rem; } .page-header h1 { font-size: 1.2rem; } h2.section-heading { font-size: 1.1rem; } }
+
+/* === Dark Theme Override === */
+a:not(.btn):not(.session-card__link) { color: #c0a878; transition: color 0.2s; }
+a:not(.btn):not(.session-card__link):hover { color: #e8d8b8; }
+.category-tag { color: #080610 !important; background: #c0a878 !important; }
+.back-nav { background: rgba(192, 168, 120, 0.06); border-color: rgba(192, 168, 120, 0.15); }
+.back-nav a { color: #c0a878; }
+img { border-radius: 2px; }
+input, textarea, select { background: rgba(255,255,255,0.05); color: rgba(235,232,225,0.92); border-color: rgba(201,168,76,0.2); }
+input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); outline: none; }
+::placeholder { color: rgba(235,232,225,0.3); }
+.submit-btn, button[type="submit"] { background: #c0a878; color: #080610; border: none; }
+
+</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <meta property="og:title" content="「天命で稼ぐ」という誤配列に気づいた話｜Meta7で見抜いた深層構造の罠 | 実存科学研究所">
+  <meta property="og:description" content="メタセブン（Meta7）で見抜いた「深層構造の罠」">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="実存科学研究所">
+<meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+<meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="../index.html" class="site-logo">実存科学研究所</a>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="global-nav">
+        <a href="../index.html">Top</a>
+        <a href="../beginner.html">Guide</a>
+        <a href="../epistemology.html">Epistemology</a>
+        <a href="../semantics.html">Semantics</a>
+        <a href="../society.html">Society</a>
+        <a href="../founder.html">Founder</a>
+        <a href="../session.html">Session</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">More</button>
+          <div class="nav-dropdown__menu">
+            <a href="../metaplay.html">Meta Play™</a>
+            <a href="../dark-side/">ダークサイド診断</a>
+            <a href="../omoidasu/">身体的知性診断</a>
+            <a href="../trial.html">無料トライアル</a>
+            <a href="../session-menu.html">12の対話（領域）</a>
+            <a href="../letters.html">21の手紙</a>
+            <a href="../uniqueness.html">独自性と射程</a>
+            <a href="../faq.html">FAQ</a>
+            <a href="../archives.html">記事一覧</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+<div class="page-container">
+
+  <header class="page-header fade-in">
+    <p class="label">EXISTENTIAL SCIENCE RESEARCH INSTITUTE</p>
+    <span class="category-tag">コラム</span>
+    <h1>「天命で稼ぐ」という誤配列に気づいた話</h1>
+    <p class="subtitle">メタセブン（Meta7）で見抜いた「深層構造の罠」</p>
+  </header>
+
+  <div class="pull-quote fade-in"><p>天命は天命の高さに保ち、収入は現象に任せる。この分離構造こそ、人が軽く、静かに、そして誠実に生きていくための基盤である。</p></div>
+
+  <article>
+
+    <!-- 1 -->
+    <h2 class="section-heading fade-in">1. 天命で生きているはずなのに、なぜ苦しかったのか</h2>
+
+    <div class="text-panel fade-in">
+    <p>先日から、私は説明のつかない重さと苦しさを抱えていた。</p>
+    <p>「天命の言語化セッション™」を行い、Meta（必然）の視点から世界を見てきたにもかかわらず、<strong>「天命なのに、どうしてこんなに苦しいのか」</strong>という矛盾が内側に残っていた。</p>
+    <p>表面的には、お金・集客・売上といった現象が原因に見えた。</p>
+    <p>しかし、どこかで「これは表面的な問題ではない」という直感が強く存在していた。「どうしたものか」と考えていたところ<strong>「Meta7（メタセブン）」</strong>という構造が思い浮かんだ。</p>
+    <p>「Meta 7」で内面を観測し直すことで問題が解決された。以下にそれを明示する。</p>
+    </div>
+
+    <hr>
+
+    <!-- メリット -->
+    <h2 class="section-heading fade-in">このコラムがあなたに役に立つ理由</h2>
+
+    <p>このコラムを読むことで、あなたは次のようなメリットを得られる。</p>
+    <ul class="item-list">
+      <li><strong>自分でも気づけない「深層の思い込み（＝二次シャドウ）」を発見できる</strong></li>
+      <li><strong>天命・使命・好きなことを仕事にする際の"落とし穴"を事前に回避できる</strong></li>
+      <li><strong>Meta7を使って、自分の苦しみを階層構造で観測する方法がわかる</strong></li>
+      <li><strong>「天命で生きようとすると苦しくなる理由」を構造的に理解できる</strong></li>
+      <li><strong>努力・根性・意志ではなく、"構造そのものを整えるアプローチ"が身につく</strong></li>
+      <li><strong>自分の才能・使命・役割を濁らせない"安全な歩き方"がわかる</strong></li>
+    </ul>
+    <p>このように、本コラムは"特殊な体験記"ではなく、読者自身に直接役立つ「構造マニュアル」として機能する。</p>
+
+    <hr>
+
+    <!-- 2 -->
+    <h2 class="section-heading fade-in">2. Meta7（メタセブン）とは</h2>
+
+    <p>Meta7とは、<strong>世界の出来事を"7つの階層"に分けて観察するための構造的フレーム</strong>である。</p>
+    <p>人が苦しみを感じるとき、現象・感情・意味・構造が一つに潰れて混線していることが多い。</p>
+    <p>Meta7はその混線をほどき、どの階層で問題が発生しているのかを特定するための"認識の地図"である。</p>
+    <p>階層は以下の7つで構成される。</p>
+
+    <h3 class="subsection-heading fade-in">① 現象（げんしょう）</h3>
+    <p>意味付けが入る前の「生の事実」。経済状況・仕事のやり取り・体調の変化・人間関係の出来事・天候・身体感覚など、ただ起きている出来事のみを扱う。</p>
+
+    <h3 class="subsection-heading fade-in">② 感情（かんじょう）</h3>
+    <p>現象に対して生じる身体・心の反応。焦り、疲労、虚しさ、不安などのネガティブな反応に限らず、安堵、喜び、期待、静けさなどのポジティブな反応もここに含まれる。</p>
+
+    <h3 class="subsection-heading fade-in">③ 意味（いみ）</h3>
+    <p>人間が自動的に行う「解釈」や「物語」。ネガティブなもの（「これは失敗では？」「天命が間違っている？」）だけでなく、ポジティブなもの（「これはうまくいっている？」「流れが良いように感じる」など）もここに属する。</p>
+
+    <h3 class="subsection-heading fade-in">④ 構造（こうぞう）</h3>
+    <p>現象・感情・意味を生み出している"仕組み"。<strong>原初の記憶（幼少期の体験）・非合理的な信念・合理的な信念・禁止令（親や環境から刷り込まれた行動制限）</strong>などの深層要素もここに現れる。</p>
+
+    <h3 class="subsection-heading fade-in">⑤ Meta（メタ）</h3>
+    <p>構造のさらに上位にある「全体の必然」。</p>
+    <p>（箭内にとっては）<strong>「Metaがある限り自由意志はない」</strong>が中核。</p>
+
+    <h3 class="subsection-heading fade-in">⑥ 中動態（ちゅうどうたい）</h3>
+    <p>「自分がやっている／やらされている」という二分法を超え、<strong>「動かされながら動いている」</strong>と感じる層である。この層では、主体が完全に消えるわけではなく、かといって能動的に「自分がやっている」とも言い切れない。</p>
+    <ul class="item-list">
+      <li>外側の流れ（状況・縁・タイミング）</li>
+      <li>内側の衝動（なぜかそうせざるを得ない感覚）</li>
+    </ul>
+    <p>この二つが同時に働き、<strong>「選んでいるようで、選ばされている」</strong>という感覚が強くなる。</p>
+    <p>ここで重要になるのが<strong>中動態構文</strong>である。</p>
+    <blockquote class="fade-in">
+      <p>「〜しようとしているようだ」</p>
+      <p>「〜させられている気がする」</p>
+      <p>「〜してしまっているように感じる」</p>
+    </blockquote>
+    <p>といった言い回しは、能動（〜する）でも受動（〜させられる）でもなく、<strong>「動きのただ中にいる自分」を語る文体</strong>であり、まさに中動態の経験をそのまま表現している。</p>
+    <p>中動態の層では、行動は「決めるもの」ではなく、<strong>「そうなっていく流れを観測しながら、結果として起きてしまうもの」</strong>として経験される。</p>
+    <p>ここから、完全構造（静止）の手前の段階として、<strong>「流れと自分の動きが静かに一致し始める」</strong>という感覚が強まっていく。</p>
+
+    <h3 class="subsection-heading fade-in">⑦ 完全構造（かんぜんこうぞう）</h3>
+    <p>Meta・構造・意味・現象がそれぞれ本来の階層に収まり、互いに干渉せずに整合し始める地点である。</p>
+    <p>ここでは、外側の出来事への評価や意味付けが静まり、抵抗や執着が自然に消え、ただ「起こることを起こるまま観測している」という静かな明晰さだけが残る状態となる。</p>
+
+    <hr>
+
+    <!-- 3 -->
+    <h2 class="section-heading fade-in">3. Meta7で自分自身を観測した結果</h2>
+
+    <p>Meta7を使って、自分の状態を階層ごとに観測していった。</p>
+
+    <h3 class="subsection-heading fade-in">● 現象</h3>
+    <ul class="item-list">
+      <li>売上や申込みの波が落ち着いている</li>
+      <li>集客や反応に手応えがない時期が続いている</li>
+      <li>お金に関する心配ごとが頭から離れない</li>
+    </ul>
+
+    <h3 class="subsection-heading fade-in">● 感情</h3>
+    <ul class="item-list">
+      <li>焦り</li>
+      <li>虚しさ</li>
+      <li>疲労</li>
+      <li>「報われていない感じ」</li>
+    </ul>
+
+    <h3 class="subsection-heading fade-in">● 意味（誤作動していた層）</h3>
+    <ul class="item-list">
+      <li>「もっと頑張らねばならない」</li>
+      <li>「天命なのにうまくいかないのはおかしい」</li>
+      <li>「このままでは終わってしまう」</li>
+    </ul>
+    <p>しかし、ここまではあくまで"表面"である。</p>
+
+    <hr>
+
+    <!-- 4 -->
+    <h2 class="section-heading fade-in">4. 見抜くべきは「構造」だった</h2>
+
+    <p>Meta7の<strong>「構造レイヤー」</strong>を観測した瞬間、決定的な誤配列が見えた。</p>
+    <p>それは──</p>
+
+    <div class="core-insight">『天命の言語化セッション™だけが、唯一の収入源であるべき』</div>
+
+    <p>という、強烈な無意識の前提だった。</p>
+    <p>私はこの前提を<strong>意識していたわけではない</strong>。しかし構造としては完全に作用していた。</p>
+    <ul class="item-list">
+      <li>天命で稼げなければ終わり</li>
+      <li>他の収入源を持つのは逃げ</li>
+      <li>天命で食えなければ天命の価値が下がる</li>
+    </ul>
+    <p>この前提は、<strong>Metaレイヤーの「自由意志はない」と"真逆"の構造</strong>である。</p>
+    <p>つまり私は、<strong>Meta（必然）と、自分の構造（べき論）を衝突させていた</strong>。この矛盾が、私を苦しめていた。</p>
+
+    <hr>
+
+    <!-- 5 -->
+    <h2 class="section-heading fade-in">5. Metaレイヤーを照射したときに見えた矛盾</h2>
+
+    <p>Metaの中心原理は<strong>「自由意志はない」</strong>である。</p>
+    <p>この原理に照らすと、下記が成立する：</p>
+    <ul class="item-list">
+      <li>天命で稼げるかは"意図"ではなく"結果"である</li>
+      <li>収入源が何になるかは、Metaの配置であって自分では選べない</li>
+      <li>「天命で稼がなければならない」は、自由意志の主張でありMetaと矛盾</li>
+    </ul>
+    <p>したがって、天命に収入の全責任を背負わせた瞬間、<strong>天命そのものが濁り始めるのは当然の流れだった。</strong></p>
+
+    <hr>
+
+    <!-- 6 -->
+    <h2 class="section-heading fade-in">6. 中動態──前提が外れた瞬間に起きた変化</h2>
+
+    <p>この「唯一の収入源であるべき」という構造を手放した瞬間、内側に大きな変化が起きた。</p>
+    <ul class="item-list">
+      <li>「どうでもよい」という静かな安堵</li>
+      <li>意図や作為の薄まり</li>
+      <li>内的対話が静かになり、観測が勝つ</li>
+      <li>主体性が弱まり、「動かされる感覚」が強くなる</li>
+    </ul>
+    <p>これは、<strong>意志で努力する状態（能動態）から、中動態への移行</strong>である。</p>
+    <p>「私が選ぶ」「私が頑張る」という構造が溶け、<strong>"現象が起こり、私はそれを観測しながら動かされていく"</strong>という状態が定着し始めた。</p>
+
+    <hr>
+
+    <!-- 7 -->
+    <h2 class="section-heading fade-in">7. 完全構造──天命とお金の"分離"が成立した地点</h2>
+
+    <p>前提を手放してしばらくすると、深い静止が訪れた。</p>
+    <ul class="item-list">
+      <li>天命は天命のレイヤーに戻り</li>
+      <li>収入は現象レイヤーの問題に戻り</li>
+      <li>意味付けの必要が減り</li>
+      <li>「焦り」や「恐怖」が立ち上がらなくなる</li>
+    </ul>
+    <p>ここでようやく理解が定着した：</p>
+
+    <div class="core-insight">天命は"起こるべきこと"であり、収入は"現象の流れ"である</div>
+
+    <p>この2つを混ぜたときに、私は壊れた。手放したときに、私は静止した。</p>
+    <p>そして、静止した瞬間に現れたのが、<strong>「どうでもよい」</strong>というあの落ち着きだった。</p>
+
+    <hr>
+
+    <!-- 8 -->
+    <h2 class="section-heading fade-in">8. 親愛なるあなたへ</h2>
+
+    <div class="text-panel fade-in">
+    <p>この経験は、私だけの特殊な物語ではないだろう。</p>
+    <p>むしろ多くの人が知らず知らずのうちに、似た構造の罠にハマっている可能性がある。</p>
+    </div>
+    <ul class="item-list">
+      <li><strong>「この仕事だけで食べていかなければならない」</strong></li>
+      <li><strong>「この才能で必ず成功しなければならない」</strong></li>
+      <li><strong>「これ以外に道はない」</strong></li>
+    </ul>
+    <p>こうした"唯一化の構造"は、<strong>天命・使命・才能をもっとも濁らせる要因</strong>である。</p>
+    <p>あなたの中にも、もし似た前提が存在するなら、それは一次的な不安よりも深い、<strong>二次シャドウ（深層構造）</strong>かもしれない。</p>
+    <p>例えば、次のような内的なつぶやきがある場合は要注意である。</p>
+    <ul class="item-list">
+      <li>「本当は他のやり方もあるのに、これ"一本"しか選んではいけない気がする」</li>
+      <li>「この道で稼げない自分には価値がないように感じる」</li>
+      <li>「やめてもいい、とは頭で分かっていても、やめたら"負け"だと感じてしまう」</li>
+    </ul>
+    <p>こうした前提は、静かに人を追い詰めていく。</p>
+
+    <hr>
+
+    <!-- 9 -->
+    <h2 class="section-heading fade-in">9. おわりに ─ 天命の高さを取り戻す構造</h2>
+
+    <p>天命で稼ぐこと自体は間違いではない。むしろ自然な"結果"である。</p>
+    <p>しかし、</p>
+
+    <div class="core-insight">「天命だけで稼がなければならない」</div>
+
+    <p>という前提は、Meta構造と矛盾し、人を確実に苦しめる。</p>
+    <p>天命は天命の高さに保ち、収入は現象に任せる。この分離構造こそ、人が軽く、静かに、そして誠実に生きていくための基盤である。</p>
+    <p>Meta7は、この分離と統合を正確に行うための"構造的ツール"であり、今回の体験はその威力を痛感する機会となった。</p>
+    <p>私はこのプロセスを通して、天命の高さと現象の軽さを取り戻したのである。</p>
+    <p>以上の文面が、あなたの探究のお役に立てば幸いです。</p>
+
+    <div class="highlight-block fade-in"><p>天命は天命の高さに保ち、収入は現象に任せる。この分離構造こそ、人が軽く、静かに、そして誠実に生きていくための基盤である。</p></div>
+
+  </article>
+</div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container--wide">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <p class="footer-col__title">Guide</p>
+          <a href="../beginner.html">はじめての方へ</a>
+          <a href="../glossary.html">用語集</a>
+          <a href="../session-flow.html">セッションの流れ</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Theory</p>
+          <a href="../epistemology.html">認識論</a>
+          <a href="../semantics.html">意味論</a>
+          <a href="../society.html">社会論</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Contents</p>
+          <a href="../archives.html">記事一覧</a>
+          <a href="../session-menu.html">12の対話（領域）</a>
+          <a href="../letters.html">21の手紙</a>
+          <a href="../metaplay.html">Meta Play™︎</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Session</p>
+          <a href="../session.html">天命の言語化セッション™</a>
+          <a href="../dark-side/">ダークサイド診断</a>
+          <a href="../omoidasu/">身体的知性診断</a>
+          <a href="../uniqueness.html">独自性と射程</a>
+          <a href="../trial.html">無料トライアル</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Institute</p>
+          <a href="../founder.html">創始者</a>
+          <a href="../faq.html">FAQ</a>
+          <a href="../contact.html">お問い合わせ</a>
+          <a href="../legal/legal-tokushoho.html">特定商取引法</a>
+          <a href="../legal/legal-privacy-policy.html">プライバシーポリシー</a>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 実存科学研究所 — Existential Science Institute</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "「天命で稼ぐ」という誤配列に気づいた話｜Meta7で見抜いた深層構造の罠",
+  "description": "「天命で稼ぐ」という誤配列。Meta7で見抜いた深層構造の罠と、天命の商業化が孕む危険性。",
+  "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-meta7-misalignment.html",
+  "author": {
+    "@type": "Person",
+    "name": "箭内宏紀",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/founder.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  },
+  "inLanguage": "ja",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  }
+}
+</script>
+</body>
+</html>

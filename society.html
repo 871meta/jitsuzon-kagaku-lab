@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ja" style="--accent: #9B7EC8;">
+
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/society.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>社会論 — 心友と文明 | 実存科学研究所</title>
+  <meta name="description" content="意味の整合は関係へ波及し、文明を再配置する。天命を語り合える関係──心友──が文明を更新する構造連鎖モデル。">
+  <meta property="og:title" content="社会論 — 心友と文明 | 実存科学研究所">
+  <meta property="og:description" content="認識から意味へ、意味から関係へ、関係から社会へ。構造連鎖としての文明更新モデル。">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="実存科学研究所">
+  <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* --- Luxury upgrades: glass-card for visual-summary, definition-block, diagram-box --- */
+    .visual-summary {
+      background: rgba(15, 12, 25, 0.7);
+      border: 1px solid rgba(192, 168, 120, 0.12);
+      box-shadow: 0 2px 24px rgba(192, 168, 120, 0.05);
+      backdrop-filter: blur(8px);
+      position: relative;
+      overflow: hidden;
+    }
+    .visual-summary::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.4), transparent);
+    }
+    .definition-block {
+      background: rgba(15, 12, 25, 0.5);
+      border: 1px solid rgba(192, 168, 120, 0.12);
+      box-shadow: 0 2px 24px rgba(192, 168, 120, 0.05);
+      backdrop-filter: blur(8px);
+      padding: 2.5rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .definition-block::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.4), transparent);
+    }
+    .diagram-box {
+      background: rgba(15, 12, 25, 0.7);
+      border: 1px solid rgba(192, 168, 120, 0.12);
+      box-shadow: 0 2px 24px rgba(192, 168, 120, 0.05);
+      backdrop-filter: blur(8px);
+      position: relative;
+      overflow: hidden;
+    }
+    .diagram-box::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.4), transparent);
+    }
+    /* META7: 2行に自然に分割 */
+    .meta7-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      flex-wrap: nowrap;
+    }
+    .meta7-row + .meta7-row {
+      margin-top: 1.2rem;
+    }
+
+    /* --- Mobile: hide br in content blocks --- */
+    @media (max-width: 480px) {
+      .text-panel p br,
+      .pull-quote p br,
+      .highlight-block p br,
+      .def-box p br,
+      .quote-block br,
+      .cta-block__desc br {
+        display: none;
+      }
+      .visual-summary { padding: 2rem 1.2rem; }
+      .visual-summary__flow { flex-direction: column; }
+      .visual-summary__flow-arrow { transform: rotate(90deg); }
+      .definition-block { padding: 2rem 1.2rem; }
+      .diagram-box { padding: 2rem 1rem; }
+    }
+
+    /* META7 モバイル専用：矢印は常に→、ノードを縮小して1行に収める */
+    @media (max-width: 768px) {
+      .meta7-row .diagram-box__arrow {
+        transform: none !important;
+        padding: 0 0.25rem !important;
+        font-size: 0.9rem;
+      }
+      .meta7-row .diagram-box__node {
+        padding: 0.45rem 0.55rem;
+        font-size: 0.7rem;
+      }
+      .meta7-row + .meta7-row {
+        margin-top: 0.8rem;
+      }
+    }
+    @media (max-width: 390px) {
+      .meta7-row .diagram-box__node {
+        padding: 0.35rem 0.4rem;
+        font-size: 0.65rem;
+      }
+      .meta7-row .diagram-box__arrow {
+        padding: 0 0.15rem !important;
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="index.html" class="site-logo">実存科学研究所</a>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="global-nav">
+        <a href="index.html">Top</a>
+        <a href="beginner.html">Guide</a>
+        <a href="epistemology.html">Epistemology</a>
+        <a href="semantics.html">Semantics</a>
+        <a href="society.html">Society</a>
+        <a href="founder.html">Founder</a>
+        <a href="session.html">Session</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">More</button>
+          <div class="nav-dropdown__menu">
+            <a href="metaplay.html">Meta Play™</a>
+            <a href="dark-side/">ダークサイド診断</a>
+            <a href="omoidasu/">身体的知性診断</a>
+            <a href="trial.html">無料トライアル</a>
+            <a href="session-menu.html">12の対話（領域）</a>
+            <a href="letters.html">21の手紙</a>
+            <a href="uniqueness.html">独自性と射程</a>
+            <a href="faq.html">FAQ</a>
+            <a href="archives.html">記事一覧</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <svg width="64" height="64" viewBox="0 0 48 48" fill="none" style="display:block;margin:0 auto 1.5rem;">
+        <circle cx="24" cy="24" r="6" stroke="#9B7EC8" stroke-width=".5" fill="none" opacity=".5"/>
+        <circle cx="24" cy="24" r="12" stroke="#9B7EC8" stroke-width=".5" fill="none" opacity=".35"/>
+        <circle cx="24" cy="24" r="18" stroke="#9B7EC8" stroke-width=".5" fill="none" opacity=".2"/>
+        <circle cx="24" cy="24" r="2" fill="#9B7EC8" opacity=".5"/>
+      </svg>
+      <p class="page-hero__sub fade-in">Part 3 — Social Theory</p>
+      <h1 class="fade-in">社会論 — 心友™</h1>
+      <p class="page-hero__lead fade-in">
+        天命を語り合える同志が、文化文明を創る。
+      </p>
+</div>
+  </section>
+
+  <!-- Content -->
+  <section class="section">
+    <div class="container">
+
+      <!-- Visual Summary -->
+      <div class="visual-summary fade-in">
+        <p class="visual-summary__title">Structural Chain</p>
+        <div class="visual-summary__flow">
+          <span class="visual-summary__flow-node">個体の整合</span>
+          <span class="visual-summary__flow-arrow">&rarr;</span>
+          <span class="visual-summary__flow-node">関係の変容</span>
+          <span class="visual-summary__flow-arrow">&rarr;</span>
+          <span class="visual-summary__flow-node">文化の更新</span>
+          <span class="visual-summary__flow-arrow">&rarr;</span>
+          <span class="visual-summary__flow-node">文明のOS</span>
+        </div>
+      </div>
+
+      <!-- Pull Quote — ページ冒頭 -->
+      <div class="pull-quote fade-in">
+        <p>個体の整合は関係を変え、関係の整合は文化を変える。<br>文化の変化は、社会文明のOSそのものを更新する。</p>
+      </div>
+
+      <!-- 社会論の定義 -->
+      <div class="content-block text-panel fade-in">
+        <h2 class="section__title section__title--left">社会論とは</h2>
+        <div class="def-box">
+          <p class="def-box__term">Definition</p>
+          <p>
+            認識論が語りの前提構造を明らかにし、意味論が天命という収束点を導出した。
+          </p>
+          <p>
+            では、その収束は個体の内部で完結するのか。
+          </p>
+          <p>
+            <strong>否、である。</strong>
+          </p>
+          <p>
+            実存科学の社会論は、<strong>個体に生じた整合が、構造的必然として外部へ波及する</strong>ことを示す。
+            <br>個体の整合は関係を変え、関係の整合は文化を変える。
+            <br>文化の変化は、社会文明のOSそのものを更新する。
+          </p>
+        </div>
+      </div>
+
+      <hr class="separator">
+
+      <!-- 文明更新モデル -->
+      <div class="content-block text-panel fade-in">
+        <h2 class="section__title section__title--left">Meta7モデル</h2>
+
+        <div class="diagram-box">
+          <p class="diagram-box__title">Meta7 Model</p>
+          <div class="meta7-row">
+            <span class="diagram-box__node">現象</span>
+            <span class="diagram-box__arrow">&rarr;</span>
+            <span class="diagram-box__node">感情</span>
+            <span class="diagram-box__arrow">&rarr;</span>
+            <span class="diagram-box__node">意味</span>
+            <span class="diagram-box__arrow">&rarr;</span>
+            <span class="diagram-box__node">構造</span>
+          </div>
+          <div class="meta7-row">
+            <span class="diagram-box__arrow">&rarr;</span>
+            <span class="diagram-box__node">Meta</span>
+            <span class="diagram-box__arrow">&rarr;</span>
+            <span class="diagram-box__node">中動態</span>
+            <span class="diagram-box__arrow">&rarr;</span>
+            <span class="diagram-box__node">完全構造＜愛＞</span>
+          </div>
+        </div>
+
+        <p>
+          現象から感情へ、感情から意味へ、
+          <br>意味から構造へ、構造からMetaへ、
+          <br>Metaから中動態へ、中動態から完全構造＜愛＞へ<br>
+          これは理想論ではない。<strong>構造連鎖としての文明更新モデル</strong>である。
+        </p>
+        <p>
+          意味を構造として共有できる関係が増加するとき、
+          <br>社会は自由意志を前提とした選択のモデルから、<br>
+          <strong>意味の収束を基盤とするモデルへと、確実に、そして不可逆的に移行する</strong>。
+        </p>
+      </div>
+
+      <hr class="separator">
+
+      <!-- 心友 -->
+      <div class="content-block text-panel fade-in">
+        <h2 class="section__title section__title--left">心友™</h2>
+        <div class="def-box">
+          <p class="def-box__term">Definition</p>
+          <p>
+            本研究が<strong>「心友™」</strong>と呼ぶのは、<strong>天命を語り合える関係</strong>のことである。
+          </p>
+        </div>
+        <p>
+          心友™とは、相互の天命を構造として承認し合い、その語りが各自の実存に再接続される関係を指す。
+        </p>
+        <p>
+          利害や感情的な結びつきを否定するものではないが、心友™の本質はそこにはない。
+        </p>
+        <p>
+          <strong>意味を構造として共有できること</strong>──これが心友™の成立条件である。
+          <br>そしてこの関係の質的転換が、文明の更新を駆動する。
+        </p>
+
+        <div class="quote-block fade-in">
+          生きる意味を語れる社会へ──それが実存科学の社会論的帰結である。
+        </div>
+      </div>
+
+      <hr class="separator">
+
+      <!-- Links -->
+      <div class="content-block text-panel fade-in">
+        <h3>論考を読む</h3>
+        <ul class="link-list">
+          <li><a href="articles/part3.html"
+              rel="noopener">第3部『生きる意味を語れる社会へ』を読む &rarr;</a></li>
+          <li><a href="articles/10reasons-part3.html"
+              rel="noopener">第3部を読むべき10の理由 &rarr;</a></li>
+          <li><a href="trilogy-guide.html">三部作ガイドライン &rarr;</a></li>
+        </ul>
+      </div>
+
+      <!-- Highlight Block — ページ末尾 -->
+      <div class="highlight-block fade-in">
+        <p>
+          生きる意味を語れる社会へ──それが実存科学の社会論的帰結である。
+        </p>
+      </div>
+
+      <!-- Trilogy Nav -->
+      <div class="trilogy-nav fade-in">
+        <a href="semantics.html">&larr; 意味論</a>
+        <span class="trilogy-nav__pos">3 / 3</span>
+        <span></span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-block fade-in">
+    <div class="container">
+      <h2 class="cta-block__title">天命の言語化セッション&trade;</h2>
+      <p class="cta-block__desc">
+        天命を語り合える関係の起点は、<br>自らの天命を言語化することから始まる。
+      </p>
+      <a href="session.html" class="btn">Session &rarr;</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container--wide">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <p class="footer-col__title">Guide</p>
+          <a href="beginner.html">はじめての方へ</a>
+          <a href="glossary.html">用語集</a>
+          <a href="session-flow.html">セッションの流れ</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Theory</p>
+          <a href="epistemology.html">認識論</a>
+          <a href="semantics.html">意味論</a>
+          <a href="society.html">社会論</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Contents</p>
+          <a href="archives.html">記事一覧</a>
+          <a href="session-menu.html">12の対話（領域）</a>
+          <a href="letters.html">21の手紙</a>
+          <a href="metaplay.html">Meta Play™︎</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Session</p>
+          <a href="session.html">天命の言語化セッション™</a>
+          <a href="dark-side/">ダークサイド診断</a>
+          <a href="omoidasu/">身体的知性診断</a>
+          <a href="uniqueness.html">独自性と射程</a>
+          <a href="trial.html">無料トライアル</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Institute</p>
+          <a href="founder.html">創始者</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">お問い合わせ</a>
+          <a href="legal/legal-tokushoho.html">特定商取引法</a>
+          <a href="legal/legal-privacy-policy.html">プライバシーポリシー</a>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 実存科学研究所 — Existential Science Institute</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

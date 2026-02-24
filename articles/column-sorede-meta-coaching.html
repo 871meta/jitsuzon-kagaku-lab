@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+<meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-sorede-meta-coaching.html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>「それで？」の使い方 —— Meta coachingの極意（4MAT実践ガイド）｜実存科学研究所</title>
+<meta name="description" content="「それで？」の使い方──Meta coachingの極意。4MAT実践ガイドによる構造的問いかけの技法。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
+    rel="stylesheet">
+<style>
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #080610;
+  color: rgba(235, 232, 225, 0.92);
+  font-family: 'Noto Serif JP', serif;
+  font-size: 17px;
+  line-height: 2;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 60px 40px 80px;
+}
+
+/* ── Header ── */
+.header {
+  margin-bottom: 56px;
+}
+
+.institute-label {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  color: rgba(235, 232, 225, 0.55);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.category-tag {
+  display: inline-block;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: #fff;
+  background-color: #c0a878;
+  padding: 3px 12px;
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  color: rgba(235, 232, 225, 0.92);
+  margin-bottom: 0;
+}
+
+/* ── Headings ── */
+h2 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  color: rgba(235, 232, 225, 0.92);
+  border-bottom: 2px solid rgba(192, 168, 120, 0.3);
+  padding-bottom: 10px;
+  margin-top: 64px;
+  margin-bottom: 28px;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: rgba(235, 232, 225, 0.92);
+  border-bottom: 1px solid rgba(192, 168, 120, 0.15);
+  padding-bottom: 8px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+/* ── Paragraphs ── */
+p {
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* ── Emphasis box ── */
+.emphasis-box {
+  background-color: rgba(192, 168, 120, 0.04);
+  border-left: 4px solid #c0a878;
+  padding: 20px 24px;
+  margin: 28px 0;
+  line-height: 2;
+}
+
+.emphasis-box p {
+  margin-bottom: 0;
+}
+
+.emphasis-box p + p {
+  margin-top: 8px;
+}
+
+/* ── Blockquote ── */
+blockquote {
+  border-left: 3px solid rgba(192, 168, 120, 0.4);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 16px 24px;
+  margin: 24px 0;
+}
+
+blockquote p {
+  margin-bottom: 0;
+}
+
+blockquote p + p {
+  margin-top: 8px;
+}
+
+/* ── Lists ── */
+ul {
+  margin-left: 1.5rem;
+  margin-bottom: 20px;
+  line-height: 2;
+}
+
+ul li {
+  margin-bottom: 4px;
+}
+
+/* ── Dialogue block ── */
+.dialogue {
+  background-color: rgba(192, 168, 120, 0.04);
+  border: 1px solid rgba(192, 168, 120, 0.15);
+  padding: 24px 28px;
+  margin: 28px 0;
+  line-height: 2;
+}
+
+.dialogue p {
+  margin-bottom: 8px;
+}
+
+.dialogue p:last-child {
+  margin-bottom: 0;
+}
+
+.dialogue .speaker {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: rgba(235, 232, 225, 0.92);
+}
+
+/* ── Keyword highlight (「それで？」) ── */
+.keyword {
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: rgba(235, 232, 225, 0.92);
+  margin: 32px 0;
+  letter-spacing: 0.08em;
+}
+
+/* ── Meta 7 layer list ── */
+.layer-list {
+  list-style: none;
+  margin-left: 0;
+  margin-bottom: 24px;
+}
+
+.layer-list li {
+  padding-left: 0;
+  margin-bottom: 8px;
+  line-height: 1.9;
+}
+
+.layer-list li strong {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 14px;
+  display: inline-block;
+  min-width: 5.5em;
+}
+
+/* ── Horizontal rule ── */
+hr {
+  border: none;
+  border-top: 1px solid rgba(192, 168, 120, 0.15);
+  margin: 48px 0;
+}
+
+/* ── Footer nav ── */
+.footer-nav {
+  margin-top: 80px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(192, 168, 120, 0.15);
+}
+
+.footer-nav a {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 14px;
+  color: rgba(235, 232, 225, 0.55);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+}
+
+.footer-nav a:hover {
+  color: rgba(235, 232, 225, 0.92);
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  body {
+    font-size: 15px;
+  }
+
+  .container {
+    padding: 36px 20px 60px;
+  }
+
+  .header h1 {
+    font-size: 23px;
+  }
+
+  h2 {
+    font-size: 19px;
+    margin-top: 48px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  .emphasis-box,
+  .dialogue {
+    padding: 16px 18px;
+  }
+
+  .keyword {
+    font-size: 18px;
+  }
+}
+
+/* === Dark Theme Override === */
+a:not(.btn):not(.session-card__link) { color: #c0a878; transition: color 0.2s; }
+a:not(.btn):not(.session-card__link):hover { color: #e8d8b8; }
+.category-tag { color: #080610 !important; background: #c0a878 !important; }
+.back-nav { background: rgba(192, 168, 120, 0.06); border-color: rgba(192, 168, 120, 0.15); }
+.back-nav a { color: #c0a878; }
+img { border-radius: 2px; }
+input, textarea, select { background: rgba(255,255,255,0.05); color: rgba(235,232,225,0.92); border-color: rgba(201,168,76,0.2); }
+input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); outline: none; }
+::placeholder { color: rgba(235,232,225,0.3); }
+.submit-btn, button[type="submit"] { background: #c0a878; color: #080610; border: none; }
+
+</style>
+  <meta property="og:title" content="「それで？」の使い方 —— Meta coachingの極意（4MAT実践ガイド）｜実存科学研究所">
+  <meta property="og:description" content="「それで？」の最大の違いは、何もしないことではありません。&quot;更新&quot;に燃料を与えないことです。">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="実存科学研究所">
+<meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+<meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="../index.html" class="site-logo">実存科学研究所</a>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="global-nav">
+        <a href="../index.html">Top</a>
+        <a href="../beginner.html">Guide</a>
+        <a href="../epistemology.html">Epistemology</a>
+        <a href="../semantics.html">Semantics</a>
+        <a href="../society.html">Society</a>
+        <a href="../founder.html">Founder</a>
+        <a href="../session.html">Session</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">More</button>
+          <div class="nav-dropdown__menu">
+            <a href="../metaplay.html">Meta Play™</a>
+            <a href="../dark-side/">ダークサイド診断</a>
+            <a href="../omoidasu/">身体的知性診断</a>
+            <a href="../trial.html">無料トライアル</a>
+            <a href="../session-menu.html">12の対話（領域）</a>
+            <a href="../letters.html">21の手紙</a>
+            <a href="../uniqueness.html">独自性と射程</a>
+            <a href="../faq.html">FAQ</a>
+            <a href="../archives.html">記事一覧</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+<article class="container">
+
+  <!-- Header -->
+  <header class="header fade-in">
+    <div class="institute-label">EXISTENTIAL SCIENCE RESEARCH INSTITUTE</div>
+    <div class="category-tag">コラム</div>
+    <h1>「それで？」の使い方 —— Meta coachingの極意（4MAT実践ガイド）</h1>
+  </header>
+
+  <div class="pull-quote fade-in"><p>「それで？」の最大の違いは、何もしないことではありません。"更新"に燃料を与えないことです。</p></div>
+
+  <!-- ══════════════════════════════ -->
+  <!-- 導入 -->
+  <!-- ══════════════════════════════ -->
+
+  <h2 class="fade-in">導入｜Meta coachingの極意としての「それで？」</h2>
+
+  <div class="text-panel fade-in">
+  <p>本稿で扱う「それで？」は、会話テクニックでも、質問技法でもありません。</p>
+
+  <p>これは、<strong>Meta coaching における極意</strong>です。</p>
+
+  <p>この極意が必要になった背景には、明確な問題意識があります。</p>
+  </div>
+
+  <h3 class="fade-in">なぜ、既存の対人支援では足りなかったのか</h3>
+
+  <p>既存の対人支援──カウンセリング、コーチング、セラピー、マインドフルネスや自己啓発──は、方向性の違いはあれ、多くの場合、次のいずれかに収束します。</p>
+
+  <ul>
+    <li><strong>理解</strong>：原因・意味・パターンを掴む</li>
+    <li><strong>解決</strong>：課題を潰す、方法を見つける</li>
+    <li><strong>納得</strong>：腑に落とす、整理する</li>
+    <li><strong>状態</strong>：落ち着く、整える、安心する</li>
+    <li><strong>行動設計</strong>：ゴール、計画、習慣を立てる</li>
+  </ul>
+
+  <p>これらは正しい。<br>そして実際に、多くの場面で機能します。</p>
+
+  <p>しかし、Meta coaching が扱う現場では、次のような現象が繰り返し観測されてきました。</p>
+
+  <ul>
+    <li>理解が深まるほど、物語が精密化し、反芻が強化される</li>
+    <li>解決策を試すほど、「まだ治っていない」「まだ足りない」という感覚が更新される</li>
+    <li>納得が起きても、別の言葉で同じ地点に戻り、反芻が再開する</li>
+    <li>状態が整っても、すぐに「次の意味」が立ち上がる</li>
+    <li>行動設計が、主体（自我）を再起動させ、かえって重くなる</li>
+  </ul>
+
+  <p>つまり既存の枠組みは、しばしば次の逆説を内包します。</p>
+
+  <div class="emphasis-box fade-in">
+    <p><strong>問題を"解く"ほど、問題が"更新される"。</strong></p>
+  </div>
+
+  <p>あなたが感じてきた「止まる／進む」の差は、ここで生まれます。</p>
+
+  <p>解決や納得が足りないから止まるのではありません。</p>
+
+  <div class="emphasis-box fade-in">
+    <p><strong>解決や納得を生み出し続ける更新機構そのものが、止まらないから止まってしまう。</strong></p>
+  </div>
+
+  <hr>
+
+  <h3 class="fade-in">「それで？」は、何が違うのか</h3>
+
+  <p>「それで？」の最大の違いは、何もしないことではありません。</p>
+
+  <p><strong>"更新"に燃料を与えない</strong>ことです。</p>
+
+  <p>既存の対人支援では、相手の語りに対して、意図せず次のような応答が返されがちです。</p>
+
+  <ul>
+    <li>意味づけ（つまり…）</li>
+    <li>理由づけ（それは…だから）</li>
+    <li>評価（それは大変／正しい）</li>
+    <li>方向づけ（次はこうしよう）</li>
+    <li>同一化（分かります）</li>
+  </ul>
+
+  <p>これらは支援として価値があります。</p>
+
+  <p>しかし、反芻や停滞の局面では、<strong>問題を更新し続ける燃料</strong>にもなります。</p>
+
+  <p>「それで？」は、その燃料を足しません。</p>
+
+  <p>意味も、理由も、評価も、方向も、そこに追加しない。</p>
+
+  <p>ただ、語りが次へ進むか、あるいは自然に終わる余地だけを残します。</p>
+
+  <p>結果として起きるのは、「解決」ではありません。</p>
+
+  <div class="emphasis-box fade-in">
+    <p><strong>更新が終わる。<br>問題が"続かなくなる"。</strong></p>
+    <p>ここに、Meta coaching の核心があります。</p>
+  </div>
+
+  <hr>
+
+  <!-- ══════════════════════════════ -->
+  <!-- WHAT -->
+  <!-- ══════════════════════════════ -->
+
+  <h2 class="fade-in">WHAT｜「それで？」とは何か</h2>
+
+  <div class="text-panel fade-in">
+  <p>「それで？」は、答えを引き出すための質問ではありません。</p>
+
+  <p>相手を導くための問いでも、理解を深めるための問いでもありません。</p>
+  </div>
+
+  <div class="emphasis-box fade-in">
+    <p><strong>起きていることに、意味・評価・解決を足さず、次の更新が起きる余地だけを残す言葉</strong>です。</p>
+  </div>
+
+  <p>問いの形をしていますが、実際には「問いを終わらせるための言語」です。</p>
+
+  <hr>
+
+  <!-- ══════════════════════════════ -->
+  <!-- WHY -->
+  <!-- ══════════════════════════════ -->
+
+  <h2 class="fade-in">WHY｜なぜ「それで？」が機能するのか</h2>
+
+  <h3 class="fade-in">この方法論で、何が扱えるのか</h3>
+
+  <p>人が苦しくなるとき、問題は必ずしも「解けていない」わけではありません。</p>
+
+  <p>理解できている。<br>説明もできる。<br>納得もしている。</p>
+
+  <p>それでも、なぜか動けない。</p>
+
+  <p>このとき起きているのは、問題の内容ではなく、<strong>問題が更新され続ける構造</strong>です。</p>
+
+  <p>説明 → 解釈 → 正当化 → 感情 → 次の説明</p>
+
+  <p>この循環が続く限り、どれだけ正しい理解や解決が加わっても、人生は止まり続けます。</p>
+
+  <p>「それで？」は、この循環に新しい意味や方向を足しません。</p>
+
+  <ul>
+    <li>否定しない</li>
+    <li>共感しない</li>
+    <li>解釈しない</li>
+  </ul>
+
+  <p>その結果、循環そのものが更新されにくくなります。</p>
+
+  <p>重要なのは、ここで解決や納得が否定されているわけではない、という点です。</p>
+
+  <p>解決や納得は、人生を前に進める<strong>代表的な経路</strong>の一つです。</p>
+
+  <p>ただし、それが成立していても止まる局面があり、逆に、それを越えたところで人生が進んでしまう局面がある。</p>
+
+  <p>Meta coaching と「それで？」は、この後者を含めた領域を扱っています。</p>
+
+  <p>その結果として、行動や変化が「選択」ではなく、<strong>自然な遷移</strong>として起こることがあります。</p>
+
+  <hr>
+
+  <!-- ══════════════════════════════ -->
+  <!-- HOW -->
+  <!-- ══════════════════════════════ -->
+
+  <h2 class="fade-in">HOW｜どうやって使うのか</h2>
+
+  <h3 class="fade-in">1．対話・セッションで</h3>
+
+  <p>相手が一通り話し終えたあと、解釈や助言を挟まず、静かに一言だけ返します。</p>
+
+  <p class="keyword">「それで？」</p>
+
+  <p>声のトーンは中立。<br>次の言葉を期待しない。</p>
+
+  <p>沈黙が起きたら、それで十分です。</p>
+
+  <hr>
+
+  <h3 class="fade-in">2．セルフトークで</h3>
+
+  <p>頭の中で、同じ考えが何度も回り始めたとき。</p>
+
+  <p>思考を止めようとせず、一言だけ置きます。</p>
+
+  <p class="keyword">「それで？」</p>
+
+  <p>答えを探さない。<br>続けようとしない。</p>
+
+  <p>多くの場合、次の思考が自然に弱まります。</p>
+
+  <hr>
+
+  <!-- ══════════════════════════════ -->
+  <!-- NOW -->
+  <!-- ══════════════════════════════ -->
+
+  <h2 class="fade-in">NOW｜今すぐ使うとしたら</h2>
+
+  <p>特別な準備はいりません。</p>
+
+  <ul>
+    <li>うまく使おうとしない</li>
+    <li>効果を期待しない</li>
+    <li>変えようとしない</li>
+  </ul>
+
+  <p>ただ、語りや思考が一段落したところで、一言置くだけです。</p>
+
+  <p class="keyword">それで？</p>
+
+  <hr>
+
+  <!-- ══════════════════════════════ -->
+  <!-- Meta 7 補足 -->
+  <!-- ══════════════════════════════ -->
+
+  <h2 class="fade-in">Meta 7 各層で「それで？」が起こすこと（補足）</h2>
+
+  <ul class="layer-list">
+    <li><strong>現象</strong>：事実の羅列が止まり、重要でない情報が自然に落ちる</li>
+    <li><strong>感情</strong>：感情の正当化が弱まり、感情そのものが通過する</li>
+    <li><strong>意味</strong>：解釈や理由づけが続かなくなる</li>
+    <li><strong>構造</strong>：パターンを掴もうとする主体が消える</li>
+    <li><strong>Meta</strong>：理解しようとする姿勢自体が余剰になる</li>
+    <li><strong>中動態</strong>：「起きている」という感覚が固定されない</li>
+    <li><strong>完全構造</strong>：語りが終わり、沈黙・笑い・自然な転換が起きる</li>
+  </ul>
+
+  <hr>
+
+  <!-- ══════════════════════════════ -->
+  <!-- 具体例 -->
+  <!-- ══════════════════════════════ -->
+
+  <h2 class="fade-in">セッションでの一往復（具体例）</h2>
+
+  <div class="dialogue">
+    <p><span class="speaker">クライアント</span>：「分かっているんですけど、どうしても動けなくて…」</p>
+    <p><span class="speaker">あなた</span>：「それで？」</p>
+    <p><span class="speaker">クライアント</span>：「……特に、続きはないですね」</p>
+  </div>
+
+  <p>この時点で、問題が解決されたわけではありません。</p>
+
+  <p>ただ、<strong>問題を更新し続ける構造が終わっています。</strong></p>
+
+  <hr>
+
+  <!-- ══════════════════════════════ -->
+  <!-- 使ってはいけないケース -->
+  <!-- ══════════════════════════════ -->
+
+  <h2 class="fade-in">使ってはいけないケース（重要）</h2>
+
+  <p>次のような場面では、「それで？」は使うべきではありません。</p>
+
+  <ul>
+    <li>強いトラウマ反応やフラッシュバックが出ているとき</li>
+    <li>安全や信頼関係がまだ十分に成立していないとき</li>
+    <li>変化を急がせたい意図が自分の中にあるとき</li>
+    <li>相手を黙らせたい、試したいという気持ちがあるとき</li>
+  </ul>
+
+  <p>これらの場合、「それで？」は<strong>原理ではなく圧力</strong>になってしまいます。</p>
+
+  <hr>
+
+  <!-- ══════════════════════════════ -->
+  <!-- メリットとデメリット -->
+  <!-- ══════════════════════════════ -->
+
+  <h2 class="fade-in">メリットとデメリット</h2>
+
+  <h3 class="fade-in">メリット</h3>
+
+  <ul>
+    <li>解決や納得が起きても進まない場面と、解決や納得を越えて進んでしまう場面とを区別できる</li>
+    <li>解決・納得・理解に行き詰まった地点から、人生が自然に更新される余地が生まれる</li>
+    <li>相手を依存させない</li>
+    <li>セッションする側も消耗しない</li>
+    <li>技法化・支配構造にならない</li>
+  </ul>
+
+  <h3 class="fade-in">デメリット</h3>
+
+  <ul>
+    <li>即効性や分かりやすい答えを求める人には向かない</li>
+    <li>共感や助言を期待される場では誤解されやすい</li>
+    <li>効果を狙った瞬間に機能しなくなる</li>
+  </ul>
+
+  <hr>
+
+  <!-- ══════════════════════════════ -->
+  <!-- 最後に -->
+  <!-- ══════════════════════════════ -->
+
+  <h2 class="fade-in">最後に</h2>
+
+  <div class="text-panel fade-in">
+  <p>「それで？」は、教えるための言葉ではありません。</p>
+
+  <p>人生が次へ移行するときに、たまたま残る言葉です。</p>
+
+  <p>起きたら通す。<br>起きなければ、それも通す。</p>
+  </div>
+
+  <p class="keyword">それで？</p>
+
+  <div class="highlight-block fade-in"><p>「それで？」は、教えるための言葉ではありません。人生が次へ移行するときに、たまたま残る言葉です。</p></div>
+
+  <!-- Footer nav -->
+  <nav class="footer-nav fade-in">
+    <a href="../contents.html">← コンテンツ一覧へ戻る</a>
+  </nav>
+
+</article>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container--wide">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <p class="footer-col__title">Guide</p>
+          <a href="../beginner.html">はじめての方へ</a>
+          <a href="../glossary.html">用語集</a>
+          <a href="../session-flow.html">セッションの流れ</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Theory</p>
+          <a href="../epistemology.html">認識論</a>
+          <a href="../semantics.html">意味論</a>
+          <a href="../society.html">社会論</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Contents</p>
+          <a href="../archives.html">記事一覧</a>
+          <a href="../session-menu.html">12の対話（領域）</a>
+          <a href="../letters.html">21の手紙</a>
+          <a href="../metaplay.html">Meta Play™︎</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Session</p>
+          <a href="../session.html">天命の言語化セッション™</a>
+          <a href="../dark-side/">ダークサイド診断</a>
+          <a href="../omoidasu/">身体的知性診断</a>
+          <a href="../uniqueness.html">独自性と射程</a>
+          <a href="../trial.html">無料トライアル</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Institute</p>
+          <a href="../founder.html">創始者</a>
+          <a href="../faq.html">FAQ</a>
+          <a href="../contact.html">お問い合わせ</a>
+          <a href="../legal/legal-tokushoho.html">特定商取引法</a>
+          <a href="../legal/legal-privacy-policy.html">プライバシーポリシー</a>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 実存科学研究所 — Existential Science Institute</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "「それで？」の使い方 —— Meta coachingの極意（4MAT実践ガイド）",
+  "description": "「それで？」の使い方──Meta coachingの極意。4MAT実践ガイドによる構造的問いかけの技法。",
+  "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-sorede-meta-coaching.html",
+  "author": {
+    "@type": "Person",
+    "name": "箭内宏紀",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/founder.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  },
+  "inLanguage": "ja",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  }
+}
+</script>
+</body>
+</html>

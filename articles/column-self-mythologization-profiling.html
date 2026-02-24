@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+<meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-self-mythologization-profiling.html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>支援業界における"自己神話化構造"のプロファイリング｜実存科学研究所</title>
+<meta name="description" content="支援業界における「自己神話化構造」のプロファイリング。援助者が無意識に構築する自己物語の分析。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
+    rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #080610;
+  color: rgba(235, 232, 225, 0.92);
+  font-family: 'Noto Serif JP', serif;
+  font-size: 17px;
+  line-height: 2;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 60px 24px 80px;
+}
+
+/* ── Header ── */
+.header { margin-bottom: 56px; }
+
+.header__institute {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  color: rgba(235, 232, 225, 0.55);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.header__tag {
+  display: inline-block;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: #fff;
+  background: #c0a878;
+  padding: 3px 12px;
+  margin-bottom: 20px;
+}
+
+.header__title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+/* ── Headings ── */
+h2 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.6;
+  margin-top: 64px;
+  margin-bottom: 24px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(192, 168, 120, 0.3);
+}
+
+h3 {
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.6;
+  margin-top: 48px;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(192, 168, 120, 0.15);
+}
+
+h4 {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.7;
+  margin-top: 32px;
+  margin-bottom: 12px;
+}
+
+/* ── Paragraphs ── */
+p { margin-bottom: 20px; }
+
+/* ── Blockquote ── */
+blockquote {
+  border-left: 3px solid rgba(192, 168, 120, 0.4);
+  background: rgba(255,255,255,0.03);
+  padding: 16px 20px;
+  margin: 24px 0;
+}
+blockquote p { margin-bottom: 8px; }
+blockquote p:last-child { margin-bottom: 0; }
+
+/* ── Lists ── */
+ul, ol {
+  margin-left: 1.5rem;
+  margin-bottom: 20px;
+  line-height: 2;
+}
+li { margin-bottom: 4px; }
+
+/* ── Strong ── */
+strong { font-weight: 700; }
+
+/* ── Horizontal Rule ── */
+hr {
+  border: none;
+  border-top: 1px solid rgba(192, 168, 120, 0.15);
+  margin: 48px 0;
+}
+
+/* ── Emphasis Box ── */
+.emphasis-box {
+  background: rgba(192, 168, 120, 0.04);
+  border-left: 4px solid #c0a878;
+  padding: 20px 24px;
+  margin: 28px 0;
+}
+.emphasis-box p { margin-bottom: 8px; }
+.emphasis-box p:last-child { margin-bottom: 0; }
+
+/* ── Numbered Section ── */
+.section-number {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  color: rgba(235, 232, 225, 0.55);
+}
+
+/* ── Navigation ── */
+.nav-bottom {
+  margin-top: 64px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(192, 168, 120, 0.15);
+}
+.nav-bottom a {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 14px;
+  color: rgba(235, 232, 225, 0.55);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+.nav-bottom a:hover { color: rgba(235, 232, 225, 0.92); }
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  body { font-size: 15px; }
+  .container { padding: 40px 16px 60px; }
+  .header__title { font-size: 23px; }
+  h2 { font-size: 19px; margin-top: 48px; }
+  h3 { font-size: 17px; margin-top: 36px; }
+  .emphasis-box { padding: 16px 18px; }
+}
+
+/* === Dark Theme Override === */
+a:not(.btn):not(.session-card__link) { color: #c0a878; transition: color 0.2s; }
+a:not(.btn):not(.session-card__link):hover { color: #e8d8b8; }
+.category-tag { color: #080610 !important; background: #c0a878 !important; }
+.back-nav { background: rgba(192, 168, 120, 0.06); border-color: rgba(192, 168, 120, 0.15); }
+.back-nav a { color: #c0a878; }
+img { border-radius: 2px; }
+input, textarea, select { background: rgba(255,255,255,0.05); color: rgba(235,232,225,0.92); border-color: rgba(201,168,76,0.2); }
+input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); outline: none; }
+::placeholder { color: rgba(235,232,225,0.3); }
+.submit-btn, button[type="submit"] { background: #c0a878; color: #080610; border: none; }
+
+</style>
+  <meta property="og:title" content="支援業界における&quot;自己神話化構造&quot;のプロファイリング｜実存科学研究所">
+  <meta property="og:description" content="自己神話化構造とは、個人の性格の問題ではなく、認識の中心に&quot;自己物語&quot;が居座ってしまう構造的現象である。">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="実存科学研究所">
+<meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+<meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="../index.html" class="site-logo">実存科学研究所</a>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="global-nav">
+        <a href="../index.html">Top</a>
+        <a href="../beginner.html">Guide</a>
+        <a href="../epistemology.html">Epistemology</a>
+        <a href="../semantics.html">Semantics</a>
+        <a href="../society.html">Society</a>
+        <a href="../founder.html">Founder</a>
+        <a href="../session.html">Session</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">More</button>
+          <div class="nav-dropdown__menu">
+            <a href="../metaplay.html">Meta Play™</a>
+            <a href="../dark-side/">ダークサイド診断</a>
+            <a href="../omoidasu/">身体的知性診断</a>
+            <a href="../trial.html">無料トライアル</a>
+            <a href="../session-menu.html">12の対話（領域）</a>
+            <a href="../letters.html">21の手紙</a>
+            <a href="../uniqueness.html">独自性と射程</a>
+            <a href="../faq.html">FAQ</a>
+            <a href="../archives.html">記事一覧</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+<div class="container">
+
+<!-- ── Header ── -->
+<header class="header fade-in">
+  <div class="header__institute">EXISTENTIAL SCIENCE RESEARCH INSTITUTE</div>
+  <div><span class="header__tag">コラム</span></div>
+  <h1 class="header__title">支援業界における"自己神話化構造"のプロファイリング</h1>
+</header>
+<div class="pull-quote fade-in"><p>自己神話化構造とは、個人の性格の問題ではなく、認識の中心に"自己物語"が居座ってしまう構造的現象である。</p></div>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- 1. 導入 -->
+<!-- ════════════════════════════════════════ -->
+<h2 class="fade-in">1. 導入──なぜ、このタイプは支援業界に生まれやすいのか</h2>
+
+<p>対人支援の世界では、しばしば次のような人物が現れる。</p>
+
+<ul>
+<li>カリスマ性がある</li>
+<li>語りが強く、人を惹きつける</li>
+<li>"深い真理" を語っているように見える</li>
+</ul>
+
+<p>しかし同時に、</p>
+
+<ul>
+<li>理論の矛盾を認めない</li>
+<li>自己物語が肥大化する</li>
+<li>他者を巻き込む構造になりやすい</li>
+<li>調停者が疲弊する</li>
+</ul>
+
+<div class="text-panel fade-in">
+<p>こうした現象は、個人の性格の問題ではなく、<strong>"自己神話化構造"という一つの型が作動しているために起きる。</strong></p>
+
+<p>本稿では、この構造を具体的かつ再現的にプロファイリングする。</p>
+</div>
+
+<hr>
+
+<!-- ════════════════════════════════════════ -->
+<!-- 2 -->
+<!-- ════════════════════════════════════════ -->
+<h2 class="fade-in">2. 自己神話化構造とは何か──人生を"物語"として語りすぎる状態</h2>
+
+<p>このタイプの第一の特徴は、</p>
+
+<h3 class="fade-in">✔ 自分の人生を"特別な物語"として語ること</h3>
+
+<ul>
+<li>「自分には使命がある」</li>
+<li>「世界を変える役割を持って生まれた」</li>
+<li>「覚醒した」「神意識に至った」</li>
+<li>「前世の続きとして今を生きている」</li>
+</ul>
+
+<div class="text-panel fade-in">
+<p>これらは一見、精神的成熟のように見えるが、実際には <strong>"自己物語が認識の中心になっている"</strong> 状態である。</p>
+
+<p>物語が強固になるほど、現実・他者・論理との間に"ズレ"が生じやすい。</p>
+</div>
+
+<hr>
+
+<!-- ════════════════════════════════════════ -->
+<!-- 3 -->
+<!-- ════════════════════════════════════════ -->
+<h2 class="fade-in">3. 二元論（成功／失敗・上／下）を手放していない構造</h2>
+
+<p>Metaや悟り、高次の意識について語る一方で、実際の言語体系は次のような二元論に満ちている。</p>
+
+<ul>
+<li>成功した／失敗した</li>
+<li>レベルが高い／低い</li>
+<li>覚醒している／していない</li>
+<li>選ばれた側／選ばれない側</li>
+</ul>
+
+<div class="text-panel fade-in">
+<p>これらはすべて、<strong>"自由意志を前提とした主語構文" に属する語彙である。</strong></p>
+
+<p>この時点で、</p>
+</div>
+
+<blockquote class="fade-in">
+<p>「Metaがある限り自由意志はない」という構造とは噛み合っていない。</p>
+</blockquote>
+
+<p>二元論が残ったまま高次意識を語ると、理論そのものが内部で分断され、矛盾が蓄積する。</p>
+
+<hr>
+
+<!-- ════════════════════════════════════════ -->
+<!-- 4 -->
+<!-- ════════════════════════════════════════ -->
+<h2 class="fade-in">4. シャドウ（自己矛盾）に触れられない理由</h2>
+
+<p>自己神話化構造を持つタイプは、</p>
+
+<h3 class="fade-in">✔ 自己矛盾を扱うことができない。</h3>
+
+<div class="text-panel fade-in">
+<p>これは"やらない"のではなく、<strong>"やると自己物語が崩壊するため構造的にできない"</strong> という性質を持つ。</p>
+
+<p>そのため、次のような反応が起きる：</p>
+</div>
+
+<ul>
+<li>自己批判を避ける</li>
+<li>他責的な説明で上書きする</li>
+<li>"理解が低い側" に相手を位置づける</li>
+<li>物語強度をさらに高めて整合性を維持しようとする</li>
+</ul>
+
+<p>結果、フィードバックは本人に届かず、矛盾は矛盾として認識されないまま蓄積される。</p>
+
+<hr>
+
+<!-- ════════════════════════════════════════ -->
+<!-- 5 -->
+<!-- ════════════════════════════════════════ -->
+<h2 class="fade-in">5. 意味生成（アポフェニア）が暴走する構造</h2>
+
+<p>このタイプは <strong>偶然・困難・出会い・失敗</strong> などのすべてを、</p>
+
+<blockquote class="fade-in">
+<p>"物語を強化するための意味" として再解釈する傾向がある。</p>
+</blockquote>
+
+<p>例：</p>
+
+<ul>
+<li>「これは宇宙のサインだ」</li>
+<li>「反対されるのは私が正しい証拠だ」</li>
+<li>「うまくいかないのは覚醒プロセス」</li>
+</ul>
+
+<div class="text-panel fade-in">
+<p>この構造では、事実よりも <strong>意味の方が強度を持つ</strong> ため、論理的フィードバックは一切入らない状態が作られる。</p>
+</div>
+
+<hr>
+
+<!-- ════════════════════════════════════════ -->
+<!-- 6 -->
+<!-- ════════════════════════════════════════ -->
+<h2 class="fade-in">6. 周囲に"調停者"や"支援者"を生み出す構造</h2>
+
+<p>自己神話化構造の人物は、構造的に次のような人を引き寄せやすい：</p>
+
+<ul>
+<li>優しい</li>
+<li>誠実</li>
+<li>人を見捨てない</li>
+<li>責任感が強い</li>
+<li>自己犠牲的</li>
+<li>関係を調和させたい</li>
+</ul>
+
+<div class="text-panel fade-in">
+<p>こうした人は "巻き込まれる" というより、<strong>構造的に"補完役"として配置されてしまう。</strong></p>
+
+<p>結果として、第三者を介した伝言・仲介・調整が増え、誤解や負荷が拡大しやすい。</p>
+</div>
+
+<hr>
+
+<!-- ════════════════════════════════════════ -->
+<!-- 7 -->
+<!-- ════════════════════════════════════════ -->
+<h2 class="fade-in">7. 金銭・現実との乖離が起きやすい理由</h2>
+
+<p>自己神話化構造が強まるほど、次の優先順位が変わっていく：</p>
+
+<ul>
+<li>現実 ＜ 物語</li>
+<li>実務 ＜ 使命</li>
+<li>行動 ＜ 意味</li>
+<li>生活基盤 ＜ 自己神話の維持</li>
+</ul>
+
+<div class="text-panel fade-in">
+<p>そのため、金銭的困難があっても、<strong>"使命のための試練" として意味づけられ、改善行動につながらない。</strong></p>
+
+<p>これにより、現実と物語は徐々に乖離していく。</p>
+</div>
+
+<hr>
+
+<!-- ════════════════════════════════════════ -->
+<!-- 8 -->
+<!-- ════════════════════════════════════════ -->
+<h2 class="fade-in">8. なぜこのタイプは"変わらない"のか（構造的結論）</h2>
+
+<div class="text-panel fade-in">
+<p>自己神話化タイプは、基本的に"変わらない"。</p>
+
+<p>その理由は：</p>
+</div>
+
+<ol>
+<li><strong>自己物語が崩壊すると、自己同一性そのものが揺らぐため</strong></li>
+<li><strong>シャドウ（矛盾）に触れられない構造になっているため</strong></li>
+<li><strong>意味生成の強度が高く、外部フィードバックを上書きしてしまうため</strong></li>
+<li><strong>二元論を手放せていないため、高次の視座（Meta）に実存的に立てないため</strong></li>
+<li><strong>対話の前提となる論理土台が共有できないため</strong></li>
+</ol>
+
+<p>つまり、</p>
+
+<div class="emphasis-box fade-in">
+<p><strong>論理での指摘・優しい助言・セッション・指導…何をしても変容が起きる"入口"が存在しない。</strong></p>
+<p>これは能力の問題ではなく"構造の問題"である。</p>
+</div>
+
+<hr>
+
+<!-- ════════════════════════════════════════ -->
+<!-- 9 -->
+<!-- ════════════════════════════════════════ -->
+<h2 class="fade-in">9. 支援業界で起こりがちな問題──役割の歪み</h2>
+
+<p>自己神話化タイプが支援者になると、構造的に次が起こりやすい：</p>
+
+<ul>
+<li>クライアントとの上下構造（師弟化）</li>
+<li>崇拝構造が生まれる</li>
+<li>調停者が疲弊する</li>
+<li>意味づけで問題が正当化される</li>
+<li>誤作動構造がスピリチュアルな権威として扱われる</li>
+</ul>
+
+<p>特に、矛盾を矛盾として扱えないまま「導く」ポジションを維持しようとするため、周囲に長期的負荷を与えやすい。</p>
+
+<hr>
+
+<!-- ════════════════════════════════════════ -->
+<!-- 10 -->
+<!-- ════════════════════════════════════════ -->
+<h2 class="fade-in">10. 結論──自己神話化タイプは"悪人"ではないが、"誤作動構造"である</h2>
+
+<div class="text-panel fade-in">
+<p>このタイプの人は、悪意を持って動いているわけではない。</p>
+
+<p>むしろ誠実で、一生懸命で、自分なりの理想を追求している。</p>
+
+<p>しかし、</p>
+</div>
+
+<ul>
+<li>自己物語の肥大</li>
+<li>シャドウ不可視化</li>
+<li>意味生成の過剰化</li>
+<li>二元論の残存</li>
+<li>フィードバック不能構造</li>
+</ul>
+
+<p>が重なってしまうと、周囲にとっては "魅力的なのに、どこか危うい支援者" として映り、関係は次第に摩耗していく。</p>
+
+<div class="emphasis-box fade-in">
+<p>重要なのは、<strong>個人ではなく構造を見ること</strong>である。</p>
+<p>「構造」を見ることで、巻き込まれる前に距離を取り、対人支援者としての健全さを保つことができる。</p>
+</div>
+
+<!-- ── Navigation ── -->
+
+<div class="highlight-block fade-in"><p>重要なのは、個人ではなく構造を見ることである。「構造」を見ることで、巻き込まれる前に距離を取り、対人支援者としての健全さを保つことができる。</p></div>
+<nav class="nav-bottom fade-in">
+  <a href="../contents.html">← コンテンツ一覧へ戻る</a>
+</nav>
+
+</div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container--wide">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <p class="footer-col__title">Guide</p>
+          <a href="../beginner.html">はじめての方へ</a>
+          <a href="../glossary.html">用語集</a>
+          <a href="../session-flow.html">セッションの流れ</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Theory</p>
+          <a href="../epistemology.html">認識論</a>
+          <a href="../semantics.html">意味論</a>
+          <a href="../society.html">社会論</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Contents</p>
+          <a href="../archives.html">記事一覧</a>
+          <a href="../session-menu.html">12の対話（領域）</a>
+          <a href="../letters.html">21の手紙</a>
+          <a href="../metaplay.html">Meta Play™︎</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Session</p>
+          <a href="../session.html">天命の言語化セッション™</a>
+          <a href="../dark-side/">ダークサイド診断</a>
+          <a href="../omoidasu/">身体的知性診断</a>
+          <a href="../uniqueness.html">独自性と射程</a>
+          <a href="../trial.html">無料トライアル</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Institute</p>
+          <a href="../founder.html">創始者</a>
+          <a href="../faq.html">FAQ</a>
+          <a href="../contact.html">お問い合わせ</a>
+          <a href="../legal/legal-tokushoho.html">特定商取引法</a>
+          <a href="../legal/legal-privacy-policy.html">プライバシーポリシー</a>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 実存科学研究所 — Existential Science Institute</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "支援業界における\"自己神話化構造\"のプロファイリング",
+  "description": "支援業界における「自己神話化構造」のプロファイリング。援助者が無意識に構築する自己物語の分析。",
+  "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-self-mythologization-profiling.html",
+  "author": {
+    "@type": "Person",
+    "name": "箭内宏紀",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/founder.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  },
+  "inLanguage": "ja",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  }
+}
+</script>
+</body>
+</html>

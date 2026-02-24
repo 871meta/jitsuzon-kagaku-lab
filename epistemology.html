@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ja" style="--accent: #6B8CAE;">
+
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/epistemology.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>認識論 — Meta | 実存科学研究所</title>
+  <meta name="description" content="自由意志問題を「立場の選択」ではなく「生成条件」の問題として閉じる。第一公理 M ⇒ ¬F の認識論的展開。">
+  <meta property="og:title" content="認識論 — Meta | 実存科学研究所">
+  <meta property="og:description" content="自由意志問題を生成条件の問題として閉じる認識論的転回。">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="実存科学研究所">
+  <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="index.html" class="site-logo">実存科学研究所</a>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="global-nav">
+        <a href="index.html">Top</a>
+        <a href="beginner.html">Guide</a>
+        <a href="epistemology.html">Epistemology</a>
+        <a href="semantics.html">Semantics</a>
+        <a href="society.html">Society</a>
+        <a href="founder.html">Founder</a>
+        <a href="session.html">Session</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">More</button>
+          <div class="nav-dropdown__menu">
+            <a href="metaplay.html">Meta Play™</a>
+            <a href="dark-side/">ダークサイド診断</a>
+            <a href="omoidasu/">身体的知性診断</a>
+            <a href="trial.html">無料トライアル</a>
+            <a href="session-menu.html">12の対話（領域）</a>
+            <a href="letters.html">21の手紙</a>
+            <a href="uniqueness.html">独自性と射程</a>
+            <a href="faq.html">FAQ</a>
+            <a href="archives.html">記事一覧</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <svg width="64" height="64" viewBox="0 0 48 48" fill="none" style="display:block;margin:0 auto 1.5rem;">
+        <path d="M24 4L44 40H4L24 4Z" stroke="#6B8CAE" stroke-width="1" fill="none" opacity=".6"/>
+        <line x1="24" y1="16" x2="24" y2="32" stroke="#6B8CAE" stroke-width=".5" opacity=".4"/>
+        <line x1="16" y1="32" x2="32" y2="32" stroke="#6B8CAE" stroke-width=".5" opacity=".4"/>
+      </svg>
+      <p class="page-hero__sub fade-in">Part 1 — Epistemology</p>
+      <h1 class="fade-in">認識論 — Meta</h1>
+      <p class="page-hero__lead fade-in">
+        「Metaがある限り自由意志はない」
+      </p>
+</div>
+  </section>
+
+  <!-- Content -->
+  <section class="section">
+    <div class="container">
+
+      <!-- Visual Summary -->
+      <div class="visual-summary fade-in">
+        <p class="visual-summary__title">Visual Summary</p>
+        <div class="visual-summary__core">
+          <p class="visual-summary__axiom">M ⇒ ¬F</p>
+          <p class="visual-summary__axiom-desc">Metaが成立する限り、自由意志構文は生成不可能である</p>
+        </div>
+        <div class="visual-summary__columns">
+          <div class="visual-summary__col">
+            <p class="visual-summary__col-label">Subject</p>
+            <p class="visual-summary__col-title">主語</p>
+            <p class="visual-summary__col-desc">因果の起点としての特権を失う</p>
+          </div>
+          <div class="visual-summary__col">
+            <p class="visual-summary__col-label">Tense</p>
+            <p class="visual-summary__col-title">時制</p>
+            <p class="visual-summary__col-desc">構造の更新プロセスとして扱われる</p>
+          </div>
+          <div class="visual-summary__col">
+            <p class="visual-summary__col-label">Causality</p>
+            <p class="visual-summary__col-title">因果</p>
+            <p class="visual-summary__col-desc">条件網として再把握される</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 自由意志の定義 -->
+      <div class="content-block text-panel fade-in">
+        <h2 class="section__title section__title--left">自由意志とは何か</h2>
+        <div class="def-box">
+          <p class="def-box__term">Definition</p>
+          <p>
+            一般に自由意志とは、「他の可能性があり得たにもかかわらず、自ら選択したと感じられる能力」と定義される。<strong>主体の自律性、選択可能性、責任帰属</strong>がその中心概念である。
+          </p>
+        </div>
+        <p>
+          古代形而上学は自由意志を魂や理性の働きとして定義した。キリスト教神学は神の全知全能との整合の中で再定義し、近代合理主義は主体の自律を中心に据えた。現代分析哲学は決定論との整合性という枠内で議論を精緻化した。
+        </p>
+        <p>
+          <strong>しかしこれらはいずれも、自由意志という語りが成立していることを前提に、その内容を調整してきたにすぎない。</strong>成立条件そのものを問うことはなかった。
+        </p>
+      </div>
+
+      <hr class="separator">
+
+      <!-- 構文という視点 -->
+      <div class="content-block text-panel fade-in">
+        <h2 class="section__title section__title--left">構文という視点の導入</h2>
+        <p>
+          本研究の独自性は、<strong>自由意志を能力や感情としてではなく、語りの構造として定式化する</strong>点にある。
+        </p>
+        <p>
+          自由意志構文とは、<strong>主語（私）＋ 時制（過去／現在／未来）＋ 因果（〜した → 〜になった）</strong>──この三要素が結合した語り形式である。
+        </p>
+        <div class="diagram-box">
+          <p class="diagram-box__title">自由意志構文の生成条件</p>
+          <div class="diagram-box__flow">
+            <span class="diagram-box__node">主語（私）</span>
+            <span class="diagram-box__arrow">+</span>
+            <span class="diagram-box__node">時制</span>
+            <span class="diagram-box__arrow">+</span>
+            <span class="diagram-box__node">因果</span>
+            <span class="diagram-box__arrow">=</span>
+            <span class="diagram-box__node">自由意志構文</span>
+          </div>
+        </div>
+        <p>
+          この三点が揃ったときにのみ「私が選んだ」という物語が成立する。<strong>自由意志とは、この構文によって生成される語りである。</strong>
+        </p>
+        <p>
+          対して<strong>Meta構文</strong>は、語りの内容を扱わない。<br><br>
+          <strong>意味が発生したという事実</strong>、<br>
+          ならびにその<strong>出力条件そのもの</strong>を観測する立場である。
+        </p>
+        <p>
+          この視座において、自由意志の構成要素はすべて再定義される。<br><br>
+          <strong>主語</strong>は、因果の起点としての特権的位置を失う。<br>
+          <strong>時制</strong>は、構造の更新プロセスとして扱われる。<br>
+          <strong>因果</strong>は、条件網として再把握される。
+        </p>
+      </div>
+
+      <hr class="separator">
+
+      <!-- 第一公理 -->
+      <div class="content-block text-panel fade-in">
+        <h2 class="section__title section__title--left">第一公理</h2>
+
+        <div class="axiom-card">
+          <p class="axiom-card__label">First Axiom</p>
+          <p class="axiom-card__formula">M ⇒ ¬F<br><br>「Metaがある限り自由意志はない」</p>
+        </div>
+
+        <div class="axiom-detail">
+          <div class="axiom-detail__row">
+            <span class="axiom-detail__symbol">M</span>
+            <span>Meta（語りに先立つ前提構造）</span>
+          </div>
+          <div class="axiom-detail__row">
+            <span class="axiom-detail__symbol">F</span>
+            <span>自由意志（主語・時制・因果によって生成される「私が選んだ」という語り＝自由意志構文）</span>
+          </div>
+          <div class="axiom-detail__row">
+            <span class="axiom-detail__symbol">¬F</span>
+            <span>自由意志が成立しない（生成不能である）</span>
+          </div>
+          <div class="axiom-detail__row">
+            <span class="axiom-detail__symbol">⇒</span>
+            <span>含意（Mが成立する限りFは成立しない、という構造的帰結）</span>
+          </div>
+        </div>
+
+        <p>
+          <strong>Meta（M）が成立する限り、自由意志（F）は構造上生成不可能である。</strong>
+        </p>
+        <p>
+          主語・時制・因果の編集装置がすべて揃ったときにのみ「自由意志」という語りは生成されるが、その出力条件そのものが、Metaによって常にすでに先取りされている以上、自由意志は生成すること自体が不可能である。
+        </p>
+        <div class="pull-quote fade-in">
+          <p><strong>この転回により、自由意志問題は肯定と否定の対立を離れ、生成可能性の問題として閉じられる。</strong></p>
+        </div>
+      </div>
+
+      <hr class="separator">
+
+      <!-- 帰結 -->
+      <div class="content-block text-panel fade-in">
+        <h2 class="section__title section__title--left">帰結</h2>
+        <p>
+          本研究は、決定論も両立論も否定しない。それらをMetaという前提構造の内部で生起する語りの差異として包含する。<strong>立場の追加ではなく、立場を生み出している構造そのものを対象化する</strong>試みである。
+        </p>
+
+        <div class="quote-block fade-in">
+          「Metaがある限り自由意志はない」<br>ならば<br>「人生で起こることのすべては必然である」<br>(Q.E.D)。
+        </div>
+
+        <p>
+          この帰結は思想的否定ではなく、<strong>認識論的整合の到達点</strong>である。
+        </p>
+      </div>
+
+      <hr class="separator">
+
+      <!-- Links -->
+      <div class="content-block text-panel fade-in">
+        <h3>論考を読む</h3>
+        <ul class="link-list">
+          <li><a href="articles/part1.html">第1部『Metaがある限り自由意志は存在しない』を読む &rarr;</a></li>
+          <li><a href="articles/10reasons-part1.html"
+              rel="noopener">第1部を読むべき10の理由 &rarr;</a></li>
+          <li><a href="trilogy-guide.html">三部作ガイドライン &rarr;</a></li>
+        </ul>
+      </div>
+
+      <!-- Highlight Block -->
+      <div class="highlight-block fade-in">
+        <p><strong>この転回により、自由意志問題は肯定と否定の対立を離れ、生成可能性の問題として閉じられる。</strong></p>
+      </div>
+
+      <!-- Trilogy Nav -->
+      <div class="trilogy-nav fade-in">
+        <span></span>
+        <span class="trilogy-nav__pos">1 / 3</span>
+        <a href="semantics.html">意味論 →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-block fade-in">
+    <div class="container">
+      <h2 class="cta-block__title">天命の言語化セッション&trade;</h2>
+      <p class="cta-block__desc">
+        公理を理解するだけでなく、自らの実存に接続する。
+      </p>
+      <a href="session.html" class="btn">Session &rarr;</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container--wide">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <p class="footer-col__title">Guide</p>
+          <a href="beginner.html">はじめての方へ</a>
+          <a href="glossary.html">用語集</a>
+          <a href="session-flow.html">セッションの流れ</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Theory</p>
+          <a href="epistemology.html">認識論</a>
+          <a href="semantics.html">意味論</a>
+          <a href="society.html">社会論</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Contents</p>
+          <a href="archives.html">記事一覧</a>
+          <a href="session-menu.html">12の対話（領域）</a>
+          <a href="letters.html">21の手紙</a>
+          <a href="metaplay.html">Meta Play™︎</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Session</p>
+          <a href="session.html">天命の言語化セッション™</a>
+          <a href="dark-side/">ダークサイド診断</a>
+          <a href="omoidasu/">身体的知性診断</a>
+          <a href="uniqueness.html">独自性と射程</a>
+          <a href="trial.html">無料トライアル</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Institute</p>
+          <a href="founder.html">創始者</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">お問い合わせ</a>
+          <a href="legal/legal-tokushoho.html">特定商取引法</a>
+          <a href="legal/legal-privacy-policy.html">プライバシーポリシー</a>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 実存科学研究所 — Existential Science Institute</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

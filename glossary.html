@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/glossary.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>用語集 | 実存科学研究所</title>
+  <meta name="description" content="実存科学研究所の主要概念──Meta、天命、自由意志構文、心友™、Meta Play™、MetaOS等──の定義一覧。">
+  <meta property="og:title" content="用語集 | 実存科学研究所">
+  <meta property="og:description" content="Meta、天命、自由意志構文、心友™──実存科学の主要概念の定義一覧。">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="実存科学研究所">
+  <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* === Glossary specific === */
+    .glossary-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(192, 168, 120, 0.15);
+    }
+    .glossary-nav a {
+      font-family: "Noto Serif JP", sans-serif;
+      font-size: 0.85rem;
+      padding: 0.4rem 1rem;
+      border: 1px solid rgba(192, 168, 120, 0.15);
+      color: rgba(235, 232, 225, 0.55);
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .glossary-nav a:hover {
+      border-color: #c0a878;
+      color: #e8e4df;
+    }
+
+    .glossary-category {
+      margin-bottom: 3rem;
+    }
+    .glossary-category__title {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.25em;
+      color: #c0a878;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid rgba(192, 168, 120, 0.15);
+    }
+
+    .glossary-item {
+      position: relative;
+      margin-bottom: 1.2rem;
+      padding: 2rem 2.5rem;
+      background: rgba(15, 12, 25, 0.7);
+      border: 1px solid rgba(192, 168, 120, 0.08);
+      transition: border-color 0.4s ease, box-shadow 0.4s ease;
+      overflow: hidden;
+    }
+    .glossary-item::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.3), transparent);
+    }
+    .glossary-item:hover {
+      border-color: rgba(192, 168, 120, 0.2);
+      box-shadow: 0 2px 24px rgba(192, 168, 120, 0.06);
+    }
+    .glossary-item__term {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #f0ece6;
+      margin-bottom: 0.3rem;
+      letter-spacing: 0.04em;
+    }
+    .glossary-item__reading {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.15em;
+      color: rgba(192, 168, 120, 0.5);
+      margin-bottom: 0.8rem;
+    }
+    .glossary-item__def {
+      font-size: 0.92rem;
+      color: #c0bbb4;
+      line-height: 2.2;
+    }
+    .glossary-item__ref {
+      margin-top: 0.8rem;
+    }
+    .glossary-item__ref a {
+      font-size: 0.82rem;
+      color: #c0a878;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(192, 168, 120, 0.3);
+    }
+    .glossary-item__ref a:hover {
+      color: #e8d8b8;
+    }
+
+    @media (max-width: 480px) {
+      .glossary-item {
+        padding: 1.5rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="index.html" class="site-logo">実存科学研究所</a>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="global-nav">
+        <a href="index.html">Top</a>
+        <a href="beginner.html">Guide</a>
+        <a href="epistemology.html">Epistemology</a>
+        <a href="semantics.html">Semantics</a>
+        <a href="society.html">Society</a>
+        <a href="founder.html">Founder</a>
+        <a href="session.html">Session</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">More</button>
+          <div class="nav-dropdown__menu">
+            <a href="metaplay.html">Meta Play&trade;</a>
+            <a href="dark-side/">ダークサイド診断</a>
+            <a href="omoidasu/">身体的知性診断</a>
+            <a href="trial.html">無料トライアル</a>
+            <a href="session-menu.html">12の対話（領域）</a>
+            <a href="letters.html">21の手紙</a>
+            <a href="uniqueness.html">独自性と射程</a>
+            <a href="faq.html">FAQ</a>
+            <a href="archives.html">記事一覧</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="page-hero__sub fade-in">Glossary</p>
+      <h1 class="fade-in">用語集</h1>
+      <p class="page-hero__lead fade-in">
+        実存科学研究所で使用される主要概念の定義一覧。
+      </p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="section">
+    <div class="container">
+
+      <!-- Jump Nav -->
+      <div class="glossary-nav fade-in">
+        <a href="#core">核心概念</a>
+        <a href="#epistemology">認識論</a>
+        <a href="#semantics">意味論</a>
+        <a href="#society">社会論</a>
+        <a href="#session">セッション</a>
+        <a href="#experience">体験</a>
+      </div>
+
+      <!-- ===== 核心概念 ===== -->
+      <div class="glossary-category" id="core">
+        <p class="glossary-category__title">Core Concepts ── 核心概念</p>
+
+        <div class="glossary-item fade-in">
+          <p class="glossary-item__term">実存科学</p>
+          <p class="glossary-item__reading">Existential Science</p>
+          <p class="glossary-item__def">
+            自由意志問題を生成条件から閉じ、認識論・意味論・社会論を一つの体系として実装する新たな学問領域。従来のどの学問にも属さない、箭内宏紀が創始した研究体系。
+          </p>
+          <p class="glossary-item__ref"><a href="index.html">→ トップページ「実存科学とは」</a></p>
+        </div>
+
+        <div class="glossary-item fade-in">
+          <p class="glossary-item__term">Meta</p>
+          <p class="glossary-item__reading">メタ</p>
+          <p class="glossary-item__def">
+            語りに先立つ前提構造。言語・文化・価値観・記憶・身体の五層から成り、人間のあらゆる認識・判断・行為を規定する。人はMetaの中で最適な語りを後付けで生成しているに過ぎない。
+          </p>
+          <p class="glossary-item__ref"><a href="articles/column-meta7.html">→ Metaの定義</a></p>
+        </div>
+
+        <div class="glossary-item fade-in">
+          <p class="glossary-item__term">M ⇒ &not;F</p>
+          <p class="glossary-item__reading">First Axiom</p>
+          <p class="glossary-item__def">
+            実存科学の第一公理。「Meta（M）がある限り、自由意志（F）は成立不能である」。三部作全体の基底となる認識論の公理であり、実存科学のすべてはこの一句から展開する。
+          </p>
+          <p class="glossary-item__ref"><a href="epistemology.html">→ 認識論</a></p>
+        </div>
+
+        <div class="glossary-item fade-in">
+          <p class="glossary-item__term">天命</p>
+          <p class="glossary-item__reading">Tenmei</p>
+          <p class="glossary-item__def">
+            生まれてきた意味・生きる目的。自由意志的に「見つける」ものではなく、Metaが個体に与えた初期条件が必然的に向かう収束点。構造が整った瞬間に、意味は自然に露呈し、主体は悟るのではなく「悟らされてしまう」。
+          </p>
+          <p class="glossary-item__ref"><a href="semantics.html">→ 意味論</a></p>
+        </div>
+
+        <div class="glossary-item fade-in">
+          <p class="glossary-item__term">MetaOS</p>
+          <p class="glossary-item__reading">メタオーエス</p>
+          <p class="glossary-item__def">
+            認識（Meta）→ 意味（天命）→ 社会（完全構造）という階層が、単一のOS（Operating System）として一方向に連続する体系の総称。三部作が記述する認識論・意味論・文明論の統合OS。
+          </p>
+          <p class="glossary-item__ref"><a href="trilogy-guide.html">→ 三部作ガイドライン</a></p>
+        </div>
+      </div>
+
+      <!-- ===== 認識論 ===== -->
+      <div class="glossary-category" id="epistemology">
+        <p class="glossary-category__title">Epistemology ── 認識論の用語</p>
+
+        <div class="glossary-item fade-in">
+          <p class="glossary-item__term">自由意志構文</p>
+          <p class="glossary-item__reading">Free Will Syntax</p>
+          <p class="glossary-item__def">
+            主語・時制・因果という三つの編集装置が結びつくことで、「私が選んだ」という錯視を生み出す語りの構造。自由意志は人間の能力ではなく、この構文がもたらす認知上の幻影である。
+          </p>
+          <p class="glossary-item__ref"><a href="articles/part1.html">→ 第1部を読む</a></p>
+        </div>
+
+        <div class="glossary-item fade-in">
+          <p class="glossary-item__term">Meta構文</p>
+          <p class="glossary-item__reading">Meta Syntax</p>
+          <p class="glossary-item__def">
+            「それは自分が選んだのではなく、Metaによって生成された」という認識の様式。自由意志構文が「私が選んだ」と語るのに対し、Meta構文は出来事の生成条件そのものに目を向ける。実存科学が提示する新しい語りの土台。
+          </p>
+          <p class="glossary-item__ref"><a href="epistemology.html">→ 認識論</a></p>
+        </div>
+
+        <div class="glossary-item fade-in">
+          <p class="glossary-item__term">Meta7モデル</p>
+          <p class="glossary-item__reading">Meta Seven Model</p>
+          <p class="glossary-item__def">
+            現象 → 感情 → 意味 → 構造 → Meta → 中動態 → 完全構造＜愛＞。個体から文明に至る構造連鎖を7段階で記述した文明更新モデル。
+          </p>
+          <p class="glossary-item__ref"><a href="articles/column-meta7.html">→ Metaの定義</a></p>
+        </div>
+
+        <div class="glossary-item fade-in">
+          <p class="glossary-item__term">中動態</p>
+          <p class="glossary-item__reading">Middle Voice</p>
+          <p class="glossary-item__def">
+            「する／される」の二項対立を超え、出来事が「私を通して起きる」という語りの態。天命に生きる者の行為は、意志によるものでも強制によるものでもなく、構造によって起きる。
+          </p>
+          <p class="glossary-item__ref"><a href="society.html">→ 社会論</a></p>
+        </div>
+      </div>
+
+      <!-- ===== 意味論 ===== -->
+      <div class="glossary-category" id="semantics">
+        <p class="glossary-category__title">Semantics ── 意味論の用語</p>
+
+        <div class="glossary-item fade-in">
+          <p class="glossary-item__term">Shadow（シャドウ）</p>
+          <p class="glossary-item__reading">Shadow</p>
+          <p class="glossary-item__def">
+            抑圧された未成熟な人格側面。Metaによって生み出され、天命への整合を阻害する未整合の構造。Shadowの統合（Daimonize）を通じて、意味は収束点へ向かう。
+          </p>
+          <p class="glossary-item__ref"><a href="dark-side/">→ ダークサイド診断</a></p>
+        </div>
+
+        <div class="glossary-item fade-in">
+          <p class="glossary-item__term">Daimonize（ダイモナイズ）</p>
+          <p class="glossary-item__reading">Daimonize</p>
+          <p class="glossary-item__def">
+            Shadowを統合し、天命核へ向かう構造的変容のプロセス。心理ではなく、意味が一点に折り畳まれてゆく生成の方程式の一段階。
+          </p>
+          <p class="glossary-item__ref"><a href="semantics.html">→ 意味論</a></p>
+        </div>
+
+        <div class="glossary-item fade-in">
+          <p class="glossary-item__term">エクスタシス</p>
+          <p class="glossary-item__reading">Ekstasis</p>
+          <p class="glossary-item__def">
+            究極の恍惚体験。古代ギリシア語で「自己の外に立つこと」を意味する。本研究ではこれを、構造の整合が極まったときに必然として到来する意識の変容として再定義する。天命を悟ったとき、4つの不可逆的変容──エゴレスネス、エフォートレスネス、タイムレスネス、リッチネス──として現れる。
+          </p>
+          <p class="glossary-item__ref"><a href="session.html">→ セッション</a></p>
+        </div>
+      </div>
+
+      <!-- ===== 社会論 ===== -->
+      <div class="glossary-category" id="society">
+        <p class="glossary-category__title">Social Theory ── 社会論の用語</p>
+
+        <div class="glossary-item fade-in">
+          <p class="glossary-item__term">心友&trade;</p>
+          <p class="glossary-item__reading">Shin-Yu&trade;</p>
+          <p class="glossary-item__def">
+            天命を語り合える関係。相互の天命を構造として承認し合い、その語りが各自の実存に再接続される関係を指す。利害や感情的な結びつきではなく、意味を構造として共有できることが成立条件。この関係の質的転換が、文明の更新を駆動する。
+          </p>
+          <p class="glossary-item__ref"><a href="society.html">→ 社会論</a></p>
+        </div>
+
+        <div class="glossary-item fade-in">
+          <p class="glossary-item__term">完全構造＜愛＞</p>
+          <p class="glossary-item__reading">Complete Structure</p>
+          <p class="glossary-item__def">
+            Meta7モデルの最終段階。中動態を経て到達する、個体と関係と文明の構造的整合が完成した状態。理想論ではなく、構造連鎖としての文明更新モデルの帰結。
+          </p>
+          <p class="glossary-item__ref"><a href="society.html">→ 社会論</a></p>
+        </div>
+      </div>
+
+      <!-- ===== セッション ===== -->
+      <div class="glossary-category" id="session">
+        <p class="glossary-category__title">Session ── セッション関連</p>
+
+        <div class="glossary-item fade-in">
+          <p class="glossary-item__term">天命の言語化セッション&trade;</p>
+          <p class="glossary-item__reading">Tenmei Verbalization Session&trade;</p>
+          <p class="glossary-item__def">
+            2時間の構造的対話で天命を言語として確定するセッション。事前学習不要。「なぜ？」「何のために？」という2つの問いを、逃げ場がなくなるまで掘り下げる。カウンセリング、コーチング、自己啓発のいずれでもない。
+          </p>
+          <p class="glossary-item__ref"><a href="session.html">→ セッション詳細</a></p>
+        </div>
+
+        <div class="glossary-item fade-in">
+          <p class="glossary-item__term">12の対話（領域）</p>
+          <p class="glossary-item__reading">12 Dialogues</p>
+          <p class="glossary-item__def">
+            心友&trade;プログラムの中で扱う12のセッション領域。天命・宿命・家族・私・恐怖など、人間の実存に関わるテーマを構造的に対話する。月1回×1年間で全12回。
+          </p>
+          <p class="glossary-item__ref"><a href="session-menu.html">→ 12の対話一覧</a></p>
+        </div>
+
+        <div class="glossary-item fade-in">
+          <p class="glossary-item__term">Meta Install Session&trade;</p>
+          <p class="glossary-item__reading">メタインストールセッション</p>
+          <p class="glossary-item__def">
+            メール配信型のプログラム。実存科学の認識構造を段階的に受け取り、MetaOSを自らの中にインストールするための体験。
+          </p>
+          <p class="glossary-item__ref"><a href="meta-install.html">→ Meta Install Session&trade;</a></p>
+        </div>
+      </div>
+
+      <!-- ===== 体験 ===== -->
+      <div class="glossary-category" id="experience">
+        <p class="glossary-category__title">Experience ── 体験コンテンツ</p>
+
+        <div class="glossary-item fade-in">
+          <p class="glossary-item__term">Meta Play&trade;</p>
+          <p class="glossary-item__reading">メタプレイ</p>
+          <p class="glossary-item__def">
+            実存科学の概念をRPG形式の思考実験として体験するコンテンツ。遊びながら自らのMetaに気づき、認識構造の転換を促す。
+          </p>
+          <p class="glossary-item__ref"><a href="metaplay.html">→ Meta Play&trade;</a></p>
+        </div>
+
+        <div class="glossary-item fade-in">
+          <p class="glossary-item__term">ダークサイド診断</p>
+          <p class="glossary-item__reading">Dark Side Diagnosis</p>
+          <p class="glossary-item__def">
+            抑圧された人格側面（Shadow）を診断形式で可視化するコンテンツ。自らの中に潜むShadowの存在に気づくための入口。
+          </p>
+          <p class="glossary-item__ref"><a href="dark-side/">→ ダークサイド診断</a></p>
+        </div>
+
+        <div class="glossary-item fade-in">
+          <p class="glossary-item__term">身体的知性診断</p>
+          <p class="glossary-item__reading">Somatic Intelligence Diagnosis</p>
+          <p class="glossary-item__def">
+            言語化されていない身体の記憶や知性を診断形式で探索するコンテンツ。頭ではなく身体が覚えていることに意識を向ける。
+          </p>
+          <p class="glossary-item__ref"><a href="omoidasu/">→ 身体的知性診断</a></p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-block fade-in">
+    <div class="container">
+      <h2 class="cta-block__title">天命の言語化セッション&trade;</h2>
+      <p class="cta-block__desc">
+        概念を知ったその先へ。<br>あなた自身の天命を、2時間で言語化します。
+      </p>
+      <a href="trial.html" class="btn">トライアルセッション &rarr;</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container--wide">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <p class="footer-col__title">Guide</p>
+          <a href="beginner.html">はじめての方へ</a>
+          <a href="glossary.html">用語集</a>
+          <a href="session-flow.html">セッションの流れ</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Theory</p>
+          <a href="epistemology.html">認識論</a>
+          <a href="semantics.html">意味論</a>
+          <a href="society.html">社会論</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Contents</p>
+          <a href="archives.html">記事一覧</a>
+          <a href="session-menu.html">12の対話（領域）</a>
+          <a href="letters.html">21の手紙</a>
+          <a href="metaplay.html">Meta Play&trade;</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Session</p>
+          <a href="session.html">天命の言語化セッション&trade;</a>
+          <a href="dark-side/">ダークサイド診断</a>
+          <a href="omoidasu/">身体的知性診断</a>
+          <a href="uniqueness.html">独自性と射程</a>
+          <a href="trial.html">無料トライアル</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Institute</p>
+          <a href="founder.html">創始者</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">お問い合わせ</a>
+          <a href="legal/legal-tokushoho.html">特定商取引法</a>
+          <a href="legal/legal-privacy-policy.html">プライバシーポリシー</a>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 実存科学研究所 — Existential Science Institute</p>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DefinedTermSet",
+    "name": "実存科学用語集",
+    "description": "実存科学研究所の主要概念──Meta、天命、自由意志構文、心友™等──の定義一覧。",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/glossary.html",
+    "inLanguage": "ja",
+    "hasDefinedTerm": [
+      {
+        "@type": "DefinedTerm",
+        "name": "Meta",
+        "description": "語りに先立つ前提構造。言語・文化・価値観・記憶・身体の五層から成り、人間のあらゆる認識・判断・行為を規定する。"
+      },
+      {
+        "@type": "DefinedTerm",
+        "name": "天命",
+        "description": "生まれてきた意味・生きる目的。Metaが個体に与えた初期条件が必然的に向かう収束点。"
+      },
+      {
+        "@type": "DefinedTerm",
+        "name": "自由意志構文",
+        "description": "主語・時制・因果という三つの編集装置が結びつくことで「私が選んだ」という錯視を生み出す語りの構造。"
+      },
+      {
+        "@type": "DefinedTerm",
+        "name": "心友™",
+        "description": "天命を語り合える関係。意味を構造として共有できることが成立条件。"
+      },
+      {
+        "@type": "DefinedTerm",
+        "name": "MetaOS",
+        "description": "認識・意味・社会を単一のOSとして統合した体系の総称。"
+      },
+      {
+        "@type": "DefinedTerm",
+        "name": "実存科学",
+        "description": "自由意志問題を生成条件から閉じ、認識論・意味論・社会論を一つの体系として実装する学問領域。"
+      }
+    ]
+  }
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>

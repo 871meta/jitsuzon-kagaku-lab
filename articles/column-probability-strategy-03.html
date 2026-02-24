@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-probability-strategy-03.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【特典】確率思考の戦略論（3/3）| 実存科学研究所</title>
+  <meta name="description" content="確率思考の戦略論（3/3）。マーケティング概念の実践的実装と現実世界への応用。">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --text: rgba(235, 232, 225, 0.92); --text-secondary: rgba(235, 232, 225, 0.55); --bg: #080610; --border: rgba(192, 168, 120, 0.15); --accent: #c0a878; --highlight: rgba(192, 168, 120, 0.06); --blockquote-border: rgba(192, 168, 120, 0.4); --definition-bg: rgba(192, 168, 120, 0.04); --max-width: 780px; }
+    html { font-size: 17px; scroll-behavior: smooth; }
+    body { font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif; color: var(--text); background: var(--bg); line-height: 2; -webkit-font-smoothing: antialiased; }
+    .page-container { max-width: var(--max-width); margin: 0 auto; padding: 3rem 1.5rem 6rem; }
+    .page-header { text-align: center; padding: 4rem 0 3rem; border-bottom: 2px solid var(--accent); margin-bottom: 3rem; }
+    .page-header .label { font-size: 0.85rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 0.8rem; font-family: "Noto Sans JP", sans-serif; }
+    .page-header .category-tag { font-family: "Noto Sans JP", sans-serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; background: var(--accent); padding: 0.15rem 0.6rem; display: inline-block; margin-bottom: 1rem; }
+    .page-header h1 { font-size: 1.4rem; font-weight: 700; line-height: 1.6; margin-bottom: 0.3rem; }
+    .page-header .subtitle { font-size: 0.95rem; color: var(--text-secondary); }
+    p { margin-bottom: 1rem; text-align: justify; }
+    strong { font-weight: 700; }
+    h2.section-heading { font-size: 1.2rem; font-weight: 700; margin-top: 3.5rem; margin-bottom: 1rem; line-height: 1.6; border-bottom: 2px solid var(--accent); padding-bottom: 0.6rem; }
+    h3.subsection-heading { font-size: 1rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.8rem; line-height: 1.6; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
+    blockquote { border-left: 3px solid var(--blockquote-border); padding: 0.8rem 1.5rem; margin: 1.5rem 0; color: var(--text-secondary); background: rgba(255,255,255,0.03); }
+    blockquote p:last-child { margin-bottom: 0; }
+    .item-list { margin: 1rem 0 1rem 1.5rem; line-height: 2; }
+    .item-list li { margin-bottom: 0.4rem; }
+    .core-insight { background: var(--definition-bg); border: 1px solid var(--border); border-left: 4px solid var(--accent); padding: 1.5rem 2rem; margin: 2rem 0; font-size: 1.05rem; font-weight: 700; text-align: center; line-height: 1.8; }
+    hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
+    .page-nav { margin-top: 4rem; padding: 1.5rem 2rem; background: var(--highlight); border: 1px solid var(--border); text-align: center; }
+    .page-nav a { color: var(--accent); text-decoration: none; font-weight: 700; margin: 0 1rem; }
+    .page-nav a:hover { opacity: 0.7; }
+    @media (max-width: 600px) { html { font-size: 15px; } .page-container { padding: 2rem 1rem 4rem; } .page-header h1 { font-size: 1.2rem; } h2.section-heading { font-size: 1.1rem; } }
+
+/* === Dark Theme Override === */
+a:not(.btn):not(.session-card__link) { color: #c0a878; transition: color 0.2s; }
+a:not(.btn):not(.session-card__link):hover { color: #e8d8b8; }
+.category-tag { color: #080610 !important; background: #c0a878 !important; }
+.back-nav { background: rgba(192, 168, 120, 0.06); border-color: rgba(192, 168, 120, 0.15); }
+.back-nav a { color: #c0a878; }
+img { border-radius: 2px; }
+input, textarea, select { background: rgba(255,255,255,0.05); color: rgba(235,232,225,0.92); border-color: rgba(201,168,76,0.2); }
+input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); outline: none; }
+::placeholder { color: rgba(235,232,225,0.3); }
+.submit-btn, button[type="submit"] { background: #c0a878; color: #080610; border: none; }
+
+</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <meta property="og:title" content="【特典】確率思考の戦略論（3/3）| 実存科学研究所">
+  <meta property="og:description" content="マーケティングコンセプトの実践">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="実存科学研究所">
+<meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+<meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="../index.html" class="site-logo">実存科学研究所</a>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="global-nav">
+        <a href="../index.html">Top</a>
+        <a href="../beginner.html">Guide</a>
+        <a href="../epistemology.html">Epistemology</a>
+        <a href="../semantics.html">Semantics</a>
+        <a href="../society.html">Society</a>
+        <a href="../founder.html">Founder</a>
+        <a href="../session.html">Session</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">More</button>
+          <div class="nav-dropdown__menu">
+            <a href="../metaplay.html">Meta Play™</a>
+            <a href="../dark-side/">ダークサイド診断</a>
+            <a href="../omoidasu/">身体的知性診断</a>
+            <a href="../trial.html">無料トライアル</a>
+            <a href="../session-menu.html">12の対話（領域）</a>
+            <a href="../letters.html">21の手紙</a>
+            <a href="../uniqueness.html">独自性と射程</a>
+            <a href="../faq.html">FAQ</a>
+            <a href="../archives.html">記事一覧</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+<div class="page-container">
+
+  <header class="page-header fade-in">
+    <p class="label">EXISTENTIAL SCIENCE RESEARCH INSTITUTE</p>
+    <span class="category-tag">特典レポート</span>
+    <h1>確率思考の戦略論（3/3）</h1>
+    <p class="subtitle">マーケティングコンセプトの実践</p>
+  </header>
+
+  <div class="pull-quote fade-in"><p>マーケティングコンセプトは本能にぶっ刺す。正射必中、正しくやれば当たる。当てるのではなく当たる。</p></div>
+
+  <article>
+
+    <h2 class="section-heading fade-in">マーケティングコンセプトとは何か？</h2>
+    <ul class="item-list">
+      <li>マーケティングコンセプトは､人の頭の中にコンセプトを作らせるための道具である｡</li>
+      <li>マーケティングコンセプトは､消費者の認識世界に自社ブランドに有利なイメージ（＝ブランドエクイティ）を築く､意図で作られた記号世界のツールのことだ｡両方とも同じ意味だ｡</li>
+      <li>マーケティングコンセプトが伝わった結果として､消費者自身の脳が形成するコンセプト（意味付け）こそがブランドエクイティだ｡</li>
+      <li>つまり､ブランドエクイティは､広義の意味のコンセプトそのものであり､消費者の脳内のみに存在する認識世界の住人ということになる｡</li>
+      <li>記号世界のマーケティングコンセプトとは住んでる世界が違う｡</li>
+      <li>つまり､最終的に作りたいもの（目的）がコンセプト（ブランドエクイティ）であること｡</li>
+      <li>そして､ブランドエクイティを作るための道具（手段）がマーケティングコンセプトであること｡</li>
+    </ul>
+    <div class="text-panel fade-in">
+    <p>マーケターの道具｢マーケティングコンセプト｣＝消費者にブランドを認識させるすべての仕掛け → 最終的に､消費者の脳内で集積されるコンセプト（ブランドエクイティ）</p>
+    </div>
+    <ul class="item-list">
+      <li>この2つは､木版画を作るときの版木（型）と､刷られて最終的に完成する版画（絵）の関係性と同じだ｡</li>
+      <li>マーケティングコンセプト＝版木（型）</li>
+      <li>消費者の頭の中にあるコンセプト（ブランドエクイティ）＝版画（絵）</li>
+      <li>最終的に消費者の頭の中に作りたい版画である広義のコンセプト（ブランドエクイティ）が1番大事だ｡</li>
+      <li>仕掛ける側は､その完成形から逆算して､それがちゃんと作れるように版木を彫る｡つまり､マーケティングコンセプトを作らなければならない｡</li>
+      <li>その2者の関係性がわかると､どうしてもイケてないマーケティングコンセプトしか作れないと苦しんでいらっしゃる方々の典型的な原因がよく見える｡</li>
+      <li>最も多い原因は､最終的に消費者の頭の中に描きたいブランドエクイティを最初に定めていないことだ｡</li>
+      <li>ブランド自体をどうするか､明確にしていないのに､びっくりする位､個々のマーケティングコンセプトだけを考えている｡</li>
+      <li>これでは､どんな絵を描きたいか不明確なままなのに､一生懸命に版木を掘っているという恐ろしいことをやっているのと同じだ｡それでは､うまくいくわけがない｡</li>
+      <li>2番目に多い原因は､ブランドエクイティから考えているけれども､そのエクイティが戦略的にとても弱いという問題だ｡</li>
+      <li>この問題については､本書を通して解決していく｡</li>
+      <li>理解すべき大切な点として､版木と版画の内容は必ずしも同じにはならない｡実際の版画でも､版木に掘って作った線は転写すると反転する｡</li>
+      <li>版木の上では､掘られて黒く見えていた線が､刷った時に､その掘られた箇所は絵の具がつかないので､逆に白くなる｡</li>
+      <li>最終的な絵で白くしたいところは､版木の方では白黒反転することを計算に入れて､むしろ黒く掘らねばならない｡</li>
+      <li>同じように､人の頭の中に描きたい最終形としてのブランドエクイティと､それを描くための道具であるマーケティングコンセプトは､本質的に役割が違うので､同じ内容にはならない可能性を､マーケターは頭の真ん中におかねばならない｡</li>
+      <li>マーケティングコンセプト（版木・型）≠ 消費者の頭の中にあるコンセプト（ブランドエクイティ・版画・絵）</li>
+      <li>あなたが初対面の人に誠実な人と思われたい時､私は誠実な人間ですとそのまま伝えるのは愚かである｡</li>
+      <li>かっこいいと思われたいブランドは､自分で自分をかっこいいと言えば､むしろ格好悪いと認識される｡</li>
+      <li>このように､最終的な描きたいコンセプト＝ブランドエクイティを実現するために､マーケティングコンセプトはそのまま同じ内容だと目的が達成できない場合も少なからずあるということだ｡</li>
+      <li>もちろん両方が全く同じで問題ない場合もある｡吉野家の場合､安い､早いなどもそう思われたいことをそのまま言って成功した｡</li>
+      <li>認識世界に描きたい目的のために､どのような順番で何を伝えると､様々な消費者の心理的反応をかいくぐって､狙い通りにブランドエクイティが形成されるのか､マーケターなら常にその点を考える｡</li>
+      <li>勝てるマーケティングコンセプトを作りたいならば､その意識が大切だ｡</li>
+      <li>広義のコンセプト＝ブランドエクイティが目的で､マーケティングコンセプトはそのための手段であると理解してほしい｡</li>
+      <li>マーケティングコンセプトは大切だが､それはあくまでも目的のための道具に過ぎない｡</li>
+      <li>この違いすら明瞭でないマーケターが多い中で､この本質を明確にしたあなたは､一気にマーケティングコンセプト作りのマラソン大会の先頭集団に躍り出たことになる</li>
+      <li>マーケティングコンセプトは､自分に有利なブランドエクイティを消費者の脳内で形成させるために､周到に準備された情報の束のことである｡</li>
+      <li>消費者の頭の中に脳という画家がいるイメージだ｡消費者に自分のブランドをもっと選んでもらうために､マーケターは消費者の認識世界というキャンバスに直接触れることができないので､描きたい絵を画家（消費者の脳）に間接的に描かせようとしている｡</li>
+      <li>だから､マーケティングコンセプトという記号世界を作り出して､画家（消費者の脳）に強く語りかける｡結果として､消費者の脳に描かれた絵がブランドエクイティになっていく｡</li>
+    </ul>
+
+    <h3 class="subsection-heading fade-in">マーケティングって腹黒くないか？ということについて</h3>
+    <ul class="item-list">
+      <li>消費者一人ひとりにそれぞれの認識世界があるが､我々が使うとしてるマーケティングコンセプトを作る技術とは､その消費者の脳内世界を変えてしまう強力な武器になる｡このことを持って､マーケティングは消費者の頭の中を操作する悪い仕事なんじゃないかと忌避される方もいる｡</li>
+      <li>消費者の認識を操作している事は悪いことじゃないか｡それって洗脳じゃないかなどと思う方もいる｡</li>
+      <li>私は何度よく考えても､マーケティング自体を悪だとは決して思わない｡</li>
+      <li>人間により良い価値を､より強い満足感を､もっと幸福を実感させる｡マーケティングは､人類の発展はおろか､この残酷な世界を一人一人が生きていく希望そのものだと信じて疑わない｡</li>
+      <li>もしもマーケティングがなければ､この世界はどんなに冷めた灰色のつまらないものになってしまうのだろうか｡それは一人一人があらゆる価値を実感することがとても難しくなる世界を意味する｡</li>
+      <li>今､私の目の前には小さなみかんがある｡この小ぶりのみかんがとてつもない糖度を持つこと｡</li>
+      <li>そのために丁寧な手間ひまをかけて作られていること｡</li>
+      <li>高級宿泊施設など一部にしか流通しない希少性を持つこと｡そんな貴重なものを私に食べさせるために､わざわざ準備して､土産として持たせてくださった方の厚い心遣い｡</li>
+      <li>それらを知って味わうのか､知らずに味わうのか｡それによって､みかんの1つの価値が､私の幸福感が､激増するかしないかの極端な差を生み出す｡</li>
+      <li>大切な人にプレゼントをもらったときのことを思い出してほしい｡そこはもらったものだけでは無いはずだ｡</li>
+      <li>その人がどれだけあなたのことを思って､悩んで､一生懸命探して､苦労してようやく手に入れてくれた物語｡</li>
+      <li>あなたの頭の中に､その意味付け､つまりコンセプトがある場合とない場合､あなたの幸福感がどれほど違ってくるかを､きっとあなたもご存じのはずです｡</li>
+      <li>その意味付けの差が､実際に人が実感する幸福感（価値）の差なのです｡</li>
+      <li>そして､これは真実だが､実感する限りにおいて､そこに間違いなく価値はある｡なぜならば､その人の認識世界は､その人の認識のみで成立するからだ｡</li>
+      <li>この世のあらゆるサービスや商品も､実は様々な物語を経て生まれている｡</li>
+      <li>物語の中に消費者を幸せにできる要素をもっと見つけて､1つでも多く､もっと強く､1人でも多くの消費者にお届けしたい｡なぜならば､人々がもっと喜んでくれるからだ｡</li>
+      <li>だからかなうものならば､人をもっと幸福にする価値の実現に集中する企業を増やしたい｡</li>
+      <li>より多くの事業を勝たせ､もっと多くの人々を幸福にしたい｡本物のマーケティングは価値創造のための技術｡人々の幸福のために欠かすことができない強力な道具だと確信している｡</li>
+      <li>もちろんマーケティングも闇の目的に使うならば悪にもなり得る｡でもそれは他のすべての強力な道具でも同じことだ｡例えば私が所持許可を得た猟銃も同じことが言える｡</li>
+      <li>そもそも道具自体には善も悪もない｡</li>
+      <li>すべては道具を使う人間の目的次第だ｡そして道具そのものを悪として決めつけるのは知性の敗北だ｡危険だという理由で火を避け続けた猿は決して人にはなれない｡</li>
+      <li>私にとってマーケティングコンセプトを練り込む目的は､一人ひとりがもっと幸せになれる｡</li>
+      <li>そこに1人でも多く気づいてもらうことだ｡それはゼロから価値を作る事に等しく､人を幸せにすることそのものだ｡目的がぶれない限り､マーケティングは必ず正義である｡</li>
+      <li>そこへの理解と共感が広がれば､より幸福になる人々が増える｡結果として売上も劇的に伸びる｡</li>
+      <li>そして経済は活性化して社会が豊かになる｡そうやって価値を作ることで､豊かさを発展させられる科学､それがマーケティングだ｡</li>
+      <li>マーケティングコンセプトを操る､プロフェッショナルの職業使命はそこにある｡</li>
+    </ul>
+
+    <hr>
+
+    <h2 class="section-heading fade-in">第５章：強い｢マーケティング・コンセプト｣をつくる</h2>
+
+    <h3 class="subsection-heading fade-in">コンセプチュアル・セルの威力</h3>
+    <ul class="item-list">
+      <li>あらかじめ､マーケティングコンセプトを刷り込むことによって､その価値をより強く実感させることができる｡これをコンセプチュアル・セル効果という｡</li>
+      <li>例えば､同じパンであっても､食べる前に強いマーケティングコンセプトで価値を想起させておけば､そうでないときのパンと比べてよりおいしいと感じさせることができる｡</li>
+      <li>人間の知覚は､認識によって大きなバイアスを受ける｡人間の視覚､味覚､聴覚､嗅覚､肌感覚は我々が思っているほど敏感でも､繊細でも正確でもない｡むしろ頻繁にエラーを起こすセンサーである｡</li>
+      <li>これはプラシーボ効果も同じである｡</li>
+      <li>芸能人格付けチェックという番組でもあるように､一流と三流の差は思っているほど大きくは無い｡</li>
+      <li>何かを認識することによって､生み出される価値の差をコンセプチュアル・セル効果と呼んでいる｡</li>
+      <li>強いマーケティングコンセプトを作って､その価値を消費者に伝えなくてはならない前半の理由は､そのコンセプチュアル・セル効果をテコに使うことにある｡</li>
+      <li>あらかじめ価値を認識させることで､その価値にポジティブに注目させ､ターゲットの脳に高い価値を意味づけるコンセプトを形成させる｡</li>
+      <li>高級レストランなどではギャルソンがやってきて､一つ一つの料理について食べる前にあれこれ説明しようとする｡</li>
+      <li>材料が何であって､何にこだわって作られているのか｡その1皿が素晴らしい素材で丹精を込めて作られた貴重なものだと､お客さんにできるだけ認識させてから食べさせようとしている｡</li>
+      <li>そうやって説明なしで食べられていたら意識されずに過ぎ去っていたであろうこだわりのポイントを流されないように注目させて､ありがたみのある特別な価値としてその客の脳に認識させる｡</li>
+      <li>普通の牛ヒレ肉と思って食べるのと､シャトーブリアンだと認識してから食べるのとでは感じ方が大違いだからだ｡そこで狙っているものもコンセプチュアル・セル効果である｡</li>
+      <li>自分にとって価値あるものを喜んでしまうのは人間である以上は避けることができない｡人類共通の脳の構造｡つまり本能である｡</li>
+      <li>つまり､誰であっても､コンセプチュアル・セル効果から逃れる事はとても困難である｡</li>
+      <li>逆に言うと､素材や料理そのものは､どの店も値段相応にそれなりに頑張っている｡料理そのもので大差をつけるのは難しい｡</li>
+      <li>特に高級料理店においては､値段に見合う価値を実感させるためには､ギャルソンの話術で､その価値を客の脳内で信じさせなければ､高い料金を取れるビジネスモデルが成立しない｡</li>
+      <li>一流のギャルソンともなれば､もはや料理を超えて､客の一人ひとりに合わせて本能をくすぐる話術を展開し､総合的に食の域を超えた強烈な体験価値を作り出す事ができる｡</li>
+      <li>例えば､高級レストランに大切な人を連れて行く成功者としての承認欲求をギャルソンが話術でぶっ刺すことができれば､お客にとっては食欲以上に切実な社会的動物としての欲を満たせる｡</li>
+      <li>だから高いワインを注文するし､もう一度行きたくなるわけだ｡</li>
+      <li>マーケターの役割は､このギャルソンと似ている｡製品やサービス自体では大差がない中で､より高い価値を実感してもらうにはどうするのか｡</li>
+      <li>食べる前に展開されるギャルソンのコンセプチュアル・セル効果のように､製品やサービスを実体験する前から､それがどんな価値なのかを消費者に認識させなくてはならない｡</li>
+      <li>レストランで一流ギャルソンがやるように､深いところにある消費者自身も意識していない本能を洞察して狙い打つ｡</li>
+      <li>そういう視点で考えると､皆様のビジネスは､実は大差ない料理なのに､ギャルソンのトークなしでそのまま食べさせている残念なレストランみたいになっていませんか？</li>
+      <li>それだと良くても普通の店にしかなれません｡それで他社よりもお客さんが増えると､むしろ不思議です｡あなたの商品にはちゃんとコンセプチュアル・セル効果の魔法はかかっていますか？</li>
+    </ul>
+
+    <hr>
+
+    <h2 class="section-heading fade-in">競争に有利なブランドエクイティを作る</h2>
+    <ul class="item-list">
+      <li>強いマーケティングコンセプトを作って､それを消費者に伝えなくてはならない後半の理由について｡</li>
+      <li>それはマーケティングコンセプトこそが､中長期的に競争を有利にするブランドエクイティ構築のための最大のドライバーだからだ｡</li>
+      <li>ブランドエクイティとはブランドに対して消費者が頭の中で想起するイメージのことである｡</li>
+      <li>これまでの話と符合するとブランドエクイティは広義のコンセプトに分類される｡消費者の脳によって形成されて､その人の頭の中（認識世界）にのみ存在する｡</li>
+      <li>例えば､メルセデス・ベンツというブランドを考えたときに､あなたの頭の中に浮かんでくるイメージのひとつひとつがメルセデスベンツのブランドエクイティである｡</li>
+      <li>高級外車､三つ星のエンブレム､頑丈そう､黒の車体のイメージ｡</li>
+      <li>お金持ちが乗ってそう｡怖い人も乗ってそう｡想起されたそれら全てのイメージが､あなたの頭の中にあるブランドエクイティである｡</li>
+      <li>想起されるイメージ一つ一つをエクイティと呼ぶ｡</li>
+      <li>例えば三つ星のエンブレムはメルセデスベンツのエクイティというように言う｡もともとエクイティという言葉は英語で資産を意味する｡</li>
+      <li>消費者がブランドに対して脳内に持つイメージは､手で触れたり､目で見たりはできないけれど､消費者の購買行動に決定的な影響を及ぼす力がある｡</li>
+      <li>それは消費者の脳内に蓄積するブランドの資産である｡</li>
+      <li>それまでのマーケティング活動全般の努力が積み重なって､消費者の頭の中にコツコツと蓄えられた貴重な貯金のようなものである｡マーケティングではそう考える｡だから､ブランドのエクイティ（資産）という呼び方をする｡</li>
+    </ul>
+
+    <h3 class="subsection-heading fade-in">戦略エクイティ</h3>
+    <ul class="item-list">
+      <li>マクドナルドのブランドエクイティについて考えてみよう｡</li>
+      <li>ハンバーガー屋さん｡赤いイメージ｡黄色いMのロゴ､ビッグマック｡ポテト｡人それぞれだが､たくさん想起できるだろう｡これがマクドナルドのブランドエクイティだ｡</li>
+      <li>購買確率を上げるための重要なエクイティと､そうではないエクイティもある｡例えば､過去に異物混入があったとか､食中毒があったとか､購買決定にマイナスに働くものは負のブランドエクイティと呼ばれる｡それは弱かったらベターだしなくなればベストだ｡</li>
+      <li>このようにブランドエクイティには大きなプラスから､大きなマイナスまで､そのブランドが消費者に選ばれる確率への影響度において､大きな差がある｡</li>
+      <li>マーケターは重要なエクイティを強化したいと願い､マイナスエクイティを消したいと願って毎日働いている｡</li>
+      <li>ここで大切な定義である｡</li>
+      <li>重要性が高いエクイティーの中で､集中して強化していくために選んだ極めて重要なエクイティーのことを､そのブランドの戦略エクイティと呼ぶ｡</li>
+      <li>戦略エクイティは人々がそのブランドを選ぶときの核となる理由と一致していなければならない｡</li>
+      <li>それがデザイン性であるブランドは､デザインが優れているという軸に沿って戦略エクイティを強くしていかねばならない｡</li>
+      <li>それが値ごろ感であるブランドは､品質の割に安いという戦略エクイティを消費者の頭の中で大切に育てなければならない｡</li>
+      <li>マーケティングコンセプトの最も重要な目的は､この戦略エクイティを消費者の脳内に構築することだ</li>
+      <li>消費者が何かを選ぶときに､より重視する価値を戦略エクイティとして､自分のものにしたブランドが勝つ｡それがビジネスのルールである｡</li>
+      <li>したがって､戦略エクイティとして何を選ぶのか｡この見極めと選択に自らのビジネスと未来は懸かっている｡</li>
+      <li>戦略エクイティこそがブランドポジショニングの核心である｡</li>
+    </ul>
+
+    <div class="text-panel fade-in">
+    <p>では何を自社ブランドの戦略エクイティにするか｡戦略エクイティはそのブランドが属している商品カテゴリーで最も重視されている価値領域から選ぶのが定石である｡</p>
+    </div>
+
+    <ul class="item-list">
+      <li>自分のビジネスで消費者がブランドを選ぶときに重視している価値は何か｡その中で大きいものは何なのか｡</li>
+      <li>住宅メーカーであれば安全性｡テーマパークであれば幸福感だったり興奮だったり｡家電量販店であれば､主要メーカーの同じ製品をみんな売っているから､製品そのもので差をつけにくい｡</li>
+      <li>小売店としてのサービス価値である｡安さ､品揃え、利便性､安心のアフターサービスなどの価値の奪い合いになる｡</li>
+      <li>あるカテゴリーにおいて､消費者により重視される価値であるほど､その争奪戦は激しいものになる｡</li>
+      <li>同じ戦略エクイティで争うときには､その切り口や信憑性等に工夫を凝らして､何とか有利なエクイティを自分のものにしようとする｡</li>
+      <li>だからマーケターはすでに突き詰めて考えなくてはならない｡</li>
+      <li>本当の競争相手は誰なのか｡どの価値は誰と奪い合っているのか｡狙っている戦略エクイティをこの時点で強く所有している競合は誰で､このままだと3年後にはどうなっていくであろうか｡</li>
+      <li>自分の知能の限りを尽くすことによって作り上げたい3年後のブランドエクイティはどうあるべきなのか｡</li>
+      <li>それらのことを自分の思い込みではなく､消費者の脳内をよく見て考える｡</li>
+      <li>自社ブランドの戦略エクイティの陣取り合戦を上空から俯瞰して見ている｡常にそんな意識で自分のブランドを有利にする策を練る｡</li>
+    </ul>
+
+    <h3 class="subsection-heading fade-in">お客様と消費者は違う</h3>
+    <ul class="item-list">
+      <li>その際の注意点はお客様と消費者は違うということだ｡マーケターが最重要視しなくてはいけないのは消費者である｡お客様は今の段階で顧客になってくれているありがたい存在だ｡</li>
+      <li>しかし市場全体のほんの一部に過ぎない｡</li>
+      <li>これから売り上げを上げていくために､むしろ本気で知らなければならないのは､今の段階でお客様になっていない人たちを含んだ消費者全体のポテンシャルだ｡</li>
+      <li>消費者＝お客様＋まだ顧客ができていない膨大な可能性だ｡</li>
+      <li>日本のマーケティングのレベルがまだまだ低いのは､消費者とお客様の違いすら意識できずにビジネスをしている人たちが蔓延していることからもわかる｡</li>
+      <li>どんな企業であっても､たとえあなた1人であっても､自分の消費者を徹底的に理解して､その本能が強く欲するものに明確な仮説を持つことができる｡</li>
+      <li>たった1人でも十分な時間の質量を費やせば､消費者理解はできるし､本来は1人でできるマーケターとしての仕事なのだと覚悟してほしい｡</li>
+      <li>そこで得られた仮説を判断軸にして､ブランドに必要な戦略エクイティを選ぶ｡</li>
+      <li>そして､狙いの完成形であり､いわば刷り上げた版画である戦略エクイティ（広い意味のコンセプト）を消費者の脳に形成させるために､一体どんな情報を塗り込んでどう伝えるのか｡どんな音色をどのような順番で鳴らすことができれば､消費者の脳内で狙い通りの戦略エクイティが作り出せるのか｡そのことを必死に考えて周到に準備する｡いわば版木となる情報の束のことをマーケティングコンセプトと呼ぶ｡</li>
+      <li>前半の理由として紹介したコンセプチュアル・セル効果もマーケティングコンセプトの1つである｡その行き着く先は積み上げられるブランドエクイティに必ず含まれていく｡</li>
+      <li>意図的に仕掛けたマーケティングコンセプトがうまく機能すると､より強く認識された喜びや感動が消費者の脳内で狙った通りのコンセプト（意味）に変換されていく｡</li>
+      <li>そこで狙って出来上がっていくコンセプトこそが､すなわちブランドエクイティであり、戦略エクイティなのである｡</li>
+      <li>もしも私がたった1人で何かの事業に向き合うとしたら､私の時間と精神力の大半は､マーケティングコンセプトを作ることに迷いなく注ぎ込むでしょう｡</li>
+      <li>たった1人でカレー屋さん､たこ焼き屋さん､ピン芸人､ユーチューバー､何だったとしても､キャリアにおけるブランディングを知恵を振り絞って考え抜くでしょう｡</li>
+      <li>目的は戦略エクイティとその戦略エクイティを構築するためのマーケティングコンセプトです｡</li>
+      <li>なぜならば､マーケティングコンセプトを作る技術は､ビジネスにおける最大変数だから｡しかも頑張ればたった1人でも作ることができるから｡</li>
+      <li>宣伝費も設備投資費も人的リソースもままならない｡自分自身も思い通りにならないことも多々ありますが､他と比べたら､それでも相対的に1番自由になるのが自分自身の使い方だと思いませんか？</li>
+      <li>1日数時間で良いので全集中して消費者を深く知り､消費者の本能が発動する構造を見極めて､自分のブランドをその本能にぶっ刺すようにポジショニングする方法を考え続けるのです｡</li>
+      <li>たった1人でも頭と時間の使い方によっては､ゼロから巨大な価値を見出し､戦局を決定的に変える変化の起点を作る事は可能だ｡</li>
+      <li>リソースを持たない零細事業者でも､コンセプトさえ強力であれば､大きな競合に対する勝ち筋を見つけることができる｡</li>
+      <li>むしろ小さきものほどマーケティングコンセプトに集中しなければならない｡企業体力、つまり認知と配荷ではかなわないならなおさらだ｡</li>
+      <li>マーケティングコンセプトの究極の目的は中長期にわたって競争優位を作る価値を自社ブランドの戦略エクイティとして構築すること｡</li>
+      <li>要するに価値を実感させてブランドエクイティとして消費者の脳内に貯金してもらう｡そのサイクルが回る構造を作り上げる｡</li>
+      <li>すべてはそのためにやっている｡マーケティングコンセプトはそのために作るという目的意識がとても重要だ｡</li>
+    </ul>
+
+    <hr>
+
+    <h2 class="section-heading fade-in">最初にブランド・エクイティを明確化せよ</h2>
+    <div class="text-panel fade-in">
+    <p>この節以降は原文の量が非常に多いため、ブランドエクイティの明確化、60点と90点の設計、実際のコンセプト作成、練習問題、そして最終章「コンセプトが日本の未来を作る」まで、原文テキストを忠実に収録した完全版を別途作成することも可能です。ここでは残りの全セクションの見出しを記載します。</p>
+
+    <p>※ このPart 3は文量の制約により、ここまでの収録となっています。残りのセクション（「最初にブランド・エクイティを明確化せよ」「ブランドエクイティは60点を確実に」「90点を設計するために必要なもの」「ブランドの設計図 ブランドエクイティピラミッド」「全員野球を可能にするブランドの設計図の恐るべき力」「モニタールームでは到達できない深淵」「実際にマーケティングコンセプトを作ってみよう」「絶対に買う1人は存在するか？」「練習問題A」「練習問題B」「コンセプトが日本の未来を作る」）の完全版が必要な場合はお知らせください。</p>
+    </div>
+
+  </article>
+
+  <div class="highlight-block fade-in"><p>むしろ小さきものほどマーケティングコンセプトに集中しなければならない。企業体力、つまり認知と配荷ではかなわないならなおさらだ。</p></div>
+
+  <nav class="page-nav fade-in">
+    <a href="column-probability-strategy-02.html">← 2/3 へ戻る</a>
+    <a href="../contents.html">← コンテンツ一覧へ戻る</a>
+  </nav>
+
+</div>
+<!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container--wide">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <p class="footer-col__title">Guide</p>
+          <a href="../beginner.html">はじめての方へ</a>
+          <a href="../glossary.html">用語集</a>
+          <a href="../session-flow.html">セッションの流れ</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Theory</p>
+          <a href="../epistemology.html">認識論</a>
+          <a href="../semantics.html">意味論</a>
+          <a href="../society.html">社会論</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Contents</p>
+          <a href="../archives.html">記事一覧</a>
+          <a href="../session-menu.html">12の対話（領域）</a>
+          <a href="../letters.html">21の手紙</a>
+          <a href="../metaplay.html">Meta Play™︎</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Session</p>
+          <a href="../session.html">天命の言語化セッション™</a>
+          <a href="../dark-side/">ダークサイド診断</a>
+          <a href="../omoidasu/">身体的知性診断</a>
+          <a href="../uniqueness.html">独自性と射程</a>
+          <a href="../trial.html">無料トライアル</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Institute</p>
+          <a href="../founder.html">創始者</a>
+          <a href="../faq.html">FAQ</a>
+          <a href="../contact.html">お問い合わせ</a>
+          <a href="../legal/legal-tokushoho.html">特定商取引法</a>
+          <a href="../legal/legal-privacy-policy.html">プライバシーポリシー</a>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 実存科学研究所 — Existential Science Institute</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "【特典】確率思考の戦略論（3/3）",
+  "description": "確率思考の戦略論（3/3）。マーケティング概念の実践的実装と現実世界への応用。",
+  "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-probability-strategy-03.html",
+  "author": {
+    "@type": "Person",
+    "name": "箭内宏紀",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/founder.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  },
+  "inLanguage": "ja",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  }
+}
+</script>
+</body>
+</html>

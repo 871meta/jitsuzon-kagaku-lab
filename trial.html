@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/trial.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>トライアルセッション | 実存科学研究所</title>
+  <meta name="description" content="天命の言語化セッション™ トライアル。2時間の対話で天命を100%言語化する。心友™への入口。">
+  <meta property="og:title" content="トライアルセッション | 実存科学研究所">
+  <meta property="og:description" content="あなたの天命を、2時間で言語化します。">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="実存科学研究所">
+  <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* === Trial LP specific styles === */
+    /* Headline section */
+    .trial-hero {
+      padding: 12rem 0 6rem;
+      text-align: center;
+      border-bottom: 1px solid rgba(192, 168, 120, 0.1);
+      position: relative;
+    }
+
+    .trial-hero::after {
+      content: "";
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: #c0a878;
+      margin: 3rem auto 0;
+    }
+
+    .trial-hero__sub {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.25em;
+      color: #c0a878;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+
+    .trial-hero h1 {
+      font-size: 2.6rem;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.08em;
+      color: #f0ece6;
+      line-height: 1.5;
+    }
+
+    .trial-hero__lead {
+      font-size: 0.95rem;
+      color: #a8a4a0;
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 2.2;
+    }
+
+    /* Session spec - 3 columns */
+    .trial-spec {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.8rem;
+      margin: 3rem 0 2rem;
+    }
+
+    .trial-spec__item {
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      border: 1px solid rgba(192, 168, 120, 0.12);
+      background: rgba(15, 12, 25, 0.5);
+      position: relative;
+      box-shadow: 0 1px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .trial-spec__item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 24px;
+      height: 1px;
+      background: #c0a878;
+    }
+
+    .trial-spec__value {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+      letter-spacing: 0.04em;
+      color: #f0ece6;
+    }
+
+    .trial-spec__label {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      color: #c0a878;
+      text-transform: uppercase;
+    }
+
+    /* Condition notice */
+    .trial-condition {
+      background: rgba(15, 12, 25, 0.6);
+      border: 1px solid rgba(192, 168, 120, 0.15);
+      padding: 2.5rem;
+      margin: 3rem 0;
+      text-align: center;
+    }
+
+    .trial-condition p {
+      font-size: 0.95rem;
+      color: #c0bbb4;
+      line-height: 2.2;
+      margin-bottom: 0;
+    }
+
+    .trial-condition strong {
+      color: #f0ece6;
+    }
+
+    /* Shinyu section heading */
+    .shinyu-label {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
+      color: #c0a878;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+
+    /* Offering items */
+    .offering-item {
+      position: relative;
+      margin-bottom: 1.5rem;
+      padding: 2.5rem 2.5rem;
+      background: rgba(15, 12, 25, 0.7);
+      border: 1px solid rgba(192, 168, 120, 0.12);
+      box-shadow: 0 2px 24px rgba(192, 168, 120, 0.05);
+      backdrop-filter: blur(8px);
+      transition: box-shadow 0.4s ease, border-color 0.4s ease;
+      overflow: hidden;
+    }
+
+    .offering-item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.5), transparent);
+    }
+
+    .offering-item:hover {
+      box-shadow: 0 4px 48px rgba(192, 168, 120, 0.1);
+      border-color: rgba(192, 168, 120, 0.25);
+    }
+
+    .offering-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .offering-item p.offering-item__number {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.3em;
+      color: rgba(192, 168, 120, 0.4);
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+
+    .offering-item p.offering-item__poetry {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #f0ece6;
+      margin-bottom: 0.8rem;
+      letter-spacing: 0.06em;
+      line-height: 2;
+    }
+
+    .offering-item p.offering-item__detail {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 0.85rem;
+      color: #c0a878;
+      letter-spacing: 0.12em;
+    }
+
+    @media (max-width: 480px) {
+      .offering-item {
+        padding: 2rem 1.5rem;
+        margin-bottom: 1.2rem;
+      }
+    }
+
+    /* Schedule note */
+    .schedule-note {
+      text-align: center;
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(192, 168, 120, 0.08);
+    }
+
+    .schedule-note p {
+      font-size: 0.92rem;
+      color: #a8a4a0;
+      line-height: 2.1;
+    }
+
+    /* Bonus section */
+    .bonus-item {
+      position: relative;
+      margin-bottom: 1.5rem;
+      padding: 2.5rem 2.5rem;
+      background: rgba(15, 12, 25, 0.7);
+      border: 1px solid rgba(192, 168, 120, 0.12);
+      box-shadow: 0 2px 24px rgba(192, 168, 120, 0.05);
+      backdrop-filter: blur(8px);
+      transition: box-shadow 0.4s ease, border-color 0.4s ease;
+      overflow: hidden;
+    }
+
+    .bonus-item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.5), transparent);
+    }
+
+    .bonus-item:hover {
+      box-shadow: 0 4px 48px rgba(192, 168, 120, 0.1);
+      border-color: rgba(192, 168, 120, 0.25);
+    }
+
+    .bonus-item:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .bonus-item p.bonus-item__label {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.3em;
+      color: rgba(192, 168, 120, 0.4);
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+
+    .bonus-item p.bonus-item__poetry {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #f0ece6;
+      margin-bottom: 0.8rem;
+      letter-spacing: 0.06em;
+      line-height: 2;
+    }
+
+    .bonus-item p.bonus-item__detail {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 0.85rem;
+      color: #c0a878;
+      letter-spacing: 0.12em;
+      margin-bottom: 0.8rem;
+    }
+
+    .bonus-item p.bonus-item__desc {
+      font-size: 0.88rem;
+      color: #a8a4a0;
+      line-height: 2;
+    }
+
+    @media (max-width: 480px) {
+      .bonus-item {
+        padding: 2rem 1.5rem;
+        margin-bottom: 1.2rem;
+      }
+    }
+
+    /* Guarantee cards */
+    .guarantee-item {
+      position: relative;
+      margin-bottom: 1.5rem;
+      padding: 2.5rem 2.5rem;
+      background: rgba(15, 12, 25, 0.7);
+      border: 1px solid rgba(192, 168, 120, 0.12);
+      box-shadow: 0 2px 24px rgba(192, 168, 120, 0.05);
+      backdrop-filter: blur(8px);
+      transition: box-shadow 0.4s ease, border-color 0.4s ease;
+      overflow: hidden;
+    }
+
+    .guarantee-item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.5), transparent);
+    }
+
+    .guarantee-item:hover {
+      box-shadow: 0 4px 48px rgba(192, 168, 120, 0.1);
+      border-color: rgba(192, 168, 120, 0.25);
+    }
+
+    .guarantee-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .guarantee-item p.guarantee-item__number {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.3em;
+      color: rgba(192, 168, 120, 0.4);
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+
+    .guarantee-item p.guarantee-item__label {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #f0ece6;
+      margin-bottom: 0.8rem;
+      letter-spacing: 0.06em;
+    }
+
+    .guarantee-item p {
+      font-size: 0.92rem;
+      color: #c0bbb4;
+      line-height: 2.2;
+    }
+
+    @media (max-width: 480px) {
+      .guarantee-item {
+        padding: 2rem 1.5rem;
+        margin-bottom: 1.2rem;
+      }
+    }
+
+    /* Price display */
+    .price-block {
+      position: relative;
+      text-align: center;
+      padding: 4rem 2.5rem;
+      margin: 2rem 0;
+      background: rgba(15, 12, 25, 0.7);
+      border: 1px solid rgba(192, 168, 120, 0.15);
+      box-shadow: 0 4px 48px rgba(192, 168, 120, 0.06);
+      backdrop-filter: blur(8px);
+      overflow: hidden;
+    }
+
+    .price-block::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.6), transparent);
+    }
+
+    .price-block::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.6), transparent);
+    }
+
+    .price-block p.price-block__label {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.3em;
+      color: rgba(192, 168, 120, 0.5);
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+
+    .price-block p.price-block__amount {
+      font-size: clamp(2.8rem, 10vw, 4.2rem);
+      font-weight: 700;
+      color: #f0ece6;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.3rem;
+      line-height: 1.2;
+    }
+
+    .price-block p.price-block__tax {
+      font-size: 0.92rem;
+      color: #a8a4a0;
+      margin-bottom: 2.5rem;
+    }
+
+    .price-block__sep {
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: rgba(192, 168, 120, 0.3);
+      margin: 0 auto 2rem;
+    }
+
+    .price-block p.price-block__payment {
+      font-size: 0.82rem;
+      color: #8a8680;
+      line-height: 2.2;
+      letter-spacing: 0.04em;
+    }
+
+    /* Checklist */
+    .checklist {
+      margin: 2.5rem 0 3rem;
+    }
+
+    .checklist-item {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      gap: 1.2rem;
+      margin-bottom: 1rem;
+      padding: 1.5rem 2rem;
+      cursor: pointer;
+      -webkit-user-select: none;
+      user-select: none;
+      background: rgba(15, 12, 25, 0.7);
+      border: 1px solid rgba(192, 168, 120, 0.08);
+      transition: border-color 0.4s ease, box-shadow 0.4s ease;
+      overflow: hidden;
+    }
+
+    .checklist-item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.3), transparent);
+    }
+
+    .checklist-item:hover {
+      border-color: rgba(192, 168, 120, 0.2);
+      box-shadow: 0 2px 24px rgba(192, 168, 120, 0.06);
+    }
+
+    .checklist-item input[type="checkbox"] {
+      display: none;
+    }
+
+    .checklist-item__box {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      border: 1px solid rgba(192, 168, 120, 0.4);
+      margin-top: 0.35rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .checklist-item__box::after {
+      content: "";
+      width: 10px;
+      height: 10px;
+      background: #c0a878;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .checklist-item input:checked+.checklist-item__box {
+      border-color: #c0a878;
+      box-shadow: 0 0 12px rgba(192, 168, 120, 0.2);
+    }
+
+    .checklist-item input:checked+.checklist-item__box::after {
+      opacity: 1;
+    }
+
+    .checklist-item__text {
+      font-size: 0.92rem;
+      color: #c0bbb4;
+      line-height: 2;
+      flex: 1;
+    }
+
+    @media (max-width: 480px) {
+      .checklist-item {
+        padding: 1.2rem 1.2rem;
+        gap: 1rem;
+      }
+    }
+
+    /* CTA button state */
+    .trial-cta {
+      text-align: center;
+      padding: 4rem 0 2rem;
+    }
+
+    .trial-cta__note {
+      font-size: 0.82rem;
+      color: #8a8680;
+      margin-top: 2rem;
+      line-height: 2;
+    }
+
+    .btn--trial {
+      display: inline-block;
+      padding: 1.2rem 4rem;
+      background: #c0a878;
+      color: #0c0a14;
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 0.9rem;
+      letter-spacing: 0.18em;
+      border: 1px solid #c0a878;
+      border-bottom: 1px solid #c0a878;
+      cursor: pointer;
+      transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
+      text-transform: uppercase;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .btn--trial:hover {
+      background: transparent;
+      color: #c0a878;
+      border-color: #c0a878;
+      border-bottom: 1px solid #c0a878;
+    }
+
+    .btn--trial.is-disabled {
+      opacity: 0.25;
+      pointer-events: none;
+      cursor: default;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .trial-hero {
+        padding: 9rem 0 4rem;
+      }
+
+      .trial-hero h1 {
+        font-size: 2rem;
+      }
+
+      .trial-spec {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .trial-hero h1 {
+        font-size: 1.7rem;
+      }
+
+      .trial-hero__lead br {
+        display: none;
+      }
+
+      .price-block {
+        padding: 3rem 1.5rem;
+      }
+
+      .btn--trial {
+        padding: 1.2rem 2rem;
+        font-size: 0.82rem;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="index.html" class="site-logo">実存科学研究所</a>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="global-nav">
+        <a href="index.html">Top</a>
+        <a href="beginner.html">Guide</a>
+        <a href="epistemology.html">Epistemology</a>
+        <a href="semantics.html">Semantics</a>
+        <a href="society.html">Society</a>
+        <a href="founder.html">Founder</a>
+        <a href="session.html">Session</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">More</button>
+          <div class="nav-dropdown__menu">
+            <a href="metaplay.html">Meta Play™</a>
+            <a href="dark-side/">ダークサイド診断</a>
+            <a href="omoidasu/">身体的知性診断</a>
+            <a href="trial.html">無料トライアル</a>
+            <a href="session-menu.html">12の対話（領域）</a>
+            <a href="letters.html">21の手紙</a>
+            <a href="uniqueness.html">独自性と射程</a>
+            <a href="faq.html">FAQ</a>
+            <a href="archives.html">記事一覧</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- ===== HERO ===== -->
+  <section class="trial-hero">
+    <div class="container">
+      <p class="trial-hero__sub">Trial Session</p>
+      <h1>あなたの天命を、<br>2時間で言語化します。</h1>
+      <p class="trial-hero__lead">
+        天命とは、あなたの「生まれてきた意味・生きる目的」です。<br>
+        実存科学研究所が提供する「天命の言語化セッション™︎」は、<br>
+        あなたの天命が２時間で言語化できる対話技法です。
+      </p>
+</div>
+  </section>
+  <!-- ===== SESSION OVERVIEW ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="pull-quote fade-in">
+        <p>天命を悟り、日々全うする生き方を、共に築く。</p>
+      </div>
+      <div class="content-block text-panel fade-in">
+        <p>
+          本セッションでは、実存科学研究所 代表・箭内宏紀が、<br>
+          2時間の対話を通じて、あなたの天命を100%言語化いたします。
+        </p>
+      </div>
+      <div class="trial-spec fade-in">
+        <div class="trial-spec__item">
+          <p class="trial-spec__value">2時間</p>
+          <p class="trial-spec__label">Duration</p>
+        </div>
+        <div class="trial-spec__item">
+          <p class="trial-spec__value">Zoom</p>
+          <p class="trial-spec__label">Online</p>
+        </div>
+        <div class="trial-spec__item">
+          <p class="trial-spec__value">無料</p>
+          <p class="trial-spec__label">Fee</p>
+        </div>
+      </div>
+      <div class="trial-condition fade-in">
+        <p>
+          ただし、本セッションは<br>
+          <strong>すべての方に開かれたものではありません。</strong>
+        </p>
+        <br>
+        <p>
+          このセッションは、天命を悟った後も<br>
+          箭内と共に天命の道を歩み続ける<br>
+          ＜年間パートナーシップ＞<br>
+          <strong>「心友™」</strong>への参加をご検討いただける方のみを対象としています。
+        </p>
+        <br>
+        <p>
+          以下の内容をご確認の上、<br>
+          すべてにご納得いただけた方だけ、お申し込みください。
+        </p>
+      </div>
+      <div class="diagram-box fade-in">
+        <p class="diagram-box__title">Journey</p>
+        <div class="diagram-box__flow">
+          <span class="diagram-box__node">トライアルセッション</span>
+          <span class="diagram-box__arrow">&rarr;</span>
+          <span class="diagram-box__node">天命の言語化</span>
+          <span class="diagram-box__arrow">&rarr;</span>
+          <span class="diagram-box__node">心友™</span>
+        </div>
+        <p class="diagram-box__caption">天命を悟り、日々全うする生き方を、共に築く。</p>
+      </div>
+    </div>
+  </section>
+  <!-- ===== SHINYU ===== -->
+  <section class="section section--bordered">
+    <div class="container">
+      <div class="content-block text-panel fade-in">
+        <p class="shinyu-label">Shin-Yu™︎</p>
+        <h2 class="section__title section__title--left">心友™とは</h2>
+        <p>
+          セッションを受けて天命を言語化した。<br>
+          その瞬間、あなたは確かに「わかる」はずです。
+        </p>
+        <p>
+          しかし──
+        </p>
+        <p>
+          <strong>「あれ、私の天命って何だっけ？」</strong>
+        </p>
+        <p>
+          日常に戻ると、あの確信が霞んでいく。
+        </p>
+        <p>
+          天命はあるのに、身体が動かない。<br>
+          天命に生きたはずの日々を、思い出せない。
+        </p>
+        <p>
+          これは、あなたが弱いからではありません。
+        </p>
+        <p>
+          <strong>「天命を悟った人だけ」が、必ず通る道です。</strong>
+        </p>
+        <p>
+          そしてもう一つ。
+        </p>
+        <p>
+          <strong>これまで天命に生きてこなかった人ほど、最初は「孤独」を感じます。</strong>
+        </p>
+        <p>
+          周りには自分の天命を語れる相手がほとんどいない。<br>
+          職場にも、家庭にも、友人の中にも…。
+        </p>
+        <p>
+          でも、ご安心ください。
+        </p>
+        <div class="def-box fade-in">
+          <p class="def-box__term">Shin-Yu™︎</p>
+          <p>
+            <strong>「心友™」は、その孤独を終わらせるために存在します。</strong>
+          </p>
+          <p>
+            箭内宏紀と1年間、共に歩む。<br>
+            「天命を悟り、日々全うする」ための、<br>
+            ただ一つのパートナーシップです。
+          </p>
+        </div>
+      </div>
+      <hr class="separator">
+      <!-- Offerings -->
+      <div class="content-block fade-in">
+        <h2 class="section__title section__title--left">1年間で、あなたに届けるもの</h2>
+        <div class="offering-item">
+          <p class="offering-item__number">01</p>
+          <p class="offering-item__poetry">天命を、何度でも取り戻せる場所。</p>
+          <p class="offering-item__detail">個人セッション（2時間×6回）</p>
+        </div>
+        <div class="offering-item">
+          <p class="offering-item__number">02</p>
+          <p class="offering-item__poetry">あなた自身が、誰かの天命を覚醒させる力。</p>
+          <p class="offering-item__detail">ファシリテータートレーニング（2時間×6回）</p>
+        </div>
+        <div class="offering-item">
+          <p class="offering-item__number">03</p>
+          <p class="offering-item__poetry">天命に生きた日々が、消えずに残る場所。</p>
+          <p class="offering-item__detail">天命のアルバム（ドキュメンタリー＋遺言の記録）</p>
+        </div>
+        <div class="offering-item">
+          <p class="offering-item__number">04</p>
+          <p class="offering-item__poetry">言葉にならない葛藤を、言葉にできる場所。</p>
+          <p class="offering-item__detail">天命のダイアログ（チャット・24時間365日）</p>
+        </div>
+        <div class="offering-item">
+          <p class="offering-item__number">05</p>
+          <p class="offering-item__poetry">天命を語れる人と、ただ一緒にいられる場所。</p>
+          <p class="offering-item__detail">天命のお茶の間（コミュニティ）</p>
+        </div>
+        <div class="schedule-note">
+          <p>セッションは月1回×1年間（全12回）。<br>さらにチャットサポートで365日、あなたの天命に伴走し続けます。</p>
+        </div>
+      </div>
+      <hr class="separator">
+      <!-- Bonus -->
+      <div class="content-block fade-in">
+        <h2 class="section__title section__title--left">特典</h2>
+        <div class="bonus-item">
+          <p class="bonus-item__label">Bonus I</p>
+          <p class="bonus-item__poetry">未来の自分に、手紙を送る。</p>
+          <p class="bonus-item__detail">タイムカプセル製作・上映会</p>
+          <p class="bonus-item__desc">1ヶ月後、3ヶ月後、6ヶ月後、1年後の自分へ、ビデオレターを届けます。</p>
+        </div>
+        <div class="bonus-item">
+          <p class="bonus-item__label">Bonus II</p>
+          <p class="bonus-item__poetry">天命に生きる人と、直接会える。</p>
+          <p class="bonus-item__detail">天命の饗宴（きょうえん）</p>
+          <p class="bonus-item__desc">心友™同士がリアルで交流できる集いへの参加権です。</p>
+        </div>
+      </div>
+      <hr class="separator">
+      <!-- Guarantees -->
+      <div class="content-block fade-in">
+        <h2 class="section__title section__title--left">3つの保証</h2>
+        <div class="guarantee-item">
+          <p class="guarantee-item__number">Guarantee I</p>
+          <p class="guarantee-item__label">満足</p>
+          <p>
+            あなたは天命を100%言語化できます。<br>
+            万が一叶わなかった場合は、無料で追加セッションをお受けいただけます。<br>
+            ただし、毎回のセッション前に環境を整え、覚悟を決めてお臨みください。
+          </p>
+        </div>
+        <div class="guarantee-item">
+          <p class="guarantee-item__number">Guarantee II</p>
+          <p class="guarantee-item__label">安心</p>
+          <p>
+            「こういうサポートがほしい」というリクエストを、無制限にお受けします。<br>
+            すべてに応じられるわけではありませんが、<br>
+            あなたに最適な環境へ、共にアップデートし続けます。
+          </p>
+        </div>
+        <div class="guarantee-item">
+          <p class="guarantee-item__number">Guarantee III</p>
+          <p class="guarantee-item__label">安全</p>
+          <p>
+            守秘義務を結びます。<br>
+            あなたの許可なく個人情報を共有することは一切ありません。<br>
+            箭内だけが取り扱います。詳細は契約書にて。
+          </p>
+        </div>
+      </div>
+      <hr class="separator">
+      <!-- Price -->
+      <div class="content-block fade-in">
+        <h2 class="section__title">参加費</h2>
+        <div class="price-block">
+          <p class="price-block__label">Price</p>
+          <p class="price-block__amount">55万円</p>
+          <p class="price-block__tax">（税込）</p>
+          <span class="price-block__sep"></span>
+          <p class="price-block__payment">
+            クレジットカード：24回払いまで対応<br>
+            銀行振込：一括（分割はご相談ください）
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ===== CHECKLIST ===== -->
+  <section class="section section--bordered">
+    <div class="container">
+      <div class="content-block fade-in">
+        <p class="shinyu-label">Conditions</p>
+        <h2 class="section__title section__title--left">トライアルセッション参加条件</h2>
+        <div class="highlight-block" style="margin-top: 2rem;">
+          <p>以下のすべてに同意いただける方のみ、お申し込みいただけます。</p>
+        </div>
+      </div>
+      <div class="checklist fade-in" id="checklist">
+        <label class="checklist-item">
+          <input type="checkbox" class="check-input">
+          <span class="checklist-item__box"></span>
+          <span class="checklist-item__text">天命を悟り、日々全うする生き方を、心から望んでいる。</span>
+        </label>
+        <label class="checklist-item">
+          <input type="checkbox" class="check-input">
+          <span class="checklist-item__box"></span>
+          <span class="checklist-item__text">「生きる意味を語れる社会をつくる」という箭内のビジョンに共感している。</span>
+        </label>
+        <label class="checklist-item">
+          <input type="checkbox" class="check-input">
+          <span class="checklist-item__box"></span>
+          <span class="checklist-item__text">実存科学研究所のウェブサイトを通じて、箭内の思想に触れている。</span>
+        </label>
+        <label class="checklist-item">
+          <input type="checkbox" class="check-input">
+          <span class="checklist-item__box"></span>
+          <span class="checklist-item__text">嘘をつかず、自分自身と誠実に向き合うことを約束する。</span>
+        </label>
+        <label class="checklist-item">
+          <input type="checkbox" class="check-input">
+          <span class="checklist-item__box"></span>
+          <span class="checklist-item__text">このセッションでは、向き合いたくない自分や不快な感情と対峙する場面があることを受け入れる。</span>
+        </label>
+        <label class="checklist-item">
+          <input type="checkbox" class="check-input">
+          <span class="checklist-item__box"></span>
+          <span class="checklist-item__text">愛と友情を前提に、耳の痛いことを伝えられる場合があることを受け入れる。</span>
+        </label>
+        <label class="checklist-item">
+          <input type="checkbox" class="check-input">
+          <span class="checklist-item__box"></span>
+          <span class="checklist-item__text">箭内が対象外と判断した場合、セッションの中断や提案なしとなることを受け入れる。</span>
+        </label>
+        <label class="checklist-item">
+          <input type="checkbox" class="check-input">
+          <span class="checklist-item__box"></span>
+          <span class="checklist-item__text">心友™（55万円・年間）の内容を確認し、参加する意思とご予算がある。（24回払い可）</span>
+        </label>
+      </div>
+      <!-- CTA -->
+      <div class="trial-cta fade-in">
+        <p style="color: #a8a4a0; margin-bottom: 2rem; font-size: 0.95rem; line-height: 2.2;">
+          ここまで読んでくださったあなたへ。<br><br>
+          すべての条件に同意いただけたなら、<br>
+          下記よりお申し込みください。<br><br>
+          公式LINEにご登録いただいた後、<br>
+          セッションの日程を調整いたします。
+        </p>
+        <a href="legal/agreement-trial.html" class="btn--trial is-disabled"
+          id="cta-btn">同意書を確認して申し込みに進む &rarr;</a>
+        <div class="notation">
+          <p>※本セッションは、箭内がすべて一人で対応しております。<br>
+          そのため、お申し込み多数の場合はお待ちいただくことがございます。</p>
+        </div>
+        <p style="margin-top: 2rem; font-size: 0.85rem;">
+          <a href="faq.html" style="color: #c0a878; border-bottom: 1px solid rgba(192,168,120,0.3);">よくある質問はこちら &rarr;</a>
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container--wide">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <p class="footer-col__title">Guide</p>
+          <a href="beginner.html">はじめての方へ</a>
+          <a href="glossary.html">用語集</a>
+          <a href="session-flow.html">セッションの流れ</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Theory</p>
+          <a href="epistemology.html">認識論</a>
+          <a href="semantics.html">意味論</a>
+          <a href="society.html">社会論</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Contents</p>
+          <a href="archives.html">記事一覧</a>
+          <a href="session-menu.html">12の対話（領域）</a>
+          <a href="letters.html">21の手紙</a>
+          <a href="metaplay.html">Meta Play™︎</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Session</p>
+          <a href="session.html">天命の言語化セッション™</a>
+          <a href="dark-side/">ダークサイド診断</a>
+          <a href="omoidasu/">身体的知性診断</a>
+          <a href="uniqueness.html">独自性と射程</a>
+          <a href="trial.html">無料トライアル</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Institute</p>
+          <a href="founder.html">創始者</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">お問い合わせ</a>
+          <a href="legal/legal-tokushoho.html">特定商取引法</a>
+          <a href="legal/legal-privacy-policy.html">プライバシーポリシー</a>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 実存科学研究所 — Existential Science Institute</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script>
+    // Checklist → CTA activation
+    document.addEventListener('DOMContentLoaded', function () {
+      var checks = document.querySelectorAll('.check-input');
+      var btn = document.getElementById('cta-btn');
+      var total = checks.length;
+      function updateBtn() {
+        var checked = document.querySelectorAll('.check-input:checked').length;
+        if (checked === total) {
+          btn.classList.remove('is-disabled');
+        } else {
+          btn.classList.add('is-disabled');
+        }
+      }
+      checks.forEach(function (cb) {
+        cb.addEventListener('change', updateBtn);
+      });
+    });
+  </script>
+</body>
+
+</html>

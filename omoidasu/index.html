@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+<meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/omoidasu/">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>身体的知性診断 | OMOIDAS™ | 実存科学研究所</title>
+<meta name="description" content="身体的知性診断 OMOIDAS™──あなたの身体が持つ知性を7つの領域で可視化する。実存科学研究所の無料診断ツール。">
+<meta property="og:title" content="身体的知性診断 | OMOIDAS™ | 実存科学研究所">
+<meta property="og:description" content="あなたの身体が持つ知性を7つの領域で可視化する。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="実存科学研究所">
+<meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   OMOIDAS™ Somatic Intelligence Diagnostic
+   Design: 実存科学研究所 ダークラグジュアリー統合
+   ============================================================ */
+
+:root {
+  --bg: #0c0a14;
+  --bg-overlay: rgba(8, 6, 16, 0.80);
+  --surface: rgba(15, 12, 25, 0.7);
+  --surface-light: rgba(15, 12, 25, 0.5);
+  --text: #e8e4df;
+  --text-bright: #f0ece6;
+  --text-sub: #c0bbb4;
+  --text-dim: #a8a4a0;
+  --text-muted: #8a8680;
+  --gold: #c0a878;
+  --gold-dim: rgba(192, 168, 120, 0.7);
+  --gold-border: rgba(192, 168, 120, 0.12);
+  --gold-border-strong: rgba(192, 168, 120, 0.2);
+  --gold-glow: rgba(192, 168, 120, 0.05);
+  --gold-bg: rgba(192, 168, 120, 0.04);
+  --serif: "Shippori Mincho", "Noto Serif JP", "游明朝", "Yu Mincho", serif;
+  --sans: "Noto Sans JP", sans-serif;
+  --garamond: "Cormorant Garamond", "Times New Roman", serif;
+
+  --status-stable: #7ee081;
+  --status-caution: #ffd166;
+  --status-alert: #ff9f5a;
+  --status-crisis: #ff6b6b;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 17px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--serif);
+  color: var(--text);
+  background-color: var(--bg);
+  background-image: url("../images/haikei2.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  line-height: 2.1;
+  letter-spacing: 0.04em;
+  font-feature-settings: "palt" 1;
+  font-weight: 400;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: var(--bg-overlay);
+  z-index: 0;
+  pointer-events: none;
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+::selection {
+  background: rgba(192, 168, 120, 0.3);
+  color: #fff;
+}
+
+/* iOS Safari: background-attachment: fixed fallback */
+@supports (-webkit-touch-callout: none) {
+  body { background-attachment: scroll; }
+}
+
+/* ── Layout ── */
+
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+
+/* ── Header ── */
+
+.header {
+  text-align: center;
+  padding: 6rem 0 3rem;
+  border-bottom: 1px solid rgba(192, 168, 120, 0.1);
+  position: relative;
+}
+
+.header::after {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--gold);
+  margin: 2rem auto 0;
+}
+
+.header-english {
+  font-family: var(--garamond);
+  font-size: 0.82rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.header-tag {
+  display: inline-block;
+  font-family: var(--garamond);
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid var(--gold-border-strong);
+  padding: 0.3rem 1rem;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.header h1 {
+  font-family: var(--serif);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.08em;
+  color: var(--text-bright);
+  margin-bottom: 0.3rem;
+}
+
+.header-sub {
+  font-family: var(--garamond);
+  font-size: 1rem;
+  color: var(--text-dim);
+  letter-spacing: 0.15em;
+  font-weight: 400;
+}
+
+/* ── Separator ── */
+
+.separator {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(192, 168, 120, 0.15) 50%, transparent 100%);
+  margin: 3.5rem 0;
+}
+
+/* ── Purpose / Intro Text ── */
+
+.purpose {
+  padding: 2rem 0;
+}
+
+.purpose p {
+  margin-bottom: 1.6em;
+  color: var(--text-sub);
+  font-size: 0.95rem;
+  line-height: 2.2;
+}
+
+blockquote {
+  border-left: 2px solid var(--gold);
+  padding: 1.8rem 2.5rem;
+  margin: 2rem 0;
+  background: var(--gold-bg);
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 2.1;
+  letter-spacing: 0.04em;
+}
+
+blockquote strong {
+  color: var(--text-bright);
+  font-weight: 600;
+}
+
+/* ── Scale Guide ── */
+
+.scale-guide {
+  margin: 2rem 0;
+}
+
+.scale-guide-title {
+  font-family: var(--garamond);
+  font-size: 0.72rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.scale-items {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+}
+
+.scale-item {
+  text-align: center;
+  background: var(--surface-light);
+  border: 1px solid var(--gold-border);
+  padding: 1.2rem 0.5rem;
+  margin-left: -1px;
+  backdrop-filter: blur(4px);
+}
+
+.scale-item:first-child { margin-left: 0; }
+
+.scale-item .num {
+  display: block;
+  font-family: var(--garamond);
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: var(--gold);
+}
+
+.scale-item .label {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  font-family: var(--sans);
+  margin-top: 0.3rem;
+  line-height: 1.4;
+}
+
+/* ── Progress Bar ── */
+
+.progress-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10, 8, 18, 0.92);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-bottom: 1px solid var(--gold-border);
+  padding: 0.8rem 0;
+  display: none;
+}
+
+.progress-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+
+.progress-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.4rem;
+}
+
+.progress-label {
+  font-family: var(--garamond);
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(192, 168, 120, 0.5);
+  font-weight: 400;
+}
+
+.progress-count {
+  font-family: var(--garamond);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+.progress-bar {
+  height: 2px;
+  background: rgba(192, 168, 120, 0.1);
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, rgba(192, 168, 120, 0.4), var(--gold));
+  transition: width 0.4s cubic-bezier(.4, 0, .2, 1);
+}
+
+/* ── Realtime Score ── */
+
+.realtime-wrap {
+  position: sticky;
+  top: 48px;
+  z-index: 99;
+  background: rgba(10, 8, 18, 0.88);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid var(--gold-border);
+  padding: 0.6rem 0;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 0.4s, transform 0.4s;
+  pointer-events: none;
+}
+
+.realtime-wrap.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.realtime-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+.rt-item {
+  text-align: center;
+  padding: 0.6rem;
+  border: 1px solid var(--gold-border);
+  margin-left: -1px;
+  background: rgba(15, 12, 25, 0.5);
+}
+
+.rt-item:first-child { margin-left: 0; }
+
+.rt-item .rt-name {
+  font-family: var(--garamond);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(192, 168, 120, 0.5);
+  font-weight: 400;
+}
+
+.rt-item .rt-val {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: color 0.3s;
+}
+
+.rt-item .rt-val.has-value {
+  color: var(--gold);
+}
+
+/* ── Question Sections ── */
+
+.q-section {
+  margin-top: 3.5rem;
+}
+
+.q-section-title {
+  font-family: var(--garamond);
+  font-size: 1.05rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  color: var(--gold);
+  text-transform: none;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--gold-border);
+}
+
+.q-section-note {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  margin-bottom: 2.5rem;
+  font-style: normal;
+}
+
+/* ── Question ── */
+
+.question {
+  margin-bottom: 2.8rem;
+}
+
+.q-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.q-check {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  border: 1px solid rgba(192, 168, 120, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.25rem;
+  transition: all 0.35s cubic-bezier(.34, 1.56, .64, 1);
+}
+
+.question.answered .q-check {
+  border-color: var(--status-stable);
+  background: rgba(126, 224, 129, 0.15);
+}
+
+.q-check svg {
+  width: 12px;
+  height: 12px;
+  stroke: var(--status-stable);
+  stroke-width: 3;
+  fill: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.question.answered .q-check svg { opacity: 1; }
+
+.q-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.q-num {
+  font-family: var(--garamond);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: rgba(192, 168, 120, 0.5);
+  min-width: 1.8rem;
+  padding-top: 0.15rem;
+}
+
+.q-text {
+  font-size: 0.95rem;
+  line-height: 2.1;
+  color: var(--text-sub);
+}
+
+.q-options {
+  display: flex;
+  gap: 0;
+  padding-left: 1.8rem;
+}
+
+.q-options label {
+  flex: 1;
+  cursor: pointer;
+  position: relative;
+}
+
+.q-options input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.q-options .radio-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 0.3rem;
+  border: 1px solid var(--gold-border);
+  background: var(--surface-light);
+  transition: all 0.2s;
+  min-height: 48px;
+  margin-left: -1px;
+  backdrop-filter: blur(4px);
+}
+
+.q-options label:first-child .radio-btn { margin-left: 0; }
+
+.q-options .radio-btn .val {
+  font-family: var(--garamond);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+
+.q-options input[type="radio"]:checked + .radio-btn {
+  border-color: var(--gold);
+  background: rgba(192, 168, 120, 0.08);
+  box-shadow: 0 0 0 1px var(--gold), 0 0 20px rgba(192, 168, 120, 0.08);
+  position: relative;
+  z-index: 1;
+}
+
+.q-options input[type="radio"]:checked + .radio-btn .val {
+  color: var(--gold);
+}
+
+.q-options label:hover .radio-btn {
+  border-color: rgba(192, 168, 120, 0.3);
+}
+
+/* ── Submit ── */
+
+.submit-area {
+  text-align: center;
+  padding: 3rem 0 5rem;
+}
+
+.submit-btn {
+  display: inline-block;
+  padding: 1.1rem 3.5rem;
+  background: var(--gold);
+  color: var(--bg);
+  font-family: var(--garamond);
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  border: 1px solid var(--gold);
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.submit-btn:hover {
+  background: transparent;
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
+.error-msg {
+  color: var(--status-crisis);
+  font-size: 0.82rem;
+  font-family: var(--sans);
+  margin-top: 0.8rem;
+  display: none;
+}
+
+/* ── Results ── */
+
+#results { display: none; }
+
+.results-header {
+  text-align: center;
+  padding: 6rem 0 3rem;
+  position: relative;
+}
+
+.results-header::after {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--gold);
+  margin: 2rem auto 0;
+}
+
+.results-header h2 {
+  font-family: var(--serif);
+  font-size: 1.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--text-bright);
+  margin-bottom: 0.8rem;
+}
+
+.results-type-name {
+  font-family: var(--garamond);
+  font-size: 0.8rem;
+  letter-spacing: 0.25em;
+  color: var(--gold);
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+/* ── Score Panel ── */
+
+.score-panel {
+  padding: 2.5rem 0;
+}
+
+.total-score {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.total-score .big-num {
+  font-family: var(--garamond);
+  font-size: 4rem;
+  font-weight: 300;
+  color: var(--gold);
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 40px rgba(192, 168, 120, 0.15);
+}
+
+.total-score .of {
+  font-family: var(--garamond);
+  font-size: 1.2rem;
+  color: var(--text-dim);
+  font-weight: 300;
+}
+
+.total-score .total-label {
+  display: block;
+  font-family: var(--garamond);
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(192, 168, 120, 0.5);
+  margin-top: 0.5rem;
+  font-weight: 400;
+}
+
+/* ── Bar Graph ── */
+
+.layer-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.bar-label {
+  font-family: var(--garamond);
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(192, 168, 120, 0.6);
+  min-width: 3.5rem;
+  text-align: right;
+}
+
+.bar-track {
+  flex: 1;
+  height: 28px;
+  background: rgba(15, 12, 25, 0.5);
+  border: 1px solid var(--gold-border);
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  width: 0%;
+  transition: width 1s cubic-bezier(.4, 0, .2, 1);
+}
+
+.bar-fill.level-stable  { background: linear-gradient(90deg, rgba(126, 224, 129, 0.1), rgba(126, 224, 129, 0.35)); }
+.bar-fill.level-caution { background: linear-gradient(90deg, rgba(255, 209, 102, 0.1), rgba(255, 209, 102, 0.4)); }
+.bar-fill.level-alert   { background: linear-gradient(90deg, rgba(255, 159, 90, 0.15), rgba(255, 159, 90, 0.5)); }
+.bar-fill.level-crisis  { background: linear-gradient(90deg, rgba(255, 107, 107, 0.2), rgba(255, 107, 107, 0.6)); }
+
+.bar-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 5.5rem;
+}
+
+.bar-num {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  min-width: 1.8rem;
+  color: var(--text-bright);
+}
+
+.bar-status {
+  font-family: var(--garamond);
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.5rem;
+  white-space: nowrap;
+}
+
+.bar-status.status-stable  { color: var(--status-stable); }
+.bar-status.status-caution { color: var(--status-caution); }
+.bar-status.status-alert   { color: var(--status-alert); }
+.bar-status.status-crisis  { color: #fff; background: rgba(255, 107, 107, 0.4); }
+
+/* ── Letter Cards ── */
+
+.letter {
+  padding: 2rem 0;
+}
+
+.letter-card {
+  background: var(--surface);
+  border: 1px solid var(--gold-border);
+  padding: 3rem 2.5rem;
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+
+.letter-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.5), transparent);
+}
+
+.letter-card h2 {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--text-bright);
+  border-bottom: 1px solid rgba(192, 168, 120, 0.15);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.letter-card h3 {
+  font-family: var(--garamond);
+  font-size: 1.05rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  color: var(--gold);
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--gold-border);
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.letter-card p {
+  font-size: 0.95rem;
+  line-height: 2.2;
+  color: var(--text-sub);
+  margin-bottom: 1.4rem;
+}
+
+.letter-card p:last-child { margin-bottom: 0; }
+
+.letter-card strong {
+  color: var(--text-bright);
+  font-weight: 600;
+}
+
+.letter-card ul,
+.letter-card ol {
+  margin: 0.5rem 0 1.5rem 1rem;
+  font-size: 0.95rem;
+  line-height: 2.2;
+  color: var(--text-sub);
+  list-style: none;
+  padding: 0;
+}
+
+.letter-card li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.letter-card li::before {
+  content: "\2014";
+  position: absolute;
+  left: 0;
+  color: rgba(192, 168, 120, 0.5);
+}
+
+.letter-card .insight-box {
+  border-left: 2px solid var(--gold);
+  background: var(--gold-bg);
+  padding: 1.5rem 2rem;
+  margin: 1.8rem 0;
+  font-size: 0.95rem;
+  line-height: 2.2;
+}
+
+.letter-card .insight-box strong {
+  color: var(--text-bright);
+}
+
+/* ── Copy / Retry Buttons ── */
+
+.action-buttons {
+  text-align: center;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.copy-btn {
+  font-family: var(--garamond);
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 0.8rem 2.5rem;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.copy-btn:hover {
+  background: var(--gold);
+  color: var(--bg);
+}
+
+.copy-btn.copied {
+  color: var(--status-stable);
+  border-color: var(--status-stable);
+}
+
+.retry-btn {
+  font-family: var(--garamond);
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  background: transparent;
+  border: 1px solid rgba(192, 168, 120, 0.2);
+  color: var(--text-dim);
+  padding: 0.8rem 2.5rem;
+  cursor: pointer;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+.retry-btn:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* ── CTA ── */
+
+.cta-section {
+  text-align: center;
+  padding: 4rem 0 6rem;
+  border-top: 1px solid rgba(192, 168, 120, 0.1);
+  position: relative;
+}
+
+.cta-section::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 32px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.cta-lead {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-bright);
+  margin-bottom: 1rem;
+  letter-spacing: 0.06em;
+}
+
+.cta-sub {
+  font-size: 0.92rem;
+  color: var(--text-dim);
+  margin-bottom: 2.5rem;
+  line-height: 2.1;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 1.1rem 3.5rem;
+  background: var(--gold);
+  color: var(--bg);
+  font-family: var(--garamond);
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  border: 1px solid var(--gold);
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.cta-btn:hover {
+  background: transparent;
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
+/* ── Animation ── */
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 768px) {
+  html { font-size: 16px; }
+
+  .container { padding: 0 1.5rem; }
+
+  .header { padding: 4rem 0 2rem; }
+  .header h1 { font-size: 1.9rem; }
+
+  .scale-item { padding: 0.8rem 0.2rem; }
+  .scale-item .num { font-size: 1.1rem; }
+  .scale-item .label { font-size: 0.6rem; }
+
+  .q-options { padding-left: 0; }
+  .radio-btn { padding: 0.6rem 0.2rem !important; min-height: 42px !important; }
+  .radio-btn .val { font-size: 0.95rem !important; }
+
+  .progress-inner, .realtime-inner { padding: 0 1.5rem; }
+  .rt-item .rt-val { font-size: 1rem; }
+
+  .bar-row { gap: 0.5rem; }
+  .bar-label { min-width: 2.8rem; font-size: 0.6rem; }
+  .bar-num { font-size: 1rem; }
+  .bar-info { min-width: 4.5rem; gap: 0.3rem; }
+
+  .total-score .big-num { font-size: 3rem; }
+
+  .letter-card { padding: 2rem 1.5rem; }
+
+  .cta-btn { padding: 1rem 2.5rem; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 1.2rem; }
+  .header h1 { font-size: 1.6rem; }
+  .results-header h2 { font-size: 1.35rem; }
+  .q-check { width: 18px; height: 18px; min-width: 18px; }
+  blockquote { padding: 1.4rem 1.5rem; margin: 1.5rem 0; }
+  .submit-btn { padding: 1rem 2.5rem; width: 100%; }
+  .cta-btn { width: 100%; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     PROGRESS BAR (sticky)
+     ============================================================ -->
+<div class="progress-wrap" id="progress-wrap">
+  <div class="progress-inner">
+    <div class="progress-top">
+      <span class="progress-label">Progress</span>
+      <span class="progress-count"><span id="answered-count">0</span> / 16</span>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+  </div>
+</div>
+
+<!-- ============================================================
+     REALTIME SCORE (sticky)
+     ============================================================ -->
+<div class="realtime-wrap" id="realtime-wrap">
+  <div class="realtime-inner">
+    <div class="rt-item"><div class="rt-name">Body</div><div class="rt-val" id="rt-body">&ndash;</div></div>
+    <div class="rt-item"><div class="rt-name">Mind</div><div class="rt-val" id="rt-mind">&ndash;</div></div>
+    <div class="rt-item"><div class="rt-name">Spirit</div><div class="rt-val" id="rt-spirit">&ndash;</div></div>
+    <div class="rt-item"><div class="rt-name">Shadow</div><div class="rt-val" id="rt-shadow">&ndash;</div></div>
+  </div>
+</div>
+
+<!-- ============================================================
+     FORM SECTION
+     ============================================================ -->
+<div id="form-section">
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-english">Somatic Intelligence Diagnostic</div>
+    <div><span class="header-tag">Diagnostic</span></div>
+    <h1>身体的知性診断</h1>
+    <p class="header-sub">OMOIDAS&trade;</p>
+  </div>
+
+  <!-- Purpose / Intro -->
+  <div class="purpose">
+    <p>この診断は、体型チェックでも、健康意識テストでもありません。</p>
+    <p>目的は一つ。</p>
+    <blockquote>
+      <strong>あなたが「体の声を聞けていない」という事実を、逃げ場なく可視化すること。</strong>
+    </blockquote>
+    <p>そして最終的に理解してもらうことは、これだけです。</p>
+    <blockquote>
+      <strong>あなたに足りないのは、知識ではない。<br>足りないのは「自分の体が何を求めているか」を思い出すことである。</strong>
+    </blockquote>
+  </div>
+
+  <hr class="separator">
+
+  <!-- Scale Guide -->
+  <div class="scale-guide">
+    <div class="scale-guide-title">Response Scale</div>
+    <div class="scale-items">
+      <div class="scale-item"><span class="num">0</span><span class="label">まったく<br>当てはまらない</span></div>
+      <div class="scale-item"><span class="num">1</span><span class="label">あまり<br>当てはまらない</span></div>
+      <div class="scale-item"><span class="num">2</span><span class="label">どちらとも<br>言えない</span></div>
+      <div class="scale-item"><span class="num">3</span><span class="label">やや<br>当てはまる</span></div>
+      <div class="scale-item"><span class="num">4</span><span class="label">非常に<br>当てはまる</span></div>
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <!-- Quiz Form -->
+  <form id="quiz-form">
+
+    <!-- ── Body ── -->
+    <div class="q-section">
+      <h2 class="q-section-title">Body ── 肉体の声 ── 直視すべき現実</h2>
+      <p class="q-section-note">※ Body は原因ではない。結果である。</p>
+
+      <div class="question" data-q="1">
+        <div class="q-top">
+          <div class="q-check"><svg viewBox="0 0 16 16"><polyline points="3 8 7 12 13 4"/></svg></div>
+          <div class="q-label"><span class="q-num">Q1</span><span class="q-text">階段や軽い運動で、以前より明らかに息が上がる。</span></div>
+        </div>
+        <div class="q-options" id="q1"></div>
+      </div>
+
+      <div class="question" data-q="2">
+        <div class="q-top">
+          <div class="q-check"><svg viewBox="0 0 16 16"><polyline points="3 8 7 12 13 4"/></svg></div>
+          <div class="q-label"><span class="q-num">Q2</span><span class="q-text">食事の後に胃が重い、肌が荒れる、体がだるくなるなど、「食べたもの」が体調に悪影響を与えている実感がある。</span></div>
+        </div>
+        <div class="q-options" id="q2"></div>
+      </div>
+
+      <div class="question" data-q="3">
+        <div class="q-top">
+          <div class="q-check"><svg viewBox="0 0 16 16"><polyline points="3 8 7 12 13 4"/></svg></div>
+          <div class="q-label"><span class="q-num">Q3</span><span class="q-text">寝ても回復した感じがなく、朝から疲れている。</span></div>
+        </div>
+        <div class="q-options" id="q3"></div>
+      </div>
+
+      <div class="question" data-q="4">
+        <div class="q-top">
+          <div class="q-check"><svg viewBox="0 0 16 16"><polyline points="3 8 7 12 13 4"/></svg></div>
+          <div class="q-label"><span class="q-num">Q4</span><span class="q-text">判断力や集中力が鈍り、以前の自分より明らかに意思決定の精度が落ちている。</span></div>
+        </div>
+        <div class="q-options" id="q4"></div>
+      </div>
+    </div>
+
+    <hr class="separator">
+
+    <!-- ── Mind ── -->
+    <div class="q-section">
+      <h2 class="q-section-title">Mind ── 思考の声 ── 言い訳を生む構造</h2>
+
+      <div class="question" data-q="5">
+        <div class="q-top">
+          <div class="q-check"><svg viewBox="0 0 16 16"><polyline points="3 8 7 12 13 4"/></svg></div>
+          <div class="q-label"><span class="q-num">Q5</span><span class="q-text">運動した方がいいと分かっているのに、「今日はいいか」で終わる日が多い。</span></div>
+        </div>
+        <div class="q-options" id="q5"></div>
+      </div>
+
+      <div class="question" data-q="6">
+        <div class="q-top">
+          <div class="q-check"><svg viewBox="0 0 16 16"><polyline points="3 8 7 12 13 4"/></svg></div>
+          <div class="q-label"><span class="q-num">Q6</span><span class="q-text">食事が乱れても、「忙しいから仕方ない」で納得している。</span></div>
+        </div>
+        <div class="q-options" id="q6"></div>
+      </div>
+
+      <div class="question" data-q="7">
+        <div class="q-top">
+          <div class="q-check"><svg viewBox="0 0 16 16"><polyline points="3 8 7 12 13 4"/></svg></div>
+          <div class="q-label"><span class="q-num">Q7</span><span class="q-text">睡眠を改善したいが、「仕事の量が減らないと無理」「環境を整えてから」と、条件が揃うのを待っている。</span></div>
+        </div>
+        <div class="q-options" id="q7"></div>
+      </div>
+
+      <div class="question" data-q="8">
+        <div class="q-top">
+          <div class="q-check"><svg viewBox="0 0 16 16"><polyline points="3 8 7 12 13 4"/></svg></div>
+          <div class="q-label"><span class="q-num">Q8</span><span class="q-text">健康について調べたり考えたりはするが、結局やらないまま終わることが多い。</span></div>
+        </div>
+        <div class="q-options" id="q8"></div>
+      </div>
+    </div>
+
+    <hr class="separator">
+
+    <!-- ── Spirit ── -->
+    <div class="q-section">
+      <h2 class="q-section-title">Spirit ── 精神の声 ── 基準の不在</h2>
+
+      <div class="question" data-q="9">
+        <div class="q-top">
+          <div class="q-check"><svg viewBox="0 0 16 16"><polyline points="3 8 7 12 13 4"/></svg></div>
+          <div class="q-label"><span class="q-num">Q9</span><span class="q-text">週に何回、どんな運動をするか、自分の最低基準を具体的に決めていない。</span></div>
+        </div>
+        <div class="q-options" id="q9"></div>
+      </div>
+
+      <div class="question" data-q="10">
+        <div class="q-top">
+          <div class="q-check"><svg viewBox="0 0 16 16"><polyline points="3 8 7 12 13 4"/></svg></div>
+          <div class="q-label"><span class="q-num">Q10</span><span class="q-text">食事の基準が流行りのダイエットや他人の成功例に振り回されがちだ。</span></div>
+        </div>
+        <div class="q-options" id="q10"></div>
+      </div>
+
+      <div class="question" data-q="11">
+        <div class="q-top">
+          <div class="q-check"><svg viewBox="0 0 16 16"><polyline points="3 8 7 12 13 4"/></svg></div>
+          <div class="q-label"><span class="q-num">Q11</span><span class="q-text">仕事の締切は守るのに、「何時に寝る」という自分との約束は守っていない。</span></div>
+        </div>
+        <div class="q-options" id="q11"></div>
+      </div>
+
+      <div class="question" data-q="12">
+        <div class="q-top">
+          <div class="q-check"><svg viewBox="0 0 16 16"><polyline points="3 8 7 12 13 4"/></svg></div>
+          <div class="q-label"><span class="q-num">Q12</span><span class="q-text">「どんな身体で生きたいのか」を、本気で決めたことがない。</span></div>
+        </div>
+        <div class="q-options" id="q12"></div>
+      </div>
+    </div>
+
+    <hr class="separator">
+
+    <!-- ── Shadow ── -->
+    <div class="q-section">
+      <h2 class="q-section-title">Shadow ── 影の声 ── 変わらないことで守っているもの</h2>
+
+      <div class="question" data-q="13">
+        <div class="q-top">
+          <div class="q-check"><svg viewBox="0 0 16 16"><polyline points="3 8 7 12 13 4"/></svg></div>
+          <div class="q-label"><span class="q-num">Q13</span><span class="q-text">本気で運動習慣がついたら、「時間がない」という言い訳が使えなくなる気がする。</span></div>
+        </div>
+        <div class="q-options" id="q13"></div>
+      </div>
+
+      <div class="question" data-q="14">
+        <div class="q-top">
+          <div class="q-check"><svg viewBox="0 0 16 16"><polyline points="3 8 7 12 13 4"/></svg></div>
+          <div class="q-label"><span class="q-num">Q14</span><span class="q-text">食事を本気で管理し始めたら、もう「自分に甘い自分」でいられなくなる気がする。</span></div>
+        </div>
+        <div class="q-options" id="q14"></div>
+      </div>
+
+      <div class="question" data-q="15">
+        <div class="q-top">
+          <div class="q-check"><svg viewBox="0 0 16 16"><polyline points="3 8 7 12 13 4"/></svg></div>
+          <div class="q-label"><span class="q-num">Q15</span><span class="q-text">睡眠を整えて頭がクリアになったら、今の生活の矛盾に気づいてしまいそうで怖い。</span></div>
+        </div>
+        <div class="q-options" id="q15"></div>
+      </div>
+
+      <div class="question" data-q="16">
+        <div class="q-top">
+          <div class="q-check"><svg viewBox="0 0 16 16"><polyline points="3 8 7 12 13 4"/></svg></div>
+          <div class="q-label"><span class="q-num">Q16</span><span class="q-text">今の生活を本気で変えるくらいなら、このままの方が安全だと感じる自分がいる。</span></div>
+        </div>
+        <div class="q-options" id="q16"></div>
+      </div>
+    </div>
+
+    <!-- Submit -->
+    <div class="submit-area">
+      <button type="submit" class="submit-btn">Diagnose</button>
+      <p class="error-msg" id="error-msg">すべての設問に回答してください。</p>
+    </div>
+
+  </form>
+</div>
+</div>
+
+<!-- ============================================================
+     RESULTS SECTION
+     ============================================================ -->
+<div id="results">
+<div class="container">
+
+  <div class="results-header fade-in">
+    <h2>身体的知性診断 ── 結果</h2>
+    <p class="results-type-name" id="type-name"></p>
+  </div>
+
+  <hr class="separator">
+
+  <div class="score-panel fade-in">
+    <div class="total-score">
+      <span class="big-num" id="total-num"></span><span class="of"> / 64</span>
+      <span class="total-label">Total Score</span>
+    </div>
+    <div class="layer-bars">
+      <div class="bar-row">
+        <span class="bar-label">Body</span>
+        <div class="bar-track"><div class="bar-fill" id="bar-body"></div></div>
+        <div class="bar-info"><span class="bar-num" id="body-num"></span><span class="bar-status" id="body-status"></span></div>
+      </div>
+      <div class="bar-row">
+        <span class="bar-label">Mind</span>
+        <div class="bar-track"><div class="bar-fill" id="bar-mind"></div></div>
+        <div class="bar-info"><span class="bar-num" id="mind-num"></span><span class="bar-status" id="mind-status"></span></div>
+      </div>
+      <div class="bar-row">
+        <span class="bar-label">Spirit</span>
+        <div class="bar-track"><div class="bar-fill" id="bar-spirit"></div></div>
+        <div class="bar-info"><span class="bar-num" id="spirit-num"></span><span class="bar-status" id="spirit-status"></span></div>
+      </div>
+      <div class="bar-row">
+        <span class="bar-label">Shadow</span>
+        <div class="bar-track"><div class="bar-fill" id="bar-shadow"></div></div>
+        <div class="bar-info"><span class="bar-num" id="shadow-num"></span><span class="bar-status" id="shadow-status"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <!-- Letters -->
+  <div class="letter fade-in"><div class="letter-card" id="intro-section"></div></div>
+  <div class="letter fade-in"><div class="letter-card" id="letter-section"></div></div>
+  <div class="letter fade-in"><div class="letter-card" id="solution-section"></div></div>
+
+  <!-- Action Buttons -->
+  <div class="action-buttons fade-in">
+    <button class="copy-btn" id="copy-btn" onclick="copyResults()">結果をコピー</button>
+    <button class="retry-btn" onclick="retry()">もう一度診断する</button>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-section fade-in">
+    <p class="cta-lead">大切なことを、思い出す。</p>
+    <p class="cta-sub">あなたの「生きる方向性」を、2時間で言語化する。<br>天命の言語化セッション™ トライアルを受付中です。</p>
+    <a href="https://jitsuzon-kagaku-lab.yanaihiroki.com/trial.html" target="_blank" class="cta-btn">トライアルセッションの詳細へ &rarr;</a>
+  </div>
+
+</div>
+</div>
+
+<!-- ============================================================
+     LETTERS (external)
+     ============================================================ -->
+<script src="letters.js"></script>
+
+<!-- ============================================================
+     APPLICATION LOGIC
+     ============================================================ -->
+<script>
+(function() {
+  'use strict';
+
+  // ── Generate radio buttons ──
+  for (var i = 1; i <= 16; i++) {
+    var container = document.getElementById('q' + i);
+    for (var v = 0; v <= 4; v++) {
+      var lb = document.createElement('label');
+      lb.innerHTML = '<input type="radio" name="q' + i + '" value="' + v + '">'
+        + '<span class="radio-btn"><span class="val">' + v + '</span></span>';
+      container.appendChild(lb);
+    }
+  }
+
+  // ── DOM references ──
+  var progressWrap = document.getElementById('progress-wrap');
+  var progressFill = document.getElementById('progress-fill');
+  var answeredCount = document.getElementById('answered-count');
+  var realtimeWrap = document.getElementById('realtime-wrap');
+  var firstAnswer = false;
+
+  // ── Layer sum helper ──
+  function getLayerSum(start, end) {
+    var sum = 0, hasAny = false;
+    for (var i = start; i <= end; i++) {
+      var sel = document.querySelector('input[name="q' + i + '"]:checked');
+      if (sel) { sum += parseInt(sel.value); hasAny = true; }
+    }
+    return { sum: sum, hasAny: hasAny };
+  }
+
+  // ── Update progress & realtime scores ──
+  function updateRealtime() {
+    var cnt = document.querySelectorAll('input[type="radio"]:checked').length;
+
+    if (cnt > 0 && !firstAnswer) {
+      firstAnswer = true;
+      progressWrap.style.display = 'block';
+      realtimeWrap.classList.add('visible');
+    }
+
+    answeredCount.textContent = cnt;
+    progressFill.style.width = ((cnt / 16) * 100) + '%';
+
+    var layers = [
+      { id: 'rt-body',   s: 1,  e: 4  },
+      { id: 'rt-mind',   s: 5,  e: 8  },
+      { id: 'rt-spirit', s: 9,  e: 12 },
+      { id: 'rt-shadow', s: 13, e: 16 }
+    ];
+
+    for (var j = 0; j < layers.length; j++) {
+      var r = getLayerSum(layers[j].s, layers[j].e);
+      var el = document.getElementById(layers[j].id);
+      if (r.hasAny) {
+        el.textContent = r.sum;
+        el.classList.add('has-value');
+      } else {
+        el.textContent = '\u2013';
+        el.classList.remove('has-value');
+      }
+    }
+
+    for (var k = 1; k <= 16; k++) {
+      var q = document.querySelector('.question[data-q="' + k + '"]');
+      var sel = document.querySelector('input[name="q' + k + '"]:checked');
+      if (sel) q.classList.add('answered');
+      else q.classList.remove('answered');
+    }
+  }
+
+  document.getElementById('quiz-form').addEventListener('change', updateRealtime);
+
+  // ── Status label ──
+  function getStatus(score) {
+    if (score <= 6)  return { label: '\u5b89\u5b9a', cls: 'status-stable',  lv: 'level-stable'  };
+    if (score <= 10) return { label: '\u6ce8\u610f', cls: 'status-caution', lv: 'level-caution' };
+    if (score <= 13) return { label: '\u8b66\u6212', cls: 'status-alert',   lv: 'level-alert'   };
+    return { label: '\u5371\u6a5f', cls: 'status-crisis', lv: 'level-crisis' };
+  }
+
+  // ── Type determination ──
+  function determineType(b, m, sp, sh) {
+    var total = b + m + sp + sh;
+    var maxLayer = Math.max(b, m, sp, sh);
+    if (total <= 12 && maxLayer <= 4) return 6;
+    var warningCount = [b, m, sp, sh].filter(function(v) { return v >= 11; }).length;
+    if (total >= 44 || warningCount >= 3) return 5;
+    var layers = { Body: b, Mind: m, Spirit: sp, Shadow: sh };
+    var priority = ['Shadow', 'Spirit', 'Mind', 'Body'];
+    var maxName = null;
+    for (var i = 0; i < priority.length; i++) {
+      if (layers[priority[i]] === maxLayer) { maxName = priority[i]; break; }
+    }
+    return { Body: 1, Mind: 2, Spirit: 3, Shadow: 4 }[maxName];
+  }
+
+  // ── Number color ──
+  function numColor(score) {
+    if (score >= 11) return 'var(--status-crisis)';
+    if (score >= 7)  return 'var(--status-caution)';
+    return 'var(--status-stable)';
+  }
+
+  // ── Submit ──
+  document.getElementById('quiz-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var ans = {};
+    for (var i = 1; i <= 16; i++) {
+      var sel = document.querySelector('input[name="q' + i + '"]:checked');
+      if (!sel) {
+        document.getElementById('error-msg').style.display = 'block';
+        var target = document.querySelector('.question[data-q="' + i + '"]');
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+      ans[i] = parseInt(sel.value);
+    }
+    document.getElementById('error-msg').style.display = 'none';
+
+    var b  = ans[1]  + ans[2]  + ans[3]  + ans[4];
+    var m  = ans[5]  + ans[6]  + ans[7]  + ans[8];
+    var sp = ans[9]  + ans[10] + ans[11] + ans[12];
+    var sh = ans[13] + ans[14] + ans[15] + ans[16];
+    var total = b + m + sp + sh;
+    var type = determineType(b, m, sp, sh);
+
+    document.getElementById('form-section').style.display = 'none';
+    progressWrap.style.display = 'none';
+    realtimeWrap.classList.remove('visible');
+    document.getElementById('results').style.display = 'block';
+    window.scrollTo(0, 0);
+
+    document.getElementById('type-name').textContent = OMOIDAS_TYPE_NAMES[type];
+    document.getElementById('total-num').textContent = total;
+    document.getElementById('body-num').textContent = b;
+    document.getElementById('mind-num').textContent = m;
+    document.getElementById('spirit-num').textContent = sp;
+    document.getElementById('shadow-num').textContent = sh;
+
+    var bs = getStatus(b), ms = getStatus(m), sps = getStatus(sp), shs = getStatus(sh);
+
+    function setBar(id, score, status) {
+      var bar = document.getElementById(id);
+      bar.className = 'bar-fill ' + status.lv;
+      setTimeout(function() { bar.style.width = ((score / 16) * 100) + '%'; }, 100);
+    }
+    setBar('bar-body', b, bs); setBar('bar-mind', m, ms);
+    setBar('bar-spirit', sp, sps); setBar('bar-shadow', sh, shs);
+
+    function setStatus(id, status) {
+      var el = document.getElementById(id);
+      el.textContent = status.label;
+      el.className = 'bar-status ' + status.cls;
+    }
+    setStatus('body-status', bs); setStatus('mind-status', ms);
+    setStatus('spirit-status', sps); setStatus('shadow-status', shs);
+
+    document.getElementById('body-num').style.color = numColor(b);
+    document.getElementById('mind-num').style.color = numColor(m);
+    document.getElementById('spirit-num').style.color = numColor(sp);
+    document.getElementById('shadow-num').style.color = numColor(sh);
+
+    document.getElementById('intro-section').innerHTML = OMOIDAS_INTRO;
+    document.getElementById('letter-section').innerHTML = OMOIDAS_LETTERS[type];
+    document.getElementById('solution-section').innerHTML = OMOIDAS_SOLUTION;
+  });
+
+  // ── Copy results ──
+  window.copyResults = function() {
+    var text = document.getElementById('results').innerText;
+    navigator.clipboard.writeText(text).then(function() {
+      var btn = document.getElementById('copy-btn');
+      btn.textContent = '\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f';
+      btn.classList.add('copied');
+      setTimeout(function() {
+        btn.textContent = '\u7d50\u679c\u3092\u30b3\u30d4\u30fc';
+        btn.classList.remove('copied');
+      }, 2000);
+    });
+  };
+
+  // ── Retry ──
+  window.retry = function() {
+    document.getElementById('results').style.display = 'none';
+    document.getElementById('form-section').style.display = 'block';
+    document.getElementById('quiz-form').reset();
+    firstAnswer = false;
+    progressWrap.style.display = 'none';
+    realtimeWrap.classList.remove('visible');
+    ['bar-body', 'bar-mind', 'bar-spirit', 'bar-shadow'].forEach(function(id) {
+      document.getElementById(id).style.width = '0%';
+    });
+    updateRealtime();
+    window.scrollTo(0, 0);
+  };
+
+})();
+</script>
+
+</body>
+</html>

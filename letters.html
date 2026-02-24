@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/letters.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>未来の心友へ贈る21の手紙 | 実存科学研究所</title>
+  <meta name="description" content="「生きづらさ」に悩むあなたへ──誰にも言えなかった痛みには、ちゃんと理由があります。21日間で届く特別な手紙。箭内宏紀">
+  <meta property="og:title" content="未来の心友へ贈る21の手紙 | 実存科学研究所">
+  <meta property="og:description" content="「生きづらさ」に悩むあなたへ──誰にも言えなかった痛みには、ちゃんと理由があります。">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="実存科学研究所">
+  <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ===== Reset & Base ===== */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg-deep: #07070c;
+      --bg-section: #0b0b14;
+      --bg-card: #10101c;
+      --text-primary: rgba(235, 232, 225, 0.92);
+      --text-secondary: rgba(235, 232, 225, 0.6);
+      --text-dim: rgba(235, 232, 225, 0.35);
+      --gold: #c0a878;
+      --gold-dim: rgba(192, 168, 120, 0.4);
+      --gold-glow: rgba(192, 168, 120, 0.15);
+      --separator: rgba(192, 168, 120, 0.2);
+      --font-serif: 'Shippori Mincho', 'Noto Serif JP', serif;
+      --font-display: 'Cormorant Garamond', 'Shippori Mincho', serif;
+    }
+
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      font-family: var(--font-serif);
+      background: var(--bg-deep);
+      color: var(--text-primary);
+      line-height: 2;
+      overflow-x: hidden;
+    }
+
+    /* ===== Layout ===== */
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    section {
+      padding: 100px 0;
+    }
+
+    @media (max-width: 640px) {
+      section {
+        padding: 72px 0;
+      }
+    }
+
+    /* ===== Separator ===== */
+    .sep {
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: var(--separator);
+      margin: 0 auto;
+    }
+
+    /* ===== Section 1: First View ===== */
+    .hero {
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 80px 24px;
+      position: relative;
+      background:
+        radial-gradient(ellipse 60% 50% at 50% 45%, rgba(192, 168, 120, 0.04) 0%, transparent 70%),
+        var(--bg-deep);
+    }
+
+    .hero__label {
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      letter-spacing: 0.25em;
+      color: var(--gold-dim);
+      text-transform: uppercase;
+      margin-bottom: 48px;
+      opacity: 0;
+      animation: fadeUp 1.2s ease 0.3s forwards;
+    }
+
+    .hero__pain {
+      font-size: clamp(1.1rem, 3.5vw, 1.5rem);
+      font-weight: 400;
+      color: var(--text-primary);
+      line-height: 2.2;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeUp 1.2s ease 0.6s forwards;
+    }
+
+    .hero__sub {
+      font-size: clamp(0.85rem, 2.5vw, 1rem);
+      color: var(--text-secondary);
+      line-height: 2.2;
+      margin-bottom: 56px;
+      opacity: 0;
+      animation: fadeUp 1.2s ease 0.9s forwards;
+    }
+
+    .hero__title {
+      font-family: var(--font-display);
+      font-size: clamp(1.3rem, 4vw, 2rem);
+      font-weight: 400;
+      font-style: italic;
+      letter-spacing: 0.08em;
+      color: var(--gold);
+      margin-bottom: 24px;
+      opacity: 0;
+      animation: fadeUp 1.2s ease 1.2s forwards;
+    }
+
+    .hero__author {
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      letter-spacing: 0.2em;
+      opacity: 0;
+      animation: fadeUp 1.2s ease 1.5s forwards;
+    }
+
+    .hero__scroll {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, var(--gold-dim), transparent);
+      opacity: 0;
+      animation: fadeIn 1s ease 2s forwards;
+    }
+
+    /* ===== Section 2: Pain Recognition ===== */
+    .pain {
+      background: var(--bg-section);
+    }
+
+    .pain__text {
+      font-size: clamp(0.95rem, 2.8vw, 1.1rem);
+      line-height: 2.4;
+      margin-bottom: 48px;
+      color: var(--text-primary);
+    }
+
+    .pain__text:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .pain__emphasis {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    /* ===== Section 3: Shadow Intro ===== */
+    .shadow {
+      background: var(--bg-deep);
+    }
+
+    .shadow__text {
+      font-size: clamp(0.95rem, 2.8vw, 1.1rem);
+      line-height: 2.4;
+      margin-bottom: 48px;
+      color: var(--text-primary);
+    }
+
+    .shadow__text:last-of-type {
+      margin-bottom: 0;
+    }
+
+    /* ===== Section 4: Gift Overview ===== */
+    .gifts {
+      background: var(--bg-section);
+    }
+
+    .gifts__heading {
+      font-family: var(--font-display);
+      font-size: clamp(1.1rem, 3vw, 1.4rem);
+      font-weight: 400;
+      text-align: center;
+      color: var(--gold);
+      letter-spacing: 0.1em;
+      margin-bottom: 64px;
+    }
+
+    .gift {
+      margin-bottom: 56px;
+      padding-bottom: 56px;
+      border-bottom: 1px solid var(--separator);
+    }
+
+    .gift:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .gift__number {
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      letter-spacing: 0.3em;
+      color: var(--gold-dim);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .gift__title {
+      font-size: clamp(1rem, 2.8vw, 1.15rem);
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+      line-height: 1.8;
+    }
+
+    .gift__desc {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 2.2;
+    }
+
+    .gift__note {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      margin-top: 12px;
+    }
+
+    /* ===== Section 5: Audience ===== */
+    .audience {
+      background: var(--bg-deep);
+    }
+
+    .audience__block {
+      margin-bottom: 64px;
+    }
+
+    .audience__block:last-child {
+      margin-bottom: 0;
+    }
+
+    .audience__label {
+      font-size: clamp(0.95rem, 2.8vw, 1.05rem);
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 28px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--separator);
+    }
+
+    .audience__item {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 2.4;
+      padding-left: 1.2em;
+      text-indent: -1.2em;
+    }
+
+    .audience__item::before {
+      content: '・';
+      color: var(--gold-dim);
+    }
+
+    .audience__block--not .audience__label {
+      color: var(--text-dim);
+    }
+
+    .audience__block--not .audience__item {
+      color: var(--text-dim);
+    }
+
+    .audience__block--not .audience__item::before {
+      color: rgba(192, 168, 120, 0.15);
+    }
+
+    /* ===== Section 6: Registration Form ===== */
+    .register {
+      background: var(--bg-section);
+      text-align: center;
+      padding: 120px 0;
+    }
+
+    .register__lead {
+      font-size: clamp(1rem, 3vw, 1.2rem);
+      color: var(--text-primary);
+      line-height: 2.2;
+      margin-bottom: 48px;
+    }
+
+    .form-wrapper {
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    .form__input {
+      display: block;
+      width: 100%;
+      padding: 16px 20px;
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      color: var(--text-primary);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(192, 168, 120, 0.25);
+      border-radius: 2px;
+      outline: none;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 20px;
+    }
+
+    .form__input::placeholder {
+      color: var(--text-dim);
+    }
+
+    .form__input:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px var(--gold-glow);
+    }
+
+    .form__button {
+      display: block;
+      width: 100%;
+      padding: 18px 24px;
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      color: var(--bg-deep);
+      background: var(--gold);
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.15s ease;
+    }
+
+    .form__button:hover {
+      background: #d4b35a;
+      transform: translateY(-1px);
+    }
+
+    .form__button:active {
+      transform: translateY(0);
+    }
+
+    .form__notes {
+      margin-top: 28px;
+    }
+
+    .form__note {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      line-height: 2;
+    }
+
+    /* ===== Section 7: Closing ===== */
+    .closing {
+      background: var(--bg-deep);
+      text-align: center;
+      padding: 80px 0;
+    }
+
+    .closing__role {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      line-height: 2;
+      margin-bottom: 20px;
+    }
+
+    .closing__name {
+      font-size: clamp(1.1rem, 3vw, 1.3rem);
+      font-weight: 600;
+      color: var(--text-primary);
+      letter-spacing: 0.2em;
+    }
+
+    .closing__copyright {
+      margin-top: 48px;
+      font-size: 0.7rem;
+      color: var(--text-dim);
+      letter-spacing: 0.1em;
+    }
+
+    /* ===== Animations ===== */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-in.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== 視認性向上パターン ===== */
+    .text-panel {
+      background: rgba(8, 6, 16, 0.65);
+      border-radius: 2px;
+      padding: 3rem 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .pull-quote {
+      text-align: center;
+      padding: 2.5rem 2rem;
+      margin: 2.5rem 0;
+      position: relative;
+    }
+    .pull-quote::before,
+    .pull-quote::after {
+      content: "";
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: rgba(192, 168, 120, 0.3);
+      margin: 0 auto;
+    }
+    .pull-quote::before { margin-bottom: 2rem; }
+    .pull-quote::after { margin-top: 2rem; }
+    .pull-quote p {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 2;
+      letter-spacing: 0.06em;
+      margin-bottom: 0;
+    }
+
+    .highlight-block {
+      background: rgba(192, 168, 120, 0.04);
+      border-left: 2px solid var(--gold);
+      padding: 2rem;
+      margin: 2rem 0;
+    }
+    .highlight-block p {
+      font-size: clamp(0.95rem, 2.8vw, 1.1rem);
+      line-height: 2.2;
+      margin-bottom: 0;
+    }
+
+    .def-box {
+      border-left: 2px solid var(--gold);
+      padding: 1.5rem 0 1.5rem 1.8rem;
+      margin: 2rem 0;
+    }
+    .def-box__term {
+      font-family: var(--font-display);
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.6rem;
+    }
+    .def-box p {
+      font-size: clamp(0.95rem, 2.8vw, 1.1rem);
+      line-height: 2.4;
+      margin-bottom: 0;
+    }
+
+    .reading-time {
+      font-family: var(--font-display);
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      color: var(--text-dim);
+      margin-top: 1rem;
+      opacity: 0;
+      animation: fadeUp 1.2s ease 1.8s forwards;
+    }
+
+    @media (max-width: 480px) {
+      .text-panel { padding: 2rem 1.5rem; }
+      .gift__desc br { display: none; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="index.html" class="site-logo">実存科学研究所</a>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="global-nav">
+        <a href="index.html">Top</a>
+        <a href="beginner.html">Guide</a>
+        <a href="epistemology.html">Epistemology</a>
+        <a href="semantics.html">Semantics</a>
+        <a href="society.html">Society</a>
+        <a href="founder.html">Founder</a>
+        <a href="session.html">Session</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">More</button>
+          <div class="nav-dropdown__menu">
+            <a href="metaplay.html">Meta Play™</a>
+            <a href="dark-side/">ダークサイド診断</a>
+            <a href="omoidasu/">身体的知性診断</a>
+            <a href="trial.html">無料トライアル</a>
+            <a href="session-menu.html">12の対話（領域）</a>
+            <a href="letters.html">21の手紙</a>
+            <a href="uniqueness.html">独自性と射程</a>
+            <a href="faq.html">FAQ</a>
+            <a href="archives.html">記事一覧</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Section 1: First View -->
+  <section class="hero">
+    <p class="hero__label">21 Letters</p>
+    <p class="hero__pain">「生きづらさ」に悩むあなたへ</p>
+    <p class="hero__sub">
+      ──誰にも言えなかった痛みには、<br>
+      ちゃんと理由があります。
+    </p>
+    <h1 class="hero__title">未来の心友™へ贈る21の手紙</h1>
+    <p class="hero__author">箭内宏紀より</p>
+    <p class="reading-time">5 min read</p>
+<div class="hero__scroll"></div>
+  </section>
+
+  <!-- Section 2: Pain Recognition -->
+  <section class="pain">
+    <div class="container fade-in">
+      <div class="text-panel">
+        <div class="pull-quote">
+          <p>それは、あなたが弱いからではありません。</p>
+        </div>
+        <p class="pain__text">
+          朝起きた瞬間から、理由のない重さがある。
+        </p>
+        <p class="pain__text">
+          表面上は普通にこなせているのに、<br>
+          一人になるとため息だけが残る。
+        </p>
+        <p class="pain__text">
+          「このまま同じ日々が続くのが怖い」<br>
+          ──そう感じたことはありませんか。
+        </p>
+        <p class="pain__text">
+          誰にも見せられない部分だけが、<br>
+          静かにすり減っていく。
+        </p>
+        <p class="pain__text">
+          <span class="pain__emphasis">それは、あなたが弱いからではありません。</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="sep"></div>
+
+  <!-- Section 3: Shadow Intro -->
+  <section class="shadow">
+    <div class="container fade-in">
+      <div class="text-panel">
+        <p class="shadow__text">
+          あなたが同じ場所に戻ってしまうのは、<br>
+          意志の弱さではありません。
+        </p>
+        <div class="def-box">
+          <p class="def-box__term">Definition</p>
+          <p>幼い頃、あなたを守るために生まれた"心の影（シャドウ）"が、今もあなたの人生を静かに動かしています。</p>
+        </div>
+        <p class="shadow__text">
+          影は敵ではなく、<br>
+          あなたの優しさの裏返し。
+        </p>
+        <p class="shadow__text">
+          その構造が見えたとき、<br>
+          人生は静かに動き始めます。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="sep"></div>
+
+  <!-- Section 4: Gift Overview -->
+  <section class="gifts">
+    <div class="container fade-in">
+      <div class="text-panel">
+        <h2 class="gifts__heading">21日間で届く3つのもの</h2>
+
+        <div class="gift">
+          <p class="gift__number">Gift I</p>
+          <h3 class="gift__title">あなたの痛みの正体を映す「21通の手紙」</h3>
+          <p class="gift__desc">
+            セッション事例をもとに構成された、<br>
+            あなた自身の物語を辿れる21日間の手紙。<br>
+            影の構造、天命の全体像、心友™という生き方──<br>
+            すべてが21通に凝縮されています。
+          </p>
+        </div>
+
+        <div class="gift">
+          <p class="gift__number">Gift II</p>
+          <h3 class="gift__title">生きる意味・天命を発見する方法（動画セミナー）</h3>
+          <p class="gift__desc">
+            影の構造と天命の全体像を<br>
+            2時間で俯瞰できる特別セミナー。<br>
+            箭内の最高傑作と位置づける映像です。
+          </p>
+          <p class="gift__note">※登録から1週間後に自動配信</p>
+        </div>
+
+        <div class="gift">
+          <p class="gift__number">Gift III</p>
+          <h3 class="gift__title">無料トライアルセッションの参加権</h3>
+          <p class="gift__desc">
+            天命の言語化セッション™（定価11万円）を<br>
+            条件を満たした方にのみ無料で提供。<br>
+            2時間で天命を100%言語化する、<br>
+            稀有な体験です。
+          </p>
+          <p class="gift__note">※Gift I・IIを受けた方にだけ条件をお伝えします</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="fade-in" style="text-align: center; padding: 48px 24px 0;">
+    <a href="#form" style="font-size: 0.82rem; letter-spacing: 0.1em; color: var(--gold-dim); border-bottom: 1px solid var(--separator); padding-bottom: 4px; transition: color 0.3s ease;">手紙を受け取る →</a>
+  </div>
+
+  <div class="sep"></div>
+
+  <!-- Section 5: Audience -->
+  <section class="audience">
+    <div class="container fade-in">
+      <div class="text-panel">
+
+        <div class="audience__block">
+          <p class="audience__label">この手紙が届く方</p>
+          <p class="audience__item">「生きづらさ」を本気で終わらせたい方</p>
+          <p class="audience__item">影の構造を理解し、人生を根底から見つめ直したい方</p>
+          <p class="audience__item">家族との関係を整えたい方</p>
+          <p class="audience__item">「私のことかもしれない」と感じた方</p>
+          <p class="audience__item">本音で生きる人生を諦めたくない方</p>
+        </div>
+
+        <div class="audience__block audience__block--not">
+          <p class="audience__label">この手紙が届かない方</p>
+          <p class="audience__item">無料だから登録したいだけの方</p>
+          <p class="audience__item">「ノウハウ」が知りたいだけの方</p>
+          <p class="audience__item">影や痛みに向き合いたくない方</p>
+          <p class="audience__item">手っ取り早く人生を変える魔法がほしい方</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="sep"></div>
+
+  <!-- Section 6: Registration Form -->
+  <section class="register" id="form">
+    <div class="container fade-in">
+      <div class="highlight-block" style="text-align: left; margin-bottom: 48px;">
+        <p>その構造が見えたとき、人生は静かに動き始めます。</p>
+      </div>
+      <p class="register__lead">
+        あなたの物語は、<br>
+        ここから静かに動き始めます。
+      </p>
+
+      <div class="form-wrapper">
+        <form method="post" action="https://m.nimbus-creation.biz/p/r/lgHf0wPT" enctype="multipart/form-data"
+          accept-charset="utf-8" id="registerForm">
+          <input type="hidden" name="_method" value="POST">
+          <input type="hidden" name="data[User][referer_form_url]" value="https://m.nimbus-creation.biz/p/r/lgHf0wPT">
+          <input type="hidden" name="data[User][referer_url]" value="">
+          <input type="email" name="data[User][mail]" class="form__input" placeholder="メールアドレス" required
+            autocomplete="email">
+          <button type="submit" class="form__button">手紙を受け取る</button>
+        </form>
+
+        <div class="form__notes">
+          <p class="form__note">※21日間、毎日1通ずつお届けします</p>
+          <p class="form__note">※いつでも配信停止できます</p>
+          <p class="form__note">※メールアドレスは厳重に管理いたします</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: Closing -->
+  <section class="closing">
+    <div class="container">
+      <p class="closing__role">
+        「天命の言語化セッション™」<br>
+        開発者／ファシリテーター
+      </p>
+      <p class="closing__name">箭内宏紀</p>
+      <p style="margin-top: 2.5rem;">
+        <a href="#form"
+          style="font-size: 0.82rem; letter-spacing: 0.1em; color: var(--gold-dim); border-bottom: 1px solid var(--separator); padding-bottom: 4px; transition: color 0.3s ease;">手紙を受け取る &uarr;</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container--wide">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <p class="footer-col__title">Guide</p>
+          <a href="beginner.html">はじめての方へ</a>
+          <a href="glossary.html">用語集</a>
+          <a href="session-flow.html">セッションの流れ</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Theory</p>
+          <a href="epistemology.html">認識論</a>
+          <a href="semantics.html">意味論</a>
+          <a href="society.html">社会論</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Contents</p>
+          <a href="archives.html">記事一覧</a>
+          <a href="session-menu.html">12の対話（領域）</a>
+          <a href="letters.html">21の手紙</a>
+          <a href="metaplay.html">Meta Play™︎</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Session</p>
+          <a href="session.html">天命の言語化セッション™</a>
+          <a href="dark-side/">ダークサイド診断</a>
+          <a href="omoidasu/">身体的知性診断</a>
+          <a href="uniqueness.html">独自性と射程</a>
+          <a href="trial.html">無料トライアル</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Institute</p>
+          <a href="founder.html">創始者</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">お問い合わせ</a>
+          <a href="legal/legal-tokushoho.html">特定商取引法</a>
+          <a href="legal/legal-privacy-policy.html">プライバシーポリシー</a>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 実存科学研究所 — Existential Science Institute</p>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll-triggered fade-in
+    (function () {
+      const targets = document.querySelectorAll('.fade-in');
+      if (!targets.length) return;
+
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+      targets.forEach(function (el) { observer.observe(el); });
+    })();
+  </script>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

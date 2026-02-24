@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ja" style="--accent: #c0a878;">
+
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/semantics.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>意味論 — 天命 | 実存科学研究所</title>
+  <meta name="description" content="意味は作るものではなく、整合が進むと収束してしまう。その収束点を天命と呼ぶ。実存科学の意味論的展開。">
+  <meta property="og:title" content="意味論 — 天命 | 実存科学研究所">
+  <meta property="og:description" content="自由意志なき世界で「どう生きるか」への構造的応答。意味の収束点としての天命。">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="実存科学研究所">
+  <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* --- Luxury upgrades: glass-card for contrast-card & diagram-box --- */
+    .contrast-card {
+      background: rgba(15, 12, 25, 0.7);
+      border: 1px solid rgba(192, 168, 120, 0.12);
+      box-shadow: 0 2px 24px rgba(192, 168, 120, 0.05);
+      backdrop-filter: blur(8px);
+      position: relative;
+      overflow: hidden;
+    }
+    .contrast-card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.4), transparent);
+    }
+    .diagram-box {
+      background: rgba(15, 12, 25, 0.7);
+      border: 1px solid rgba(192, 168, 120, 0.12);
+      box-shadow: 0 2px 24px rgba(192, 168, 120, 0.05);
+      backdrop-filter: blur(8px);
+      position: relative;
+      overflow: hidden;
+    }
+    .diagram-box::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.4), transparent);
+    }
+
+    /* --- Mobile: hide br in content blocks --- */
+    @media (max-width: 480px) {
+      .text-panel p br,
+      .pull-quote p br,
+      .highlight-block p br,
+      .def-box p br {
+        display: none;
+      }
+      .contrast-card { grid-template-columns: 1fr; }
+      .contrast-card__side { padding: 1.4rem 1.2rem; }
+      .diagram-box { padding: 2rem 1.2rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="index.html" class="site-logo">実存科学研究所</a>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="global-nav">
+        <a href="index.html">Top</a>
+        <a href="beginner.html">Guide</a>
+        <a href="epistemology.html">Epistemology</a>
+        <a href="semantics.html">Semantics</a>
+        <a href="society.html">Society</a>
+        <a href="founder.html">Founder</a>
+        <a href="session.html">Session</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">More</button>
+          <div class="nav-dropdown__menu">
+            <a href="metaplay.html">Meta Play™</a>
+            <a href="dark-side/">ダークサイド診断</a>
+            <a href="omoidasu/">身体的知性診断</a>
+            <a href="trial.html">無料トライアル</a>
+            <a href="session-menu.html">12の対話（領域）</a>
+            <a href="letters.html">21の手紙</a>
+            <a href="uniqueness.html">独自性と射程</a>
+            <a href="faq.html">FAQ</a>
+            <a href="archives.html">記事一覧</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <svg width="64" height="64" viewBox="0 0 48 48" fill="none" style="display:block;margin:0 auto 1.5rem;">
+        <circle cx="24" cy="24" r="3" fill="#c0a878" opacity=".6"/>
+        <line x1="24" y1="4" x2="24" y2="18" stroke="#c0a878" stroke-width=".5" opacity=".4"/>
+        <line x1="24" y1="30" x2="24" y2="44" stroke="#c0a878" stroke-width=".5" opacity=".4"/>
+        <line x1="4" y1="24" x2="18" y2="24" stroke="#c0a878" stroke-width=".5" opacity=".4"/>
+        <line x1="30" y1="24" x2="44" y2="24" stroke="#c0a878" stroke-width=".5" opacity=".4"/>
+        <line x1="10" y1="10" x2="20" y2="20" stroke="#c0a878" stroke-width=".5" opacity=".3"/>
+        <line x1="28" y1="28" x2="38" y2="38" stroke="#c0a878" stroke-width=".5" opacity=".3"/>
+        <line x1="38" y1="10" x2="28" y2="20" stroke="#c0a878" stroke-width=".5" opacity=".3"/>
+        <line x1="20" y1="28" x2="10" y2="38" stroke="#c0a878" stroke-width=".5" opacity=".3"/>
+      </svg>
+      <p class="page-hero__sub fade-in">Part 2 — Semantics</p>
+      <h1 class="fade-in">意味論 — 天命</h1>
+      <p class="page-hero__lead fade-in">
+        「天命を悟り、日々全うする」
+      </p>
+</div>
+  </section>
+
+  <!-- Content -->
+  <section class="section">
+    <div class="container">
+
+      <!-- Pull Quote — ページ冒頭 -->
+      <div class="pull-quote fade-in">
+        <p>意味は作るものではなく、整合が進むと収束してしまう。<br>その収束点を天命と呼ぶ。</p>
+      </div>
+
+      <!-- 意味論の定義 -->
+      <div class="content-block text-panel fade-in">
+        <h2 class="section__title section__title--left">意味論とは</h2>
+        <div class="def-box">
+          <p class="def-box__term">Definition</p>
+          <p>
+            意味論とは、「世界は何を意味するのか」を問う学ではない。<br>
+            <strong>「意味はいかなる構造条件のもとで立ち上がるのか」を問う学</strong>である。<br>いわば「意味の"意味"」がこの学問の射程だ。
+          </p>
+        </div>
+        <p>
+          自由意志が構造上成立しないとき、人間にはひとつの問いだけが残される。
+        </p>
+        <p>
+          <strong>──では、どう生きるのか。</strong>
+        </p>
+        <p>
+          この問いに対して、実存科学は「自分で意味を作れ」とは応答しない。<strong>
+            <br>Metaが存在する以上、意味もまた、主体が構成するものではないから</strong>である。
+        </p>
+      </div>
+
+      <hr class="separator">
+
+      <!-- 収束 -->
+      <div class="content-block text-panel fade-in">
+        <h2 class="section__title section__title--left">意味の収束</h2>
+        <p>
+          <strong>意味とは、Metaのもとで整合が進行したときに、構造的に収束してしまう一点である。</strong>
+        </p>
+        <p>
+          努力によって到達する目標ではない。<br>構造の整合が進んだとき、語りの収束として露呈する。
+        </p>
+        <div class="diagram-box">
+          <p class="diagram-box__title">Convergence of Meaning</p>
+          <div class="diagram-box__flow">
+            <span class="diagram-box__node">Meta</span>
+            <span class="diagram-box__arrow">&rarr;</span>
+            <span class="diagram-box__node">整合の進行</span>
+            <span class="diagram-box__arrow">&rarr;</span>
+            <span class="diagram-box__node">収束</span>
+            <span class="diagram-box__arrow">&rarr;</span>
+            <span class="diagram-box__node">天命</span>
+          </div>
+        </div>
+        <p>
+          いわば、<strong>世界がその個体を通じて語ろうとする意味の帰結点</strong>である。
+        </p>
+      </div>
+
+      <hr class="separator">
+
+      <!-- 天命 -->
+      <div class="content-block text-panel fade-in">
+        <h2 class="section__title section__title--left">天命</h2>
+        <p>
+          その収束点を、本研究は<strong>天命（Tenmei）</strong>と呼ぶ。
+        </p>
+        <p>
+          天命は、Doing（何をするか）の次元にはない。<br><strong>Being（いかに在るか）の次元に属する</strong>。
+        </p>
+        <div class="contrast-card">
+          <div class="contrast-card__side">
+            <p class="contrast-card__label">Doing</p>
+            <p>何をするか──行為の選択。努力で到達する目標の次元。</p>
+          </div>
+          <div class="contrast-card__vs">vs</div>
+          <div class="contrast-card__side contrast-card__side--highlight">
+            <p class="contrast-card__label">Being</p>
+            <p>いかに在るか──存在の様態そのものが意味として収束する次元。</p>
+          </div>
+        </div>
+        <p>
+          換言すると、天命とは「生まれてきた意味・生きる目的」のことだ。<br><br>
+          これは行為の選択ではない。<br>存在の様態そのものが意味として収束したときに、そこに天命が必然的に露呈する。
+        </p>
+        <p>
+          <strong>「天命を悟る」とは、自分の人生に外から意味を付与することではない。<br>すでに進行している整合の帰結を、言語として確認することである。</strong>
+        </p>
+
+        <!-- Highlight Block — 結論 -->
+        <div class="highlight-block fade-in">
+          <p>天命を悟り、日々全うする。<br>これが自由意志なき世界における実存の形式である。</p>
+        </div>
+      </div>
+
+      <hr class="separator">
+
+      <!-- Links -->
+      <div class="content-block text-panel fade-in">
+        <h3>論考を読む</h3>
+        <ul class="link-list">
+          <li><a href="articles/part2.html"
+              rel="noopener">第2部『天命を悟り、日々全うする』を読む &rarr;</a></li>
+          <li><a href="articles/10reasons-part2.html"
+              rel="noopener">第2部を読むべき10の理由 &rarr;</a></li>
+          <li><a href="trilogy-guide.html">三部作ガイドライン &rarr;</a></li>
+        </ul>
+      </div>
+
+      <!-- Trilogy Nav -->
+      <div class="trilogy-nav fade-in">
+        <a href="epistemology.html">&larr; 認識論</a>
+        <span class="trilogy-nav__pos">2 / 3</span>
+        <a href="society.html">社会論 &rarr;</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-block fade-in">
+    <div class="container">
+      <h2 class="cta-block__title">天命の言語化セッション&trade;</h2>
+      <p class="cta-block__desc">
+        天命を「理解」ではなく「確定」へ導く対話。
+      </p>
+      <a href="session.html" class="btn">Session &rarr;</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container--wide">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <p class="footer-col__title">Guide</p>
+          <a href="beginner.html">はじめての方へ</a>
+          <a href="glossary.html">用語集</a>
+          <a href="session-flow.html">セッションの流れ</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Theory</p>
+          <a href="epistemology.html">認識論</a>
+          <a href="semantics.html">意味論</a>
+          <a href="society.html">社会論</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Contents</p>
+          <a href="archives.html">記事一覧</a>
+          <a href="session-menu.html">12の対話（領域）</a>
+          <a href="letters.html">21の手紙</a>
+          <a href="metaplay.html">Meta Play™︎</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Session</p>
+          <a href="session.html">天命の言語化セッション™</a>
+          <a href="dark-side/">ダークサイド診断</a>
+          <a href="omoidasu/">身体的知性診断</a>
+          <a href="uniqueness.html">独自性と射程</a>
+          <a href="trial.html">無料トライアル</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Institute</p>
+          <a href="founder.html">創始者</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">お問い合わせ</a>
+          <a href="legal/legal-tokushoho.html">特定商取引法</a>
+          <a href="legal/legal-privacy-policy.html">プライバシーポリシー</a>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 実存科学研究所 — Existential Science Institute</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

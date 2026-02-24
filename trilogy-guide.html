@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/trilogy-guide.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>この三部作を読むためのガイドライン──MetaOSへの案内 | 実存科学研究所</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --text: rgba(235, 232, 225, 0.92);
+      --text-secondary: rgba(235, 232, 225, 0.55);
+      --bg: #080610;
+      --border: rgba(192, 168, 120, 0.15);
+      --accent: #c0a878;
+      --highlight: rgba(192, 168, 120, 0.06);
+      --blockquote-border: rgba(192, 168, 120, 0.4);
+      --definition-bg: rgba(192, 168, 120, 0.04);
+      --max-width: 780px;
+    }
+    html { font-size: 17px; scroll-behavior: smooth; }
+    body { font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif; color: var(--text); background: var(--bg); line-height: 2; -webkit-font-smoothing: antialiased; }
+    .page-container { max-width: var(--max-width); margin: 0 auto; padding: 3rem 1.5rem 6rem; }
+
+    /* HEADER */
+    .page-header { text-align: center; padding: 4rem 0 3rem; border-bottom: 2px solid var(--accent); margin-bottom: 3rem; }
+    .page-header .label { font-size: 0.85rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 1rem; font-family: "Noto Sans JP", sans-serif; }
+    .page-header h1 { font-size: 1.5rem; font-weight: 700; line-height: 1.6; margin-bottom: 0.5rem; }
+    .page-header .subtitle { font-size: 1rem; color: var(--text-secondary); line-height: 1.8; }
+
+    /* HEADINGS */
+    .section-heading { font-size: 1.15rem; font-weight: 700; margin-top: 3rem; margin-bottom: 1rem; line-height: 1.6; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+
+    /* TEXT */
+    p { margin-bottom: 1rem; text-align: justify; }
+    strong { font-weight: 700; }
+
+    /* BLOCKQUOTE */
+    blockquote { border-left: 3px solid var(--blockquote-border); padding: 0.8rem 1.5rem; margin: 1.5rem 0; color: var(--text-secondary); background: rgba(255,255,255,0.03); }
+    blockquote p { margin-bottom: 0.5rem; }
+    blockquote p:last-child { margin-bottom: 0; }
+
+    /* FORMULA */
+    .formula-inline { font-family: "Cambria Math", "Latin Modern Math", serif; font-style: italic; letter-spacing: 0.05em; }
+
+    /* PART CARDS */
+    .part-cards { margin: 2rem 0; }
+    .part-card { padding: 1.5rem 2rem; border: 1px solid var(--border); background: var(--definition-bg); margin-bottom: 1rem; }
+    .part-card .part-label { font-family: "Noto Sans JP", sans-serif; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.15em; color: var(--text-secondary); margin-bottom: 0.5rem; }
+    .part-card h3 { font-size: 1.05rem; font-weight: 700; line-height: 1.6; margin-bottom: 0.8rem; }
+    .part-card p { font-size: 0.95rem; margin-bottom: 0.5rem; }
+    .part-card p:last-child { margin-bottom: 0; }
+    .part-card .part-link { display: inline-block; margin-top: 0.5rem; font-size: 0.9rem; font-weight: 700; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent); }
+    .part-card .part-link:hover { opacity: 0.7; }
+
+    /* HIGHLIGHT */
+    .highlight-box { background: var(--highlight); padding: 1.5rem 2rem; border-left: 4px solid var(--accent); margin: 2rem 0; }
+
+    hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
+
+    @media (max-width: 600px) {
+      html { font-size: 15px; }
+      .page-container { padding: 2rem 1rem 4rem; }
+      .page-header { padding: 2rem 0; }
+      .page-header h1 { font-size: 1.25rem; }
+      .part-card { padding: 1.2rem; }
+    }
+
+/* === Dark Theme Override === */
+a:not(.btn):not(.session-card__link) { color: #c0a878; transition: color 0.2s; }
+a:not(.btn):not(.session-card__link):hover { color: #e8d8b8; }
+.category-tag { color: #080610 !important; background: #c0a878 !important; }
+.back-nav { background: rgba(192, 168, 120, 0.06); border-color: rgba(192, 168, 120, 0.15); }
+.back-nav a { color: #c0a878; }
+img { border-radius: 2px; }
+input, textarea, select { background: rgba(255,255,255,0.05); color: rgba(235,232,225,0.92); border-color: rgba(201,168,76,0.2); }
+input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); outline: none; }
+::placeholder { color: rgba(235,232,225,0.3); }
+.submit-btn, button[type="submit"] { background: #c0a878; color: #080610; border: none; }
+
+</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
+    rel="stylesheet">
+<meta property="og:title" content="この三部作を読むためのガイドライン──MetaOSへの案内 | 実存科学研究所">
+<meta property="og:description" content="認識論・意味論・社会論を統合するMetaOS三部作を読みはじめるための前室。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="実存科学研究所">
+<meta property="og:title" content="この三部作を読むためのガイドライン──MetaOSへの案内 | 実存科学研究所">
+<meta property="og:description" content="認識論・意味論・社会論を統合するMetaOS三部作を読みはじめるための前室。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="実存科学研究所">
+<meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+<meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="index.html" class="site-logo">実存科学研究所</a>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="global-nav">
+        <a href="index.html">Top</a>
+        <a href="beginner.html">Guide</a>
+        <a href="epistemology.html">Epistemology</a>
+        <a href="semantics.html">Semantics</a>
+        <a href="society.html">Society</a>
+        <a href="founder.html">Founder</a>
+        <a href="session.html">Session</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">More</button>
+          <div class="nav-dropdown__menu">
+            <a href="metaplay.html">Meta Play™</a>
+            <a href="dark-side/">ダークサイド診断</a>
+            <a href="omoidasu/">身体的知性診断</a>
+            <a href="trial.html">無料トライアル</a>
+            <a href="session-menu.html">12の対話（領域）</a>
+            <a href="letters.html">21の手紙</a>
+            <a href="uniqueness.html">独自性と射程</a>
+            <a href="faq.html">FAQ</a>
+            <a href="archives.html">記事一覧</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+<div class="page-container">
+
+  <header class="page-header">
+    <p class="label">EXISTENTIAL SCIENCE RESEARCH INSTITUTE</p>
+    <h1>この三部作を読むためのガイドライン</h1>
+    <p class="subtitle">MetaOSへの案内</p>
+  </header>
+
+  <!-- 1. はじめに -->
+  <section class="fade-in">
+    <h2 class="section-heading">1.　はじめに──なぜ、この三部作は必要なのか</h2>
+
+    <div class="pull-quote">
+      <p>本三部作は、自由意志・意味・社会という人間の生の根幹を、認識論の最下層から書き換えるための体系である。</p>
+    </div>
+
+    <div class="text-panel fade-in">
+    <p>人間は、自分が"選択"によって生きていると信じてきた。</p>
+    <p>努力、意志、決断が人生を形づくるという前提の上に、現代文明のほぼ全てが築かれている。</p>
+    <p>しかし、もしその前提そのものが誤認だったとしたらどうだろうか。</p>
+    <p>本三部作は、自由意志・意味・社会という人間の生の根幹を、認識論の最下層から書き換えるための体系である。</p>
+    <p>ここで扱うのは思想ではなく、世界がどのように構造化され、どのように意味づけられ、どのように文明へと至るのかという、OS（Operating System）を扱う<strong>実存科学（Existential Science）</strong>である。</p>
+    <p>この実存科学とは、従来のどの学問にも属さない、著者自身が創始した新たな学問領域である。</p>
+    <p>三部作が提示する原理はただひとつ──<strong>Meta がある限り自由意志は存在しない</strong>。この一句が理解されるとき、従来の世界観は静かに役割を終え、人は新しい認識へと進む準備が整う。</p>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- 2. 第1部 -->
+  <section class="fade-in">
+    <h2 class="section-heading">2.　第1部──自由意志は「構造的に生成できない語り」である</h2>
+
+    <div class="text-panel fade-in">
+    <p>第1部で明らかになるのは、自由意志が"人間の能力"ではなく"語りの構文"であるという事実である。</p>
+    <p>主語・時制・因果という三つの編集装置が結びつくことで、「私が選んだ」という錯視が生まれるに過ぎない。</p>
+    <p>背景には、言語、文化、価値観、記憶、身体という五層から成る前提構造──Meta──が存在し、人はその中で最適な語りを後付けで生成している。</p>
+    <p>したがって自由意志は否定される概念ではなく、<strong>そもそも構造的に生成できない語り</strong>である。</p>
+    <p>第1部が確定させるのは一句である──<strong class="formula-inline">M（Meta）がある限り、F（自由意志）は成立不能である（M ⇒ ¬F）</strong>。</p>
+    <p>これが、三部作全体の基底となる認識論の公理である。</p>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- 3. 第2部 -->
+  <section class="fade-in">
+    <h2 class="section-heading">3.　第2部──意味は"作るもの"ではなく"収束してしまうもの"である</h2>
+
+    <div class="text-panel fade-in">
+    <p>自由意志が崩れたあと、人は必ず「ではどう生きればいいのか」という問いに向き合う。しかし、その問い自体が自由意志構文の慣性の中にある。</p>
+    <p>主体は選べない。</p>
+    <p>では人生は何によって形づくられるのか。第2部が提示するのは明快である──<strong>意味とは、Meta が個体に与えた初期条件が必然的に向かってしまう"収束点"である</strong>。</p>
+    <p>Shadow（未整合）、Daimonize（統合）、τ（天命核）、T（五分解）。これらは心理ではなく、意味が一点に折り畳まれてゆく生成の方程式である。</p>
+    <p>人は天命を探すのではない。構造が整った瞬間に、意味は自然に露呈し、<strong>主体は悟るのではなく"悟らされてしまう"</strong>。</p>
+    <p>第2部が確定させたのは、人生とは選択の改善ではなく、<strong>Meta → Shadow → 意味 → 収束点へと向かう必然的プロセスである</strong>という意味論のOSである。</p>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- 4. 第3部 -->
+  <section class="fade-in">
+    <h2 class="section-heading">4.　第3部──意味が語られるとき、社会は"自由意志OS"から離れていく</h2>
+
+    <div class="text-panel fade-in">
+    <p>意味が内側で収束すると、その整合は関係へと波及する。</p>
+    <p>主語が弱まり、出来事が"私を通して起きる"という中動態が立ち上がると、人は前提を共有できる他者──<strong>心友™（しんゆう）</strong>──を構造的に必要とするようになる。</p>
+    <p>天命は個体の内部で完結しない。意味は関係の中で深まる。</p>
+    <p>そして意味を語れる関係が増えるとき、社会は「自由意志モデル（選択・競争）」から離れ、<strong>意味中心の文化（Meaning-enabled Society）</strong>へ静かに移行する。</p>
+    <p>これは倫理ではなく構造である。Meta → 天命 → 心友™ → 社会という流れは、努力ではなく必然の構造運動である。</p>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- 5. なぜ体系か -->
+  <section class="fade-in">
+    <h2 class="section-heading">5.　なぜこの三部作は"体系"と呼ばれるのか</h2>
+
+    <div class="text-panel fade-in">
+    <p>三部作は三冊の独立した論考ではない。認識（Meta）→ 意味（天命）→ 社会（完全構造）という階層が、単一のOSとして一方向に連続している。</p>
+    <p>自由意志の誤認が終わると意味が立ち上がり、意味が収束すると関係が整い、関係が整うと社会が変わる。</p>
+    <p>この流れは主張ではなく、<strong>構造がそのまま展開した結果</strong>である。文明への波及もまた価値判断ではなく、構造的安定性にもとづく必然的帰結である。</p>
+    <p>したがって三部作は、哲学・心理学・宗教・社会学を超えて"世界をどのように構築し直すか"を記述した、<strong>認識論・意味論・文明論の統合OS</strong>である。</p>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- 6. おわりに -->
+  <section class="fade-in">
+    <h2 class="section-heading">6.　おわりに──MetaOSへの前室として</h2>
+
+    <div class="text-panel fade-in">
+    <p>このコラムは、三部作そのものではなく、三部作へ入る前の認識を調律するための前室である。</p>
+    <p>ここで提示されたのは、Meta、自由意志構文、意味の収束、天命、心友™、完全構造といった主要構造の"地図"であり、この地図を持つことで読者は三部作を一貫した体系として受け取る準備が整う。</p>
+    <p>自由意志が終わり、意味が立ち上がるとき、人は初めて世界を構造として理解しはじめる。</p>
+    <p>三部作がもたらすのは、その静かな転換である。</p>
+    </div>
+    <div class="highlight-block">
+      <p>そして、この三部作を読むという出来事そのものが、「Meta の計らい」によって読者のOSへ働きかけている──本稿はその入口としての前室である。</p>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- 三部作への導線 -->
+  <div class="part-cards">
+    <div class="part-card fade-in">
+      <p class="part-label">PART I ── 認識論</p>
+      <h3>『Metaがある限り自由意志は存在しない』</h3>
+      <p>3000年の認識論を終わらせ、世界のOSを書き換える実存科学</p>
+      <a class="part-link" href="articles/part1.html">→ 第1部を読む</a>
+      <span style="margin: 0 0.8rem; color: var(--text-secondary);">|</span>
+      <a class="part-link" href="articles/10reasons-part1.html">→ 読むべき10の理由</a>
+    </div>
+    <div class="part-card fade-in">
+      <p class="part-label">PART II ── 意味論</p>
+      <h3>天命を悟り、日々全うする</h3>
+      <p>自由意志なき世界の歩き方</p>
+      <a class="part-link" href="articles/part2.html">→ 第2部を読む</a>
+      <span style="margin: 0 0.8rem; color: var(--text-secondary);">|</span>
+      <a class="part-link" href="articles/10reasons-part2.html">→ 読むべき10の理由</a>
+    </div>
+    <div class="part-card fade-in">
+      <p class="part-label">PART III ── 社会論</p>
+      <h3>生きる意味を語れる社会へ</h3>
+      <p>心友™という絆が文明を最適化する</p>
+      <a class="part-link" href="articles/part3.html">→ 第3部を読む</a>
+      <span style="margin: 0 0.8rem; color: var(--text-secondary);">|</span>
+      <a class="part-link" href="articles/10reasons-part3.html">→ 読むべき10の理由</a>
+    </div>
+  </div>
+
+</div>
+
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container--wide">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <p class="footer-col__title">Guide</p>
+          <a href="beginner.html">はじめての方へ</a>
+          <a href="glossary.html">用語集</a>
+          <a href="session-flow.html">セッションの流れ</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Theory</p>
+          <a href="epistemology.html">認識論</a>
+          <a href="semantics.html">意味論</a>
+          <a href="society.html">社会論</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Contents</p>
+          <a href="archives.html">記事一覧</a>
+          <a href="session-menu.html">12の対話（領域）</a>
+          <a href="letters.html">21の手紙</a>
+          <a href="metaplay.html">Meta Play™︎</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Session</p>
+          <a href="session.html">天命の言語化セッション™</a>
+          <a href="dark-side/">ダークサイド診断</a>
+          <a href="omoidasu/">身体的知性診断</a>
+          <a href="uniqueness.html">独自性と射程</a>
+          <a href="trial.html">無料トライアル</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Institute</p>
+          <a href="founder.html">創始者</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">お問い合わせ</a>
+          <a href="legal/legal-tokushoho.html">特定商取引法</a>
+          <a href="legal/legal-privacy-policy.html">プライバシーポリシー</a>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 実存科学研究所 — Existential Science Institute</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

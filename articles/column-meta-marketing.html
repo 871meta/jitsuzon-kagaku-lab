@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+<meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-meta-marketing.html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Metaマーケティング完全フレームワーク｜実存科学研究所</title>
+<meta name="description" content="Metaマーケティング完全フレームワーク。意味と構造認識が購買行動を動かすメカニズムを体系化。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
+    rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #080610;
+  color: rgba(235, 232, 225, 0.92);
+  font-family: 'Noto Serif JP', serif;
+  font-size: 17px;
+  line-height: 2;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 60px 32px 80px;
+}
+
+/* ── Header ── */
+.header {
+  margin-bottom: 56px;
+}
+
+.institute-label {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  color: rgba(235, 232, 225, 0.55);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.category-tag {
+  display: inline-block;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: #fff;
+  background: #c0a878;
+  padding: 3px 12px;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.header .subtitle {
+  font-size: 16px;
+  color: rgba(235, 232, 225, 0.55);
+  line-height: 1.8;
+}
+
+/* ── Headings ── */
+h2 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.6;
+  margin-top: 64px;
+  margin-bottom: 24px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(192, 168, 120, 0.3);
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.6;
+  margin-top: 40px;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(192, 168, 120, 0.15);
+}
+
+/* ── Body ── */
+p {
+  margin-bottom: 20px;
+}
+
+strong {
+  font-weight: 700;
+}
+
+/* ── Blockquote ── */
+blockquote {
+  border-left: 3px solid rgba(192, 168, 120, 0.4);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 16px 24px;
+  margin: 24px 0;
+  font-style: normal;
+}
+
+blockquote p {
+  margin-bottom: 8px;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Lists ── */
+ul, ol {
+  margin-left: 1.5rem;
+  margin-bottom: 20px;
+  line-height: 2;
+}
+
+li {
+  margin-bottom: 4px;
+}
+
+/* ── Highlight Box ── */
+.highlight-box {
+  background: rgba(192, 168, 120, 0.04);
+  border-left: 4px solid #c0a878;
+  padding: 20px 24px;
+  margin: 28px 0;
+}
+
+.highlight-box p {
+  margin-bottom: 8px;
+}
+
+.highlight-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Formula Block ── */
+.formula-block {
+  background: rgba(192, 168, 120, 0.04);
+  border: 1px solid rgba(192, 168, 120, 0.15);
+  padding: 20px 24px;
+  margin: 28px 0;
+  text-align: center;
+  font-family: 'Courier New', Consolas, monospace;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+}
+
+/* ── Separator ── */
+hr {
+  border: none;
+  border-top: 1px solid rgba(192, 168, 120, 0.15);
+  margin: 48px 0;
+}
+
+/* ── Navigation ── */
+.nav-footer {
+  margin-top: 72px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(192, 168, 120, 0.15);
+}
+
+.nav-footer a {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 14px;
+  color: rgba(235, 232, 225, 0.55);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+
+.nav-footer a:hover {
+  color: rgba(235, 232, 225, 0.92);
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  body { font-size: 15px; }
+  .container { padding: 40px 20px 60px; }
+  .header h1 { font-size: 23px; }
+  h2 { font-size: 19px; margin-top: 48px; }
+  h3 { font-size: 16px; margin-top: 32px; }
+  blockquote { padding: 12px 16px; }
+  .highlight-box { padding: 16px 18px; }
+  .formula-block { padding: 16px 18px; font-size: 14px; }
+}
+
+/* === Dark Theme Override === */
+a:not(.btn):not(.session-card__link) { color: #c0a878; transition: color 0.2s; }
+a:not(.btn):not(.session-card__link):hover { color: #e8d8b8; }
+.category-tag { color: #080610 !important; background: #c0a878 !important; }
+.back-nav { background: rgba(192, 168, 120, 0.06); border-color: rgba(192, 168, 120, 0.15); }
+.back-nav a { color: #c0a878; }
+img { border-radius: 2px; }
+input, textarea, select { background: rgba(255,255,255,0.05); color: rgba(235,232,225,0.92); border-color: rgba(201,168,76,0.2); }
+input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); outline: none; }
+::placeholder { color: rgba(235,232,225,0.3); }
+.submit-btn, button[type="submit"] { background: #c0a878; color: #080610; border: none; }
+
+</style>
+  <meta property="og:title" content="Metaマーケティング完全フレームワーク｜実存科学研究所">
+  <meta property="og:description" content="確率思考に基づく「自動起動するマーケティング脳」最終確定版">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="実存科学研究所">
+<meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+<meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="../index.html" class="site-logo">実存科学研究所</a>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="global-nav">
+        <a href="../index.html">Top</a>
+        <a href="../beginner.html">Guide</a>
+        <a href="../epistemology.html">Epistemology</a>
+        <a href="../semantics.html">Semantics</a>
+        <a href="../society.html">Society</a>
+        <a href="../founder.html">Founder</a>
+        <a href="../session.html">Session</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">More</button>
+          <div class="nav-dropdown__menu">
+            <a href="../metaplay.html">Meta Play™</a>
+            <a href="../dark-side/">ダークサイド診断</a>
+            <a href="../omoidasu/">身体的知性診断</a>
+            <a href="../trial.html">無料トライアル</a>
+            <a href="../session-menu.html">12の対話（領域）</a>
+            <a href="../letters.html">21の手紙</a>
+            <a href="../uniqueness.html">独自性と射程</a>
+            <a href="../faq.html">FAQ</a>
+            <a href="../archives.html">記事一覧</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+<div class="container">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="institute-label">EXISTENTIAL SCIENCE RESEARCH INSTITUTE</div>
+    <div class="category-tag">コラム</div>
+    <h1>Metaマーケティング完全フレームワーク</h1>
+    <p class="subtitle">確率思考に基づく「自動起動するマーケティング脳」最終確定版</p>
+  </header>
+
+  <div class="pull-quote fade-in"><p>マーケティングとは、市場における「選ばれる確率」を構造的に最大化するための技術体系である。</p></div>
+
+  <!-- 結論（最初に） -->
+  <h2 class="fade-in">結論（最初に）</h2>
+
+  <p><strong>このフレームワークを</strong></p>
+
+  <ol>
+    <li>理解し</li>
+    <li>実在の案件に当て</li>
+    <li>順序を崩さず回せるなら</li>
+  </ol>
+
+  <div class="highlight-box fade-in">
+    <p><strong>あなたはプロのマーケターとして機能する。</strong></p>
+  </div>
+
+  <div class="text-panel fade-in">
+  <p>マーケティングにおけるプロ／非プロの差は、才能ではなく<strong>順序遵守能力</strong>である。</p>
+  </div>
+
+  <hr>
+
+  <!-- 前提定義 -->
+  <h2 class="fade-in">前提定義｜マーケティングとは何か</h2>
+
+  <blockquote class="fade-in">
+    <p>マーケティングとは、市場における「選ばれる確率」を構造的に最大化するための技術体系である（＝売れる必然をつくること）</p>
+  </blockquote>
+
+  <ul>
+    <li>説得ではない</li>
+    <li>正しさの証明ではない</li>
+    <li>想いの表明ではない</li>
+  </ul>
+
+  <p><strong>確率操作の仕事</strong>である。</p>
+
+  <hr>
+
+  <!-- レイヤー0 -->
+  <h2 class="fade-in">レイヤー0｜世界観固定</h2>
+
+  <h3 class="fade-in">市場はどう動いているか？</h3>
+
+  <blockquote class="fade-in">
+    <p>市場は決定論で動かない。市場は確率分布で動く。</p>
+  </blockquote>
+
+  <ul>
+    <li>人は毎回ランダムに選ぶ</li>
+    <li>ただし、ランダムの偏り（分布）は構造で決まる</li>
+    <li>売上は当たり外れではなく分布の結果</li>
+  </ul>
+
+  <hr>
+
+  <!-- レイヤー1 -->
+  <h2 class="fade-in">レイヤー1｜意思決定階層の固定</h2>
+
+  <h3 class="fade-in">人は何から順に選んでいるか？</h3>
+
+  <div class="step-flow fade-in"><p class="step-flow__title">消費者の意思決定階層</p><ol>
+    <li><strong>カテゴリー</strong>（何の話か）</li>
+    <li><strong>ブランド</strong>（どこを選ぶか）</li>
+    <li><strong>マーケティングコンセプト</strong>（なぜそれか）</li>
+    <li><strong>プロダクト／HOW</strong>（具体）</li>
+  </ol></div>
+
+  <p>下流（HOW）で悩んだ瞬間、必ず上流に戻る。</p>
+
+  <hr>
+
+  <!-- レイヤー2 -->
+  <h2 class="fade-in">レイヤー2｜存在判定（ゼロ判定）</h2>
+
+  <h3 class="fade-in">そもそも選択肢に入っているか？</h3>
+
+  <div class="highlight-box fade-in">
+    <p>エボークトセットに入っていなければ、確率は0。</p>
+  </div>
+
+  <ul>
+    <li>比較されていない</li>
+    <li>思い出されていない</li>
+    <li>カテゴリー未認識</li>
+  </ul>
+
+  <hr>
+
+  <!-- レイヤー3 -->
+  <h2 class="fade-in">レイヤー3｜確率式への還元</h2>
+
+  <h3 class="fade-in">売上は何で決まるか？</h3>
+
+  <div class="formula-block">
+    購買確率 ＝ プレファレンス × 認知 × 配荷
+  </div>
+
+  <ul>
+    <li>認知：上限100％の定数</li>
+    <li>配荷：制約付き定数</li>
+    <li><strong>プレファレンス：唯一、天井のない主変数</strong></li>
+  </ul>
+
+  <hr>
+
+  <!-- レイヤー4 -->
+  <h2 class="fade-in">レイヤー4｜消費者理解10割</h2>
+
+  <h3 class="fade-in">何から始めるか？</h3>
+
+  <blockquote class="fade-in">
+    <p>マーケティングは消費者理解が10割。</p>
+  </blockquote>
+
+  <ul>
+    <li>凡人に憑依する</li>
+    <li>狂人に憑依する</li>
+    <li>行動の裏にある本能を見る</li>
+    <li>脳内記号（既存連想）を特定する</li>
+  </ul>
+
+  <p>自分の言いたいことは、この時点で完全に捨てる。</p>
+
+  <hr>
+
+  <!-- レイヤー5 -->
+  <h2 class="fade-in">レイヤー5｜ブランドエクイティ先行</h2>
+
+  <h3 class="fade-in">先に何を決めるか？</h3>
+
+  <blockquote class="fade-in">
+    <p>先に刷りたい「絵（脳内状態）」を決める。言葉・表現は後。</p>
+  </blockquote>
+
+  <ul>
+    <li>中長期で消費者の頭の中にどんな状態を作りたいか</li>
+    <li>これが<strong>戦略エクイティ</strong></li>
+  </ul>
+
+  <hr>
+
+  <!-- レイヤー6 -->
+  <h2 class="fade-in">レイヤー6｜重心思考（勝ち筋）</h2>
+
+  <h3 class="fade-in">どこに集中するか？</h3>
+
+  <ol>
+    <li>消費者本能（Customer Value）</li>
+    <li>自社の構造的強み（Company Edge）</li>
+    <li>競合が真似できない理由（Defense）</li>
+  </ol>
+
+  <p>3条件が同時に成立する一点のみを見る。</p>
+
+  <hr>
+
+  <!-- レイヤー7 -->
+  <h2 class="fade-in">レイヤー7｜マーケティングコンセプト</h2>
+
+  <h3 class="fade-in">コンセプトとは何か？</h3>
+
+  <blockquote class="fade-in">
+    <p>コンセプトとは、選ばれる確率を動かす装置である。</p>
+  </blockquote>
+
+  <ul>
+    <li>STC（文脈）</li>
+    <li>便益（本能に刺さる変化）</li>
+    <li>RTB（必要な場合のみ）</li>
+  </ul>
+
+  <p>通過すべき脳の関門：</p>
+
+  <ol>
+    <li>重要か？</li>
+    <li>好きか？</li>
+    <li>本当に大丈夫か？</li>
+  </ol>
+
+  <hr>
+
+  <!-- レイヤー8 -->
+  <h2 class="fade-in">レイヤー8｜ターゲティング規律</h2>
+
+  <blockquote class="fade-in">
+    <p>原則、ターゲティングはしない。</p>
+  </blockquote>
+
+  <ul>
+    <li>市場を狭めるために使わない</li>
+    <li>プレファレンスが上がる場合のみ限定的に使用</li>
+  </ul>
+
+  <hr>
+
+  <!-- レイヤー9 -->
+  <h2 class="fade-in">レイヤー9｜検証工程</h2>
+
+  <blockquote class="fade-in">
+    <p>検証を通過した仮説だけを信じる。</p>
+  </blockquote>
+
+  <ol>
+    <li>消費者理解</li>
+    <li>仮説</li>
+    <li>コンセプト提示</li>
+    <li>検証（反応・量的）</li>
+    <li>判断・更新</li>
+  </ol>
+
+  <hr>
+
+  <!-- レイヤー10 -->
+  <h2 class="fade-in">レイヤー10｜HOW展開</h2>
+
+  <blockquote class="fade-in">
+    <p>HOWは必ず最後。</p>
+  </blockquote>
+
+  <div class="framed-list fade-in"><p class="framed-list__title">HOW展開の要素</p><ul>
+    <li>商品</li>
+    <li>価格</li>
+    <li>導線</li>
+    <li>営業</li>
+    <li>広告</li>
+  </ul></div>
+
+  <hr>
+
+  <!-- レイヤー11 -->
+  <h2 class="fade-in">レイヤー11｜評価軸の一本化</h2>
+
+  <blockquote class="fade-in">
+    <p>評価するのは分布が動いたかどうかだけ。</p>
+  </blockquote>
+
+  <ul>
+    <li>正しい／間違い ×</li>
+    <li>売れた／売れない ×</li>
+    <li>分布変化のみ ○</li>
+  </ul>
+
+  <hr>
+
+  <!-- レイヤー12 -->
+  <h2 class="fade-in">レイヤー12｜完成条件</h2>
+
+  <blockquote class="fade-in">
+    <p>何を見ても、この順で無意識に分解が始まる状態。</p>
+  </blockquote>
+
+  <p>商品・事業・営業トーク・広告・人の発言。</p>
+
+  <p>見た瞬間に、</p>
+
+  <ul>
+    <li>カテゴリーは？</li>
+    <li>エボークト入っているか？</li>
+    <li>プレファレンスはどこで止まっているか？</li>
+  </ul>
+
+  <p>が勝手に流れる。</p>
+
+  <hr>
+
+  <!-- 最終結論 -->
+  <h2 class="fade-in">最終結論</h2>
+
+  <ul>
+    <li>本フレームワークは、網羅性・再現性・実行可能性をすべて満たす</li>
+    <li>これを順序通り運用できれば、プロのマーケターとして機能する</li>
+    <li>これ以上のフレームワークは、原理的に存在しない</li>
+  </ul>
+
+  <p>残るのは、<strong>実務に当て続けること</strong>だけである。</p>
+
+  <div class="highlight-block fade-in"><p>残るのは、実務に当て続けることだけである。</p></div>
+
+  <!-- Navigation -->
+  <nav class="nav-footer fade-in">
+    <a href="../contents.html">← コンテンツ一覧へ戻る</a>
+  </nav>
+
+</div>
+
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container--wide">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <p class="footer-col__title">Guide</p>
+          <a href="../beginner.html">はじめての方へ</a>
+          <a href="../glossary.html">用語集</a>
+          <a href="../session-flow.html">セッションの流れ</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Theory</p>
+          <a href="../epistemology.html">認識論</a>
+          <a href="../semantics.html">意味論</a>
+          <a href="../society.html">社会論</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Contents</p>
+          <a href="../archives.html">記事一覧</a>
+          <a href="../session-menu.html">12の対話（領域）</a>
+          <a href="../letters.html">21の手紙</a>
+          <a href="../metaplay.html">Meta Play™︎</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Session</p>
+          <a href="../session.html">天命の言語化セッション™</a>
+          <a href="../dark-side/">ダークサイド診断</a>
+          <a href="../omoidasu/">身体的知性診断</a>
+          <a href="../uniqueness.html">独自性と射程</a>
+          <a href="../trial.html">無料トライアル</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Institute</p>
+          <a href="../founder.html">創始者</a>
+          <a href="../faq.html">FAQ</a>
+          <a href="../contact.html">お問い合わせ</a>
+          <a href="../legal/legal-tokushoho.html">特定商取引法</a>
+          <a href="../legal/legal-privacy-policy.html">プライバシーポリシー</a>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 実存科学研究所 — Existential Science Institute</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Metaマーケティング完全フレームワーク",
+  "description": "Metaマーケティング完全フレームワーク。意味と構造認識が購買行動を動かすメカニズムを体系化。",
+  "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-meta-marketing.html",
+  "author": {
+    "@type": "Person",
+    "name": "箭内宏紀",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/founder.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  },
+  "inLanguage": "ja",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  }
+}
+</script>
+</body>
+</html>

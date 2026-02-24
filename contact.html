@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/contact.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ | 実存科学研究所</title>
+  <meta name="description" content="セッションに関するご質問、その他のお問い合わせはこちらから。">
+  <meta property="og:title" content="お問い合わせ | 実存科学研究所">
+  <meta property="og:description" content="Contact">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="実存科学研究所">
+  <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ============================================
+       Contact Page — Luxury Form Styles
+       ============================================ */
+
+    .contact-body {
+      padding: 4rem 0 6rem;
+    }
+
+    .contact-body .container {
+      max-width: 680px;
+    }
+
+    /* --- Form card --- */
+    .contact-form-card {
+      position: relative;
+      padding: 3rem 2.5rem;
+      background: rgba(15, 12, 25, 0.7);
+      border: 1px solid rgba(192, 168, 120, 0.12);
+      box-shadow: 0 2px 24px rgba(192, 168, 120, 0.04);
+      backdrop-filter: blur(8px);
+      overflow: hidden;
+    }
+
+    .contact-form-card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.5), transparent);
+    }
+
+    /* --- Form groups --- */
+    .form-group {
+      margin-bottom: 2.2rem;
+    }
+
+    .form-group:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #f0ece6;
+      margin-bottom: 0.8rem;
+      letter-spacing: 0.04em;
+    }
+
+    .form-group .required {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 0.68rem;
+      font-weight: 400;
+      color: rgba(192, 168, 120, 0.5);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-left: 0.6rem;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group textarea {
+      width: 100%;
+      padding: 0.9rem 1.1rem;
+      font-family: "Shippori Mincho", "Noto Serif JP", serif;
+      font-size: 0.92rem;
+      line-height: 1.9;
+      color: rgba(235, 232, 225, 0.92);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(192, 168, 120, 0.18);
+      border-radius: 0;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      -webkit-appearance: none;
+    }
+
+    .form-group input[type="text"]:focus,
+    .form-group input[type="email"]:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: rgba(192, 168, 120, 0.5);
+      box-shadow: 0 0 16px rgba(192, 168, 120, 0.08);
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: rgba(235, 232, 225, 0.2);
+    }
+
+    .form-group textarea {
+      min-height: 180px;
+      resize: vertical;
+    }
+
+    .form-group .input-note {
+      font-size: 0.78rem;
+      color: #8a8680;
+      margin-top: 0.5rem;
+      line-height: 1.8;
+    }
+
+    /* --- Submit button --- */
+    .contact-submit-wrap {
+      text-align: center;
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(192, 168, 120, 0.08);
+    }
+
+    .contact-submit {
+      display: inline-block;
+      padding: 1.2rem 4rem;
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #0c0a14;
+      background: #c0a878;
+      border: 1px solid #c0a878;
+      border-radius: 0;
+      cursor: pointer;
+      transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .contact-submit:hover {
+      background: transparent;
+      color: #c0a878;
+      border-color: #c0a878;
+    }
+
+    /* --- Thank you --- */
+    .thank-you {
+      display: none;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .thank-you__label {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.3em;
+      color: rgba(192, 168, 120, 0.5);
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    .thank-you h2 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #f0ece6;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.06em;
+    }
+
+    .thank-you p {
+      font-size: 0.92rem;
+      color: #a8a4a0;
+      line-height: 2.2;
+    }
+
+    /* --- Response time note --- */
+    .contact-note {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.78rem;
+      color: #8a8680;
+      line-height: 2;
+    }
+
+    /* --- Responsive 768px --- */
+    @media (max-width: 768px) {
+      .contact-form-card {
+        padding: 2.5rem 2rem;
+      }
+    }
+
+    /* --- Responsive 480px --- */
+    @media (max-width: 480px) {
+      .contact-body {
+        padding: 2.5rem 0 4rem;
+      }
+
+      .contact-form-card {
+        padding: 2rem 1.2rem;
+      }
+
+      .form-group {
+        margin-bottom: 1.8rem;
+      }
+
+      .form-group label {
+        font-size: 0.85rem;
+        margin-bottom: 0.6rem;
+      }
+
+      .form-group input[type="text"],
+      .form-group input[type="email"],
+      .form-group textarea {
+        padding: 0.8rem 0.9rem;
+        font-size: 0.88rem;
+      }
+
+      .form-group textarea {
+        min-height: 150px;
+      }
+
+      .contact-submit-wrap {
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+      }
+
+      .contact-submit {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 1.2rem 2rem;
+        font-size: 0.82rem;
+      }
+
+      .page-hero__lead br {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="index.html" class="site-logo">実存科学研究所</a>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="global-nav">
+        <a href="index.html">Top</a>
+        <a href="beginner.html">Guide</a>
+        <a href="epistemology.html">Epistemology</a>
+        <a href="semantics.html">Semantics</a>
+        <a href="society.html">Society</a>
+        <a href="founder.html">Founder</a>
+        <a href="session.html">Session</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">More</button>
+          <div class="nav-dropdown__menu">
+            <a href="metaplay.html">Meta Play™</a>
+            <a href="dark-side/">ダークサイド診断</a>
+            <a href="omoidasu/">身体的知性診断</a>
+            <a href="trial.html">無料トライアル</a>
+            <a href="session-menu.html">12の対話（領域）</a>
+            <a href="letters.html">21の手紙</a>
+            <a href="uniqueness.html">独自性と射程</a>
+            <a href="faq.html">FAQ</a>
+            <a href="archives.html">記事一覧</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="page-hero__sub">Contact</p>
+      <h1>お問い合わせ</h1>
+      <p class="page-hero__lead">
+        セッションに関するご質問、その他のお問い合わせは<br>以下のフォームよりお送りください。
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Body -->
+  <section class="contact-body">
+    <div class="container">
+
+      <!-- Form -->
+      <div id="contact-form-container" class="fade-in">
+        <div class="contact-form-card">
+          <form id="contact-form" action="https://formspree.io/f/maqdpode" method="POST">
+            <input type="hidden" name="_next" value="">
+            <input type="text" name="_gotcha" style="display:none">
+
+            <div class="form-group">
+              <label for="name">お名前<span class="required">Required</span></label>
+              <input type="text" id="name" name="name" required placeholder="例：山田太郎">
+            </div>
+
+            <div class="form-group">
+              <label for="email">メールアドレス<span class="required">Required</span></label>
+              <input type="email" id="email" name="email" required placeholder="例：example@mail.com">
+              <p class="input-note">ご返信先となりますので、お間違いのないようご入力ください。</p>
+            </div>
+
+            <div class="form-group">
+              <label for="message">お問い合わせ内容<span class="required">Required</span></label>
+              <textarea id="message" name="message" required placeholder="お問い合わせ内容をご記入ください。"></textarea>
+            </div>
+
+            <div class="contact-submit-wrap">
+              <button type="submit" class="contact-submit">送信する &rarr;</button>
+            </div>
+          </form>
+        </div>
+
+        <p class="contact-note">通常3営業日以内にご返信いたします。</p>
+      </div>
+
+      <!-- Thank you -->
+      <div class="thank-you fade-in" id="thank-you">
+        <p class="thank-you__label">Sent</p>
+        <h2>お問い合わせを受け付けました</h2>
+        <p>ご連絡いただきありがとうございます。<br>通常3営業日以内にご返信いたします。</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container--wide">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <p class="footer-col__title">Guide</p>
+          <a href="beginner.html">はじめての方へ</a>
+          <a href="glossary.html">用語集</a>
+          <a href="session-flow.html">セッションの流れ</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Theory</p>
+          <a href="epistemology.html">認識論</a>
+          <a href="semantics.html">意味論</a>
+          <a href="society.html">社会論</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Contents</p>
+          <a href="archives.html">記事一覧</a>
+          <a href="session-menu.html">12の対話（領域）</a>
+          <a href="letters.html">21の手紙</a>
+          <a href="metaplay.html">Meta Play™︎</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Session</p>
+          <a href="session.html">天命の言語化セッション™</a>
+          <a href="dark-side/">ダークサイド診断</a>
+          <a href="omoidasu/">身体的知性診断</a>
+          <a href="uniqueness.html">独自性と射程</a>
+          <a href="trial.html">無料トライアル</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Institute</p>
+          <a href="founder.html">創始者</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">お問い合わせ</a>
+          <a href="legal/legal-tokushoho.html">特定商取引法</a>
+          <a href="legal/legal-privacy-policy.html">プライバシーポリシー</a>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 実存科学研究所 — Existential Science Institute</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    (function () {
+      var form = document.getElementById('contact-form');
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var data = new FormData(form);
+        fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        }).then(function (response) {
+          if (response.ok) {
+            document.getElementById('contact-form-container').style.display = 'none';
+            document.getElementById('thank-you').style.display = 'block';
+          } else {
+            alert('送信に失敗しました。お手数ですが、時間をおいて再度お試しください。');
+          }
+        }).catch(function () {
+          alert('送信に失敗しました。お手数ですが、時間をおいて再度お試しください。');
+        });
+      });
+    })();
+  </script>
+</body>
+
+</html>

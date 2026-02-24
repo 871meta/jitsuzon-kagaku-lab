@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-self-collapse-prompt.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>「自己論破プロンプト™︎」完全版｜説明ゼロで矛盾を可視化する護身技法 | 実存科学研究所</title>
+  <meta name="description" content="「自己論破プロンプト™」完全版。説明ゼロで矛盾を可視化する護身技法。論理的自己防衛の方法論。">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --text: rgba(235, 232, 225, 0.92); --text-secondary: rgba(235, 232, 225, 0.55); --bg: #080610; --border: rgba(192, 168, 120, 0.15); --accent: #c0a878; --highlight: rgba(192, 168, 120, 0.06); --blockquote-border: rgba(192, 168, 120, 0.4); --definition-bg: rgba(192, 168, 120, 0.04); --max-width: 780px; }
+    html { font-size: 17px; scroll-behavior: smooth; }
+    body { font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif; color: var(--text); background: var(--bg); line-height: 2; -webkit-font-smoothing: antialiased; }
+    .page-container { max-width: var(--max-width); margin: 0 auto; padding: 3rem 1.5rem 6rem; }
+    .page-header { text-align: center; padding: 4rem 0 3rem; border-bottom: 2px solid var(--accent); margin-bottom: 3rem; }
+    .page-header .label { font-size: 0.85rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 0.8rem; font-family: "Noto Sans JP", sans-serif; }
+    .page-header .category-tag { font-family: "Noto Sans JP", sans-serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; background: var(--accent); padding: 0.15rem 0.6rem; display: inline-block; margin-bottom: 1rem; }
+    .page-header h1 { font-size: 1.4rem; font-weight: 700; line-height: 1.6; margin-bottom: 0.3rem; }
+    .page-header .subtitle { font-size: 0.95rem; color: var(--text-secondary); }
+    p { margin-bottom: 1rem; text-align: justify; }
+    strong { font-weight: 700; }
+    h2.section-heading { font-size: 1.2rem; font-weight: 700; margin-top: 3.5rem; margin-bottom: 1rem; line-height: 1.6; border-bottom: 2px solid var(--accent); padding-bottom: 0.6rem; }
+    h3.subsection-heading { font-size: 1rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.8rem; line-height: 1.6; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
+    h4.label-heading { font-size: 0.95rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+    blockquote { border-left: 3px solid var(--blockquote-border); padding: 0.8rem 1.5rem; margin: 1.5rem 0; color: var(--text-secondary); background: rgba(255,255,255,0.03); }
+    blockquote p:last-child { margin-bottom: 0; }
+    .item-list { margin: 1rem 0 1rem 1.5rem; line-height: 2; }
+    .item-list li { margin-bottom: 0.4rem; }
+    .core-prompt { background: var(--definition-bg); border: 1px solid var(--border); border-left: 4px solid var(--accent); padding: 1.2rem 1.8rem; margin: 1.5rem 0; font-size: 1.05rem; font-weight: 700; line-height: 1.8; }
+    .reply-example { background: rgba(0,0,0,0.02); border: 1px solid var(--border); padding: 1rem 1.5rem; margin: 1rem 0; font-size: 0.95rem; }
+    .reply-example strong { display: block; margin-bottom: 0.3rem; }
+    hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
+    .back-nav { margin-top: 4rem; padding: 1.5rem 2rem; background: var(--highlight); border: 1px solid var(--border); text-align: center; }
+    .back-nav a { color: var(--accent); text-decoration: none; font-weight: 700; }
+    .back-nav a:hover { opacity: 0.7; }
+    @media (max-width: 600px) { html { font-size: 15px; } .page-container { padding: 2rem 1rem 4rem; } .page-header h1 { font-size: 1.2rem; } h2.section-heading { font-size: 1.1rem; } }
+
+/* === Dark Theme Override === */
+a:not(.btn):not(.session-card__link) { color: #c0a878; transition: color 0.2s; }
+a:not(.btn):not(.session-card__link):hover { color: #e8d8b8; }
+.category-tag { color: #080610 !important; background: #c0a878 !important; }
+.back-nav { background: rgba(192, 168, 120, 0.06); border-color: rgba(192, 168, 120, 0.15); }
+.back-nav a { color: #c0a878; }
+img { border-radius: 2px; }
+input, textarea, select { background: rgba(255,255,255,0.05); color: rgba(235,232,225,0.92); border-color: rgba(201,168,76,0.2); }
+input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); outline: none; }
+::placeholder { color: rgba(235,232,225,0.3); }
+.submit-btn, button[type="submit"] { background: #c0a878; color: #080610; border: none; }
+
+</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <meta property="og:title" content="「自己論破プロンプト™︎」完全版｜説明ゼロで矛盾を可視化する護身技法 | 実存科学研究所">
+  <meta property="og:description" content="Self-Collapse Prompt ── 説明ゼロで矛盾を可視化する護身技法">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="実存科学研究所">
+<meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+<meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="../index.html" class="site-logo">実存科学研究所</a>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="global-nav">
+        <a href="../index.html">Top</a>
+        <a href="../beginner.html">Guide</a>
+        <a href="../epistemology.html">Epistemology</a>
+        <a href="../semantics.html">Semantics</a>
+        <a href="../society.html">Society</a>
+        <a href="../founder.html">Founder</a>
+        <a href="../session.html">Session</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">More</button>
+          <div class="nav-dropdown__menu">
+            <a href="../metaplay.html">Meta Play™</a>
+            <a href="../dark-side/">ダークサイド診断</a>
+            <a href="../omoidasu/">身体的知性診断</a>
+            <a href="../trial.html">無料トライアル</a>
+            <a href="../session-menu.html">12の対話（領域）</a>
+            <a href="../letters.html">21の手紙</a>
+            <a href="../uniqueness.html">独自性と射程</a>
+            <a href="../faq.html">FAQ</a>
+            <a href="../archives.html">記事一覧</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+<div class="page-container">
+
+  <header class="page-header fade-in">
+    <p class="label">EXISTENTIAL SCIENCE RESEARCH INSTITUTE</p>
+    <span class="category-tag">コラム</span>
+    <h1>「自己論破プロンプト™︎」完全版</h1>
+    <p class="subtitle">Self-Collapse Prompt ── 説明ゼロで矛盾を可視化する護身技法</p>
+  </header>
+<div class="pull-quote fade-in"><p>誠実に生きる人が、傷つかずに対話を終えられる護身術。それが、この技法の大義である。</p></div>
+
+
+  <article>
+
+    <!-- 背景 -->
+    <h2 class="section-heading fade-in">はじめに──なぜこの技法が生まれたのか</h2>
+
+    <div class="text-panel fade-in">
+    <p>「自己論破」という言葉だけを見ると、攻撃的な印象を受ける方がいるかもしれない。しかし、この技法の出発点は"論破"ではなく、むしろその正反対──<strong>「問いだけで人が変わる」という現象の観測</strong>にある。</p>
+    <p>私はこれまでのキャリアを通じて、「天命の言語化セッション™」をはじめとする対人援助の現場で、一万時間を超える対話を重ねてきた。その中で繰り返し目撃してきた事実がある。</p>
+    <p><strong>クライアントが最も深く変容するのは、私が何かを説明した瞬間ではなく、本人が自分の矛盾に自分で気づいた瞬間だった。</strong></p>
+    <p>こちらがどれだけ丁寧に理論を語っても、相手の防衛構造が作動すれば言葉は届かない。しかし、たった一つの問いを静かに置いただけで、本人の内側から構造が崩れ、涙とともに深い理解が立ち上がる──そんな場面を何度も観測してきた。</p>
+    <p>この現象は偶然ではなかった。「問いによって自己の前提が可視化され、自分で自分の矛盾を発見し、自分で自分を超えていく」──そこには明確な構造があった。それを再現可能な形で体系化したものが、「自己論破プロンプト™︎」である。</p>
+    <p>もう一つ、この技法を世に出す理由がある。</p>
+    <p>天命を悟り、誠実に生きようとする人ほど、不誠実な攻撃や浅い反論に消耗しやすいという現実がある。説明すればするほど疲弊し、反論すればするほど泥沼に引き込まれる。誠実な人間が、誠実であるがゆえに傷つく──この構造を放置しておくわけにはいかなかった。</p>
+    <p><strong>誠実に生きる人が、傷つかずに対話を終えられる護身術。</strong>それが、この技法の大義である。</p>
+    </div>
+
+    <hr>
+
+    <!-- 0. 総論 -->
+    <h2 class="section-heading fade-in">0. 総論</h2>
+
+    <div class="text-panel fade-in">
+    <p><strong>「自己論破プロンプト™︎」（Self-Collapse Prompt）</strong>とは、相手を論破するのではなく、<strong>相手が自分で自分の矛盾に気づき、自分で自分を論破する構造をつくる"護身技法"</strong>である。</p>
+    <p>こちらは攻撃しない。説明しない。押し付けない。ただ「質問」を置くだけで、相手自身の認識構造が自壊する。</p>
+    <p>これにより、以下の効果が生まれる：</p>
+    </div>
+    <ul class="item-list">
+      <li>あなたは傷つかない</li>
+      <li>相手は怒らない</li>
+      <li>誠実な人だけが残る</li>
+      <li>不誠実な人は勝手に去る</li>
+      <li>深度の違いが一瞬で可視化される</li>
+      <li>相互理解ではなく"自己理解"が起こる</li>
+    </ul>
+    <p>究極的には、<strong>説明ゼロで誠実さと知性をスキャンできる問いの流派</strong>である。</p>
+
+    <hr>
+
+    <!-- 1. プロトコルの構造 -->
+    <h2 class="section-heading fade-in">1. プロトコルの構造（3段階）</h2>
+
+    <p>「自己論破プロンプト™︎」は、次の3段階で構成される。</p>
+
+    <h3 class="subsection-heading fade-in">■ 質問①（核心・開始）</h3>
+    <div class="core-prompt">「なぜあなたは自分の意見の矛盾に気づかないんですか？」</div>
+
+    <h3 class="subsection-heading fade-in">■ 質問②（反転・増幅）</h3>
+    <div class="core-prompt">「では、なぜ矛盾していないと思えるのですか？」</div>
+
+    <h3 class="subsection-heading fade-in">■ 質問③（最終封鎖）</h3>
+    <div class="core-prompt">「その"正しいと感じる根拠"はどこにあるんですか？」</div>
+
+    <hr>
+
+    <!-- 2. 各質問の意図・目的・構造 -->
+    <h2 class="section-heading fade-in">2. 各質問の意図・目的・構造</h2>
+
+    <p>3つの質問が、どのように相手のOS（認識構造）を解体するのかを解説する。</p>
+
+    <h3 class="subsection-heading fade-in">■ 質問①：核心の照射</h3>
+    <div class="core-prompt">「なぜあなたは自分の意見の矛盾に気づかないんですか？」</div>
+
+    <h4 class="label-heading">● 目的</h4>
+    <ul class="item-list">
+      <li>観照（メタ認知）を強制起動する</li>
+      <li>自己チェックを始めさせる</li>
+      <li>誠実／不誠実の分岐点を作る</li>
+    </ul>
+
+    <h4 class="label-heading">● 相手の反応パターン</h4>
+    <ul class="item-list">
+      <li>「どこが矛盾？」→ 誠実</li>
+      <li>「矛盾してない！」→ 浅い理解</li>
+      <li>無視・逆ギレ → 不誠実</li>
+    </ul>
+
+    <h4 class="label-heading">● 構造的効果</h4>
+    <p>思考の矛先が<strong>外側から内側に切り替わる</strong>ため、あなたには怒りが向かず、相手は自分の内側で崩れ始める。</p>
+
+    <hr>
+
+    <h3 class="subsection-heading fade-in">■ 質問②：自己正当化の根を問う</h3>
+    <div class="core-prompt">「では、なぜ矛盾していないと思えるのですか？」</div>
+
+    <h4 class="label-heading">● 目的</h4>
+    <ul class="item-list">
+      <li>相手の"整合性の論理"を暴く</li>
+      <li>前提を可視化する</li>
+      <li>自己正当化の脆弱さを露呈させる</li>
+    </ul>
+
+    <h4 class="label-heading">● 構造的効果</h4>
+    <p>直感／感情／思い込みに依存している部分が露呈し、相手は<strong>自分の浅さに自分で気づき始める</strong>。</p>
+
+    <h4 class="label-heading">● 「どこが矛盾なの？」と聞かれたときの返答例</h4>
+    <p>相手に詳細を求められても、あなたは説明しなくてよい。"構造"だけを示せば十分である。</p>
+
+    <div class="reply-example">
+      <strong>返答例１（最小限）</strong>
+      「あなたが言っている A と B が、同時には成立しないように見えています。」
+    </div>
+    <div class="reply-example">
+      <strong>返答例２（前提の衝突だけ示す）</strong>
+      「A は"X が成り立つ前提"で、B は"X が成り立たない前提"に立っているように見えました。」
+    </div>
+    <div class="reply-example">
+      <strong>返答例３（優しい負担ゼロ）</strong>
+      「A と B のつながり方が、私には見えなかっただけです。」
+    </div>
+    <div class="reply-example">
+      <strong>返答例４（誠実さテスト）</strong>
+      「A と B は、あなたの中ではどう結びついているように感じていますか？」
+    </div>
+    <div class="reply-example">
+      <strong>返答例５（自己内省誘導）</strong>
+      「前提の層が違うように見えました。ご自身ではどのように理解されていますか？」
+    </div>
+
+    <div class="text-panel fade-in">
+    <p>いずれも<strong>あなたは攻撃していない</strong>。説明ではなく"構造"だけ置くため、相手は<strong>自分の矛盾を自分で探しに行く</strong>。</p>
+    </div>
+
+    <hr>
+
+    <h3 class="subsection-heading fade-in">■ 質問③：主観の根を問う（最終封鎖）</h3>
+    <div class="core-prompt">「その"正しいと感じる根拠"はどこにあるんですか？」</div>
+
+    <h4 class="label-heading">● 目的</h4>
+    <ul class="item-list">
+      <li>信念の根本を掘り下げさせる</li>
+      <li>感情・直感・思い込みの"根拠なさ"に気づかせる</li>
+      <li>自己論破を決定的に起動させる</li>
+    </ul>
+
+    <h4 class="label-heading">● 構造的効果</h4>
+    <ul class="item-list">
+      <li>「根拠はない」→ 自己論破</li>
+      <li>「直感です」→ 直感の根拠の説明を求められ崩壊</li>
+      <li>「信じているから」→ 信仰宣言＝論理から降りる</li>
+      <li>「説明できない」→ 誠実な敗北</li>
+    </ul>
+    <div class="text-panel fade-in">
+    <p>あなたは攻撃していない。<strong>相手が自分の手で自分の前提を崩す構造</strong>になっている。</p>
+    </div>
+
+    <hr>
+
+    <!-- 3. 美点 -->
+    <h2 class="section-heading fade-in">3. 「自己論破プロンプト™︎」の美点（護身としての性能）</h2>
+
+    <h3 class="subsection-heading fade-in">■ ① あなたが傷つかない</h3>
+    <p>説明しない・論破しない・攻撃しない。</p>
+
+    <h3 class="subsection-heading fade-in">■ ② 相手に怒りが向かない</h3>
+    <p>質問は暴力ではないため、怒りが向く理由がない。</p>
+
+    <h3 class="subsection-heading fade-in">■ ③ 誠実な人だけが残る</h3>
+    <p>誠実さテストとして機能する。</p>
+
+    <h3 class="subsection-heading fade-in">■ ④ 深度の差が即座に可視化される</h3>
+    <p>OS（前提構造）がその場で露呈する。</p>
+
+    <h3 class="subsection-heading fade-in">■ ⑤ 合意形成の"前提確認"として使える</h3>
+    <p>これに耐えられない相手とは話す意味がない。</p>
+
+    <hr>
+
+    <!-- 4. 反応パターン -->
+    <h2 class="section-heading fade-in">4. 相手の反応パターンと心理状態</h2>
+
+    <h3 class="subsection-heading fade-in">● A：誠実タイプ</h3>
+    <p>一瞬ショック → すぐに内省へ → あなたへの怒りゼロ → 深い尊敬と信頼。</p>
+
+    <h3 class="subsection-heading fade-in">● B：プライド高いタイプ</h3>
+    <p>内心「負けた…」 → しかし怒れない（攻撃されていないため） → 自己理解が深まる。</p>
+
+    <h3 class="subsection-heading fade-in">● C：逃避型</h3>
+    <p>思考停止 → 撤退または沈黙 → 怒りは向かない。</p>
+
+    <h3 class="subsection-heading fade-in">● D：誹謗中傷型</h3>
+    <p>「勝てない」と判断して撤退 → 攻撃できない（質問のため）。</p>
+
+    <p><strong>結論：あなたに怒りは向かない。</strong></p>
+
+    <hr>
+
+    <!-- 5. Meta7との統合 -->
+    <h2 class="section-heading fade-in">5. Meta7との完全統合</h2>
+
+    <div class="text-panel fade-in">
+    <p>「自己論破プロンプト™︎」は、Meta7 の階層移動と完全に一致する。</p>
+    </div>
+
+    <h3 class="subsection-heading fade-in">▶ 構造（第4階層）</h3>
+    <p>矛盾を観測する</p>
+
+    <h3 class="subsection-heading fade-in">▶ Meta（第5階層）</h3>
+    <p>前提が揺らぐ</p>
+
+    <h3 class="subsection-heading fade-in">▶ 中動態（第6階層）</h3>
+    <p>"自分で自分を崩した"という感覚</p>
+
+    <h3 class="subsection-heading fade-in">▶ 完全構造（第7階層）</h3>
+    <p>虚像の消滅・智慧と慈悲の同時作動</p>
+
+    <p><strong>＝自己論破は Meta7 の高速昇格装置である。</strong></p>
+
+    <hr>
+
+    <!-- 6. 実務的運用 -->
+    <h2 class="section-heading fade-in">6. 実務的運用（コメント／対面／クライアント）</h2>
+
+    <h3 class="subsection-heading fade-in">● YouTubeコメント</h3>
+    <p>荒らし → 沈黙。誠実 → 内省し、あなたへの信頼が増す。</p>
+
+    <h3 class="subsection-heading fade-in">● 対談・Zoom</h3>
+    <p>あなたが説明する必要がなくなる。相手自身が矛盾を発見し始める。</p>
+
+    <h3 class="subsection-heading fade-in">● クライアント（天命の言語化™）</h3>
+    <p>虚像を壊さず、内側から崩れるため、シャドウ統合と天命への到達が高速化する。</p>
+
+    <hr>
+
+    <!-- 7. 使用条件 -->
+    <h2 class="section-heading fade-in">7. 「自己論破プロンプト™︎」の"使用条件"</h2>
+
+    <h3 class="subsection-heading fade-in">● 使ってよい相手</h3>
+    <ul class="item-list">
+      <li>誠実に対話しようとする人</li>
+      <li>自分の意見に責任を持つ人</li>
+      <li>変わりたい・理解したいという意思がある人</li>
+      <li>こちらの問いに対して真剣に向き合う姿勢がある人</li>
+    </ul>
+
+    <h3 class="subsection-heading fade-in">● 使うべきではない相手</h3>
+    <ul class="item-list">
+      <li>最初から攻撃目的の相手（誹謗中傷・荒らし）</li>
+      <li>そもそも議論や理解を目的としていない相手</li>
+      <li>情緒不安定で、認知が機能していない状態の相手</li>
+      <li>明確に「話したくない」と意思表示している相手</li>
+    </ul>
+
+    <h3 class="subsection-heading fade-in">● 使用の前提</h3>
+    <ul class="item-list">
+      <li>あなた自身が相手の矛盾に気づいていること</li>
+      <li>その矛盾を"説明しようと思えばできる"状態にあること（※ただし実際には説明しない。護身のため）</li>
+      <li>矛盾の"構造"だけを把握しておけば十分</li>
+    </ul>
+
+    <h3 class="subsection-heading fade-in">● 使用時の姿勢</h3>
+    <ul class="item-list">
+      <li>感情ではなく"静けさ"で問いを置く</li>
+      <li>相手を変えようとしない</li>
+      <li>相手の答えを急がせない</li>
+      <li>沈黙を恐れない</li>
+      <li>攻撃性ゼロのトーンで淡々と行う</li>
+    </ul>
+
+    <h3 class="subsection-heading fade-in">● 期待できる結果</h3>
+    <ul class="item-list">
+      <li>誠実な相手：自己論破 → 深い内省 → 成長</li>
+      <li>プライド型：静かな敗北 → 信頼 or 敬意</li>
+      <li>逃避型：沈黙 or 撤退（怒りは向かない）</li>
+      <li>不誠実：会話が終わる（それで良い）</li>
+    </ul>
+
+    <hr>
+
+    <!-- 8. 運用フロー -->
+    <h2 class="section-heading fade-in">8. 「自己論破プロンプト™︎」：運用フロー（実戦用）</h2>
+
+    <h3 class="subsection-heading fade-in">▼ STEP1：矛盾を感じたら、まず観照</h3>
+    <p>相手の言葉の「A と B が両立していない」と気づく。</p>
+
+    <h3 class="subsection-heading fade-in">▼ STEP2：質問①を"静かに"置く</h3>
+    <div class="core-prompt">「なぜあなたは自分の意見の矛盾に気づかないんですか？」</div>
+
+    <h3 class="subsection-heading fade-in">▼ STEP3：相手の反応を分類</h3>
+    <ul class="item-list">
+      <li>A：「どこが矛盾？」→ 次へ進む</li>
+      <li>B：「矛盾してない！」→ 質問②へ</li>
+      <li>C：逆ギレ／話題そらし → 不誠実判定で終了</li>
+    </ul>
+
+    <h3 class="subsection-heading fade-in">▼ STEP4：質問②</h3>
+    <div class="core-prompt">「では、なぜ矛盾していないと思えるのですか？」</div>
+    <p>→ 誠実な相手は、ここで内省に入る。</p>
+
+    <h3 class="subsection-heading fade-in">▼ STEP5：説明を求められたら"構造のみ"返す</h3>
+    <p>例：「A と B の前提が異なっているように見えただけです。」</p>
+    <p>※ 詳しい説明は不要。あなたの消耗を避ける。</p>
+
+    <h3 class="subsection-heading fade-in">▼ STEP6：質問③（最終封鎖）</h3>
+    <div class="core-prompt">「その"正しいと感じる根拠"はどこにあるんですか？」</div>
+    <p>→ ここでほぼ確実に自己論破が起きる。</p>
+
+    <hr>
+
+    <!-- 9. 禁忌 -->
+    <h2 class="section-heading fade-in">9. 禁忌（使ってはいけない場面）</h2>
+
+    <h3 class="subsection-heading fade-in">● 相手が極度の情緒不安定な場合</h3>
+    <p>→ 認知が働かず、問いが機能しない。</p>
+
+    <h3 class="subsection-heading fade-in">● 怒りで支配されている相手</h3>
+    <p>→ 問いよりもまず安全確保が必要。</p>
+
+    <h3 class="subsection-heading fade-in">● あなた自身が感情的に不安定な状態</h3>
+    <p>→ 質問の"静けさ"が保てないため使用を控える。</p>
+
+    <hr>
+
+    <!-- 10. 最終まとめ -->
+    <h2 class="section-heading fade-in">10. 最終まとめ</h2>
+
+    <ul class="item-list">
+      <li>「自己論破プロンプト™︎」は、<strong>あなたが消耗しない護身術</strong>である。</li>
+      <li>相手を傷つけず、<strong>内側から自己崩壊（自己論破）を誘発する問いの構造</strong>である。</li>
+      <li>誠実な相手ほど深い成長を起こし、不誠実な相手は自然に離れる。</li>
+      <li>天命の言語化™にも高い適合性を持ち、Meta7 の階層遷移とも一致する。</li>
+      <li>本プロトコルは「説明」「論破」「説得」の時代を終わらせ、<strong>"問いによる静かな変容"を実現する最終技法</strong>である。</li>
+    </ul>
+
+    <p>以上が、「自己論破プロンプト™︎」の完全版である。</p>
+
+  </article>
+
+<div class="highlight-block fade-in"><p>本プロトコルは「説明」「論破」「説得」の時代を終わらせ、"問いによる静かな変容"を実現する最終技法である。</p></div>
+
+<div class="back-nav fade-in"><a href="../contents.html">← コンテンツ一覧へ戻る</a></div>
+
+</div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container--wide">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <p class="footer-col__title">Guide</p>
+          <a href="../beginner.html">はじめての方へ</a>
+          <a href="../glossary.html">用語集</a>
+          <a href="../session-flow.html">セッションの流れ</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Theory</p>
+          <a href="../epistemology.html">認識論</a>
+          <a href="../semantics.html">意味論</a>
+          <a href="../society.html">社会論</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Contents</p>
+          <a href="../archives.html">記事一覧</a>
+          <a href="../session-menu.html">12の対話（領域）</a>
+          <a href="../letters.html">21の手紙</a>
+          <a href="../metaplay.html">Meta Play™︎</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Session</p>
+          <a href="../session.html">天命の言語化セッション™</a>
+          <a href="../dark-side/">ダークサイド診断</a>
+          <a href="../omoidasu/">身体的知性診断</a>
+          <a href="../uniqueness.html">独自性と射程</a>
+          <a href="../trial.html">無料トライアル</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Institute</p>
+          <a href="../founder.html">創始者</a>
+          <a href="../faq.html">FAQ</a>
+          <a href="../contact.html">お問い合わせ</a>
+          <a href="../legal/legal-tokushoho.html">特定商取引法</a>
+          <a href="../legal/legal-privacy-policy.html">プライバシーポリシー</a>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 実存科学研究所 — Existential Science Institute</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "「自己論破プロンプト™︎」完全版｜説明ゼロで矛盾を可視化する護身技法",
+  "description": "「自己論破プロンプト™」完全版。説明ゼロで矛盾を可視化する護身技法。論理的自己防衛の方法論。",
+  "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-self-collapse-prompt.html",
+  "author": {
+    "@type": "Person",
+    "name": "箭内宏紀",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/founder.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  },
+  "inLanguage": "ja",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  }
+}
+</script>
+</body>
+</html>

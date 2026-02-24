@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+<meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/letter-hierarchical-separation.html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>階層分離現象について（完全版） | 実存科学研究所</title>
+<meta name="description" content="階層分離現象について（完全版）。意識が異なる階層に組織化されるメカニズムとその構造的影響。">
+<link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
+    rel="stylesheet">
+<style>
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #080610;
+  color: rgba(235, 232, 225, 0.92);
+  font-family: 'Noto Serif JP', serif;
+  font-size: 17px;
+  line-height: 2;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 60px 40px 80px;
+}
+
+/* ── Header ── */
+.institute-label {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  color: rgba(235, 232, 225, 0.55);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.category-tag {
+  display: inline-block;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: #fff;
+  background: #c0a878;
+  padding: 3px 12px;
+  margin-bottom: 24px;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.6;
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: rgba(235, 232, 225, 0.55);
+  margin-bottom: 48px;
+  line-height: 1.8;
+}
+
+/* ── Headings ── */
+h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 56px;
+  margin-bottom: 24px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(192, 168, 120, 0.3);
+  line-height: 1.6;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 36px;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(192, 168, 120, 0.15);
+  line-height: 1.6;
+}
+
+/* ── Body ── */
+p {
+  margin-bottom: 24px;
+}
+
+strong {
+  font-weight: 700;
+}
+
+/* ── Blockquote ── */
+blockquote {
+  border-left: 3px solid rgba(192, 168, 120, 0.4);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 16px 24px;
+  margin: 24px 0;
+  font-size: 16px;
+}
+
+blockquote p {
+  margin-bottom: 8px;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Lists ── */
+ul, ol {
+  margin-left: 1.5rem;
+  margin-bottom: 24px;
+  line-height: 2;
+}
+
+li {
+  margin-bottom: 4px;
+}
+
+/* ── Aside / Episode Box ── */
+.episode-box {
+  background: rgba(192, 168, 120, 0.04);
+  border-left: 4px solid #c0a878;
+  padding: 24px 28px;
+  margin: 24px 0;
+  font-size: 15px;
+  line-height: 2;
+}
+
+.episode-box p {
+  margin-bottom: 12px;
+}
+
+.episode-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Emphasis Box (核心的な気づき・定義) ── */
+.emphasis-box {
+  background: rgba(192, 168, 120, 0.06);
+  border-left: 4px solid #c0a878;
+  padding: 20px 24px;
+  margin: 28px 0;
+  font-size: 16px;
+}
+
+/* ── Horizontal Rule ── */
+hr {
+  border: none;
+  border-top: 1px solid rgba(192, 168, 120, 0.15);
+  margin: 48px 0;
+}
+
+/* ── Flow Diagram ── */
+.flow-diagram {
+  background: rgba(192, 168, 120, 0.04);
+  border: 1px solid rgba(192, 168, 120, 0.15);
+  padding: 20px 28px;
+  margin: 24px 0;
+  text-align: center;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+}
+
+/* ── Navigation ── */
+.nav-back {
+  margin-top: 64px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(192, 168, 120, 0.15);
+}
+
+.nav-back a {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 14px;
+  color: rgba(235, 232, 225, 0.55);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+
+.nav-back a:hover {
+  color: rgba(235, 232, 225, 0.92);
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  body {
+    font-size: 15px;
+  }
+
+  .container {
+    padding: 36px 20px 60px;
+  }
+
+  h1 {
+    font-size: 23px;
+  }
+
+  h2 {
+    font-size: 19px;
+    margin-top: 44px;
+  }
+
+  h3 {
+    font-size: 16px;
+    margin-top: 28px;
+  }
+
+  .episode-box {
+    padding: 18px 20px;
+    font-size: 14px;
+  }
+
+  blockquote {
+    padding: 14px 18px;
+    font-size: 15px;
+  }
+}
+
+/* === Dark Theme Override === */
+a:not(.btn):not(.session-card__link) { color: #c0a878; transition: color 0.2s; }
+a:not(.btn):not(.session-card__link):hover { color: #e8d8b8; }
+.category-tag { color: #080610 !important; background: #c0a878 !important; }
+.back-nav { background: rgba(192, 168, 120, 0.06); border-color: rgba(192, 168, 120, 0.15); }
+.back-nav a { color: #c0a878; }
+img { border-radius: 2px; }
+input, textarea, select { background: rgba(255,255,255,0.05); color: rgba(235,232,225,0.92); border-color: rgba(201,168,76,0.2); }
+input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); outline: none; }
+::placeholder { color: rgba(235,232,225,0.3); }
+.submit-btn, button[type="submit"] { background: #c0a878; color: #080610; border: none; }
+
+</style>
+  <meta property="og:title" content="階層分離現象について（完全版） | 実存科学研究所">
+  <meta property="og:description" content="認識階層の上昇がもたらす&quot;静かな別れ&quot;の構造と、その先に起こること">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="実存科学研究所">
+<meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+<meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="../index.html" class="site-logo">実存科学研究所</a>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="global-nav">
+        <a href="../index.html">Top</a>
+        <a href="../beginner.html">Guide</a>
+        <a href="../epistemology.html">Epistemology</a>
+        <a href="../semantics.html">Semantics</a>
+        <a href="../society.html">Society</a>
+        <a href="../founder.html">Founder</a>
+        <a href="../session.html">Session</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">More</button>
+          <div class="nav-dropdown__menu">
+            <a href="../metaplay.html">Meta Play™</a>
+            <a href="../dark-side/">ダークサイド診断</a>
+            <a href="../omoidasu/">身体的知性診断</a>
+            <a href="../trial.html">無料トライアル</a>
+            <a href="../session-menu.html">12の対話（領域）</a>
+            <a href="../letters.html">21の手紙</a>
+            <a href="../uniqueness.html">独自性と射程</a>
+            <a href="../faq.html">FAQ</a>
+            <a href="../archives.html">記事一覧</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+<div class="container">
+
+  <!-- Header -->
+  <div class="institute-label">EXISTENTIAL SCIENCE RESEARCH INSTITUTE</div>
+  <div class="category-tag">未来の心友™への手紙</div>
+  <h1>階層分離現象について（完全版）</h1>
+  <p class="subtitle">認識階層の上昇がもたらす"静かな別れ"の構造と、その先に起こること</p>
+
+  <div class="pull-quote">
+    <p>階層分離とは、あなたの成長を知らせる"静かな合図"である。</p>
+  </div>
+
+  <!-- 導入 -->
+  <div class="text-panel fade-in">
+  <p>心友™のみなさまへ。</p>
+  <p>今日は、どうしてもお伝えしたいことがあります。</p>
+  <p>ここ最近、ごく短い期間の中で、いくつもの"静かな別れ"がほぼ連続して起こりました。</p>
+  <p>たとえば…</p>
+  </div>
+
+  <!-- エピソード 1 -->
+  <div class="episode-box fade-in">
+    <p>Youtube動画である政治家の不手際に触れた際、コメント欄が炎上。</p>
+    <p>500件を超える意見の応酬が起こり、ある人物から突然<br>"私と対談しろ／批判動画を出すぞ"と詰めよられた。</p>
+    <p>こちらは何も言う前に一方的な感情をぶつけられ、<br>誤解を解くのに苦労した出来事。</p>
+    <p>（最終的に、箭内が間違っていないことに合意されたが、<br>　そもそも「なぜ詰め寄られたのか？」という疑問が残った。）</p>
+  </div>
+
+  <!-- エピソード 2 -->
+  <div class="episode-box fade-in">
+    <p>あるスピリチュアル系の女性と対談した際、<br>その対談の企画テーマではないのに</p>
+    <p>「自由意志は存在するし、箭内さんのいってることは間違い」<br>「宇宙は完璧で設定済み。人生で経験することは全部、魂の成長である」<br>「箭内さんは"人は操り人形"と思っているようだが、私は違うと思う」<br>「あなたは男性で、男性はそもそも真理に辿り着けないから仕方ない」</p>
+    <p>といった主張を一方的にぶつけられた。</p>
+    <p>「（誤解だし、反論が必要であればできるが）企画のテーマに戻りませんか？」<br>と伝えたが、それに応じてもらえず、批判と否定が続いた出来事。</p>
+    <p>（最終的に、「ごめんね」と謝られたが、<br>　そもそも「なぜ突然批判や否定されたのか？」という疑問が残った。）</p>
+  </div>
+
+  <!-- エピソード 3 -->
+  <div class="episode-box fade-in">
+    <p>ある経営者Aから突然連絡があった。以下、チャットの概要である。</p>
+    <p>A社長「B社長から資金提供の依頼を受けている。しかしB社長がビジネスで成功するためには、他責思考を治し、世の中に自分を合わせていく必要がある。</p>
+    <p>その条件として、箭内さんのセッションを"箭内さんが良い"というまで受けて欲しい。</p>
+    <p>私が思うに、箭内さんは◯◯さんに対して少し攻撃的な部分がなくはないと思うが、この対応ができるのは箭内さんしかいない。だから箭内さん、お願いします」</p>
+    <p>B社長「箭内さんはエゴトリップ（エゴの肥大化のこと）をしていると思われる。</p>
+    <p>しかし、これまで箭内さんのセッションを受けて、たくさんの素晴らしい変化があったため、本当に感謝している。</p>
+    <p>だからセッションが受けられるならこんなに嬉しいことはない。</p>
+    <p>ただし、箭内さんから攻撃されるのはゴメンであるから、Aさんに審判役として同席してほしい」</p>
+    <p>A社長「承知した。その際は審判を務める。以上の通りである。箭内さん、何卒、よろしくお願いいたします」</p>
+    <p>これを読んだ時、笑ってしまうぐらい意味がわからなかったが、以上は限りなく原文のままである。</p>
+    <p>私は「これまでありがとうございました。お二人のご活躍をお祈りします」とだけ返信し、そのグループチャットを後にした。</p>
+    <p>そもそも「なぜ私のいないところで、私の労働条件を勝手に決めて、報酬の相談もなく、身勝手な依頼をするのか」という疑問が残った。</p>
+  </div>
+
+  <div class="text-panel fade-in">
+  <p>このような出来事がたった１ヶ月のうちに起こり、最初は本当に驚きました。</p>
+  <p>これまでの人生では見たことのないタイプの出来事だったからです。</p>
+  <p>関係者各位に対して、こちらとしては誠意を尽くし、大切に関わってきたつもりでした。</p>
+  <p>それでも突然、噛み合わなくなったり、距離が生まれたり、誤解が立ち上がったり、欲求を押し付けられたり──。</p>
+  <p>自分では説明しきれない現象が重なったのです。</p>
+  <p><strong>「なぜ、こんな流れになるのだろう？」</strong></p>
+  <p>最初はただその"不可解さ"に戸惑っていました。</p>
+  <p>ところが、この出来事をまわりの人に話してみると、驚くほど多くの人がこう言ってくれたのです。</p>
+  <p><strong>「わかります。私にも似たようなことが起きています」</strong></p>
+  <p>その瞬間に気づきました。</p>
+  <p>これは私だけの特殊な事件ではない。むしろ"ある段階に入った人"が必ず通る<strong>構造的な現象</strong>なのだと。</p>
+  <p>私はこれを<strong>「階層分離現象」</strong>と呼んでいます。</p>
+  <p>この現象を正しく理解するために、まずは簡単にMeta 7について復習をしましょう。</p>
+  </div>
+
+  <hr>
+
+  <!-- ■ Meta7とは何か -->
+  <h2 class="fade-in">■ Meta7とは何か</h2>
+
+  <div class="text-panel fade-in">
+  <p>階層分離現象を理解するために、まず"Meta7"という認識の地図を共有します。</p>
+  <p>Meta7は"私たちが世界をどの階層で見ているか"を示す認識の地図です。</p>
+  <p>これは、私たちの認識がどの階層で動いているかを示すものです。</p>
+  <p>認識はこの7つの層を行ったり来たりしながら成長していきます。</p>
+
+  <ul>
+    <li><strong>現象</strong>：起きた出来事</li>
+    <li><strong>感情</strong>：心がどう反応したか</li>
+    <li><strong>意味</strong>：その出来事に与えた解釈</li>
+    <li><strong>構造</strong>：繰り返しのパターン・背景の法則</li>
+    <li><strong>Meta</strong>：その構造を観察する視点</li>
+    <li><strong>中動態</strong>：主体が消え、出来事が"自然にそうなる"地点</li>
+    <li><strong>完全構造</strong>：愛（智慧×慈悲）として世界が静まる地点</li>
+  </ul>
+
+  <p>これを理解すると"階層分離"の意味が一気に腑に落ちます。</p>
+  <p>つまり、階層差が一定以上ひらいたときに起こるのが<strong>階層分離現象</strong>です。</p>
+  </div>
+
+  <hr>
+
+  <!-- ■ 「階層分離」とは何が起きているのか -->
+  <h2 class="fade-in">■ 「階層分離」とは何が起きているのか</h2>
+
+  <p>階層分離現象とは、簡単に言えば、</p>
+
+  <blockquote>
+    <p>あなたの認識階層（Meta7の位置）が上がったとき、</p>
+    <p><strong>相手がその高さについてこられなくなる現象</strong></p>
+  </blockquote>
+
+  <p>です。</p>
+
+  <p>認識している"世界"そのものが違ってしまうため、次のことが起こります。</p>
+
+  <ul>
+    <li>会話が噛み合わない</li>
+    <li>解釈がズレ続ける</li>
+    <li>意図がねじれて伝わる</li>
+    <li>理不尽な誤解が生まれる</li>
+    <li>急に怒りや不安をぶつけられる</li>
+    <li>こちらの誠実さが届かない</li>
+  </ul>
+
+  <p>これは性格の問題ではなく、<strong>「見えている階層が違う」ことによる必然的破綻</strong>です。</p>
+
+  <p>わかりやすく言うと──あなたは"構造・Meta・中動態"の層へ進んでいるのに、相手は"意味・感情"の層に留まっている、ということです。</p>
+
+  <p>認識階層が違うと、<strong>会話も、関係性も、互換性を維持できなくなります。</strong></p>
+
+  <p>これが階層分離です。</p>
+
+  <hr>
+
+  <!-- ■ なぜこの現象が起こるのか -->
+  <h2 class="fade-in">■ なぜこの現象が起こるのか</h2>
+
+  <p>順番に整理します。</p>
+
+  <h3>● 1. あなたの認識階層が上がる</h3>
+
+  <p>構造 → Meta → 中動態へ進むにつれ、</p>
+
+  <ul>
+    <li>誠実さ</li>
+    <li>言行一致</li>
+    <li>観察力</li>
+    <li>判断基準</li>
+  </ul>
+
+  <p>が大きく上がります。</p>
+
+  <h3>● 2. 相手は"昔のあなた"を前提に接してくる</h3>
+
+  <p>他人の急激な変化には、誰も追いつけません。</p>
+  <p>相手はあなたを"旧バージョン"のまま扱おうとします。</p>
+
+  <h3>● 3. 認識の速度差と階層差が臨界点を超える</h3>
+
+  <p>ここがもっとも重要です。</p>
+
+  <blockquote>
+    <p>階層差とは、そもそも"見えている世界が違う"ということ。</p>
+  </blockquote>
+
+  <p>違う世界を見ていれば、意思疎通が破綻するのは必然です。</p>
+
+  <h3>● 4. 誤解・すれ違い・別れとして"表面化"する</h3>
+
+  <p>突然に見えても、実際はずっと内部でズレが蓄積していた。</p>
+  <p>それが今日、"見える形"で現れただけです。</p>
+
+  <p>階層分離とは、</p>
+
+  <div class="flow-diagram">
+    成長速度の差 → 認識の断絶 → 互換性の喪失 → 自然剥離
+  </div>
+
+  <p>という流れです。</p>
+
+  <hr>
+
+  <!-- ■ どう向き合うべきか -->
+  <h2 class="fade-in">■ どう向き合うべきか（Meta7に沿って）</h2>
+
+  <p>階層分離が起きたとき、あなた自身の中にも揺れが起こるのは自然です。</p>
+  <p>まずは"自分の心の動き"を大切にしながら、Meta7の地図に沿って現象を整理します。</p>
+  <p>階層分離は、あなたの誠実さを否定する現象ではありません。</p>
+  <p>むしろあなたの成長を知らせる"静かな合図"です。</p>
+
+  <h3>● 1. 現象：出来事が起きた</h3>
+  <p>突然の別れに見える。</p>
+
+  <h3>● 2. 感情：戸惑い・悲しみ</h3>
+  <p>自然な揺れが出る時期。</p>
+
+  <h3>● 3. 意味：「なぜ？」が生まれる</h3>
+  <p>自分を責めたり、相手を責めたりする段階。</p>
+
+  <h3>● 4. 構造：階層差の必然的破綻</h3>
+  <p>ここで初めて"原因は階層差"だと分かる。</p>
+
+  <h3>● 5. Meta：誰のせいでもない</h3>
+  <p>落ち着きが戻り、視点が上がる。</p>
+
+  <h3>● 6. 中動態：切ったのではなく、剥がれただけ</h3>
+  <p>主体は消え、<strong>「構造が勝手に動いた」</strong>という理解に至る。</p>
+
+  <h3>● 7. 完全構造：新しい縁を迎える準備が整う</h3>
+  <p>剥離は"空白"をつくる。</p>
+  <p>空白は次の縁を迎えるためのスペース。</p>
+  <p>これが、階層分離の全体像です。</p>
+
+  <hr>
+
+  <!-- ■ 次に必ず起こること -->
+  <h2 class="fade-in">■ 次に必ず起こること（階層分離の"その先"）</h2>
+
+  <p>階層分離は"終わり"ではありません。</p>
+  <p>ここから必ず<strong>4つの現象</strong>が起こります。</p>
+  <p>これは希望ではなく、構造そのものです。</p>
+
+  <h3>● 1. 空白（Silence）</h3>
+  <p>剥がれた後には必ず"静けさ"が訪れます。</p>
+  <p>これは孤独ではなく、<strong>新しい流れのためのスペース</strong>が生まれた状態です。</p>
+
+  <h3>● 2. 生成（Flow）</h3>
+  <p>空白ができると次に"生成"が起こります。</p>
+
+  <ul>
+    <li>言葉が溢れる</li>
+    <li>アイデアが止まらない</li>
+    <li>文章が加速する</li>
+    <li>認識の解像度が上がる</li>
+  </ul>
+
+  <p>これは階層上昇直後に必ず起こる現象です。</p>
+
+  <h3>● 3. 豊かさの流入（Wealth）</h3>
+  <p>摩耗する縁がなくなることで、</p>
+
+  <ul>
+    <li>コミュニケーションの純度</li>
+    <li>行動の精度</li>
+    <li>顧客/仕事の質</li>
+    <li>自己一致</li>
+  </ul>
+
+  <p>これらが大幅に向上します。</p>
+  <p><strong>その結果として、豊かさの流れは自然に開通します。</strong></p>
+
+  <h3>● 4. 新しい縁の到来（Encounter）</h3>
+  <p>空白には必ず新しい縁が入ります。</p>
+
+  <ul>
+    <li>誠実な出逢い</li>
+    <li>理解し合える関係性</li>
+    <li>天命と相性の良い人</li>
+  </ul>
+
+  <p>次の階層の仲間しか入ってこなくなります。</p>
+
+  <h3>● 5. 天命の加速（Acceleration）</h3>
+
+  <div class="flow-diagram">
+    剥離 → 空白 → 生成 → 豊かさ → 新しい縁
+  </div>
+
+  <p>これらが揃うと天命が加速します。</p>
+  <p>あなたの世界は"上の階層の速度"になります。</p>
+
+  <hr>
+
+  <!-- ■ 最後に -->
+  <h2 class="fade-in">■ 最後に（完全構造の視点）</h2>
+
+  <p>階層分離の痛みは、Metaに向かった証拠です。</p>
+  <p>ここから先は"静けさの中で世界が整っていく段階"に入ります。</p>
+
+  <p>そしてここで、もう一つだけ大切なことをお伝えしたいのです：</p>
+
+  <div class="emphasis-box">
+    <p><strong>必要な縁も、必要な出来事も、必要なタイミングで必ず私たちの前に現れます。</strong></p>
+    <p>これは希望ではなく、構造そのものの働きです。</p>
+  </div>
+
+  <p>階層分離は痛みを伴います。</p>
+  <p>しかしその痛みは、あなたが前に進んでいる証です。</p>
+
+  <p>剥がれた縁は、もう役割を終えた縁です。</p>
+  <p>その空白には、必ず新しい縁が入ってきます。</p>
+  <p>これは希望ではなく、構造としての必然です。</p>
+
+  <p>どうか恐れずにいてください。</p>
+  <p>私たちは天命に向かって、静かに、確実に進んでいます。</p>
+
+  <p><strong>天命の流れは、ここから加速します。</strong></p>
+
+  <div class="highlight-block fade-in">
+    <p>必要な縁も、必要な出来事も、必要なタイミングで必ず私たちの前に現れます。これは希望ではなく、構造そのものの働きです。</p>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav-back">
+    <a href="../contents.html">← コンテンツ一覧へ戻る</a>
+  </nav>
+
+</div>
+
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container--wide">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <p class="footer-col__title">Guide</p>
+          <a href="../beginner.html">はじめての方へ</a>
+          <a href="../glossary.html">用語集</a>
+          <a href="../session-flow.html">セッションの流れ</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Theory</p>
+          <a href="../epistemology.html">認識論</a>
+          <a href="../semantics.html">意味論</a>
+          <a href="../society.html">社会論</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Contents</p>
+          <a href="../archives.html">記事一覧</a>
+          <a href="../session-menu.html">12の対話（領域）</a>
+          <a href="../letters.html">21の手紙</a>
+          <a href="../metaplay.html">Meta Play™︎</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Session</p>
+          <a href="../session.html">天命の言語化セッション™</a>
+          <a href="../dark-side/">ダークサイド診断</a>
+          <a href="../omoidasu/">身体的知性診断</a>
+          <a href="../uniqueness.html">独自性と射程</a>
+          <a href="../trial.html">無料トライアル</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Institute</p>
+          <a href="../founder.html">創始者</a>
+          <a href="../faq.html">FAQ</a>
+          <a href="../contact.html">お問い合わせ</a>
+          <a href="../legal/legal-tokushoho.html">特定商取引法</a>
+          <a href="../legal/legal-privacy-policy.html">プライバシーポリシー</a>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 実存科学研究所 — Existential Science Institute</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "階層分離現象について（完全版）",
+  "description": "階層分離現象について（完全版）。意識が異なる階層に組織化されるメカニズムとその構造的影響。",
+  "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/letter-hierarchical-separation.html",
+  "author": {
+    "@type": "Person",
+    "name": "箭内宏紀",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/founder.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  },
+  "inLanguage": "ja",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  }
+}
+</script>
+</body>
+</html>

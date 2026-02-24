@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-probability-strategy-01.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【特典】確率思考の戦略論（1/3）| 実存科学研究所</title>
+  <meta name="description" content="確率思考の戦略論（1/3）。認識と意味が努力以上に戦略的成功を左右するメカニズム。">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --text: rgba(235, 232, 225, 0.92); --text-secondary: rgba(235, 232, 225, 0.55); --bg: #080610; --border: rgba(192, 168, 120, 0.15); --accent: #c0a878; --highlight: rgba(192, 168, 120, 0.06); --blockquote-border: rgba(192, 168, 120, 0.4); --definition-bg: rgba(192, 168, 120, 0.04); --max-width: 780px; }
+    html { font-size: 17px; scroll-behavior: smooth; }
+    body { font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif; color: var(--text); background: var(--bg); line-height: 2; -webkit-font-smoothing: antialiased; }
+    .page-container { max-width: var(--max-width); margin: 0 auto; padding: 3rem 1.5rem 6rem; }
+    .page-header { text-align: center; padding: 4rem 0 3rem; border-bottom: 2px solid var(--accent); margin-bottom: 3rem; }
+    .page-header .label { font-size: 0.85rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 0.8rem; font-family: "Noto Sans JP", sans-serif; }
+    .page-header .category-tag { font-family: "Noto Sans JP", sans-serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; background: var(--accent); padding: 0.15rem 0.6rem; display: inline-block; margin-bottom: 1rem; }
+    .page-header h1 { font-size: 1.4rem; font-weight: 700; line-height: 1.6; margin-bottom: 0.3rem; }
+    .page-header .subtitle { font-size: 0.95rem; color: var(--text-secondary); }
+    p { margin-bottom: 1rem; text-align: justify; }
+    strong { font-weight: 700; }
+    h2.section-heading { font-size: 1.2rem; font-weight: 700; margin-top: 3.5rem; margin-bottom: 1rem; line-height: 1.6; border-bottom: 2px solid var(--accent); padding-bottom: 0.6rem; }
+    h3.subsection-heading { font-size: 1rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.8rem; line-height: 1.6; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
+    blockquote { border-left: 3px solid var(--blockquote-border); padding: 0.8rem 1.5rem; margin: 1.5rem 0; color: var(--text-secondary); background: rgba(255,255,255,0.03); }
+    blockquote p:last-child { margin-bottom: 0; }
+    .item-list { margin: 1rem 0 1rem 1.5rem; line-height: 2; }
+    .item-list li { margin-bottom: 0.4rem; }
+    .core-insight { background: var(--definition-bg); border: 1px solid var(--border); border-left: 4px solid var(--accent); padding: 1.5rem 2rem; margin: 2rem 0; font-size: 1.05rem; font-weight: 700; text-align: center; line-height: 1.8; }
+    hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
+    .page-nav { margin-top: 4rem; padding: 1.5rem 2rem; background: var(--highlight); border: 1px solid var(--border); text-align: center; }
+    .page-nav a { color: var(--accent); text-decoration: none; font-weight: 700; }
+    .page-nav a:hover { opacity: 0.7; }
+    @media (max-width: 600px) { html { font-size: 15px; } .page-container { padding: 2rem 1rem 4rem; } .page-header h1 { font-size: 1.2rem; } h2.section-heading { font-size: 1.1rem; } }
+
+/* === Dark Theme Override === */
+a:not(.btn):not(.session-card__link) { color: #c0a878; transition: color 0.2s; }
+a:not(.btn):not(.session-card__link):hover { color: #e8d8b8; }
+.category-tag { color: #080610 !important; background: #c0a878 !important; }
+.back-nav { background: rgba(192, 168, 120, 0.06); border-color: rgba(192, 168, 120, 0.15); }
+.back-nav a { color: #c0a878; }
+img { border-radius: 2px; }
+input, textarea, select { background: rgba(255,255,255,0.05); color: rgba(235,232,225,0.92); border-color: rgba(201,168,76,0.2); }
+input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); outline: none; }
+::placeholder { color: rgba(235,232,225,0.3); }
+.submit-btn, button[type="submit"] { background: #c0a878; color: #080610; border: none; }
+
+</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <meta property="og:title" content="【特典】確率思考の戦略論（1/3）| 実存科学研究所">
+  <meta property="og:description" content="天命に生きたい人のためのマーケティングの教科書">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="実存科学研究所">
+<meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+<meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="../index.html" class="site-logo">実存科学研究所</a>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="global-nav">
+        <a href="../index.html">Top</a>
+        <a href="../beginner.html">Guide</a>
+        <a href="../epistemology.html">Epistemology</a>
+        <a href="../semantics.html">Semantics</a>
+        <a href="../society.html">Society</a>
+        <a href="../founder.html">Founder</a>
+        <a href="../session.html">Session</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">More</button>
+          <div class="nav-dropdown__menu">
+            <a href="../metaplay.html">Meta Play™</a>
+            <a href="../dark-side/">ダークサイド診断</a>
+            <a href="../omoidasu/">身体的知性診断</a>
+            <a href="../trial.html">無料トライアル</a>
+            <a href="../session-menu.html">12の対話（領域）</a>
+            <a href="../letters.html">21の手紙</a>
+            <a href="../uniqueness.html">独自性と射程</a>
+            <a href="../faq.html">FAQ</a>
+            <a href="../archives.html">記事一覧</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+<div class="page-container">
+
+  <header class="page-header fade-in">
+    <p class="label">EXISTENTIAL SCIENCE RESEARCH INSTITUTE</p>
+    <span class="category-tag">特典レポート</span>
+    <h1>確率思考の戦略論（1/3）</h1>
+    <p class="subtitle">天命に生きたい人のためのマーケティングの教科書</p>
+  </header>
+
+  <div class="pull-quote fade-in"><p>これは、天命に生きたい人のためのマーケティングの本である。</p></div>
+
+  <article>
+
+    <h2 class="section-heading fade-in">はじめに</h2>
+
+    <div class="text-panel fade-in">
+    <p>このレポートは、森岡毅氏の著書『確率思考の戦略論』の重要点を、私なりに整理し凝縮したものである。私と縁あるすべての方への贈り物として作成した。</p>
+
+    <p>森岡氏は、破綻寸前だったUSJをマーケティングの力で立て直し、日本のビジネスの歴史に確かな足跡を刻まれた方である。氏が本書に込めた知見の深さ、実践から生まれた理論の精度、そしてそれを惜しみなく共有してくださる姿勢に対して、私は心からの敬意と感謝を表したい。</p>
+
+    <p>森岡氏はいま、沖縄のテーマパーク「ジャングリア」に挑んでいる。報道では苦戦が伝えられ、ネット上には批判を超えた誹謗中傷まがいの言葉すら散見される。私はこの状況に、強い違和感を覚えている。</p>
+
+    <p>完璧なマーケターなど、この世に存在しない。どれほど優れた人間であっても、新しい挑戦には試行錯誤がつきものであり、結果が出るまでには想像を絶するほど苦しいフェーズがある。事業を営んだことのある人間ならば、その痛みは他人事ではないはずだ。森岡氏は日本の国益のために、沖縄の未来のために、全力を尽くしている。その渦中にいる人間に対して誹謗中傷を浴びせることは、同じ日本人として情けないと言わざるを得ない。</p>
+
+    <p>挑戦する者を叩く社会ではなく、挑戦する者を静かに支える社会でありたい。私はそう思う。</p>
+
+    <p>私自身、この本には深く救われた。率直に言えば、実存科学研究所という私の事業は、この一冊がなければ生まれていなかったと思う。「誰の、何を解決するのか」「自分のコンセプトとは何か」──この本が私にその問いを突きつけてくれた。あの問いがなければ、私は自分の天命を言語化することすらできなかっただろう。だからこそ、この一冊への恩返しとして、このレポートを書いた。</p>
+
+    <p>読んでいただきたい方がいる。自分の力で何かを届けたいと願いながらも、正しい努力の方向がまだ見えていない方。個人で事業を営む方。天命を生きようとしている方。自分のコンセプトを、自分の言葉で語れるようになりたい方。そのすべての方に、このレポートを届けたい。</p>
+
+    <p><strong>これは、天命に生きたい人のためのマーケティングの本である。</strong></p>
+
+    <p>マーケティングに関する正しい認識と、正しい努力の方法が、ここに書かれている。</p>
+    </div>
+
+    <hr>
+
+    <h2 class="section-heading fade-in">このレポートの３つの目的</h2>
+
+    <div class="text-panel fade-in">
+    <p>①｢戦略＝選ばれる確率を増やす｣を作るコツを理解する｡</p>
+    <p>②コンセプト＝選ばれる確率の最大変数の本質を理解する｡</p>
+    <p>③マーケティングコンセプトを作るコツを理解する｡</p>
+    </div>
+
+    <hr>
+
+    <h2 class="section-heading fade-in">ゴール：自分でコンセプトを作れる人を増やす</h2>
+
+    <ul class="item-list">
+      <li>コンセプトは人に選んでもらうための最大の変数である</li>
+      <li>ビジネスがうまくいかない最大の原因はコンセプトが間違っていること｡</li>
+      <li>日本の未来のために増やすべきは､自分でコンセプトを作れる人</li>
+    </ul>
+
+    <hr>
+
+    <h2 class="section-heading fade-in">消費者の購買の意思決定の構造（大→小）</h2>
+
+    <ul class="item-list">
+      <li>カテゴリ＞ブランド＞コンセプト＞プロダクト</li>
+      <li>消費者の脳はまず｢カテゴリ｣を選ぶ｡</li>
+      <li>｢ブランド＝消費者にとっての価値｣を買っている｡｢プロダクト＝製品・サービス｣ではない｡</li>
+      <li>そのため､その人にとって｢ブランド｣ではないものを認識させるのは極めて困難である｡</li>
+    </ul>
+
+    <p>例）</p>
+    <p>若者に墓石を売る</p>
+    <p>高齢者にネットゲームを売る</p>
+
+    <p>例）</p>
+    <p>もしも私が日本で働く車メーカーのマーケターであれば､車カテゴリーが若者に選ばれるための協力の策を必死に考える｡</p>
+    <p>カテゴリーが選ばれる必然が､そのままブランド間の競争を有利にするブランドを設計する腹黒い勝ち筋を考える｡</p>
+    <p>どうしても､ブランド強化とカテゴリー強化の択一になりがちだが､ジレンマを脱する方法はある｡考えることだ｡</p>
+
+    <hr>
+
+    <h2 class="section-heading fade-in">市場の真理／消費者の購買の意思決定の秘密</h2>
+
+    <ul class="item-list">
+      <li>消費者は人それぞれ､自分のサイコロを持っている｡</li>
+      <li>そのサイコロの目のことを｢プレファレンス＝相対的好意度｣という｡</li>
+      <li>消費者は､自分のサイコロの目に従って､その時々ランダムでブランドを選んでいる｡</li>
+      <li>つまり､サイコロを振って､その時一番良い・好きと思ったものを選ぶ｡</li>
+      <li>どの自動車を買うか､どのコンビニに行くか､どこに旅行に行くか､どのレストランで食べるか､テレビやYouTubeなどの主張する番組の選択､テーマパークや遊園地のようなレジャーの選択｡ほとんどのカテゴリーで､このランダムの法則が当てはまる｡</li>
+      <li>消費者がカテゴリから商品を購入する際､消費者のサイコロに乗っているブランド名と､その数､それぞれに割り当てられた確率は､人それぞれ異なる｡</li>
+    </ul>
+
+    <hr>
+
+    <h2 class="section-heading fade-in">市場の真理の例外</h2>
+
+    <ul class="item-list">
+      <li>消費者が自由に選べないカテゴリは市場の真理に当てはまらない｡</li>
+    </ul>
+
+    <p>例）</p>
+    <ul class="item-list">
+      <li>中毒性が高いもの（酒､タバコ､ギャンブル､麻薬）</li>
+      <li>社会的制約によって自由に選べないもの（宗教や､菜食主義等で制約がある人のレストラン選び）</li>
+      <li>あるいは規制によって選択肢がないものなどは自由に選べない｡つまり､サイコロを振れない｡</li>
+      <li>つまり消費者は自由に選択できる場合に限り､自分独自のサイコロを振って､ランダムに選んでいる｡</li>
+    </ul>
+
+    <hr>
+
+    <h2 class="section-heading fade-in">例）飲み物でわかるプレファレンス</h2>
+
+    <ul class="item-list">
+      <li>ある人がサイコロを振って飲み物を選ぶ時の確率は､コーラ５０%、水３０%、コーヒー１０％、重曹クエン酸水１０％である｡</li>
+      <li>この確率が｢プレファレンス｣である｡</li>
+      <li>この飲み物の選択肢＝サイコロの目のことを｢エボークト・セット｣と呼ぶ｡</li>
+      <li>エボークトセットにそもそも自社ブランドが入っていなければ､選ばれる確率は｢ゼロ｣である｡</li>
+      <li>マーケターにとって最重要の仕事は､消費者の頭の中＝エボークト・セットに､自社ブランドを入れることだ｡</li>
+      <li>消費者のエボークト・セットには､だいたい３つ前後の選択肢が入っている｡</li>
+      <li>消費者は商品を買う際､自分のエボークト・セットの中からランダムに1つを選んでいる｡</li>
+      <li>そのカテゴリーにこだわりが強い人ほど､エボークト・セットの中の選択肢の数は増える｡</li>
+    </ul>
+
+    <hr>
+
+    <h2 class="section-heading fade-in">消費者の購買行動､市場構造の本質は｢ポアソン分布｣で分析できる</h2>
+
+    <ul class="item-list">
+      <li>ポアソン分布とは｢プレファレンス＝相対的好意度｣に沿ったランダムな選択による結果のこと＝サイコロ理論</li>
+      <li>簡単に言うと､消費者が六面体のサイコロを振った結果､1から6の目が6分の1ずつ一定に分布すること｡</li>
+      <li>ある特定の交差点における年間の交通事故発生件数は大体一定である</li>
+      <li>テーマパークの年間入場者数も大体一定である｡</li>
+      <li>自殺者も交通事故死者数も大体一定である｡</li>
+      <li>サイコロの結果は､大きく構造が変わらない限り､ポワソン分布する｡</li>
+      <li>消費者の個人の選択も､同じようにランダムで選ばれているので､その結果がポワソン分布する｡夕飯のメニューを考える時､同じスーパーであれば､同じ食材の中からランダムに選ばれている</li>
+      <li>その確率分布を決めている構造こそが｢プレファレンス＝相対的好意度＝脳内にあるサイコロの目｣である｡</li>
+      <li>個人の購買行動のカテゴリーの選択もブランドの選択もポアソン分布する｡</li>
+      <li>これが消費者の購買行動､市場構造の本質である｡</li>
+    </ul>
+
+    <hr>
+
+    <h2 class="section-heading fade-in">社会全体の中での購買活動トレンドはガンマ分布である</h2>
+
+    <ul class="item-list">
+      <li>社会全体の中では｢あるサービスは一度選ばれることでどんどん選ばれやすくなる｣という構造がある｡</li>
+    </ul>
+
+    <p>例）</p>
+    <ul class="item-list">
+      <li>ある芸人がメディアで紹介されて話題になると､どんどん有名になっていき､次も選ばれる確率が上がってブレイクしていく｡</li>
+      <li>あるサービスに感動した顧客が友人知人にクチコミをしていき､どんどん広まっていく｡</li>
+      <li>つまり社会全体の中では､あるカテゴリーやあるブランドが選ばれる確率は､一定ではない｡</li>
+      <li>ようするに､あるチャレンジが次のチャレンジに影響を及ぼす｡この確率分布のことをガンマ分布という｡</li>
+      <li>いわば成功が成功を呼び､失敗が失敗を呼ぶ｡これが本質である｡感動は伝染・伝播していく｡</li>
+    </ul>
+
+    <hr>
+
+    <h2 class="section-heading fade-in">ポワソン分布とガンマ分布の違い</h2>
+
+    <ul class="item-list">
+      <li>映画館で､あなたがある映画を見る確率はポワソン分布だ｡</li>
+      <li>その映画が社会でどれだけ興行収入を上げられるかはガンマ分布だ｡</li>
+      <li>以上の両方に通底する概念は､｢プレファレンス＝相対的好意度｣だ｡</li>
+      <li><strong>つまり市場の本質とは｢プレファレンス＝相対的好意度｣である｡</strong></li>
+      <li>市場において､あるブランドが選ばれる確率は､個々人ではポワソン分布､市場全体ではガンマ分布し､その両方が｢消費者のプレファレンス（サイコロの目）｣によって決定される｡</li>
+    </ul>
+
+    <p>このことを1つの確率式で表したものを負の二項分布の数式と呼ぶ</p>
+    <p>Negative Binomial Distribution＝NBDモデル</p>
+
+    <ul class="item-list">
+      <li>消費者の購買行動はこの公式で全て説明できる｡なぜならば人間の脳の情報処理の構造は同じだから（消費者が自由に選ぶことができない市場を除く）｡</li>
+      <li>負の二項分布の数式＝NBDモデルが分かれば､多くの実益を生み出せる｡</li>
+      <li>市場の真実や､成り立ち､様々な未来の予測も立てられる｡精度の高い需要予測も可能になる｡</li>
+      <li>大きな投資の意思決定の前に､勝てない戦いを回避したり､戦う前に成功のために必要な条件は何なのかがわかるようになる｡</li>
+      <li>いくらの投資でどれだけのリターンを生み出すかの予測ができるようになる｡それも劇的に高い精度で｡</li>
+      <li>世界の住人からは想像もできない働き方の違いをもたらすことができる｡</li>
+      <li>売り上げをあと2割伸ばすために､何をしなくてはならないのかも明確になる｡</li>
+      <li>上や周囲にどれだけ反対されても､自分の中では度合いの違う確信がある｡</li>
+      <li>精度の高い需要予測があれば､自身の突破力や周囲へのリーダーシップも全く違ってくる｡</li>
+      <li>大きな投資前の戦略的判断を支援し､需給一致による利益率の最大化を実現する｡</li>
+      <li>その中心にあるのが市場構造の本質を表す負の二項分布の数式｡その核心は消費者のプレファレンス｡</li>
+    </ul>
+
+    <hr>
+
+    <h2 class="section-heading fade-in">マーケティング戦略の３つの変数</h2>
+
+    <ul class="item-list">
+      <li>マーケティングの変数はたった3つだけ｡</li>
+      <li>プレファレンス､認知､配荷である</li>
+      <li>この世界はたった1つの変数Mによって､ブランドが選ばれる確率が決まっている　※M＝プレファレンス</li>
+      <li>最も大事なことはプレファレンスを勝ち取るブランド設計である｡</li>
+      <li>そのためには消費者理解が１０割である｡</li>
+      <li>マーケティングにおいては､それ以外は定数である｡動かそうとしても無駄である｡</li>
+      <li>マーケティング活動において､どれが定数で､どれが変数なのかを見極める必要がある｡</li>
+      <li>でなければ必要な結果を出すことができない｡</li>
+      <li>最も売上にインパクトを与えるのは｢プレファレンス＝相対的好意度｣である｡</li>
+      <li>このパラメーターによって､ブランドがどれだけ売れるのかが決まる｡</li>
+      <li>これは我々の努力次第で動かすことができる｡</li>
+    </ul>
+
+    <p>結論）</p>
+    <ul class="item-list">
+      <li>だからできるだけ｢プレファレンス＝相対的好意度｣の向上に集中すべきである｡</li>
+      <li>消費者に対して｢プレファレンス＝相対的好意度｣をいかに高められるのか｡</li>
+      <li>ビジネスの成功はその1点にかかっている｡</li>
+      <li>マーケッターのみならず､すべての人が自分の経営資源を｢プレファレンス＝相対的好意度｣の向上にどれだけ集中できているかを自問すべきだ｡</li>
+      <li>市場構造の本質である｢プレファレンス＝相対的好意度｣に集中しないとビジネスで勝てないことは､数学的に自明である｡</li>
+    </ul>
+
+    <hr>
+
+    <h2 class="section-heading fade-in">売上のボトルネックは｢プレファレンス＝相対的好意度｣である｡</h2>
+
+    <ul class="item-list">
+      <li>売上の最大ポテンシャルは｢プレファレンス＝相対的好意度｣が決めている｡</li>
+      <li>売上は､より多くの人の｢プレファレンス＝相対的好意度｣が得られるほど上がる｡</li>
+      <li>消費者から得られた｢プレファレンス＝相対的好意度｣が最大ポテンシャルとなるが､そのポテンシャルは認知率と配荷率で制限される構造になっている｡</li>
+    </ul>
+
+    <p>①プレファレンス＝脳内サイコロで選ばれなければ買えない｡｢他の人よりも好き｣状態｡</p>
+    <p>②認知率＝そのブランドを知っている確率。知らなければそもそも買えない</p>
+    <p>③配荷率＝物理的に買える状況にある確率。販売してなければ買えない</p>
+
+    <ul class="item-list">
+      <li>以上のどれか1つでもダメなら買ってもらえない｡</li>
+      <li>したがって､実際の消費者の購買確率は､これら3つの条件付き確率の掛け算になっている｡</li>
+      <li>これが3つにつながらない仕事はリソースがもったいないので一切やめるべき｡</li>
+      <li>人も時間もお金もかけるべきではない｡もったいない｡</li>
+      <li>マーケッターの仕事は｢ブランドを強くすること｣だ｡</li>
+      <li>そのために頑張るべき領域は最初から3つしかない｡</li>
+      <li>①最大ポテンシャルを決めている｢プレファレンス＝相対的好意度｣をより大きくすることに最大の執念を燃やす｡</li>
+      <li>②その次に認知を少しでも高めること｡</li>
+      <li>③配荷をなんとしても拡大していく｡</li>
+    </ul>
+
+    <hr>
+
+    <h2 class="section-heading fade-in">売り上げを伸ばすための３つのアクション</h2>
+
+    <p>①｢プレファレンス＝相対的好意度｣を高める</p>
+    <p>②認知を高める</p>
+    <p>③配荷を高める｡</p>
+
+    <p>この3つしか決定的な変数がない｡</p>
+    <p>つまり､経営資源を集中させる焦点もこの3つしかない｡</p>
+    <p>最重要なのが｢プレファレンス＝相対的好意度｣だ｡</p>
+
+    <ul class="item-list">
+      <li>認知率も配荷率も最大100%までしか伸びないが､｢プレファレンス＝相対的好意度｣だけは異様に天井が高いからだ｡</li>
+      <li>｢プレファレンス＝相対的好意度｣こそが､この世界の市場構造を決定しているDNAだ｡</li>
+    </ul>
+
+    <hr>
+
+    <h2 class="section-heading fade-in">経営とは｢マーケティングへの投資｣である</h2>
+
+    <ul class="item-list">
+      <li>経営とは､すべての経営資源をより良く､｢プレファレンス＝相対的好意度｣の向上に集中できる構造に持っていくことだ｡</li>
+      <li>経営者とは､それが他者よりも相対的にどれだけより良くできるかどうかというゲームにエントリーしている｡</li>
+      <li>このゲームに勝つためには､消費者視点で考えることが何よりも大切である｡</li>
+    </ul>
+
+    <hr>
+
+    <h2 class="section-heading fade-in">趣味のようなニッチ・ビジネスの多くがうまくいかない理由</h2>
+
+    <ul class="item-list">
+      <li>思考の順番が間違っているから｡</li>
+      <li>大抵､技術思考＝プロダクトアウトや､誰かの思いつきに左右されやすい｢HOW＝どうやるか｣を先に考えている｡</li>
+      <li>自分のやりたいようにやるのは趣味｡もはやビジネスではない｡</li>
+      <li>ビジネスとは事業として持続させるために､消費者や顧客のためにあるもの｡</li>
+      <li>自分のやりたいことだけで頭をいっぱいにせずに､そのアイディアを投げ込む市場の構造をちゃんと読み解くべき｡</li>
+      <li>そうしなければ成功する確率を上げることができない｡</li>
+      <li>必ず｢WHO＝誰の何が問題なのか｣から考えて､消費者を本能レベルで深く理解するべき｡</li>
+      <li>そして｢WHAT＝何を与えるか｣を強力に定義するべき｡</li>
+      <li>以上は｢HOW＝どうやるか｣の前に必須である｡</li>
+      <li>なぜなら｢WHO｣と｢WHAT｣の組み合わせで｢プレファレンス＝相対的好意度｣のポテンシャルが決まってしまうからだ｡</li>
+      <li>できるだけ大きな｢WHO｣に｢WHAT｣を届ける手段として､最後に｢HOW｣を考え始めるのだ｡</li>
+      <li>我々としては､誰が正しいかではなく､ぜひ何が正しいかのみを追求する｡</li>
+      <li>この姿勢を大切にしていただきたい｡</li>
+      <li>その上で､勝てない戦いを避けて､できるだけ勝てる戦いを探す｡</li>
+      <li>あるいは一見して勝てなさそうな戦いでも､何の条件をどう克服すれば勝てるのかをまず落ち着いて考える｡</li>
+    </ul>
+
+    <hr>
+
+    <h2 class="section-heading fade-in">売り上げが上がらない思考のパターン</h2>
+
+    <ul class="item-list">
+      <li>マーケティングに関する素人的な発想</li>
+      <li>HOW思考：｢自分が売りたいもの｣から考え､自分の考えやすい｢プロダクト｣から発想する</li>
+      <li>大半の人はその思考をしていることに自覚がない・悪意も無い</li>
+      <li>これは極めて独善的なので､確率の神様は｢ビジネスの停滞｣という罰を与える</li>
+      <li>第一に考えるべきは｢誰｣の｢何｣を解決して幸福にするのか｡</li>
+      <li>｢プロダクト＝便益を満たす方法論｣を考えるのはその後｡</li>
+      <li>たとえば多くの人が｢ジビエを売ること＝自分がやりたいこと＝HOWの例｣への疑問すら議論できない</li>
+      <li>消費者価値からズレた仕事を毎日している｡</li>
+      <li>そんな企業が多い日本経済は､凋落してむしろ当たり前である｡</li>
+      <li>マーケター本来の仕事は､市場全体の中からより大きな｢プレファレンス＝相対的好意度｣を総合的に企画すること｡</li>
+      <li>企業が作ったものをそのまま消費者に押し付けるような態度では､ゲーム開始前からほとんど負けている｡</li>
+      <li>非常に大切なのは､自分の思考の制約条件を常に疑ってみる姿勢だ｡</li>
+      <li>この場合は｢そもそもの目的は何か？｣である｡</li>
+      <li>つまり｢本当にジビエで勝負しなくてはならないのか｣という前提を疑う必要がある｡</li>
+      <li>自分という存在を通じて､より多くの｢プレファレンス＝相対的好意度｣を獲得する法則を必死で考える｡</li>
+      <li>つまり｢より広く売ること｣に必死になる｡</li>
+    </ul>
+
+    <hr>
+
+    <h2 class="section-heading fade-in">ターゲティングありきという間違い</h2>
+
+    <ul class="item-list">
+      <li>ターゲティングとは､どうしようもない条件下においての消極的な選択であるべき｡｢プレファレンス＝相対的好意度｣を小さくする行為だから｡</li>
+      <li>ターゲティングとは｢最初の100円をどこから使うのか｣という優先順位の結果に過ぎない｡</li>
+      <li>なぜならば､ペネトレーション＝浸透率が高い方がフリークエンシー＝購入頻度も必ず高いからです｡</li>
+      <li>魅力が上がると新規ファンがより増加する事は避けようとしても避けられない</li>
+      <li>｢プレファレンス＝相対的好意度＝選ばれる確率M｣によって浸透率と購入頻度の両方がセットで､同時に決まってしまうのが市場の本質である｡</li>
+    </ul>
+
+    <hr>
+
+    <h2 class="section-heading fade-in">ターゲティングの正しい理解</h2>
+
+    <ul class="item-list">
+      <li>ターゲティングありきで考えると､自分が達成できる最大のポテンシャルを満たすことができない｡</li>
+      <li>ブランディングとは､物理的かつ精神的なAvailability＝手に入れられる度合いを高めること</li>
+      <li>コンセプト＝WHO・WHAT・HOWを設定したときに､そのブランドの最大ポテンシャルは決まる</li>
+      <li>したがって､目的次第ではあるが､ターゲティングありきで考えて､最初からWHOやWHATを不必要に絞り込んでブランドを設計してしまう事は､自覚の有無にかかわらず､ブランドの未来に大きな罪を犯している｡</li>
+      <li>ターゲティングは手段､あるいは結果でしかない｡目的化してはいけない｡</li>
+      <li>購入頻度を高められるように｢プレファレンス＝相対的好意度｣を伸ばすならば､浸透率はむしろ購入頻度以上に伸びていく｡</li>
+      <li>これは数学によって明らかになった法則で､つまり真理である｡</li>
+      <li>ターゲティングすべきときは､ターゲティングによって｢プレファレンス＝相対的好意度｣が増える場合のみである｡</li>
+      <li>そのようなターゲティングが起こり得るのは､二通りある。①WHOの戦略便益を定義する際、②WHATの戦術を定義する際</li>
+    </ul>
+
+    <hr>
+
+    <h2 class="section-heading fade-in">問題定義の重要性</h2>
+
+    <ul class="item-list">
+      <li>問題は､どう定義するかによって解決できるか否かの確率が大きく変わる｡</li>
+      <li>正しく問題定義をして勝ち筋を見出す｡</li>
+      <li>勝ち筋とは､この必勝不敗の道筋のこと｡</li>
+      <li>戦う前から勝ち筋が光って見えているべき｡</li>
+      <li>勝ち筋を見出すためには｢重心｣を見つけられるかどうかである｡</li>
+      <li>｢重心｣を見つける能力とは｢仲間たちを勝たせる力｣である｡</li>
+      <li>その能力の本質は､共同体のリソースを正しく集中させる力である｡</li>
+      <li>現代人は､自分にとって考えやすい低い視座から無意識に｢どう戦うのか？｣ばかりを考える｡</li>
+      <li>必要なのは､共同体の上位目的を常に意識して｢勝つべくして勝つために､どこで戦うのか｣を考えることである｡</li>
+      <li>つまり｢重心｣を決して見誤らない事｡それこそがビジネスで確率高く勝つための本質だ｡</li>
+    </ul>
+
+    <hr>
+
+    <h2 class="section-heading fade-in">重心の見つけ方</h2>
+
+    <ul class="item-list">
+      <li>深刻な飢餓感を持ち､より時間をかけて貪欲に学び､突き詰めて考えたことは何か？</li>
+      <li>1つの戦局で､組織を同時に全集中させられる優先順位は､せいぜい3つまで｡</li>
+      <li>これは精神力の分散が本質的なボトルネックだから｡</li>
+      <li>人間が同時に意識できるのは3つまで｡</li>
+    </ul>
+
+  </article>
+
+  <div class="highlight-block fade-in"><p>必要なのは、共同体の上位目的を常に意識して「勝つべくして勝つために、どこで戦うのか」を考えることである。</p></div>
+
+  <nav class="page-nav fade-in">
+    <a href="column-probability-strategy-02.html">次へ：確率思考の戦略論（2/3）→</a>
+  </nav>
+
+</div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container--wide">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <p class="footer-col__title">Guide</p>
+          <a href="../beginner.html">はじめての方へ</a>
+          <a href="../glossary.html">用語集</a>
+          <a href="../session-flow.html">セッションの流れ</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Theory</p>
+          <a href="../epistemology.html">認識論</a>
+          <a href="../semantics.html">意味論</a>
+          <a href="../society.html">社会論</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Contents</p>
+          <a href="../archives.html">記事一覧</a>
+          <a href="../session-menu.html">12の対話（領域）</a>
+          <a href="../letters.html">21の手紙</a>
+          <a href="../metaplay.html">Meta Play™︎</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Session</p>
+          <a href="../session.html">天命の言語化セッション™</a>
+          <a href="../dark-side/">ダークサイド診断</a>
+          <a href="../omoidasu/">身体的知性診断</a>
+          <a href="../uniqueness.html">独自性と射程</a>
+          <a href="../trial.html">無料トライアル</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Institute</p>
+          <a href="../founder.html">創始者</a>
+          <a href="../faq.html">FAQ</a>
+          <a href="../contact.html">お問い合わせ</a>
+          <a href="../legal/legal-tokushoho.html">特定商取引法</a>
+          <a href="../legal/legal-privacy-policy.html">プライバシーポリシー</a>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 実存科学研究所 — Existential Science Institute</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "【特典】確率思考の戦略論（1/3）",
+  "description": "確率思考の戦略論（1/3）。認識と意味が努力以上に戦略的成功を左右するメカニズム。",
+  "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-probability-strategy-01.html",
+  "author": {
+    "@type": "Person",
+    "name": "箭内宏紀",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/founder.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  },
+  "inLanguage": "ja",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-8XFLECHPE2');
+  </script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/beginner.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>はじめての方へ | 実存科学研究所</title>
+  <meta name="description" content="実存科学研究所へようこそ。天命・自由意志・Metaについて知りたい方、セッションに興味がある方へ、最適な入口をご案内します。">
+  <meta property="og:title" content="はじめての方へ | 実存科学研究所">
+  <meta property="og:description" content="実存科学研究所へようこそ。あなたに最適な入口をご案内します。">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="実存科学研究所">
+  <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* === Beginner page specific === */
+    .path-cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin: 2.5rem 0;
+    }
+
+    .path-card {
+      position: relative;
+      padding: 2.5rem 2.5rem;
+      background: rgba(15, 12, 25, 0.7);
+      border: 1px solid rgba(192, 168, 120, 0.12);
+      box-shadow: 0 2px 24px rgba(192, 168, 120, 0.05);
+      backdrop-filter: blur(8px);
+      transition: box-shadow 0.4s ease, border-color 0.4s ease;
+      overflow: hidden;
+    }
+
+    .path-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.5), transparent);
+    }
+
+    .path-card:hover {
+      box-shadow: 0 4px 48px rgba(192, 168, 120, 0.1);
+      border-color: rgba(192, 168, 120, 0.25);
+    }
+
+    .path-card__number {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.3em;
+      color: rgba(192, 168, 120, 0.4);
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+
+    .path-card__title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #f0ece6;
+      margin-bottom: 0.8rem;
+      letter-spacing: 0.06em;
+      line-height: 2;
+    }
+
+    .path-card__desc {
+      font-size: 0.92rem;
+      color: #c0bbb4;
+      line-height: 2.2;
+      margin-bottom: 1.2rem;
+    }
+
+    .path-card__links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .path-card__links li {
+      margin-bottom: 0.5rem;
+    }
+
+    .path-card__links a {
+      font-size: 0.9rem;
+      color: #c0a878;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(192, 168, 120, 0.3);
+      transition: color 0.2s;
+    }
+
+    .path-card__links a:hover {
+      color: #e8d8b8;
+    }
+
+    .sitemap-section {
+      margin: 3rem 0;
+    }
+
+    .sitemap-group {
+      margin-bottom: 2rem;
+    }
+
+    .sitemap-group__title {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.25em;
+      color: #c0a878;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid rgba(192, 168, 120, 0.15);
+    }
+
+    .sitemap-group__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sitemap-group__list li {
+      margin-bottom: 0.6rem;
+    }
+
+    .sitemap-group__list a {
+      font-size: 0.92rem;
+      color: #e8e4df;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .sitemap-group__list a:hover {
+      color: #c0a878;
+    }
+
+    .sitemap-group__list .desc {
+      font-size: 0.82rem;
+      color: rgba(235, 232, 225, 0.45);
+      margin-left: 0.5rem;
+    }
+
+    @media (max-width: 480px) {
+      .path-card {
+        padding: 2rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="index.html" class="site-logo">実存科学研究所</a>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="global-nav">
+        <a href="index.html">Top</a>
+        <a href="beginner.html">Guide</a>
+        <a href="epistemology.html">Epistemology</a>
+        <a href="semantics.html">Semantics</a>
+        <a href="society.html">Society</a>
+        <a href="founder.html">Founder</a>
+        <a href="session.html">Session</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">More</button>
+          <div class="nav-dropdown__menu">
+            <a href="metaplay.html">Meta Play&trade;</a>
+            <a href="dark-side/">ダークサイド診断</a>
+            <a href="omoidasu/">身体的知性診断</a>
+            <a href="trial.html">無料トライアル</a>
+            <a href="session-menu.html">12の対話（領域）</a>
+            <a href="letters.html">21の手紙</a>
+            <a href="uniqueness.html">独自性と射程</a>
+            <a href="faq.html">FAQ</a>
+            <a href="archives.html">記事一覧</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="page-hero__sub fade-in">Guide</p>
+      <h1 class="fade-in">はじめての方へ</h1>
+      <p class="page-hero__lead fade-in">ようこそ、実存科学研究所へ。</p><br>
+      <p class="page-hero__lead fade-in">「天命を悟り、日々全うする」ための学問と実践の場です。</p><br>
+      <p class="page-hero__lead fade-in">以下の流れで読み進めると、スムーズに全体像をつかめます。</p>
+    </div>
+  </section>
+
+  <!-- 3 Paths -->
+  <section class="section">
+    <div class="container">
+
+      <div class="pull-quote fade-in">
+        <p>関心に合わせて、3つの入口をご用意しています。</p>
+      </div>
+
+      <div class="path-cards">
+
+        <div class="path-card fade-in">
+          <p class="path-card__number">Path 01</p>
+          <p class="path-card__title">天命を知りたい。生きる意味を見つけたい。</p>
+          <p class="path-card__desc">
+            天命とは、あなたの「生まれてきた意味・生きる目的」です。<br>
+            実存科学研究所では、2時間の対話で天命を言語化する「天命の言語化セッション&trade;」を提供しています。<br>
+            まずは、セッションの全体像をご覧ください。
+          </p>
+          <ul class="path-card__links">
+            <li><a href="session.html">天命の言語化セッション&trade; &rarr;</a></li>
+            <li><a href="session-flow.html">セッションの流れ（体験〜心友&trade;まで） &rarr;</a></li>
+            <li><a href="trial.html">無料トライアルセッション &rarr;</a></li>
+          </ul>
+        </div>
+
+        <div class="path-card fade-in">
+          <p class="path-card__number">Path 02</p>
+          <p class="path-card__title">自由意志やMetaについて、深く知りたい。</p>
+          <p class="path-card__desc">
+            実存科学は「Metaがある限り自由意志は存在しない」という公理から出発する体系です。<br>
+            認識論・意味論・社会論の三部作を中心に、この世界の構造を記述しています。<br>
+            初めて読む方は、ガイドラインから入ることをおすすめします。
+          </p>
+          <ul class="path-card__links">
+            <li><a href="trilogy-guide.html">三部作ガイドライン──MetaOSへの案内 &rarr;</a></li>
+            <li><a href="epistemology.html">認識論──Metaと自由意志 &rarr;</a></li>
+            <li><a href="semantics.html">意味論──天命と収束 &rarr;</a></li>
+            <li><a href="society.html">社会論──心友&trade;と文明 &rarr;</a></li>
+          </ul>
+        </div>
+
+        <div class="path-card fade-in">
+          <p class="path-card__number">Path 03</p>
+          <p class="path-card__title">まずは気軽に触れてみたい。</p>
+          <p class="path-card__desc">
+            論考やセッションの前に、まず雰囲気を知りたい方へ。<br>
+            無料の診断コンテンツや動画で、実存科学の世界に触れることができます。
+          </p>
+          <ul class="path-card__links">
+            <li><a href="dark-side/">ダークサイド診断（無料） &rarr;</a></li>
+            <li><a href="omoidasu/">身体的知性診断（無料） &rarr;</a></li>
+            <li><a href="metaplay.html">Meta Play&trade;（思考実験ゲーム） &rarr;</a></li>
+            <li><a href="video-list.html">動画一覧 &rarr;</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <hr class="separator">
+
+      <!-- Site Map -->
+      <div class="content-block text-panel fade-in">
+        <h2 class="section__title section__title--left">サイト全体の構成</h2>
+        <p>このサイトのすべてのコンテンツは、以下の4つの領域に分かれています。</p>
+      </div>
+
+      <div class="sitemap-section fade-in">
+
+        <div class="sitemap-group">
+          <p class="sitemap-group__title">Theory ── 理論</p>
+          <ul class="sitemap-group__list">
+            <li><a href="epistemology.html">認識論</a> <span class="desc">── Metaと自由意志構文</span></li>
+            <li><a href="semantics.html">意味論</a> <span class="desc">── 天命と意味の収束</span></li>
+            <li><a href="society.html">社会論</a> <span class="desc">── 心友&trade;と文明の更新</span></li>
+            <li><a href="trilogy-guide.html">三部作ガイドライン</a> <span class="desc">── MetaOSへの前室</span></li>
+            <li><a href="uniqueness.html">独自性と射程</a> <span class="desc">── 他分野との比較</span></li>
+            <li><a href="glossary.html">用語集</a> <span class="desc">── 主要概念の定義一覧</span></li>
+          </ul>
+        </div>
+
+        <div class="sitemap-group">
+          <p class="sitemap-group__title">Session ── セッション</p>
+          <ul class="sitemap-group__list">
+            <li><a href="session.html">天命の言語化セッション&trade;</a> <span class="desc">── 2時間の対話</span></li>
+            <li><a href="session-flow.html">セッションの流れ</a> <span class="desc">── 体験から心友&trade;まで</span></li>
+            <li><a href="session-menu.html">12の対話（領域）</a> <span class="desc">── セッションで扱うテーマ</span></li>
+            <li><a href="trial.html">無料トライアルセッション</a> <span class="desc">── 最初の一歩</span></li>
+            <li><a href="meta-install.html">Meta Install Session&trade;</a> <span class="desc">── メール配信プログラム</span></li>
+          </ul>
+        </div>
+
+        <div class="sitemap-group">
+          <p class="sitemap-group__title">Contents ── 読みもの</p>
+          <ul class="sitemap-group__list">
+            <li><a href="archives.html">記事一覧</a> <span class="desc">── コラム・書籍・レポート</span></li>
+            <li><a href="letters.html">21の手紙</a> <span class="desc">── 未来の心友&trade;への手紙</span></li>
+            <li><a href="video-list.html">動画一覧</a> <span class="desc">── 講義・セミナー映像</span></li>
+            <li><a href="books.html">書籍</a> <span class="desc">── 著作一覧</span></li>
+            <li><a href="testimonials.html">体験者の声</a> <span class="desc">── セッション体験談</span></li>
+          </ul>
+        </div>
+
+        <div class="sitemap-group">
+          <p class="sitemap-group__title">Experience ── 体験</p>
+          <ul class="sitemap-group__list">
+            <li><a href="dark-side/">ダークサイド診断</a> <span class="desc">── 抑圧された人格の可視化</span></li>
+            <li><a href="omoidasu/">身体的知性診断</a> <span class="desc">── 身体が覚えていること</span></li>
+            <li><a href="metaplay.html">Meta Play&trade;</a> <span class="desc">── 思考実験ゲーム</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <hr class="separator">
+
+      <!-- About -->
+      <div class="content-block text-panel fade-in">
+        <h2 class="section__title section__title--left">実存科学研究所について</h2>
+        <p>
+          実存科学研究所は、「天命を悟り、日々全うする」という生き方を体系化し、<br>
+          「生きる意味を語れる社会」の実現を目指す研究機関です。
+        </p>
+        <p>
+          創始者・箭内宏紀が提唱する実存科学（Existential Science）は、<br>
+          認識論・意味論・社会論を一つの体系として実装する新たな学問領域です。
+        </p>
+        <ul class="link-list">
+          <li><a href="founder.html">創始者について &rarr;</a></li>
+          <li><a href="faq.html">よくある質問 &rarr;</a></li>
+          <li><a href="contact.html">お問い合わせ &rarr;</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-block fade-in">
+    <div class="container">
+      <h2 class="cta-block__title">天命の言語化セッション&trade;</h2>
+      <p class="cta-block__desc">
+        あなたの天命を、2時間で言語化します。
+      </p>
+      <a href="trial.html" class="btn">トライアルセッション &rarr;</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container--wide">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <p class="footer-col__title">Guide</p>
+          <a href="beginner.html">はじめての方へ</a>
+          <a href="glossary.html">用語集</a>
+          <a href="session-flow.html">セッションの流れ</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Theory</p>
+          <a href="epistemology.html">認識論</a>
+          <a href="semantics.html">意味論</a>
+          <a href="society.html">社会論</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Contents</p>
+          <a href="archives.html">記事一覧</a>
+          <a href="session-menu.html">12の対話（領域）</a>
+          <a href="letters.html">21の手紙</a>
+          <a href="metaplay.html">Meta Play&trade;</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Session</p>
+          <a href="session.html">天命の言語化セッション&trade;</a>
+          <a href="dark-side/">ダークサイド診断</a>
+          <a href="omoidasu/">身体的知性診断</a>
+          <a href="uniqueness.html">独自性と射程</a>
+          <a href="trial.html">無料トライアル</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Institute</p>
+          <a href="founder.html">創始者</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">お問い合わせ</a>
+          <a href="legal/legal-tokushoho.html">特定商取引法</a>
+          <a href="legal/legal-privacy-policy.html">プライバシーポリシー</a>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 実存科学研究所 — Existential Science Institute</p>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "はじめての方へ",
+    "description": "実存科学研究所へようこそ。天命・自由意志・Metaについて知りたい方へ、最適な入口をご案内します。",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/beginner.html",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "実存科学研究所",
+      "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+    },
+    "publisher": {
+      "@type": "ResearchOrganization",
+      "name": "実存科学研究所",
+      "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+    },
+    "inLanguage": "ja"
+  }
+  </script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

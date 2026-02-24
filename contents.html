@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/contents.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>コンテンツ | 実存科学研究所</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --text: rgba(235, 232, 225, 0.92);
+      --text-secondary: rgba(235, 232, 225, 0.55);
+      --bg: #080610;
+      --border: rgba(192, 168, 120, 0.15);
+      --accent: #c0a878;
+      --highlight: rgba(192, 168, 120, 0.06);
+      --max-width: 860px;
+    }
+    html { font-size: 17px; scroll-behavior: smooth; }
+    body { font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif; color: var(--text); background: var(--bg); line-height: 2; -webkit-font-smoothing: antialiased; }
+    .page-container { max-width: var(--max-width); margin: 0 auto; padding: 3rem 1.5rem 6rem; }
+
+    /* HEADER */
+    .page-header { text-align: center; padding: 4rem 0 2.5rem; border-bottom: 2px solid var(--accent); margin-bottom: 2rem; }
+    .page-header .label { font-size: 0.85rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 1rem; font-family: "Noto Sans JP", sans-serif; }
+    .page-header h1 { font-size: 1.5rem; font-weight: 700; line-height: 1.6; }
+    .page-header .desc { font-size: 0.95rem; color: var(--text-secondary); margin-top: 0.8rem; line-height: 1.8; }
+
+    /* CATEGORY FILTER */
+    .category-filter { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .category-btn {
+      font-family: "Noto Sans JP", sans-serif;
+      font-size: 0.85rem;
+      padding: 0.4rem 1rem;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.2s;
+      letter-spacing: 0.05em;
+    }
+    .category-btn:hover { border-color: var(--accent); color: var(--text); }
+    .category-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+    /* ARTICLE LIST */
+    .article-list { list-style: none; }
+    .article-item {
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--border);
+      display: block;
+    }
+    .article-item.hidden { display: none; }
+    .article-item:last-child { border-bottom: none; }
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.4rem;
+    }
+    .article-category {
+      font-family: "Noto Sans JP", sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #fff;
+      background: var(--accent);
+      padding: 0.15rem 0.6rem;
+      display: inline-block;
+    }
+    .article-date {
+      font-family: "Noto Sans JP", sans-serif;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+    }
+    .article-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.7;
+      margin-bottom: 0.3rem;
+    }
+    .article-title a {
+      color: var(--text);
+      text-decoration: none;
+    }
+    .article-title a:hover { text-decoration: underline; }
+    .article-excerpt {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    /* COUNT */
+    .article-count {
+      font-family: "Noto Sans JP", sans-serif;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+    }
+
+    @media (max-width: 600px) {
+      html { font-size: 15px; }
+      .page-container { padding: 2rem 1rem 4rem; }
+      .page-header { padding: 2rem 0; }
+      .page-header h1 { font-size: 1.25rem; }
+      .category-filter { gap: 0.3rem; }
+      .category-btn { font-size: 0.8rem; padding: 0.3rem 0.7rem; }
+    }
+
+/* === Dark Theme Override === */
+a:not(.btn):not(.session-card__link) { color: #c0a878; transition: color 0.2s; }
+a:not(.btn):not(.session-card__link):hover { color: #e8d8b8; }
+.category-tag { color: #080610 !important; background: #c0a878 !important; }
+.back-nav { background: rgba(192, 168, 120, 0.06); border-color: rgba(192, 168, 120, 0.15); }
+.back-nav a { color: #c0a878; }
+img { border-radius: 2px; }
+input, textarea, select { background: rgba(255,255,255,0.05); color: rgba(235,232,225,0.92); border-color: rgba(201,168,76,0.2); }
+input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); outline: none; }
+::placeholder { color: rgba(235,232,225,0.3); }
+.submit-btn, button[type="submit"] { background: #c0a878; color: #080610; border: none; }
+
+</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
+    rel="stylesheet">
+<meta property="og:title" content="コンテンツ | 実存科学研究所">
+<meta property="og:description" content="実存科学研究所が発信するコラム、手紙、書籍、レポートの一覧。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="実存科学研究所">
+<meta property="og:title" content="コンテンツ | 実存科学研究所">
+<meta property="og:description" content="実存科学研究所が発信するコラム、手紙、書籍、レポートの一覧。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="実存科学研究所">
+<meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+<meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="index.html" class="site-logo">実存科学研究所</a>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="global-nav">
+        <a href="index.html">Top</a>
+        <a href="beginner.html">Guide</a>
+        <a href="epistemology.html">Epistemology</a>
+        <a href="semantics.html">Semantics</a>
+        <a href="society.html">Society</a>
+        <a href="founder.html">Founder</a>
+        <a href="session.html">Session</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">More</button>
+          <div class="nav-dropdown__menu">
+            <a href="metaplay.html">Meta Play™</a>
+            <a href="dark-side/">ダークサイド診断</a>
+            <a href="omoidasu/">身体的知性診断</a>
+            <a href="trial.html">無料トライアル</a>
+            <a href="session-menu.html">12の対話（領域）</a>
+            <a href="letters.html">21の手紙</a>
+            <a href="uniqueness.html">独自性と射程</a>
+            <a href="faq.html">FAQ</a>
+            <a href="archives.html">記事一覧</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+<div class="page-container">
+
+  <header class="page-header">
+    <p class="label">EXISTENTIAL SCIENCE RESEARCH INSTITUTE</p>
+    <h1>コンテンツ</h1>
+    <p class="desc">実存科学研究所が発信するコラム、手紙、書籍、レポートの一覧</p>
+  </header>
+
+  <div class="pull-quote">
+    <p>実存科学研究所が発信するコラム、手紙、書籍、レポートの一覧</p>
+  </div>
+
+  <!-- カテゴリフィルター -->
+  <div class="category-filter">
+    <button class="category-btn active" data-category="all">すべて</button>
+    <button class="category-btn" data-category="column">コラム</button>
+    <button class="category-btn" data-category="letters">未来の心友™への手紙</button>
+    <button class="category-btn" data-category="books">書籍</button>
+    <button class="category-btn" data-category="report">レポート</button>
+  </div>
+
+  <p class="article-count"><span id="count"></span></p>
+
+  <!-- 記事一覧 -->
+  <ul class="article-list" id="articleList">
+
+    <!-- ===== コラム ===== -->
+    <li class="article-item fade-in" data-category="column">
+      <div class="article-meta">
+        <span class="article-category">コラム</span>
+        <span class="article-date">2025.XX.XX</span>
+      </div>
+      <h2 class="article-title"><a href="trilogy-guide.html">この三部作を読むためのガイドライン──MetaOSへの案内</a></h2>
+      <p class="article-excerpt">三部作へ入る前の認識を調律するための前室。Meta、自由意志構文、意味の収束、天命、心友™、完全構造の地図。</p>
+    </li>
+
+    <li class="article-item fade-in" data-category="column">
+      <div class="article-meta">
+        <span class="article-category">コラム</span>
+        <span class="article-date">2025.XX.XX</span>
+      </div>
+      <h2 class="article-title"><a href="articles/column-meta7.html">Metaの定義</a></h2>
+      <p class="article-excerpt">Meta とは何か。言語・文化・価値観・記憶・身体の五層から成る前提構造の定義。</p>
+    </li>
+
+    <li class="article-item fade-in" data-category="column">
+      <div class="article-meta">
+        <span class="article-category">コラム</span>
+        <span class="article-date">2025.XX.XX</span>
+      </div>
+      <h2 class="article-title"><a href="#">Meta二項対立表</a></h2>
+      <p class="article-excerpt">自由意志OSとMetaOSの対比を一覧化した構造表。</p>
+    </li>
+
+    <li class="article-item fade-in" data-category="column">
+      <div class="article-meta">
+        <span class="article-category">コラム</span>
+        <span class="article-date">2025.XX.XX</span>
+      </div>
+      <h2 class="article-title"><a href="articles/column-13stages.html">「わかるまで」の13段階──構文的変容プロセス地図</a></h2>
+      <p class="article-excerpt">理解が構造として深まっていく13の段階を可視化したプロセス地図。</p>
+    </li>
+
+    <li class="article-item fade-in" data-category="column">
+      <div class="article-meta">
+        <span class="article-category">コラム</span>
+        <span class="article-date">2025.XX.XX</span>
+      </div>
+      <h2 class="article-title"><a href="#">（コラムタイトル──Notionから追加）</a></h2>
+      <p class="article-excerpt">（概要テキスト）</p>
+    </li>
+
+    <!-- ===== 未来の心友への手紙 ===== -->
+    <li class="article-item fade-in" data-category="letters">
+      <div class="article-meta">
+        <span class="article-category">未来の心友™への手紙</span>
+        <span class="article-date">2025.XX.XX</span>
+      </div>
+      <h2 class="article-title"><a href="#">（手紙タイトル──SNSから追加）</a></h2>
+      <p class="article-excerpt">（概要テキスト）</p>
+    </li>
+
+    <li class="article-item fade-in" data-category="letters">
+      <div class="article-meta">
+        <span class="article-category">未来の心友™への手紙</span>
+        <span class="article-date">2025.XX.XX</span>
+      </div>
+      <h2 class="article-title"><a href="#">（手紙タイトル──SNSから追加）</a></h2>
+      <p class="article-excerpt">（概要テキスト）</p>
+    </li>
+
+    <!-- ===== 書籍 ===== -->
+    <li class="article-item fade-in" data-category="books">
+      <div class="article-meta">
+        <span class="article-category">書籍</span>
+        <span class="article-date">2025.XX.XX</span>
+      </div>
+      <h2 class="article-title"><a href="#">（書籍タイトル──Obsidianから追加）</a></h2>
+      <p class="article-excerpt">（概要テキスト）</p>
+    </li>
+
+    <!-- ===== レポート ===== -->
+    <li class="article-item fade-in" data-category="report">
+      <div class="article-meta">
+        <span class="article-category">レポート</span>
+        <span class="article-date">2025.XX.XX</span>
+      </div>
+      <h2 class="article-title"><a href="#">（レポートタイトル──追加時に記入）</a></h2>
+      <p class="article-excerpt">（概要テキスト）</p>
+    </li>
+
+  </ul>
+
+</div>
+
+<script>
+  // カテゴリフィルター
+  const buttons = document.querySelectorAll('.category-btn');
+  const items = document.querySelectorAll('.article-item');
+  const countEl = document.getElementById('count');
+
+  function updateCount() {
+    const visible = document.querySelectorAll('.article-item:not(.hidden)').length;
+    countEl.textContent = visible + ' 件';
+  }
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const cat = btn.dataset.category;
+      items.forEach(item => {
+        if (cat === 'all' || item.dataset.category === cat) {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+      updateCount();
+    });
+  });
+
+  updateCount();
+</script>
+
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container--wide">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <p class="footer-col__title">Guide</p>
+          <a href="beginner.html">はじめての方へ</a>
+          <a href="glossary.html">用語集</a>
+          <a href="session-flow.html">セッションの流れ</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Theory</p>
+          <a href="epistemology.html">認識論</a>
+          <a href="semantics.html">意味論</a>
+          <a href="society.html">社会論</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Contents</p>
+          <a href="archives.html">記事一覧</a>
+          <a href="session-menu.html">12の対話（領域）</a>
+          <a href="letters.html">21の手紙</a>
+          <a href="metaplay.html">Meta Play™︎</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Session</p>
+          <a href="session.html">天命の言語化セッション™</a>
+          <a href="dark-side/">ダークサイド診断</a>
+          <a href="omoidasu/">身体的知性診断</a>
+          <a href="uniqueness.html">独自性と射程</a>
+          <a href="trial.html">無料トライアル</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Institute</p>
+          <a href="founder.html">創始者</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">お問い合わせ</a>
+          <a href="legal/legal-tokushoho.html">特定商取引法</a>
+          <a href="legal/legal-privacy-policy.html">プライバシーポリシー</a>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 実存科学研究所 — Existential Science Institute</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

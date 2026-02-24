@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/founder.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>創始者 — 箭内宏紀 | 実存科学研究所</title>
+  <meta name="description" content="実存科学研究所 創始者 箭内宏紀。実存科学者。「Metaがある限り、自由意志は存在しない」という命題から認識論3000年に終止符を打ち、世界のOSを書き換える。">
+  <meta property="og:title" content="創始者 — 箭内宏紀 | 実存科学研究所">
+  <meta property="og:description" content="実存科学者。「天命の言語化セッション™︎」ファシリテーター。「生きる意味」を語れる社会をつくるために「実存科学」という学問体系を拓く。">
+  <meta property="og:type" content="profile">
+  <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:site_name" content="実存科学研究所">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ============================================
+       Founder Page — Enhanced Visual Design
+       ============================================ */
+
+    /* --- Founder Hero with Photo --- */
+    .founder-hero {
+      padding: 10rem 0 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .founder-hero__inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: end;
+    }
+
+    .founder-hero__text {
+      padding-bottom: 5rem;
+    }
+
+    .founder-hero__sub {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.25em;
+      color: #c0a878;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+
+    .founder-hero__name {
+      font-size: 2.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: #f0ece6;
+      margin-bottom: 0.4rem;
+      line-height: 1.4;
+    }
+
+    .founder-hero__ruby {
+      font-size: 0.9rem;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      color: #c0a878;
+      display: block;
+      margin-bottom: 2.5rem;
+    }
+
+    .founder-hero__intro {
+      max-width: 540px;
+    }
+
+    .founder-hero__intro p {
+      font-size: 0.92rem;
+      color: #d4d0ca;
+      line-height: 2.2;
+      margin-bottom: 1.2rem;
+    }
+
+    .founder-hero__intro p:last-child {
+      margin-bottom: 0;
+    }
+
+    .founder-hero__intro .intro-role {
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      color: #c0a878;
+      margin-bottom: 1.8rem;
+    }
+
+    .founder-hero__intro .intro-accent {
+      color: #c0a878;
+    }
+
+    .founder-hero__photo-wrap {
+      position: relative;
+      overflow: hidden;
+      width: 520px;
+      height: 520px;
+      margin: 2rem auto;
+      border-radius: 50%;
+    }
+
+    .founder-hero__photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 42% 8%;
+      display: block;
+      border-radius: 50%;
+      filter: grayscale(30%) contrast(1.05);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .founder-hero__photo.is-loaded {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Gold accent line under hero */
+    .founder-hero__divider {
+      display: block;
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2.5rem;
+    }
+
+    .founder-hero__divider::after {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: #c0a878;
+      margin: 3rem 0 0;
+    }
+
+    /* --- Narrative Sections with Visual Rhythm --- */
+    .founder-narrative {
+      padding: 5rem 0 6rem;
+    }
+
+    .founder-narrative .container {
+      max-width: 760px;
+    }
+
+    /* Pull quote — large statement */
+    .founder-pullquote {
+      padding: 5rem 0;
+      text-align: center;
+      position: relative;
+      border-top: 1px solid rgba(192, 168, 120, 0.08);
+      border-bottom: 1px solid rgba(192, 168, 120, 0.08);
+    }
+
+    .founder-pullquote__text {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #f0ece6;
+      line-height: 2;
+      letter-spacing: 0.06em;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .founder-pullquote__text em {
+      font-style: normal;
+      color: #c0a878;
+    }
+
+    .founder-pullquote::before {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 32px;
+      height: 1px;
+      background: #c0a878;
+    }
+
+    /* --- Visual Break: Atmospheric Section --- */
+    .founder-atmospheric {
+      position: relative;
+      padding: 3rem 0;
+      overflow: hidden;
+      background: rgba(6, 4, 12, 0.4);
+    }
+
+    .founder-atmospheric::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 30% 50%, rgba(192, 168, 120, 0.04) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 70% 50%, rgba(80, 60, 140, 0.03) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .founder-atmospheric .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* --- Kintsugi Visual Metaphor Section --- */
+    .founder-kintsugi {
+      position: relative;
+      padding: 6rem 0;
+      overflow: hidden;
+    }
+
+    .founder-kintsugi::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(192, 168, 120, 0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* --- Symbol markers for structure --- */
+    .founder-symbol {
+      text-align: center;
+      padding: 1.5rem 0;
+    }
+
+    .founder-symbol__mark {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 2rem;
+      font-weight: 300;
+      color: rgba(192, 168, 120, 0.3);
+      letter-spacing: 0.5em;
+    }
+
+    /* --- Final declaration section --- */
+    .founder-declaration {
+      padding: 6rem 0;
+      border-top: 1px solid rgba(192, 168, 120, 0.1);
+      position: relative;
+    }
+
+    .founder-declaration::before {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #c0a878, transparent);
+    }
+
+    /* --- Narrative text-panel upgrade to glass cards --- */
+    .founder-narrative .text-panel {
+      background: rgba(15, 12, 25, 0.7);
+      border: 1px solid rgba(192, 168, 120, 0.10);
+      box-shadow: 0 2px 24px rgba(192, 168, 120, 0.04);
+      backdrop-filter: blur(8px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .founder-narrative .text-panel::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.4), transparent);
+    }
+
+    .founder-atmospheric .text-panel {
+      background: rgba(15, 12, 25, 0.5);
+      border: 1px solid rgba(192, 168, 120, 0.10);
+      box-shadow: 0 2px 24px rgba(192, 168, 120, 0.04);
+      backdrop-filter: blur(8px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .founder-atmospheric .text-panel::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.4), transparent);
+    }
+
+    .founder-declaration .text-panel {
+      background: rgba(15, 12, 25, 0.7);
+      border: 1px solid rgba(192, 168, 120, 0.10);
+      box-shadow: 0 2px 24px rgba(192, 168, 120, 0.04);
+      backdrop-filter: blur(8px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .founder-declaration .text-panel::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.4), transparent);
+    }
+
+    /* --- Visibility boost: paragraph text brightness --- */
+    .founder-narrative .content-block p,
+    .founder-atmospheric .content-block p,
+    .founder-declaration .content-block p {
+      color: #ccc8c2;
+    }
+
+    /* --- Glass card for opening pull-quote --- */
+    .founder-narrative .pull-quote {
+      background: rgba(15, 12, 25, 0.7);
+      border: 1px solid rgba(192, 168, 120, 0.10);
+      box-shadow: 0 2px 24px rgba(192, 168, 120, 0.04);
+      backdrop-filter: blur(8px);
+      padding: 3rem 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .founder-narrative .pull-quote::before {
+      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.4), transparent);
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: 0;
+    }
+
+    /* --- Subtle background for section-break pullquotes --- */
+    .founder-pullquote {
+      background: rgba(10, 8, 18, 0.5);
+      backdrop-filter: blur(6px);
+    }
+
+    /* --- Responsive 900px --- */
+    @media (max-width: 900px) {
+      .founder-hero__inner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .founder-hero__text {
+        padding-bottom: 2rem;
+        text-align: center;
+      }
+
+      .founder-hero__intro {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+      .founder-hero__name {
+        font-size: 2.2rem;
+      }
+
+      .founder-hero__photo-wrap {
+        width: 340px;
+        height: 340px;
+      }
+
+      .founder-pullquote__text {
+        font-size: 1.15rem;
+      }
+    }
+
+    /* --- Responsive 480px --- */
+    @media (max-width: 480px) {
+      .founder-hero {
+        padding: 8rem 0 0;
+      }
+
+      .founder-hero__inner {
+        padding: 0 1.2rem;
+        gap: 1.5rem;
+      }
+
+      .founder-hero__name {
+        font-size: 1.85rem;
+      }
+
+      .founder-hero__ruby {
+        font-size: 0.82rem;
+        margin-bottom: 2rem;
+      }
+
+      .founder-hero__intro p {
+        font-size: 0.84rem;
+        line-height: 2;
+        margin-bottom: 1rem;
+      }
+
+      .founder-hero__intro .intro-role {
+        font-size: 0.78rem;
+        margin-bottom: 1.4rem;
+      }
+
+      .founder-hero__photo-wrap {
+        width: 240px;
+        height: 240px;
+      }
+
+      .founder-hero__divider {
+        padding: 0 1.2rem;
+      }
+
+      .founder-narrative {
+        padding: 3.5rem 0 4rem;
+      }
+
+      .founder-pullquote {
+        padding: 3rem 1.2rem;
+      }
+
+      .founder-pullquote__text {
+        font-size: 1rem;
+        line-height: 2.1;
+      }
+
+      .founder-pullquote__text br {
+        display: none;
+      }
+
+      .founder-atmospheric {
+        padding: 4rem 0;
+      }
+
+      .founder-kintsugi {
+        padding: 4rem 0;
+      }
+
+      .founder-symbol {
+        padding: 2rem 0;
+      }
+
+      .founder-declaration {
+        padding: 4rem 0;
+      }
+
+      /* Fix <br> in all content blocks on mobile */
+      .founder-narrative .text-panel p br,
+      .founder-atmospheric .text-panel p br,
+      .founder-declaration .text-panel p br,
+      .founder-narrative .quote-block br,
+      .founder-atmospheric .quote-block br,
+      .founder-declaration .quote-block br,
+      .founder-declaration .highlight-block p br {
+        display: none;
+      }
+
+      .founder-narrative .text-panel,
+      .founder-atmospheric .text-panel,
+      .founder-declaration .text-panel {
+        padding: 2rem 1.2rem;
+      }
+
+      /* Quote-block inside text-panels: reduce padding for 375px */
+      .founder-narrative .quote-block,
+      .founder-atmospheric .quote-block,
+      .founder-declaration .quote-block {
+        padding: 1.4rem 1.2rem;
+        margin: 2rem 0;
+        font-size: 0.92rem;
+      }
+
+      /* Separator margin reduction on mobile */
+      .founder-narrative .separator,
+      .founder-atmospheric .separator,
+      .founder-declaration .separator {
+        margin: 2.5rem 0;
+      }
+
+      /* Pull-quote mobile override (specificity fix) */
+      .founder-narrative .pull-quote {
+        padding: 2rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="index.html" class="site-logo">実存科学研究所</a>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="global-nav">
+        <a href="index.html">Top</a>
+        <a href="beginner.html">Guide</a>
+        <a href="epistemology.html">Epistemology</a>
+        <a href="semantics.html">Semantics</a>
+        <a href="society.html">Society</a>
+        <a href="founder.html">Founder</a>
+        <a href="session.html">Session</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">More</button>
+          <div class="nav-dropdown__menu">
+            <a href="metaplay.html">Meta Play™</a>
+            <a href="dark-side/">ダークサイド診断</a>
+            <a href="omoidasu/">身体的知性診断</a>
+            <a href="trial.html">無料トライアル</a>
+            <a href="session-menu.html">12の対話（領域）</a>
+            <a href="letters.html">21の手紙</a>
+            <a href="uniqueness.html">独自性と射程</a>
+            <a href="faq.html">FAQ</a>
+            <a href="archives.html">記事一覧</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== FOUNDER HERO WITH PHOTO ===== -->
+  <section class="founder-hero">
+    <div class="founder-hero__inner">
+      <div class="founder-hero__text fade-in">
+        <p class="founder-hero__sub">Founder</p>
+        <h1 class="founder-hero__name">箭内宏紀</h1>
+        <span class="founder-hero__ruby">やないひろき</span>
+        <div class="founder-hero__intro">
+          <p class="intro-role">実存科学者。<br>「天命の言語化セッション™︎」ファシリテーター。</p>
+          <p><span class="intro-accent">「Metaがある限り、自由意志は存在しない」</span>という命題から認識論3000年に終止符を打ち、世界のOSを書き換える。</p>
+          <p>「深く考えるに値する問い」を通じて、あなたの<span class="intro-accent">「天命（生まれた理由・生きる目的）」</span>を一文に結晶させる対話を提供する。</p>
+          <p><span class="intro-accent">「生きる意味」を語れる社会</span>をつくるために「実存科学」という学問体系を拓く。</p>
+        </div>
+      </div>
+      <div class="founder-hero__photo-wrap fade-in">
+        <img src="images/yanaihiroki.jpeg" alt="箭内宏紀" class="founder-hero__photo" id="founderPhoto" loading="lazy">
+      </div>
+    </div>
+    <div class="founder-hero__divider"></div>
+  </section>
+
+  <!-- ===== OPENING: Pull Quote ===== -->
+  <section class="founder-narrative">
+    <div class="container">
+      <div class="pull-quote fade-in">
+        <p>
+          ある者は彼を「狂人」と呼んだ。
+        </p>
+      </div>
+      <div class="content-block text-panel fade-in">
+        <p>
+          それは侮辱ではない。<br><br>
+          「多くの人間が踏み込まない領域に、なぜ命を賭けるのか」<br>
+          <br>この問いに対する、最も率直な印象である。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PULL QUOTE ===== -->
+  <div class="founder-pullquote fade-in">
+    <p class="founder-pullquote__text">
+      百年の学問から数千年の叡智まで、<br>
+      人類が<em>「生きる意味」</em>に向けて蓄積してきた<br>
+      知の体系を、領域を問わず横断した。
+    </p>
+  </div>
+
+  <!-- ===== NARRATIVE: 探求の軌跡 ===== -->
+  <section class="founder-narrative">
+    <div class="container">
+      <div class="content-block text-panel fade-in">
+        <p>
+          2000年代初頭、箭内宏紀の探求は、「心理学」から始まった。
+        </p>
+        <p>
+          しかし二十年以上の歳月をかけて、その枠はとうに壊れている。
+        </p>
+        <p>
+          <strong>心理学、哲学、神経科学、儒教、密教、インド哲学、西洋形而上学</strong>──百年の学問から数千年の叡智まで、人類が「生きる意味」に向けて蓄積してきた知の体系を、箭内は領域を問わず横断した。
+        </p>
+        <p>
+          そして「生きるとは何か」という問いを、そのいずれもが単独では到達し得なかった地点まで追い詰めた。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ATMOSPHERIC: 崩壊と再生 ===== -->
+  <section class="founder-atmospheric fade-in">
+    <div class="container">
+      <div class="content-block text-panel fade-in">
+        <p>
+          その過程で、一度、壊れている。
+        </p>
+        <p>
+          瞑想の極限において精神の均衡を失い、身体を壊した。
+        </p>
+        <p>
+          <strong>「究極を知りたい」という衝動が、文字通り自身を破壊した。</strong><br><br>
+          そこから引き戻したのは、積み上げた理論ではなく、家族や友人の温かな眼差しだった。
+        </p>
+        <p>
+          この経験が、実存科学の生誕に繋がった。
+        </p>
+      </div>
+
+      <hr class="separator">
+
+      <div class="content-block text-panel fade-in">
+        <p>
+          箭内が構築した体系の中核は、<strong>認識論（Meta）と意味論（天命）</strong>である。
+        </p>
+        <p>
+          しかしその構造を最も素朴な言葉に還元するならば、<br>
+          それは<strong>「愛と友情」</strong>にほかならない。
+        </p>
+        <p>
+          Metaとは、世界がすでに与えている構造への全肯定であり、<br>
+          天命とは、その構造が一人の人間を通じて語ろうとする意味の収束である。
+        </p>
+
+        <div class="quote-block fade-in">
+          壊れた人間を支えた手のぬくもりと、<br>三千年の認識論を閉じる構造科学が、<br>同じ一点に収束している。<br><br>
+          これは偶然ではない。構造的必然である。
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NARRATIVE: 社会論への展開 ===== -->
+  <section class="founder-narrative">
+    <div class="container">
+      <div class="content-block text-panel fade-in">
+        <p>
+          しかし、ここで終わっていたら、実存科学は未完のままだった。
+        </p>
+        <p>
+          認識論は世界の前提構造を暴いた。<br>意味論は天命という収束点を導出した。<br><br>
+          だが、壊れた人間が実際に生き延びたのは、理論の力ではなかった。<br><br>
+          暗闇の中で手を握り続けた人間がいた。<br>
+          意味も言葉も失った場所で、ただ傍にいた人間がいた。<br><br>
+          <strong>理論が沈黙した場所で、愛と友情だけが、声を出していた。</strong>
+        </p>
+        <p>
+          この事実の前で、認識論と意味論は跪いた。
+        </p>
+      </div>
+
+      <hr class="separator">
+
+      <div class="content-block text-panel fade-in">
+        <p>
+          個体の内部でどれほど完璧に構造が整合しても、<br>人間は一人では天命を全うできない。<br><br>
+          天命を語る相手がいなければ、意味は言葉にならず、<br>言葉にならない意味は、やがて霧のように消える。<br><br>
+          人間が「生きる意味」を持続するためには、<br>その意味を受け取り、語り返す存在が、絶対に必要である。
+        </p>
+        <div class="def-box fade-in">
+          <p>
+            その存在を、本研究は<strong>「心友™」</strong>と呼ぶ。
+          </p>
+        </div>
+        <p>
+          社会論は、認識論と意味論の延長にはない。その上位にある。<br><br>
+          認識論が世界を記述し、意味論が天命を導出し、<br>それでもなお届かなかった場所に、社会論は手を伸ばす。<br><br>
+          <strong>心友™という関係の構造こそが、実存科学の究極であり、<br>人類が意識の発達を遂げ、文明として存続するために、<br>絶対に外すことのできない最後の道である。</strong>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CLOSING: なぜ箭内と対話するのか ===== -->
+  <div class="founder-pullquote fade-in">
+    <p class="founder-pullquote__text">
+      壊れた人間を支えた手のぬくもり。<br>
+      その手を、今度は、<em>あなた</em>に差し出す。
+    </p>
+  </div>
+
+  <section class="founder-declaration fade-in">
+    <div class="container">
+      <div class="content-block text-panel fade-in">
+        <p>
+          実存科学が結論として導いたことを、箭内はすでに知っていた。<br>
+          理論よりも先に、身体が教えていた。
+        </p>
+        <p>
+          あの暗闇の底で、理論は沈黙した。<br>
+          積み上げた知識も、横断した叡智も、何ひとつ声を出さなかった。
+        </p>
+        <p>
+          <strong>声を出していたのは、ただ傍にいた人間だけだった。</strong>
+        </p>
+        <p>
+          答えを持たず、理論も持たず、ただそこにいた。<br>
+          その「ただいる」という行為だけが、壊れた人間をこちら側に引き戻した。
+        </p>
+      </div>
+
+      <hr class="separator">
+
+      <div class="content-block text-panel fade-in">
+        <p>
+          対話の場で箭内が行うことは、その再現である。
+        </p>
+        <p>
+          答えは語らない。自身の崩壊から、答えが人の認識を狭めることを学んだからだ。<br>
+          代わりに、<strong>ただ一つの問い</strong>を手渡す。深く考えるに値する、その人だけの問いを。
+        </p>
+        <p>
+          その問いは、外から何かを注ぐのではない。<br>
+          あなたの中にすでにある回路を接続する。<br>
+          本来つながるはずだった意味と意味が結ばれ、あなた自身の声で、あなたの天命が語り始める。
+        </p>
+      </div>
+
+      <hr class="separator">
+
+      <div class="content-block text-panel fade-in">
+        <p>
+          この瞬間に触れた人が、こう語った。
+        </p>
+        <div class="quote-block fade-in">
+          「生まれてきてよかった」
+        </div>
+        <div class="quote-block fade-in">
+          「やっと自分の人生が始まった」
+        </div>
+        <p>
+          <strong>箭内宏紀という人間に会う理由は、彼の理論が正しいからではない。</strong>
+        </p>
+        <p>
+          この人が、あの場所を通ってきたからである。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-block fade-in">
+    <div class="container">
+      <h2 class="cta-block__title">無料トライアルセッション</h2>
+      <p class="cta-block__desc">
+        天命の言語化セッション™を、まず一度体験してみてください。
+      </p>
+      <a href="trial.html" class="btn">申し込む &rarr;</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container--wide">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <p class="footer-col__title">Guide</p>
+          <a href="beginner.html">はじめての方へ</a>
+          <a href="glossary.html">用語集</a>
+          <a href="session-flow.html">セッションの流れ</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Theory</p>
+          <a href="epistemology.html">認識論</a>
+          <a href="semantics.html">意味論</a>
+          <a href="society.html">社会論</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Contents</p>
+          <a href="archives.html">記事一覧</a>
+          <a href="session-menu.html">12の対話（領域）</a>
+          <a href="letters.html">21の手紙</a>
+          <a href="metaplay.html">Meta Play™︎</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Session</p>
+          <a href="session.html">天命の言語化セッション™</a>
+          <a href="dark-side/">ダークサイド診断</a>
+          <a href="omoidasu/">身体的知性診断</a>
+          <a href="uniqueness.html">独自性と射程</a>
+          <a href="trial.html">無料トライアル</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Institute</p>
+          <a href="founder.html">創始者</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">お問い合わせ</a>
+          <a href="legal/legal-tokushoho.html">特定商取引法</a>
+          <a href="legal/legal-privacy-policy.html">プライバシーポリシー</a>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 実存科学研究所 — Existential Science Institute</p>
+    </div>
+  </footer>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "箭内宏紀",
+    "alternateName": "Yanai Hiroki",
+    "jobTitle": "実存科学者",
+    "description": "「Metaがある限り、自由意志は存在しない」という命題から認識論3000年に終止符を打ち、世界のOSを書き換える。「天命の言語化セッション™」ファシリテーター。",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/founder.html",
+    "image": "https://jitsuzon-kagaku-lab.yanaihiroki.com/images/yanaihiroki.jpeg",
+    "worksFor": {
+      "@type": "ResearchOrganization",
+      "name": "実存科学研究所",
+      "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+    },
+    "knowsAbout": ["実存科学", "天命", "認識論", "自由意志問題", "Meta構造", "心友", "天命の言語化セッション"]
+  }
+  </script>
+  <script src="js/main.js"></script>
+  <script>
+    // Photo load animation
+    document.addEventListener('DOMContentLoaded', function () {
+      var photo = document.getElementById('founderPhoto');
+      if (photo) {
+        if (photo.complete) {
+          photo.classList.add('is-loaded');
+        } else {
+          photo.addEventListener('load', function () {
+            photo.classList.add('is-loaded');
+          });
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
