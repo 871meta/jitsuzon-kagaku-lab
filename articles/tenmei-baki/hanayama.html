@@ -29,10 +29,185 @@
   <link rel="stylesheet" href="../../css/style.css">
 
 <style>
+/* =============================================
+   視認性・読みやすさ強化CSS
+   ============================================= */
+
+/* === 1. 章見出し — 中央配置＋装飾 === */
+h2.chapter-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  color: #f0ece6;
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  position: relative;
+  padding-top: 2rem;
+}
+h2.chapter-heading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 1px;
+  background: #c0a878;
+}
+h2.chapter-heading::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(192,168,120,0.5), transparent);
+  margin: 1.2rem auto 0;
+}
+.chapter-number {
+  display: block;
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #c0a878;
+  margin-bottom: 0.6rem;
+}
+
+/* === 2. 区切り線 — 装飾付き === */
+hr {
+  border: none;
+  height: auto;
+  background: none;
+  margin: 4.5rem 0;
+  text-align: center;
+  overflow: visible;
+}
+hr::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(192,168,120,0.08) 15%, rgba(192,168,120,0.2) 50%, rgba(192,168,120,0.08) 85%, transparent 100%);
+}
+hr::after {
+  content: "◆";
+  display: block;
+  font-size: 0.5rem;
+  color: rgba(192,168,120,0.3);
+  margin-top: -0.35em;
+  letter-spacing: 1em;
+  line-height: 1;
+}
+
+/* === 3. セッション対話 — 読みやすさ向上 === */
+.session-dialogue {
+  max-width: 680px;
+  margin: 2.5rem auto;
+  padding: 2.5rem 2rem;
+  background: rgba(10, 8, 18, 0.35);
+  border: 1px solid rgba(192,168,120,0.06);
+  border-radius: 2px;
+  position: relative;
+}
+.session-dialogue::before {
+  content: "SESSION";
+  position: absolute;
+  top: -0.6em;
+  left: 2rem;
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  color: rgba(192,168,120,0.4);
+  background: #0c0a14;
+  padding: 0 0.8rem;
+}
+.session-dialogue p {
+  margin-bottom: 1.1em;
+  line-height: 2.2;
+}
+.session-dialogue .speaker-yanai { color: #c0a878; font-weight: 600; font-size: 0.92rem; }
+.session-dialogue .speaker-hanayama { color: #e8e4df; font-weight: 600; font-size: 0.92rem; }
+
+/* 箭内の発言：金色の左ボーダー */
+.session-dialogue .line-yanai {
+  border-left: 2px solid rgba(192,168,120,0.15);
+  padding-left: 1.2rem;
+}
+/* キャラの発言：少しインデント */
+.session-dialogue .line-character {
+  margin-left: 1.4rem;
+}
+/* 沈黙マーカー：中央揃え＋装飾線 */
+.session-dialogue .silence {
+  color: rgba(235,232,225,0.3);
+  font-style: italic;
+  text-align: center;
+  margin: 2em 0;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+}
+.session-dialogue .silence::before,
+.session-dialogue .silence::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: rgba(192,168,120,0.15);
+  vertical-align: middle;
+  margin: 0 1em;
+}
+/* 10発言ごとの視覚リズム */
+.session-dialogue p:nth-child(10n) {
+  margin-bottom: 2em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid rgba(192,168,120,0.06);
+}
+
+/* === 4. text-panel の単調さ解消 === */
+section > .text-panel:nth-of-type(even) {
+  background: rgba(8, 6, 16, 0.45);
+  border-color: transparent;
+}
+section > .text-panel:nth-of-type(even)::before {
+  display: none;
+}
+
+/* === 5. highlight-block の存在感微増 === */
+.highlight-block {
+  background: rgba(192,168,120,0.06);
+  border-left: 2px solid;
+  border-image: linear-gradient(180deg, #c0a878 0%, rgba(192,168,120,0.15) 100%) 1;
+  padding: 2rem 2rem 2rem 2.2rem;
+  margin: 2.5rem 0;
+}
+.highlight-block p {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 2.2;
+  color: #f0ece6;
+}
+
+/* === 6. セクション見出し（h3） === */
+h3.section-heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #e8e4df;
+  letter-spacing: 0.08em;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1.2rem;
+  border-left: 2px solid rgba(192,168,120,0.4);
+  line-height: 1.6;
+}
+
 /* === Profiling Block === */
 .profiling-block {
   background: rgba(15,12,25,0.5);
-  border: 1px solid rgba(192,168,120,0.12);
+  border: 1px solid rgba(192,168,120,0.1);
   padding: 2.5rem 2rem;
   margin: 2rem 0;
   backdrop-filter: blur(8px);
@@ -47,11 +222,13 @@
   background: linear-gradient(90deg, transparent, rgba(192,168,120,0.4), transparent);
 }
 .profiling-block h3 {
-  font-size: 1rem;
+  font-size: 0.92rem;
   color: #c0a878;
   letter-spacing: 0.15em;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
   font-weight: 600;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(192,168,120,0.1);
 }
 .profiling-block ul {
   list-style: none;
@@ -59,19 +236,27 @@
   margin: 0 0 1.5rem 0;
 }
 .profiling-block ul li {
-  margin-bottom: 0.6rem;
+  margin-bottom: 1rem;
   color: #c0bbb4;
-  font-size: 0.92rem;
-  line-height: 2;
-  padding-left: 1.2em;
+  font-size: 0.9rem;
+  line-height: 1.9;
+  padding-left: 1.6em;
   position: relative;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(192,168,120,0.04);
+}
+.profiling-block ul li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 .profiling-block ul li::before {
   content: "──";
   position: absolute;
   left: 0;
-  color: rgba(192,168,120,0.3);
-  font-size: 0.8em;
+  top: 0;
+  color: rgba(192,168,120,0.35);
+  font-size: 0.75em;
 }
 
 /* === Comparison Table === */
@@ -95,17 +280,6 @@
   font-size: 0.82rem;
 }
 .comparison-table td { color: #c0bbb4; }
-
-/* === Session Dialogue === */
-.session-dialogue { max-width: 680px; margin: 2rem auto; }
-.session-dialogue p { margin-bottom: 1em; line-height: 2.2; }
-.session-dialogue .speaker-yanai { color: #c0a878; font-weight: 600; }
-.session-dialogue .speaker-hanayama { color: #e8e4df; font-weight: 600; }
-.session-dialogue .silence {
-  color: rgba(235,232,225,0.4);
-  font-style: italic;
-  margin: 1.5em 0;
-}
 
 /* === CTA Block === */
 .cta-block {
@@ -168,18 +342,49 @@
   line-height: 2;
 }
 
-/* === Mobile === */
+/* === 7. モバイル対応 === */
 @media (max-width: 600px) {
+  h2.chapter-heading {
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    padding-top: 1.5rem;
+  }
+  .chapter-number {
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    margin-bottom: 0.4rem;
+  }
+  h3.section-heading {
+    font-size: 1rem;
+    margin-top: 2rem;
+    padding-left: 1rem;
+  }
+  hr { margin: 3rem 0; }
+  .session-dialogue {
+    padding: 1.5rem 1.2rem;
+    margin: 2rem auto;
+  }
+  .session-dialogue .line-yanai { padding-left: 0.8rem; }
+  .session-dialogue .line-character { margin-left: 0.8rem; }
   .profiling-block { padding: 1.5rem 1.2rem; }
   .cta-block { padding: 2rem 1.2rem; }
   .comparison-table { font-size: 0.78rem; }
   .comparison-table th, .comparison-table td { padding: 0.5rem 0.6rem; }
+  .highlight-block { padding: 1.5rem 1.2rem 1.5rem 1.4rem; }
+  .text-panel { padding: 2rem 1.5rem; }
 }
 @media (max-width: 480px) {
   .text-panel p br,
   .pull-quote p br,
   .highlight-block p br,
-  .def-box p br { display: none; }
+  .def-box p br,
+  .session-dialogue p br { display: none; }
+  h2.chapter-heading { font-size: 1.15rem; }
+  .session-dialogue p:nth-child(10n) {
+    margin-bottom: 1.5em;
+    padding-bottom: 1em;
+  }
 }
 </style>
 </head>
@@ -308,131 +513,131 @@
       <h3 class="section-heading fade-in">セッション対話</h3>
 
       <div class="session-dialogue fade-in">
-        <p><span class="speaker-yanai">箭内：</span> 花山さん、セッションに来てくれてありがとう。あなたはあなたに何をプレゼントしてあげたいですか？</p>
-        <p><span class="speaker-hanayama">花山：</span> ……要らねェよ。今のままでいい。</p>
-        <p><span class="speaker-yanai">箭内：</span> なるほど。"何もプレゼントしないことをプレゼントしたい"ということですね。</p>
-        <p><span class="speaker-hanayama">花山：</span> （沈黙）……ああ、そうだな。</p>
-        <p><span class="speaker-yanai">箭内：</span> それはなぜですか？</p>
-        <p><span class="speaker-hanayama">花山：</span> 俺は強者として生まれた。これ以上、何を欲しがるってんだ。</p>
-        <p><span class="speaker-yanai">箭内：</span> なぜ、強者は欲しがってはいけないのですか。</p>
-        <p><span class="speaker-hanayama">花山：</span> ……持たざる者への冒涜になる。鍛えることも、求めることも、強者には許されねェ。</p>
-        <p><span class="speaker-yanai">箭内：</span> 許されない。誰に許されないのですか。</p>
-        <p><span class="speaker-hanayama">花山：</span> ……侠客立ちだ。俺の背中が、それを許さねェ。</p>
-        <p><span class="speaker-yanai">箭内：</span> あなたの背中の侠客立ち。その美学は、いつからあるものですか。</p>
-        <p><span class="speaker-hanayama">花山：</span> ……気づいた時にはあった。親父が組を張っていた。俺はその中で育った。力も、立場も、気づいた時には背負っていた。</p>
-        <p><span class="speaker-yanai">箭内：</span> 気づいた時には背負っていた。では、その美学はあなたが選んだものですか。</p>
-        <p><span class="speaker-hanayama">花山：</span> …………。</p>
-        <p><span class="speaker-yanai">箭内：</span> ……。</p>
-        <p><span class="speaker-hanayama">花山：</span> ……選んだ、と思っていた。だが……選ぶ以前に、すでにそうだった。鍛えないことも、避けないことも……最初からそう決まっていた。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> 花山さん、セッションに来てくれてありがとう。あなたはあなたに何をプレゼントしてあげたいですか？</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……要らねェよ。今のままでいい。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> なるほど。"何もプレゼントしないことをプレゼントしたい"ということですね。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> （沈黙）……ああ、そうだな。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> それはなぜですか？</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> 俺は強者として生まれた。これ以上、何を欲しがるってんだ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> なぜ、強者は欲しがってはいけないのですか。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……持たざる者への冒涜になる。鍛えることも、求めることも、強者には許されねェ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> 許されない。誰に許されないのですか。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……侠客立ちだ。俺の背中が、それを許さねェ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> あなたの背中の侠客立ち。その美学は、いつからあるものですか。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……気づいた時にはあった。親父が組を張っていた。俺はその中で育った。力も、立場も、気づいた時には背負っていた。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> 気づいた時には背負っていた。では、その美学はあなたが選んだものですか。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> …………。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> ……。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……選んだ、と思っていた。だが……選ぶ以前に、すでにそうだった。鍛えないことも、避けないことも……最初からそう決まっていた。</p>
 
-        <p><span class="speaker-yanai">箭内：</span> 花山さん、闘いの中で一切の攻撃を避けないですね。なぜですか。</p>
-        <p><span class="speaker-hanayama">花山：</span> ……避ける必要がねェ。受け止められる。</p>
-        <p><span class="speaker-yanai">箭内：</span> なぜ、受け止めなければならないんですか。</p>
-        <p><span class="speaker-hanayama">花山：</span> ……受け止められるからだ。受け止められる力があるなら、避けることは卑怯だ。</p>
-        <p><span class="speaker-yanai">箭内：</span> なぜ、避けることは卑怯なんですか。</p>
-        <p><span class="speaker-hanayama">花山：</span> ……強者が攻撃を避けたら、何のための強さだ。持って生まれた力を使わずに逃げるのは、力そのものへの冒涜だ。</p>
-        <p><span class="speaker-yanai">箭内：</span> では、仮にあなたが生まれつき強者でなかったとしたら──避けていましたか。</p>
-        <p><span class="speaker-hanayama">花山：</span> …………。</p>
-
-        <p class="silence">（長い沈黙）</p>
-
-        <p><span class="speaker-hanayama">花山：</span> ……避けていた、だろうな。普通に鍛えて、普通に避けて、普通に闘っていたはずだ。</p>
-        <p><span class="speaker-yanai">箭内：</span> ……どう思いますか。</p>
-        <p><span class="speaker-hanayama">花山：</span> ……ということは、避けないのは俺の美学じゃねェ。「強者として生まれた」という……ただそれだけのことに駆動されている。……俺は、避けないことを「選んだ」んじゃねェのか。</p>
-
-        <p><span class="speaker-yanai">箭内：</span> 花山さん、スペック戦で膝を撃ち抜かれましたね。あのとき、避けようと思えば避けられましたか。</p>
-        <p><span class="speaker-hanayama">花山：</span> ……避けられた。弾丸が来ることは見えていた。</p>
-        <p><span class="speaker-yanai">箭内：</span> 見えていたのに、避けなかった。なぜですか。</p>
-        <p><span class="speaker-hanayama">花山：</span> ……避けたら、花山薫じゃなくなる。</p>
-        <p><span class="speaker-yanai">箭内：</span> 花山薫じゃなくなる。……それはどういうことですか。</p>
-        <p><span class="speaker-hanayama">花山：</span> ……俺が一歩でも退いたら、背中の侠客立ちが死ぬ。組の連中が信じている花山薫が消える。親父の名前が汚れる。</p>
-        <p><span class="speaker-yanai">箭内：</span> 組の連中が信じている花山薫。お父さんの名前。……花山さん、あなた自身はどこにいますか。</p>
-        <p><span class="speaker-hanayama">花山：</span> …………。</p>
-        <p><span class="speaker-yanai">箭内：</span> 今あなたが言ったのは、「組のため」「親父のため」「侠客立ちのため」です。花山さん自身が避けたくなかったのか、それとも、花山薫という「役割」が避けることを許さなかったのか。どちらですか。</p>
-        <p><span class="speaker-hanayama">花山：</span> …………。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> 花山さん、闘いの中で一切の攻撃を避けないですね。なぜですか。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……避ける必要がねェ。受け止められる。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> なぜ、受け止めなければならないんですか。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……受け止められるからだ。受け止められる力があるなら、避けることは卑怯だ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> なぜ、避けることは卑怯なんですか。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……強者が攻撃を避けたら、何のための強さだ。持って生まれた力を使わずに逃げるのは、力そのものへの冒涜だ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> では、仮にあなたが生まれつき強者でなかったとしたら──避けていましたか。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> …………。</p>
 
         <p class="silence">（長い沈黙）</p>
 
-        <p><span class="speaker-hanayama">花山：</span> ……わからねェ。……区別がつかねェんだ。俺自身と、花山薫という名前の区別が。物心ついた時から、俺は花山薫だった。二代目組長で、素手喧嘩で、避けない男だった。それ以外の自分を知らねェ。</p>
-        <p><span class="speaker-yanai">箭内：</span> それ以外の自分を知らない。……花山さん、あなたは今、「花山薫という名前と自分の区別がつかない」と言いましたね。……なぜ、区別がつかないんですか。</p>
-        <p><span class="speaker-hanayama">花山：</span> ……考えたことがなかった。</p>
-        <p><span class="speaker-yanai">箭内：</span> ……。</p>
-        <p><span class="speaker-hanayama">花山：</span> ……待て。俺は「強者として生まれた」。これは選んでいねェ。「組長の息子として生まれた」。これも選んでいねェ。そして「避けない」「鍛えない」「欲しがらない」ってルールが……。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……避けていた、だろうな。普通に鍛えて、普通に避けて、普通に闘っていたはずだ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> ……どう思いますか。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……ということは、避けないのは俺の美学じゃねェ。「強者として生まれた」という……ただそれだけのことに駆動されている。……俺は、避けないことを「選んだ」んじゃねェのか。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> 花山さん、スペック戦で膝を撃ち抜かれましたね。あのとき、避けようと思えば避けられましたか。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……避けられた。弾丸が来ることは見えていた。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> 見えていたのに、避けなかった。なぜですか。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……避けたら、花山薫じゃなくなる。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> 花山薫じゃなくなる。……それはどういうことですか。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……俺が一歩でも退いたら、背中の侠客立ちが死ぬ。組の連中が信じている花山薫が消える。親父の名前が汚れる。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> 組の連中が信じている花山薫。お父さんの名前。……花山さん、あなた自身はどこにいますか。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> …………。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> 今あなたが言ったのは、「組のため」「親父のため」「侠客立ちのため」です。花山さん自身が避けたくなかったのか、それとも、花山薫という「役割」が避けることを許さなかったのか。どちらですか。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> …………。</p>
+
+        <p class="silence">（長い沈黙）</p>
+
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……わからねェ。……区別がつかねェんだ。俺自身と、花山薫という名前の区別が。物心ついた時から、俺は花山薫だった。二代目組長で、素手喧嘩で、避けない男だった。それ以外の自分を知らねェ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> それ以外の自分を知らない。……花山さん、あなたは今、「花山薫という名前と自分の区別がつかない」と言いましたね。……なぜ、区別がつかないんですか。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……考えたことがなかった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> ……。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……待て。俺は「強者として生まれた」。これは選んでいねェ。「組長の息子として生まれた」。これも選んでいねェ。そして「避けない」「鍛えない」「欲しがらない」ってルールが……。</p>
 
         <p class="silence">（沈黙）</p>
 
-        <p><span class="speaker-hanayama">花山：</span> ……全部、その二つから自動的に組み上がっている。俺が決めたんじゃねェ。最初から、こうなるしかなかったのか。</p>
-        <p><span class="speaker-yanai">箭内：</span> あなたを「避けない男」にしたのは、誰ですか。</p>
-        <p><span class="speaker-hanayama">花山：</span> ……。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……全部、その二つから自動的に組み上がっている。俺が決めたんじゃねェ。最初から、こうなるしかなかったのか。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> あなたを「避けない男」にしたのは、誰ですか。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……。</p>
 
         <p class="silence">（長い沈黙）</p>
 
-        <p><span class="speaker-hanayama">花山：</span> ……誰でもねェ。ジャックみたいに、誰かに否定されたわけじゃねェ。親父は俺を愛していた。お袋も。組の連中も俺を慕ってくれている。誰にも否定されていねェ。……なのに、なぜ俺は身動きが取れねェんだ。</p>
-        <p><span class="speaker-yanai">箭内：</span> ……いい問いですね。</p>
-        <p><span class="speaker-hanayama">花山：</span> ……否定されていねェのに、自由じゃねェ。誰にも強制されていねェのに、避けられねェ。鍛えられねェ。何かを欲しがれねェ。……これは何だ。誰が俺を縛っている。</p>
-        <p><span class="speaker-yanai">箭内：</span> ……。</p>
-        <p><span class="speaker-hanayama">花山：</span> ……俺だ。俺自身が、俺を縛っている。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……誰でもねェ。ジャックみたいに、誰かに否定されたわけじゃねェ。親父は俺を愛していた。お袋も。組の連中も俺を慕ってくれている。誰にも否定されていねェ。……なのに、なぜ俺は身動きが取れねェんだ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> ……いい問いですね。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……否定されていねェのに、自由じゃねェ。誰にも強制されていねェのに、避けられねェ。鍛えられねェ。何かを欲しがれねェ。……これは何だ。誰が俺を縛っている。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> ……。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……俺だ。俺自身が、俺を縛っている。</p>
 
         <p class="silence">（沈黙）</p>
 
-        <p><span class="speaker-hanayama">花山：</span> ……親父が愛してくれた。お袋が「強い子だね」と言ってくれた。組の連中が頼ってくれた。全部、ありがてェことだ。だが……その全部が、俺を「強い花山薫」に固定した。愛されたことが、鎖になった。</p>
-        <p><span class="speaker-yanai">箭内：</span> ……。</p>
-        <p><span class="speaker-hanayama">花山：</span> ……笑えるだろう。誰かに「お前は弱い」と言われて縛られるなら、まだわかる。だが俺は「強い子だね」という愛の言葉に縛られた。否定じゃねェ。肯定だ。……肯定で人が固まるなんて、考えたこともなかった。</p>
-        <p><span class="speaker-yanai">箭内：</span> ……。</p>
-        <p><span class="speaker-hanayama">花山：</span> ……お袋が病室で俺を見るたびに、安心した顔をした。「薫は強いから大丈夫だね」って。……俺はその顔を見るたびに思った。この顔を曇らせちゃいけねェ。弱いところを見せちゃいけねェ。お袋が信じている「強い薫」を、絶対に裏切っちゃいけねェ。</p>
-        <p><span class="speaker-yanai">箭内：</span> ……。</p>
-        <p><span class="speaker-hanayama">花山：</span> ……あの時、俺は15だ。15のガキが、「弱さを見せてはならない」と自分に誓った。誰に言われたわけでもねェ。お袋に「強くあれ」と命令されたわけでもねェ。ただ、お袋の笑顔を守りたかった。……それだけの話だ。それだけの話が、俺の人生全部を決めちまった。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……親父が愛してくれた。お袋が「強い子だね」と言ってくれた。組の連中が頼ってくれた。全部、ありがてェことだ。だが……その全部が、俺を「強い花山薫」に固定した。愛されたことが、鎖になった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> ……。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……笑えるだろう。誰かに「お前は弱い」と言われて縛られるなら、まだわかる。だが俺は「強い子だね」という愛の言葉に縛られた。否定じゃねェ。肯定だ。……肯定で人が固まるなんて、考えたこともなかった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> ……。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……お袋が病室で俺を見るたびに、安心した顔をした。「薫は強いから大丈夫だね」って。……俺はその顔を見るたびに思った。この顔を曇らせちゃいけねェ。弱いところを見せちゃいけねェ。お袋が信じている「強い薫」を、絶対に裏切っちゃいけねェ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> ……。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……あの時、俺は15だ。15のガキが、「弱さを見せてはならない」と自分に誓った。誰に言われたわけでもねェ。お袋に「強くあれ」と命令されたわけでもねェ。ただ、お袋の笑顔を守りたかった。……それだけの話だ。それだけの話が、俺の人生全部を決めちまった。</p>
 
         <p class="silence">（長い沈黙）</p>
 
-        <p><span class="speaker-yanai">箭内：</span> 花山さん、宮本武蔵に斬られたとき、何を考えていましたか。</p>
-        <p><span class="speaker-hanayama">花山：</span> ……何も考えていなかった。</p>
-        <p><span class="speaker-yanai">箭内：</span> 痛みは。</p>
-        <p><span class="speaker-hanayama">花山：</span> ……あった。だが、退く気はなかった。</p>
-        <p><span class="speaker-yanai">箭内：</span> なぜですか。</p>
-        <p><span class="speaker-hanayama">花山：</span> ……退いたら、終わる。花山薫が終わる。</p>
-        <p><span class="speaker-yanai">箭内：</span> ……あなた自身は、終わりたかったですか。</p>
-        <p><span class="speaker-hanayama">花山：</span> …………。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> 花山さん、宮本武蔵に斬られたとき、何を考えていましたか。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……何も考えていなかった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> 痛みは。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……あった。だが、退く気はなかった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> なぜですか。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……退いたら、終わる。花山薫が終わる。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> ……あなた自身は、終わりたかったですか。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> …………。</p>
 
         <p class="silence">（沈黙）</p>
 
-        <p><span class="speaker-hanayama">花山：</span> ……終わりたくはなかった。だが、退きたくもなかった。退くくらいなら、斬られたほうがマシだ。</p>
-        <p><span class="speaker-yanai">箭内：</span> なぜ、斬られるほうがマシなんですか。</p>
-        <p><span class="speaker-hanayama">花山：</span> ……退いたら、俺が握ってきたものが全部、手からこぼれ落ちる。侠客立ちも、親父の名前も、お袋の笑顔も。全部。</p>
-        <p><span class="speaker-yanai">箭内：</span> ……握ってきた。</p>
-        <p><span class="speaker-hanayama">花山：</span> ……ああ。俺はずっと、握ってきた。拳で殴るんじゃねェ。握ってるんだ。手放せねェんだ。一つでも手放したら、花山薫じゃなくなる。だから全部握ったまま立ってる。痛みも、傷も、血も、全部握ったまま。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……終わりたくはなかった。だが、退きたくもなかった。退くくらいなら、斬られたほうがマシだ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> なぜ、斬られるほうがマシなんですか。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……退いたら、俺が握ってきたものが全部、手からこぼれ落ちる。侠客立ちも、親父の名前も、お袋の笑顔も。全部。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> ……握ってきた。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……ああ。俺はずっと、握ってきた。拳で殴るんじゃねェ。握ってるんだ。手放せねェんだ。一つでも手放したら、花山薫じゃなくなる。だから全部握ったまま立ってる。痛みも、傷も、血も、全部握ったまま。</p>
 
-        <p><span class="speaker-yanai">箭内：</span> 花山さん、あなたは今、何のために闘っていますか。</p>
-        <p><span class="speaker-hanayama">花山：</span> …………。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> 花山さん、あなたは今、何のために闘っていますか。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> …………。</p>
 
         <p class="silence">（長い沈黙）</p>
 
-        <p><span class="speaker-hanayama">花山：</span> ……前は「受け止めるため」と答えただろうな。だが、違う。</p>
-        <p><span class="speaker-yanai">箭内：</span> ……。</p>
-        <p><span class="speaker-hanayama">花山：</span> ……握るためだ。この拳で、全部握る。痛みも、不条理も、お袋の笑顔も、親父の名前も、全部この手で握ったまま立つ。手放さねェ。それだけだ。なぜかと聞かれたら──</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……前は「受け止めるため」と答えただろうな。だが、違う。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> ……。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……握るためだ。この拳で、全部握る。痛みも、不条理も、お袋の笑顔も、親父の名前も、全部この手で握ったまま立つ。手放さねェ。それだけだ。なぜかと聞かれたら──</p>
 
         <p class="silence">（沈黙）</p>
 
-        <p><span class="speaker-hanayama">花山：</span> ……それが俺だからだ。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……それが俺だからだ。</p>
 
-        <p><span class="speaker-yanai">箭内：</span> ……花山さん、最初に聞いた問いを、もう一度聞いていいですか。あなたはあなたに何をプレゼントしてあげたいですか。</p>
-        <p><span class="speaker-hanayama">花山：</span> …………。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> ……花山さん、最初に聞いた問いを、もう一度聞いていいですか。あなたはあなたに何をプレゼントしてあげたいですか。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> …………。</p>
 
         <p class="silence">（長い沈黙）</p>
 
-        <p><span class="speaker-hanayama">花山：</span> ……最初は「要らねェ」と言った。</p>
-        <p><span class="speaker-yanai">箭内：</span> ……。</p>
-        <p><span class="speaker-hanayama">花山：</span> ……だが、ありゃ嘘だ。要らねェんじゃねェ。……手放せねェんだ。最初から全部握ってた。握ってるから、もう受け取る手がねェ。空いてる手がねェんだ。</p>
-        <p><span class="speaker-yanai">箭内：</span> ……。</p>
-        <p><span class="speaker-hanayama">花山：</span> ……プレゼントが要らねェんじゃねェ。両手がふさがってんだ。ずっと。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……最初は「要らねェ」と言った。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> ……。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……だが、ありゃ嘘だ。要らねェんじゃねェ。……手放せねェんだ。最初から全部握ってた。握ってるから、もう受け取る手がねェ。空いてる手がねェんだ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> ……。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……プレゼントが要らねェんじゃねェ。両手がふさがってんだ。ずっと。</p>
 
         <p class="silence">（沈黙）</p>
 
-        <p><span class="speaker-hanayama">花山：</span> ……だが、それでいい。手放してまで何かを受け取る気はねェ。握ったまま立つ。それが俺のプレゼントだ。……俺が俺に贈れるのは、それだけだ。</p>
-        <p><span class="speaker-yanai">箭内：</span> ……。</p>
-        <p><span class="speaker-hanayama">花山：</span> ……お前の言う天命ってのは、これか。</p>
-        <p><span class="speaker-yanai">箭内：</span> それは私が決めることではありません。あなたが今、自分で出した言葉です。</p>
-        <p><span class="speaker-hanayama">花山：</span> ……ああ。俺の言葉だ。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……だが、それでいい。手放してまで何かを受け取る気はねェ。握ったまま立つ。それが俺のプレゼントだ。……俺が俺に贈れるのは、それだけだ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> ……。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……お前の言う天命ってのは、これか。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> それは私が決めることではありません。あなたが今、自分で出した言葉です。</p>
+        <p class="line-character"><span class="speaker-hanayama">花山：</span> ……ああ。俺の言葉だ。</p>
       </div>
 
       <div class="text-panel fade-in">

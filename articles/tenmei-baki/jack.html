@@ -29,10 +29,185 @@
   <link rel="stylesheet" href="../../css/style.css">
 
 <style>
+/* =============================================
+   視認性・読みやすさ強化CSS
+   ============================================= */
+
+/* === 1. 章見出し — 中央配置＋装飾 === */
+h2.chapter-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  color: #f0ece6;
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  position: relative;
+  padding-top: 2rem;
+}
+h2.chapter-heading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 1px;
+  background: #c0a878;
+}
+h2.chapter-heading::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(192,168,120,0.5), transparent);
+  margin: 1.2rem auto 0;
+}
+.chapter-number {
+  display: block;
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #c0a878;
+  margin-bottom: 0.6rem;
+}
+
+/* === 2. 区切り線 — 装飾付き === */
+hr {
+  border: none;
+  height: auto;
+  background: none;
+  margin: 4.5rem 0;
+  text-align: center;
+  overflow: visible;
+}
+hr::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(192,168,120,0.08) 15%, rgba(192,168,120,0.2) 50%, rgba(192,168,120,0.08) 85%, transparent 100%);
+}
+hr::after {
+  content: "◆";
+  display: block;
+  font-size: 0.5rem;
+  color: rgba(192,168,120,0.3);
+  margin-top: -0.35em;
+  letter-spacing: 1em;
+  line-height: 1;
+}
+
+/* === 3. セッション対話 — 読みやすさ向上 === */
+.session-dialogue {
+  max-width: 680px;
+  margin: 2.5rem auto;
+  padding: 2.5rem 2rem;
+  background: rgba(10, 8, 18, 0.35);
+  border: 1px solid rgba(192,168,120,0.06);
+  border-radius: 2px;
+  position: relative;
+}
+.session-dialogue::before {
+  content: "SESSION";
+  position: absolute;
+  top: -0.6em;
+  left: 2rem;
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  color: rgba(192,168,120,0.4);
+  background: #0c0a14;
+  padding: 0 0.8rem;
+}
+.session-dialogue p {
+  margin-bottom: 1.1em;
+  line-height: 2.2;
+}
+.session-dialogue .speaker-yanai { color: #c0a878; font-weight: 600; font-size: 0.92rem; }
+.session-dialogue .speaker-jack { color: #e8e4df; font-weight: 600; font-size: 0.92rem; }
+
+/* 箭内の発言：金色の左ボーダー */
+.session-dialogue .line-yanai {
+  border-left: 2px solid rgba(192,168,120,0.15);
+  padding-left: 1.2rem;
+}
+/* キャラの発言：少しインデント */
+.session-dialogue .line-character {
+  margin-left: 1.4rem;
+}
+/* 沈黙マーカー：中央揃え＋装飾線 */
+.session-dialogue .silence {
+  color: rgba(235,232,225,0.3);
+  font-style: italic;
+  text-align: center;
+  margin: 2em 0;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+}
+.session-dialogue .silence::before,
+.session-dialogue .silence::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: rgba(192,168,120,0.15);
+  vertical-align: middle;
+  margin: 0 1em;
+}
+/* 10発言ごとの視覚リズム */
+.session-dialogue p:nth-child(10n) {
+  margin-bottom: 2em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid rgba(192,168,120,0.06);
+}
+
+/* === 4. text-panel の単調さ解消 === */
+section > .text-panel:nth-of-type(even) {
+  background: rgba(8, 6, 16, 0.45);
+  border-color: transparent;
+}
+section > .text-panel:nth-of-type(even)::before {
+  display: none;
+}
+
+/* === 5. highlight-block の存在感微増 === */
+.highlight-block {
+  background: rgba(192,168,120,0.06);
+  border-left: 2px solid;
+  border-image: linear-gradient(180deg, #c0a878 0%, rgba(192,168,120,0.15) 100%) 1;
+  padding: 2rem 2rem 2rem 2.2rem;
+  margin: 2.5rem 0;
+}
+.highlight-block p {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 2.2;
+  color: #f0ece6;
+}
+
+/* === 6. セクション見出し（h3） === */
+h3.section-heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #e8e4df;
+  letter-spacing: 0.08em;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1.2rem;
+  border-left: 2px solid rgba(192,168,120,0.4);
+  line-height: 1.6;
+}
+
 /* === Profiling Block === */
 .profiling-block {
   background: rgba(15,12,25,0.5);
-  border: 1px solid rgba(192,168,120,0.12);
+  border: 1px solid rgba(192,168,120,0.1);
   padding: 2.5rem 2rem;
   margin: 2rem 0;
   backdrop-filter: blur(8px);
@@ -47,11 +222,13 @@
   background: linear-gradient(90deg, transparent, rgba(192,168,120,0.4), transparent);
 }
 .profiling-block h3 {
-  font-size: 1rem;
+  font-size: 0.92rem;
   color: #c0a878;
   letter-spacing: 0.15em;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
   font-weight: 600;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(192,168,120,0.1);
 }
 .profiling-block ul {
   list-style: none;
@@ -59,19 +236,27 @@
   margin: 0 0 1.5rem 0;
 }
 .profiling-block ul li {
-  margin-bottom: 0.6rem;
+  margin-bottom: 1rem;
   color: #c0bbb4;
-  font-size: 0.92rem;
-  line-height: 2;
-  padding-left: 1.2em;
+  font-size: 0.9rem;
+  line-height: 1.9;
+  padding-left: 1.6em;
   position: relative;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(192,168,120,0.04);
+}
+.profiling-block ul li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 .profiling-block ul li::before {
   content: "──";
   position: absolute;
   left: 0;
-  color: rgba(192,168,120,0.3);
-  font-size: 0.8em;
+  top: 0;
+  color: rgba(192,168,120,0.35);
+  font-size: 0.75em;
 }
 
 /* === Comparison Table === */
@@ -95,17 +280,6 @@
   font-size: 0.82rem;
 }
 .comparison-table td { color: #c0bbb4; }
-
-/* === Session Dialogue === */
-.session-dialogue { max-width: 680px; margin: 2rem auto; }
-.session-dialogue p { margin-bottom: 1em; line-height: 2.2; }
-.session-dialogue .speaker-yanai { color: #c0a878; font-weight: 600; }
-.session-dialogue .speaker-jack { color: #e8e4df; font-weight: 600; }
-.session-dialogue .silence {
-  color: rgba(235,232,225,0.4);
-  font-style: italic;
-  margin: 1.5em 0;
-}
 
 /* === CTA Block === */
 .cta-block {
@@ -157,18 +331,49 @@
   color: rgba(235,232,225,0.35);
 }
 
-/* === Mobile === */
+/* === 7. モバイル対応 === */
 @media (max-width: 600px) {
+  h2.chapter-heading {
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    padding-top: 1.5rem;
+  }
+  .chapter-number {
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    margin-bottom: 0.4rem;
+  }
+  h3.section-heading {
+    font-size: 1rem;
+    margin-top: 2rem;
+    padding-left: 1rem;
+  }
+  hr { margin: 3rem 0; }
+  .session-dialogue {
+    padding: 1.5rem 1.2rem;
+    margin: 2rem auto;
+  }
+  .session-dialogue .line-yanai { padding-left: 0.8rem; }
+  .session-dialogue .line-character { margin-left: 0.8rem; }
   .profiling-block { padding: 1.5rem 1.2rem; }
   .cta-block { padding: 2rem 1.2rem; }
   .comparison-table { font-size: 0.78rem; }
   .comparison-table th, .comparison-table td { padding: 0.5rem 0.6rem; }
+  .highlight-block { padding: 1.5rem 1.2rem 1.5rem 1.4rem; }
+  .text-panel { padding: 2rem 1.5rem; }
 }
 @media (max-width: 480px) {
   .text-panel p br,
   .pull-quote p br,
   .highlight-block p br,
-  .def-box p br { display: none; }
+  .def-box p br,
+  .session-dialogue p br { display: none; }
+  h2.chapter-heading { font-size: 1.15rem; }
+  .session-dialogue p:nth-child(10n) {
+    margin-bottom: 1.5em;
+    padding-bottom: 1em;
+  }
 }
 </style>
 </head>
@@ -318,114 +523,114 @@
       </div>
 
       <div class="session-dialogue fade-in">
-        <p><span class="speaker-yanai">箭内：</span> ジャック、セッションに来てくれてありがとう。あなたはあなたに何をプレゼントしてあげたいのですか？</p>
-        <p><span class="speaker-jack">ジャック：</span> 勇次郎を超えたい。そんな自分をプレゼントしてあげたい。</p>
-        <p><span class="speaker-yanai">箭内：</span> なるほど。では、それをプレゼントできていないのですか？</p>
-        <p><span class="speaker-jack">ジャック：</span>…できることはすべてやっている。しかし超えられていない。</p>
-        <p><span class="speaker-yanai">箭内：</span> ジャック、そもそもあなたは何のために闘っていますか？</p>
-        <p><span class="speaker-jack">ジャック：</span> 勇次郎を超えるためだ。それ以外にない。</p>
-        <p><span class="speaker-yanai">箭内：</span> なぜ、勇次郎なんですか。</p>
-        <p><span class="speaker-jack">ジャック：</span> あの男が最強だからだ。最強を倒すことが、最強の証明になる。</p>
-        <p><span class="speaker-yanai">箭内：</span> では、何のために最強を証明するんですか。</p>
-        <p><span class="speaker-jack">ジャック：</span> ……それが格闘家の存在意義だろう。</p>
-        <p><span class="speaker-yanai">箭内：</span> 格闘家の存在意義。では、仮に勇次郎がいなかったとしたら──あなたは何のために闘っていますか。</p>
-        <p><span class="speaker-jack">ジャック：</span> ……いなかった？</p>
-        <p><span class="speaker-yanai">箭内：</span> 勇次郎がこの世にいない世界で、あなたは格闘をしていますか。</p>
-        <p><span class="speaker-jack">ジャック：</span> …………している。</p>
-        <p><span class="speaker-yanai">箭内：</span> 何のために。</p>
-        <p><span class="speaker-jack">ジャック：</span> ……強くなるためだ。</p>
-        <p><span class="speaker-yanai">箭内：</span> なぜ、強くならなければいけないんですか。</p>
-        <p><span class="speaker-jack">ジャック：</span> ……強くなければ、意味がないからだ。</p>
-        <p><span class="speaker-yanai">箭内：</span> 何の意味がないんですか。</p>
-        <p><span class="speaker-jack">ジャック：</span> ……俺の存在の意味だ。強くなければ、俺がここにいる理由がない。</p>
-        <p><span class="speaker-yanai">箭内：</span> なぜ、そう思うんですか。</p>
-        <p><span class="speaker-jack">ジャック：</span> ……俺は獄中で生まれた。母親は暴行されて俺を身籠った。俺がここにいること自体に意味がなかった。だから、意味をつくらなきゃならなかった。強さで。</p>
-        <p><span class="speaker-yanai">箭内：</span> 「ここにいること自体に意味がなかった」。なぜ、そう感じるんですか。</p>
-        <p><span class="speaker-jack">ジャック：</span> ……望まれて生まれたわけじゃないからだ。母は俺を愛してくれた。だが、俺が生まれた経緯は……あの男の暴力だ。俺の存在の起点は、暴力だ。</p>
-        <p><span class="speaker-yanai">箭内：</span> あなたの存在の起点が暴力だったから、存在に意味がない。</p>
-        <p><span class="speaker-jack">ジャック：</span> ……そうだ。</p>
-        <p><span class="speaker-yanai">箭内：</span> それは、なぜですか。起点が暴力であることと、あなたの存在に意味がないことは、なぜイコールなんですか。</p>
-        <p><span class="speaker-jack">ジャック：</span> …………。</p>
-        <p><span class="speaker-yanai">箭内：</span> ……。</p>
-        <p><span class="speaker-jack">ジャック：</span> ……親父が、そう言ったからだ。「血が薄い」と。俺はあの男の中で、最初から無価値だった。</p>
-        <p><span class="speaker-yanai">箭内：</span> 勇次郎が「血が薄い」と言った。それが、あなたが強さで存在を証明しなければならない理由になった。</p>
-        <p><span class="speaker-jack">ジャック：</span> ……ああ。あの男に否定されたから、あの男を超えることでしか……。</p>
-        <p><span class="speaker-yanai">箭内：</span> ジャック、ここで一つ聞いていいですか。あなたは今、「勇次郎に否定されたから、勇次郎を超えることで存在を証明する」と言った。それは、どういう構造ですか。</p>
-        <p><span class="speaker-jack">ジャック：</span> ……どういう構造だ？</p>
-        <p><span class="speaker-yanai">箭内：</span> 否定してきた相手に、認められることでしか、自分の存在を肯定できない。あなたは自分でこの構造に気づいていますか。</p>
-        <p><span class="speaker-jack">ジャック：</span> …………。</p>
-        <p><span class="speaker-yanai">箭内：</span> あなたを否定した人間の基準で、自分の価値を測っている。なぜ、その基準を採用しているんですか。</p>
-        <p><span class="speaker-jack">ジャック：</span> ……俺は……。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> ジャック、セッションに来てくれてありがとう。あなたはあなたに何をプレゼントしてあげたいのですか？</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> 勇次郎を超えたい。そんな自分をプレゼントしてあげたい。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> なるほど。では、それをプレゼントできていないのですか？</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span>…できることはすべてやっている。しかし超えられていない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> ジャック、そもそもあなたは何のために闘っていますか？</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> 勇次郎を超えるためだ。それ以外にない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> なぜ、勇次郎なんですか。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> あの男が最強だからだ。最強を倒すことが、最強の証明になる。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> では、何のために最強を証明するんですか。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> ……それが格闘家の存在意義だろう。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> 格闘家の存在意義。では、仮に勇次郎がいなかったとしたら──あなたは何のために闘っていますか。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> ……いなかった？</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> 勇次郎がこの世にいない世界で、あなたは格闘をしていますか。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> …………している。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> 何のために。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> ……強くなるためだ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> なぜ、強くならなければいけないんですか。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> ……強くなければ、意味がないからだ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> 何の意味がないんですか。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> ……俺の存在の意味だ。強くなければ、俺がここにいる理由がない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> なぜ、そう思うんですか。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> ……俺は獄中で生まれた。母親は暴行されて俺を身籠った。俺がここにいること自体に意味がなかった。だから、意味をつくらなきゃならなかった。強さで。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> 「ここにいること自体に意味がなかった」。なぜ、そう感じるんですか。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> ……望まれて生まれたわけじゃないからだ。母は俺を愛してくれた。だが、俺が生まれた経緯は……あの男の暴力だ。俺の存在の起点は、暴力だ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> あなたの存在の起点が暴力だったから、存在に意味がない。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> ……そうだ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> それは、なぜですか。起点が暴力であることと、あなたの存在に意味がないことは、なぜイコールなんですか。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> …………。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> ……。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> ……親父が、そう言ったからだ。「血が薄い」と。俺はあの男の中で、最初から無価値だった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> 勇次郎が「血が薄い」と言った。それが、あなたが強さで存在を証明しなければならない理由になった。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> ……ああ。あの男に否定されたから、あの男を超えることでしか……。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> ジャック、ここで一つ聞いていいですか。あなたは今、「勇次郎に否定されたから、勇次郎を超えることで存在を証明する」と言った。それは、どういう構造ですか。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> ……どういう構造だ？</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> 否定してきた相手に、認められることでしか、自分の存在を肯定できない。あなたは自分でこの構造に気づいていますか。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> …………。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> あなたを否定した人間の基準で、自分の価値を測っている。なぜ、その基準を採用しているんですか。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> ……俺は……。</p>
 
         <p class="silence">（長い沈黙）</p>
 
-        <p><span class="speaker-jack">ジャック：</span> ……わからない。なぜだ。なぜ俺は、あの男の基準で自分を測っている。あの男が「血が薄い」と言った。たった一言だ。たった一言で……俺の二十年間は、あの一言に支配されていたのか？</p>
-        <p><span class="speaker-yanai">箭内：</span> ……。</p>
-        <p><span class="speaker-jack">ジャック：</span> ……ドーピングも、骨延長も、あの一言を覆すためだったのか。俺が決めたと思っていた。全部、俺自身の意志で選んだと。だが……あの一言がなかったら、俺はあんなことをしていたか？</p>
-        <p><span class="speaker-yanai">箭内：</span> ……どう思いますか。</p>
-        <p><span class="speaker-jack">ジャック：</span> ……していない。していないだろう。では、俺の意志とは何だ。俺は本当に選んでいたのか。それとも……。</p>
-        <p><span class="speaker-yanai">箭内：</span> ……。</p>
-        <p><span class="speaker-jack">ジャック：</span> ……駆動されていただけか。あの一言に。母の無念に。範馬の血に。全部、俺が選んだんじゃない。俺は……最初から、一つも選んでいなかったのか。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> ……わからない。なぜだ。なぜ俺は、あの男の基準で自分を測っている。あの男が「血が薄い」と言った。たった一言だ。たった一言で……俺の二十年間は、あの一言に支配されていたのか？</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> ……。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> ……ドーピングも、骨延長も、あの一言を覆すためだったのか。俺が決めたと思っていた。全部、俺自身の意志で選んだと。だが……あの一言がなかったら、俺はあんなことをしていたか？</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> ……どう思いますか。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> ……していない。していないだろう。では、俺の意志とは何だ。俺は本当に選んでいたのか。それとも……。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> ……。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> ……駆動されていただけか。あの一言に。母の無念に。範馬の血に。全部、俺が選んだんじゃない。俺は……最初から、一つも選んでいなかったのか。</p>
 
         <p class="silence">（沈黙）</p>
 
-        <p><span class="speaker-yanai">箭内：</span> ジャック、最大トーナメントの決勝で「JACK範馬」と名乗りましたね。なぜですか。</p>
-        <p><span class="speaker-jack">ジャック：</span> ……俺が何者かを示すためだ。</p>
-        <p><span class="speaker-yanai">箭内：</span> なぜ、示す必要があったんですか。</p>
-        <p><span class="speaker-jack">ジャック：</span> ……範馬の血を引いていることを、全員に知らしめるためだ。</p>
-        <p><span class="speaker-yanai">箭内：</span> 範馬であることは事実ですよね。事実を、わざわざ名乗る必要があるのはなぜですか。</p>
-        <p><span class="speaker-jack">ジャック：</span> ……事実だが……認められていない事実だからだ。親父には否定された。弟には……初めから当然のように認められている。俺だけが、証明しなければならなかった。</p>
-        <p><span class="speaker-yanai">箭内：</span> あなただけが証明しなければならない。なぜ、あなただけなんですか。</p>
-        <p><span class="speaker-jack">ジャック：</span> ……「血が薄い」からだ。俺は……不十分だから。ありのままでは不十分だから、上書きしなければ……。</p>
-        <p><span class="speaker-yanai">箭内：</span> ……。</p>
-        <p><span class="speaker-jack">ジャック：</span> ……待て。今、俺は何を言った。「ありのままでは不十分」。……俺はそう信じている。なぜだ。誰がそう決めた。</p>
-        <p><span class="speaker-yanai">箭内：</span> ……。</p>
-        <p><span class="speaker-jack">ジャック：</span> ……親父だ。親父が決めた。あの男が「血が薄い」と言った、ただそれだけで──俺は自分のありのままを否定した。二十年以上、俺は自分を壊し続けてきた。薬で。骨で。全部。あの男の一言を、俺自身が事実として受け入れてしまったから。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> ジャック、最大トーナメントの決勝で「JACK範馬」と名乗りましたね。なぜですか。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> ……俺が何者かを示すためだ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> なぜ、示す必要があったんですか。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> ……範馬の血を引いていることを、全員に知らしめるためだ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> 範馬であることは事実ですよね。事実を、わざわざ名乗る必要があるのはなぜですか。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> ……事実だが……認められていない事実だからだ。親父には否定された。弟には……初めから当然のように認められている。俺だけが、証明しなければならなかった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> あなただけが証明しなければならない。なぜ、あなただけなんですか。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> ……「血が薄い」からだ。俺は……不十分だから。ありのままでは不十分だから、上書きしなければ……。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> ……。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> ……待て。今、俺は何を言った。「ありのままでは不十分」。……俺はそう信じている。なぜだ。誰がそう決めた。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> ……。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> ……親父だ。親父が決めた。あの男が「血が薄い」と言った、ただそれだけで──俺は自分のありのままを否定した。二十年以上、俺は自分を壊し続けてきた。薬で。骨で。全部。あの男の一言を、俺自身が事実として受け入れてしまったから。</p>
 
         <p class="silence">（長い沈黙）</p>
 
-        <p><span class="speaker-jack">ジャック：</span> ……だが、それは事実なのか？　「血が薄い」というのは、本当に事実なのか。あの男が言ったというだけで、なぜ俺はそれを疑わなかった。</p>
-        <p><span class="speaker-yanai">箭内：</span> ……いい問いですね。</p>
-        <p><span class="speaker-jack">ジャック：</span> ……俺は、一度も疑わなかった。あの一言を、宇宙の真理のように受け入れていた。馬鹿だ。俺は二十年間、検証もせずに、一つの言葉を信じ続けていた。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> ……だが、それは事実なのか？　「血が薄い」というのは、本当に事実なのか。あの男が言ったというだけで、なぜ俺はそれを疑わなかった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> ……いい問いですね。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> ……俺は、一度も疑わなかった。あの一言を、宇宙の真理のように受け入れていた。馬鹿だ。俺は二十年間、検証もせずに、一つの言葉を信じ続けていた。</p>
 
-        <p><span class="speaker-yanai">箭内：</span> ジャック、刃牙と勇次郎が闘っているのを見て、あなたは泣いた。あの涙は何のための涙でしたか。</p>
-        <p><span class="speaker-jack">ジャック：</span> ……。</p>
-
-        <p class="silence">（沈黙）</p>
-
-        <p><span class="speaker-jack">ジャック：</span> ……俺も、あの場所にいたかった。刃牙の隣に。親父の前に。勝ち負けじゃない。ただ……拳を交わしたかった。「お前もここにいていい」と……言ってほしかったのかもしれない。</p>
-        <p><span class="speaker-yanai">箭内：</span> ……。</p>
-        <p><span class="speaker-jack">ジャック：</span> ……笑えるだろう。二十年間、「超えてやる」と叫び続けてきた男が、本当に欲しかったのは「ここにいていい」という一言だったなんて。……俺は強さが欲しかったんじゃない。ずっと……ただ……。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> ジャック、刃牙と勇次郎が闘っているのを見て、あなたは泣いた。あの涙は何のための涙でしたか。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> ……。</p>
 
         <p class="silence">（沈黙）</p>
 
-        <p><span class="speaker-jack">ジャック：</span> ……見てほしかった。俺を見てほしかった。それだけだった。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> ……俺も、あの場所にいたかった。刃牙の隣に。親父の前に。勝ち負けじゃない。ただ……拳を交わしたかった。「お前もここにいていい」と……言ってほしかったのかもしれない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> ……。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> ……笑えるだろう。二十年間、「超えてやる」と叫び続けてきた男が、本当に欲しかったのは「ここにいていい」という一言だったなんて。……俺は強さが欲しかったんじゃない。ずっと……ただ……。</p>
+
+        <p class="silence">（沈黙）</p>
+
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> ……見てほしかった。俺を見てほしかった。それだけだった。</p>
 
         <p class="silence">（長い沈黙）</p>
 
-        <p><span class="speaker-yanai">箭内：</span> ……ジャック、噛道を始めてからのことを聞いていいですか。歯を全部失った後、あなたに何が起きましたか。</p>
-        <p><span class="speaker-jack">ジャック：</span> ……ピクルに顎を砕かれ、本部に歯を根こそぎ奪われた。闘う手段を全部失った。今まで足してきたもの──薬、骨、筋肉、全部意味がなくなった。</p>
-        <p><span class="speaker-yanai">箭内：</span> そのとき、何のために闘おうとしましたか。</p>
-        <p><span class="speaker-jack">ジャック：</span> ……何のため、か。……わからなかった。初めてだった。何のために闘うのか、わからなくなったのは。手段も理由も、全部なくなった。</p>
-        <p><span class="speaker-yanai">箭内：</span> なくなった後に、何が起きましたか。</p>
-        <p><span class="speaker-jack">ジャック：</span> ……チタンの歯を入れた。だが、前とは違った。前は「足りないから足す」だった。今度は違う。奪われたものを起点にして、新しい技術体系をつくった。噛道だ。噛み砕くことそのものを武術にした。</p>
-        <p><span class="speaker-yanai">箭内：</span> なぜ、それが前と違うんですか。</p>
-        <p><span class="speaker-jack">ジャック：</span> ……前は、「不十分な自分」を上書きするために足していた。恐怖から足していた。だが噛道は違う。奪われた事実を否定していない。歯がないという現実をそのまま受け入れて、そこから始めている。初めて、俺は自分に何かを「足す」んじゃなく、自分から何かを「生み出した」。</p>
-        <p><span class="speaker-yanai">箭内：</span> その違いは、あなたにとって何を意味していますか。</p>
-        <p><span class="speaker-jack">ジャック：</span> ……。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> ……ジャック、噛道を始めてからのことを聞いていいですか。歯を全部失った後、あなたに何が起きましたか。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> ……ピクルに顎を砕かれ、本部に歯を根こそぎ奪われた。闘う手段を全部失った。今まで足してきたもの──薬、骨、筋肉、全部意味がなくなった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> そのとき、何のために闘おうとしましたか。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> ……何のため、か。……わからなかった。初めてだった。何のために闘うのか、わからなくなったのは。手段も理由も、全部なくなった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> なくなった後に、何が起きましたか。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> ……チタンの歯を入れた。だが、前とは違った。前は「足りないから足す」だった。今度は違う。奪われたものを起点にして、新しい技術体系をつくった。噛道だ。噛み砕くことそのものを武術にした。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> なぜ、それが前と違うんですか。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> ……前は、「不十分な自分」を上書きするために足していた。恐怖から足していた。だが噛道は違う。奪われた事実を否定していない。歯がないという現実をそのまま受け入れて、そこから始めている。初めて、俺は自分に何かを「足す」んじゃなく、自分から何かを「生み出した」。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> その違いは、あなたにとって何を意味していますか。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> ……。</p>
 
         <p class="silence">（沈黙）</p>
 
-        <p><span class="speaker-jack">ジャック：</span> ……俺はずっと、ありのままの自分を否定してきた。だから足し続けた。だが、全部奪われて、足すものがなくなったとき──ありのままの自分しか残らなかった。そして、そのありのままから道が生まれた。……おかしな話だ。二十年間、否定し続けたものが、起点だったとは。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> ……俺はずっと、ありのままの自分を否定してきた。だから足し続けた。だが、全部奪われて、足すものがなくなったとき──ありのままの自分しか残らなかった。そして、そのありのままから道が生まれた。……おかしな話だ。二十年間、否定し続けたものが、起点だったとは。</p>
 
-        <p><span class="speaker-yanai">箭内：</span> ジャック、今あなたは何のために闘っていますか。</p>
-        <p><span class="speaker-jack">ジャック：</span> ……前は「勇次郎を超えるため」と答えた。</p>
-        <p><span class="speaker-yanai">箭内：</span> 今は？</p>
-        <p><span class="speaker-jack">ジャック：</span> ……今は、わからない。勇次郎のためじゃない。刃牙のためでもない。誰かに見てもらうためでもない。ただ、噛み砕く。歯で。道で。俺のやり方で。なぜかと聞かれたら……それが俺だからだ、としか言えない。</p>
-        <p><span class="speaker-yanai">箭内：</span> ……。</p>
-        <p><span class="speaker-jack">ジャック：</span> ……何のためでもなく、ただ「それが俺だ」と言えるものがある。……これが、お前の言う天命とかいうやつか。</p>
-        <p><span class="speaker-yanai">箭内：</span> それは私が決めることではありません。あなたが今、自分で出した言葉です。</p>
-        <p><span class="speaker-jack">ジャック：</span> ……ああ。俺の言葉だ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> ジャック、今あなたは何のために闘っていますか。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> ……前は「勇次郎を超えるため」と答えた。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> 今は？</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> ……今は、わからない。勇次郎のためじゃない。刃牙のためでもない。誰かに見てもらうためでもない。ただ、噛み砕く。歯で。道で。俺のやり方で。なぜかと聞かれたら……それが俺だからだ、としか言えない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> ……。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> ……何のためでもなく、ただ「それが俺だ」と言えるものがある。……これが、お前の言う天命とかいうやつか。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span> それは私が決めることではありません。あなたが今、自分で出した言葉です。</p>
+        <p class="line-character"><span class="speaker-jack">ジャック：</span> ……ああ。俺の言葉だ。</p>
       </div>
 
       <div class="text-panel fade-in">
