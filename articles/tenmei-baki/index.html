@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-baki/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>キャラクターのMeta ── 刃牙シリーズ篇 | 実存科学研究所</title>
+  <meta name="description" content="『グラップラー刃牙』のジャック・ハンマー、花山薫、烈海王、愚地独歩。彼らの深層心理を実存科学の視点──Meta、シャドウ、天命──で構造的に読み解くシリーズの総合案内。">
+  <meta property="og:title" content="キャラクターのMeta ── 刃牙シリーズ篇 | 実存科学研究所">
+  <meta property="og:description" content="『グラップラー刃牙』のジャック・ハンマー、花山薫、烈海王、愚地独歩の深層心理を実存科学の視点で構造的に読み解くシリーズ。">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="実存科学研究所">
+  <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+
+<style>
+/* === Article Cards === */
+.article-card {
+  background: rgba(15,12,25,0.5);
+  border: 1px solid rgba(192,168,120,0.1);
+  padding: 2.5rem 2rem;
+  margin: 2rem 0;
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+.article-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(192,168,120,0.4), transparent);
+}
+.article-card__number {
+  display: block;
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #c0a878;
+  margin-bottom: 0.6rem;
+}
+.article-card h3 {
+  font-size: 1.2rem;
+  color: #f0ece6;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.06em;
+}
+.article-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+.article-card ul li {
+  margin-bottom: 0.8rem;
+  color: #c0bbb4;
+  font-size: 0.88rem;
+  line-height: 1.8;
+  padding-left: 1.6em;
+  position: relative;
+}
+.article-card ul li::before {
+  content: "──";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgba(192,168,120,0.35);
+  font-size: 0.75em;
+}
+.article-card .card-hook {
+  background: rgba(192,168,120,0.06);
+  border-left: 2px solid;
+  border-image: linear-gradient(180deg, #c0a878 0%, rgba(192,168,120,0.15) 100%) 1;
+  padding: 1.2rem 1.5rem;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 2;
+  color: #f0ece6;
+}
+.article-card .card-target {
+  font-size: 0.85rem;
+  color: rgba(192,168,120,0.6);
+  font-style: italic;
+  margin-bottom: 1.2rem;
+}
+.article-card .card-link {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: #c0a878;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid rgba(192,168,120,0.3);
+  padding-bottom: 0.2em;
+  transition: opacity 0.2s;
+}
+.article-card .card-link:hover { opacity: 0.7; }
+
+/* === Author Block === */
+.author-block {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(192,168,120,0.15);
+}
+.author-block p { font-size: 0.88rem; color: #c0bbb4; line-height: 2; }
+.author-block strong { color: #e8e4df; }
+
+/* === Source Note === */
+.source-note {
+  margin-top: 2rem;
+  font-size: 0.82rem;
+  color: rgba(235,232,225,0.35);
+}
+
+/* === Series Note === */
+.series-note {
+  margin-top: 2rem;
+  padding: 1.5rem 2rem;
+  background: rgba(192,168,120,0.04);
+  border: 1px solid rgba(192,168,120,0.1);
+  font-size: 0.88rem;
+  color: #c0bbb4;
+  line-height: 2;
+}
+
+/* === CTA Block === */
+.cta-block {
+  background: rgba(192,168,120,0.06);
+  border: 1px solid rgba(192,168,120,0.2);
+  padding: 2.5rem 2rem;
+  margin: 3rem 0;
+  text-align: center;
+}
+.cta-block h3 {
+  font-size: 1.1rem;
+  color: #e8e4df;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.cta-block p {
+  font-size: 0.92rem;
+  color: #c0bbb4;
+  line-height: 2.2;
+  margin-bottom: 1.2rem;
+}
+.cta-block .cta-btn {
+  display: inline-block;
+  padding: 0.8rem 2.5rem;
+  background: #c0a878;
+  color: #080610;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  transition: opacity 0.2s;
+  border-bottom: none;
+}
+.cta-block .cta-btn:hover { opacity: 0.8; }
+
+/* === Mobile === */
+@media (max-width: 600px) {
+  .article-card { padding: 1.5rem 1.2rem; }
+  .article-card h3 { font-size: 1.05rem; }
+  .article-card .card-hook { padding: 1rem 1.2rem; }
+  .cta-block { padding: 2rem 1.2rem; }
+}
+@media (max-width: 480px) {
+  .text-panel p br,
+  .pull-quote p br,
+  .highlight-block p br,
+  .def-box p br { display: none; }
+}
+</style>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="../../index.html" class="site-logo">実存科学研究所</a>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="global-nav">
+        <a href="../../index.html">Top</a>
+        <a href="../../beginner.html">Guide</a>
+        <a href="../../epistemology.html">Epistemology</a>
+        <a href="../../semantics.html">Semantics</a>
+        <a href="../../society.html">Society</a>
+        <a href="../../founder.html">Founder</a>
+        <a href="../../session.html">Session</a>
+        <a href="../../specials.html">Specials</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">More</button>
+          <div class="nav-dropdown__menu">
+            <a href="../../metaplay.html">Meta Play™</a>
+            <a href="../../dark-side/">ダークサイド診断</a>
+            <a href="../../omoidasu/">身体的知性診断</a>
+            <a href="../../trial.html">無料トライアル</a>
+            <a href="../../session-menu.html">12の対話（領域）</a>
+            <a href="../../letters.html">21の手紙</a>
+            <a href="../../uniqueness.html">独自性と射程</a>
+            <a href="../../faq.html">FAQ</a>
+            <a href="../../archives.html">記事一覧</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="page-hero__sub">Character's Meta — Baki Series</p>
+      <h1>キャラクターのMeta</h1>
+      <p class="page-hero__lead">自由意志なき世界の天命論 ── 刃牙シリーズ篇<br>箭内宏紀｜実存科学研究所</p>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <!-- ========== セクション1: なぜ作ったのか ========== -->
+    <section class="fade-in">
+
+      <div class="text-panel fade-in">
+        <p>私は20年以上、板垣恵介の『グラップラー刃牙』を読んできた。</p>
+        <p>格闘漫画としてではない。<br>
+        人間が「変えられないもの」にどう駆動されるかを、最も残酷に、最も美しく描いた作品として。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>実存科学の理論は、あなた自身に適用されたとき、最も深く機能する。<br>
+        しかし、いきなり自分のMetaを直視するのは苦しい。</p>
+        <p>だからこそ、フィクションの力を借りる。</p>
+        <p>漫画のキャラクターには「Meta」がある。選べなかった出生、育った環境、与えられた身体。<br>
+        彼らにも「シャドウ」がある。抑圧された本音、無意識の欲求、止められない衝動。<br>
+        そして彼らにも「天命」がある。すべてのMetaが収束する、たった一つの動詞。</p>
+        <p>構造は、あなたと同じだ。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>フィクションのキャラクターを読み解くことは、「他人事」ではない。<br>
+        あなた自身の構造を、安全な距離から観測する行為である。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>本シリーズでは、実存科学の「天命の言語化セッション™」で用いる対話技法──<strong>「なぜ？」</strong>と<strong>「何のために？」</strong>──を、漫画のキャラクターに対して適用する。</p>
+        <p>私は彼らにセッションを行う。<br>
+        彼らのMetaをプロファイリングし、シャドウを構造的に分析し、天命を言語化する。</p>
+        <p>その過程を、すべて公開する。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>各記事は、異なるタイプの読者に響くように設計されている。</p>
+        <p>変えられない欠損に苦しむ人へ。<br>
+        期待される「役割」に縛られた人へ。<br>
+        自分がすでに天命を生きていることに気づいていない人へ。</p>
+        <p>あなたと同じ構造を持ったキャラクターが、このシリーズのどこかにいる。</p>
+      </div>
+    </section>
+
+    <hr class="separator">
+
+    <!-- ========== セクション2: シリーズの構造 ========== -->
+    <section class="fade-in">
+
+      <div class="def-box fade-in">
+        <p class="def-box__term">Character's Meta</p>
+        <p>「キャラクターのMeta」とは、漫画・映画・物語の登場人物を、実存科学の三つの構造──Meta（変えられない前提条件）、シャドウ（抑圧された影）、天命（Metaの必然的収束点）──で読み解くシリーズである。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>各記事は同一の構造で展開される。</p>
+        <p>第一に、キャラクターの「シャドウ・プロファイリング」。<br>
+        選べなかった出生、環境、身体、関係性──そのすべてをMetaとして構造化し、そこから形成されたシャドウを特定する。</p>
+        <p>第二に、「天命の言語化セッション」。<br>
+        キャラクターに対して「なぜ？」「何のために？」を問い続け、天命を言語化する。</p>
+        <p>第三に、物語に沿った構造分析。<br>
+        プロファイリングとセッションの根拠を、作品の描写に基づいて詳細に辿る。</p>
+      </div>
+
+      <div class="pull-quote fade-in">
+        <p>彼らは「天命」を選んだのではない。<br>Metaが、天命を選んだのだ。</p>
+      </div>
+    </section>
+
+    <hr class="separator">
+
+    <!-- ========== セクション3: 全記事一覧 ========== -->
+    <section class="fade-in">
+
+      <!-- Article 01 -->
+      <div class="article-card fade-in">
+        <span class="article-card__number">Article 01</span>
+        <h3>ジャック・ハンマーのMeta</h3>
+        <ul>
+          <li>シャドウ：闇のシャドウ ── 「ありのままでは無価値だ」</li>
+          <li>連鎖：外部否定 ── 父の一言「血が薄い」</li>
+          <li>天命動詞：噛み砕く</li>
+        </ul>
+        <div class="card-hook">変えられないものを噛み砕いた先に、天命がある。</div>
+        <p class="card-target">選べなかった欠損やトラウマに苦しむ人へ。</p>
+        <a href="jack.html" class="card-link">ジャック・ハンマーのMetaを読む &rarr;</a>
+      </div>
+
+      <!-- Article 02 -->
+      <div class="article-card fade-in">
+        <span class="article-card__number">Article 02</span>
+        <h3>花山薫のMeta</h3>
+        <ul>
+          <li>シャドウ：ゴールデンシャドウ（光の影）── 強さという呪縛</li>
+          <li>連鎖：内的誓約 ── 母の微笑み</li>
+          <li>天命動詞：握る</li>
+        </ul>
+        <div class="card-hook">光の呪縛を握り締めた先に、天命がある。</div>
+        <p class="card-target">「強い人」「しっかりした人」という役割に凍りついた人へ。</p>
+        <a href="hanayama.html" class="card-link">花山薫のMetaを読む &rarr;</a>
+      </div>
+
+      <!-- Article 03 -->
+      <div class="article-card fade-in">
+        <span class="article-card__number">Article 03</span>
+        <h3>烈海王のMeta</h3>
+        <ul>
+          <li>シャドウ：自己反転した闇 ── 4000年の器</li>
+          <li>連鎖：環境的条件づけ ── 白林寺</li>
+          <li>天命動詞：活かす</li>
+        </ul>
+        <div class="card-hook">天命は探すものではない。すでにあなたが生きているその構造の中に、静かに露呈している。</div>
+        <p class="card-target">すでに天命を生きているのに、それが見えない人へ。</p>
+        <a href="retsu.html" class="card-link">烈海王のMetaを読む &rarr;</a>
+      </div>
+
+      <!-- Article 05 -->
+      <div class="article-card fade-in">
+        <span class="article-card__number">Article 05</span>
+        <h3>愚地独歩のMeta</h3>
+        <ul>
+          <li>シャドウ：闇のシャドウ ── 「武神」という自ら築いた鎧</li>
+          <li>連鎖：自己構築的成功 ── 100万人の組織と「武神」の称号</li>
+          <li>天命動詞：手放す</li>
+        </ul>
+        <div class="card-hook">あなたが握りしめているその重い看板を手放したとき、あなたの手は初めて「空の手」に戻る。</div>
+        <p class="card-target">自分が背負った「役割」や「強さ」の鎧を脱げない人へ。</p>
+        <a href="doppo.html" class="card-link">愚地独歩のMetaを読む &rarr;</a>
+      </div>
+
+    </section>
+
+    <hr class="separator">
+
+    <!-- ========== セクション4: 三つのシャドウの総括 ========== -->
+    <section class="fade-in">
+      <div class="def-box fade-in">
+        <p class="def-box__term">Shadows and Tenmei — Paths to Destiny</p>
+        <p>ジャックは「闇のシャドウ」を噛み砕いた。<br>
+        花山は「光のシャドウ」を握り締めた。<br>
+        烈は「自己反転したシャドウ」を活かし切った。<br>
+        独歩は「成功のシャドウ」を手放した。</p>
+        <p>それぞれのシャドウが、天命への異なる道を示す。<br>
+        どれがあなたの構造に近いだろうか。</p>
+      </div>
+    </section>
+
+    <!-- ========== CTA ========== -->
+    <div class="cta-block fade-in">
+      <h3>あなたも、「なぜ？」と「何のために？」に向き合ってみませんか。</h3>
+      <p>上のキャラクターたちに行ったことと、同じことを、あなたに対して行います。<br>
+      「天命の言語化セッション™」は、あなたのMeta（変えられない前提条件）を構造として見つめ直し、そこから天命を言語化する対話技法です。</p>
+      <a href="../../trial.html" class="cta-btn">▶ 無料トライアルセッションの詳細はこちら</a>
+    </div>
+
+    <!-- ========== シリーズノート ========== -->
+    <div class="series-note fade-in">
+      <p>本シリーズ「キャラクターのMeta」は、今後も新たな作品・キャラクターを追加していく。<br>
+      漫画のみならず、映画・小説・物語の登場人物を、実存科学の視点で読み解く。</p>
+      <p><a href="../../specials.html">← 特別シリーズ一覧に戻る</a></p>
+    </div>
+
+    <!-- ========== 著者ブロック ========== -->
+    <div class="author-block fade-in">
+      <p><strong>箭内宏紀（やないひろき）</strong><br>
+      実存科学研究所 代表。「天命の言語化セッション™」を提供。「Metaがある限り自由意志は存在しない」（M ⇒ ¬F）を第一公理とする実存科学を提唱。著書に『Metaがある限り──自由意志・自分・他人は存在しない』『自由意志なき世界の歩き方』ほか。<br>
+      <a href="../../index.html">公式サイトはこちら</a>。</p>
+    </div>
+
+    <!-- ========== 出典表記 ========== -->
+    <p class="source-note fade-in">※ 本シリーズで扱う作品：板垣恵介『グラップラー刃牙』シリーズ（秋田書店）。作品の著作権は原著者・出版社に帰属します。</p>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container--wide">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <p class="footer-col__title">Guide</p>
+          <a href="../../beginner.html">はじめての方へ</a>
+          <a href="../../glossary.html">用語集</a>
+          <a href="../../session-flow.html">セッションの流れ</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Theory</p>
+          <a href="../../epistemology.html">認識論</a>
+          <a href="../../semantics.html">意味論</a>
+          <a href="../../society.html">社会論</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Contents</p>
+          <a href="../../archives.html">記事一覧</a>
+          <a href="../../specials.html">特別シリーズ</a>
+          <a href="../../session-menu.html">12の対話（領域）</a>
+          <a href="../../letters.html">21の手紙</a>
+          <a href="../../metaplay.html">Meta Play™︎</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Session</p>
+          <a href="../../session.html">天命の言語化セッション™</a>
+          <a href="../../dark-side/">ダークサイド診断</a>
+          <a href="../../omoidasu/">身体的知性診断</a>
+          <a href="../../uniqueness.html">独自性と射程</a>
+          <a href="../../trial.html">無料トライアル</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Institute</p>
+          <a href="../../founder.html">創始者</a>
+          <a href="../../faq.html">FAQ</a>
+          <a href="../../contact.html">お問い合わせ</a>
+          <a href="../../legal/legal-tokushoho.html">特定商取引法</a>
+          <a href="../../legal/legal-privacy-policy.html">プライバシーポリシー</a>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 実存科学研究所 — Existential Science Institute</p>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "キャラクターのMeta ── 刃牙シリーズ篇",
+  "description": "『グラップラー刃牙』のジャック・ハンマー、花山薫、烈海王の深層心理を実存科学の視点で読み解くシリーズの総合案内。",
+  "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-baki/",
+  "author": {
+    "@type": "Person",
+    "name": "箭内宏紀",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/founder.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  },
+  "inLanguage": "ja"
+}
+</script>
+</body>
+</html>
