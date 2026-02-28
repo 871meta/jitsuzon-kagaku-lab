@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-mentalist/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>キャラクターのMeta ── メンタリスト篇 | 実存科学研究所</title>
+  <meta name="description" content="ブルーノ・ヘラー制作『THE MENTALIST（メンタリスト）』のリグスビー、パトリック・ジェーン、リズボン、レッド・ジョン、チョウ、ヴァンペルト、スタイルズ。実存科学の視点──Meta、シャドウ、天命──で構造的に読み解くシリーズの総合案内。">
+  <meta property="og:title" content="キャラクターのMeta ── メンタリスト篇 | 実存科学研究所">
+  <meta property="og:description" content="『THE MENTALIST（メンタリスト）』の登場人物を、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解くシリーズ全7回。">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="実存科学研究所">
+  <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+
+<style>
+/* === Article Cards === */
+.article-card {
+  background: rgba(15,12,25,0.5);
+  border: 1px solid rgba(192,168,120,0.1);
+  padding: 2.5rem 2rem;
+  margin: 2rem 0;
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+.article-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(192,168,120,0.4), transparent);
+}
+.article-card__number {
+  display: block;
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #c0a878;
+  margin-bottom: 0.6rem;
+}
+.article-card h3 {
+  font-size: 1.2rem;
+  color: #f0ece6;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.06em;
+}
+.article-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+.article-card ul li {
+  margin-bottom: 0.8rem;
+  color: #c0bbb4;
+  font-size: 0.88rem;
+  line-height: 1.8;
+  padding-left: 1.6em;
+  position: relative;
+}
+.article-card ul li::before {
+  content: "──";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgba(192,168,120,0.35);
+  font-size: 0.75em;
+}
+.article-card .card-hook {
+  background: rgba(192,168,120,0.06);
+  border-left: 2px solid;
+  border-image: linear-gradient(180deg, #c0a878 0%, rgba(192,168,120,0.15) 100%) 1;
+  padding: 1.2rem 1.5rem;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 2;
+  color: #f0ece6;
+}
+.article-card .card-target {
+  font-size: 0.85rem;
+  color: rgba(192,168,120,0.6);
+  font-style: italic;
+  margin-bottom: 1.2rem;
+}
+.article-card .card-link {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: #c0a878;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid rgba(192,168,120,0.3);
+  padding-bottom: 0.2em;
+  transition: opacity 0.2s;
+}
+.article-card .card-link:hover { opacity: 0.7; }
+
+/* === Author Block === */
+.author-block {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(192,168,120,0.15);
+}
+.author-block p { font-size: 0.88rem; color: #c0bbb4; line-height: 2; }
+.author-block strong { color: #e8e4df; }
+
+/* === Source Note === */
+.source-note {
+  margin-top: 2rem;
+  font-size: 0.82rem;
+  color: rgba(235,232,225,0.35);
+}
+
+/* === Series Note === */
+.series-note {
+  margin-top: 2rem;
+  padding: 1.5rem 2rem;
+  background: rgba(192,168,120,0.04);
+  border: 1px solid rgba(192,168,120,0.1);
+  font-size: 0.88rem;
+  color: #c0bbb4;
+  line-height: 2;
+}
+
+/* === CTA Block === */
+.cta-block {
+  background: rgba(192,168,120,0.06);
+  border: 1px solid rgba(192,168,120,0.2);
+  padding: 2.5rem 2rem;
+  margin: 3rem 0;
+  text-align: center;
+}
+.cta-block h3 {
+  font-size: 1.1rem;
+  color: #e8e4df;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.cta-block p {
+  font-size: 0.92rem;
+  color: #c0bbb4;
+  line-height: 2.2;
+  margin-bottom: 1.2rem;
+}
+.cta-block .cta-btn {
+  display: inline-block;
+  padding: 0.8rem 2.5rem;
+  background: #c0a878;
+  color: #080610;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  transition: opacity 0.2s;
+  border-bottom: none;
+}
+.cta-block .cta-btn:hover { opacity: 0.8; }
+
+/* === Mobile === */
+@media (max-width: 600px) {
+  .article-card { padding: 1.5rem 1.2rem; }
+  .article-card h3 { font-size: 1.05rem; }
+  .article-card .card-hook { padding: 1rem 1.2rem; }
+  .cta-block { padding: 2rem 1.2rem; }
+}
+@media (max-width: 480px) {
+  .text-panel p br,
+  .pull-quote p br,
+  .highlight-block p br,
+  .def-box p br { display: none; }
+}
+</style>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="../../index.html" class="site-logo">実存科学研究所</a>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="global-nav">
+        <a href="../../index.html">Top</a>
+        <a href="../../beginner.html">Guide</a>
+        <a href="../../epistemology.html">Epistemology</a>
+        <a href="../../semantics.html">Semantics</a>
+        <a href="../../society.html">Society</a>
+        <a href="../../founder.html">Founder</a>
+        <a href="../../session.html">Session</a>
+        <a href="../../specials.html">Specials</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">More</button>
+          <div class="nav-dropdown__menu">
+            <a href="../../metaplay.html">Meta Play™</a>
+            <a href="../../dark-side/">ダークサイド診断</a>
+            <a href="../../omoidasu/">身体的知性診断</a>
+            <a href="../../trial.html">無料トライアル</a>
+            <a href="../../session-menu.html">12の対話（領域）</a>
+            <a href="../../letters.html">21の手紙</a>
+            <a href="../../uniqueness.html">独自性と射程</a>
+            <a href="../../faq.html">FAQ</a>
+            <a href="../../archives.html">記事一覧</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="page-hero__sub">Character's Meta — THE MENTALIST</p>
+      <h1>キャラクターのMeta ── メンタリスト篇</h1>
+      <p class="page-hero__lead">自由意志なき世界の天命論 ── メンタリスト篇<br>箭内宏紀｜実存科学研究所</p>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <!-- ========== 導入 ========== -->
+    <section class="fade-in">
+
+      <div class="text-panel fade-in">
+        <p>ブルーノ・ヘラー制作『THE MENTALIST（メンタリスト）』の登場人物を、実存科学の三つの構造──Meta（変えられない前提条件）、シャドウ（抑圧された影）、天命（Metaの必然的収束点）──で読み解く。</p>
+        <p>フィクションのキャラクターを読み解くことは、「他人事」ではない。<br>
+        あなた自身の構造を、安全な距離から観測する行為である。</p>
+      </div>
+
+      <div class="pull-quote fade-in">
+        <p>彼らは「天命」を選んだのではない。<br>Metaが、天命を選んだのだ。</p>
+      </div>
+
+    </section>
+
+    <hr class="separator">
+
+    <!-- ========== 全記事一覧 ========== -->
+    <section class="fade-in">
+
+      <!-- Article 01 -->
+      <div class="article-card fade-in">
+        <span class="article-card__number">Article 01</span>
+        <h3>ウェイン・リグスビーのMeta</h3>
+        <ul>
+          <li>シャドウ：闇のシャドウ ── 「自分の中に、父親と同じ暴力性が流れている」</li>
+          <li>連鎖：父の暴力 ── 「犯罪者の血は遺伝する」という非合理的信念</li>
+          <li>天命動詞：作り直す</li>
+        </ul>
+        <div class="card-hook">変えられないものを──血を、記憶を、痛みを──すべてを引き受けた先に、天命が露呈する。</div>
+        <p class="card-target">親から受け継いだものに怯え、「正しくあろう」と自分を縛り続けている人へ。</p>
+        <a href="rigsby.html" class="card-link">ウェイン・リグスビーのMetaを読む &rarr;</a>
+      </div>
+
+      <!-- Article 02 -->
+      <div class="article-card fade-in">
+        <span class="article-card__number">Article 02</span>
+        <h3>パトリック・ジェーンのMeta</h3>
+        <ul>
+          <li>シャドウ：闇のシャドウ ── 「自分の傲慢さが妻子を殺した」</li>
+          <li>連鎖：レッド・ジョン ── 復讐の完遂が贖罪になるという根拠のない確信</li>
+          <li>天命動詞：──（Coming Soon）</li>
+        </ul>
+        <div class="card-hook">Coming Soon</div>
+        <p class="card-target">能力が罪になり、自分を赦せずにいる人へ。</p>
+        <p style="font-size:0.82rem; color:rgba(192,168,120,0.4); margin-top:1rem;">Coming Soon</p>
+      </div>
+
+      <!-- Article 03 -->
+      <div class="article-card fade-in">
+        <span class="article-card__number">Article 03</span>
+        <h3>テレサ・リズボンのMeta</h3>
+        <ul>
+          <li>シャドウ：闇のシャドウ ── 「自分の感情より他者の安全を優先しなければならない」</li>
+          <li>連鎖：幼少期 ── 弟たちの「親代わり」になった経験</li>
+          <li>天命動詞：──（Coming Soon）</li>
+        </ul>
+        <div class="card-hook">Coming Soon</div>
+        <p class="card-target">「守る側」でいることに疲れ、守られたいと言えない人へ。</p>
+        <p style="font-size:0.82rem; color:rgba(192,168,120,0.4); margin-top:1rem;">Coming Soon</p>
+      </div>
+
+      <!-- Article 04 -->
+      <div class="article-card fade-in">
+        <span class="article-card__number">Article 04</span>
+        <h3>レッド・ジョンのMeta</h3>
+        <ul>
+          <li>シャドウ：闇のシャドウ（「偽りの光」構造） ── 凡庸であることへの絶対的な恐怖</li>
+          <li>連鎖：凡庸の否認 ── 殺人という「作品」で特別さを証明する構造</li>
+          <li>天命動詞：──（Coming Soon）</li>
+        </ul>
+        <div class="card-hook">Coming Soon</div>
+        <p class="card-target">自分の「特別さ」に固執し、凡庸な自分を認められない人へ。</p>
+        <p style="font-size:0.82rem; color:rgba(192,168,120,0.4); margin-top:1rem;">Coming Soon</p>
+      </div>
+
+      <!-- Article 05 -->
+      <div class="article-card fade-in">
+        <span class="article-card__number">Article 05</span>
+        <h3>キンブル・チョウのMeta</h3>
+        <ul>
+          <li>シャドウ：闇のシャドウ ── 感情を見せることは弱さであり、弱さは死を意味する</li>
+          <li>連鎖：ギャング時代 ── 感情抑制がMetaに刻まれた生存戦略</li>
+          <li>天命動詞：──（Coming Soon）</li>
+        </ul>
+        <div class="card-hook">Coming Soon</div>
+        <p class="card-target">感情を閉じ込めることで自分を守り、「ここにいていいのか」と問い続けている人へ。</p>
+        <p style="font-size:0.82rem; color:rgba(192,168,120,0.4); margin-top:1rem;">Coming Soon</p>
+      </div>
+
+      <!-- Article 06 -->
+      <div class="article-card fade-in">
+        <span class="article-card__number">Article 06</span>
+        <h3>グレース・ヴァンペルトのMeta</h3>
+        <ul>
+          <li>シャドウ：闇のシャドウ ── 「信じた人に裏切られるのは、自分の判断力が欠けているから」</li>
+          <li>連鎖：クレイグ・オラフリン ── 信じることが弱さだったのかという信仰の根底への揺さぶり</li>
+          <li>天命動詞：──（Coming Soon）</li>
+        </ul>
+        <div class="card-hook">Coming Soon</div>
+        <p class="card-target">人を信じたいのに、裏切りの記憶が「信じること」そのものを否定してしまう人へ。</p>
+        <p style="font-size:0.82rem; color:rgba(192,168,120,0.4); margin-top:1rem;">Coming Soon</p>
+      </div>
+
+      <!-- Article 07 -->
+      <div class="article-card fade-in">
+        <span class="article-card__number">Article 07</span>
+        <h3>ブレット・スタイルズのMeta</h3>
+        <ul>
+          <li>シャドウ：ゴールデンシャドウ（位相2） ── 「導く側にいなければ、自分の存在価値がない」</li>
+          <li>連鎖：カリスマの構造 ── 対等な関係が自分のアイデンティティを脅かす</li>
+          <li>天命動詞：──（Coming Soon）</li>
+        </ul>
+        <div class="card-hook">Coming Soon</div>
+        <p class="card-target">導く力を持ちながら、対等な人間関係を築けないことに孤独を感じている人へ。</p>
+        <p style="font-size:0.82rem; color:rgba(192,168,120,0.4); margin-top:1rem;">Coming Soon</p>
+      </div>
+
+    </section>
+
+    <hr class="separator">
+
+    <!-- ========== シャドウ総括 ========== -->
+    <section class="fade-in">
+      <div class="def-box fade-in">
+        <p class="def-box__term">Shadows and Tenmei — Paths to Destiny</p>
+        <p>リグスビーは「暴力の血のシャドウ」を引き受けて家庭を作り直した。<br>
+        残る六人の物語は、間もなく始まる。</p>
+      </div>
+    </section>
+
+    <!-- ========== CTA ========== -->
+    <div class="cta-block fade-in">
+      <h3>あなたも、「なぜ？」と「何のために？」に向き合ってみませんか。</h3>
+      <p>上のキャラクターたちに行ったことと、同じことを、あなたに対して行います。<br>
+      「天命の言語化セッション™」は、あなたのMeta（変えられない前提条件）を構造として見つめ直し、そこから天命を言語化する対話技法です。</p>
+      <a href="../../trial.html" class="cta-btn">▶ 無料トライアルセッションの詳細はこちら</a>
+    </div>
+
+    <!-- ========== シリーズノート ========== -->
+    <div class="series-note fade-in">
+      <p>本シリーズ「キャラクターのMeta」は、今後も新たな作品・キャラクターを追加していく。<br>
+      漫画のみならず、映画・小説・物語の登場人物を、実存科学の視点で読み解く。</p>
+      <p><a href="../../specials.html">&larr; 特別シリーズ一覧に戻る</a></p>
+    </div>
+
+    <!-- ========== 著者ブロック ========== -->
+    <div class="author-block fade-in">
+      <p><strong>箭内宏紀（やないひろき）</strong><br>
+      実存科学研究所 代表。「天命の言語化セッション™」を提供。「Metaがある限り自由意志は存在しない」（M ⇒ ¬F）を第一公理とする実存科学を提唱。著書に『Metaがある限り──自由意志・自分・他人は存在しない』『自由意志なき世界の歩き方』ほか。<br>
+      <a href="../../index.html">公式サイトはこちら</a>。</p>
+    </div>
+
+    <!-- ========== 出典表記 ========== -->
+    <p class="source-note fade-in">※ 本シリーズで扱う作品：ブルーノ・ヘラー制作『THE MENTALIST（メンタリスト）』（CBS、2008-2015）。作品の著作権は制作者に帰属します。</p>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container--wide">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <p class="footer-col__title">Guide</p>
+          <a href="../../beginner.html">はじめての方へ</a>
+          <a href="../../glossary.html">用語集</a>
+          <a href="../../session-flow.html">セッションの流れ</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Theory</p>
+          <a href="../../epistemology.html">認識論</a>
+          <a href="../../semantics.html">意味論</a>
+          <a href="../../society.html">社会論</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Contents</p>
+          <a href="../../archives.html">記事一覧</a>
+          <a href="../../specials.html">特別シリーズ</a>
+          <a href="../../session-menu.html">12の対話（領域）</a>
+          <a href="../../letters.html">21の手紙</a>
+          <a href="../../metaplay.html">Meta Play™︎</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Session</p>
+          <a href="../../session.html">天命の言語化セッション™</a>
+          <a href="../../dark-side/">ダークサイド診断</a>
+          <a href="../../omoidasu/">身体的知性診断</a>
+          <a href="../../uniqueness.html">独自性と射程</a>
+          <a href="../../trial.html">無料トライアル</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Institute</p>
+          <a href="../../founder.html">創始者</a>
+          <a href="../../faq.html">FAQ</a>
+          <a href="../../contact.html">お問い合わせ</a>
+          <a href="../../legal/legal-tokushoho.html">特定商取引法</a>
+          <a href="../../legal/legal-privacy-policy.html">プライバシーポリシー</a>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 実存科学研究所 — Existential Science Institute</p>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "キャラクターのMeta ── メンタリスト篇",
+  "description": "『THE MENTALIST（メンタリスト）』の登場人物を、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解くシリーズ全7回。",
+  "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-mentalist/",
+  "author": {
+    "@type": "Person",
+    "name": "箭内宏紀",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/founder.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  },
+  "inLanguage": "ja"
+}
+</script>
+</body>
+</html>
