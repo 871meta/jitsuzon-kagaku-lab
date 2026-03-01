@@ -52,10 +52,16 @@ body::before {
 }
 
 /* Lock body scroll when mobile nav is open */
+html.nav-is-open,
 body.nav-is-open {
-  overflow: hidden;
+  overflow: hidden !important;
+  height: 100% !important;
+}
+body.nav-is-open {
   position: fixed;
   width: 100%;
+  top: 0;
+  left: 0;
 }
 
 /* Ensure all direct children sit above the overlay */
@@ -1924,9 +1930,10 @@ a.site-logo:not(.btn):not(.session-card__link):hover {
     top: 72px;
     left: 0;
     right: 0;
-    max-height: calc(100vh - 72px);
+    bottom: 0;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
     background: rgba(10, 8, 18, 0.96);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
