@@ -1917,6 +1917,9 @@ a.site-logo:not(.btn):not(.session-card__link):hover {
     top: 72px;
     left: 0;
     right: 0;
+    max-height: calc(100vh - 72px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     background: rgba(10, 8, 18, 0.96);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
@@ -1973,7 +1976,7 @@ a.site-logo:not(.btn):not(.session-card__link):hover {
   }
 
   .nav-dropdown.is-open .nav-dropdown__menu {
-    max-height: 300px;
+    max-height: 500px;
   }
 
   .nav-dropdown.is-open .nav-dropdown__toggle::after {
