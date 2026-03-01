@@ -55,13 +55,8 @@ body::before {
 html.nav-is-open,
 body.nav-is-open {
   overflow: hidden !important;
-  height: 100% !important;
-}
-body.nav-is-open {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
+  height: 100vh !important;
+  touch-action: none;
 }
 
 /* Ensure all direct children sit above the overlay */
