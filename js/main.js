@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     toggle.addEventListener('click', function () {
       toggle.classList.toggle('is-open');
       nav.classList.toggle('is-open');
+      document.body.classList.toggle('nav-is-open');
     });
 
     // Close nav when a link is clicked
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
       link.addEventListener('click', function () {
         toggle.classList.remove('is-open');
         nav.classList.remove('is-open');
+        document.body.classList.remove('nav-is-open');
       });
     });
   }
@@ -48,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (toggle && nav) {
           toggle.classList.remove('is-open');
           nav.classList.remove('is-open');
+          document.body.classList.remove('nav-is-open');
         }
       });
     });

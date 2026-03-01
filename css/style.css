@@ -51,6 +51,13 @@ body::before {
   pointer-events: none;
 }
 
+/* Lock body scroll when mobile nav is open */
+body.nav-is-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
 /* Ensure all direct children sit above the overlay */
 body>* {
   position: relative;
