@@ -69,6 +69,13 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- ===== SPECIALS ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/specials.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- ===== CONTENTS ===== -->
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/founder.html</loc>
@@ -424,6 +431,127 @@
   </url>
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/sessions/session-12-isaku.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===== SPECIALS: The Mentalist Series ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-mentalist/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-mentalist/jane.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-mentalist/lisbon.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-mentalist/cho.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-mentalist/rigsby.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-mentalist/vanpelt.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-mentalist/redjohn.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-mentalist/stiles.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===== SPECIALS: Baki Series ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-baki/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-baki/baki.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-baki/yujiro.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-baki/doppo.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-baki/retsu.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-baki/hanayama.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-baki/jack.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-baki/oliva.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-baki/musashi.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-baki/emi.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-baki/itagaki.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===== SPECIALS: Godfather Series ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-godfather/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-godfather/michael-part1.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-godfather/michael-part2.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-godfather/michael-part3.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

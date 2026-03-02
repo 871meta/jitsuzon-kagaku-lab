@@ -22,6 +22,8 @@
 :root { --text: rgba(235, 232, 225, 0.92); --text-secondary: rgba(235, 232, 225, 0.55); --bg: #080610; --border: rgba(192, 168, 120, 0.15); --accent: #c0a878; --highlight: rgba(192, 168, 120, 0.06); --blockquote-border: rgba(192, 168, 120, 0.4); --definition-bg: rgba(192, 168, 120, 0.04); --max-width: 780px; }
 html { font-size: 17px; scroll-behavior: smooth; }
 body { font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif; color: var(--text); background: var(--bg); line-height: 2; -webkit-font-smoothing: antialiased; }
+.skip-link { position: absolute; top: -100%; left: 50%; transform: translateX(-50%); background: #c0a878; color: #0c0a14; padding: 0.8rem 1.6rem; z-index: 10000; font-size: 0.9rem; text-decoration: none; border-radius: 0 0 4px 4px; transition: top 0.2s; }
+.skip-link:focus { top: 0; }
 .page-container { max-width: var(--max-width); margin: 0 auto; padding: 3rem 1.5rem 6rem; }
 .page-header { text-align: center; padding: 3rem 0 2.5rem; border-bottom: 2px solid var(--accent); margin-bottom: 3rem; }
 .page-header .label { font-size: 0.85rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 0.5rem; font-family: "Noto Sans JP", sans-serif; }
@@ -116,7 +118,10 @@ input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); 
     <p class="subtitle">すべての人生はここへ収束し、ここから始まる</p>
   </header>
 
-  <img src="../images/menu-01-tenmei.png" alt="天命の言語化セッション™" class="hero-image" loading="lazy">
+  <picture>
+    <source srcset="../images/menu-01-tenmei.webp" type="image/webp">
+    <img src="../images/menu-01-tenmei.png" alt="天命の言語化セッション™" class="hero-image" loading="lazy">
+  </picture>
 
   <article>
 

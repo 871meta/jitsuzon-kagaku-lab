@@ -102,6 +102,25 @@ body > * {
   z-index: 1;
 }
 
+/* Skip navigation link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #c0a878;
+  color: #0c0a14;
+  padding: 0.8rem 1.6rem;
+  z-index: 10000;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border-radius: 0 0 4px 4px;
+  transition: top 0.2s;
+}
+.skip-link:focus {
+  top: 0;
+}
+
 ::selection {
   background: rgba(192, 168, 120, 0.3);
   color: #fff;
