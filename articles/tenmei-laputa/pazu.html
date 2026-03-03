@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-laputa/pazu.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>パズーのMeta &mdash;&mdash; 自由意志なき世界の天命論 | 実存科学研究所</title>
+  <meta name="description" content="映画『天空の城ラピュタ』のパズーを、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。父の夢を自分の夢と信じて飛び続けた少年が、ラピュタを見つけた瞬間にその力を手放し、「守ること」という天命に到達するまで。">
+  <meta property="og:title" content="パズーのMeta &mdash;&mdash; 自由意志なき世界の天命論 | 実存科学研究所">
+  <meta property="og:description" content="映画『天空の城ラピュタ』のパズーを、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。父の夢を自分の夢と信じて飛び続けた少年が、ラピュタを見つけた瞬間にその力を手放し、「守ること」という天命に到達するまで。">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="実存科学研究所">
+  <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css?v=6">
+
+<style>
+/* =============================================
+   視認性・読みやすさ強化CSS
+   ============================================= */
+
+/* === 1. 章見出し — 中央配置＋装飾 === */
+h2.chapter-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  color: #f0ece6;
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  position: relative;
+  padding-top: 2rem;
+}
+h2.chapter-heading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 1px;
+  background: #c0a878;
+}
+h2.chapter-heading::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(192,168,120,0.5), transparent);
+  margin: 1.2rem auto 0;
+}
+.chapter-number {
+  display: block;
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #c0a878;
+  margin-bottom: 0.6rem;
+}
+
+/* === 2. 区切り線 — 装飾付き === */
+hr {
+  border: none;
+  height: auto;
+  background: none;
+  margin: 4.5rem 0;
+  text-align: center;
+  overflow: visible;
+}
+hr::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(192,168,120,0.08) 15%, rgba(192,168,120,0.2) 50%, rgba(192,168,120,0.08) 85%, transparent 100%);
+}
+hr::after {
+  content: "\25C6";
+  display: block;
+  font-size: 0.5rem;
+  color: rgba(192,168,120,0.3);
+  margin-top: -0.35em;
+  letter-spacing: 1em;
+  line-height: 1;
+}
+
+/* === 3. セッション対話 — 読みやすさ向上 === */
+.session-dialogue {
+  max-width: 680px;
+  margin: 2.5rem auto;
+  padding: 2.5rem 2rem;
+  background: rgba(10, 8, 18, 0.35);
+  border: 1px solid rgba(192,168,120,0.06);
+  border-radius: 2px;
+  position: relative;
+}
+.session-dialogue::before {
+  content: "SESSION";
+  position: absolute;
+  top: -0.6em;
+  left: 2rem;
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  color: rgba(192,168,120,0.4);
+  background: #0c0a14;
+  padding: 0 0.8rem;
+}
+.session-dialogue p {
+  margin-bottom: 1.1em;
+  line-height: 2.2;
+}
+.session-dialogue .speaker-yanai { color: #c0a878; font-weight: 600; font-size: 0.92rem; }
+.session-dialogue .speaker-pazu { color: #e8e4df; font-weight: 600; font-size: 0.92rem; }
+
+/* 箭内の発言：金色の左ボーダー */
+.session-dialogue .line-yanai {
+  border-left: 2px solid rgba(192,168,120,0.15);
+  padding-left: 1.2rem;
+}
+/* キャラの発言：少しインデント */
+.session-dialogue .line-character {
+  margin-left: 1.4rem;
+}
+/* 沈黙マーカー：中央揃え＋装飾線 */
+.session-dialogue .silence {
+  color: rgba(235,232,225,0.3);
+  font-style: italic;
+  text-align: center;
+  margin: 2em 0;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+}
+.session-dialogue .silence::before,
+.session-dialogue .silence::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: rgba(192,168,120,0.15);
+  vertical-align: middle;
+  margin: 0 1em;
+}
+/* 10発言ごとの視覚リズム */
+.session-dialogue p:nth-child(10n) {
+  margin-bottom: 2em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid rgba(192,168,120,0.06);
+}
+
+/* === 4. text-panel の単調さ解消 === */
+section > .text-panel:nth-of-type(even) {
+  background: rgba(8, 6, 16, 0.45);
+  border-color: transparent;
+}
+section > .text-panel:nth-of-type(even)::before {
+  display: none;
+}
+
+/* === 5. highlight-block の存在感微増 === */
+.highlight-block {
+  background: rgba(192,168,120,0.06);
+  border-left: 2px solid;
+  border-image: linear-gradient(180deg, #c0a878 0%, rgba(192,168,120,0.15) 100%) 1;
+  padding: 2rem 2rem 2rem 2.2rem;
+  margin: 2.5rem 0;
+}
+.highlight-block p {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 2.2;
+  color: #f0ece6;
+}
+
+/* === 6. セクション見出し（h3） === */
+h3.section-heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #e8e4df;
+  letter-spacing: 0.08em;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1.2rem;
+  border-left: 2px solid rgba(192,168,120,0.4);
+  line-height: 1.6;
+}
+
+/* === Profiling Block === */
+.profiling-block {
+  background: rgba(15,12,25,0.5);
+  border: 1px solid rgba(192,168,120,0.1);
+  padding: 2.5rem 2rem;
+  margin: 2rem 0;
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+.profiling-block::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(192,168,120,0.4), transparent);
+}
+.profiling-block h3 {
+  font-size: 0.92rem;
+  color: #c0a878;
+  letter-spacing: 0.15em;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(192,168,120,0.1);
+}
+.profiling-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+.profiling-block ul li {
+  margin-bottom: 1rem;
+  color: #c0bbb4;
+  font-size: 0.9rem;
+  line-height: 1.9;
+  padding-left: 1.6em;
+  position: relative;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(192,168,120,0.04);
+}
+.profiling-block ul li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.profiling-block ul li::before {
+  content: "\2500\2500";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgba(192,168,120,0.35);
+  font-size: 0.75em;
+}
+
+/* === CTA Block === */
+.cta-block {
+  background: rgba(192,168,120,0.06);
+  border: 1px solid rgba(192,168,120,0.2);
+  padding: 2.5rem 2rem;
+  margin: 3rem 0;
+  text-align: center;
+}
+.cta-block h3 {
+  font-size: 1.1rem;
+  color: #e8e4df;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.cta-block p {
+  font-size: 0.92rem;
+  color: #c0bbb4;
+  line-height: 2.2;
+  margin-bottom: 1.2rem;
+}
+.cta-block .cta-btn {
+  display: inline-block;
+  padding: 0.8rem 2.5rem;
+  background: #c0a878;
+  color: #080610;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  transition: opacity 0.2s;
+  border-bottom: none;
+}
+.cta-block .cta-btn:hover { opacity: 0.8; }
+
+/* === Author Block === */
+.author-block {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(192,168,120,0.15);
+}
+.author-block p { font-size: 0.88rem; color: #c0bbb4; line-height: 2; }
+.author-block strong { color: #e8e4df; }
+
+/* === Source Note === */
+.source-note {
+  margin-top: 2rem;
+  font-size: 0.82rem;
+  color: rgba(235,232,225,0.35);
+}
+
+/* === Series Note === */
+.series-note {
+  margin-top: 2rem;
+  padding: 1.5rem 2rem;
+  background: rgba(192,168,120,0.04);
+  border: 1px solid rgba(192,168,120,0.1);
+  font-size: 0.88rem;
+  color: #c0bbb4;
+  line-height: 2;
+}
+
+/* === 7. モバイル対応 === */
+@media (max-width: 600px) {
+  h2.chapter-heading {
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    padding-top: 1.5rem;
+  }
+  .chapter-number {
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    margin-bottom: 0.4rem;
+  }
+  h3.section-heading {
+    font-size: 1rem;
+    margin-top: 2rem;
+    padding-left: 1rem;
+  }
+  hr { margin: 3rem 0; }
+  .session-dialogue {
+    padding: 1.5rem 1.2rem;
+    margin: 2rem auto;
+  }
+  .session-dialogue .line-yanai { padding-left: 0.8rem; }
+  .session-dialogue .line-character { margin-left: 0.8rem; }
+  .profiling-block { padding: 1.5rem 1.2rem; }
+  .cta-block { padding: 2rem 1.2rem; }
+  .highlight-block { padding: 1.5rem 1.2rem 1.5rem 1.4rem; }
+  .text-panel { padding: 2rem 1.5rem; }
+}
+@media (max-width: 480px) {
+  .text-panel p br,
+  .pull-quote p br,
+  .highlight-block p br,
+  .def-box p br,
+  .session-dialogue p br { display: none; }
+  h2.chapter-heading { font-size: 1.15rem; }
+  .session-dialogue p:nth-child(10n) {
+    margin-bottom: 1.5em;
+    padding-bottom: 1em;
+  }
+}
+</style>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="../../index.html" class="site-logo">実存科学研究所</a>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="global-nav">
+        <a href="../../index.html">Top</a>
+        <a href="../../beginner.html">Guide</a>
+        <a href="../../epistemology.html">Epistemology</a>
+        <a href="../../semantics.html">Semantics</a>
+        <a href="../../society.html">Society</a>
+        <a href="../../founder.html">Founder</a>
+        <a href="../../session.html">Session</a>
+        <a href="../../specials.html">Specials</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">More</button>
+          <div class="nav-dropdown__menu">
+            <a href="../../metaplay.html">Meta Play&trade;</a>
+            <a href="../../dark-side/">ダークサイド診断</a>
+            <a href="../../omoidasu/">身体的知性診断</a>
+            <a href="../../trial.html">無料トライアル</a>
+            <a href="../../session-menu.html">12の対話（領域）</a>
+            <a href="../../letters.html">21の手紙</a>
+            <a href="../../uniqueness.html">独自性と射程</a>
+            <a href="../../faq.html">FAQ</a>
+            <a href="../../archives.html">記事一覧</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="page-hero__sub">CASTLE IN THE SKY</p>
+      <h1>パズーのMeta</h1>
+      <p class="page-hero__lead">自由意志なき世界の天命論<br>箭内宏紀｜実存科学研究所</p>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <!-- ========== ネタバレ注記 ========== -->
+    <p class="source-note fade-in" style="margin-bottom: 2rem;">※本稿は『天空の城ラピュタ』全編のネタバレを含みます。</p>
+
+    <!-- ========== 導入 ========== -->
+    <section class="fade-in">
+
+      <div class="text-panel fade-in">
+        <p>彼は、毎朝トランペットを吹く。</p>
+        <p>日の出とともに、スラッグ渓谷の空に向かって。鉱山の煤けた空気を突き抜けるように。飼っているハトたちが集まってくる。彼はそこにエサを撒き、自分は朝飯をかき込んで仕事に出る。十三歳の見習い機械工。天涯孤独。両親はもういない。</p>
+        <p>彼の家の壁には、一枚の写真が飾られている。</p>
+        <p>雲の中にそびえる巨大な城。天空の城ラピュタ。彼の父が命懸けで撮影し、誰にも信じてもらえなかった写真。父はその写真を残して、詐欺師と呼ばれたまま死んだ。</p>
+        <p>彼&mdash;&mdash;パズーさんは、その写真を毎日見て育った。そして屋根裏で、一人きりで、飛行機を作り続けている。父が見た空の城を、自分の目で確かめるために。</p>
+        <p>父の正しさを証明するために。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>だが、ここに構造的な問いがある。<br>
+        パズーさんが「ラピュタを見つけたい」と言うとき&mdash;&mdash;それは本当に、彼自身の夢なのか。それとも、死んだ父の未完の事業を、幼い息子が丸ごと引き受けただけなのか。</p>
+        <p>父の夢と自分の夢を、彼は一度も分離したことがない。</p>
+        <p>その問いの先に、天命がある。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== シャドウ・プロファイリング ========== -->
+    <section class="fade-in">
+
+      <h2 class="chapter-heading">
+        <span class="chapter-number">Shadow Profiling</span>
+        シャドウ・プロファイリング
+      </h2>
+
+      <!-- Meta -->
+      <div class="profiling-block fade-in">
+        <h3>Meta（変えられない前提条件）</h3>
+        <ul>
+          <li>十三歳前後の男子。鉱山労働で鍛えられた身体と「親方のゲンコツより硬い石頭」。数百メートル先のシータさんを一瞬で発見する視力。機械に対する本能的な理解力&mdash;&mdash;「生まれながらの飛行士」</li>
+          <li>父は冒険飛行家。天空の城ラピュタを発見し写真に収めたが、詐欺師扱いされたまま心労で死亡。母については劇中にほとんど言及がない</li>
+          <li>スラッグ渓谷の鉱山コミュニティで育つ。ウェールズの炭鉱町をモデルとした労働者階級の共同体。物理的勇気、機械的能力、正直な労働が美徳の世界</li>
+          <li>「父は嘘つきではなかった」&mdash;&mdash;これがパズーさんの全存在を支える非交渉的命題。ラピュタを見つけることは冒険ではなく、この命題の証明</li>
+          <li>パズーさんの言語は最も透明。皮肉なし、偏向なし、複雑さなし。言っていることがそのまま意味するところ。防御層が存在しない</li>
+        </ul>
+      </div>
+
+      <!-- シャドウ -->
+      <div class="profiling-block fade-in">
+        <h3>シャドウ（抑圧された本音）</h3>
+        <ul>
+          <li>核心：「父の夢と自分の夢を一度も分離したことがない」&mdash;&mdash;パズーさんが抱えるシャドウは、表面に一切の暗さを見せない。だからこそ最も発見困難な構造を持つ。彼の陽気さ、決断力、止まることのない前進&mdash;&mdash;それらすべてが「父が間違っていたらどうする？」という問いを浮上させないための構造的機能として作動している</li>
+          <li>深層の欲求：誰かを守りたい。何かを証明するのではなく、ただ守りたい&mdash;&mdash;この欲求はパズーさん自身にも見えていない。父の夢の下に埋もれている</li>
+          <li>表層の代償行動：オーニソプターの建造、毎朝のトランペット、止まることのない前進。これらは「立ち止まったら疑念が浮上する」構造を回避するための行動パターン</li>
+          <li>止まれない理由：Metaに駆動されている。パズーさんが「止まる」とは「疑う」こと。「疑う」とは「父が嘘つきかもしれない」を許容すること。パズーさんのMetaはそれを許容できない</li>
+        </ul>
+      </div>
+
+      <!-- 対比キャラクター：ムスカ -->
+      <div class="profiling-block fade-in">
+        <h3>対比キャラクター：ムスカさん（ロムスカ・パロ・ウル・ラピュタ）</h3>
+        <ul>
+          <li>パズーさん &rarr; 父の遺産（記憶と物語）としてラピュタに接続している<br>ムスカさん &rarr; 血統（ラピュタ王族の末裔）としてラピュタに接続している</li>
+          <li>パズーさん &rarr; 真実を確認したのち、力を手放す<br>ムスカさん &rarr; 力を掌握し、支配しようとする</li>
+          <li>パズーさん &rarr; シータさんの意思を尊重する対等な関係<br>ムスカさん &rarr; シータさんを飛行石の媒介としてのみ利用する</li>
+          <li>パズーさん &rarr; 「バルス」&mdash;&mdash;兵器を破壊し、生命（樹木と庭園）を残す<br>ムスカさん &rarr; ラピュタの兵器を起動し、味方すら殲滅する。「見ろ！ 人がゴミのようだ」</li>
+          <li>パズーさん &rarr; 労働者階級の連帯と誠実のMeta<br>ムスカさん &rarr; 貴族的血統と支配のMeta</li>
+          <li>パズーさん &rarr; 天命に到達&mdash;&mdash;力の手放しを通じて<br>ムスカさん &rarr; 天命に不到達&mdash;&mdash;力への執着の果てに滅びる</li>
+          <li>共通点 &rarr; どちらもラピュタの「遺産」に駆動されている。一方は手放すことで天命に到達し、他方は握り締めることで破滅した</li>
+        </ul>
+      </div>
+
+      <!-- 天命への転換点 -->
+      <div class="profiling-block fade-in">
+        <h3>天命への転換点</h3>
+        <ul>
+          <li>喪失：ムスカに金貨三枚を渡されてシータさんと分離された瞬間。「僕が馬鹿じゃなくて力があれば守ってあげられたんだ」&mdash;&mdash;この一言にパズーさんの全構造が露呈する</li>
+          <li>反転：ドーラの叱咤で立ち上がり、「シータを助けたいんだ」と言った瞬間。動機が「父を証明したい」から「シータを守りたい」へ明示的にシフトする</li>
+          <li>天命の萌芽：正当化（vindication）から保護（protection）へ。ラピュタの発見を誰にも語らなかったことが、この転換を裏付ける。証明がもはや目的ではなくなった。パズーさんは知っている。それで十分だった</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== セッション導入 ========== -->
+    <section class="fade-in">
+
+      <div class="text-panel fade-in">
+        <p>&mdash;&mdash;だが、その前に、一つの思考実験をさせてほしい。</p>
+        <p>もしパズーさんが、私のセッションに来たら。</p>
+        <p>父の写真と飛行機の設計図を抱えて、まっすぐに座って、こちらの質問に即座に答えるだろう。嘘もなく、防御もなく、偏向もなく。透明な言葉で。</p>
+        <p>だが&mdash;&mdash;その「透明さ」こそが、最も厄介な鎧だとしたら？</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== セッション対話 ========== -->
+    <section class="fade-in">
+
+      <h2 class="chapter-heading">
+        <span class="chapter-number">Session Dialogue</span>
+        セッション対話
+      </h2>
+
+      <div class="session-dialogue fade-in">
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「パズーさん、セッションに来てくださってありがとうございます。あなたはあなたに何をプレゼントしてあげたいですか？」</p>
+
+        <p class="line-character"><span class="speaker-pazu">パズー</span>「父さんが正しかったことを、みんなに知ってもらいたいです。父さんはラピュタを見たんです。写真もある。でも誰も信じなかった。詐欺師だって言われたまま死んだ。&hellip;&hellip;だから僕は、ラピュタを見つけて、父さんが嘘つきじゃなかったって証明したい。それを、自分にプレゼントしたいです」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「では、なぜそれをプレゼントできていないんですか？」</p>
+
+        <p class="line-character"><span class="speaker-pazu">パズー</span>「まだラピュタを見つけていないからです。でも、オーニソプターがもうすぐ完成します。完成したら竜の巣を超えて&mdash;&mdash;」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「なぜ、ラピュタを見つけなければプレゼントできないのですか？」</p>
+
+        <p class="line-character"><span class="speaker-pazu">パズー</span>「だって、証拠がなければ誰も信じないじゃないですか。父さんの時もそうだった。写真があったのに信じてもらえなかった。同乗者だっていたのに、その人は何も言ってくれなかった。だから僕が自分の目で確かめて、ラピュタを見つけて&mdash;&mdash;」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「なぜ、証拠が必要なのですか？」</p>
+
+        <p class="line-character"><span class="speaker-pazu">パズー</span>「え？　&hellip;&hellip;だって、証拠がなければ嘘つきのままでしょう。父さんが、ずっと」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「なぜ、お父さんが嘘つきのままだと、あなたにとって問題なのですか？」</p>
+
+        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;そんなの、当たり前じゃないですか。父さんは嘘なんかついてない。本当にラピュタを見たんだ。僕はその息子で&mdash;&mdash;」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「&hellip;&hellip;。」</p>
+
+        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;その息子で&hellip;&hellip;。&hellip;&hellip;だから&hellip;&hellip;」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「&hellip;&hellip;。」</p>
+
+        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;なんで黙ってるんですか」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「&hellip;&hellip;。」</p>
+
+        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;僕は、父さんの息子だから。父さんが嘘つきだったら&hellip;&hellip;僕が毎日やってること&hellip;&hellip;オーニソプターを作って、朝にトランペットを吹いて、ラピュタの話をして&hellip;&hellip;全部、意味がなくなる」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「なぜ、お父さんの正しさと、あなたの毎日の意味が繋がっているのですか？」</p>
+
+        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;え。&hellip;&hellip;そんなの&hellip;&hellip;」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「&hellip;&hellip;。」</p>
+
+        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;繋がってるに決まって&hellip;&hellip;いや、ちょっと待ってください。なんで繋がってるんだろう。&hellip;&hellip;父さんがラピュタを見たかどうかと、僕がトランペットを吹くことと&hellip;&hellip;それは&hellip;&hellip;」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「&hellip;&hellip;。」</p>
+
+        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;別のことだ。&hellip;&hellip;本当は、別のことのはずだ。父さんが正しくても間違っていても、僕は僕のはずなのに&hellip;&hellip;。なんで僕は、父さんの正しさがなくなったら、自分が空っぽになると思ってるんだろう」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「なぜだと思いますか？」</p>
+
+        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;わからない。&hellip;&hellip;でも、父さんが死んだとき、僕はまだ小さかった。父さんが最後に話してくれたのは、ラピュタのことだった。『あの城は本当にあるんだ』って。&hellip;&hellip;僕はそれを、父さんとの約束みたいに&hellip;&hellip;」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「&hellip;&hellip;。」</p>
+
+        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;みたいに、というか&hellip;&hellip;それしかなかった。父さんが残してくれたのはあの写真と、この話だけだった。だから僕にとって、ラピュタを見つけることは&hellip;&hellip;父さんと繋がっている唯一の&hellip;&hellip;」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「なぜ、それが唯一なのですか？」</p>
+
+        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;っ。&hellip;&hellip;だって、他には何もないから。父さんの顔も、もうぼんやりとしか覚えてない。母さんのことはもっと覚えてない。残ってるのは写真と、ラピュタの話と&hellip;&hellip;飛行機の設計図だけだ。&hellip;&hellip;それが全部なくなったら、僕は父さんの息子じゃなくなる」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「お父さんの息子じゃなくなると、何が起きますか？」</p>
+
+        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;僕が、誰でもなくなる」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「&hellip;&hellip;。」</p>
+
+        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;ただの、鉱山で働く孤児になる。誰も覚えてない父さんの、誰も覚えてない息子になる。&hellip;&hellip;それが&hellip;&hellip;怖い。&hellip;&hellip;あ。&hellip;&hellip;僕、怖いって思ったことなかった。今まで一度も。ラピュタを見つけるって決めてたから、怖いなんて考える暇がなかった」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「なぜ、考える暇がなかったのですか？」</p>
+
+        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;止まらなかったから。朝起きたらトランペット吹いて、仕事して、夜はオーニソプターを作って。毎日やることがあった。&hellip;&hellip;止まったら&hellip;&hellip;」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「&hellip;&hellip;。」</p>
+
+        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;止まったら、考えちゃう。父さんは本当にラピュタを見たのか。あの写真は本物なのか。&hellip;&hellip;もし違ったら、僕の人生はなんだったのか。&hellip;&hellip;止まるのが怖かったんだ。ずっと」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「&hellip;&hellip;。」</p>
+
+        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;あの。&hellip;&hellip;ありがとうございました。僕、そろそろ帰らなきゃ。オーニソプターの翼桁がまだ途中で&mdash;&mdash;やることがたくさんあるんで」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「&hellip;&hellip;。」</p>
+
+        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;。&hellip;&hellip;あれ。&hellip;&hellip;なんで立てないんだろう。&hellip;&hellip;帰ろうとしてるのに。&hellip;&hellip;オーニソプターを作らなきゃ。&hellip;&hellip;作らなきゃいけないのに&hellip;&hellip;。&hellip;&hellip;それは&hellip;&hellip;父さんの夢なのか、僕の夢なのか&hellip;&hellip;」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「&hellip;&hellip;。」</p>
+
+        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;この人、何も言わない。&hellip;&hellip;怒らない。引き留めない。何も求めてこない。&hellip;&hellip;。&hellip;&hellip;なんで、何も求めてこないんだろう。みんな、僕にラピュタの話をさせたがるか、馬鹿にするかのどっちかだったのに」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「&hellip;&hellip;。」</p>
+
+        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;。&hellip;&hellip;何も求めてこない人って&hellip;&hellip;。&hellip;&hellip;あ。&hellip;&hellip;一人だけいた。&hellip;&hellip;シータだ。シータも、僕にラピュタの話をさせたがらなかった。父さんの夢がどうとか、そういうことじゃなくて&hellip;&hellip;ただ、そばにいた。&hellip;&hellip;でもシータが空から降りてきたとき、僕は&mdash;&mdash;」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「&hellip;&hellip;。」</p>
+
+        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;僕はドキドキしたんだ。『きっと素敵なことが始まったんだ』って。あれは&hellip;&hellip;父さんの夢が本当だったって証拠を見つけた喜びだと思ってた。でも&hellip;&hellip;違うかもしれない。&hellip;&hellip;あの瞬間、僕が感じたのは&hellip;&hellip;『父さんが正しかった』じゃなくて&hellip;&hellip;『この子を守らなきゃ』だった。&hellip;&hellip;最初から。父さんのことは、後から思い出したんだ」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「&hellip;&hellip;。」</p>
+
+        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;僕は&hellip;&hellip;。&hellip;&hellip;ラピュタに行ったとき、父さんの写真と同じ景色を見た。父さんは正しかった。証明された。でも&hellip;&hellip;そのあと僕がやったことは、ラピュタを世界に見せることじゃなかった。バルスを唱えた。全部壊した。&hellip;&hellip;なんでだろう。父さんの夢が証明された瞬間に、僕はそれを手放した」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「なぜ、手放したのですか？」</p>
+
+        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;シータを守りたかったから。ラピュタの力がシータを殺す。だったら壊す。父さんの夢より、シータのほうが&hellip;&hellip;」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「&hellip;&hellip;。」</p>
+
+        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;あ。&hellip;&hellip;僕はずっと&hellip;&hellip;何かを証明したかったんじゃない。&hellip;&hellip;誰かを&hellip;&hellip;守りたかっただけだ。父さんを証明したかったんじゃない。&hellip;&hellip;ただ、守りたかった」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「&hellip;&hellip;。」</p>
+
+        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;でも&hellip;&hellip;それって、父さんの夢から逃げてるだけかもしれない。父さんが死んでまで守りたかったものを、僕が&hellip;&hellip;諦めるなんて&hellip;&hellip;」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「&hellip;&hellip;。」</p>
+
+        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;。&hellip;&hellip;でも&hellip;&hellip;帰ってきてから、ラピュタの話、誰にもしてないんだ。&hellip;&hellip;誰にも。&hellip;&hellip;証明する必要がなくなったから。&hellip;&hellip;僕が知ってる。それで&hellip;&hellip;十分だった」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「その『十分だった』は、何のためにあるのですか？」</p>
+
+        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;え。&hellip;&hellip;何のため&hellip;&hellip;」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「&hellip;&hellip;。」</p>
+
+        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;。&hellip;&hellip;証明が終わったから、じゃない。&hellip;&hellip;終わったのに、なんで十分だったんだろう。&hellip;&hellip;証明できたなら、みんなに見せればいいのに。&hellip;&hellip;僕はそうしなかった。&hellip;&hellip;しようとも思わなかった。&hellip;&hellip;父さんの名誉を回復するチャンスだったのに」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「何のために、誰にも話さなかったのですか？」</p>
+
+        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;。&hellip;&hellip;わからない。&hellip;&hellip;いや&hellip;&hellip;。&hellip;&hellip;わかる。&hellip;&hellip;もう、それが目的じゃなかったから。ラピュタで僕が見たのは&hellip;&hellip;父さんの正しさじゃなくて&hellip;&hellip;。&hellip;&hellip;あのロボットが、墓に花を供えていた。誰もいない庭園を、ずっと一人で守り続けていた。&hellip;&hellip;何百年も。誰に認められるわけでもなく。&hellip;&hellip;あれを見たとき、僕は&hellip;&hellip;」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「&hellip;&hellip;。」</p>
+
+        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;ああ、これだ、と思ったんだ。&hellip;&hellip;誰に認められなくても、守り続けること。&hellip;&hellip;それが&hellip;&hellip;。&hellip;&hellip;父さんも、そうだったのかもしれない。写真を撮ったのは、誰かに見せるためじゃなくて、自分が見たものを残すためだった。&hellip;&hellip;証明じゃなかった。&hellip;&hellip;記録だった」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「パズーさん。その『守り続けること』は、何のためにあるのですか？」</p>
+
+        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;。&hellip;&hellip;何のため&hellip;&hellip;。&hellip;&hellip;何のためでもない。&hellip;&hellip;いや、そうじゃない。何のためでもないんじゃなくて&hellip;&hellip;それそのものが&hellip;&hellip;目的だったんだ。守ること自体が。&hellip;&hellip;あのロボットは命令されて守ってたんじゃない。あれが&hellip;&hellip;あれだけが&hellip;&hellip;あのロボットの存在そのものだった」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「&hellip;&hellip;。」</p>
+
+        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;僕も、そうだ。&hellip;&hellip;守りたい。&hellip;&hellip;ただ、守りたい。それだけだった。ずっと。父さんの夢とか、ラピュタの証明とか、全部&hellip;&hellip;その上にかぶさってただけで&hellip;&hellip;。&hellip;&hellip;下にあったのは、最初から&hellip;&hellip;『守りたい』だけだった」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「&hellip;&hellip;。」</p>
+
+        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;でも&hellip;&hellip;これも都合が良すぎるかもしれない。父さんの夢が重すぎて、『守りたい』のほうが楽だから逃げてるだけかもしれない。&hellip;&hellip;僕にはわからない」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「パズーさん。もう一度聞きます。あなたはあなたに何をプレゼントしてあげたいですか？」</p>
+
+        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;。&hellip;&hellip;守る力です。&hellip;&hellip;何かを証明する力じゃなくて。&hellip;&hellip;大切なものが何なのかを見分けて、それを&hellip;&hellip;守って、そして、残す力」</p>
+
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== セッション後の解説 ========== -->
+    <section class="fade-in">
+
+      <div class="text-panel fade-in">
+        <p>上のセッション対話で、私はパズーさんに一度も答えを与えていない。</p>
+        <p>「なぜ？」という問いは、パズーさんが「当然」だと思い込んでいた前提&mdash;&mdash;父の正しさ＝自分の存在価値&mdash;&mdash;を、パズーさん自身に検証させる装置として機能した。「何のために？」という問いは、シャドウが露出した後に切り替わり、「誰にも話さなかった」「十分だった」という行動の奥にある動機&mdash;&mdash;守りたい&mdash;&mdash;を、パズーさん自身の口から浮上させた。</p>
+        <p>私は一度も、答えを与えていない。</p>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-block fade-in">
+        <h3>上の対話でパズーさんに行ったことと、同じことを、あなたに対して行います。</h3>
+        <a href="../../trial.html" class="cta-btn">&#9654; トライアルセッションに申し込む</a>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>ここからは、上のプロファイリングとセッションの根拠を、物語に沿って詳しく読み解いていく。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== 第1章 ========== -->
+    <section class="fade-in">
+
+      <h2 class="chapter-heading">
+        <span class="chapter-number">Chapter 01</span>
+        継承されたMeta&mdash;&mdash;父の写真と息子の飛行機
+      </h2>
+
+      <div class="text-panel fade-in">
+        <p>パズーさんの物語は、パズーさん自身から始まらない。</p>
+        <p>パズーさんの父は冒険飛行家だった。「竜の巣」と呼ばれる伝説の嵐を超え、天空の城ラピュタを発見し、その一部を写真に収めた。しかし帰還後、誰にも信じてもらえなかった。詐欺師と呼ばれ、心労のうちに亡くなった。</p>
+        <p>ここで注目すべき構造がある。父の飛行船には同乗者がいた。ラピュタの存在を目撃した唯一の第三者。しかしこの人物は、父が詐欺師扱いされている間も、父が死んだ後も、証人として名乗り出なかった。消息は生死を含めて不明。</p>
+        <p>この「沈黙した証人」の存在は、パズーさんの父の名誉回復がいかに孤独な戦いであったかを構造的に確定させている。証人がいたにもかかわらず救われなかった父。その構造を、幼い息子がそのまま引き受けた。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>実存科学ではこの構造を「継承されたMeta（Inherited Meta）」と呼ぶ。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>Meta（前提構造）は通常、個体自身の経験&mdash;&mdash;出生、環境、記憶&mdash;&mdash;から形成される。しかしパズーさんのMetaには、彼自身が経験していない要素が含まれている。父の冒険、父の発見、父の恥辱、父の死。これらはパズーさんの体験ではない。しかしパズーさんの全存在を規定している。</p>
+        <p>なぜか。子供は父の物語を「主張」として評価する能力を持たない。幼少期に受け取った物語は「これは正しいか？」というフィルターを通過せず、「事実」としてそのまま内面化される。パズーさんにとって「ラピュタは存在する」は仮説ではない。空気のように当然の前提だった。</p>
+        <p>オーニソプター（はばたき飛行機）の建造はこの構造の物質的表現である。パズーさんが毎晩、睡眠を削って飛行機を作り続けるのは、冒険心からではない。「父は嘘つきではなかった」という命題を物理的に証明するための装置を組み立てているのだ。</p>
+        <p>企画段階でこの映画のタイトル候補は「少年パズー 飛行石の謎」だった。宮崎駿がその場で五分で語ったという構想の原点は、ラピュタという城ではなく、パズーという少年だった。</p>
+        <p>そのパズーさんの全存在が、父から継承されたMetaの上に建っている。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== 第2章 ========== -->
+    <section class="fade-in">
+
+      <h2 class="chapter-heading">
+        <span class="chapter-number">Chapter 02</span>
+        空から降りてきたもの&mdash;&mdash;シータという「生きた証拠」
+      </h2>
+
+      <div class="text-panel fade-in">
+        <p>ある夜、パズーさんが仕事をしていると、空から少女が降りてくる。胸元の碧い石&mdash;&mdash;飛行石&mdash;&mdash;を光らせながら、ゆっくりと。パズーさんはその少女を受け止め、自分のベストを脱いで彼女にかける。</p>
+        <p>この一瞬の行動にパズーさんの全人格が露呈している。考える前に動いている。空から人が降ってくるという異常事態に、恐怖ではなく保護で反応している。「守る」がパズーさんの第一反応なのだ。</p>
+        <p>翌朝、目覚めたシータさんにパズーさんは父の写真を見せる。そして言う。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>「きみが空から降りてきた時、ドキドキしたんだ。きっと素敵なことが始まったんだって。」</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>この台詞は、構造的に二つの意味を同時に持っている。</p>
+        <p>一つ目。飛行石という実在する物体が、父の主張を裏付ける物理的証拠として現れた。シータさん自身がラピュタ王族の末裔&mdash;&mdash;リュシータ・トエル・ウル・ラピュタ&mdash;&mdash;であることが後に判明し、父の夢は完全に検証される。パズーさんの「ドキドキ」は、長年の孤独な戦いに最初の援軍が現れた歓喜として読める。</p>
+        <p>二つ目。しかし、セッション対話でパズーさん自身が気づいたように、最初の感情は「父さんが正しかった」ではなかった。「この子を守らなきゃ」だった。証拠の発見より先に、保護の衝動が起きている。</p>
+        <p>ここに、継承されたMetaの下に埋もれていたパズーさん自身の駆動力が、初めて顔を出す。</p>
+        <p>宮崎駿はこの作品が目指したものを「相手への献身、友情、自分の信じるものへひたむきに進んでいく少年の熱意」だと語っている。パズーさんが「信じるもの」とは何か。当初それは「父の正しさ」だった。しかし物語を通じて、それは「目の前の人を守ること」へと静かに&mdash;&mdash;しかし構造的に必然として&mdash;&mdash;シフトしていく。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== 第3章 ========== -->
+    <section class="fade-in">
+
+      <h2 class="chapter-heading">
+        <span class="chapter-number">Chapter 03</span>
+        分離と再起&mdash;&mdash;「シータを助けたいんだ」
+      </h2>
+
+      <div class="text-panel fade-in">
+        <p>物語の中盤、パズーさんは最も深い挫折を経験する。</p>
+        <p>軍に捕えられたパズーさんとシータさんは引き離される。ムスカはパズーさんに金貨三枚を渡す。シータを海賊から守った報酬という名目の手切れ金。パズーさんは為す術なく、シータさんを置いて帰される。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>「僕が馬鹿じゃなくて力があれば守ってあげられたんだ。」</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>この一言には、パズーさんの構造が凝縮されている。「力がない」から「守れなかった」。しかしこの時点で、パズーさんの言葉に「父」は出てこない。ラピュタも出てこない。「守れなかった」&mdash;&mdash; 純粋にそれだけが彼の痛みの中心にある。</p>
+        <p>帰宅したパズーさんをドーラが叱咤する。ドーラはこの物語において構造的な代理母として機能している。パズーさんにとって母の記憶はほとんど存在しない。そのパズーさんを叱り、奮い立たせ、「行動しろ」と促す女性。ドーラの叱咤は、母の不在によって止まっていた再起の回路を外部から起動させる。</p>
+        <p>パズーさんはドーラに言う。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>「おばさん、僕を仲間に入れてくれないか？　シータを、助けたいんだ。」</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>この言葉が、パズーさんの動機転換を明示する構造的転換点である。「ラピュタを見つけたい」ではない。「シータを助けたい」。継承されたMetaの下から、パズーさん自身の天命が&mdash;&mdash;まだ言語化されていないが&mdash;&mdash;初めて行動として表出した瞬間。</p>
+        <p>パズーさんは出発にあたり、二つのものを身につけ、一つのものを手放す。身につけたのは父の形見のゴーグル。手放したのは飼っていたハトたちの全て。鳩を逃がすという行動は、帰る場所を手放す覚悟を示している。しかし父のゴーグルは着けていく。この時点のパズーさんは、まだ完全には父の遺産から自由になっていない。ゴーグルは「父との接続」を維持する装置として、最後まで機能し続ける。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== 第4章 ========== -->
+    <section class="fade-in">
+
+      <h2 class="chapter-heading">
+        <span class="chapter-number">Chapter 04</span>
+        バルス&mdash;&mdash;父の夢を超えた瞬間
+      </h2>
+
+      <div class="text-panel fade-in">
+        <p>竜の巣を超え、ラピュタに到達したパズーさんとシータさん。</p>
+        <p>パズーさんは父の写真で見た通りの光景を、自分の目で見る。父は正しかった。詐欺師ではなかった。ラピュタは存在した。&mdash;&mdash;継承されたMetaの使命は、ここで完了する。</p>
+        <p>しかし物語はここで終わらない。むしろ、ここから始まる。</p>
+        <p>ラピュタには二つの顔がある。上層は庭園と自然と生命。巨大な樹木が城を包み、一体のロボット兵が静かに墓を守り、花を供えている。下層は大量破壊兵器と軍事技術。ムスカが起動させた兵器は、地上を灰燼に帰す力を持つ。</p>
+        <p>ムスカ&mdash;&mdash;ロムスカ・パロ・ウル・ラピュタ&mdash;&mdash;は、パズーさんと構造的に対をなすキャラクターである。どちらもラピュタの「遺産」に駆動されている。しかし対応が正反対。ムスカはラピュタの力を主張する。パズーさんはラピュタの力を手放す。</p>
+        <p>シータさんがムスカに捕えられ、パズーさんは壁を爆破して玉座の間に侵入する。ムスカに向かって叫ぶ。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>「石は隠した！　シータを撃ってみろ、石は戻らないぞ！」</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>ムスカは三分の猶予を与える。パズーさんはシータさんに言う。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>「シータ、落ち着いてよく聞くんだ。あの言葉を教えて。僕も一緒に言う。」</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>そして二人は手を重ねて、滅びの言葉を唱える。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>「バルス！」</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>何が壊されたか。ラピュタの中枢、兵器システム、軍事的な力の全て。ムスカは閃光に視力を奪われ、崩壊する城とともに落下する。</p>
+        <p>何が残ったか。巨大な樹木と庭園。園丁ロボット。自然と生命。樹木の根がパズーさんとシータさんを守り、ラピュタの上層部は人の手の届かない上空へと浮かんでいく。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>「木の根が、ぼくたちを守ってくれたんだ。」</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>ここに実存科学的な構造の転換がある。</p>
+        <p>パズーさんの父はラピュタを「見つける」ことを夢見た。パズーさんはラピュタを見つけた。そしてその後、パズーさんは「何を残し、何を手放すか」を選んだ。破壊されたのは兵器&mdash;&mdash;権力&mdash;&mdash;支配の装置。残されたのは樹木&mdash;&mdash;生命&mdash;&mdash;自然。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>これは父の夢の否定ではない。超越である。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>父は真実を見つけたかった。パズーさんは真実を見つけた。そして真実の中から、「主張されるべきもの」ではなく「手放されるべきもの」と「守られるべきもの」を分離した。これが、継承されたMetaの超越&mdash;&mdash;パズーさん自身の天命の顕現である。</p>
+        <p>シータさんの言葉がこの構造を裏付ける。「土に根を下ろし、風と共に生きよう。種とともに冬を越え、鳥と共に春を歌おう。」空に浮かぶラピュタ（根を持たない文明）の対極にある「根を持つ生」。パズーさんがシータさんと共にバルスを唱え、兵器を壊し、樹木を残したことは、この「根を持つ生」の選択に他ならない。</p>
+        <p>小説版エピローグで、パズーさんはスラッグ渓谷に帰りオーニソプターを完成させる。完成したらシータさんのいるゴンドアまで飛んでいくと手紙に書いている。関連資料集には、花束を持ってシータさんの元へ飛んでいくパズーさんの姿が描かれている。</p>
+        <p>飛行機は完成した。しかしその飛行機が向かう先は、ラピュタではない。シータさんの元。証明の装置だったオーニソプターは、保護と再会の装置に変わった。Metaの乗り物は同じでも、天命が書き換わったのだ。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== 結び ========== -->
+    <section class="fade-in">
+
+      <h2 class="chapter-heading">
+        <span class="chapter-number">Conclusion</span>
+        結び
+      </h2>
+
+      <div class="text-panel fade-in">
+        <p>宮崎駿は2009年のインタビューで、男性主人公の困難さについて語っている。女性の主人公はそこにいるだけでキャラクターになれるが、男のキャラクターを成立させるには「何かの宿命を背負っている」ことが必要だと。パズーさんのような「普通の労働少年」を主人公にした映画は、観客に来てもらえなかったと。</p>
+        <p>しかし実存科学の視座から見れば、パズーさんの「普通さ」こそが彼の構造の本質である。皮肉もなく、偏向もなく、複雑さもない。言っていることがそのまま意味するところ。この透明さが、パズーさんのシャドウを世界で最も発見困難にしている。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>パズーさんのシャドウは闇に覆われていない。むしろ光の中に溶けている。父の夢という美しい物語が、パズーさん自身の夢を見えなくしていた。「父は正しかった」という信念が強すぎて、「では自分は何を望んでいるのか」という問いが生まれる余地がなかった。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>しかし天命は構造の必然として露呈する。シータさんが空から降りてきた瞬間にパズーさんの第一反応が「守る」だったこと。ラピュタを見つけた瞬間にその力を手放したこと。帰還後にラピュタの発見を誰にも語らなかったこと。これらすべてが、継承されたMetaの下から露呈した天命&mdash;&mdash;「守ること。証明するのではなく、守ること」&mdash;&mdash;の表出だった。</p>
+        <p>変えられない前提条件を超えた先に、天命がある。パズーさんが超えたのは、父の遺産という名のMetaだった。そして超えた先にあったのは、ラピュタの力でも、父の名誉回復でもなく、ただ一つ&mdash;&mdash;目の前の人を守り、生命を残す力だった。</p>
+      </div>
+
+      <div class="pull-quote fade-in">
+        <p>あなたの「父の写真」は何だろう。<br>
+        あなたが毎日作り続けている「オーニソプター」は、本当にあなた自身の夢のために回っているだろうか。それとも、誰かから継承された物語を、「自分の夢」だと信じて組み立て続けているのではないか。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>パズーさんは、ラピュタを見つけた瞬間に、自分の天命がラピュタにないことを知った。あなたの天命もまた、あなたが「見つけなければならない」と信じているものの中にはないかもしれない。</p>
+        <p>もし、あなたの中に「止まったら考えてしまうから、止まれない」という構造があるなら。もし、誰かの物語を生きているのではないかという疑念が、どこかで小さく鳴り続けているなら。</p>
+        <p>その構造を、問いだけで開きます。</p>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-block fade-in">
+        <h3>あなたの「継承されたMeta」を、問いだけで開きます。</h3>
+        <a href="../../trial.html" class="cta-btn">&#9654; トライアルセッションに申し込む</a>
+      </div>
+
+    </section>
+
+    <!-- ========== 著者ブロック ========== -->
+    <div class="author-block fade-in">
+      <p><strong>箭内宏紀（やないひろき）</strong><br>
+      実存科学研究所 代表。「天命の言語化セッション&trade;」を提供。「Metaがある限り自由意志は存在しない」（M &rArr; &not;F）を第一公理とする実存科学を提唱。著書に『Metaがある限り&mdash;&mdash;自由意志・自分・他人は存在しない』『自由意志なき世界の歩き方』ほか。<br>
+      <a href="../../index.html">公式サイトはこちら</a>。</p>
+    </div>
+
+    <!-- ========== シリーズノート ========== -->
+    <div class="series-note fade-in">
+      <p>本シリーズ「自由意志なき世界の天命論」は、今後も新たな作品・キャラクターを追加していく。<br>
+      漫画のみならず、映画・小説・物語の登場人物を、実存科学の視点で読み解く。</p>
+      <p><a href="./">&larr; 天空の城ラピュタ篇・記事一覧に戻る</a>&emsp;｜&emsp;<a href="../../specials.html">&larr; 特別シリーズ一覧に戻る</a></p>
+    </div>
+
+    <!-- ========== 出典表記 ========== -->
+    <p class="source-note fade-in">※ 本稿で扱った作品：宮崎駿監督・脚本『天空の城ラピュタ』（スタジオジブリ / 徳間書店、1986年）。作品の著作権は原著者・制作会社に帰属します。</p>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container--wide">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <p class="footer-col__title">Guide</p>
+          <a href="../../beginner.html">はじめての方へ</a>
+          <a href="../../glossary.html">用語集</a>
+          <a href="../../session-flow.html">セッションの流れ</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Theory</p>
+          <a href="../../epistemology.html">認識論</a>
+          <a href="../../semantics.html">意味論</a>
+          <a href="../../society.html">社会論</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Contents</p>
+          <a href="../../archives.html">記事一覧</a>
+          <a href="../../specials.html">特別シリーズ</a>
+          <a href="../../session-menu.html">12の対話（領域）</a>
+          <a href="../../letters.html">21の手紙</a>
+          <a href="../../metaplay.html">Meta Play&trade;</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Session</p>
+          <a href="../../session.html">天命の言語化セッション&trade;</a>
+          <a href="../../dark-side/">ダークサイド診断</a>
+          <a href="../../omoidasu/">身体的知性診断</a>
+          <a href="../../uniqueness.html">独自性と射程</a>
+          <a href="../../trial.html">無料トライアル</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Institute</p>
+          <a href="../../founder.html">創始者</a>
+          <a href="../../faq.html">FAQ</a>
+          <a href="../../contact.html">お問い合わせ</a>
+          <a href="../../legal/legal-tokushoho.html">特定商取引法</a>
+          <a href="../../legal/legal-privacy-policy.html">プライバシーポリシー</a>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 実存科学研究所 &mdash; Existential Science Institute</p>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js?v=6"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "パズーのMeta ── 自由意志なき世界の天命論",
+  "description": "映画『天空の城ラピュタ』のパズーを、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。父の夢を自分の夢と信じて飛び続けた少年が、ラピュタを見つけた瞬間にその力を手放し、「守ること」という天命に到達するまで。",
+  "author": {
+    "@type": "Person",
+    "name": "箭内宏紀",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/founder.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  },
+  "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-laputa/pazu.html",
+  "inLanguage": "ja"
+}
+</script>
+</body>
+</html>
