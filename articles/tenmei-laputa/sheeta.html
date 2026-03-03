@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-laputa/sheeta.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>シータのMeta &mdash;&mdash; 自由意志なき世界の天命論 | 実存科学研究所</title>
+  <meta name="description" content="映画『天空の城ラピュタ』のシータを、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。力を忌み嫌う少女が、なぜその力の最終的な行使者になったのか。放棄による到達──おばあさんが何世代もかけて伝えてきた知恵の、最終的な体現。">
+  <meta property="og:title" content="シータのMeta &mdash;&mdash; 自由意志なき世界の天命論 | 実存科学研究所">
+  <meta property="og:description" content="映画『天空の城ラピュタ』のシータを、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。力を忌み嫌う少女が、なぜその力の最終的な行使者になったのか。放棄による到達──おばあさんが何世代もかけて伝えてきた知恵の、最終的な体現。">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="実存科学研究所">
+  <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css?v=6">
+
+<style>
+/* =============================================
+   視認性・読みやすさ強化CSS
+   ============================================= */
+
+/* === 1. 章見出し — 中央配置＋装飾 === */
+h2.chapter-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  color: #f0ece6;
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  position: relative;
+  padding-top: 2rem;
+}
+h2.chapter-heading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 1px;
+  background: #c0a878;
+}
+h2.chapter-heading::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(192,168,120,0.5), transparent);
+  margin: 1.2rem auto 0;
+}
+.chapter-number {
+  display: block;
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #c0a878;
+  margin-bottom: 0.6rem;
+}
+
+/* === 2. 区切り線 — 装飾付き === */
+hr {
+  border: none;
+  height: auto;
+  background: none;
+  margin: 4.5rem 0;
+  text-align: center;
+  overflow: visible;
+}
+hr::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(192,168,120,0.08) 15%, rgba(192,168,120,0.2) 50%, rgba(192,168,120,0.08) 85%, transparent 100%);
+}
+hr::after {
+  content: "\25C6";
+  display: block;
+  font-size: 0.5rem;
+  color: rgba(192,168,120,0.3);
+  margin-top: -0.35em;
+  letter-spacing: 1em;
+  line-height: 1;
+}
+
+/* === 3. セッション対話 — 読みやすさ向上 === */
+.session-dialogue {
+  max-width: 680px;
+  margin: 2.5rem auto;
+  padding: 2.5rem 2rem;
+  background: rgba(10, 8, 18, 0.35);
+  border: 1px solid rgba(192,168,120,0.06);
+  border-radius: 2px;
+  position: relative;
+}
+.session-dialogue::before {
+  content: "SESSION";
+  position: absolute;
+  top: -0.6em;
+  left: 2rem;
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  color: rgba(192,168,120,0.4);
+  background: #0c0a14;
+  padding: 0 0.8rem;
+}
+.session-dialogue p {
+  margin-bottom: 1.1em;
+  line-height: 2.2;
+}
+.session-dialogue .speaker-yanai { color: #c0a878; font-weight: 600; font-size: 0.92rem; }
+.session-dialogue .speaker-sheeta { color: #e8e4df; font-weight: 600; font-size: 0.92rem; }
+
+/* 箭内の発言：金色の左ボーダー */
+.session-dialogue .line-yanai {
+  border-left: 2px solid rgba(192,168,120,0.15);
+  padding-left: 1.2rem;
+}
+/* キャラの発言：少しインデント */
+.session-dialogue .line-character {
+  margin-left: 1.4rem;
+}
+/* 沈黙マーカー：中央揃え＋装飾線 */
+.session-dialogue .silence {
+  color: rgba(235,232,225,0.3);
+  font-style: italic;
+  text-align: center;
+  margin: 2em 0;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+}
+.session-dialogue .silence::before,
+.session-dialogue .silence::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: rgba(192,168,120,0.15);
+  vertical-align: middle;
+  margin: 0 1em;
+}
+/* 10発言ごとの視覚リズム */
+.session-dialogue p:nth-child(10n) {
+  margin-bottom: 2em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid rgba(192,168,120,0.06);
+}
+
+/* === 4. text-panel の単調さ解消 === */
+section > .text-panel:nth-of-type(even) {
+  background: rgba(8, 6, 16, 0.45);
+  border-color: transparent;
+}
+section > .text-panel:nth-of-type(even)::before {
+  display: none;
+}
+
+/* === 5. highlight-block の存在感微増 === */
+.highlight-block {
+  background: rgba(192,168,120,0.06);
+  border-left: 2px solid;
+  border-image: linear-gradient(180deg, #c0a878 0%, rgba(192,168,120,0.15) 100%) 1;
+  padding: 2rem 2rem 2rem 2.2rem;
+  margin: 2.5rem 0;
+}
+.highlight-block p {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 2.2;
+  color: #f0ece6;
+}
+
+/* === 6. セクション見出し（h3） === */
+h3.section-heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #e8e4df;
+  letter-spacing: 0.08em;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1.2rem;
+  border-left: 2px solid rgba(192,168,120,0.4);
+  line-height: 1.6;
+}
+
+/* === Profiling Block === */
+.profiling-block {
+  background: rgba(15,12,25,0.5);
+  border: 1px solid rgba(192,168,120,0.1);
+  padding: 2.5rem 2rem;
+  margin: 2rem 0;
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+.profiling-block::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(192,168,120,0.4), transparent);
+}
+.profiling-block h3 {
+  font-size: 0.92rem;
+  color: #c0a878;
+  letter-spacing: 0.15em;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(192,168,120,0.1);
+}
+.profiling-block p {
+  color: #c0bbb4;
+  font-size: 0.9rem;
+  line-height: 1.9;
+}
+.profiling-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+.profiling-block ul li {
+  margin-bottom: 1rem;
+  color: #c0bbb4;
+  font-size: 0.9rem;
+  line-height: 1.9;
+  padding-left: 1.6em;
+  position: relative;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(192,168,120,0.04);
+}
+.profiling-block ul li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.profiling-block ul li::before {
+  content: "\2500\2500";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgba(192,168,120,0.35);
+  font-size: 0.75em;
+}
+
+/* === CTA Block === */
+.cta-block {
+  background: rgba(192,168,120,0.06);
+  border: 1px solid rgba(192,168,120,0.2);
+  padding: 2.5rem 2rem;
+  margin: 3rem 0;
+  text-align: center;
+}
+.cta-block h3 {
+  font-size: 1.1rem;
+  color: #e8e4df;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.cta-block p {
+  font-size: 0.92rem;
+  color: #c0bbb4;
+  line-height: 2.2;
+  margin-bottom: 1.2rem;
+}
+.cta-block .cta-btn {
+  display: inline-block;
+  padding: 0.8rem 2.5rem;
+  background: #c0a878;
+  color: #080610;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  transition: opacity 0.2s;
+  border-bottom: none;
+}
+.cta-block .cta-btn:hover { opacity: 0.8; }
+
+/* === Author Block === */
+.author-block {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(192,168,120,0.15);
+}
+.author-block p { font-size: 0.88rem; color: #c0bbb4; line-height: 2; }
+.author-block strong { color: #e8e4df; }
+
+/* === Source Note === */
+.source-note {
+  margin-top: 2rem;
+  font-size: 0.82rem;
+  color: rgba(235,232,225,0.35);
+}
+
+/* === Series Note === */
+.series-note {
+  margin-top: 2rem;
+  padding: 1.5rem 2rem;
+  background: rgba(192,168,120,0.04);
+  border: 1px solid rgba(192,168,120,0.1);
+  font-size: 0.88rem;
+  color: #c0bbb4;
+  line-height: 2;
+}
+
+/* === 7. モバイル対応 === */
+@media (max-width: 600px) {
+  h2.chapter-heading {
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    padding-top: 1.5rem;
+  }
+  .chapter-number {
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    margin-bottom: 0.4rem;
+  }
+  h3.section-heading {
+    font-size: 1rem;
+    margin-top: 2rem;
+    padding-left: 1rem;
+  }
+  hr { margin: 3rem 0; }
+  .session-dialogue {
+    padding: 1.5rem 1.2rem;
+    margin: 2rem auto;
+  }
+  .session-dialogue .line-yanai { padding-left: 0.8rem; }
+  .session-dialogue .line-character { margin-left: 0.8rem; }
+  .profiling-block { padding: 1.5rem 1.2rem; }
+  .cta-block { padding: 2rem 1.2rem; }
+  .highlight-block { padding: 1.5rem 1.2rem 1.5rem 1.4rem; }
+  .text-panel { padding: 2rem 1.5rem; }
+}
+@media (max-width: 480px) {
+  .text-panel p br,
+  .pull-quote p br,
+  .highlight-block p br,
+  .def-box p br,
+  .session-dialogue p br { display: none; }
+  h2.chapter-heading { font-size: 1.15rem; }
+  .session-dialogue p:nth-child(10n) {
+    margin-bottom: 1.5em;
+    padding-bottom: 1em;
+  }
+}
+</style>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="../../index.html" class="site-logo">実存科学研究所</a>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="global-nav">
+        <a href="../../index.html">Top</a>
+        <a href="../../beginner.html">Guide</a>
+        <a href="../../epistemology.html">Epistemology</a>
+        <a href="../../semantics.html">Semantics</a>
+        <a href="../../society.html">Society</a>
+        <a href="../../founder.html">Founder</a>
+        <a href="../../session.html">Session</a>
+        <a href="../../specials.html">Specials</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">More</button>
+          <div class="nav-dropdown__menu">
+            <a href="../../metaplay.html">Meta Play&trade;</a>
+            <a href="../../dark-side/">ダークサイド診断</a>
+            <a href="../../omoidasu/">身体的知性診断</a>
+            <a href="../../trial.html">無料トライアル</a>
+            <a href="../../session-menu.html">12の対話（領域）</a>
+            <a href="../../letters.html">21の手紙</a>
+            <a href="../../uniqueness.html">独自性と射程</a>
+            <a href="../../faq.html">FAQ</a>
+            <a href="../../archives.html">記事一覧</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="page-hero__sub">CASTLE IN THE SKY</p>
+      <h1>シータのMeta</h1>
+      <p class="page-hero__lead">自由意志なき世界の天命論<br>箭内宏紀｜実存科学研究所</p>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <!-- ========== ネタバレ注記 ========== -->
+    <p class="source-note fade-in" style="margin-bottom: 2rem;">※本稿は『天空の城ラピュタ』の物語全体に触れています。未見の方はご注意ください。</p>
+
+    <!-- ========== 導入 ========== -->
+    <section class="fade-in">
+
+      <div class="text-panel fade-in">
+        <p>彼女は空から降ってきた。</p>
+        <p>気を失った少女の胸元で、青い石が光っていた。石は彼女の意志とは無関係に発動し、落下速度を殺し、少年の腕の中へ降ろした。彼女自身は何も選んでいない。眠っていた。それでも石は光った。</p>
+        <p>彼女の名はシータ。正式名を、リュシータ・トエル・ウル・ラピュタ&mdash;&mdash;「ラピュタの真の王」。</p>
+        <p>だが彼女の血の中には、空の帝国を動かす力が流れている。無意識に唱えた呪文がロボット兵を起動させ、要塞を崩壊させた。握った石が天の火を放つ兵器の鍵になった。最後に唱えた一語&mdash;&mdash;「バルス」&mdash;&mdash;が、空の帝国そのものを閉じた。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>なぜ、力を忌み嫌う少女が、その力の最終的な行使者になったのか。 なぜ、「あんな石、早く捨ててしまえばよかった」と嘆く少女が、石を捨てずに握り続けたのか。</p>
+        <p>その問いの先に、天命がある。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== シャドウ・プロファイリング ========== -->
+    <section class="fade-in">
+
+      <h2 class="chapter-heading">
+        <span class="chapter-number">Shadow Profiling</span>
+        シャドウ・プロファイリング
+      </h2>
+
+      <!-- Meta -->
+      <div class="profiling-block fade-in">
+        <h3>Meta（変えられない前提条件）</h3>
+        <ul>
+          <li>ラピュタ王族（本家筋）の血統。飛行石を発動させる能力がDNAレベルで埋め込まれている。他の人間が同じ呪文を唱えても何も起きない</li>
+          <li>おばあさんからの世代間伝達。秘密の名、飛行石、呪文群、使用の禁忌、ゴンドアの谷の歌&mdash;&mdash;すべてがおばあさんから伝えられた</li>
+          <li>二つの文化の衝突。ゴンドアの谷（大地・素朴・共生）の文化で育てられながら、血統はラピュタ（科学力・空の支配・権力）に属する</li>
+          <li>孤児。両親は不在、おばあさんもすでに他界。養育者の不在が、おばあさんの「言葉」への依存を強化している</li>
+          <li>飛行石の不随意的発動。石は本人の意志とは無関係に光る。力は彼女を「通して」作動する</li>
+        </ul>
+      </div>
+
+      <!-- シャドウ -->
+      <div class="profiling-block fade-in">
+        <h3>シャドウ（抑圧された本音）</h3>
+        <p>「この力は私のものではない&mdash;&mdash;しかし私の中にある」。ラピュタの女王としての自分、ムスカと同じ血を持つ自分を、Meta構造が「これは自分ではない」と否認し続けている。おばあさんの「決して使うな」という禁忌とムスカの恐怖が、「力＝悪」という非合理的信念を刻んでいる。</p>
+      </div>
+
+      <!-- 対比構造：シータとムスカ -->
+      <div class="profiling-block fade-in">
+        <h3>対比構造&mdash;&mdash;シータさんとムスカ</h3>
+        <ul>
+          <li>シータさん &rarr; 飛行石と呪文とおばあさんの知恵を継承した（本家筋）<br>ムスカ &rarr; 歴史の知識と権利意識を継承した（分家筋）</li>
+          <li>シータさん &rarr; 「土から離れては生きられない」&mdash;&mdash;Meta出力＝放棄<br>ムスカ &rarr; 「ラピュタの力こそ人類の夢」&mdash;&mdash;Meta出力＝支配</li>
+          <li>同じラピュタ王族の血統。異なるLayer 4以降。同じ「バルス」を知っている&mdash;&mdash;しかしその意味が完全に異なる</li>
+        </ul>
+      </div>
+
+      <!-- 天命への転換点 -->
+      <div class="profiling-block fade-in">
+        <h3>天命への転換点</h3>
+        <p>「バルス」によってラピュタの軍事力は崩壊し、残ったのは大樹の根に包まれた庭園だけ。「木が！ あたしたちが守ったから、木が守ってくれたの！」&mdash;&mdash;おばあさんたちが空を去って大地に降りた物語の、最終文をシータさんが書いた。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== セッション導入 ========== -->
+    <section class="fade-in">
+
+      <div class="text-panel fade-in">
+        <p>もしシータさんが私のセッションに来たら&mdash;&mdash;と想像する。</p>
+        <p>彼女はおそらく、入り口でしばらく立ち止まる。自分がこんな場所に来ていいのかと迷いながら。そして席に着いても、しばらくは自分の手を見つめているだろう。その手が握った石が何をしたか、まだ考えている。</p>
+        <p>私は一つの問いを渡す。たった一つだけ。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== セッション対話 ========== -->
+    <section class="fade-in">
+
+      <h2 class="chapter-heading">
+        <span class="chapter-number">Session Dialogue</span>
+        セッション対話&mdash;&mdash;シータさんとの120分
+      </h2>
+
+      <div class="session-dialogue fade-in">
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「シータさん、セッションに来てくださってありがとうございます。あなたはあなたに何をプレゼントしてあげたいですか？」</p>
+
+        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;帰りたいです。ゴンドアの谷に。あの農場に、帰りたい」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「なぜ、帰れていないのですか？」</p>
+
+        <p class="line-character"><span class="speaker-sheeta">シータ</span>「帰れないわけじゃないんです。&hellip;&hellip;でも、帰っても同じにはならない。あたしが何者か、もう知ってしまったから」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「何を知ったのですか？」</p>
+
+        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;力です。あたしが唱えた言葉で、ロボットが動いて、要塞が壊れた。おばあさんの優しいおまじないと、兵器を動かす言葉が、同じだった。&hellip;&hellip;あたしの中にある言葉が、優しさにも暴力にもなる。それが怖い」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「&hellip;&hellip;。」</p>
+
+        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;だから帰れないんです。石がなくても、血の中にあの力がある。あたしが口を開くだけで、何かが起きてしまうかもしれない」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「その力は、あなたが選んだものですか？」</p>
+
+        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;いいえ。おばあさんから受け継いだ。おばあさんもそのおばあさんから。ずっとずっと前から」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「なぜ、おばあさんはあなたにそれを渡したのですか？」</p>
+
+        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;わかりません。捨ててしまえばよかったのに。石も、名前も、呪文も、全部」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「なぜ、おばあさんは捨てなかったのですか？」</p>
+
+        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;捨てなかった。隠したんです。暖炉の穴に。結婚式にしかつけなかった。おかあさんも、おばあさんも。みんなそうしてきた」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「なぜ、結婚式にだけつけたのですか？」</p>
+
+        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;大事な日だったから？ &hellip;&hellip;いいえ、違う。捨てられないほど大事なものだったから、一番大事な日にだけ出したんだ」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「なぜ持っていたのですか？」</p>
+
+        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「&hellip;&hellip;。」</p>
+
+        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;あたしの話を聞いても、何にもなりませんよ。あたしはただの田舎の女の子です」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「&hellip;&hellip;。」</p>
+
+        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;本当に。あなたの時間の無駄です」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「&hellip;&hellip;。」</p>
+
+        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;なんで黙ってるんですか。&hellip;&hellip;あたしに残ったのは&mdash;&mdash;」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「&hellip;&hellip;。」</p>
+
+        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;おばあさんの言葉だけ。あたしに残ったのは、おばあさんの言葉だけです。『土に根をおろし、風と共に生きよう』って。あの歌は、消えない」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「その歌を作ったのは、誰ですか？」</p>
+
+        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;ゴンドアの谷の歌です。でも谷の人たちは、もともとラピュタから降りてきた人たちだった。&hellip;&hellip;逃げたんだと思ってました。でも&hellip;&hellip;逃げたなら、石を捨てたはず。呪文も忘れたはず。でもおばあさんは全部持っていた。&hellip;&hellip;『決して使うな』と言いながら」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「なぜ、『使うな』と言いながら教えたのですか？」</p>
+
+        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;『いいまじないに力を与えるには、悪い言葉も知らなければいけない』って。おばあさんはそう言った」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「それは何のためですか？」</p>
+
+        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;何のため。何のためにおばあさんは、あたしにバルスを教えたの」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「&hellip;&hellip;。」</p>
+
+        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;おばあさんは逃げたんじゃない。&hellip;&hellip;知っていて降りたんだ。ラピュタの力を全部知っていて、その上で、谷を選んだ」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「&hellip;&hellip;。」</p>
+
+        <p class="line-character"><span class="speaker-sheeta">シータ</span>「おばあさんは&hellip;&hellip;知っていたんだ。空を去ることが&hellip;&hellip;愛だって」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「&hellip;&hellip;。」</p>
+
+        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;でも、都合がよすぎませんか。あたしだって、バルスを唱えたのは勇気じゃない。追い詰められて、パズーの手を握って&mdash;&mdash;」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「なぜ、一人では唱えられなかったのですか？」</p>
+
+        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;怖かったから。でもパズーの手があったから。一人の力じゃなくなった」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「あなたはあなたに、何をプレゼントしてあげたいですか？」</p>
+
+        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「&hellip;&hellip;。」</p>
+
+        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;最初に聞かれたとき、帰りたいって言いました。&hellip;&hellip;でも今は、違う」</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内</span>「&hellip;&hellip;。」</p>
+
+        <p class="line-character"><span class="speaker-sheeta">シータ</span>「あたしがあたしにプレゼントしたいのは&hellip;&hellip;ラピュタの血を持ったまま、土に帰れるあたし、です。&hellip;&hellip;力を怖がるんじゃなくて、力があることを知った上で、畑を耕すあたし。&hellip;&hellip;おばあさんがそうしたように」</p>
+
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== セッション後の解説 ========== -->
+    <section class="fade-in">
+
+      <div class="text-panel fade-in">
+        <p>上の対話で、私はシータさんに一度も答えを与えていない。「なぜ？」が彼女の思い込みを掘り返し、「何のために？」がおばあさんの真意を彼女自身に発見させた。答えはすべて、彼女の口から出た。</p>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-block fade-in">
+        <h3>上の対話でシータさんに行ったことと、同じことを、あなたに対して行います。</h3>
+        <a href="../../trial.html" class="cta-btn">&#9654; トライアルセッションに申し込む</a>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>ここからは、上のプロファイリングとセッションの根拠を、物語に沿って詳しく読み解いていく。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== 第1章 ========== -->
+    <section class="fade-in">
+
+      <h2 class="chapter-heading">
+        <span class="chapter-number">Chapter 01</span>
+        飛行石とムスカ&mdash;&mdash;外在化されたMetaともう一つの出力
+      </h2>
+
+      <div class="text-panel fade-in">
+        <p>映画の中で、飛行石は何度も発動する。転落時（無意識）。要塞での呪文暗唱時（意図せず）。ムスカによる兵器起動時（シータさんの意志に反して）。シータさんの意志で制御できない場面が大半だ。飛行石はLayer 5（血統が持つ力）が物理的なペンダントとして外在化されたMetaであり、力が「石」という形で外にあるからこそ「石を捨てれば力から逃れられる」という非合理的信念が生じる。しかし石を捨てても血は変えられない。</p>
+        <p>この非合理的信念を決定的にしたのがムスカの存在である。ロムスカ・パロ・ウル・ラピュタ&mdash;&mdash;シータさんと同じ王族の血を引く。同じLayer 5。しかしLayer 4以降がまったく異なる。ムスカには「おばあさん」がいない。ラピュタの雷を発射し「見ろ、人がゴミのようだ」と嗤う姿が、シータさんの「力＝悪」という等式を刻んだ。</p>
+        <p>しかしシータさんは、ムスカの出力を「ラピュタの力の本質」として受け取ってしまっている。同じ力が異なるMeta構造を通せば、まったく異なる出力を生む。それを証明しているのがラピュタの園丁ロボットだ。壊れずに残った1体が庭園の手入れをし、墓に花を手向けている。破壊のロボット兵と花を手向ける園丁ロボット&mdash;&mdash;同じ技術から正反対の出力が生まれている。全五層の組み合わせがMeta出力を決定するという実存科学の根幹命題の、最も視覚的な証明である。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== 第2章 ========== -->
+    <section class="fade-in">
+
+      <h2 class="chapter-heading">
+        <span class="chapter-number">Chapter 02</span>
+        おばあさん&mdash;&mdash;見えないMeta設計者
+      </h2>
+
+      <div class="text-panel fade-in">
+        <p>おばあさんは映画に生きた姿で登場しない。回想シーンのみ。しかしその言葉が映画のクライマックスを決定する。</p>
+        <p>おばあさんがシータさんに渡したもの&mdash;&mdash;秘密の名前、飛行石、光を呼ぶ呪文、滅びの呪文、禁忌、そしてゴンドアの谷の歌。これは「力」と「知恵」の同時伝達であり、完全なMeta伝達だった。</p>
+        <p>セッション対話でシータさんが到達した核心はここにある。おばあさんたちが空を去ったのは恐怖からの逃走ではなかった。力を全部知った上で大地を選んだ。石を捨てたのではなく隠した。呪文を忘れたのではなく伝えた。それは&mdash;&mdash;シータさんが自ら語ったように&mdash;&mdash;「愛」だった。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== 第3章 ========== -->
+    <section class="fade-in">
+
+      <h2 class="chapter-heading">
+        <span class="chapter-number">Chapter 03</span>
+        バルス&mdash;&mdash;放棄の呪文
+      </h2>
+
+      <div class="text-panel fade-in">
+        <p>「バルス」の一語に、シータさんのMeta五層のすべてが収束する。Layer 5の血統がこの呪文を有効にし、Layer 4のおばあさんの教えがこの瞬間を準備し、Layer 3の農村文化が空の帝国を「閉じる」動機を与え、Layer 2の「土から離れては生きられない」がラピュタの存続を否定し、Layer 1のラピュタ語がその一語に力を宿す。</p>
+        <p>バルスは「破壊」ではない。ラピュタ語で「閉じよ」。おばあさんたちが空を去ったとき、物語は途中で止まっていた。空にはまだラピュタが残っていた。シータさんのバルスは、その可能性を閉じた。おばあさんたちが始めた物語の、最後の一行を書いた。</p>
+        <p>そして兵器は消え、大樹の根に包まれた庭園と花と園丁ロボットだけが、さらに高い空へ昇っていった。自然と共生していた部分だけが残った。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== 結び ========== -->
+    <section class="fade-in">
+
+      <h2 class="chapter-heading">
+        <span class="chapter-number">Conclusion</span>
+        結び
+      </h2>
+
+      <div class="text-panel fade-in">
+        <p>シータさんの天命は、「放棄による到達」という類型を示している。Metaが与えた力を、より深いMetaの要請に従って積極的に閉じること。彼女が得たのは、ラピュタの血を持ったまま大地に帰れる自分&mdash;&mdash;おばあさんが何世代もかけて伝えてきた知恵の、最終的な体現である。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>力を持つことは罪ではない。力を使わないことは弱さではない。力を知った上で土に根をおろすことは&mdash;&mdash;シータさんが自分で発見したように&mdash;&mdash;愛である。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>あなたの中にも、使い方がわからないまま封印している力がある。誰かから受け継いだものがあるかもしれない。受け取ったけれど使い方がわからない。だから暖炉の穴に隠している。</p>
+        <p>その力がなぜあるのか。何のためにあるのか。私が答えることはない。シータさんが120分の対話の中で自ら到達したように&mdash;&mdash;問いだけでお連れします。</p>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-block fade-in">
+        <h3>あなたの中の「暖炉の穴に隠した力」を、問いだけで開きます。</h3>
+        <a href="../../trial.html" class="cta-btn">&#9654; トライアルセッションに申し込む</a>
+      </div>
+
+    </section>
+
+    <!-- ========== 著者ブロック ========== -->
+    <div class="author-block fade-in">
+      <p><strong>箭内宏紀（やないひろき）</strong><br>
+      実存科学研究所 代表。「天命の言語化セッション&trade;」を提供。「Metaがある限り自由意志は存在しない」（M &rArr; &not;F）を第一公理とする実存科学を提唱。著書に『Metaがある限り&mdash;&mdash;自由意志・自分・他人は存在しない』『自由意志なき世界の歩き方』ほか。<br>
+      <a href="../../index.html">公式サイトはこちら</a>。</p>
+    </div>
+
+    <!-- ========== シリーズノート ========== -->
+    <div class="series-note fade-in">
+      <p>本シリーズ「自由意志なき世界の天命論」は、今後も新たな作品・キャラクターを追加していく。<br>
+      漫画のみならず、映画・小説・物語の登場人物を、実存科学の視点で読み解く。</p>
+      <p><a href="./">&larr; 天空の城ラピュタ篇・記事一覧に戻る</a>&emsp;｜&emsp;<a href="../../specials.html">&larr; 特別シリーズ一覧に戻る</a></p>
+    </div>
+
+    <!-- ========== 出典表記 ========== -->
+    <p class="source-note fade-in">※ 本稿で扱った作品：宮崎駿 監督・脚本『天空の城ラピュタ』（スタジオジブリ／徳間書店、1986年）。作品の著作権は原著者・制作会社に帰属します。</p>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container--wide">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <p class="footer-col__title">Guide</p>
+          <a href="../../beginner.html">はじめての方へ</a>
+          <a href="../../glossary.html">用語集</a>
+          <a href="../../session-flow.html">セッションの流れ</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Theory</p>
+          <a href="../../epistemology.html">認識論</a>
+          <a href="../../semantics.html">意味論</a>
+          <a href="../../society.html">社会論</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Contents</p>
+          <a href="../../archives.html">記事一覧</a>
+          <a href="../../specials.html">特別シリーズ</a>
+          <a href="../../session-menu.html">12の対話（領域）</a>
+          <a href="../../letters.html">21の手紙</a>
+          <a href="../../metaplay.html">Meta Play&trade;</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Session</p>
+          <a href="../../session.html">天命の言語化セッション&trade;</a>
+          <a href="../../dark-side/">ダークサイド診断</a>
+          <a href="../../omoidasu/">身体的知性診断</a>
+          <a href="../../uniqueness.html">独自性と射程</a>
+          <a href="../../trial.html">無料トライアル</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Institute</p>
+          <a href="../../founder.html">創始者</a>
+          <a href="../../faq.html">FAQ</a>
+          <a href="../../contact.html">お問い合わせ</a>
+          <a href="../../legal/legal-tokushoho.html">特定商取引法</a>
+          <a href="../../legal/legal-privacy-policy.html">プライバシーポリシー</a>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 実存科学研究所 &mdash; Existential Science Institute</p>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js?v=6"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "シータのMeta ── 自由意志なき世界の天命論",
+  "description": "映画『天空の城ラピュタ』のシータを、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。力を忌み嫌う少女が、なぜその力の最終的な行使者になったのか。放棄による到達──おばあさんが何世代もかけて伝えてきた知恵の、最終的な体現。",
+  "author": {
+    "@type": "Person",
+    "name": "箭内宏紀",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/founder.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  },
+  "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-laputa/sheeta.html",
+  "inLanguage": "ja"
+}
+</script>
+</body>
+</html>
