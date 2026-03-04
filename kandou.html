@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/kandou.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>感動的な人生を取り戻す方法 | 実存科学研究所</title>
+  <meta name="description" content="立ち止まると価値がなくなる気がする。何もしていない日曜日が怖い。その感覚の正体を、あなたはまだ知らない。">
+  <meta property="og:title" content="感動的な人生を取り戻す方法">
+  <meta property="og:description" content="なぜ、あなたの人生から「感動」が消えたのか。その構造を解き明かし、取り戻す方法があります。">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="実存科学研究所">
+  <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=6">
+  <style>
+    /* === Kandou LP specific styles === */
+
+    /* Hero */
+    .kd-hero {
+      padding: 14rem 0 8rem;
+      text-align: center;
+      border-bottom: 1px solid rgba(192, 168, 120, 0.1);
+      position: relative;
+    }
+
+    .kd-hero::after {
+      content: "";
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: #c0a878;
+      margin: 4rem auto 0;
+    }
+
+    .kd-hero__sub {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.25em;
+      color: #c0a878;
+      margin-bottom: 2.5rem;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+
+    .kd-hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 2rem;
+      letter-spacing: 0.08em;
+      color: #f0ece6;
+      line-height: 1.6;
+    }
+
+    .kd-hero__lead {
+      font-size: 1rem;
+      color: #a8a4a0;
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 2.4;
+    }
+
+    /* Question opener */
+    .kd-question {
+      text-align: center;
+      padding: 6rem 0;
+      border-bottom: 1px solid rgba(192, 168, 120, 0.08);
+    }
+
+    .kd-question__text {
+      font-size: 1.3rem;
+      color: #f0ece6;
+      line-height: 2.4;
+      letter-spacing: 0.06em;
+      font-weight: 500;
+    }
+
+    .kd-question__text em {
+      font-style: normal;
+      color: #c0a878;
+    }
+
+    /* Checklist section */
+    .kd-checklist {
+      margin: 3rem 0;
+    }
+
+    .kd-check-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      margin-bottom: 1rem;
+      padding: 1.6rem 2rem;
+      background: rgba(15, 12, 25, 0.7);
+      border: 1px solid rgba(192, 168, 120, 0.08);
+      transition: border-color 0.4s ease, box-shadow 0.4s ease;
+      overflow: hidden;
+    }
+
+    .kd-check-item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.3), transparent);
+    }
+
+    .kd-check-item__mark {
+      flex-shrink: 0;
+      width: 6px;
+      height: 6px;
+      background: rgba(192, 168, 120, 0.5);
+      border-radius: 50%;
+    }
+
+    .kd-check-item__text {
+      font-size: 0.95rem;
+      color: #c0bbb4;
+      line-height: 2;
+      flex: 1;
+    }
+
+    .kd-check-note {
+      text-align: center;
+      margin-top: 2.5rem;
+      font-size: 1.05rem;
+      color: #f0ece6;
+      line-height: 2.2;
+      letter-spacing: 0.04em;
+    }
+
+    .kd-check-note strong {
+      color: #c0a878;
+    }
+
+    /* Body text sections */
+    .kd-body {
+      font-size: 0.95rem;
+      color: #c0bbb4;
+      line-height: 2.4;
+      letter-spacing: 0.02em;
+    }
+
+    .kd-body p {
+      margin-bottom: 1.8rem;
+    }
+
+    .kd-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    .kd-body strong {
+      color: #f0ece6;
+      font-weight: 600;
+    }
+
+    .kd-body em {
+      font-style: normal;
+      color: #c0a878;
+    }
+
+    /* Accent line */
+    .kd-accent {
+      text-align: center;
+      padding: 4rem 0;
+      font-size: 1.15rem;
+      color: #f0ece6;
+      line-height: 2.4;
+      letter-spacing: 0.06em;
+      font-weight: 500;
+      border-top: 1px solid rgba(192, 168, 120, 0.08);
+      border-bottom: 1px solid rgba(192, 168, 120, 0.08);
+    }
+
+    /* Case study cards */
+    .kd-case {
+      position: relative;
+      margin-bottom: 3rem;
+      padding: 3rem 2.5rem;
+      background: rgba(15, 12, 25, 0.7);
+      border: 1px solid rgba(192, 168, 120, 0.12);
+      box-shadow: 0 2px 24px rgba(192, 168, 120, 0.05);
+      backdrop-filter: blur(8px);
+      transition: box-shadow 0.4s ease, border-color 0.4s ease;
+      overflow: hidden;
+    }
+
+    .kd-case::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.5), transparent);
+    }
+
+    .kd-case:hover {
+      box-shadow: 0 4px 48px rgba(192, 168, 120, 0.1);
+      border-color: rgba(192, 168, 120, 0.25);
+    }
+
+    .kd-case:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .kd-case__label {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.3em;
+      color: rgba(192, 168, 120, 0.4);
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    .kd-case__profile {
+      font-size: 0.82rem;
+      color: #8a8680;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.08em;
+    }
+
+    .kd-case__before {
+      font-size: 0.95rem;
+      color: #a8a4a0;
+      line-height: 2.2;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(192, 168, 120, 0.08);
+    }
+
+    .kd-case__after {
+      font-size: 0.95rem;
+      color: #c0bbb4;
+      line-height: 2.2;
+      margin-bottom: 1.5rem;
+    }
+
+    .kd-case__quote {
+      position: relative;
+      font-size: 1.05rem;
+      color: #f0ece6;
+      line-height: 2.2;
+      padding-left: 1.5rem;
+      border-left: 2px solid rgba(192, 168, 120, 0.4);
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+
+    /* CTA section */
+    .kd-cta {
+      text-align: center;
+      padding: 6rem 0 4rem;
+    }
+
+    .kd-cta__heading {
+      font-size: 1.5rem;
+      color: #f0ece6;
+      margin-bottom: 2rem;
+      letter-spacing: 0.08em;
+      line-height: 1.8;
+    }
+
+    .kd-cta__desc {
+      font-size: 0.95rem;
+      color: #a8a4a0;
+      line-height: 2.4;
+      max-width: 520px;
+      margin: 0 auto 3rem;
+    }
+
+    .btn--kandou {
+      display: inline-block;
+      padding: 1.2rem 4rem;
+      background: #c0a878;
+      color: #0c0a14;
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 0.9rem;
+      letter-spacing: 0.18em;
+      border: 1px solid #c0a878;
+      cursor: pointer;
+      transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+      text-transform: uppercase;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .btn--kandou:hover {
+      background: transparent;
+      color: #c0a878;
+      border-color: #c0a878;
+    }
+
+    .kd-cta__note {
+      font-size: 0.82rem;
+      color: #8a8680;
+      margin-top: 2rem;
+      line-height: 2;
+    }
+
+    /* Section divider */
+    .kd-divider {
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: rgba(192, 168, 120, 0.3);
+      margin: 0 auto;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .kd-hero {
+        padding: 10rem 0 5rem;
+      }
+
+      .kd-hero h1 {
+        font-size: 2rem;
+      }
+
+      .kd-question__text {
+        font-size: 1.1rem;
+      }
+
+      .kd-case {
+        padding: 2.5rem 2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .kd-hero {
+        padding: 8rem 0 4rem;
+      }
+
+      .kd-hero h1 {
+        font-size: 1.6rem;
+      }
+
+      .kd-hero__lead br {
+        display: none;
+      }
+
+      .kd-check-item {
+        padding: 1.2rem 1.2rem;
+        gap: 1rem;
+      }
+
+      .kd-case {
+        padding: 2rem 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .kd-question {
+        padding: 4rem 0;
+      }
+
+      .btn--kandou {
+        padding: 1.2rem 2rem;
+        font-size: 0.82rem;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#main" class="skip-link">メインコンテンツへスキップ</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="index.html" class="site-logo">実存科学研究所</a>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="global-nav">
+        <a href="index.html">Top</a>
+        <a href="beginner.html">Guide</a>
+        <a href="epistemology.html">Epistemology</a>
+        <a href="semantics.html">Semantics</a>
+        <a href="society.html">Society</a>
+        <a href="founder.html">Founder</a>
+        <a href="session.html">Session</a>
+        <a href="specials.html">Specials</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">More</button>
+          <div class="nav-dropdown__menu">
+            <a href="metaplay.html">Meta Play™</a>
+            <a href="dark-side/">ダークサイド診断</a>
+            <a href="omoidasu/">身体的知性診断</a>
+            <a href="trial.html">無料トライアル</a>
+            <a href="session-menu.html">12の対話（領域）</a>
+            <a href="letters.html">21の手紙</a>
+            <a href="uniqueness.html">独自性と射程</a>
+            <a href="faq.html">FAQ</a>
+            <a href="archives.html">記事一覧</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="kd-hero" id="main">
+    <div class="container">
+      <p class="kd-hero__sub">Reclaim Your Life</p>
+      <h1>感動的な人生を<br>取り戻す方法</h1>
+      <p class="kd-hero__lead">
+        最後に、心の底から震えるほど感動したのは、<br>
+        いつだったか、思い出せますか。
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== QUESTION ===== -->
+  <section class="kd-question">
+    <div class="container">
+      <p class="kd-question__text fade-in">
+        毎日は忙しい。成果も出している。<br>
+        でも、ふとした瞬間に思う──<br><br>
+        <em>「これが、私の人生のすべてなのか？」</em>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== CHECKLIST ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="content-block fade-in">
+        <h2 class="section__title">こんな感覚に、覚えはありませんか</h2>
+      </div>
+      <div class="kd-checklist fade-in">
+        <div class="kd-check-item">
+          <span class="kd-check-item__mark"></span>
+          <span class="kd-check-item__text">立ち止まると、自分の価値がなくなる気がする</span>
+        </div>
+        <div class="kd-check-item">
+          <span class="kd-check-item__mark"></span>
+          <span class="kd-check-item__text">何もしていない日曜日が、怖い</span>
+        </div>
+        <div class="kd-check-item">
+          <span class="kd-check-item__mark"></span>
+          <span class="kd-check-item__text">「何のためにやっているんだろう」が、ふと止まらなくなる</span>
+        </div>
+        <div class="kd-check-item">
+          <span class="kd-check-item__mark"></span>
+          <span class="kd-check-item__text">親に対して、まだ決着がついていない感情がある</span>
+        </div>
+        <div class="kd-check-item">
+          <span class="kd-check-item__mark"></span>
+          <span class="kd-check-item__text">誰にも見せていない自分が、いちばん本当の自分かもしれない</span>
+        </div>
+      </div>
+      <p class="kd-check-note fade-in">
+        もし一つでも当てはまるなら、<br>
+        それは<strong>「感動の不在」</strong>のサインです。
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== WHY ===== -->
+  <section class="section section--bordered">
+    <div class="container">
+      <div class="content-block fade-in">
+        <h2 class="section__title section__title--left">なぜ、感動が消えたのか</h2>
+        <div class="kd-body">
+          <p>
+            あなたは弱いわけでも、怠けているわけでもありません。
+          </p>
+          <p>
+            むしろ、頑張ってきた人ほどこうなります。
+          </p>
+          <p>
+            「役に立たなければ、存在する意味がない」<br>
+            「期待に応えなければ、愛されない」<br>
+            「弱さを見せたら、終わりだ」
+          </p>
+          <p>
+            こうした<strong>無意識のルール</strong>が、<br>
+            あなたの人生から感動を奪っています。
+          </p>
+          <p>
+            そのルールの多くは、幼少期に作られたものです。<br>
+            あなたを守るために、かつて必要だった。<br>
+            でも今は──あなたの人生を<em>縛っている</em>。
+          </p>
+          <p>
+            感動とは、自分の生に触れる瞬間のこと。<br>
+            <strong>自分が何のために生きているかを知らなければ、<br>
+            人生に感動は生まれません。</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TENMEI INTRO ===== -->
+  <section class="section section--bordered">
+    <div class="container">
+      <div class="content-block fade-in">
+        <p class="kd-hero__sub" style="margin-bottom: 2rem;">Tenmei</p>
+        <h2 class="section__title section__title--left">天命の言語化という方法</h2>
+        <div class="kd-body">
+          <p>
+            実存科学研究所では、<br>
+            「天命」──あなたの<strong>生まれてきた意味・生きる目的</strong>を、<br>
+            言葉にする技術を開発しました。
+          </p>
+          <p>
+            天命の言語化セッション™は、2時間の対話を通じて、<br>
+            あなたの無意識に刻まれたルールを特定し、<br>
+            その奥にある「本当の自分」を言葉にするプロセスです。
+          </p>
+          <p>
+            天命が言語化されると、何が変わるのか。<br>
+            ──それは、実際にセッションを受けた方の声が教えてくれます。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACCENT ===== -->
+  <div class="kd-accent fade-in">
+    <div class="container">
+      天命を言語化した3人の、その後。
+    </div>
+  </div>
+
+  <!-- ===== CASE STUDIES ===== -->
+  <section class="section">
+    <div class="container">
+
+      <!-- Case 1: 山田さん -->
+      <div class="kd-case fade-in">
+        <p class="kd-case__label">Case I</p>
+        <p class="kd-case__profile">山田さん — 40代男性・福祉職</p>
+        <p class="kd-case__before">
+          「全力を出すと消耗する」──ずっとそう思い込んでいた。<br>
+          目の前の仕事には全力を注いでいるのに、<br>
+          燃え尽きるような疲弊感が抜けなかった。
+        </p>
+        <p class="kd-case__after">
+          セッションを通じて発見したのは、<br>
+          「全力を注ぐ方向」が自分の天命とずれていたということ。<br>
+          努力の量ではなく、意味の配置を変えた。<br>
+          すると、全力を出しても消耗しない──<br>
+          むしろエネルギーが循環する感覚が生まれた。
+        </p>
+        <p class="kd-case__quote">
+          「全力で生きることが、こんなに自然なことだったとは思わなかった」
+        </p>
+      </div>
+
+      <!-- Case 2: よっしーさん -->
+      <div class="kd-case fade-in">
+        <p class="kd-case__label">Case II</p>
+        <p class="kd-case__profile">よっしーさん — 60代男性・元教育者</p>
+        <p class="kd-case__before">
+          「自分は凡人だ」──60年間、そう信じて生きてきた。<br>
+          教壇に立ち、生徒には「可能性は無限だ」と語りながら、<br>
+          自分自身にだけは、その言葉を許さなかった。
+        </p>
+        <p class="kd-case__after">
+          セッションで見つかったのは、<br>
+          「凡人でいること」が安全装置だったという事実。<br>
+          幼少期の体験が、自分の可能性にブレーキをかけ続けていた。<br>
+          そのルールを手放した瞬間、視界が一変した。
+        </p>
+        <p class="kd-case__quote">
+          「60年かけて閉じていた扉が、たった2時間で開いた」
+        </p>
+      </div>
+
+      <!-- Case 3: 三奈さん -->
+      <div class="kd-case fade-in">
+        <p class="kd-case__label">Case III</p>
+        <p class="kd-case__profile">三奈さん — 40代女性・セラピスト</p>
+        <p class="kd-case__before">
+          人のために尽くすのが当たり前だった。<br>
+          「自分のために生きる」と口にするだけで、罪悪感が湧いた。<br>
+          本音を飲み込み、周りに合わせ続ける日々。<br>
+          いつの間にか、自分が何を感じているのかもわからなくなっていた。
+        </p>
+        <p class="kd-case__after">
+          セッションで特定されたのは、<br>
+          4歳のときに刻まれた「比べられ、否定された」記憶。<br>
+          そこから生まれたルール──「自分を出してはいけない」を断ち切ったとき、<br>
+          封印していた自分自身が、静かに戻ってきた。
+        </p>
+        <p class="kd-case__quote">
+          「比べない。当たり前に、生きる価値がある。<br>
+          それが腑に落ちた瞬間、初めて自分の人生が始まった気がした」
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="section section--bordered">
+    <div class="container">
+      <div class="kd-cta fade-in">
+        <h2 class="kd-cta__heading">
+          あなたの感動を、<br>取り戻す準備はできていますか。
+        </h2>
+        <p class="kd-cta__desc">
+          天命の言語化セッション™では、<br>
+          2時間の対話を通じて、あなたの天命を100%言語化します。<br>
+          まずは無料トライアルから。
+        </p>
+        <a href="trial.html" class="btn--kandou">Trial Session &rarr;</a>
+        <p class="kd-cta__note">
+          ※ トライアルセッションは無料です。<br>
+          ※ Zoom にて2時間、箭内宏紀が直接対話いたします。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container--wide">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <p class="footer-col__title">Guide</p>
+          <a href="beginner.html">はじめての方へ</a>
+          <a href="glossary.html">用語集</a>
+          <a href="session-flow.html">セッションの流れ</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Theory</p>
+          <a href="epistemology.html">認識論</a>
+          <a href="semantics.html">意味論</a>
+          <a href="society.html">社会論</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Contents</p>
+          <a href="archives.html">記事一覧</a>
+          <a href="specials.html">特別シリーズ</a>
+          <a href="session-menu.html">12の対話（領域）</a>
+          <a href="letters.html">21の手紙</a>
+          <a href="metaplay.html">Meta Play™︎</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Session</p>
+          <a href="session.html">天命の言語化セッション™</a>
+          <a href="dark-side/">ダークサイド診断</a>
+          <a href="omoidasu/">身体的知性診断</a>
+          <a href="uniqueness.html">独自性と射程</a>
+          <a href="trial.html">無料トライアル</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Institute</p>
+          <a href="founder.html">創始者</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">お問い合わせ</a>
+          <a href="legal/legal-tokushoho.html">特定商取引法</a>
+          <a href="legal/legal-privacy-policy.html">プライバシーポリシー</a>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 実存科学研究所 — Existential Science Institute</p>
+    </div>
+  </footer>
+  <script src="js/main.js?v=6"></script>
+</body>
+
+</html>
