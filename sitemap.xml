@@ -556,6 +556,217 @@
     <priority>0.6</priority>
   </url>
 
+  <!-- ===== Series 04: LEON ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-leon/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-leon/leon.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-leon/stansfield.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-leon/mathilda.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===== Series 05: ハウルの動く城 ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-howl/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-howl/howl.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-howl/sophie.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===== Series 06: 千と千尋の神隠し ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-chihiro/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-chihiro/chihiro.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===== Series 07: もののけ姫 ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-mononoke/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-mononoke/ashitaka.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-mononoke/san.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-mononoke/eboshi.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===== Series 08: 天空の城ラピュタ ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-laputa/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-laputa/pazu.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-laputa/sheeta.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-laputa/muska.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===== Series 09: ショーシャンクの空に ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-shawshank/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-shawshank/andy.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===== Series 10: 風の谷のナウシカ ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-nausicaa/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-nausicaa/nausicaa.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===== Series 11: 紅の豚 ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-porco/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-porco/porco.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===== Series 12: ジョーカー ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-joker/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-joker/joker.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===== Series 13: インセプション ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-inception/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-inception/inception.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===== Series 14: ファイト・クラブ ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-fightclub/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-fightclub/fightclub.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===== Series 15: マトリックス ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-matrix/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-matrix/matrix.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-matrix/reloaded.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-matrix/revolutions.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-matrix/resurrections.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===== Series 16: グッド・ウィル・ハンティング ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-goodwillhunting/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-goodwillhunting/sean.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-goodwillhunting/will.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
   <!-- ===== VIDEOS ===== -->
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/videos/video-ikare.html</loc>
