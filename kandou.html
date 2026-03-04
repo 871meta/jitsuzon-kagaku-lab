@@ -266,6 +266,23 @@
       letter-spacing: 0.04em;
     }
 
+    .kd-case__phase {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+      color: rgba(192, 168, 120, 0.35);
+    }
+
+    .kd-case__arrow {
+      text-align: center;
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      color: rgba(192, 168, 120, 0.3);
+      margin: 1.5rem 0;
+    }
+
     /* CTA section */
     .kd-cta {
       text-align: center;
@@ -326,6 +343,47 @@
       margin: 0 auto;
     }
 
+    /* Comparison table */
+    .kd-compare {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2.5rem 0;
+      font-size: 0.92rem;
+      line-height: 1.9;
+    }
+
+    .kd-compare th,
+    .kd-compare td {
+      padding: 1.2rem 1.5rem;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid rgba(192, 168, 120, 0.15);
+    }
+
+    .kd-compare thead th {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 0.95rem;
+      letter-spacing: 0.06em;
+      color: #c0a878;
+      border-bottom: 1px solid rgba(192, 168, 120, 0.4);
+      padding-bottom: 1rem;
+    }
+
+    .kd-compare td:first-child {
+      color: #8a8680;
+      width: 30%;
+      font-size: 0.85rem;
+      letter-spacing: 0.04em;
+    }
+
+    .kd-compare td:nth-child(2) {
+      color: #a8a4a0;
+    }
+
+    .kd-compare td:nth-child(3) {
+      color: #f0ece6;
+    }
+
     /* Responsive */
     @media (max-width: 768px) {
       .kd-hero {
@@ -343,6 +401,7 @@
       .kd-case {
         padding: 2.5rem 2rem;
       }
+
     }
 
     @media (max-width: 480px) {
@@ -379,6 +438,19 @@
         box-sizing: border-box;
         text-align: center;
       }
+
+      .kd-compare {
+        font-size: 0.82rem;
+      }
+
+      .kd-compare th,
+      .kd-compare td {
+        padding: 0.8rem 0.6rem;
+      }
+
+      .kd-compare td:first-child {
+        font-size: 0.78rem;
+      }
     }
   </style>
 </head>
@@ -386,37 +458,10 @@
 <body>
   <a href="#main" class="skip-link">メインコンテンツへスキップ</a>
 
-  <!-- Header -->
+  <!-- Header (LP: logo only, no nav) -->
   <header class="site-header">
     <div class="container--wide">
       <a href="index.html" class="site-logo">実存科学研究所</a>
-      <button class="nav-toggle" aria-label="メニューを開く">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="global-nav">
-        <a href="index.html">Top</a>
-        <a href="beginner.html">Guide</a>
-        <a href="epistemology.html">Epistemology</a>
-        <a href="semantics.html">Semantics</a>
-        <a href="society.html">Society</a>
-        <a href="founder.html">Founder</a>
-        <a href="session.html">Session</a>
-        <a href="specials.html">Specials</a>
-        <div class="nav-dropdown">
-          <button class="nav-dropdown__toggle">More</button>
-          <div class="nav-dropdown__menu">
-            <a href="metaplay.html">Meta Play™</a>
-            <a href="dark-side/">ダークサイド診断</a>
-            <a href="omoidasu/">身体的知性診断</a>
-            <a href="trial.html">無料トライアル</a>
-            <a href="session-menu.html">12の対話（領域）</a>
-            <a href="letters.html">21の手紙</a>
-            <a href="uniqueness.html">独自性と射程</a>
-            <a href="faq.html">FAQ</a>
-            <a href="archives.html">記事一覧</a>
-          </div>
-        </div>
-      </nav>
     </div>
   </header>
 
@@ -424,57 +469,64 @@
   <section class="kd-hero" id="main">
     <div class="container">
       <p class="kd-hero__sub">Reclaim Your Life</p>
-      <h1>感動的な人生を<br>取り戻す方法</h1>
+      <h1>何のために生きているのかわからない——<br>
+        そう思っていた時期が、私にもありました。</h1>
       <p class="kd-hero__lead">
-        最後に、心の底から震えるほど感動したのは、<br>
-        いつだったか、思い出せますか。
-      </p>
-    </div>
-  </section>
-
-  <!-- ===== QUESTION ===== -->
-  <section class="kd-question">
-    <div class="container">
-      <p class="kd-question__text fade-in">
-        毎日は忙しい。成果も出している。<br>
-        でも、ふとした瞬間に思う──<br><br>
-        <em>「これが、私の人生のすべてなのか？」</em>
+        この方法を試してみてください。<br>
+        2時間で天命を悟り、感動的な人生を取り戻すことができます。
       </p>
     </div>
   </section>
 
   <!-- ===== CHECKLIST ===== -->
+  <section class="kd-question">
+    <div class="container">
+      <p class="kd-question__text fade-in">
+        <em>「これが、私の人生のすべてなのか？」</em><br>
+        ──こんな感覚に、覚えはありませんか。
+      </p>
+    </div>
+  </section>
+
   <section class="section">
     <div class="container">
-      <div class="content-block fade-in">
-        <h2 class="section__title">こんな感覚に、覚えはありませんか</h2>
-      </div>
       <div class="kd-checklist fade-in">
         <div class="kd-check-item">
           <span class="kd-check-item__mark"></span>
-          <span class="kd-check-item__text">立ち止まると、自分の価値がなくなる気がする</span>
+          <span class="kd-check-item__text">朝から晩まで全力で走り続けている。なのに身体の奥が空洞のように冷たく、立ち止まった瞬間「自分には価値がない」という声が聞こえてくる</span>
         </div>
         <div class="kd-check-item">
           <span class="kd-check-item__mark"></span>
-          <span class="kd-check-item__text">何もしていない日曜日が、怖い</span>
+          <span class="kd-check-item__text">部下には「もっとやれる」と言える。友人には「大丈夫」と言える。なのに自分にだけは、その言葉を一度も許したことがない</span>
         </div>
         <div class="kd-check-item">
           <span class="kd-check-item__mark"></span>
-          <span class="kd-check-item__text">「何のためにやっているんだろう」が、ふと止まらなくなる</span>
+          <span class="kd-check-item__text">「何のためにこれをやっているんだろう」──その問いが浮かぶたびに振り払い、また目の前のタスクに戻る。答えのない全力疾走を、もう何年続けているだろう</span>
         </div>
         <div class="kd-check-item">
           <span class="kd-check-item__mark"></span>
-          <span class="kd-check-item__text">親に対して、まだ決着がついていない感情がある</span>
+          <span class="kd-check-item__text">人のために尽くすことが息をするように自然で、「自分のために生きたい」と口にするだけで胸がざわつく。本音を飲み込み続けた結果、自分が何を感じているのかすらわからなくなった</span>
         </div>
         <div class="kd-check-item">
           <span class="kd-check-item__mark"></span>
-          <span class="kd-check-item__text">誰にも見せていない自分が、いちばん本当の自分かもしれない</span>
+          <span class="kd-check-item__text">コーチング、カウンセリング、セラピー、瞑想、占い、哲学、宗教──ある程度の時間とお金をかけて試してきた。どれも一時的には効いた気がした。でも根本の渇きは、まだ癒えていない</span>
+        </div>
+        <div class="kd-check-item">
+          <span class="kd-check-item__mark"></span>
+          <span class="kd-check-item__text">「私はこの程度じゃないはずだ」──その声がまだ消えない。もっとやれる、もっと生きられるはずだ。でも、その方法がわからない</span>
+        </div>
+        <div class="kd-check-item">
+          <span class="kd-check-item__mark"></span>
+          <span class="kd-check-item__text">大切な人との別れ、病、仕事の転機──今まさに人生の分岐点に立っている。偶然この文章を読んでいるのではない、と心のどこかで感じている</span>
         </div>
       </div>
       <p class="kd-check-note fade-in">
-        もし一つでも当てはまるなら、<br>
-        それは<strong>「感動の不在」</strong>のサインです。
+        もし一つでも当てはまるなら──<br>
+        <strong>今こそ、あなたが天命を悟るタイミングです。</strong>
       </p>
+      <h2 class="section__title fade-in" style="margin-top: 4rem; text-align: center;">
+        天命を知ることは、<br>感動を取り戻すことである。
+      </h2>
     </div>
   </section>
 
@@ -485,29 +537,61 @@
         <h2 class="section__title section__title--left">なぜ、感動が消えたのか</h2>
         <div class="kd-body">
           <p>
-            あなたは弱いわけでも、怠けているわけでもありません。
-          </p>
-          <p>
+            あなたは弱いわけでも、怠けているわけでもありません。<br>
             むしろ、頑張ってきた人ほどこうなります。
           </p>
           <p>
-            「役に立たなければ、存在する意味がない」<br>
-            「期待に応えなければ、愛されない」<br>
-            「弱さを見せたら、終わりだ」
+            コーチング、カウンセリング、セラピー、ヒーリング、占い、瞑想、哲学、宗教──<br>
+            これらには、ひとつの<strong>共通の前提</strong>があります。<br>
+            <em>「自分で選び、自分で変えられる」</em>という前提です。
           </p>
           <p>
-            こうした<strong>無意識のルール</strong>が、<br>
-            あなたの人生から感動を奪っています。
+            しかし──<br>
+            <strong>そもそも「自由意志」で人生を選んでいるのではないとしたら？</strong>
+          </p>
+        </div>
+
+        <table class="kd-compare">
+          <thead>
+            <tr>
+              <th></th>
+              <th>既存のアプローチ</th>
+              <th>天命の言語化セッション™</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>前提</td>
+              <td>自由意志がある</td>
+              <td>自由意志はない</td>
+            </tr>
+            <tr>
+              <td>方向</td>
+              <td>自分を変える</td>
+              <td>自分を超える</td>
+            </tr>
+            <tr>
+              <td>対象</td>
+              <td>行動・思考・感情</td>
+              <td>人生の必然性そのもの</td>
+            </tr>
+            <tr>
+              <td>結果</td>
+              <td>一時的な改善</td>
+              <td>二度と戻らない認識の転換</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="kd-body">
+          <p>
+            あなたの人生に起きたすべてのこと──<br>
+            あの出会いも、あの挫折も、あの喪失も──<br>
+            偶然ではなく、<strong>必然</strong>だったとしたら。
           </p>
           <p>
-            そのルールの多くは、幼少期に作られたものです。<br>
-            あなたを守るために、かつて必要だった。<br>
-            でも今は──あなたの人生を<em>縛っている</em>。
-          </p>
-          <p>
-            感動とは、自分の生に触れる瞬間のこと。<br>
-            <strong>自分が何のために生きているかを知らなければ、<br>
-            人生に感動は生まれません。</strong>
+            天命とは、その必然性の発露です。<br>
+            <strong>天命を知らなければ、人生に感動は生まれません。</strong>
           </p>
         </div>
       </div>
@@ -518,18 +602,36 @@
   <section class="section section--bordered">
     <div class="container">
       <div class="content-block fade-in">
-        <p class="kd-hero__sub" style="margin-bottom: 2rem;">Tenmei</p>
-        <h2 class="section__title section__title--left">天命の言語化という方法</h2>
+        <p class="kd-hero__sub" style="margin-bottom: 2rem;">Method</p>
+        <h2 class="section__title section__title--left">天命の言語化セッション™</h2>
         <div class="kd-body">
           <p>
-            実存科学研究所では、<br>
-            「天命」──あなたの<strong>生まれてきた意味・生きる目的</strong>を、<br>
-            言葉にする技術を開発しました。
+            2時間の対話を通じて、<br>
+            あなたが<strong>生まれてきた意味・生きる目的</strong>──天命を、<br>
+            言葉にするセッションです。
           </p>
           <p>
-            天命の言語化セッション™は、2時間の対話を通じて、<br>
-            あなたの無意識に刻まれたルールを特定し、<br>
-            その奥にある「本当の自分」を言葉にするプロセスです。
+            人生に起きた出来事の必然性をたどり、<br>
+            あなたの存在そのものに刻まれた使命を言語化します。<br>
+            一度言葉になった天命は、二度と消えません。
+          </p>
+        </div>
+      </div>
+
+      <!-- Founder profile -->
+      <div class="content-block fade-in" style="margin-top: 3rem; padding-top: 3rem; border-top: 1px solid rgba(192, 168, 120, 0.15);">
+        <p class="kd-hero__sub" style="margin-bottom: 1.5rem;">Facilitator</p>
+        <h3 class="section__title section__title--left" style="font-size: 1.3rem;">箭内 宏紀 ── 実存科学者</h3>
+        <div class="kd-body">
+          <p>
+            心理学、哲学、神経科学、儒教、密教、インド哲学、西洋形而上学──<br>
+            20年以上にわたる学際的研究を経て、<br>
+            「天命の言語化セッション™」を開発。
+          </p>
+          <p>
+            セッション提供実績は<strong>100名以上</strong>。<br>
+            認識論・意味論・社会論の3領域にまたがる独自の理論体系を構築し、<br>
+            実存科学研究所を設立。
           </p>
           <p>
             天命が言語化されると、何が変わるのか。<br>
@@ -543,7 +645,7 @@
   <!-- ===== ACCENT ===== -->
   <div class="kd-accent fade-in">
     <div class="container">
-      天命を言語化した3人の、その後。
+      天命を言語化した人たちの、Before &amp; After。
     </div>
   </div>
 
@@ -551,66 +653,180 @@
   <section class="section">
     <div class="container">
 
-      <!-- Case 1: 山田さん -->
+      <!-- Case 1 -->
       <div class="kd-case fade-in">
         <p class="kd-case__label">Case I</p>
-        <p class="kd-case__profile">山田さん — 40代男性・福祉職</p>
+        <p class="kd-case__profile">40代男性 ── 福祉施設長</p>
+        <p class="kd-case__phase">Before</p>
         <p class="kd-case__before">
-          「全力を出すと消耗する」──ずっとそう思い込んでいた。<br>
-          目の前の仕事には全力を注いでいるのに、<br>
-          燃え尽きるような疲弊感が抜けなかった。
+          「全力を出すと消耗する」──ずっとそう信じて生きてきた。<br>
+          目の前の仕事には誰よりも全力を注いでいるのに、身体の芯が抜けたような疲弊感が消えない。<br>
+          休日に少しでも休もうとすると、罪悪感が押し寄せる。<br>
+          「立ち止まったら自分には何も残らない」──そう思うと、走り続けるしかなかった。<br>
+          気がつけば、何のために走っているのかもわからなくなっていた。
         </p>
+        <p class="kd-case__arrow">▼</p>
+        <p class="kd-case__phase">After</p>
         <p class="kd-case__after">
-          セッションを通じて発見したのは、<br>
-          「全力を注ぐ方向」が自分の天命とずれていたということ。<br>
-          努力の量ではなく、意味の配置を変えた。<br>
-          すると、全力を出しても消耗しない──<br>
-          むしろエネルギーが循環する感覚が生まれた。
+          セッションを通じて発見したのは、「全力を注ぐ方向」が自分の天命とずれていたという事実だった。<br>
+          努力の量が間違っていたのではない。意味の配置が違っていた。<br>
+          天命が言語化された瞬間、努力のベクトルが根底から変わった。<br>
+          全力を出しても消耗しない──むしろエネルギーが循環する感覚が、初めて生まれた。
         </p>
         <p class="kd-case__quote">
           「全力で生きることが、こんなに自然なことだったとは思わなかった」
         </p>
       </div>
 
-      <!-- Case 2: よっしーさん -->
+      <!-- Case 2 -->
       <div class="kd-case fade-in">
         <p class="kd-case__label">Case II</p>
-        <p class="kd-case__profile">よっしーさん — 60代男性・元教育者</p>
+        <p class="kd-case__profile">60代男性 ── 個人事業主</p>
+        <p class="kd-case__phase">Before</p>
         <p class="kd-case__before">
-          「自分は凡人だ」──60年間、そう信じて生きてきた。<br>
-          教壇に立ち、生徒には「可能性は無限だ」と語りながら、<br>
-          自分自身にだけは、その言葉を許さなかった。
+          「自分は凡人だ」──60年間、本気でそう信じて生きてきた。<br>
+          教壇に立っていた頃、生徒には「可能性は無限だ」と語り続けた。<br>
+          なのに自分自身にだけは、その言葉を一度も許したことがなかった。<br>
+          何かに挑戦しようとするたびに、見えない壁が立ちはだかる。<br>
+          「どうせ自分には無理だ」──その声は60年間、一度も消えなかった。
         </p>
+        <p class="kd-case__arrow">▼</p>
+        <p class="kd-case__phase">After</p>
         <p class="kd-case__after">
-          セッションで見つかったのは、<br>
-          「凡人でいること」が安全装置だったという事実。<br>
-          幼少期の体験が、自分の可能性にブレーキをかけ続けていた。<br>
-          そのルールを手放した瞬間、視界が一変した。
+          セッションで明らかになったのは、「凡人でいること」が幼少期に作られた安全装置だったという事実。<br>
+          傷つかないために、目立たないために、期待されないために──<br>
+          幼い自分が生き延びるために必要だったルールが、60年間ずっと作動し続けていた。<br>
+          そのルールを手放した瞬間、視界が一変した。<br>
+          60年かけて閉じていた扉が、たった2時間の対話で開いた。
         </p>
         <p class="kd-case__quote">
           「60年かけて閉じていた扉が、たった2時間で開いた」
         </p>
       </div>
 
-      <!-- Case 3: 三奈さん -->
+      <!-- Case 3 -->
       <div class="kd-case fade-in">
         <p class="kd-case__label">Case III</p>
-        <p class="kd-case__profile">三奈さん — 40代女性・セラピスト</p>
+        <p class="kd-case__profile">40代女性 ── セラピスト</p>
+        <p class="kd-case__phase">Before</p>
         <p class="kd-case__before">
-          人のために尽くすのが当たり前だった。<br>
-          「自分のために生きる」と口にするだけで、罪悪感が湧いた。<br>
-          本音を飲み込み、周りに合わせ続ける日々。<br>
-          いつの間にか、自分が何を感じているのかもわからなくなっていた。
+          人のために尽くすことが、息をするように自然だった。<br>
+          「自分のために生きたい」──そう口にしただけで、胸の奥から罪悪感が湧き上がる。<br>
+          クライアントには「自分を大切にして」と言いながら、自分だけはその言葉を受け取れなかった。<br>
+          本音を飲み込み、周囲に合わせ続ける日々。<br>
+          いつの間にか、自分が何を感じているのかすらわからなくなっていた。
         </p>
+        <p class="kd-case__arrow">▼</p>
+        <p class="kd-case__phase">After</p>
         <p class="kd-case__after">
-          セッションで特定されたのは、<br>
-          4歳のときに刻まれた「比べられ、否定された」記憶。<br>
-          そこから生まれたルール──「自分を出してはいけない」を断ち切ったとき、<br>
-          封印していた自分自身が、静かに戻ってきた。
+          セッションで特定されたのは、4歳のときに刻まれた「比べられ、否定された」記憶だった。<br>
+          そこから生まれたルール──「自分を出してはいけない」。<br>
+          そのルールが、30年以上にわたって彼女の人生を支配し続けていた。<br>
+          そのルールを断ち切ったとき、封印していた自分自身が、静かに戻ってきた。
         </p>
         <p class="kd-case__quote">
           「比べない。当たり前に、生きる価値がある。<br>
           それが腑に落ちた瞬間、初めて自分の人生が始まった気がした」
+        </p>
+      </div>
+
+      <!-- Case 4 -->
+      <div class="kd-case fade-in">
+        <p class="kd-case__label">Case IV</p>
+        <p class="kd-case__profile">50代男性 ── 経営者</p>
+        <p class="kd-case__phase">Before</p>
+        <p class="kd-case__before">
+          事業は順調だった。売上も伸びている。社員からの信頼もある。<br>
+          なのに、「何のためにやっているのか」と問われると、言葉が出てこない。<br>
+          数字を追えば追うほど、心の中が空洞になっていく感覚。<br>
+          「成功しているのに満たされない」──そんなことは誰にも言えなかった。<br>
+          経営者仲間に相談しても「贅沢な悩みだ」で終わる。孤独だった。
+        </p>
+        <p class="kd-case__arrow">▼</p>
+        <p class="kd-case__phase">After</p>
+        <p class="kd-case__after">
+          セッションで言語化されたのは、事業と天命の接続だった。<br>
+          同じ事業なのに、天命を通して見ると全く違う景色に変わった。<br>
+          数字の先にある使命が言葉になった瞬間、経営の判断基準そのものが変わった。<br>
+          経営が「生き延びるための戦い」から「天命の実践」に変わった。
+        </p>
+        <p class="kd-case__quote">
+          「売上ではなく、使命で経営する。それだけで、すべてが変わった」
+        </p>
+      </div>
+
+      <!-- Case 5 -->
+      <div class="kd-case fade-in">
+        <p class="kd-case__label">Case V</p>
+        <p class="kd-case__profile">50代女性 ── 大学教授</p>
+        <p class="kd-case__phase">Before</p>
+        <p class="kd-case__before">
+          研究業績は十分にあった。論文も書いた。学会でも評価されている。<br>
+          なのに、「これが自分の仕事だ」という確信がどうしても持てなかった。<br>
+          知性で生きてきた。あらゆる学問を修めた。<br>
+          しかし、知性では答えが出ない問いが、人生の真ん中に居座り続けていた。<br>
+          「自分は何のために生まれてきたのか」──その問いだけが、どの学問でも解けなかった。
+        </p>
+        <p class="kd-case__arrow">▼</p>
+        <p class="kd-case__phase">After</p>
+        <p class="kd-case__after">
+          セッションで起きたのは、研究テーマと人生の必然性が一本の線で繋がるという体験だった。<br>
+          なぜこの分野を選んだのか。なぜこの問いに惹かれたのか。<br>
+          すべてに必然性があったことが、初めて腑に落ちた。<br>
+          「知る」と「生きる」が統合された瞬間、学問が天命の表現に変わった。
+        </p>
+        <p class="kd-case__quote">
+          「頭で理解していたことが、初めて身体の真ん中に落ちた」
+        </p>
+      </div>
+
+      <!-- Case 6 -->
+      <div class="kd-case fade-in">
+        <p class="kd-case__label">Case VI</p>
+        <p class="kd-case__profile">40代女性 ── ピアニスト</p>
+        <p class="kd-case__phase">Before</p>
+        <p class="kd-case__before">
+          技術には自信があった。コンクールでの評価も悪くない。<br>
+          でも、ある時期から弾いていても何も感じなくなっていた。<br>
+          聴衆の拍手が、まるで他人事のように遠い。<br>
+          「なぜ自分は音楽をやっているのか」──その問いに答えられなくなった瞬間、<br>
+          鍵盤に触れるのが怖くなった。
+        </p>
+        <p class="kd-case__arrow">▼</p>
+        <p class="kd-case__phase">After</p>
+        <p class="kd-case__after">
+          セッションで言語化されたのは、「評価されるために弾いていた自分」と「音楽そのものとして生きたい自分」の断絶だった。<br>
+          幼い頃に刻まれた「認められなければ存在できない」というルールが、演奏を支配していた。<br>
+          そのルールが外れたとき、音が変わった。<br>
+          技術ではなく、存在そのものから音楽が生まれる感覚を、初めて知った。
+        </p>
+        <p class="kd-case__quote">
+          「初めて、自分の音が聴こえた。技術ではなく、魂で弾くということがわかった」
+        </p>
+      </div>
+
+      <!-- Case 7 -->
+      <div class="kd-case fade-in">
+        <p class="kd-case__label">Case VII</p>
+        <p class="kd-case__profile">40代男性 ── 研究者・著述家</p>
+        <p class="kd-case__phase">Before</p>
+        <p class="kd-case__before">
+          書くことが仕事だった。論文も著書もある。知的な生産性は高い。<br>
+          なのに、書けば書くほど自分から遠ざかっていく感覚があった。<br>
+          「本当に書きたいことは、これではない」──その直感を無視し続けて何年も経つ。<br>
+          知識は増えた。言葉の技術も磨かれた。<br>
+          だが、自分の言葉で語っている実感が、どこにもなかった。
+        </p>
+        <p class="kd-case__arrow">▼</p>
+        <p class="kd-case__phase">After</p>
+        <p class="kd-case__after">
+          セッションで明らかになったのは、「書くこと」が承認を得るための手段になっていたという構造だった。<br>
+          天命が言語化された瞬間、書くべきテーマが一つに収束した。<br>
+          それは新しいテーマではなく、人生のすべてが指し示していた必然だった。<br>
+          言葉が「生産」から「表現」に変わった。書くことが、そのまま生きることになった。
+        </p>
+        <p class="kd-case__quote">
+          「ようやく、自分の言葉で書けるようになった。これが書くべきことだったのだと、全身でわかった」
         </p>
       </div>
 
