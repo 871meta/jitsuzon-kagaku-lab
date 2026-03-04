@@ -266,58 +266,21 @@
       letter-spacing: 0.04em;
     }
 
-    .kd-case__ba {
-      display: flex;
-      gap: 2rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .kd-case__ba-col {
-      flex: 1;
-    }
-
-    .kd-case__ba-label {
+    .kd-case__phase {
       font-family: "Cormorant Garamond", "Times New Roman", serif;
-      font-size: 0.72rem;
-      letter-spacing: 0.2em;
+      font-size: 0.68rem;
+      letter-spacing: 0.25em;
       text-transform: uppercase;
-      margin-bottom: 1rem;
+      margin-bottom: 0.8rem;
+      color: rgba(192, 168, 120, 0.35);
     }
 
-    .kd-case__ba-label--before {
-      color: #8a8680;
-    }
-
-    .kd-case__ba-label--after {
-      color: #c0a878;
-    }
-
-    .kd-case__ba-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      font-size: 0.88rem;
-      line-height: 2;
-    }
-
-    .kd-case__ba-list li {
-      position: relative;
-      padding-left: 1rem;
-    }
-
-    .kd-case__ba-list li::before {
-      content: "—";
-      position: absolute;
-      left: 0;
+    .kd-case__arrow {
+      text-align: center;
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
       color: rgba(192, 168, 120, 0.3);
-    }
-
-    .kd-case__ba-col:first-child .kd-case__ba-list li {
-      color: #8a8680;
-    }
-
-    .kd-case__ba-col:last-child .kd-case__ba-list li {
-      color: #c0bbb4;
+      margin: 1.5rem 0;
     }
 
     /* CTA section */
@@ -439,10 +402,6 @@
         padding: 2.5rem 2rem;
       }
 
-      .kd-case__ba {
-        flex-direction: column;
-        gap: 1.5rem;
-      }
     }
 
     @media (max-width: 480px) {
@@ -697,25 +656,23 @@
       <!-- Case 1 -->
       <div class="kd-case fade-in">
         <p class="kd-case__label">Case I</p>
-        <p class="kd-case__profile">40代男性 ── 福祉職</p>
-        <div class="kd-case__ba">
-          <div class="kd-case__ba-col">
-            <p class="kd-case__ba-label kd-case__ba-label--before">Before</p>
-            <ul class="kd-case__ba-list">
-              <li>全力を出すと消耗する、とずっと思い込んでいた</li>
-              <li>仕事に全力を注いでいるのに燃え尽きるような疲弊感</li>
-              <li>休むことに罪悪感を覚え、止まれない</li>
-            </ul>
-          </div>
-          <div class="kd-case__ba-col">
-            <p class="kd-case__ba-label kd-case__ba-label--after">After</p>
-            <ul class="kd-case__ba-list">
-              <li>「全力を注ぐ方向」が天命とずれていたことを発見</li>
-              <li>努力の量ではなく、意味の配置が変わった</li>
-              <li>全力を出してもエネルギーが循環する感覚に</li>
-            </ul>
-          </div>
-        </div>
+        <p class="kd-case__profile">40代男性 ── 福祉施設長</p>
+        <p class="kd-case__phase">Before</p>
+        <p class="kd-case__before">
+          「全力を出すと消耗する」──ずっとそう信じて生きてきた。<br>
+          目の前の仕事には誰よりも全力を注いでいるのに、身体の芯が抜けたような疲弊感が消えない。<br>
+          休日に少しでも休もうとすると、罪悪感が押し寄せる。<br>
+          「立ち止まったら自分には何も残らない」──そう思うと、走り続けるしかなかった。<br>
+          気がつけば、何のために走っているのかもわからなくなっていた。
+        </p>
+        <p class="kd-case__arrow">▼</p>
+        <p class="kd-case__phase">After</p>
+        <p class="kd-case__after">
+          セッションを通じて発見したのは、「全力を注ぐ方向」が自分の天命とずれていたという事実だった。<br>
+          努力の量が間違っていたのではない。意味の配置が違っていた。<br>
+          天命が言語化された瞬間、努力のベクトルが根底から変わった。<br>
+          全力を出しても消耗しない──むしろエネルギーが循環する感覚が、初めて生まれた。
+        </p>
         <p class="kd-case__quote">
           「全力で生きることが、こんなに自然なことだったとは思わなかった」
         </p>
@@ -724,25 +681,24 @@
       <!-- Case 2 -->
       <div class="kd-case fade-in">
         <p class="kd-case__label">Case II</p>
-        <p class="kd-case__profile">60代男性 ── 元教育者</p>
-        <div class="kd-case__ba">
-          <div class="kd-case__ba-col">
-            <p class="kd-case__ba-label kd-case__ba-label--before">Before</p>
-            <ul class="kd-case__ba-list">
-              <li>「自分は凡人だ」と60年間信じて生きてきた</li>
-              <li>生徒には「可能性は無限だ」と語りながら、自分には許さなかった</li>
-              <li>挑戦するたびにブレーキがかかる感覚</li>
-            </ul>
-          </div>
-          <div class="kd-case__ba-col">
-            <p class="kd-case__ba-label kd-case__ba-label--after">After</p>
-            <ul class="kd-case__ba-list">
-              <li>「凡人でいること」が幼少期に作られた安全装置だったと判明</li>
-              <li>可能性にブレーキをかけていたルールを手放した</li>
-              <li>60年閉じていた扉が、2時間で開いた</li>
-            </ul>
-          </div>
-        </div>
+        <p class="kd-case__profile">60代男性 ── 個人事業主</p>
+        <p class="kd-case__phase">Before</p>
+        <p class="kd-case__before">
+          「自分は凡人だ」──60年間、本気でそう信じて生きてきた。<br>
+          教壇に立っていた頃、生徒には「可能性は無限だ」と語り続けた。<br>
+          なのに自分自身にだけは、その言葉を一度も許したことがなかった。<br>
+          何かに挑戦しようとするたびに、見えない壁が立ちはだかる。<br>
+          「どうせ自分には無理だ」──その声は60年間、一度も消えなかった。
+        </p>
+        <p class="kd-case__arrow">▼</p>
+        <p class="kd-case__phase">After</p>
+        <p class="kd-case__after">
+          セッションで明らかになったのは、「凡人でいること」が幼少期に作られた安全装置だったという事実。<br>
+          傷つかないために、目立たないために、期待されないために──<br>
+          幼い自分が生き延びるために必要だったルールが、60年間ずっと作動し続けていた。<br>
+          そのルールを手放した瞬間、視界が一変した。<br>
+          60年かけて閉じていた扉が、たった2時間の対話で開いた。
+        </p>
         <p class="kd-case__quote">
           「60年かけて閉じていた扉が、たった2時間で開いた」
         </p>
@@ -752,24 +708,22 @@
       <div class="kd-case fade-in">
         <p class="kd-case__label">Case III</p>
         <p class="kd-case__profile">40代女性 ── セラピスト</p>
-        <div class="kd-case__ba">
-          <div class="kd-case__ba-col">
-            <p class="kd-case__ba-label kd-case__ba-label--before">Before</p>
-            <ul class="kd-case__ba-list">
-              <li>人のために尽くすのが当たり前で、自分のためとは言えなかった</li>
-              <li>「自分のために生きたい」と口にするだけで罪悪感</li>
-              <li>本音を飲み込み続け、自分の感情がわからなくなっていた</li>
-            </ul>
-          </div>
-          <div class="kd-case__ba-col">
-            <p class="kd-case__ba-label kd-case__ba-label--after">After</p>
-            <ul class="kd-case__ba-list">
-              <li>4歳のときの「比べられ、否定された」記憶が特定された</li>
-              <li>「自分を出してはいけない」というルールを断ち切った</li>
-              <li>封印していた自分自身が、静かに戻ってきた</li>
-            </ul>
-          </div>
-        </div>
+        <p class="kd-case__phase">Before</p>
+        <p class="kd-case__before">
+          人のために尽くすことが、息をするように自然だった。<br>
+          「自分のために生きたい」──そう口にしただけで、胸の奥から罪悪感が湧き上がる。<br>
+          クライアントには「自分を大切にして」と言いながら、自分だけはその言葉を受け取れなかった。<br>
+          本音を飲み込み、周囲に合わせ続ける日々。<br>
+          いつの間にか、自分が何を感じているのかすらわからなくなっていた。
+        </p>
+        <p class="kd-case__arrow">▼</p>
+        <p class="kd-case__phase">After</p>
+        <p class="kd-case__after">
+          セッションで特定されたのは、4歳のときに刻まれた「比べられ、否定された」記憶だった。<br>
+          そこから生まれたルール──「自分を出してはいけない」。<br>
+          そのルールが、30年以上にわたって彼女の人生を支配し続けていた。<br>
+          そのルールを断ち切ったとき、封印していた自分自身が、静かに戻ってきた。
+        </p>
         <p class="kd-case__quote">
           「比べない。当たり前に、生きる価値がある。<br>
           それが腑に落ちた瞬間、初めて自分の人生が始まった気がした」
@@ -780,24 +734,22 @@
       <div class="kd-case fade-in">
         <p class="kd-case__label">Case IV</p>
         <p class="kd-case__profile">50代男性 ── 経営者</p>
-        <div class="kd-case__ba">
-          <div class="kd-case__ba-col">
-            <p class="kd-case__ba-label kd-case__ba-label--before">Before</p>
-            <ul class="kd-case__ba-list">
-              <li>事業は成功しているのに、何のためにやっているかわからない</li>
-              <li>数字を追うほど、心が空洞になっていく感覚</li>
-              <li>「成功しても満たされない」ことに誰にも相談できなかった</li>
-            </ul>
-          </div>
-          <div class="kd-case__ba-col">
-            <p class="kd-case__ba-label kd-case__ba-label--after">After</p>
-            <ul class="kd-case__ba-list">
-              <li>事業の「意味」が天命と接続され、全く違う景色に見えた</li>
-              <li>数字の先にある使命が言語化され、判断基準が変わった</li>
-              <li>経営そのものが、天命の実践に変わった</li>
-            </ul>
-          </div>
-        </div>
+        <p class="kd-case__phase">Before</p>
+        <p class="kd-case__before">
+          事業は順調だった。売上も伸びている。社員からの信頼もある。<br>
+          なのに、「何のためにやっているのか」と問われると、言葉が出てこない。<br>
+          数字を追えば追うほど、心の中が空洞になっていく感覚。<br>
+          「成功しているのに満たされない」──そんなことは誰にも言えなかった。<br>
+          経営者仲間に相談しても「贅沢な悩みだ」で終わる。孤独だった。
+        </p>
+        <p class="kd-case__arrow">▼</p>
+        <p class="kd-case__phase">After</p>
+        <p class="kd-case__after">
+          セッションで言語化されたのは、事業と天命の接続だった。<br>
+          同じ事業なのに、天命を通して見ると全く違う景色に変わった。<br>
+          数字の先にある使命が言葉になった瞬間、経営の判断基準そのものが変わった。<br>
+          経営が「生き延びるための戦い」から「天命の実践」に変わった。
+        </p>
         <p class="kd-case__quote">
           「売上ではなく、使命で経営する。それだけで、すべてが変わった」
         </p>
@@ -807,24 +759,22 @@
       <div class="kd-case fade-in">
         <p class="kd-case__label">Case V</p>
         <p class="kd-case__profile">50代女性 ── 大学教授</p>
-        <div class="kd-case__ba">
-          <div class="kd-case__ba-col">
-            <p class="kd-case__ba-label kd-case__ba-label--before">Before</p>
-            <ul class="kd-case__ba-list">
-              <li>研究業績は十分なのに、「これが自分の仕事だ」と確信が持てない</li>
-              <li>知性で生きてきたが、知性では答えが出ない問いに直面していた</li>
-              <li>あらゆる学問を修めても、自分自身の生きる意味はわからなかった</li>
-            </ul>
-          </div>
-          <div class="kd-case__ba-col">
-            <p class="kd-case__ba-label kd-case__ba-label--after">After</p>
-            <ul class="kd-case__ba-list">
-              <li>研究テーマと人生の必然性が一本の線で繋がった</li>
-              <li>「知る」と「生きる」が統合された感覚を初めて体験した</li>
-              <li>学問が天命の表現になり、研究に魂が宿った</li>
-            </ul>
-          </div>
-        </div>
+        <p class="kd-case__phase">Before</p>
+        <p class="kd-case__before">
+          研究業績は十分にあった。論文も書いた。学会でも評価されている。<br>
+          なのに、「これが自分の仕事だ」という確信がどうしても持てなかった。<br>
+          知性で生きてきた。あらゆる学問を修めた。<br>
+          しかし、知性では答えが出ない問いが、人生の真ん中に居座り続けていた。<br>
+          「自分は何のために生まれてきたのか」──その問いだけが、どの学問でも解けなかった。
+        </p>
+        <p class="kd-case__arrow">▼</p>
+        <p class="kd-case__phase">After</p>
+        <p class="kd-case__after">
+          セッションで起きたのは、研究テーマと人生の必然性が一本の線で繋がるという体験だった。<br>
+          なぜこの分野を選んだのか。なぜこの問いに惹かれたのか。<br>
+          すべてに必然性があったことが、初めて腑に落ちた。<br>
+          「知る」と「生きる」が統合された瞬間、学問が天命の表現に変わった。
+        </p>
         <p class="kd-case__quote">
           「頭で理解していたことが、初めて身体の真ん中に落ちた」
         </p>
