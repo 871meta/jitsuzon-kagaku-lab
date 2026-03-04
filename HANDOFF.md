@@ -66,3 +66,32 @@ kandou.html のLP制作の続きをお願いします。以下が現状と残タ
 - エボークトセット/プレファレンスの観点：既存のどのカテゴリーにも属さないことを暗示的に伝える
 
 ---
+
+## 本番公開用の指示（別チャットで実行）
+
+以下を別のチャットに貼り付けて、本番環境に反映してください。
+
+```
+kandou.html のLP制作が途中まで完了しました。
+開発ブランチ claude/festive-carson-JL0qv の内容を本番（mainブランチ）にマージして公開してください。
+
+手順：
+1. git fetch origin claude/festive-carson-JL0qv
+2. git checkout main
+3. git merge origin/claude/festive-carson-JL0qv
+4. git push origin main
+
+変更ファイルは kandou.html と HANDOFF.md です。
+HANDOFF.md は引き継ぎ用メモなので、公開後に削除しても構いません。
+
+変更内容の概要：
+- ヘッダー: ナビ非表示、ロゴのみ（LP仕様）
+- ヒーロー: 共感型ヘッドライン + 天命を悟り感動的な人生を取り戻す
+- チェックリスト: 7項目
+- WHYセクション: 自由意志の前提を問う + 比較テーブル
+- 方法セクション: 天命の言語化セッション™ + 箭内宏紀プロフィール
+- 事例: 7パターンのBefore/After（個人名なし）
+
+※ LP制作は未完了です（提供物セクション・CTAセクションが未着手）。
+  現時点の状態で一旦公開します。
+```
