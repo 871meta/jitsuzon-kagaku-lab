@@ -384,6 +384,90 @@
       color: #f0ece6;
     }
 
+    /* Offering items */
+    .kd-offering {
+      margin: 2.5rem 0;
+    }
+
+    .kd-offering__item {
+      position: relative;
+      padding: 2rem 2.5rem;
+      margin-bottom: 1rem;
+      background: rgba(15, 12, 25, 0.7);
+      border: 1px solid rgba(192, 168, 120, 0.08);
+      overflow: hidden;
+    }
+
+    .kd-offering__item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.3), transparent);
+    }
+
+    .kd-offering__item:last-child {
+      margin-bottom: 0;
+    }
+
+    .kd-offering__phase {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(192, 168, 120, 0.5);
+      margin-bottom: 0.8rem;
+    }
+
+    .kd-offering__title {
+      font-size: 1.1rem;
+      color: #f0ece6;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.8rem;
+      font-weight: 500;
+    }
+
+    .kd-offering__desc {
+      font-size: 0.92rem;
+      color: #a8a4a0;
+      line-height: 2.2;
+    }
+
+    /* Registration form */
+    .kd-form {
+      display: flex;
+      gap: 0;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .kd-form__input {
+      flex: 1;
+      padding: 1.2rem 1.5rem;
+      background: rgba(15, 12, 25, 0.8);
+      border: 1px solid rgba(192, 168, 120, 0.3);
+      border-right: none;
+      color: #f0ece6;
+      font-size: 0.9rem;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    .kd-form__input::placeholder {
+      color: #8a8680;
+    }
+
+    .kd-form__input:focus {
+      border-color: #c0a878;
+    }
+
+    .kd-form .btn--kandou {
+      flex-shrink: 0;
+    }
+
     /* Responsive */
     @media (max-width: 768px) {
       .kd-hero {
@@ -437,6 +521,19 @@
         width: 100%;
         box-sizing: border-box;
         text-align: center;
+      }
+
+      .kd-form {
+        flex-direction: column;
+      }
+
+      .kd-form__input {
+        border-right: 1px solid rgba(192, 168, 120, 0.3);
+        border-bottom: none;
+      }
+
+      .kd-offering__item {
+        padding: 1.5rem 1.5rem;
       }
 
       .kd-compare {
@@ -833,6 +930,51 @@
     </div>
   </section>
 
+  <!-- ===== OFFERING ===== -->
+  <section class="section section--bordered">
+    <div class="container">
+      <div class="content-block fade-in">
+        <p class="kd-hero__sub" style="margin-bottom: 2rem;">Free Email Lesson</p>
+        <h2 class="section__title section__title--left">21日間の無料メールレッスン</h2>
+        <div class="kd-body">
+          <p>
+            天命の言語化セッション™に興味を持たれた方のために、<br>
+            <strong>「天命に至る思考のプロセス」</strong>を<br>
+            21日間にわたって毎朝メールでお届けします。
+          </p>
+        </div>
+
+        <div class="kd-offering">
+          <div class="kd-offering__item">
+            <p class="kd-offering__phase">Day 1 – 7</p>
+            <p class="kd-offering__title">認識の構造を知る</p>
+            <p class="kd-offering__desc">なぜ「変えたいのに変われない」のか。あなたの人生を支配している見えない前提──Metaの正体を解き明かします。</p>
+          </div>
+          <div class="kd-offering__item">
+            <p class="kd-offering__phase">Day 8 – 14</p>
+            <p class="kd-offering__title">人生の必然性を読む</p>
+            <p class="kd-offering__desc">あの出会い、あの挫折、あの選択──偶然だと思っていた出来事の中に、天命への伏線を見出します。</p>
+          </div>
+          <div class="kd-offering__item">
+            <p class="kd-offering__phase">Day 15 – 21</p>
+            <p class="kd-offering__title">天命への準備</p>
+            <p class="kd-offering__desc">天命を言語化するために必要な「問い」の立て方と、セッションで何が起きるのかを具体的にお伝えします。</p>
+          </div>
+        </div>
+
+        <div class="kd-body" style="margin-top: 2.5rem;">
+          <p>
+            21日間のメールを読み終えたとき、<br>
+            あなたはすでに「自分の人生の必然性」に気づき始めているはずです。
+          </p>
+          <p>
+            <strong>完全無料。解除はいつでも可能です。</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== CTA ===== -->
   <section class="section section--bordered">
     <div class="container">
@@ -841,14 +983,17 @@
           あなたの感動を、<br>取り戻す準備はできていますか。
         </h2>
         <p class="kd-cta__desc">
-          天命の言語化セッション™では、<br>
-          2時間の対話を通じて、あなたの天命を100%言語化します。<br>
-          まずは無料トライアルから。
+          まずは21日間の無料メールレッスンから。<br>
+          天命に至る思考のプロセスを、毎朝お届けします。
         </p>
-        <a href="trial.html" class="btn--kandou">Trial Session &rarr;</a>
+        <!-- TODO: action属性にメール配信サービスのエンドポイントURLを設定してください -->
+        <form class="kd-form" action="#" method="post">
+          <input type="email" class="kd-form__input" placeholder="メールアドレスを入力" required>
+          <button type="submit" class="btn--kandou">Register &rarr;</button>
+        </form>
         <p class="kd-cta__note">
-          ※ トライアルセッションは無料です。<br>
-          ※ Zoom にて2時間、箭内宏紀が直接対話いたします。
+          ※ 完全無料 / 21日間・毎朝配信<br>
+          ※ いつでも解除可能 / 第三者への提供はありません
         </p>
       </div>
     </div>
