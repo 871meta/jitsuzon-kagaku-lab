@@ -245,11 +245,11 @@
     .kd-card__label {
       display: inline-block;
       font-family: "Cormorant Garamond", serif;
-      font-size: 0.75rem;
+      font-size: 0.95rem;
       color: #c0a878;
       letter-spacing: 0.25em;
       text-transform: uppercase;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
       text-shadow: 0 0 12px rgba(192, 168, 120, 0.2);
     }
 
@@ -467,42 +467,164 @@
     /* Comparison table */
     .kd-compare {
       width: 100%;
-      border-collapse: collapse;
+      border-collapse: separate;
+      border-spacing: 0;
       margin: 2.5rem 0;
-      font-size: 0.92rem;
-      line-height: 1.9;
+      font-size: 0.95rem;
+      line-height: 1.8;
     }
 
     .kd-compare th,
     .kd-compare td {
       padding: 1.2rem 1.5rem;
       text-align: left;
-      vertical-align: top;
-      border-bottom: 1px solid rgba(192, 168, 120, 0.15);
+      vertical-align: middle;
     }
 
     .kd-compare thead th {
       font-family: "Cormorant Garamond", "Times New Roman", serif;
-      font-size: 0.95rem;
+      font-size: 1rem;
+      font-weight: 600;
       letter-spacing: 0.06em;
+      padding-bottom: 1.2rem;
+    }
+
+    .kd-compare thead th:nth-child(2) {
+      color: #8a8680;
+    }
+
+    .kd-compare thead th:nth-child(3) {
       color: #c0a878;
-      border-bottom: 1px solid rgba(192, 168, 120, 0.4);
-      padding-bottom: 1rem;
+    }
+
+    .kd-compare tbody tr {
+      border-bottom: 1px solid rgba(192, 168, 120, 0.12);
     }
 
     .kd-compare td:first-child {
-      color: #8a8680;
-      width: 30%;
-      font-size: 0.85rem;
-      letter-spacing: 0.04em;
+      color: #c0a878;
+      width: 20%;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      padding-right: 1rem;
     }
 
     .kd-compare td:nth-child(2) {
-      color: #a8a4a0;
+      color: #7a7672;
+      width: 35%;
+      background: rgba(255, 255, 255, 0.02);
     }
 
     .kd-compare td:nth-child(3) {
       color: #f0ece6;
+      width: 45%;
+      background: rgba(192, 168, 120, 0.06);
+      font-weight: 500;
+    }
+
+    @media (max-width: 600px) {
+      .kd-compare {
+        display: block;
+        font-size: 0.85rem;
+      }
+      .kd-compare thead { display: none; }
+      .kd-compare tbody { display: block; }
+      .kd-compare tr {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        margin-bottom: 0.8rem;
+        padding-bottom: 0.8rem;
+        border-bottom: 1px solid rgba(192, 168, 120, 0.12);
+      }
+      .kd-compare td:first-child {
+        grid-column: 1 / -1;
+        font-size: 0.72rem;
+        padding: 0.4rem 0.2rem 0.3rem;
+        width: auto;
+      }
+      .kd-compare td:nth-child(2) {
+        background: none;
+        padding: 0.4rem 0.5rem;
+        color: #8a8680;
+        width: auto;
+        border-right: 1px solid rgba(192, 168, 120, 0.1);
+      }
+      .kd-compare td:nth-child(3) {
+        background: none;
+        padding: 0.4rem 0.5rem;
+        width: auto;
+      }
+      .kd-compare tr:first-child td:nth-child(2)::before,
+      .kd-compare tr:first-child td:nth-child(3)::before {
+        display: block;
+        font-size: 0.68rem;
+        letter-spacing: 0.06em;
+        margin-bottom: 0.2rem;
+      }
+      .kd-compare tr:first-child td:nth-child(2)::before {
+        content: "既存のアプローチ";
+        color: #6a6662;
+      }
+      .kd-compare tr:first-child td:nth-child(3)::before {
+        content: "天命の言語化セッション™";
+        color: #c0a878;
+      }
+    }
+
+    /* Facilitator */
+    .kd-facilitator {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .kd-facilitator__photo-wrap {
+      flex-shrink: 0;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 1px solid rgba(192, 168, 120, 0.2);
+    }
+
+    .kd-facilitator__photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .kd-facilitator__role {
+      font-size: 0.82rem;
+      color: #c0a878;
+      letter-spacing: 0.04em;
+      line-height: 1.6;
+    }
+
+    .kd-facilitator__lead {
+      font-size: 1.05rem;
+      color: #f0ece6;
+      line-height: 2;
+      padding: 1.2rem 1.5rem;
+      margin-bottom: 1.5rem;
+      background: rgba(192, 168, 120, 0.06);
+      border-left: 2px solid rgba(192, 168, 120, 0.4);
+    }
+
+    @media (max-width: 600px) {
+      .kd-facilitator {
+        gap: 1rem;
+      }
+      .kd-facilitator__photo-wrap {
+        width: 80px;
+        height: 80px;
+      }
+      .kd-facilitator__lead {
+        font-size: 0.95rem;
+        padding: 1rem 1.2rem;
+      }
     }
 
     /* Offering items */
@@ -774,6 +896,155 @@
         gap: 0.6rem;
       }
     }
+
+    /* Authority evidence strip */
+    .kd-bookstrip {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 2.5rem 0 3rem;
+      flex-wrap: wrap;
+    }
+
+    .kd-bookstrip img {
+      height: 90px;
+      width: auto;
+      border: 1px solid rgba(192, 168, 120, 0.1);
+      filter: brightness(0.6) saturate(0.4);
+      transition: filter 0.5s ease, border-color 0.5s ease, transform 0.5s ease;
+    }
+
+    .kd-bookstrip img.strip-photo {
+      height: 90px;
+      border-radius: 3px;
+      object-fit: cover;
+    }
+
+    .kd-bookstrip img.strip-badge {
+      height: 44px;
+      filter: brightness(0.7) saturate(0.5);
+    }
+
+    .kd-bookstrip img.strip-logo {
+      height: 56px;
+      background: rgba(12, 10, 20, 0.85);
+      padding: 6px 10px;
+      border-radius: 3px;
+      filter: brightness(0.5) saturate(0.3);
+    }
+
+    /* Gift card banner */
+    .kd-giftcard {
+      max-width: 520px;
+      margin: 0 auto;
+      padding: 2.8rem 2.5rem 2.4rem;
+      background: linear-gradient(160deg, rgba(18, 14, 28, 0.97) 0%, rgba(28, 22, 38, 0.95) 50%, rgba(18, 14, 28, 0.97) 100%);
+      border: 1px solid rgba(192, 168, 120, 0.25);
+      position: relative;
+      text-align: center;
+    }
+
+    .kd-giftcard::before {
+      content: '';
+      position: absolute;
+      inset: 5px;
+      border: 1px solid rgba(192, 168, 120, 0.12);
+      pointer-events: none;
+    }
+
+    .kd-giftcard__label {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 0.75rem;
+      color: rgba(192, 168, 120, 0.55);
+      letter-spacing: 0.35em;
+      margin-bottom: 1.2rem;
+      text-transform: uppercase;
+    }
+
+    .kd-giftcard__title {
+      font-family: "Shippori Mincho", serif;
+      font-size: 1.7rem;
+      font-weight: 600;
+      color: #f0ece6;
+      letter-spacing: 0.18em;
+      line-height: 1.5;
+      margin-bottom: 0.2rem;
+    }
+
+    .kd-giftcard__title small {
+      font-size: 0.55em;
+      font-weight: 400;
+      color: rgba(192, 168, 120, 0.5);
+      vertical-align: super;
+      letter-spacing: 0;
+    }
+
+    .kd-giftcard__divider {
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: rgba(192, 168, 120, 0.3);
+      margin: 1.4rem auto;
+    }
+
+    .kd-giftcard__desc {
+      font-size: 0.95rem;
+      color: #c8c4be;
+      letter-spacing: 0.06em;
+      line-height: 2;
+    }
+
+    .kd-giftcard__desc em {
+      font-style: normal;
+      color: #f0ece6;
+    }
+
+    .kd-giftcard__meta {
+      font-size: 0.78rem;
+      color: rgba(192, 168, 120, 0.45);
+      letter-spacing: 0.15em;
+      margin-top: 1.2rem;
+    }
+
+    @media (max-width: 480px) {
+      .kd-giftcard {
+        padding: 2rem 1.5rem 1.8rem;
+        margin: 0 0.5rem;
+      }
+      .kd-giftcard__title {
+        font-size: 1.35rem;
+        letter-spacing: 0.12em;
+      }
+      .kd-giftcard__desc {
+        font-size: 0.88rem;
+      }
+    }
+
+    .kd-bookstrip img:hover {
+      filter: brightness(0.9) saturate(0.85);
+      border-color: rgba(192, 168, 120, 0.35);
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 480px) {
+      .kd-bookstrip img {
+        height: 72px;
+      }
+      .kd-bookstrip img.strip-photo {
+        height: 72px;
+      }
+      .kd-bookstrip img.strip-badge {
+        height: 36px;
+      }
+      .kd-bookstrip img.strip-logo {
+        height: 44px;
+        padding: 4px 8px;
+      }
+      .kd-bookstrip {
+        gap: 0.3rem;
+      }
+    }
   </style>
 </head>
 
@@ -802,29 +1073,64 @@
     </div>
   </section>
 
-  <!-- ===== SESSION IMAGE ===== -->
+  <!-- ===== AUTHORITY + CTA① ===== -->
   <section class="section" style="padding: 4rem 0;">
     <div class="container" style="text-align: center;">
       <img src="images/menu-01-tenmei.png" alt="天命の言語化セッション™" style="max-width: 320px; width: 100%; margin: 0 auto 2.5rem;" loading="lazy" class="fade-in">
 
       <div class="session-spec fade-in">
         <div class="session-spec__item">
-          <p class="session-spec__value">2時間</p>
-          <p class="session-spec__label">所要時間</p>
+          <p class="session-spec__value">10,000<span style="font-size: 0.55em; font-weight: 400;">時間+</span></p>
+          <p class="session-spec__label">対話・臨床経験</p>
         </div>
         <div class="session-spec__item">
-          <p class="session-spec__value">不要</p>
-          <p class="session-spec__label">事前準備</p>
+          <p class="session-spec__value">9<span style="font-size: 0.55em; font-weight: 400;">冊</span> + 8<span style="font-size: 0.55em; font-weight: 400;">本</span></p>
+          <p class="session-spec__label">著書・論文</p>
         </div>
         <div class="session-spec__item">
-          <p class="session-spec__value">対話のみ</p>
-          <p class="session-spec__label">手法</p>
+          <p class="session-spec__value">1,300<span style="font-size: 0.55em; font-weight: 400;">名+</span></p>
+          <p class="session-spec__label">受講実績</p>
         </div>
       </div>
 
-      <div class="kd-body fade-in" style="max-width: 640px; margin: 0 auto;">
-        <p>
-          「天命（生まれてきた意味・生きる目的）」は、<br>あなたの人生の指針になります。
+      <div class="kd-bookstrip fade-in">
+        <img src="images/3tenmei.jpg" alt="Metaがある限り" loading="lazy">
+        <img src="images/2tenmei.jpg" alt="自由意志なき世界の歩き方" loading="lazy">
+        <img src="images/authority-event.jpg" alt="出版記念イベント・サイン会" loading="lazy" class="strip-photo">
+        <img src="images/5tenmei.jpg" alt="天命の言語化セッション" loading="lazy">
+        <img src="images/4tenmei.jpg" alt="クライアントを壊していないか" loading="lazy">
+        <img src="images/authority-lecture.jpg" alt="高校での講演" loading="lazy" class="strip-photo">
+        <img src="images/9tenmei.jpg" alt="究極の能力開発" loading="lazy">
+        <img src="images/1tenmei.jpg" alt="隠れた才能が目覚める本" loading="lazy">
+        <img src="images/authority-ic-logo.jpg" alt="IC インターネット・カウンセラー養成講座" loading="lazy" class="strip-logo">
+        <img src="images/7tenmei.jpg" alt="認識論的和歌集" loading="lazy">
+        <img src="images/8tenmei.jpg" alt="Metaに任せよう" loading="lazy">
+        <img src="images/authority-ic-badges.png" alt="IC講座 3冠 第1位" loading="lazy" class="strip-badge">
+      </div>
+
+      <div class="kd-giftcard fade-in">
+        <p class="kd-giftcard__label">— Online Program —</p>
+        <h2 class="kd-giftcard__title">
+          天命の言語化プログラム<small>™︎</small>
+        </h2>
+        <i class="kd-giftcard__divider"></i>
+        <p class="kd-giftcard__desc">
+          21日後——<br>
+          あなたは<em>「自分が生まれてきた意味」</em>を<br>
+          自分の言葉で、語れるようになる。
+        </p>
+        <p class="kd-giftcard__meta">全21通 / 毎朝配信 / 完全無料</p>
+      </div>
+
+      <!-- CTA① (upper) -->
+      <div class="kd-cta fade-in" style="padding: 3rem 0 0;">
+        <form class="kd-form" action="#" method="post">
+          <input type="email" class="kd-form__input" placeholder="メールアドレスを入力" required>
+          <button type="submit" class="btn--kandou">プログラムに参加する（無料） &rarr;</button>
+        </form>
+        <p class="kd-cta__note">
+          ※ 完全無料 / 21日間・毎朝配信<br>
+          ※ いつでも解除可能
         </p>
       </div>
     </div>
@@ -833,7 +1139,7 @@
   <!-- ===== CHECKLIST ===== -->
   <section class="kd-symptom">
     <div class="container">
-      <p class="kd-symptom__title fade-in">もしも当てはまるなら<br>今が「その時」です。</p>
+      <p class="kd-symptom__title fade-in">下記に当てはまるなら<br>今が「その時」です。</p>
 
       <div class="kd-cards fade-in">
         <div class="kd-card">
@@ -1149,72 +1455,92 @@
       <!-- Case 4 -->
       <div class="kd-case fade-in">
         <p class="kd-case__label">Case IV</p>
-        <p class="kd-case__profile">50代女性 ── 大学教員</p>
+        <p class="kd-case__profile">50代女性 ── セラピスト</p>
         <p class="kd-case__phase">Before</p>
         <p class="kd-case__before">
-          20代で結婚した。<br>
-          30代で離婚した。<br>
-          子どもはいない。<br><br>
+          人の心を聴く仕事をしている。<br>
+          相手の痛みに寄り添い、<br>
+          光を見つける手伝いをしてきた。<br><br>
 
-          「学問があれば生きていける」<br>
-          そう自分に言い聞かせて、<br>
-          研究室に逃げた。<br><br>
+          ──だが、自分自身の痛みには<br>
+          触れられなかった。<br><br>
 
-          気がつけば50代。<br>
-          同僚は家庭の話をする。<br>
-          友人は孫の写真を見せてくる。<br>
-          自分には論文しかなかった。<br><br>
+          4歳の記憶がある。<br>
+          兄が病気だった。<br>
+          そのことで両親が毎日のように<br>
+          言い争っていた。<br><br>
 
-          ある日、教壇でふと気づいた。<br>
-          学生たちの顔を見ても、<br>
-          何も感じない。<br><br>
+          母が言った。<br>
+          「兄が助かるなら、<br>
+          あんたが代わればいい」<br><br>
 
-          「この仕事が好きだ」と<br>
-          最後に思ったのが、<br>
-          いつだったか思い出せない。<br><br>
+          母は手を上げる人だった。<br>
+          父はガラスの灰皿を振りかざし、<br>
+          寸止めした。<br>
+          あの時の目が、今も消えない。<br><br>
 
-          人生をやり直したい。<br>
-          でも、やり直す先が見えない。<br><br>
+          仲良くしてほしくて声を上げたら、<br>
+          兄に言われた。<br>
+          「黙れ。何も言うな」<br><br>
+
+          三方向から、<br>
+          存在を否定された。<br><br>
+
+          あの日から決めた。<br>
+          抗わない。感情を出さない。<br>
+          ノーと言わない。<br>
+          自分が犠牲になる。<br>
+          それが、生き延びるための<br>
+          唯一のルールだった。<br><br>
+
+          大人になった。<br>
+          学びを重ねた。<br>
+          資格も取った。<br>
+          メソッドもたくさん試した。<br>
+          頭では全部わかっている。<br><br>
+
+          なのに、変わりきれない。<br><br>
+
+          ある夜、ふと思った。<br>
+          「この状態で、<br>
+          このまま死んでいくの？」<br><br>
 
           一番辛いのは、<br>
-          50年生きて、<br>
-          自分が何を望んでいるのかすら<br>
-          わからないこと。<br><br>
-
-          「私の人生って、<br>
-          なんだったんだろう」<br><br>
-
-          夜中にふと目が覚めて、<br>
-          その問いだけが残っている。<br>
-          隣にいる人は、もういない。
+          人には「大丈夫」と言えるのに、<br>
+          自分には言えないこと。
         </p>
         <p class="kd-case__arrow">▼</p>
         <p class="kd-case__phase">After</p>
         <p class="kd-case__after">
-          セッションで浮かび上がったのは、<br>
-          「愛されるためには<br>
-          完璧でなければならない」という、<br>
-          母から受け取った<br>
-          無言のメッセージだった。<br><br>
+          セッションで掘り起こされたのは、<br>
+          あの4歳の日に刻まれた<br>
+          「お前は要らない」<br>
+          という原初のルールだった。<br><br>
 
-          完璧な成績、完璧なキャリア、<br>
-          完璧な妻──<br>
-          そのどれもが、<br>
-          愛を得るための条件だった。<br><br>
+          「抗わない。感情を出さない。<br>
+          自分が犠牲になる」──<br>
+          その生存装置が、<br>
+          何十年も起動し続けていた。<br><br>
 
-          離婚は「完璧」が崩れた瞬間だった。<br>
-          以来、学問だけが<br>
-          自分を支える唯一の柱になっていた。<br><br>
+          人を支える仕事を選んだのも、<br>
+          自己犠牲でしか<br>
+          存在を許されなかったから。<br><br>
+
+          「その認識を作っているのは私だ」<br>
+          ──その一言が降りた瞬間、<br>
+          過去が現在を動かす権利を失った。<br><br>
 
           天命が言語化されたとき、<br>
-          学問が「逃げ場」から<br>
-          「表現」に変わった。<br><br>
+          「助ける人」が<br>
+          「自然体で在る人」に変わった。<br><br>
 
-          論文の一行一行に、<br>
-          初めて自分の血が通い始めた。
+          自己犠牲ではなく、対等。<br>
+          支援の動機が、<br>
+          義務から天命へ──<br>
+          すべてが、書き換わった。
         </p>
         <p class="kd-case__quote">
-          「完璧でなくても存在していい。<br>50年目にして、<br>ようやくわかった」
+          「人を癒してきた。<br>でも本当に癒したかったのは、<br>あの日の自分だった」
         </p>
       </div>
 
@@ -1334,17 +1660,36 @@
       <!-- Facilitator -->
       <div class="content-block fade-in" style="margin-top: 3rem; padding-top: 3rem; border-top: 1px solid rgba(192, 168, 120, 0.15);">
         <p class="kd-hero__sub" style="margin-bottom: 1.5rem;">Facilitator</p>
-        <h3 class="section__title section__title--left" style="font-size: 1.3rem;">箭内 宏紀 ── 実存科学者</h3>
+        <div class="kd-facilitator">
+          <div class="kd-facilitator__photo-wrap">
+            <picture>
+              <source srcset="images/profile@2x.webp" type="image/webp">
+              <img src="images/profile@2x.jpg" alt="箭内宏紀" class="kd-facilitator__photo" loading="lazy">
+            </picture>
+          </div>
+          <div class="kd-facilitator__text">
+            <h3 class="section__title section__title--left" style="font-size: 1.3rem; margin-bottom: 0.5rem;">箭内 宏紀</h3>
+            <p class="kd-facilitator__role">実存科学者<br>天命の言語化セッション™ ファシリテーター</p>
+          </div>
+        </div>
         <div class="kd-body">
-          <p>
-            心理学、哲学、神経科学、儒教、密教、インド哲学、西洋形而上学──<br>
-            20年以上にわたる学際的研究を経て、<br>
-            「天命の言語化セッション™」を開発。
+          <p class="kd-facilitator__lead">
+            <strong>「Metaがある限り、自由意志は存在しない」</strong>──この一行に、すべてが集約されている。
           </p>
           <p>
-            セッション提供実績は<strong>100名以上</strong>。<br>
-            認識論・意味論・社会論の3領域にまたがる独自の理論体系を構築し、<br>
-            実存科学研究所を設立。
+            1989年、福島県生まれ。大学在学中からコーチとして活動を始め、卒業後は不登校支援のカウンセラーとして全国トップの業績を記録。しかし、売上優先の組織体質に本質的な違和感を覚え、自らの道を選ぶ。
+          </p>
+          <p>
+            工場勤務を経て「Nimbus Creation」を創業。約10年にわたりインターネットカウンセラー養成講座を運営し、1300人以上に心理学とビジネスの技術を届けた。
+          </p>
+          <p>
+            だが、本当の探究はそこから始まった。哲学、神経科学、儒教、密教、インド哲学、西洋形而上学──「生きる意味」に関わるあらゆる領域を横断しながら瞑想を深める中で、精神の根底が一度、完全に崩れ落ちた。
+          </p>
+          <p>
+            家族と友人に支えられ、そこから立ち上がったとき、手の中に残っていたのはたった一つの認識だった。その認識が「天命の言語化セッション™」の原点となる。
+          </p>
+          <p>
+            現在は実存科学研究所を主宰。天命を悟り、日々それを全うする「意味のある生」を、一人ひとりの言葉として形にしている。天命を語り合える存在──<strong>「心友」</strong>が増えていくことが、次の社会文明の土台になると確信している。
           </p>
         </div>
       </div>
