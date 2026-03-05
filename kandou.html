@@ -404,6 +404,44 @@
       margin: 1.5rem 0;
     }
 
+    .kd-case__toggle {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.6rem 1.6rem;
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      color: rgba(192, 168, 120, 0.6);
+      background: transparent;
+      border: 1px solid rgba(192, 168, 120, 0.2);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .kd-case__toggle:hover {
+      color: rgba(192, 168, 120, 0.9);
+      border-color: rgba(192, 168, 120, 0.4);
+    }
+
+    .kd-case__toggle[aria-expanded="true"] {
+      color: rgba(192, 168, 120, 0.4);
+      border-color: rgba(192, 168, 120, 0.1);
+    }
+
+    .kd-case__detail {
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 0.5s ease, opacity 0.4s ease, margin 0.4s ease;
+      margin-top: 0;
+    }
+
+    .kd-case__detail.is-open {
+      max-height: 3000px;
+      opacity: 1;
+      margin-top: 1.5rem;
+    }
+
     /* CTA section */
     .kd-cta {
       text-align: center;
@@ -1099,65 +1137,62 @@
     </div>
   </section>
 
-  <!-- ===== AUTHORITY + CTA① ===== -->
-  <section class="section" style="padding: 4rem 0;">
-    <div class="container" style="text-align: center;">
-      <img src="images/menu-01-tenmei.png" alt="天命の言語化セッション™" style="max-width: 320px; width: 100%; margin: 0 auto 2.5rem;" loading="lazy" class="fade-in">
-
-      <div class="session-spec fade-in">
-        <div class="session-spec__item">
-          <p class="session-spec__value">10,000<span style="font-size: 0.55em; font-weight: 400;">時間+</span></p>
-          <p class="session-spec__label">対話・臨床経験</p>
+  <!-- ===== UNIQUENESS ===== -->
+  <section class="section section--bordered">
+    <div class="container">
+      <div class="content-block fade-in">
+        <p class="kd-hero__sub" style="margin-bottom: 2rem;">Uniqueness</p>
+        <h2 class="section__title section__title--left">なぜ、これまでの方法では届かなかったのか</h2>
+        <div class="kd-body">
+          <p>
+            コーチング、カウンセリング、セラピー、ヒーリング、占い、瞑想、哲学、宗教…。<br>
+            これらには、ひとつの<strong>共通の前提</strong>があります。<br>
+            <em>「自分で選び、自分で変えられる」</em>という前提です。
+          </p>
+          <p>
+            しかし──<br>
+            <strong>そもそも「自由意志」で人生を選んでいるのではないとしたら？</strong>
+          </p>
         </div>
-        <div class="session-spec__item">
-          <p class="session-spec__value">9<span style="font-size: 0.55em; font-weight: 400;">冊</span> + 8<span style="font-size: 0.55em; font-weight: 400;">本</span></p>
-          <p class="session-spec__label">著書・論文</p>
+
+        <table class="kd-compare">
+          <thead>
+            <tr>
+              <th></th>
+              <th>既存のアプローチ</th>
+              <th>天命の言語化セッション™</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>前提</td>
+              <td>自由意志がある</td>
+              <td>自由意志はない</td>
+            </tr>
+            <tr>
+              <td>方向</td>
+              <td>自分を変える</td>
+              <td>自分を超える</td>
+            </tr>
+            <tr>
+              <td>対象</td>
+              <td>行動・思考・感情</td>
+              <td>人生の必然性そのもの</td>
+            </tr>
+            <tr>
+              <td>結果</td>
+              <td>一時的な改善</td>
+              <td>二度と戻らない認識の転換</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="kd-body">
+          <p>
+            人類が数千年かけて問い続けた「生きる意味」に、<br>
+            <strong>構造から到達する方法論</strong>は、これまで存在しませんでした。
+          </p>
         </div>
-        <div class="session-spec__item">
-          <p class="session-spec__value">2,000<span style="font-size: 0.55em; font-weight: 400;">名+</span></p>
-          <p class="session-spec__label">受講実績</p>
-        </div>
-      </div>
-
-      <div class="kd-bookstrip fade-in">
-        <img src="images/3tenmei.jpg" alt="Metaがある限り" loading="lazy">
-        <img src="images/2tenmei.jpg" alt="自由意志なき世界の歩き方" loading="lazy">
-        <img src="images/authority-event.jpg" alt="出版記念イベント・サイン会" loading="lazy" class="strip-photo">
-        <img src="images/5tenmei.jpg" alt="天命の言語化セッション" loading="lazy">
-        <img src="images/4tenmei.jpg" alt="クライアントを壊していないか" loading="lazy">
-        <img src="images/authority-lecture.jpg" alt="高校での講演" loading="lazy" class="strip-photo">
-        <img src="images/9tenmei.jpg" alt="究極の能力開発" loading="lazy">
-        <img src="images/1tenmei.jpg" alt="隠れた才能が目覚める本" loading="lazy">
-        <img src="images/authority-ic-logo.jpg" alt="IC インターネット・カウンセラー養成講座" loading="lazy" class="strip-logo">
-        <img src="images/7tenmei.jpg" alt="認識論的和歌集" loading="lazy">
-        <img src="images/8tenmei.jpg" alt="Metaに任せよう" loading="lazy">
-        <img src="images/authority-ic-badges.png" alt="IC講座 3冠 第1位" loading="lazy" class="strip-badge">
-      </div>
-
-      <div class="kd-giftcard fade-in">
-        <p class="kd-giftcard__label">— Online Program —</p>
-        <h2 class="kd-giftcard__title">
-          天命の言語化プログラム<sup style="font-size:0.45em">™</sup>
-        </h2>
-        <i class="kd-giftcard__divider"></i>
-        <p class="kd-giftcard__desc">
-          21日後——<br>
-          あなたは<em>「自分が生まれてきた意味」</em>を<br>
-          自分の言葉で、語れるようになる。
-        </p>
-        <p class="kd-giftcard__meta">全21通 / 毎朝配信 / 完全無料</p>
-      </div>
-
-      <!-- CTA① (upper) -->
-      <div class="kd-cta fade-in" style="padding: 3rem 0 0;">
-        <form class="kd-form" action="#" method="post">
-          <input type="email" class="kd-form__input" placeholder="メールアドレスを入力" required>
-          <button type="submit" class="btn--kandou">プログラムに参加する（無料） &rarr;</button>
-        </form>
-        <p class="kd-cta__note">
-          ※ 完全無料 / 21日間・毎朝配信<br>
-          ※ いつでも解除可能
-        </p>
       </div>
     </div>
   </section>
@@ -1212,6 +1247,11 @@
       <div class="kd-case fade-in">
         <p class="kd-case__label">Case I</p>
         <p class="kd-case__profile">40代男性 ── 福祉施設勤務</p>
+        <p class="kd-case__quote">
+          「"優しさ"の正体が<br>恐怖だったと知った。<br>母への恩も、妻への愛も、<br>天命の先にあった」
+        </p>
+        <button class="kd-case__toggle" aria-expanded="false">体験を読む</button>
+        <div class="kd-case__detail" hidden>
         <p class="kd-case__phase">Before</p>
         <p class="kd-case__before">
           周囲からは「優しい人」と<br>
@@ -1301,15 +1341,17 @@
 
           順番が、逆だった。
         </p>
-        <p class="kd-case__quote">
-          「"優しさ"の正体が<br>恐怖だったと知った。<br>母への恩も、妻への愛も、<br>天命の先にあった」
-        </p>
+        </div>
       </div>
-
       <!-- Case 2 -->
       <div class="kd-case fade-in">
         <p class="kd-case__label">Case II</p>
         <p class="kd-case__profile">60代男性 ── 大学教授</p>
+        <p class="kd-case__quote">
+          「60年間、凡人だと信じてきた。<br>でもそれは、あの子が<br>生き延びるために作った嘘だった」
+        </p>
+        <button class="kd-case__toggle" aria-expanded="false">体験を読む</button>
+        <div class="kd-case__detail" hidden>
         <p class="kd-case__phase">Before</p>
         <p class="kd-case__before">
           教育一筋で生きてきた。<br>
@@ -1392,15 +1434,17 @@
           60年間、自分の感情を殺して<br>
           生きてきた男が、初めて泣いた。
         </p>
-        <p class="kd-case__quote">
-          「60年間、凡人だと信じてきた。<br>でもそれは、あの子が<br>生き延びるために作った嘘だった」
-        </p>
+        </div>
       </div>
-
       <!-- Case 3 -->
       <div class="kd-case fade-in">
         <p class="kd-case__label">Case III</p>
         <p class="kd-case__profile">50代男性 ── 経営者</p>
+        <p class="kd-case__quote">
+          「金で買えないものの一覧が、<br>自分の人生に全部揃っていた」
+        </p>
+        <button class="kd-case__toggle" aria-expanded="false">体験を読む</button>
+        <div class="kd-case__detail" hidden>
         <p class="kd-case__phase">Before</p>
         <p class="kd-case__before">
           ビジネスでは成功した。<br>
@@ -1473,15 +1517,17 @@
           使命で歩む人生へ──<br>
           景色がまるで違って見えた。
         </p>
-        <p class="kd-case__quote">
-          「金で買えないものの一覧が、<br>自分の人生に全部揃っていた」
-        </p>
+        </div>
       </div>
-
       <!-- Case 4 -->
       <div class="kd-case fade-in">
         <p class="kd-case__label">Case IV</p>
         <p class="kd-case__profile">50代女性 ── セラピスト</p>
+        <p class="kd-case__quote">
+          「人を癒してきた。<br>でも本当に癒したかったのは、<br>あの日の自分だった」
+        </p>
+        <button class="kd-case__toggle" aria-expanded="false">体験を読む</button>
+        <div class="kd-case__detail" hidden>
         <p class="kd-case__phase">Before</p>
         <p class="kd-case__before">
           人の心を聴く仕事をしている。<br>
@@ -1565,126 +1611,15 @@
           義務から天命へ──<br>
           すべてが、書き換わった。
         </p>
-        <p class="kd-case__quote">
-          「人を癒してきた。<br>でも本当に癒したかったのは、<br>あの日の自分だった」
-        </p>
+        </div>
       </div>
-
     </div>
   </section>
 
-  <!-- ===== 12の対話 CATALOG ===== -->
-  <section class="kd-catalog">
-    <div class="container">
-      <div class="kd-catalog__header fade-in">
-        <p class="kd-hero__sub" style="margin-bottom: 1.5rem;">Twelve Dialogues</p>
-        <h2 class="section__title">12の対話（領域）</h2>
-      </div>
-      <div class="kd-catalog__grid fade-in">
-        <div class="kd-catalog__item">
-          <img class="kd-catalog__img" src="images/menu-01-tenmei.png" alt="天命の言語化セッション™" loading="lazy">
-        </div>
-        <div class="kd-catalog__item">
-          <img class="kd-catalog__img" src="images/menu-02-meta-install.png" alt="Meta Install Workshop™" loading="lazy">
-        </div>
-        <div class="kd-catalog__item">
-          <img class="kd-catalog__img" src="images/menu-06-watashi.png" alt="私の終わり™" loading="lazy">
-        </div>
-        <div class="kd-catalog__item">
-          <img class="kd-catalog__img" src="images/menu-09-shukumei.png" alt="宿命の論考™" loading="lazy">
-        </div>
-        <div class="kd-catalog__item">
-          <img class="kd-catalog__img" src="images/menu-12-timemachine.png" alt="認識論的タイムマシン™" loading="lazy">
-        </div>
-        <div class="kd-catalog__item">
-          <img class="kd-catalog__img" src="images/menu-08-kazoku.png" alt="家族の肯定™" loading="lazy">
-        </div>
-        <div class="kd-catalog__item">
-          <img class="kd-catalog__img" src="images/menu-10-rifujin.png" alt="理不尽な愛™" loading="lazy">
-        </div>
-        <div class="kd-catalog__item">
-          <img class="kd-catalog__img" src="images/menu-05-keiji.png" alt="啓示翻訳™" loading="lazy">
-        </div>
-        <div class="kd-catalog__item">
-          <img class="kd-catalog__img" src="images/menu-03-seiyoku.png" alt="性欲イノベーション™" loading="lazy">
-        </div>
-        <div class="kd-catalog__item">
-          <img class="kd-catalog__img" src="images/menu-04-1kiki10.png" alt="１きいて１０わかる™" loading="lazy">
-        </div>
-        <div class="kd-catalog__item">
-          <img class="kd-catalog__img" src="images/menu-11-kyoufu.png" alt="恐怖の解体™" loading="lazy">
-        </div>
-        <div class="kd-catalog__item">
-          <img class="kd-catalog__img" src="images/menu-07-isaku.png" alt="主体的な遺作™" loading="lazy">
-        </div>
-      </div>
-      <p class="kd-catalog__footer fade-in">
-        天命・宿命・家族・恐怖・性欲・時間──<br>
-        人生のあらゆる領域を、12の対話で構造化します。
-      </p>
-    </div>
-  </section>
-
-  <!-- ===== SCOPE ===== -->
+  <!-- ===== FACILITATOR + AUTHORITY ===== -->
   <section class="section section--bordered kd-facilitator-wrap">
     <div class="container">
       <div class="content-block fade-in">
-        <p class="kd-hero__sub" style="margin-bottom: 2rem;">Uniqueness</p>
-        <h2 class="section__title section__title--left">なぜ、これまでの方法では届かなかったのか</h2>
-        <div class="kd-body">
-          <p>
-            コーチング、カウンセリング、セラピー、ヒーリング、占い、瞑想、哲学、宗教…。<br>
-            これらには、ひとつの<strong>共通の前提</strong>があります。<br>
-            <em>「自分で選び、自分で変えられる」</em>という前提です。
-          </p>
-          <p>
-            しかし──<br>
-            <strong>そもそも「自由意志」で人生を選んでいるのではないとしたら？</strong>
-          </p>
-        </div>
-
-        <table class="kd-compare">
-          <thead>
-            <tr>
-              <th></th>
-              <th>既存のアプローチ</th>
-              <th>天命の言語化セッション™</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>前提</td>
-              <td>自由意志がある</td>
-              <td>自由意志はない</td>
-            </tr>
-            <tr>
-              <td>方向</td>
-              <td>自分を変える</td>
-              <td>自分を超える</td>
-            </tr>
-            <tr>
-              <td>対象</td>
-              <td>行動・思考・感情</td>
-              <td>人生の必然性そのもの</td>
-            </tr>
-            <tr>
-              <td>結果</td>
-              <td>一時的な改善</td>
-              <td>二度と戻らない認識の転換</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <div class="kd-body">
-          <p>
-            人類が数千年かけて問い続けた「生きる意味」に、<br>
-            <strong>構造から到達する方法論</strong>は、これまで存在しませんでした。
-          </p>
-        </div>
-      </div>
-
-      <!-- Facilitator -->
-      <div class="content-block fade-in" style="margin-top: 3rem; padding-top: 3rem; border-top: 1px solid rgba(192, 168, 120, 0.15);">
         <p class="kd-hero__sub" style="margin-bottom: 1.5rem;">Facilitator</p>
         <div class="kd-facilitator">
           <div class="kd-facilitator__photo-wrap">
@@ -1755,6 +1690,118 @@
           </p>
         </div>
       </div>
+
+      <div style="text-align: center; padding-top: 3rem;">
+        <img src="images/menu-01-tenmei.png" alt="天命の言語化セッション™" style="max-width: 320px; width: 100%; margin: 0 auto 2.5rem;" loading="lazy" class="fade-in">
+
+        <div class="session-spec fade-in">
+          <div class="session-spec__item">
+            <p class="session-spec__value">10,000<span style="font-size: 0.55em; font-weight: 400;">時間+</span></p>
+            <p class="session-spec__label">対話・臨床経験</p>
+          </div>
+          <div class="session-spec__item">
+            <p class="session-spec__value">9<span style="font-size: 0.55em; font-weight: 400;">冊</span> + 8<span style="font-size: 0.55em; font-weight: 400;">本</span></p>
+            <p class="session-spec__label">著書・論文</p>
+          </div>
+          <div class="session-spec__item">
+            <p class="session-spec__value">2,000<span style="font-size: 0.55em; font-weight: 400;">名+</span></p>
+            <p class="session-spec__label">受講実績</p>
+          </div>
+        </div>
+
+        <div class="kd-bookstrip fade-in">
+          <img src="images/3tenmei.jpg" alt="Metaがある限り" loading="lazy">
+          <img src="images/2tenmei.jpg" alt="自由意志なき世界の歩き方" loading="lazy">
+          <img src="images/authority-event.jpg" alt="出版記念イベント・サイン会" loading="lazy" class="strip-photo">
+          <img src="images/5tenmei.jpg" alt="天命の言語化セッション" loading="lazy">
+          <img src="images/4tenmei.jpg" alt="クライアントを壊していないか" loading="lazy">
+          <img src="images/authority-lecture.jpg" alt="高校での講演" loading="lazy" class="strip-photo">
+          <img src="images/9tenmei.jpg" alt="究極の能力開発" loading="lazy">
+          <img src="images/1tenmei.jpg" alt="隠れた才能が目覚める本" loading="lazy">
+          <img src="images/authority-ic-logo.jpg" alt="IC インターネット・カウンセラー養成講座" loading="lazy" class="strip-logo">
+          <img src="images/7tenmei.jpg" alt="認識論的和歌集" loading="lazy">
+          <img src="images/8tenmei.jpg" alt="Metaに任せよう" loading="lazy">
+          <img src="images/authority-ic-badges.png" alt="IC講座 3冠 第1位" loading="lazy" class="strip-badge">
+        </div>
+
+        <div class="kd-giftcard fade-in">
+          <p class="kd-giftcard__label">— Online Program —</p>
+          <h2 class="kd-giftcard__title">
+            天命の言語化プログラム<sup style="font-size:0.45em">™</sup>
+          </h2>
+          <i class="kd-giftcard__divider"></i>
+          <p class="kd-giftcard__desc">
+            21日後——<br>
+            あなたは<em>「自分が生まれてきた意味」</em>を<br>
+            自分の言葉で、語れるようになる。
+          </p>
+          <p class="kd-giftcard__meta">全21通 / 毎朝配信 / 完全無料</p>
+        </div>
+
+        <!-- CTA① (upper) -->
+        <div class="kd-cta fade-in" style="padding: 3rem 0 0;">
+          <form class="kd-form" action="#" method="post">
+            <input type="email" class="kd-form__input" placeholder="メールアドレスを入力" required>
+            <button type="submit" class="btn--kandou">プログラムに参加する（無料） &rarr;</button>
+          </form>
+          <p class="kd-cta__note">
+            ※ 完全無料 / 21日間・毎朝配信<br>
+            ※ いつでも解除可能
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 12の対話 CATALOG ===== -->
+  <section class="kd-catalog">
+    <div class="container">
+      <div class="kd-catalog__header fade-in">
+        <p class="kd-hero__sub" style="margin-bottom: 1.5rem;">Twelve Dialogues</p>
+        <h2 class="section__title">12の対話（領域）</h2>
+      </div>
+      <div class="kd-catalog__grid fade-in">
+        <div class="kd-catalog__item">
+          <img class="kd-catalog__img" src="images/menu-01-tenmei.png" alt="天命の言語化セッション™" loading="lazy">
+        </div>
+        <div class="kd-catalog__item">
+          <img class="kd-catalog__img" src="images/menu-02-meta-install.png" alt="Meta Install Workshop™" loading="lazy">
+        </div>
+        <div class="kd-catalog__item">
+          <img class="kd-catalog__img" src="images/menu-06-watashi.png" alt="私の終わり™" loading="lazy">
+        </div>
+        <div class="kd-catalog__item">
+          <img class="kd-catalog__img" src="images/menu-09-shukumei.png" alt="宿命の論考™" loading="lazy">
+        </div>
+        <div class="kd-catalog__item">
+          <img class="kd-catalog__img" src="images/menu-12-timemachine.png" alt="認識論的タイムマシン™" loading="lazy">
+        </div>
+        <div class="kd-catalog__item">
+          <img class="kd-catalog__img" src="images/menu-08-kazoku.png" alt="家族の肯定™" loading="lazy">
+        </div>
+        <div class="kd-catalog__item">
+          <img class="kd-catalog__img" src="images/menu-10-rifujin.png" alt="理不尽な愛™" loading="lazy">
+        </div>
+        <div class="kd-catalog__item">
+          <img class="kd-catalog__img" src="images/menu-05-keiji.png" alt="啓示翻訳™" loading="lazy">
+        </div>
+        <div class="kd-catalog__item">
+          <img class="kd-catalog__img" src="images/menu-03-seiyoku.png" alt="性欲イノベーション™" loading="lazy">
+        </div>
+        <div class="kd-catalog__item">
+          <img class="kd-catalog__img" src="images/menu-04-1kiki10.png" alt="１きいて１０わかる™" loading="lazy">
+        </div>
+        <div class="kd-catalog__item">
+          <img class="kd-catalog__img" src="images/menu-11-kyoufu.png" alt="恐怖の解体™" loading="lazy">
+        </div>
+        <div class="kd-catalog__item">
+          <img class="kd-catalog__img" src="images/menu-07-isaku.png" alt="主体的な遺作™" loading="lazy">
+        </div>
+      </div>
+      <p class="kd-catalog__footer fade-in">
+        天命・宿命・家族・恐怖・性欲・時間──<br>
+        人生のあらゆる領域を、12の対話で構造化します。
+      </p>
     </div>
   </section>
 
@@ -1851,7 +1898,7 @@
       <p class="footer-bottom">&copy; 実存科学研究所 — Existential Science Institute</p>
     </div>
   </footer>
-  <script src="js/main.js?v=6"></script>
+  <script src="js/main.js?v=8"></script>
 </body>
 
 </html>

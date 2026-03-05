@@ -94,4 +94,23 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // --- Case Study Accordion ---
+  document.querySelectorAll('.kd-case__toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var detail = this.nextElementSibling;
+      var isOpen = detail.classList.contains('is-open');
+      if (isOpen) {
+        detail.classList.remove('is-open');
+        setTimeout(function () { detail.hidden = true; }, 500);
+      } else {
+        detail.hidden = false;
+        // Force reflow before adding class for transition
+        detail.offsetHeight;
+        detail.classList.add('is-open');
+      }
+      this.setAttribute('aria-expanded', String(!isOpen));
+      this.textContent = isOpen ? '体験を読む' : '閉じる';
+    });
+  });
+
 });
