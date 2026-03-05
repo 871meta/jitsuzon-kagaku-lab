@@ -37,17 +37,8 @@
     .kd-hero {
       padding: 14rem 0 8rem;
       text-align: center;
-      border-bottom: 1px solid rgba(192, 168, 120, 0.1);
+      border-bottom: 1px solid rgba(192, 168, 120, 0.15);
       position: relative;
-    }
-
-    .kd-hero::after {
-      content: "";
-      display: block;
-      width: 32px;
-      height: 1px;
-      background: #c0a878;
-      margin: 4rem auto 0;
     }
 
     .kd-hero__sub {
@@ -60,83 +51,213 @@
       font-weight: 400;
     }
 
+    .kd-hero .container {
+      max-width: 960px;
+    }
+
+    @keyframes kd-text-shimmer {
+      0%   { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+
+    @keyframes kd-divider-glow {
+      0%, 100% { width: 48px; opacity: 0.6; }
+      50%      { width: 80px; opacity: 1; }
+    }
+
     .kd-hero h1 {
-      font-size: 2.8rem;
-      margin-bottom: 2rem;
-      letter-spacing: 0.08em;
-      color: #f0ece6;
+      font-size: 2.4rem;
+      margin-bottom: 2.5rem;
+      letter-spacing: 0.04em;
       line-height: 1.6;
+      /* Gold shimmer text */
+      background: linear-gradient(
+        90deg,
+        #f0ece6 0%,
+        #f0ece6 40%,
+        #c0a878 50%,
+        #f0ece6 60%,
+        #f0ece6 100%
+      );
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: kd-text-shimmer 8s ease-in-out infinite;
+    }
+
+    .kd-hero h1::after {
+      content: "";
+      display: block;
+      width: 48px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #c0a878, transparent);
+      margin: 2.5rem auto 0;
+      box-shadow: 0 0 12px rgba(192, 168, 120, 0.3);
+      animation: kd-divider-glow 6s ease-in-out infinite;
+    }
+
+    .kd-hero__after {
+      font-size: 1.4rem;
+      color: rgba(192, 168, 120, 0.7);
+      margin-bottom: 4rem;
+      letter-spacing: 0.08em;
+      line-height: 1.8;
+      font-family: "Shippori Mincho", "Noto Serif JP", serif;
+    }
+
+    .kd-hero__hook {
+      font-size: 1.1rem;
+      color: #f0ece6;
+      letter-spacing: 0.06em;
+      margin-bottom: 2.5rem;
+      line-height: 1.8;
     }
 
     .kd-hero__lead {
-      font-size: 1rem;
-      color: #a8a4a0;
-      max-width: 560px;
+      position: relative;
+      font-size: 1.15rem;
+      color: #c0bbb4;
+      max-width: 600px;
       margin: 0 auto;
+      padding: 2.5rem 3rem;
       line-height: 2.4;
+      border: 1px solid rgba(192, 168, 120, 0.25);
+      background: rgba(10, 8, 18, 0.5);
+      backdrop-filter: blur(8px);
     }
 
-    /* Question opener */
-    .kd-question {
-      text-align: center;
-      padding: 6rem 0;
-      border-bottom: 1px solid rgba(192, 168, 120, 0.08);
+    .kd-hero__lead::before,
+    .kd-hero__lead::after {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-color: #c0a878;
+      border-style: solid;
     }
 
-    .kd-question__text {
-      font-size: 1.3rem;
-      color: #f0ece6;
-      line-height: 2.4;
-      letter-spacing: 0.06em;
-      font-weight: 500;
-    }
-
-    .kd-question__text em {
+    .kd-hero__lead em {
       font-style: normal;
       color: #c0a878;
     }
 
-    /* Checklist section */
-    .kd-checklist {
-      margin: 3rem 0;
+    .kd-hero__lead::before {
+      top: -1px;
+      left: -1px;
+      border-width: 1px 0 0 1px;
     }
 
-    .kd-check-item {
-      position: relative;
+    .kd-hero__lead::after {
+      bottom: -1px;
+      right: -1px;
+      border-width: 0 1px 1px 0;
+    }
+
+    /* Symptom section (question + checklist unified) */
+    .kd-symptom {
+      padding: 4rem 0 3rem;
+    }
+
+    .kd-symptom__title {
+      text-align: center;
+      font-size: 2.2rem;
+      font-family: "Shippori Mincho", "Noto Serif JP", serif;
+      color: #c0a878;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+      text-shadow: 0 0 40px rgba(192, 168, 120, 0.15);
+      margin-bottom: 3rem;
+    }
+
+    /* Shimmer keyframes */
+    @keyframes kd-shimmer {
+      0%   { left: -100%; }
+      100% { left: 200%; }
+    }
+
+    @keyframes kd-glow-pulse {
+      0%, 100% { box-shadow: 0 0 0 rgba(192, 168, 120, 0); }
+      50%      { box-shadow: 0 0 20px rgba(192, 168, 120, 0.06); }
+    }
+
+    /* Category cards */
+    .kd-cards {
       display: flex;
-      align-items: center;
-      gap: 1.2rem;
-      margin-bottom: 1rem;
-      padding: 1.6rem 2rem;
-      background: rgba(15, 12, 25, 0.7);
-      border: 1px solid rgba(192, 168, 120, 0.08);
-      transition: border-color 0.4s ease, box-shadow 0.4s ease;
-      overflow: hidden;
+      flex-direction: column;
+      gap: 0.6rem;
     }
 
-    .kd-check-item::before {
+    .kd-card {
+      position: relative;
+      padding: 1.4rem 2rem;
+      background: rgba(15, 12, 25, 0.7);
+      border: 1px solid rgba(192, 168, 120, 0.06);
+      backdrop-filter: blur(6px);
+      transition: border-color 0.6s ease, box-shadow 0.6s ease, background 0.6s ease;
+      overflow: hidden;
+      animation: kd-glow-pulse 6s ease-in-out infinite;
+    }
+
+    /* Stagger the pulse for each card */
+    .kd-card:nth-child(1) { animation-delay: 0s; }
+    .kd-card:nth-child(2) { animation-delay: 1.2s; }
+    .kd-card:nth-child(3) { animation-delay: 2.4s; }
+    .kd-card:nth-child(4) { animation-delay: 3.6s; }
+    .kd-card:nth-child(5) { animation-delay: 4.8s; }
+
+    /* Gold shimmer line across the top */
+    .kd-card::before {
       content: "";
       position: absolute;
       top: 0;
-      left: 0;
-      right: 0;
+      left: -100%;
+      width: 60%;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.3), transparent);
+      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.5), transparent);
+      animation: kd-shimmer 5s ease-in-out infinite;
     }
 
-    .kd-check-item__mark {
-      flex-shrink: 0;
-      width: 6px;
-      height: 6px;
-      background: rgba(192, 168, 120, 0.5);
-      border-radius: 50%;
+    .kd-card:nth-child(1)::before { animation-delay: 0s; }
+    .kd-card:nth-child(2)::before { animation-delay: 1s; }
+    .kd-card:nth-child(3)::before { animation-delay: 2s; }
+    .kd-card:nth-child(4)::before { animation-delay: 3s; }
+    .kd-card:nth-child(5)::before { animation-delay: 4s; }
+
+    /* Subtle bottom edge */
+    .kd-card::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.08), transparent);
     }
 
-    .kd-check-item__text {
+    /* Hover: elegant gold glow */
+    .kd-card:hover {
+      border-color: rgba(192, 168, 120, 0.2);
+      box-shadow: 0 0 30px rgba(192, 168, 120, 0.08), inset 0 0 30px rgba(192, 168, 120, 0.03);
+      background: rgba(20, 16, 30, 0.8);
+    }
+
+    .kd-card__label {
+      display: inline-block;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 0.75rem;
+      color: #c0a878;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 12px rgba(192, 168, 120, 0.2);
+    }
+
+    .kd-card__text {
       font-size: 0.95rem;
       color: #c0bbb4;
-      line-height: 2;
-      flex: 1;
+      line-height: 1.9;
+      letter-spacing: 0.03em;
     }
 
     .kd-check-note {
@@ -468,6 +589,87 @@
       flex-shrink: 0;
     }
 
+    /* 12の対話 catalog */
+    .kd-catalog {
+      padding: 5rem 0;
+      border-top: 1px solid rgba(192, 168, 120, 0.08);
+    }
+
+    .kd-catalog__header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .kd-catalog__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+
+    .kd-catalog__item {
+      position: relative;
+      aspect-ratio: 5 / 6;
+      overflow: hidden;
+      border: 1px solid rgba(192, 168, 120, 0.08);
+      transition: border-color 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease;
+    }
+
+    /* Gold shimmer sweep */
+    .kd-catalog__item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.08), transparent);
+      animation: kd-shimmer 6s ease-in-out infinite;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .kd-catalog__item:nth-child(1)::before  { animation-delay: 0s; }
+    .kd-catalog__item:nth-child(2)::before  { animation-delay: 0.5s; }
+    .kd-catalog__item:nth-child(3)::before  { animation-delay: 1s; }
+    .kd-catalog__item:nth-child(4)::before  { animation-delay: 1.5s; }
+    .kd-catalog__item:nth-child(5)::before  { animation-delay: 2s; }
+    .kd-catalog__item:nth-child(6)::before  { animation-delay: 2.5s; }
+    .kd-catalog__item:nth-child(7)::before  { animation-delay: 3s; }
+    .kd-catalog__item:nth-child(8)::before  { animation-delay: 3.5s; }
+    .kd-catalog__item:nth-child(9)::before  { animation-delay: 4s; }
+    .kd-catalog__item:nth-child(10)::before { animation-delay: 4.5s; }
+    .kd-catalog__item:nth-child(11)::before { animation-delay: 5s; }
+    .kd-catalog__item:nth-child(12)::before { animation-delay: 5.5s; }
+
+    .kd-catalog__item:hover {
+      border-color: rgba(192, 168, 120, 0.3);
+      box-shadow: 0 4px 40px rgba(192, 168, 120, 0.12);
+      transform: translateY(-3px);
+    }
+
+    .kd-catalog__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease, filter 0.6s ease;
+      filter: brightness(0.92);
+    }
+
+    .kd-catalog__item:hover .kd-catalog__img {
+      transform: scale(1.04);
+      filter: brightness(1);
+    }
+
+    .kd-catalog__footer {
+      text-align: center;
+      margin-top: 2.5rem;
+      font-size: 0.92rem;
+      color: #8a8680;
+      line-height: 2;
+      letter-spacing: 0.04em;
+    }
+
     /* Responsive */
     @media (max-width: 768px) {
       .kd-hero {
@@ -475,15 +677,29 @@
       }
 
       .kd-hero h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
 
-      .kd-question__text {
-        font-size: 1.1rem;
+      .kd-hero__after {
+        font-size: 1.2rem;
+      }
+
+      .kd-hero__lead {
+        font-size: 1.05rem;
+        padding: 2rem 2rem;
+      }
+
+      .kd-symptom__title {
+        font-size: 1.8rem;
       }
 
       .kd-case {
         padding: 2.5rem 2rem;
+      }
+
+      .kd-catalog__grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.8rem;
       }
 
     }
@@ -494,25 +710,33 @@
       }
 
       .kd-hero h1 {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
+      }
+
+      .kd-hero__after {
+        font-size: 1rem;
+      }
+
+      .kd-hero__lead {
+        font-size: 0.95rem;
+        padding: 1.8rem 1.5rem;
       }
 
       .kd-hero__lead br {
         display: none;
       }
 
-      .kd-check-item {
+      .kd-symptom__title {
+        font-size: 1.5rem;
+      }
+
+      .kd-card {
         padding: 1.2rem 1.2rem;
-        gap: 1rem;
       }
 
       .kd-case {
         padding: 2rem 1.5rem;
         margin-bottom: 2rem;
-      }
-
-      .kd-question {
-        padding: 4rem 0;
       }
 
       .btn--kandou {
@@ -548,6 +772,11 @@
       .kd-compare td:first-child {
         font-size: 0.78rem;
       }
+
+      .kd-catalog__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.6rem;
+      }
     }
   </style>
 </head>
@@ -565,58 +794,61 @@
   <!-- ===== HERO ===== -->
   <section class="kd-hero" id="main">
     <div class="container">
-      <p class="kd-hero__sub">Reclaim Your Life</p>
-      <h1>何のために生きているのかわからない——<br>
-        そう思っていた時期が、私にもありました。</h1>
+      <h1>「何のために生きているのかわからない」</h1>
+      <p class="kd-hero__after">そう思っていた時期が、<br>私にもありました。</p>
+      <p class="kd-hero__hook">この方法を試してください。</p>
       <p class="kd-hero__lead">
-        この方法を試してみてください。<br>
-        2時間で天命を悟り、感動的な人生を取り戻すことができます。
+        2時間で天命を悟り、<br>
+        <em>「感動的な人生」</em>を取り戻すことができます。
       </p>
+    </div>
+  </section>
+
+  <!-- ===== SESSION IMAGE ===== -->
+  <section class="section" style="padding: 4rem 0;">
+    <div class="container" style="text-align: center;">
+      <img src="images/menu-01-tenmei.png" alt="天命の言語化セッション™" style="max-width: 320px; width: 100%; margin: 0 auto 2.5rem;" loading="lazy" class="fade-in">
+      <div class="kd-body fade-in" style="max-width: 640px; margin: 0 auto;">
+        <p>
+          2時間の対話を通じて、<br>
+          あなたが<strong>生まれてきた意味・生きる目的</strong>──天命を、<br>
+          言葉にするセッションです。
+        </p>
+        <p>
+          一度言葉になった天命は、二度と消えません。
+        </p>
+      </div>
     </div>
   </section>
 
   <!-- ===== CHECKLIST ===== -->
-  <section class="kd-question">
+  <section class="kd-symptom">
     <div class="container">
-      <p class="kd-question__text fade-in">
-        <em>「これが、私の人生のすべてなのか？」</em><br>
-        ──こんな感覚に、覚えはありませんか。
-      </p>
-    </div>
-  </section>
+      <p class="kd-symptom__title fade-in">「私はもっとできるはずだ。でも…」</p>
 
-  <section class="section">
-    <div class="container">
-      <div class="kd-checklist fade-in">
-        <div class="kd-check-item">
-          <span class="kd-check-item__mark"></span>
-          <span class="kd-check-item__text">朝から晩まで全力で走り続けている。なのに身体の奥が空洞のように冷たく、立ち止まった瞬間「自分には価値がない」という声が聞こえてくる</span>
+      <div class="kd-cards fade-in">
+        <div class="kd-card">
+          <span class="kd-card__label">Body</span>
+          <p class="kd-card__text">以前のように頑張れない。気力が続かない。健康診断が近づくたびに憂鬱になる</p>
         </div>
-        <div class="kd-check-item">
-          <span class="kd-check-item__mark"></span>
-          <span class="kd-check-item__text">部下には「もっとやれる」と言える。友人には「大丈夫」と言える。なのに自分にだけは、その言葉を一度も許したことがない</span>
+        <div class="kd-card">
+          <span class="kd-card__label">Mind</span>
+          <p class="kd-card__text">限界まで考え抜いて選択してきた。それでも「この人生は正しかった」とは、まだ言い切れない</p>
         </div>
-        <div class="kd-check-item">
-          <span class="kd-check-item__mark"></span>
-          <span class="kd-check-item__text">「何のためにこれをやっているんだろう」──その問いが浮かぶたびに振り払い、また目の前のタスクに戻る。答えのない全力疾走を、もう何年続けているだろう</span>
+        <div class="kd-card">
+          <span class="kd-card__label">Spirit</span>
+          <p class="kd-card__text">人生とは結局何だったのか。これから何のために生きるのか。その問いの答えが、まだ見つかっていない</p>
         </div>
-        <div class="kd-check-item">
-          <span class="kd-check-item__mark"></span>
-          <span class="kd-check-item__text">人のために尽くすことが息をするように自然で、「自分のために生きたい」と口にするだけで胸がざわつく。本音を飲み込み続けた結果、自分が何を感じているのかすらわからなくなった</span>
+        <div class="kd-card">
+          <span class="kd-card__label">Shadow</span>
+          <p class="kd-card__text">周囲からは順調に見える。しかし──内側では「生きていけるが、面白くはない」が続いている</p>
         </div>
-        <div class="kd-check-item">
-          <span class="kd-check-item__mark"></span>
-          <span class="kd-check-item__text">コーチング、カウンセリング、セラピー、瞑想、占い、哲学、宗教──ある程度の時間とお金をかけて試してきた。どれも一時的には効いた気がした。でも根本の渇きは、まだ癒えていない</span>
-        </div>
-        <div class="kd-check-item">
-          <span class="kd-check-item__mark"></span>
-          <span class="kd-check-item__text">「私はこの程度じゃないはずだ」──その声がまだ消えない。もっとやれる、もっと生きられるはずだ。でも、その方法がわからない</span>
-        </div>
-        <div class="kd-check-item">
-          <span class="kd-check-item__mark"></span>
-          <span class="kd-check-item__text">大切な人との別れ、病、仕事の転機──今まさに人生の分岐点に立っている。偶然この文章を読んでいるのではない、と心のどこかで感じている</span>
+        <div class="kd-card">
+          <span class="kd-card__label">Action</span>
+          <p class="kd-card__text">自己啓発、能力開発、古今東西の哲学、認知科学、瞑想、コーチング、心理療法──すべて一巡した。どれも最終回答にはならなかった</p>
         </div>
       </div>
+
       <p class="kd-check-note fade-in">
         もし一つでも当てはまるなら──<br>
         <strong>今こそ、あなたが天命を悟るタイミングです。</strong>
@@ -624,118 +856,6 @@
       <h2 class="section__title fade-in" style="margin-top: 4rem; text-align: center;">
         天命を知ることは、<br>感動を取り戻すことである。
       </h2>
-    </div>
-  </section>
-
-  <!-- ===== WHY ===== -->
-  <section class="section section--bordered">
-    <div class="container">
-      <div class="content-block fade-in">
-        <h2 class="section__title section__title--left">なぜ、感動が消えたのか</h2>
-        <div class="kd-body">
-          <p>
-            あなたは弱いわけでも、怠けているわけでもありません。<br>
-            むしろ、頑張ってきた人ほどこうなります。
-          </p>
-          <p>
-            コーチング、カウンセリング、セラピー、ヒーリング、占い、瞑想、哲学、宗教──<br>
-            これらには、ひとつの<strong>共通の前提</strong>があります。<br>
-            <em>「自分で選び、自分で変えられる」</em>という前提です。
-          </p>
-          <p>
-            しかし──<br>
-            <strong>そもそも「自由意志」で人生を選んでいるのではないとしたら？</strong>
-          </p>
-        </div>
-
-        <table class="kd-compare">
-          <thead>
-            <tr>
-              <th></th>
-              <th>既存のアプローチ</th>
-              <th>天命の言語化セッション™</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>前提</td>
-              <td>自由意志がある</td>
-              <td>自由意志はない</td>
-            </tr>
-            <tr>
-              <td>方向</td>
-              <td>自分を変える</td>
-              <td>自分を超える</td>
-            </tr>
-            <tr>
-              <td>対象</td>
-              <td>行動・思考・感情</td>
-              <td>人生の必然性そのもの</td>
-            </tr>
-            <tr>
-              <td>結果</td>
-              <td>一時的な改善</td>
-              <td>二度と戻らない認識の転換</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <div class="kd-body">
-          <p>
-            あなたの人生に起きたすべてのこと──<br>
-            あの出会いも、あの挫折も、あの喪失も──<br>
-            偶然ではなく、<strong>必然</strong>だったとしたら。
-          </p>
-          <p>
-            天命とは、その必然性の発露です。<br>
-            <strong>天命を知らなければ、人生に感動は生まれません。</strong>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== TENMEI INTRO ===== -->
-  <section class="section section--bordered">
-    <div class="container">
-      <div class="content-block fade-in">
-        <p class="kd-hero__sub" style="margin-bottom: 2rem;">Method</p>
-        <h2 class="section__title section__title--left">天命の言語化セッション™</h2>
-        <div class="kd-body">
-          <p>
-            2時間の対話を通じて、<br>
-            あなたが<strong>生まれてきた意味・生きる目的</strong>──天命を、<br>
-            言葉にするセッションです。
-          </p>
-          <p>
-            人生に起きた出来事の必然性をたどり、<br>
-            あなたの存在そのものに刻まれた使命を言語化します。<br>
-            一度言葉になった天命は、二度と消えません。
-          </p>
-        </div>
-      </div>
-
-      <!-- Founder profile -->
-      <div class="content-block fade-in" style="margin-top: 3rem; padding-top: 3rem; border-top: 1px solid rgba(192, 168, 120, 0.15);">
-        <p class="kd-hero__sub" style="margin-bottom: 1.5rem;">Facilitator</p>
-        <h3 class="section__title section__title--left" style="font-size: 1.3rem;">箭内 宏紀 ── 実存科学者</h3>
-        <div class="kd-body">
-          <p>
-            心理学、哲学、神経科学、儒教、密教、インド哲学、西洋形而上学──<br>
-            20年以上にわたる学際的研究を経て、<br>
-            「天命の言語化セッション™」を開発。
-          </p>
-          <p>
-            セッション提供実績は<strong>100名以上</strong>。<br>
-            認識論・意味論・社会論の3領域にまたがる独自の理論体系を構築し、<br>
-            実存科学研究所を設立。
-          </p>
-          <p>
-            天命が言語化されると、何が変わるのか。<br>
-            ──それは、実際にセッションを受けた方の声が教えてくれます。
-          </p>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -930,42 +1050,174 @@
     </div>
   </section>
 
+  <!-- ===== 12の対話 CATALOG ===== -->
+  <section class="kd-catalog">
+    <div class="container">
+      <div class="kd-catalog__header fade-in">
+        <p class="kd-hero__sub" style="margin-bottom: 1.5rem;">Twelve Dialogues</p>
+        <h2 class="section__title">12の対話（領域）</h2>
+      </div>
+      <div class="kd-catalog__grid fade-in">
+        <div class="kd-catalog__item">
+          <img class="kd-catalog__img" src="images/menu-01-tenmei.png" alt="天命の言語化セッション™" loading="lazy">
+        </div>
+        <div class="kd-catalog__item">
+          <img class="kd-catalog__img" src="images/menu-02-meta-install.png" alt="Meta Install Workshop™" loading="lazy">
+        </div>
+        <div class="kd-catalog__item">
+          <img class="kd-catalog__img" src="images/menu-06-watashi.png" alt="私の終わり™" loading="lazy">
+        </div>
+        <div class="kd-catalog__item">
+          <img class="kd-catalog__img" src="images/menu-09-shukumei.png" alt="宿命の論考™" loading="lazy">
+        </div>
+        <div class="kd-catalog__item">
+          <img class="kd-catalog__img" src="images/menu-12-timemachine.png" alt="認識論的タイムマシン™" loading="lazy">
+        </div>
+        <div class="kd-catalog__item">
+          <img class="kd-catalog__img" src="images/menu-08-kazoku.png" alt="家族の肯定™" loading="lazy">
+        </div>
+        <div class="kd-catalog__item">
+          <img class="kd-catalog__img" src="images/menu-10-rifujin.png" alt="理不尽な愛™" loading="lazy">
+        </div>
+        <div class="kd-catalog__item">
+          <img class="kd-catalog__img" src="images/menu-05-keiji.png" alt="啓示翻訳™" loading="lazy">
+        </div>
+        <div class="kd-catalog__item">
+          <img class="kd-catalog__img" src="images/menu-03-seiyoku.png" alt="性欲イノベーション™" loading="lazy">
+        </div>
+        <div class="kd-catalog__item">
+          <img class="kd-catalog__img" src="images/menu-04-1kiki10.png" alt="１きいて１０わかる™" loading="lazy">
+        </div>
+        <div class="kd-catalog__item">
+          <img class="kd-catalog__img" src="images/menu-11-kyoufu.png" alt="恐怖の解体™" loading="lazy">
+        </div>
+        <div class="kd-catalog__item">
+          <img class="kd-catalog__img" src="images/menu-07-isaku.png" alt="主体的な遺作™" loading="lazy">
+        </div>
+      </div>
+      <p class="kd-catalog__footer fade-in">
+        天命・宿命・家族・恐怖・性欲・時間──<br>
+        人生のあらゆる領域を、12の対話で構造化します。
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== SCOPE ===== -->
+  <section class="section section--bordered">
+    <div class="container">
+      <div class="content-block fade-in">
+        <p class="kd-hero__sub" style="margin-bottom: 2rem;">Uniqueness</p>
+        <h2 class="section__title section__title--left">なぜ、これまでの方法では届かなかったのか</h2>
+        <div class="kd-body">
+          <p>
+            コーチング、カウンセリング、セラピー、ヒーリング、占い、瞑想、哲学、宗教──<br>
+            これらには、ひとつの<strong>共通の前提</strong>があります。<br>
+            <em>「自分で選び、自分で変えられる」</em>という前提です。
+          </p>
+          <p>
+            しかし──<br>
+            <strong>そもそも「自由意志」で人生を選んでいるのではないとしたら？</strong>
+          </p>
+        </div>
+
+        <table class="kd-compare">
+          <thead>
+            <tr>
+              <th></th>
+              <th>既存のアプローチ</th>
+              <th>天命の言語化セッション™</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>前提</td>
+              <td>自由意志がある</td>
+              <td>自由意志はない</td>
+            </tr>
+            <tr>
+              <td>方向</td>
+              <td>自分を変える</td>
+              <td>自分を超える</td>
+            </tr>
+            <tr>
+              <td>対象</td>
+              <td>行動・思考・感情</td>
+              <td>人生の必然性そのもの</td>
+            </tr>
+            <tr>
+              <td>結果</td>
+              <td>一時的な改善</td>
+              <td>二度と戻らない認識の転換</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="kd-body">
+          <p>
+            人類が数千年かけて問い続けた「生きる意味」に、<br>
+            <strong>構造から到達する方法論</strong>は、これまで存在しませんでした。
+          </p>
+        </div>
+      </div>
+
+      <!-- Facilitator -->
+      <div class="content-block fade-in" style="margin-top: 3rem; padding-top: 3rem; border-top: 1px solid rgba(192, 168, 120, 0.15);">
+        <p class="kd-hero__sub" style="margin-bottom: 1.5rem;">Facilitator</p>
+        <h3 class="section__title section__title--left" style="font-size: 1.3rem;">箭内 宏紀 ── 実存科学者</h3>
+        <div class="kd-body">
+          <p>
+            心理学、哲学、神経科学、儒教、密教、インド哲学、西洋形而上学──<br>
+            20年以上にわたる学際的研究を経て、<br>
+            「天命の言語化セッション™」を開発。
+          </p>
+          <p>
+            セッション提供実績は<strong>100名以上</strong>。<br>
+            認識論・意味論・社会論の3領域にまたがる独自の理論体系を構築し、<br>
+            実存科学研究所を設立。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== OFFERING ===== -->
   <section class="section section--bordered">
     <div class="container">
       <div class="content-block fade-in">
-        <p class="kd-hero__sub" style="margin-bottom: 2rem;">Free Email Lesson</p>
-        <h2 class="section__title section__title--left">21日間の無料メールレッスン</h2>
+        <p class="kd-hero__sub" style="margin-bottom: 2rem;">Free Program</p>
+        <h2 class="section__title section__title--left">天命の言語化プログラム<span style="font-size: 0.6em; font-weight: 400; margin-left: 0.5em;">無料・21日間</span></h2>
         <div class="kd-body">
           <p>
-            天命の言語化セッション™に興味を持たれた方のために、<br>
-            <strong>「天命に至る思考のプロセス」</strong>を<br>
-            21日間にわたって毎朝メールでお届けします。
+            天命の言語化セッション™を体験的に理解するための、<br>
+            <strong>21日間の無料プログラム</strong>です。<br>
+            毎朝届くメールを通じて、天命の構造を知り、<br>
+            実際にセッションを受けた方の体験を追体験できます。
           </p>
         </div>
 
         <div class="kd-offering">
           <div class="kd-offering__item">
             <p class="kd-offering__phase">Day 1 – 7</p>
-            <p class="kd-offering__title">認識の構造を知る</p>
+            <p class="kd-offering__title">天命とは何かを知る</p>
             <p class="kd-offering__desc">なぜ「変えたいのに変われない」のか。あなたの人生を支配している見えない前提──Metaの正体を解き明かします。</p>
           </div>
           <div class="kd-offering__item">
             <p class="kd-offering__phase">Day 8 – 14</p>
-            <p class="kd-offering__title">人生の必然性を読む</p>
-            <p class="kd-offering__desc">あの出会い、あの挫折、あの選択──偶然だと思っていた出来事の中に、天命への伏線を見出します。</p>
+            <p class="kd-offering__title">天命が言語化される瞬間を追体験する</p>
+            <p class="kd-offering__desc">実際にセッションを受けた方の体験を通じて、天命が言語化される瞬間──人生が一本の線になる瞬間を追体験します。</p>
           </div>
           <div class="kd-offering__item">
             <p class="kd-offering__phase">Day 15 – 21</p>
-            <p class="kd-offering__title">天命への準備</p>
-            <p class="kd-offering__desc">天命を言語化するために必要な「問い」の立て方と、セッションで何が起きるのかを具体的にお伝えします。</p>
+            <p class="kd-offering__title">あなた自身の天命の輪郭が浮かび上がる</p>
+            <p class="kd-offering__desc">21日間の最後に、あなた自身の天命の輪郭が見えかけてきます。その先にあるのが、天命の言語化セッション™です。</p>
           </div>
         </div>
 
         <div class="kd-body" style="margin-top: 2.5rem;">
           <p>
-            21日間のメールを読み終えたとき、<br>
-            あなたはすでに「自分の人生の必然性」に気づき始めているはずです。
+            プログラムを終えたとき、<br>
+            あなたはすでに「自分の天命の輪郭」を感じ始めているはずです。<br>
+            そして、それを一つの言葉にする準備が整います。
           </p>
           <p>
             <strong>完全無料。解除はいつでも可能です。</strong>
@@ -980,16 +1232,16 @@
     <div class="container">
       <div class="kd-cta fade-in">
         <h2 class="kd-cta__heading">
-          あなたの感動を、<br>取り戻す準備はできていますか。
+          あなたの天命を、<br>言葉にする旅が始まります。
         </h2>
         <p class="kd-cta__desc">
-          まずは21日間の無料メールレッスンから。<br>
-          天命に至る思考のプロセスを、毎朝お届けします。
+          まずは21日間の無料プログラムから。<br>
+          天命の構造を知り、体験し、あなた自身の輪郭を感じてください。
         </p>
         <!-- TODO: action属性にメール配信サービスのエンドポイントURLを設定してください -->
         <form class="kd-form" action="#" method="post">
           <input type="email" class="kd-form__input" placeholder="メールアドレスを入力" required>
-          <button type="submit" class="btn--kandou">Register &rarr;</button>
+          <button type="submit" class="btn--kandou">プログラムに参加する（無料） &rarr;</button>
         </form>
         <p class="kd-cta__note">
           ※ 完全無料 / 21日間・毎朝配信<br>
