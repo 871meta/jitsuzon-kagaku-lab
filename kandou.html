@@ -35,10 +35,19 @@
 
     /* Hero */
     .kd-hero {
-      padding: 14rem 0 8rem;
+      padding: 14rem 0 5rem;
       text-align: center;
       border-bottom: 1px solid rgba(192, 168, 120, 0.15);
       position: relative;
+    }
+
+    .kd-hero__question {
+      font-size: 1.15rem;
+      color: rgba(240, 236, 230, 0.65);
+      letter-spacing: 0.08em;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+      font-family: "Shippori Mincho", "Noto Serif JP", serif;
     }
 
     .kd-hero__sub {
@@ -100,7 +109,7 @@
     .kd-hero__after {
       font-size: 1.4rem;
       color: rgba(192, 168, 120, 0.7);
-      margin-bottom: 4rem;
+      margin-bottom: 0;
       letter-spacing: 0.08em;
       line-height: 1.8;
       font-family: "Shippori Mincho", "Noto Serif JP", serif;
@@ -841,7 +850,11 @@
     /* Responsive */
     @media (max-width: 768px) {
       .kd-hero {
-        padding: 10rem 0 5rem;
+        padding: 10rem 0 3rem;
+      }
+
+      .kd-hero__question {
+        font-size: 1rem;
       }
 
       .kd-hero h1 {
@@ -850,11 +863,6 @@
 
       .kd-hero__after {
         font-size: 1.2rem;
-      }
-
-      .kd-hero__lead {
-        font-size: 1.05rem;
-        padding: 2rem 2rem;
       }
 
       .kd-symptom__title {
@@ -874,7 +882,11 @@
 
     @media (max-width: 480px) {
       .kd-hero {
-        padding: 8rem 0 4rem;
+        padding: 8rem 0 2.5rem;
+      }
+
+      .kd-hero__question {
+        font-size: 0.9rem;
       }
 
       .kd-hero h1 {
@@ -883,11 +895,6 @@
 
       .kd-hero__after {
         font-size: 1rem;
-      }
-
-      .kd-hero__lead {
-        font-size: 0.95rem;
-        padding: 1.8rem 1.5rem;
       }
 
       .kd-symptom__title {
@@ -1182,15 +1189,28 @@
   <!-- ===== HERO ===== -->
   <section class="kd-hero" id="main">
     <div class="container">
-      <h1>これから、<br>何のために生きるのか</h1>
-      <p class="kd-hero__after">「生きる意味」に悩んだ時期が<br>私にもありました。</p>
-      <p class="kd-hero__hook">この方法を試してください。</p>
-      <p class="kd-hero__lead">
-        自宅にいながら<br>
-        2時間で<em>「天命」</em>を悟り、<br>
-        <em>「感動的な人生」</em>を<br>
-        生き直すことができます。
-      </p>
+      <p class="kd-hero__question">あなたは、正しかった。</p>
+      <h1>あなたの天命は、<br>ここにある。</h1>
+      <p class="kd-hero__after">もう、自分を変えなくていい。</p>
+    </div>
+  </section>
+
+  <!-- ===== CTA (top) ===== -->
+  <section class="section section--bordered" style="padding: 2.5rem 0;">
+    <div class="container">
+      <div class="kd-cta fade-in" style="padding-top: 0;">
+        <h2 class="kd-cta__heading">
+          天命の言語化プログラム™<br>
+          <span style="font-size:0.7em; color:#8a8680;">全21通 / 毎朝配信 / 完全無料</span>
+        </h2>
+        <form class="kd-form" action="#" method="post">
+          <input type="email" class="kd-form__input" placeholder="メールアドレスを入力" required>
+          <button type="submit" class="btn--kandou">プログラムに参加する（無料） &rarr;</button>
+        </form>
+        <p class="kd-cta__note">
+          ※ いつでも解除可能 / 第三者への提供はありません
+        </p>
+      </div>
     </div>
   </section>
 
@@ -1694,7 +1714,7 @@
     <div class="container">
       <div class="kd-cta fade-in" style="padding-top: 0;">
         <p style="text-align:center; font-size:0.85rem; color:#8a8680; margin-bottom:1.5rem; letter-spacing:0.04em;">
-          2,000名以上が体験した無料プログラム
+          延べ2,000名以上の対話から生まれたプログラム
         </p>
         <h2 class="kd-cta__heading">
           天命の言語化プログラム™<br>
@@ -1963,7 +1983,7 @@
     <div class="container">
       <div class="kd-cta fade-in" style="padding-top: 2rem;">
         <p style="text-align:center; font-size:0.85rem; color:#8a8680; margin-bottom:1rem; letter-spacing:0.04em;">
-          2,000名以上が体験した無料プログラム
+          延べ2,000名以上の対話から生まれたプログラム
         </p>
         <h2 class="kd-cta__heading">
           あなたの天命を、<br>言葉にする旅が始まります。
