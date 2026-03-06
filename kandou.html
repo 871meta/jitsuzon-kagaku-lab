@@ -17,9 +17,9 @@
   <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/kandou.html">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>感動的な人生を取り戻す方法 | 実存科学研究所</title>
-  <meta name="description" content="立ち止まると価値がなくなる気がする。何もしていない日曜日が怖い。その感覚の正体を、あなたはまだ知らない。">
+  <meta name="description" content="これから、何のために生きるのか。その問いに構造から到達する方法がある。">
   <meta property="og:title" content="感動的な人生を取り戻す方法">
-  <meta property="og:description" content="なぜ、あなたの人生から「感動」が消えたのか。その構造を解き明かし、取り戻す方法があります。">
+  <meta property="og:description" content="手に入れた。積み上げた。それでも『何のために生きるのか』が消えない。その構造と、到達する方法。">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="実存科学研究所">
   <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
@@ -1109,6 +1109,63 @@
         gap: 0.3rem;
       }
     }
+
+    /* Sticky CTA bar */
+    .kd-sticky-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 900;
+      background: rgba(12, 10, 20, 0.95);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid rgba(192, 168, 120, 0.2);
+      padding: 0.8rem 1.5rem;
+      text-align: center;
+      transform: translateY(100%);
+      transition: transform 0.4s ease;
+    }
+    .kd-sticky-cta.is-visible {
+      transform: translateY(0);
+    }
+    .kd-sticky-cta a {
+      display: inline-block;
+      padding: 0.7rem 2.5rem;
+      background: #c0a878;
+      color: #0c0a14;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-decoration: none;
+      font-weight: 600;
+      text-transform: uppercase;
+      border: 1px solid #c0a878;
+      transition: background 0.3s, color 0.3s;
+    }
+    .kd-sticky-cta a:hover {
+      background: transparent;
+      color: #c0a878;
+    }
+    .kd-sticky-cta__note {
+      display: inline-block;
+      margin-left: 1rem;
+      font-size: 0.72rem;
+      color: #8a8680;
+      letter-spacing: 0.04em;
+    }
+    @media (max-width: 480px) {
+      .kd-sticky-cta a {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 0.9rem 1rem;
+      }
+      .kd-sticky-cta__note {
+        display: block;
+        margin: 0.4rem 0 0;
+      }
+    }
   </style>
 </head>
 
@@ -1339,7 +1396,11 @@
           母を安心させ、<br>
           妻を笑顔にする。<br><br>
 
-          順番が、逆だった。
+          順番が、逆だった。<br><br>
+
+          セッションから半年後──<br>
+          妻と目を合わせて話せるようになった。<br>
+          母には「もう大丈夫だよ」と、初めて言えた。
         </p>
         </div>
       </div>
@@ -1432,7 +1493,11 @@
           「凡人」という鎧が静かに外れた。<br><br>
 
           60年間、自分の感情を殺して<br>
-          生きてきた男が、初めて泣いた。
+          生きてきた男が、初めて泣いた。<br><br>
+
+          セッション後──<br>
+          妻に、60年間言えなかった言葉を伝えた。<br>
+          「ずっと、甘えたかった」と。
         </p>
         </div>
       </div>
@@ -1515,7 +1580,11 @@
 
           恐怖で走る人生から、<br>
           使命で歩む人生へ──<br>
-          景色がまるで違って見えた。
+          景色がまるで違って見えた。<br><br>
+
+          セッションから数ヶ月後──<br>
+          絶縁していた親に、電話をかけた。<br>
+          何を話したかは覚えていない。ただ、泣いた。
         </p>
         </div>
       </div>
@@ -1609,9 +1678,35 @@
           自己犠牲ではなく、対等。<br>
           支援の動機が、<br>
           義務から天命へ──<br>
-          すべてが、書き換わった。
+          すべてが、書き換わった。<br><br>
+
+          セッション後──<br>
+          初めて、クライアントの前で涙を見せた。<br>
+          「助ける人」ではなく「共にいる人」として。
         </p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA (mid) ===== -->
+  <section class="section section--bordered" style="padding: 3rem 0;">
+    <div class="container">
+      <div class="kd-cta fade-in" style="padding-top: 0;">
+        <p style="text-align:center; font-size:0.85rem; color:#8a8680; margin-bottom:1.5rem; letter-spacing:0.04em;">
+          2,000名以上が体験した無料プログラム
+        </p>
+        <h2 class="kd-cta__heading">
+          天命の言語化プログラム™<br>
+          <span style="font-size:0.7em; color:#8a8680;">全21通 / 毎朝配信 / 完全無料</span>
+        </h2>
+        <form class="kd-form" action="#" method="post">
+          <input type="email" class="kd-form__input" placeholder="メールアドレスを入力" required>
+          <button type="submit" class="btn--kandou">プログラムに参加する（無料） &rarr;</button>
+        </form>
+        <p class="kd-cta__note">
+          ※ いつでも解除可能 / 第三者への提供はありません
+        </p>
       </div>
     </div>
   </section>
@@ -1725,7 +1820,7 @@
         </div>
 
         <div class="kd-giftcard fade-in">
-          <p class="kd-giftcard__label">— Online Program —</p>
+          <p class="kd-giftcard__label">— Free Program —</p>
           <h2 class="kd-giftcard__title">
             天命の言語化プログラム<sup style="font-size:0.45em">™</sup>
           </h2>
@@ -1867,6 +1962,9 @@
   <section class="section section--bordered" style="padding-top: 0;">
     <div class="container">
       <div class="kd-cta fade-in" style="padding-top: 2rem;">
+        <p style="text-align:center; font-size:0.85rem; color:#8a8680; margin-bottom:1rem; letter-spacing:0.04em;">
+          2,000名以上が体験した無料プログラム
+        </p>
         <h2 class="kd-cta__heading">
           あなたの天命を、<br>言葉にする旅が始まります。
         </h2>
@@ -1875,7 +1973,7 @@
           天命の構造を知り、体験し、あなた自身の輪郭を感じてください。
         </p>
         <!-- TODO: action属性にメール配信サービスのエンドポイントURLを設定してください -->
-        <form class="kd-form" action="#" method="post">
+        <form class="kd-form" id="cta-final" action="#" method="post">
           <input type="email" class="kd-form__input" placeholder="メールアドレスを入力" required>
           <button type="submit" class="btn--kandou">プログラムに参加する（無料） &rarr;</button>
         </form>
@@ -1898,7 +1996,11 @@
       <p class="footer-bottom">&copy; 実存科学研究所 — Existential Science Institute</p>
     </div>
   </footer>
-  <script src="js/main.js?v=8"></script>
+  <div class="kd-sticky-cta" id="stickyCta">
+    <a href="#cta-final">無料で参加する &rarr;</a>
+    <span class="kd-sticky-cta__note">21日間 / 完全無料</span>
+  </div>
+  <script src="js/main.js?v=9"></script>
 </body>
 
 </html>
