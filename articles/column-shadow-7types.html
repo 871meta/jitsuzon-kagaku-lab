@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-shadow-7types.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7つの痛み ── シャドウの構造類型｜実存科学研究所</title>
+  <meta name="description" content="実存科学が導出した7つのシャドウの構造類型。闇のシャドウ（S1〜S6）とゴールデンシャドウ（S7）。あなたの痛みには構造がある。名前がつく。構造が見える。見えれば、扱える。">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --text: rgba(235, 232, 225, 0.92); --text-secondary: rgba(235, 232, 225, 0.55); --bg: #080610; --border: rgba(192, 168, 120, 0.15); --accent: #c0a878; --highlight: rgba(192, 168, 120, 0.06); --blockquote-border: rgba(192, 168, 120, 0.4); --definition-bg: rgba(192, 168, 120, 0.04); --max-width: 780px; }
+    html { font-size: 17px; scroll-behavior: smooth; }
+    body { font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif; color: var(--text); background: var(--bg); line-height: 2; -webkit-font-smoothing: antialiased; }
+    .page-container { max-width: var(--max-width); margin: 0 auto; padding: 3rem 1.5rem 6rem; }
+    .page-header { text-align: center; padding: 4rem 0 3rem; border-bottom: 2px solid var(--accent); margin-bottom: 3rem; }
+    .page-header .label { font-size: 0.85rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 0.8rem; font-family: "Noto Sans JP", sans-serif; }
+    .page-header .category-tag { font-family: "Noto Sans JP", sans-serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; background: var(--accent); padding: 0.15rem 0.6rem; display: inline-block; margin-bottom: 1rem; }
+    .page-header h1 { font-size: 1.4rem; font-weight: 700; line-height: 1.6; margin-bottom: 0.3rem; }
+    .page-header .subtitle { font-size: 0.95rem; color: var(--text-secondary); }
+    p { margin-bottom: 1rem; text-align: justify; }
+    strong { font-weight: 700; }
+    h2.chapter-heading { font-size: 1.3rem; font-weight: 700; margin-top: 4rem; margin-bottom: 1rem; line-height: 1.5; padding-bottom: 0.8rem; border-bottom: 2px solid var(--accent); }
+    h3.section-heading { font-size: 1.1rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.8rem; line-height: 1.6; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
+    blockquote { border-left: 3px solid var(--blockquote-border); padding: 0.8rem 1.5rem; margin: 1.5rem 0; color: var(--text-secondary); background: rgba(255,255,255,0.03); }
+    blockquote p:last-child { margin-bottom: 0; }
+    .item-list { margin: 1rem 0 1rem 1.5rem; line-height: 2; }
+    .item-list li { margin-bottom: 0.4rem; }
+    hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
+
+    /* Pull Quote */
+    .pull-quote { text-align: center; padding: 2.5rem 2rem; margin: 0 0 2.5rem; position: relative; background: rgba(10, 8, 18, 0.4); backdrop-filter: blur(4px); }
+    .pull-quote::before, .pull-quote::after { content: ""; display: block; width: 32px; height: 1px; background: rgba(192, 168, 120, 0.3); margin: 0 auto; }
+    .pull-quote::before { margin-bottom: 2rem; }
+    .pull-quote::after { margin-top: 2rem; }
+    .pull-quote p { font-size: 1.05rem; font-weight: 600; color: #f0ece6; line-height: 2; letter-spacing: 0.06em; margin-bottom: 0; }
+
+    /* Text Panel */
+    .text-panel { background: linear-gradient(180deg, rgba(15, 12, 25, 0.7) 0%, rgba(8, 6, 16, 0.6) 100%); border: 1px solid rgba(192, 168, 120, 0.06); border-radius: 2px; padding: 2.5rem 2rem; margin-bottom: 1.5rem; position: relative; overflow: hidden; }
+    .text-panel::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.25), transparent); }
+    .text-panel p:last-child { margin-bottom: 0; }
+
+    /* Highlight Box */
+    .highlight-box { background: var(--definition-bg); border-left: 4px solid var(--accent); padding: 1.2rem 1.5rem; margin: 1.5rem 0; }
+    .highlight-box p { margin-bottom: 0.5rem; }
+    .highlight-box p:last-child { margin-bottom: 0; }
+
+    /* Highlight Block (footer) */
+    .highlight-block { background: var(--definition-bg); border-left: 2px solid; border-image: linear-gradient(180deg, #c0a878 0%, rgba(192, 168, 120, 0.2) 100%) 1; padding: 2rem; margin: 2rem 0; }
+    .highlight-block p { font-size: 0.95rem; line-height: 2.2; margin-bottom: 0; }
+
+    /* Shadow Card */
+    .shadow-card { background: linear-gradient(180deg, rgba(15, 12, 25, 0.7) 0%, rgba(8, 6, 16, 0.5) 100%); border: 1px solid rgba(192, 168, 120, 0.08); border-radius: 2px; padding: 2.2rem 2rem; margin: 2rem 0; position: relative; overflow: hidden; }
+    .shadow-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.25), transparent); }
+    .shadow-card__id { font-family: "Cormorant Garamond", serif; font-size: 0.85rem; letter-spacing: 0.15em; color: var(--accent); text-transform: uppercase; margin-bottom: 0.6rem; }
+    .shadow-card__title { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.4rem; color: #f0ece6; }
+    .shadow-card__meta { display: flex; flex-direction: column; gap: 0.3rem; margin-bottom: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(192, 168, 120, 0.1); }
+    .shadow-card__meta-item { font-size: 0.88rem; line-height: 1.8; }
+    .shadow-card__meta-label { color: var(--text-secondary); margin-right: 0.5rem; }
+    .shadow-card p { margin-bottom: 1rem; }
+    .shadow-card p:last-child { margin-bottom: 0; }
+
+    /* Golden Card */
+    .shadow-card--golden { border-color: rgba(192, 168, 120, 0.2); }
+    .shadow-card--golden::before { background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.45), transparent); }
+    .shadow-card--golden .shadow-card__id { color: #e8d0a0; }
+
+    /* Overview Table */
+    .shadow-overview { margin: 2.5rem 0; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .shadow-overview table { width: 100%; border-collapse: collapse; min-width: 640px; }
+    .shadow-overview th { font-family: "Cormorant Garamond", serif; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); padding: 0.8rem 1rem; border-bottom: 2px solid rgba(192, 168, 120, 0.2); text-align: left; white-space: nowrap; }
+    .shadow-overview td { padding: 0.8rem 1rem; border-bottom: 1px solid rgba(192, 168, 120, 0.08); font-size: 0.88rem; line-height: 1.8; color: #c8c4be; vertical-align: top; }
+    .shadow-overview td:first-child { font-weight: 600; color: #f0ece6; white-space: nowrap; }
+    .shadow-overview td:nth-child(2) { white-space: nowrap; }
+    .shadow-overview tbody tr:nth-child(even) td { background: rgba(255, 255, 255, 0.015); }
+    .shadow-overview tbody tr:hover td { background: rgba(192, 168, 120, 0.04); }
+    .shadow-overview tbody tr:last-child td { border-bottom: 1px solid rgba(192, 168, 120, 0.15); }
+    .shadow-overview .type-dark { color: var(--text-secondary); }
+    .shadow-overview .type-light { color: #e8d0a0; font-weight: 600; }
+    .table-scroll-hint { display: none; text-align: center; font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.5rem; }
+
+    /* Phase Box */
+    .phase-box { background: rgba(15, 12, 25, 0.5); border: 1px solid rgba(192, 168, 120, 0.1); padding: 1.8rem 1.5rem; margin: 1.5rem 0; }
+    .phase-box__label { font-family: "Cormorant Garamond", serif; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem; }
+    .phase-box p { margin-bottom: 0.8rem; }
+    .phase-box p:last-child { margin-bottom: 0; }
+
+    /* Formula */
+    .formula-block { text-align: center; padding: 1.5rem; margin: 1.5rem 0; background: rgba(192, 168, 120, 0.03); border: 1px solid rgba(192, 168, 120, 0.1); font-family: "Cambria Math", "Noto Sans JP", monospace; font-size: 1.05rem; letter-spacing: 0.08em; color: #f0ece6; }
+
+    /* Author */
+    .author-block { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .author-block p { font-size: 0.88rem; line-height: 2; color: var(--text-secondary); margin-bottom: 0.4rem; }
+    .author-block p:first-child { font-weight: 700; color: var(--text); font-size: 0.95rem; }
+
+    /* CTA */
+    .cta-block { margin-top: 2rem; padding: 2rem; background: var(--definition-bg); border-left: 2px solid; border-image: linear-gradient(180deg, #c0a878 0%, rgba(192, 168, 120, 0.2) 100%) 1; }
+    .cta-block p { font-size: 0.9rem; line-height: 2; margin-bottom: 0.5rem; }
+    .cta-block p:last-child { margin-bottom: 0; }
+    .cta-block a { color: var(--accent); font-weight: 700; }
+    .cta-block a:hover { color: #e8d8b8; }
+
+    /* Back nav */
+    .back-nav { margin-top: 4rem; padding: 1.5rem 2rem; background: var(--highlight); border: 1px solid var(--border); text-align: center; }
+    .back-nav a { color: var(--accent); text-decoration: none; font-weight: 700; }
+    .back-nav a:hover { opacity: 0.7; }
+
+    @media (max-width: 900px) { .table-scroll-hint { display: block; } }
+    @media (max-width: 600px) {
+      html { font-size: 15px; }
+      .page-container { padding: 2rem 1rem 4rem; }
+      .page-header h1 { font-size: 1.2rem; }
+      h2.chapter-heading { font-size: 1.15rem; }
+      .text-panel { padding: 1.8rem 1.2rem; }
+      .shadow-card { padding: 1.6rem 1.2rem; }
+      .shadow-overview td, .shadow-overview th { padding: 0.6rem 0.8rem; font-size: 0.78rem; }
+    }
+
+/* === Dark Theme Override === */
+a:not(.btn):not(.session-card__link) { color: #c0a878; transition: color 0.2s; }
+a:not(.btn):not(.session-card__link):hover { color: #e8d8b8; }
+.category-tag { color: #080610 !important; background: #c0a878 !important; }
+.back-nav { background: rgba(192, 168, 120, 0.06); border-color: rgba(192, 168, 120, 0.15); }
+.back-nav a { color: #c0a878; }
+img { border-radius: 2px; }
+input, textarea, select { background: rgba(255,255,255,0.05); color: rgba(235,232,225,0.92); border-color: rgba(201,168,76,0.2); }
+input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); outline: none; }
+::placeholder { color: rgba(235,232,225,0.3); }
+.submit-btn, button[type="submit"] { background: #c0a878; color: #080610; border: none; }
+
+</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <meta property="og:title" content="7つの痛み ── シャドウの構造類型｜実存科学研究所">
+  <meta property="og:description" content="実存科学が導出した7つのシャドウの構造類型。闇のシャドウ（S1〜S6）とゴールデンシャドウ（S7）。あなたの痛みには構造がある。">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="実存科学研究所">
+  <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../css/style.css?v=6">
+</head>
+<body>
+  <a href="#main" class="skip-link">メインコンテンツへスキップ</a>
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="../index.html" class="site-logo">実存科学研究所</a>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="global-nav">
+        <a href="../index.html">Top</a>
+        <a href="../beginner.html">Guide</a>
+        <a href="../epistemology.html">Epistemology</a>
+        <a href="../semantics.html">Semantics</a>
+        <a href="../society.html">Society</a>
+        <a href="../founder.html">Founder</a>
+        <a href="../session.html">Session</a>
+        <a href="../specials.html">Specials</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">More</button>
+          <div class="nav-dropdown__menu">
+            <a href="../metaplay.html">Meta Play™</a>
+            <a href="../dark-side/">ダークサイド診断</a>
+            <a href="../omoidasu/">身体的知性診断</a>
+            <a href="../trial.html">無料トライアル</a>
+            <a href="../session-menu.html">12の対話（領域）</a>
+            <a href="../letters.html">21の手紙</a>
+            <a href="../uniqueness.html">独自性と射程</a>
+            <a href="../faq.html">FAQ</a>
+            <a href="../archives.html">記事一覧</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+<div class="page-container" id="main">
+
+  <header class="page-header fade-in">
+    <p class="label">EXISTENTIAL SCIENCE RESEARCH INSTITUTE</p>
+    <span class="category-tag">コラム</span>
+    <h1>7つの痛み ── シャドウの構造類型</h1>
+    <p class="subtitle">箭内宏紀｜実存科学研究所</p>
+  </header>
+
+  <article>
+
+    <!-- ── 導入 ── -->
+    <h2 class="chapter-heading fade-in">なぜ、同じパターンを繰り返すのか</h2>
+
+    <div class="text-panel fade-in">
+      <p>人は、人と場所を変えて同じことを繰り返す。</p>
+      <p>転職しても同じ種類の上司に苦しめられる。恋人が変わっても同じ理由で関係が壊れる。環境を変えれば解決すると思って動いたのに、三ヶ月もすれば同じ景色が広がっている。</p>
+      <p>これは意志が弱いからではない。運が悪いからでもない。</p>
+    </div>
+
+    <div class="highlight-box fade-in">
+      <p><strong>あなたの中に、あなた自身が見ていない構造がある。</strong></p>
+      <p>実存科学では、その構造を「シャドウ」と呼ぶ。</p>
+    </div>
+
+    <hr>
+
+    <!-- ── シャドウとは何か ── -->
+    <h2 class="chapter-heading fade-in">シャドウとは何か</h2>
+
+    <p><strong>シャドウとは、抑圧された未成熟な人格側面である。</strong></p>
+
+    <p>もう少し正確に言えば、Meta──あなたが生まれ落ちた瞬間から背負っている「変えられない前提条件」──によって生み出され、天命への整合を阻害する未整合の構造のことだ。</p>
+
+    <div class="highlight-box fade-in">
+      <p><strong>重要なのは、シャドウは欠陥ではないということ。</strong></p>
+      <p>シャドウは、天命が形になるための素材である。粘土が彫刻になる前の、まだ形を持たない塊。それがシャドウだ。</p>
+    </div>
+
+    <p>シャドウには二つの種類がある。</p>
+    <p><strong>闇のシャドウ</strong>と、<strong>光のシャドウ（ゴールデンシャドウ）</strong>。</p>
+
+    <p>光のシャドウは、ユングが提唱し、ケン・ウィルバーがインテグラル理論に統合した「ゴールデンシャドウ」の概念を参照している。通常のシャドウが闇──抑圧された否定的感情──であるのに対し、ゴールデンシャドウは光そのものが影を生むという逆転した構造を持つ。</p>
+
+    <p>以下が、実存科学が導出した7つのシャドウの全体像である。</p>
+
+    <!-- ── 一覧テーブル ── -->
+    <div class="shadow-overview fade-in">
+      <p class="table-scroll-hint">← スクロールできます →</p>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Type</th>
+            <th>P（プレゼント）</th>
+            <th>S（シャドウの核心）</th>
+            <th>日常での現れ方</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>S1</td>
+            <td class="type-dark">闇</td>
+            <td>認められた自分</td>
+            <td>「ありのままでは無価値だ」</td>
+            <td>成果を出しても空虚感が消えない</td>
+          </tr>
+          <tr>
+            <td>S2</td>
+            <td class="type-dark">闇</td>
+            <td>何も纏わない素の自分</td>
+            <td>「役割を脱いだら空っぽだ」</td>
+            <td>肩書きを失う恐怖で動けない</td>
+          </tr>
+          <tr>
+            <td>S3</td>
+            <td class="type-dark">闇</td>
+            <td>空白の先にある答え</td>
+            <td>「手に入れたのに満たされない」</td>
+            <td>成功の先に広がる空白</td>
+          </tr>
+          <tr>
+            <td>S4</td>
+            <td class="type-dark">闇</td>
+            <td>本当の自分</td>
+            <td>「本音を出したら居場所を失う」</td>
+            <td>演じ続ける日々の限界</td>
+          </tr>
+          <tr>
+            <td>S5</td>
+            <td class="type-dark">闇</td>
+            <td>自分だけの道</td>
+            <td>「これは本当に自分の道なのか」</td>
+            <td>「このままでいいのか」が消えない</td>
+          </tr>
+          <tr>
+            <td>S6</td>
+            <td class="type-dark">闇</td>
+            <td>安らぎ</td>
+            <td>「正しかったはずなのに痛い」</td>
+            <td>自己犠牲の果ての孤立</td>
+          </tr>
+          <tr>
+            <td>S7</td>
+            <td class="type-light">光</td>
+            <td>──（「不要」）</td>
+            <td>「受け取ったら壊れる」</td>
+            <td>完成されているがゆえの檻</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>ここから、一つずつ見ていく。</p>
+
+    <hr>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- 闇のシャドウ S1〜S6 -->
+    <!-- ══════════════════════════════════════ -->
+    <h2 class="chapter-heading fade-in">闇のシャドウ ── 抑圧された否定的感情</h2>
+
+    <div class="text-panel fade-in">
+      <p>闇のシャドウは、多くの人が直感的に理解できるものだ。</p>
+      <p>認められない弱さ。見たくない本音。封じ込めた感情。「自分はこうあるべきだ」という信念の裏側に押し込んだ、本当の自分。</p>
+    </div>
+
+    <!-- S1 -->
+    <div class="shadow-card fade-in">
+      <p class="shadow-card__id">Shadow 1</p>
+      <p class="shadow-card__title">S1：証明が終わらない構造</p>
+      <div class="shadow-card__meta">
+        <p class="shadow-card__meta-item"><span class="shadow-card__meta-label">プレゼント：</span>認められた自分</p>
+        <p class="shadow-card__meta-item"><span class="shadow-card__meta-label">シャドウの核心：</span>「ありのままでは無価値だ」</p>
+      </div>
+      <p>どれだけ成果を出しても空虚感が消えない。「次も」「もっと」が止まらない。昇進しても、売上を伸ばしても、目標を達成しても、胸の奥に残る虚しさが消えない。</p>
+      <p>それは成果の量が足りないからではない。成果を出す目的が「自分はこれでいいんだ」という確認になっているからだ。確認は一度では終わらない。翌朝にはもう不安になっている。だからまた成果を出す。また確認する。また不安になる。このループには終わりがない。</p>
+      <p>証明しようとしている対象が、成果では証明できないものだからだ。</p>
+    </div>
+
+    <!-- S2 -->
+    <div class="shadow-card fade-in">
+      <p class="shadow-card__id">Shadow 2</p>
+      <p class="shadow-card__title">S2：役割と自己の癒着</p>
+      <div class="shadow-card__meta">
+        <p class="shadow-card__meta-item"><span class="shadow-card__meta-label">プレゼント：</span>何も纏わない素の自分</p>
+        <p class="shadow-card__meta-item"><span class="shadow-card__meta-label">シャドウの核心：</span>「この役割を脱いだら空っぽだ」</p>
+      </div>
+      <p>肩書き、看板、実績。それらを失う恐怖が、人生の選択を支配している。休職が怖い。退職が怖い。引退が怖い。なぜなら、役割を脱いだ自分に何が残るか分からないから。</p>
+      <p>この構造の中にいる人は、役割の中では極めて有能に機能する。頼れる上司、できる部下、責任感のある親。しかしその有能さは、役割という鎧の機能であって、素の自分の力ではない。鎧を脱いだ瞬間、自分が何者でもなくなる恐怖。それがS2の核心だ。</p>
+    </div>
+
+    <!-- S3 -->
+    <div class="shadow-card fade-in">
+      <p class="shadow-card__id">Shadow 3</p>
+      <p class="shadow-card__title">S3：頂点の空虚</p>
+      <div class="shadow-card__meta">
+        <p class="shadow-card__meta-item"><span class="shadow-card__meta-label">プレゼント：</span>空白の先にある答え</p>
+        <p class="shadow-card__meta-item"><span class="shadow-card__meta-label">シャドウの核心：</span>「手に入れたのに満たされない」</p>
+      </div>
+      <p>欲しかったものは全部手に入れた。なのに、朝起きるのが辛い。</p>
+      <p>S1が「まだ足りない」の苦しみだとすれば、S3は「もう足りているのに満たされない」の苦しみだ。登るべき山は全て登った。なのに、頂上からの景色に心が動かない。次の山を探す気力もない。周囲は「成功者」として扱ってくる。その笑顔に応えるのがどれほど重いか、誰にも言えない。</p>
+      <p>達成感は一瞬で消える。残るのは「で、次は？」という乾いた問いだけだ。この空白は、新しい目標を設定しても埋まらない。趣味を増やしても、旅行に行っても、埋まらない。天命以外のもので埋めることはできない。</p>
+    </div>
+
+    <!-- S4 -->
+    <div class="shadow-card fade-in">
+      <p class="shadow-card__id">Shadow 4</p>
+      <p class="shadow-card__title">S4：感情の封印</p>
+      <div class="shadow-card__meta">
+        <p class="shadow-card__meta-item"><span class="shadow-card__meta-label">プレゼント：</span>本当の自分</p>
+        <p class="shadow-card__meta-item"><span class="shadow-card__meta-label">シャドウの核心：</span>「本音を出したら居場所を失う」</p>
+      </div>
+      <p>長年演じてきた自分と本当の自分の乖離が、限界に近づいている。</p>
+      <p>会社では頼れる上司。家では優しい親。友人の前では聞き上手。どの場面でも、求められる自分を正確に演じている。しかし夜、一人になった時、「これは本当に自分なのか」という問いが一瞬だけよぎる。翌朝には消えている。消さないと、次の日が回らないから。</p>
+      <p>本音を出したことがないわけではない。出した瞬間、空気が変わった。相手の表情が曇った。「そんな人だと思わなかった」という目をされた。だから飲み込む。何年も、何十年も。</p>
+      <p>飲み込み続けた本音は、消えない。胃の奥に、鉛のように沈んでいる。</p>
+    </div>
+
+    <!-- S5 -->
+    <div class="shadow-card fade-in">
+      <p class="shadow-card__id">Shadow 5</p>
+      <p class="shadow-card__title">S5：他者の構造の上を歩いている</p>
+      <div class="shadow-card__meta">
+        <p class="shadow-card__meta-item"><span class="shadow-card__meta-label">プレゼント：</span>自分だけの道</p>
+        <p class="shadow-card__meta-item"><span class="shadow-card__meta-label">シャドウの核心：</span>「これは本当に自分の道なのか」</p>
+      </div>
+      <p>ふと、立ち止まる。今歩いている道を見下ろす。自分の足跡だと思っていたものが、よく見ると、誰かが先に歩いた轍の上をなぞっているだけだと気づく。</p>
+      <p>親の期待。社会の常識。業界の慣行。「普通はこうする」の集積の上を、自分の足で歩いているつもりで、実は運ばれているだけなのではないか。</p>
+      <p>S5の人は優秀であることが多い。どの道に置かれても、それなりの成果を出せる。だからこそ「自分の道でなくても歩けてしまう」。歩けてしまうがゆえに、自分の道かどうかを問う必要に迫られない。しかし心の奥では、ずっと違和感が鳴っている。</p>
+    </div>
+
+    <!-- S6 -->
+    <div class="shadow-card fade-in">
+      <p class="shadow-card__id">Shadow 6</p>
+      <p class="shadow-card__title">S6：正当化の構造</p>
+      <div class="shadow-card__meta">
+        <p class="shadow-card__meta-item"><span class="shadow-card__meta-label">プレゼント：</span>安らぎ</p>
+        <p class="shadow-card__meta-item"><span class="shadow-card__meta-label">シャドウの核心：</span>「正しかったはずなのに痛い」</p>
+      </div>
+      <p>「誰かのために」生きてきた。家族のために。組織のために。社会のために。自分を犠牲にして、正しいことをしてきた。なのに感謝されない。むしろ孤立している。</p>
+      <p>S6の核心は「正しさ」にある。自分が正しいことをしてきたという確信が強いほど、報われない現実との落差が痛みを生む。そして「正しいのに報われない」という物語が、さらなる自己犠牲を正当化する。正しさの上に正しさを積み重ね、その塔の上で一人きりになっている。</p>
+      <p>塔を降りることは、自分が正しくなかったと認めることではない。しかしS6の中にいる人には、それが同じに見える。</p>
+    </div>
+
+    <hr>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- 光のシャドウ -->
+    <!-- ══════════════════════════════════════ -->
+    <h2 class="chapter-heading fade-in">光のシャドウ ── ゴールデンシャドウ</h2>
+
+    <div class="text-panel fade-in">
+      <p>ここまでの6つは、いずれも「闇」のシャドウだった。抑圧された否定的な感情。見たくない弱さ。認められない本音。</p>
+      <p>しかしシャドウには、もう一つの種類がある。</p>
+      <p><strong>光のシャドウ。ゴールデンシャドウ。</strong></p>
+      <p>通常のシャドウが「闇を抑圧する」のに対し、ゴールデンシャドウは「光を抑圧する」、あるいは「光そのものが影を生む」という逆転した構造を持つ。</p>
+    </div>
+
+    <h3 class="section-heading fade-in">ゴールデンシャドウの二つの位相</h3>
+
+    <div class="phase-box fade-in">
+      <p class="phase-box__label">Phase 1 ── 他者に投影された自分の光</p>
+      <p>人は自分の中にある才能、カリスマ性、創造性などの肯定的な資質を、無意識に抑圧し、他者に投影する。</p>
+      <p>他者を強烈に崇拝したり、カリスマ的なリーダーに惹きつけられたりする時、そこに映っているのは「自分が認めていない自分自身の光」だ。「あの人はすごい」の裏に、「自分にはそれがない」が隠れている。しかし実際には、「ない」のではなく「認めていない」だけだ。</p>
+      <p>位相1のゴールデンシャドウは、光を他者に投影している段階であり、投影を回収すれば自分の資質として統合できる。</p>
+    </div>
+
+    <div class="phase-box fade-in">
+      <p class="phase-box__label">Phase 2 ── 光そのものが生きづらさになる</p>
+      <p>位相2は、位相1と構造が根本的に異なる。</p>
+      <p>ここでは、光が抑圧されているのではない。光が全面的に体現されている。カリスマ性、美学、圧倒的な存在感。それらを完全に生きている。抑圧どころか、全力で顕在化されている。</p>
+      <p><strong>問題は、この光が強すぎることにある。</strong></p>
+      <p>光が研ぎ澄まされすぎて、他者との軋轢が生まれる。近づける人間がほとんどいなくなる。光の部分を全面的に生きることで、逆に「弱さを見せること」「誰かに頼ること」「愛を受け取ること」が影に落ちている。</p>
+      <p>表面には光そのものが顕在化している。裏面では、その光の強さゆえに、人間的な柔らかさが影に落ちている。二重構造。</p>
+      <p>人はそこにカリスマ性や魅力を感じるが、本人にとってはその光そのものが孤独と生きづらさの源泉になっている。</p>
+    </div>
+
+    <!-- S7 -->
+    <div class="shadow-card shadow-card--golden fade-in">
+      <p class="shadow-card__id">Shadow 7 ── Golden Shadow</p>
+      <p class="shadow-card__title">S7：ゴールデンシャドウ</p>
+      <div class="shadow-card__meta">
+        <p class="shadow-card__meta-item"><span class="shadow-card__meta-label">プレゼント：</span>──（「不要」）</p>
+        <p class="shadow-card__meta-item"><span class="shadow-card__meta-label">シャドウの核心：</span>「受け取ったら壊れる」</p>
+      </div>
+      <p>「あなたは自分に何を与えたいですか」と問うと、S1〜S6の人は何らかの答えを持っている。言葉にできるかどうかは別として、「欲しいもの」「与えたいもの」がある。</p>
+      <p>S7の人は、「不要」と答える。</p>
+      <p>「必要ない」「今のままでいい」「特に何も」。</p>
+      <p>これは欠損ではない。S7の人は、本当に「今のままでいい」と思っている。その確信に嘘はない。困っていない。悩んでいない。自分の世界が確立されていて、揺らがない。</p>
+      <p>しかし「不要」の裏には、構造がある。「何かを受け取ること自体が、自分の光を曇らせる」という無意識の確信だ。強くあり続けることでしか自分を保てない。弱さを見せる場所がない。愛を受け取れない。受け取ったら、壊れる。</p>
+      <p>周囲から見れば完成されている。しかし、その完成度こそが檻になっている。</p>
+    </div>
+
+    <hr>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- 理論的な位置づけ -->
+    <!-- ══════════════════════════════════════ -->
+    <h2 class="chapter-heading fade-in">理論的な位置づけ</h2>
+
+    <p>この7つの類型は、天命の言語化セッション™のメタクエスチョン──「あなたはあなたに何をプレゼントしてあげたいですか？」──への回答から演繹的に導出されている。理論的に網羅的であり、あなたの痛みは必ずこの7つのいずれかに該当する。複数に該当することもある。</p>
+
+    <div class="highlight-box fade-in">
+      <p><strong>P</strong>（プレゼント）は、あなたが自分に与えたいもの。</p>
+      <p><strong>W*</strong>は、「なぜそれが得られていないのか？」を限界まで問う操作。</p>
+      <p><strong>S</strong>（シャドウ）は、その操作の結果として露出する構造。</p>
+    </div>
+
+    <p>すなわち、</p>
+
+    <div class="formula-block fade-in">S = W*(P)</div>
+
+    <p>この式が意味するのは、シャドウは「自分が自分に与えたいものを、なぜ与えられていないのか」という問いの答えだということだ。問いを限界まで繰り返した先に、シャドウが立ち上がる。</p>
+
+    <p>そしてシャドウが統合された先に、天命がある。</p>
+
+    <p>天命の核（τ）は、以下で導出される。Sが露出した後、「それは何のために存在しているのか？」を限界まで問い続けた先に、天命が本人の口から語られる。</p>
+
+    <div class="formula-block fade-in">τ = R*(S)</div>
+
+    <hr>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- 結び -->
+    <!-- ══════════════════════════════════════ -->
+    <h2 class="chapter-heading fade-in">あなたの痛みは、どれですか</h2>
+
+    <div class="text-panel fade-in">
+      <p>この7つの中に、あなたの胸を突くものがあったかもしれない。</p>
+      <p>あるいは、「全部少しずつ当てはまる」と感じたかもしれない。どちらでも構わない。</p>
+      <p><strong>重要なのは、あなたの痛みには構造があるということだ。</strong>名前がつく。構造が見える。見えれば、扱える。</p>
+      <p>ただし、構造は自分の内側からは見えない。自分で作った壁は、自分では壁に見えないから。</p>
+    </div>
+
+    <div class="highlight-block fade-in">
+      <p>それを見る場が、天命の言語化セッション™だ。</p>
+      <p>あなたが自分に何をプレゼントしてあげたいのか。なぜそれが得られていないのか。その先に、何があるのか。</p>
+      <p>120分の対話の中で、あなた自身がそれを語る。私は問いを渡すだけだ。</p>
+    </div>
+
+    <!-- ── 著者情報 ── -->
+    <div class="author-block fade-in">
+      <p>箭内宏紀（やないひろき）</p>
+      <p>実存科学研究所 代表。「天命の言語化セッション™」を提供。</p>
+      <p>「Metaがある限り自由意志は存在しない」（M ⇒ ¬F）を第一公理とする実存科学を提唱。</p>
+      <p>著書に『Metaがある限り──自由意志・自分・他人は存在しない』『自由意志なき世界の歩き方』ほか。</p>
+    </div>
+
+    <!-- ── CTA ── -->
+    <div class="cta-block fade-in">
+      <p>本稿は実存科学研究所の理論コラムです。</p>
+      <p>天命の言語化セッション™ 無料トライアル：<a href="../trial.html">詳細はこちら</a></p>
+    </div>
+
+    <!-- ── ナビゲーション ── -->
+    <div class="back-nav fade-in">
+      <a href="../archives.html">← 記事一覧へ戻る</a>
+    </div>
+
+  </article>
+</div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container--wide">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <p class="footer-col__title">Guide</p>
+          <a href="../beginner.html">はじめての方へ</a>
+          <a href="../glossary.html">用語集</a>
+          <a href="../session-flow.html">セッションの流れ</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Theory</p>
+          <a href="../epistemology.html">認識論</a>
+          <a href="../semantics.html">意味論</a>
+          <a href="../society.html">社会論</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Contents</p>
+          <a href="../archives.html">記事一覧</a>
+          <a href="../specials.html">特別シリーズ</a>
+          <a href="../session-menu.html">12の対話（領域）</a>
+          <a href="../letters.html">21の手紙</a>
+          <a href="../metaplay.html">Meta Play™︎</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Session</p>
+          <a href="../session.html">天命の言語化セッション™</a>
+          <a href="../dark-side/">ダークサイド診断</a>
+          <a href="../omoidasu/">身体的知性診断</a>
+          <a href="../uniqueness.html">独自性と射程</a>
+          <a href="../trial.html">無料トライアル</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col__title">Institute</p>
+          <a href="../founder.html">創始者</a>
+          <a href="../faq.html">FAQ</a>
+          <a href="../contact.html">お問い合わせ</a>
+          <a href="../legal/legal-tokushoho.html">特定商取引法</a>
+          <a href="../legal/legal-privacy-policy.html">プライバシーポリシー</a>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 実存科学研究所 — Existential Science Institute</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js?v=6"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "7つの痛み ── シャドウの構造類型",
+  "description": "実存科学が導出した7つのシャドウの構造類型。闇のシャドウ（S1〜S6）とゴールデンシャドウ（S7）。あなたの痛みには構造がある。",
+  "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-shadow-7types.html",
+  "author": {
+    "@type": "Person",
+    "name": "箭内宏紀",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/founder.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  },
+  "inLanguage": "ja",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  }
+}
+</script>
+</body>
+</html>
