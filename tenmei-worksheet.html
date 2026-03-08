@@ -414,6 +414,82 @@
     color: var(--text-dim);
     margin-top: 12px;
   }
+
+  /* ── 表紙非表示（STEP2以降） ── */
+  .cover-hidden .cover,
+  .cover-hidden .intro,
+  .cover-hidden > .gold-rule-full {
+    display: none;
+  }
+
+  /* ── モバイル最適化 ── */
+  @media (max-width: 640px) {
+    .container {
+      padding: 24px 18px 48px;
+    }
+    .cover {
+      padding: 40px 0 28px;
+    }
+    .cover .diamond {
+      margin-bottom: 16px;
+    }
+    .intro {
+      font-size: 13px;
+      margin: 20px 0;
+    }
+    .step-section {
+      margin: 28px 0;
+    }
+    .btn-next {
+      padding: 14px 36px;
+      font-size: 13px;
+      width: 100%;
+      text-align: center;
+    }
+    .meta-frame {
+      padding: 20px 16px;
+    }
+    .meta-frame input[type="text"] {
+      max-width: 100%;
+    }
+    .write-area {
+      padding: 14px 14px;
+      font-size: 15px;
+    }
+    .gold-panel {
+      padding: 24px 18px;
+      margin: 28px 0;
+    }
+    .cta-section {
+      padding: 36px 20px 32px;
+      margin-top: 40px;
+    }
+    .cta-btn {
+      padding: 16px 32px;
+      font-size: 13px;
+    }
+    .integration-title {
+      font-size: 24px;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .container {
+      padding: 20px 14px 40px;
+    }
+    .cover h1 {
+      font-size: 22px;
+    }
+    .step-question {
+      font-size: 16px;
+    }
+    .gold-panel {
+      padding: 20px 14px;
+    }
+    .cta-section {
+      padding: 28px 16px 24px;
+    }
+  }
 </style>
 </head>
 <body>
@@ -463,11 +539,11 @@
 
   <!-- STEP 2 -->
   <div class="step-section" id="step2">
-    <p class="step-guide" style="margin-bottom:20px">STEP 1で書いたもの ── それをプレゼントできていない理由を掘ります。<br>「なぜ？」を繰り返すことで、あなたが当然だと思い込んでいる前提が浮上します。</p>
-    <div class="gold-rule-full"></div>
-    <div class="step-header" style="margin-top:24px">
+    <div class="step-header">
       <div class="step-badge">2</div>
+      <div class="step-label">なぜ？── 1回目</div>
     </div>
+    <p class="step-guide" style="margin-bottom:20px">STEP 1で書いたもの ── それをプレゼントできていない理由を掘ります。<br>「なぜ？」を繰り返すことで、あなたが当然だと思い込んでいる前提が浮上します。</p>
     <div class="step-question">では、なぜそれをプレゼントできていないのですか？</div>
     <p class="step-guide">頭に浮かんだことをそのまま書いてください。</p>
     <textarea class="write-area" id="answer2" placeholder=""></textarea>
@@ -478,6 +554,7 @@
   <div class="step-section" id="step3">
     <div class="step-header">
       <div class="step-badge">3</div>
+      <div class="step-label">なぜ？── 2回目</div>
     </div>
     <div class="step-question">その答えに対して、もう一度 ── なぜ？</div>
     <p class="step-guide">STEP 2の答えを読み返してください。その答えに対して、さらに「なぜ？」と問います。</p>
@@ -489,6 +566,7 @@
   <div class="step-section" id="step4">
     <div class="step-header">
       <div class="step-badge">4</div>
+      <div class="step-label">なぜ？── 3回目</div>
     </div>
     <div class="step-question">さらにもう一度 ── なぜ？</div>
     <p class="step-guide">STEP 3の答えを読み返して、もう一段深く。ここで同じ答えがループし始める人が多いです。</p>
@@ -508,10 +586,14 @@
 
   <!-- STEP 5 -->
   <div class="step-section" id="step5">
-    <p class="step-guide" style="margin-bottom:20px"><strong style="color:var(--text-bright)">ここからは、方向が変わります。</strong><br><br>前のページで見つけたシャドウ ── それは、何かを守るためにそこにあります。<br>「何のために？」を繰り返すことで、あなたの天命の方向が見え始めます。<br><br><em style="color:var(--text-dim)">リラックスして、直感に従ってください。</em></p>
-    <div class="gold-rule-full"></div>
-    <div class="step-header" style="margin-top:24px">
+    <div class="step-header">
       <div class="step-badge">5</div>
+      <div class="step-label">何のために？── 1回目</div>
+    </div>
+    <div class="gold-panel" style="margin-top:0; margin-bottom:28px">
+      <p><strong style="color:var(--text-strong)">ここからは、方向が変わります。</strong></p>
+      <p>前のページで見つけたシャドウ ── それは、何かを守るためにそこにあります。<br>「何のために？」を繰り返すことで、あなたの天命の方向が見え始めます。</p>
+      <p style="margin-bottom:0"><em>リラックスして、直感に従ってください。</em></p>
     </div>
     <div class="step-question">見つけたシャドウ ── それは、何のためにありますか？</div>
     <p class="step-guide">あなたのシャドウは、何かを守っています。それは何でしょうか。</p>
@@ -523,6 +605,7 @@
   <div class="step-section" id="step6">
     <div class="step-header">
       <div class="step-badge">6</div>
+      <div class="step-label">何のために？── 2回目</div>
     </div>
     <div class="step-question">その答えに対して、もう一度 ── 何のために？</div>
     <p class="step-guide">STEP 5の答えを見ながら、さらに奥へ。</p>
@@ -534,6 +617,7 @@
   <div class="step-section" id="step7">
     <div class="step-header">
       <div class="step-badge">7</div>
+      <div class="step-label">何のために？── 3回目</div>
     </div>
     <div class="step-question">さらにもう一度 ── 何のために？</div>
     <p class="step-guide">これが最後の問いです。<br>STEP 6の答えを見て、その先にあるものを書いてください。<br><br><span class="highlight">ここに書いたものが、あなたの天命の方向です。</span></p>
@@ -583,7 +667,14 @@ function showStep(n) {
   // プログレスバー更新
   const progress = (n / 8) * 100;
   document.getElementById('progressBar').style.width = progress + '%';
-  // ページトップにスクロール
+  // STEP2以降は表紙・導入文を隠す
+  var container = document.querySelector('.container');
+  if (n > 1) {
+    container.classList.add('cover-hidden');
+  } else {
+    container.classList.remove('cover-hidden');
+  }
+  // STEPセクションの先頭にスクロール
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 </script>
