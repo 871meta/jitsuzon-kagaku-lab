@@ -19,7 +19,7 @@
   <title>感動的な人生を取り戻す方法 | 実存科学研究所</title>
   <meta name="description" content="これから、何のために生きるのか。その問いに構造から到達する方法がある。">
   <meta property="og:title" content="感動的な人生を取り戻す方法">
-  <meta property="og:description" content="手に入れた。積み上げた。それでも『何のために生きるのか』が消えない。その構造と、到達する方法。">
+  <meta property="og:description" content="なぜ、手に入れたはずの人生に「意味」がないのか。3分の無料診断で、あなたの認識構造が見える。">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="実存科学研究所">
   <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
@@ -621,6 +621,10 @@
     }
 
     /* Facilitator */
+    .kd-facilitator-wrap {
+      padding-top: 4rem;
+    }
+
     .kd-facilitator {
       display: flex;
       align-items: center;
@@ -674,98 +678,6 @@
       }
     }
 
-    /* Offering items */
-    .kd-offering {
-      margin: 2.5rem 0;
-    }
-
-    .kd-offering__item {
-      position: relative;
-      padding: 2rem 2.5rem;
-      margin-bottom: 1rem;
-      background: rgba(15, 12, 25, 0.7);
-      border: 1px solid rgba(192, 168, 120, 0.08);
-      overflow: hidden;
-    }
-
-    .kd-offering__item::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.3), transparent);
-    }
-
-    .kd-offering__item:last-child {
-      margin-bottom: 0;
-    }
-
-    .kd-offering__phase {
-      font-family: "Cormorant Garamond", "Times New Roman", serif;
-      font-size: 0.72rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: rgba(192, 168, 120, 0.5);
-      margin-bottom: 0.8rem;
-    }
-
-    .kd-offering__title {
-      font-size: 1.35rem;
-      color: #f0ece6;
-      letter-spacing: 0.06em;
-      margin-bottom: 1rem;
-      font-weight: 600;
-      line-height: 1.6;
-      border-bottom: 1px solid rgba(192, 168, 120, 0.2);
-      padding-bottom: 0.8rem;
-    }
-    @media (max-width: 600px) {
-      .kd-offering__title {
-        font-size: 1.15rem;
-      }
-    }
-
-    .kd-offering__desc {
-      font-size: 0.92rem;
-      color: #a8a4a0;
-      line-height: 2.2;
-    }
-
-    /* Registration form */
-    .kd-form {
-      display: flex;
-      gap: 0;
-      max-width: 520px;
-      margin: 0 auto;
-    }
-
-    .kd-form__input {
-      flex: 1;
-      padding: 1.2rem 1.5rem;
-      background: rgba(15, 12, 25, 0.8);
-      border: 1px solid rgba(192, 168, 120, 0.3);
-      border-right: none;
-      color: #f0ece6;
-      font-size: 0.9rem;
-      font-family: inherit;
-      outline: none;
-      transition: border-color 0.3s ease;
-    }
-
-    .kd-form__input::placeholder {
-      color: #8a8680;
-    }
-
-    .kd-form__input:focus {
-      border-color: #c0a878;
-    }
-
-    .kd-form .btn--kandou {
-      flex-shrink: 0;
-    }
-
     /* 12の対話 catalog */
     .kd-catalog {
       padding: 5rem 0;
@@ -779,13 +691,12 @@
 
     .kd-catalog__grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(6, 1fr);
       gap: 1rem;
     }
 
     .kd-catalog__item {
       position: relative;
-      aspect-ratio: 5 / 6;
       overflow: hidden;
       border: 1px solid rgba(192, 168, 120, 0.08);
       transition: border-color 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease;
@@ -826,7 +737,7 @@
 
     .kd-catalog__img {
       width: 100%;
-      height: 100%;
+      aspect-ratio: 4 / 5;
       object-fit: cover;
       display: block;
       transition: transform 0.6s ease, filter 0.6s ease;
@@ -845,6 +756,21 @@
       color: #8a8680;
       line-height: 2;
       letter-spacing: 0.04em;
+    }
+
+    .kd-catalog__caption {
+      position: absolute;
+      bottom: 0.5rem;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: 0.65rem;
+      color: rgba(240, 236, 230, 0.7);
+      letter-spacing: 0.1em;
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      text-transform: uppercase;
+      z-index: 2;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
     }
 
     /* Responsive */
@@ -874,7 +800,7 @@
       }
 
       .kd-catalog__grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         gap: 0.8rem;
       }
 
@@ -918,19 +844,6 @@
         text-align: center;
       }
 
-      .kd-form {
-        flex-direction: column;
-      }
-
-      .kd-form__input {
-        border-right: 1px solid rgba(192, 168, 120, 0.3);
-        border-bottom: none;
-      }
-
-      .kd-offering__item {
-        padding: 1.5rem 1.5rem;
-      }
-
       .kd-compare {
         font-size: 0.82rem;
       }
@@ -945,8 +858,22 @@
       }
 
       .kd-catalog__grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 0.6rem;
+      }
+
+      .kd-body p,
+      .kd-case__before,
+      .kd-case__after {
+        font-size: 0.8rem;
+      }
+
+      .kd-case__toggle {
+        min-height: 44px;
+      }
+
+      .kd-catalog__caption {
+        font-size: 0.65rem;
       }
     }
 
@@ -985,111 +912,6 @@
       padding: 6px 10px;
       border-radius: 3px;
       filter: brightness(0.5) saturate(0.3);
-    }
-
-    /* Gift card banner */
-    .kd-giftcard {
-      max-width: 520px;
-      margin: 0 auto;
-      padding: 3.2rem 3rem 2.8rem;
-      background: linear-gradient(160deg, rgba(18, 14, 28, 0.97) 0%, rgba(28, 22, 38, 0.95) 50%, rgba(18, 14, 28, 0.97) 100%);
-      border: 1px solid rgba(192, 168, 120, 0.3);
-      position: relative;
-      text-align: center;
-      box-shadow:
-        0 0 40px rgba(192, 168, 120, 0.06),
-        0 0 80px rgba(192, 168, 120, 0.03),
-        inset 0 1px 0 rgba(192, 168, 120, 0.15);
-    }
-
-    .kd-giftcard::before {
-      content: '';
-      position: absolute;
-      inset: 6px;
-      border: 1px solid rgba(192, 168, 120, 0.15);
-      pointer-events: none;
-    }
-
-    .kd-giftcard::after {
-      content: '';
-      position: absolute;
-      top: -1px;
-      left: 20%;
-      right: 20%;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.5), transparent);
-    }
-
-    .kd-giftcard__label {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 0.75rem;
-      color: rgba(192, 168, 120, 0.6);
-      letter-spacing: 0.35em;
-      margin-bottom: 1.4rem;
-      text-transform: uppercase;
-    }
-
-    .kd-giftcard__title {
-      font-family: "Shippori Mincho", serif;
-      font-size: 1.7rem;
-      font-weight: 600;
-      color: #f0ece6;
-      letter-spacing: 0.18em;
-      line-height: 1.5;
-      margin-bottom: 0.2rem;
-      text-shadow: 0 0 20px rgba(192, 168, 120, 0.1);
-    }
-
-    .kd-giftcard__title small {
-      font-size: 0.55em;
-      font-weight: 400;
-      color: rgba(192, 168, 120, 0.5);
-      vertical-align: super;
-      letter-spacing: 0;
-    }
-
-    .kd-giftcard__divider {
-      display: block;
-      width: 60px;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.45), transparent);
-      margin: 1.6rem auto;
-    }
-
-    .kd-giftcard__desc {
-      font-size: 0.95rem;
-      color: #c8c4be;
-      letter-spacing: 0.06em;
-      line-height: 2.1;
-    }
-
-    .kd-giftcard__desc em {
-      font-style: normal;
-      color: #f0ece6;
-    }
-
-    .kd-giftcard__meta {
-      font-size: 0.78rem;
-      color: rgba(192, 168, 120, 0.5);
-      letter-spacing: 0.18em;
-      margin-top: 1.5rem;
-      padding-top: 1rem;
-      border-top: 1px solid rgba(192, 168, 120, 0.1);
-    }
-
-    @media (max-width: 480px) {
-      .kd-giftcard {
-        padding: 2.4rem 1.8rem 2rem;
-        margin: 0 0.5rem;
-      }
-      .kd-giftcard__title {
-        font-size: 1.35rem;
-        letter-spacing: 0.12em;
-      }
-      .kd-giftcard__desc {
-        font-size: 0.88rem;
-        line-height: 2.2;
-      }
     }
 
     .kd-bookstrip img:hover {
@@ -1189,28 +1011,9 @@
   <!-- ===== HERO ===== -->
   <section class="kd-hero" id="main">
     <div class="container">
-      <p class="kd-hero__question">あなたは、正しかった。</p>
-      <h1>あなたの<br>真の天命はここにある。</h1>
+      <p class="kd-hero__question">なぜ、手に入れたはずの人生に「意味」がないのか。</p>
+      <h1>その問いに、<br>構造から到達する方法がある。</h1>
       <p class="kd-hero__after">もう、自分を変えなくていい。</p>
-    </div>
-  </section>
-
-  <!-- ===== CTA (top) ===== -->
-  <section class="section section--bordered" style="padding: 2.5rem 0;">
-    <div class="container">
-      <div class="kd-cta fade-in" style="padding-top: 0;">
-        <h2 class="kd-cta__heading">
-          天命の言語化プログラム™<br>
-          <span style="font-size:0.7em; color:#8a8680;">全21通 / 毎朝配信 / 完全無料</span>
-        </h2>
-        <form class="kd-form" action="#" method="post">
-          <input type="email" class="kd-form__input" placeholder="メールアドレスを入力" required>
-          <button type="submit" class="btn--kandou">プログラムに参加する（無料） &rarr;</button>
-        </form>
-        <p class="kd-cta__note">
-          ※ いつでも解除可能 / 第三者への提供はありません
-        </p>
-      </div>
     </div>
   </section>
 
@@ -1249,6 +1052,103 @@
     </div>
   </section>
 
+  <!-- ===== UNIQUENESS ===== -->
+  <section class="section section--bordered">
+    <div class="container">
+      <div class="content-block fade-in">
+        <p class="kd-hero__sub" style="margin-bottom: 2rem;">Uniqueness</p>
+        <h2 class="section__title section__title--left">なぜ、天命は「言語化」できるのか</h2>
+        <div class="kd-body">
+          <p>
+            あなたの人生には、<strong>初期条件</strong>がある。<br>
+            言語、文化、価値観、記憶、身体──<br>
+            これら五つの構造が、あなたの人生をたった一つの方向へ、最初から導いていた。
+          </p>
+          <p>
+            その<em>収束点</em>を、「天命」と呼ぶ。
+          </p>
+        </div>
+
+        <table class="kd-compare">
+          <thead>
+            <tr>
+              <th></th>
+              <th>既存のアプローチ</th>
+              <th>天命の言語化セッション™</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>前提</td>
+              <td>自由意志がある</td>
+              <td>自由意志はない</td>
+            </tr>
+            <tr>
+              <td>方向</td>
+              <td>自分を変える</td>
+              <td>自分を知る</td>
+            </tr>
+            <tr>
+              <td>対象</td>
+              <td>行動・思考・感情</td>
+              <td>人生の必然性そのもの</td>
+            </tr>
+            <tr>
+              <td>結果</td>
+              <td>一時的な改善</td>
+              <td>二度と戻らない認識の転換</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="kd-body">
+          <p>
+            自分を変えるのではなく、すでにある構造を読み解く。<br>
+            それが<strong>「天命の言語化」</strong>です。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MINI EXPERIENCE ===== -->
+  <section class="section section--bordered" style="padding: 4rem 0;">
+    <div class="container">
+      <div class="content-block fade-in" style="text-align: center;">
+        <p class="kd-hero__sub" style="margin-bottom: 2rem;">A Question for You</p>
+        <h2 class="section__title" style="font-size: 1.6rem; line-height: 1.8; margin-bottom: 1.5rem;">
+          あなたの人生を<br>一つの動詞で表すなら、<br>それは何ですか？
+        </h2>
+        <div class="kd-body" style="max-width: 560px; margin: 0 auto;">
+          <p style="color: rgba(240,236,230,0.6); font-size: 0.9rem;">
+            答えられなくても構いません。<br>
+            その問いが浮かんだこと自体が、あなたの構造が動き始めた証拠です。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA① ===== -->
+  <section class="section section--bordered" style="padding: 3rem 0;">
+    <div class="container">
+      <div class="kd-cta fade-in" style="padding-top: 0;">
+        <p style="text-align:center; font-size:0.85rem; color:#8a8680; margin-bottom:1.5rem; letter-spacing:0.04em;">
+          延べ2,000名以上の対話から生まれた構造診断
+        </p>
+        <h2 class="kd-cta__heading">
+          3分であなたの構造が見える──<br>ダークサイド診断
+        </h2>
+        <p style="text-align:center; margin-bottom:1.5rem;">
+          <a href="dark-side/diagnosis.html" class="btn--kandou">無料でMetaを診断する &rarr;</a>
+        </p>
+        <p class="kd-cta__note">
+          15問 / 約3分 / 完全無料 / 登録不要 / 営業なし
+        </p>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== ACCENT ===== -->
   <div class="kd-accent fade-in">
     <div class="container">
@@ -1257,7 +1157,7 @@
   </div>
 
   <!-- ===== CASE STUDIES ===== -->
-  <section class="section">
+  <section class="section" id="cases">
     <div class="container">
 
       <!-- Case 1 -->
@@ -1433,7 +1333,7 @@
         <p class="kd-case__arrow">▼</p>
         <p class="kd-case__phase">After</p>
         <p class="kd-case__after">
-          セッションで掘り起こされたのは、<br>
+          60年越しの構造が可視化されたのは、<br>
           「凡人でいること」が幼少期に作った<br>
           生存装置だったという事実だった。<br><br>
 
@@ -1613,7 +1513,7 @@
         <p class="kd-case__arrow">▼</p>
         <p class="kd-case__phase">After</p>
         <p class="kd-case__after">
-          セッションで掘り起こされたのは、<br>
+          あの日の構造が初めて言葉になったのは、<br>
           あの4歳の日に刻まれた<br>
           「お前は要らない」<br>
           という原初のルールだった。<br><br>
@@ -1649,23 +1549,21 @@
     </div>
   </section>
 
-  <!-- ===== CTA (mid) ===== -->
+  <!-- ===== CTA② ===== -->
   <section class="section section--bordered" style="padding: 3rem 0;">
     <div class="container">
       <div class="kd-cta fade-in" style="padding-top: 0;">
         <p style="text-align:center; font-size:0.85rem; color:#8a8680; margin-bottom:1.5rem; letter-spacing:0.04em;">
-          延べ2,000名以上の対話から生まれたプログラム
+          延べ2,000名以上の対話から生まれた構造診断
         </p>
         <h2 class="kd-cta__heading">
-          天命の言語化プログラム™<br>
-          <span style="font-size:0.7em; color:#8a8680;">全21通 / 毎朝配信 / 完全無料</span>
+          3分であなたの構造が見える──<br>ダークサイド診断
         </h2>
-        <form class="kd-form" action="#" method="post">
-          <input type="email" class="kd-form__input" placeholder="メールアドレスを入力" required>
-          <button type="submit" class="btn--kandou">プログラムに参加する（無料） &rarr;</button>
-        </form>
+        <p style="text-align:center; margin-bottom:1.5rem;">
+          <a href="dark-side/diagnosis.html" class="btn--kandou">無料でMetaを診断する &rarr;</a>
+        </p>
         <p class="kd-cta__note">
-          ※ いつでも解除可能 / 第三者への提供はありません
+          15問 / 約3分 / 完全無料 / 登録不要 / 営業なし
         </p>
       </div>
     </div>
@@ -1693,50 +1591,13 @@
             <strong>「Metaがある限り、自由意志は存在しない」</strong>──この一行に、すべてが集約されている。
           </p>
           <p>
-            1989年、福島県生まれ。<br>
-            大学在学中からコーチとして活動を始め、<br>
-            卒業後は不登校支援のカウンセラーとして<br>
-            全国トップの業績を記録。
+            1989年、福島県生まれ。大学在学中からコーチとして活動を始め、卒業後は不登校支援のカウンセラーとして全国トップの業績を記録。しかし売上優先の組織体質に違和感を覚え、自らの道を選ぶ。
           </p>
           <p>
-            しかし、売上優先の組織体質に<br>
-            本質的な違和感を覚え、自らの道を選ぶ。
+            「Nimbus Creation」を創業し、約10年にわたりインターネットカウンセラー養成講座を運営。1300人以上に心理学とビジネスの技術を届けた。しかし本当の探究はそこから始まった。神経科学、分析哲学、仏教、密教、ヴェーダーンタ──あらゆる領域を横断しながら瞑想を深める中で、精神の根底が一度、完全に崩れ落ちた。
           </p>
           <p>
-            工場勤務を経て「Nimbus Creation」を創業。<br>
-            約10年にわたりインターネットカウンセラー養成講座を運営し、<br>
-            1300人以上に心理学とビジネスの技術を届けた。
-          </p>
-          <p>
-            だが、本当の探究はそこから始まった。<br>
-            神経科学、認知科学、分析哲学、プラグマティズム、<br>
-            儒教、仏教、道教、密教、<br>
-            西洋形而上学、ヴェーダーンタ──<br>
-            「生きる意味」に関わるあらゆる領域を横断しながら<br>
-            瞑想を深める中で、<br>
-            精神の根底が一度、完全に崩れ落ちた。
-          </p>
-          <p>
-            家族と友人に支えられ、<br>
-            そこから立ち上がったとき、<br>
-            手の中に残っていたのは<br>
-            たった一つの認識＜Meta＞だった。
-          </p>
-          <p>
-            その認識が「天命の言語化セッション™」の原点となる。
-          </p>
-          <p>
-            現在は実存科学研究所を主宰。
-          </p>
-          <p>
-            「Metaがある限り、自由意志は存在しない」。<br>
-            この前提に立つとき、<br>
-            人生に残るのは「選択」ではなく<br>
-            「天命」だけになる。
-          </p>
-          <p>
-            その天命を、一人ひとりの言葉として形にするのが<br>
-            「天命の言語化セッション™」である。
+            家族と友人に支えられ、そこから立ち上がったとき、手の中に残っていたのはたった一つの認識＜Meta＞だった。その認識が「天命の言語化セッション™」の原点となり、現在は実存科学研究所を主宰。
           </p>
           <p>
             天命を悟り、日々全うする人が増えること。<br>
@@ -1779,90 +1640,6 @@
           <img src="images/authority-ic-badges.png" alt="IC講座 3冠 第1位" loading="lazy" class="strip-badge">
         </div>
 
-        <div class="kd-giftcard fade-in">
-          <p class="kd-giftcard__label">— Free Program —</p>
-          <h2 class="kd-giftcard__title">
-            天命の言語化プログラム<sup style="font-size:0.45em">™</sup>
-          </h2>
-          <i class="kd-giftcard__divider"></i>
-          <p class="kd-giftcard__desc">
-            21日後——<br>
-            あなたは<em>「自分が生まれてきた意味」</em>を<br>
-            自分の言葉で、語れるようになる。
-          </p>
-          <p class="kd-giftcard__meta">全21通 / 毎朝配信 / 完全無料</p>
-        </div>
-
-        <!-- CTA① (upper) -->
-        <div class="kd-cta fade-in" style="padding: 3rem 0 0;">
-          <form class="kd-form" action="#" method="post">
-            <input type="email" class="kd-form__input" placeholder="メールアドレスを入力" required>
-            <button type="submit" class="btn--kandou">プログラムに参加する（無料） &rarr;</button>
-          </form>
-          <p class="kd-cta__note">
-            ※ 完全無料 / 21日間・毎朝配信<br>
-            ※ いつでも解除可能
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== UNIQUENESS ===== -->
-  <section class="section section--bordered">
-    <div class="container">
-      <div class="content-block fade-in">
-        <p class="kd-hero__sub" style="margin-bottom: 2rem;">Uniqueness</p>
-        <h2 class="section__title section__title--left">なぜ、天命は「言語化」できるのか</h2>
-        <div class="kd-body">
-          <p>
-            あなたの人生には、<strong>初期条件</strong>がある。<br>
-            言語、文化、価値観、記憶、身体──<br>
-            これら五つの構造が、あなたの人生をたった一つの方向へ、最初から導いていた。
-          </p>
-          <p>
-            その<em>収束点</em>を、「天命」と呼ぶ。
-          </p>
-        </div>
-
-        <table class="kd-compare">
-          <thead>
-            <tr>
-              <th></th>
-              <th>既存のアプローチ</th>
-              <th>天命の言語化セッション™</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>前提</td>
-              <td>自由意志がある</td>
-              <td>自由意志はない</td>
-            </tr>
-            <tr>
-              <td>方向</td>
-              <td>自分を変える</td>
-              <td>自分を知る</td>
-            </tr>
-            <tr>
-              <td>対象</td>
-              <td>行動・思考・感情</td>
-              <td>人生の必然性そのもの</td>
-            </tr>
-            <tr>
-              <td>結果</td>
-              <td>一時的な改善</td>
-              <td>二度と戻らない認識の転換</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <div class="kd-body">
-          <p>
-            自分を変えるのではなく、すでにある構造を読み解く。<br>
-            それが<strong>「天命の言語化」</strong>です。
-          </p>
-        </div>
       </div>
     </div>
   </section>
@@ -1877,39 +1654,51 @@
       <div class="kd-catalog__grid fade-in">
         <div class="kd-catalog__item">
           <img class="kd-catalog__img" src="images/menu-01-tenmei.png" alt="天命の言語化セッション™" loading="lazy">
+          <span class="kd-catalog__caption">天命</span>
         </div>
         <div class="kd-catalog__item">
           <img class="kd-catalog__img" src="images/menu-02-meta-install.png" alt="Meta Install Workshop™" loading="lazy">
+          <span class="kd-catalog__caption">Meta</span>
         </div>
         <div class="kd-catalog__item">
           <img class="kd-catalog__img" src="images/menu-06-watashi.png" alt="私の終わり™" loading="lazy">
+          <span class="kd-catalog__caption">自我</span>
         </div>
         <div class="kd-catalog__item">
           <img class="kd-catalog__img" src="images/menu-09-shukumei.png" alt="宿命の論考™" loading="lazy">
+          <span class="kd-catalog__caption">宿命</span>
         </div>
         <div class="kd-catalog__item">
           <img class="kd-catalog__img" src="images/menu-12-timemachine.png" alt="認識論的タイムマシン™" loading="lazy">
+          <span class="kd-catalog__caption">時間</span>
         </div>
         <div class="kd-catalog__item">
           <img class="kd-catalog__img" src="images/menu-08-kazoku.png" alt="家族の肯定™" loading="lazy">
+          <span class="kd-catalog__caption">家族</span>
         </div>
         <div class="kd-catalog__item">
           <img class="kd-catalog__img" src="images/menu-10-rifujin.png" alt="理不尽な愛™" loading="lazy">
+          <span class="kd-catalog__caption">愛</span>
         </div>
         <div class="kd-catalog__item">
           <img class="kd-catalog__img" src="images/menu-05-keiji.png" alt="啓示翻訳™" loading="lazy">
+          <span class="kd-catalog__caption">啓示</span>
         </div>
         <div class="kd-catalog__item">
           <img class="kd-catalog__img" src="images/menu-03-seiyoku.png" alt="性欲イノベーション™" loading="lazy">
+          <span class="kd-catalog__caption">性欲</span>
         </div>
         <div class="kd-catalog__item">
           <img class="kd-catalog__img" src="images/menu-04-1kiki10.png" alt="１きいて１０わかる™" loading="lazy">
+          <span class="kd-catalog__caption">直観</span>
         </div>
         <div class="kd-catalog__item">
           <img class="kd-catalog__img" src="images/menu-11-kyoufu.png" alt="恐怖の解体™" loading="lazy">
+          <span class="kd-catalog__caption">恐怖</span>
         </div>
         <div class="kd-catalog__item">
           <img class="kd-catalog__img" src="images/menu-07-isaku.png" alt="主体的な遺作™" loading="lazy">
+          <span class="kd-catalog__caption">遺作</span>
         </div>
       </div>
       <p class="kd-catalog__footer fade-in">
@@ -1919,86 +1708,73 @@
     </div>
   </section>
 
-  <!-- ===== OFFERING ===== -->
-  <style>
-    .kd-facilitator-wrap { padding-bottom: 2rem !important; }
-    .kd-offering-wrap { padding-bottom: 0.5rem !important; }
-  </style>
-  <section class="section section--bordered kd-offering-wrap">
+  <!-- ===== FAQ ===== -->
+  <section class="section section--bordered">
     <div class="container">
       <div class="content-block fade-in">
-        <div class="kd-giftcard" style="margin-bottom: 2.5rem;">
-          <p class="kd-giftcard__label">— Free Program —</p>
-          <h2 class="kd-giftcard__title">
-            天命の言語化プログラム<sup style="font-size:0.45em">™</sup>
-          </h2>
-          <i class="kd-giftcard__divider"></i>
-          <p class="kd-giftcard__desc">
-            天命の言語化セッション™を体験的に理解するための、<br>
-            <em>21日間の無料プログラム</em>。
+        <p class="kd-hero__sub" style="margin-bottom: 1.5rem;">FAQ</p>
+        <h2 class="section__title">よくある質問</h2>
+
+        <div class="kd-case fade-in" style="margin-bottom: 1.5rem; padding: 2rem 2.5rem;">
+          <p class="kd-case__label" style="margin-bottom: 0.8rem;">Q1</p>
+          <p style="color: #f0ece6; font-size: 1rem; font-weight: 600; margin-bottom: 1rem;">
+            自己啓発やコーチングと何が違うのですか？
           </p>
-          <p class="kd-giftcard__desc">
-            毎朝届くメールを通じて、天命の構造を知り、<br>
-            実際にセッションを受けた方の体験を追体験できます。
+          <p class="kd-body" style="margin-bottom: 0;">
+            自己啓発やコーチングは「自分を変える」ことを前提としています。天命の言語化セッション™は「自分を知る」ことが前提です。自由意志を仮定せず、あなたの初期条件（Meta）が必然的に向かう収束点を読み解きます。変化ではなく、発見です。
           </p>
-          <p class="kd-giftcard__meta">全21通 / 毎朝配信 / 完全無料</p>
         </div>
 
-        <div class="kd-offering">
-          <div class="kd-offering__item">
-            <p class="kd-offering__phase">Day 1 – 7</p>
-            <p class="kd-offering__title">「天命」とは何かを知る</p>
-            <p class="kd-offering__desc">なぜ、生きる意味が見つからないのか。<br>なぜ、変えたいのに変われないのか。<br>どうやったら「天命」を悟ることができるのか。<br><br>2000人以上・１万時間以上のセッション経験と、<br>専門書籍17冊に基づき、本質的な解決策を共有します。</p>
-          </div>
-          <div class="kd-offering__item">
-            <p class="kd-offering__phase">Day 8 – 14</p>
-            <p class="kd-offering__title">天命が言語化される瞬間を追体験する</p>
-            <p class="kd-offering__desc">実際にセッションを受けた方の体験に基づき、<br>天命が言語化される瞬間を共有します。<br><br>「天命を悟り、日々全うする」という生き方と、<br>人生が一本の線になる感覚を追体験できます。</p>
-          </div>
-          <div class="kd-offering__item">
-            <p class="kd-offering__phase">Day 15 – 21</p>
-            <p class="kd-offering__title">あなた自身の天命を言語化する</p>
-            <p class="kd-offering__desc">21日間を通じて、あなた自身の中に<br>「天命の輪郭」が浮かび上がり始めます。<br><br>それを一つの言葉にする体験の場を共有します。</p>
-          </div>
+        <div class="kd-case fade-in" style="margin-bottom: 1.5rem; padding: 2rem 2.5rem;">
+          <p class="kd-case__label" style="margin-bottom: 0.8rem;">Q2</p>
+          <p style="color: #f0ece6; font-size: 1rem; font-weight: 600; margin-bottom: 1rem;">
+            診断結果だけで何かが変わるのですか？
+          </p>
+          <p class="kd-body" style="margin-bottom: 0;">
+            診断は「現在地の可視化」です。変わるかどうかは、可視化された構造にどう向き合うかで決まります。ただし、多くの方が診断結果を読んだだけで「何が引っかかっていたのか」に気づき始めます。認識が動けば、構造は動きます。
+          </p>
         </div>
 
-        <div class="kd-body" style="margin-top: 2.5rem;">
-          <p>
-            21日後──<br>
-            あなたは「なぜ自分が生まれてきたのか」を、<br>
-            自分の言葉で語り始めています。<br>
-            その一言が、人生のすべてを一本の線に変えていきます。
+        <div class="kd-case fade-in" style="margin-bottom: 1.5rem; padding: 2rem 2.5rem;">
+          <p class="kd-case__label" style="margin-bottom: 0.8rem;">Q3</p>
+          <p style="color: #f0ece6; font-size: 1rem; font-weight: 600; margin-bottom: 1rem;">
+            セッションを受けなくても意味がありますか？
           </p>
-          <p>
-            <strong>完全無料。解除はいつでも可能です。</strong>
+          <p class="kd-body" style="margin-bottom: 0;">
+            はい。診断だけでも自己理解は深まります。ただし、天命の言語化は対話の中でしか完了しません。診断は構造を「見る」段階、セッションは天命を「言葉にする」段階です。
+          </p>
+        </div>
+
+        <div class="kd-case fade-in" style="padding: 2rem 2.5rem;">
+          <p class="kd-case__label" style="margin-bottom: 0.8rem;">Q4</p>
+          <p style="color: #f0ece6; font-size: 1rem; font-weight: 600; margin-bottom: 1rem;">
+            本当に無料ですか？
+          </p>
+          <p class="kd-body" style="margin-bottom: 0;">
+            ダークサイド診断は完全無料です。登録も不要です。診断結果のメール送付を希望される場合のみ、メールアドレスの入力をお願いしています。
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== CTA ===== -->
-  <section class="section section--bordered" style="padding-top: 0;">
+  <!-- ===== CTA③ (final) ===== -->
+  <section class="section section--bordered" style="padding-top: 0;" id="cta-final">
     <div class="container">
       <div class="kd-cta fade-in" style="padding-top: 2rem;">
         <p style="text-align:center; font-size:0.85rem; color:#8a8680; margin-bottom:1rem; letter-spacing:0.04em;">
-          延べ2,000名以上の対話から生まれたプログラム
+          延べ2,000名以上の対話から生まれた構造診断
         </p>
         <h2 class="kd-cta__heading">
-          あなたの天命を、<br>言葉にする旅が始まります。
+          あなたの構造を、<br>3分で可視化する。
         </h2>
         <p class="kd-cta__desc">
-          まずは21日間の無料プログラムから。<br>
-          天命の構造を知り、体験し、あなた自身の輪郭を感じてください。
+          15の問いに答えるだけで、あなたのMeta構造が見える。<br>
+          登録不要。完全無料。営業・勧誘は一切ありません。
         </p>
-        <!-- TODO: action属性にメール配信サービスのエンドポイントURLを設定してください -->
-        <form class="kd-form" id="cta-final" action="#" method="post">
-          <input type="email" class="kd-form__input" placeholder="メールアドレスを入力" required>
-          <button type="submit" class="btn--kandou">プログラムに参加する（無料） &rarr;</button>
-        </form>
+        <a href="dark-side/diagnosis.html" class="btn--kandou">無料でMetaを診断する &rarr;</a>
         <p class="kd-cta__note">
-          ※ 完全無料 / 21日間・毎朝配信<br>
-          ※ いつでも解除可能 / 第三者への提供はありません
+          ※ 15問 / 約3分 / 完全無料 / 登録不要
         </p>
       </div>
     </div>
@@ -2016,8 +1792,8 @@
     </div>
   </footer>
   <div class="kd-sticky-cta" id="stickyCta">
-    <a href="#cta-final">無料で参加する &rarr;</a>
-    <span class="kd-sticky-cta__note">21日間 / 完全無料</span>
+    <a href="dark-side/diagnosis.html">無料でMetaを診断する &rarr;</a>
+    <span class="kd-sticky-cta__note">15問 / 約3分 / 完全無料</span>
   </div>
   <script src="js/main.js?v=9"></script>
 </body>

@@ -113,25 +113,15 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // --- Sticky CTA: show after HERO, hide when form in view ---
+  // --- Sticky CTA: show after HERO ---
   (function () {
     var sticky = document.getElementById('stickyCta');
     var hero = document.querySelector('.kd-hero');
-    var forms = document.querySelectorAll('.kd-form');
     if (!sticky || !hero) return;
 
     function update() {
       var heroBottom = hero.getBoundingClientRect().bottom;
-      var show = heroBottom < 0;
-
-      for (var i = 0; i < forms.length; i++) {
-        var r = forms[i].getBoundingClientRect();
-        if (r.top < window.innerHeight && r.bottom > 0) {
-          show = false;
-          break;
-        }
-      }
-      sticky.classList.toggle('is-visible', show);
+      sticky.classList.toggle('is-visible', heroBottom < 0);
     }
 
     window.addEventListener('scroll', update, { passive: true });
