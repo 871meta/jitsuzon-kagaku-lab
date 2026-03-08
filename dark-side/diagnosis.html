@@ -168,24 +168,52 @@
         <!-- FREE: 共通イントロ（はじめに〜この診断の目的） -->
         <div class="report report--free" id="reportFree"></div>
 
-        <!-- GATE: メール取得フォーム -->
-        <div class="ds-email-capture ds-fade-in" id="emailCapture">
-          <p class="ds-email-capture__heading">この構造は、なぜ生まれたのか</p>
-          <p class="ds-email-capture__desc">
-            現在地は見えました。<br>
-            ここから先では、この構造が生まれた原因、放置した場合に何が起きるのか、<br>
-            そして具体的な統合の方法を——あなたのタイプに基づいて解説します。
-          </p>
-          <form class="ds-email-capture__form" id="emailCaptureForm" action="#" method="post">
-            <input type="email" class="ds-email-capture__input" placeholder="メールアドレス" required>
-            <button type="submit" class="ds-email-capture__btn">続きを読む &rarr;</button>
-          </form>
-          <p class="ds-email-capture__note">※ 第三者への提供はありません</p>
-        </div>
+        <!-- GATE: 撤廃済み（レポートは全ユーザーに無条件表示） -->
 
         <!-- GATED: タイプ別フィードバック + 解決策（メール登録後に表示） -->
         <div class="ds-gated" id="gatedContent">
           <div class="report report--gated" id="reportGated"></div>
+
+          <hr class="ds-separator">
+
+          <!-- メルマガ登録CTA -->
+          <div class="ds-newsletter ds-fade-in" id="newsletterSection">
+            <h3 class="ds-newsletter__heading">あなたの構造は見えた。<br>次は、動かす番です。</h3>
+
+            <!-- ワークシートプレビュー -->
+            <div class="ds-ws-preview">
+              <div class="ds-ws-preview__card">
+                <p class="ds-ws-preview__label">Tenmei Verbalization Worksheet™</p>
+                <p class="ds-ws-preview__title">天命の言語化ワークシート</p>
+                <div class="ds-ws-preview__divider"></div>
+                <p class="ds-ws-preview__question">あなたはあなたに<br>何をプレゼントして<br>あげたいですか？</p>
+                <div class="ds-ws-preview__steps">
+                  <span class="ds-ws-preview__step">なぜ？ →</span>
+                  <span class="ds-ws-preview__step">なぜ？ →</span>
+                  <span class="ds-ws-preview__step-last">天命</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="ds-newsletter__lead">私がセッションで使っているプロトコルを、<br>そのまま、あなたに渡します。</p>
+
+            <div class="ds-newsletter__steps">
+              <p class="ds-newsletter__step">「あなたはあなたに何をプレゼントしてあげたいですか？」<br><span>という質問から始まります。</span></p>
+              <p class="ds-newsletter__step">「なぜ？」の連鎖であなたのシャドウに到達します。</p>
+              <p class="ds-newsletter__step">「何のために？」の連鎖で天命の言語化ができます。</p>
+            </div>
+
+            <p class="ds-newsletter__desc">
+              このセッションで起きることを、あなた自身の手でぜひ体験してみてください。
+            </p>
+            <p class="ds-newsletter__sub">ワークシートに加えて、14日間、毎朝1通の問いが届きます。</p>
+
+            <form class="ds-newsletter__form" id="newsletterForm" action="#" method="post">
+              <input type="email" class="ds-newsletter__input" placeholder="メールアドレス" required>
+              <button type="submit" class="ds-newsletter__btn">ワークシートと問いを受け取る &rarr;</button>
+            </form>
+            <p class="ds-newsletter__note">※ 第三者への提供はありません</p>
+          </div>
 
           <hr class="ds-separator">
 
@@ -225,6 +253,7 @@
     // -----------------------------
     // Data
     // -----------------------------
+    let currentDecision = null;
     const QUESTIONS = [
       { id: 1, cat: "BODY", text: "明らかな不調（肥満・過度な痩せ・肌荒れ・慢性疲労・睡眠障害など）を抱えているが、仕事を理由に放置している。" },
       { id: 2, cat: "BODY", text: "健康診断の数値や医師の指摘に、どこかで目を背けている自覚がある。" },
@@ -570,6 +599,7 @@
 
       const scores = computeScores(answers);
       const decision = decideType(scores);
+      currentDecision = decision;
 
       // Type badge
       document.getElementById("rTypeName").textContent = decision.label;
@@ -615,16 +645,7 @@
       renderReportFree(decision.type);
       renderReportGated(decision.type);
 
-      // ゲート状態の適用
-      const gatedEl = document.getElementById("gatedContent");
-      const emailEl = document.getElementById("emailCapture");
-      if (localStorage.getItem("ds_email")) {
-        gatedEl.classList.add("is-unlocked");
-        emailEl.style.display = "none";
-      } else {
-        gatedEl.classList.remove("is-unlocked");
-        emailEl.style.display = "";
-      }
+      // ゲート撤廃済み — レポートは常時表示
 
       resultCard.style.display = "block";
       resultCard.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -645,26 +666,19 @@
       window.open("https://jitsuzon-kagaku-lab.yanaihiroki.com/kandou.html#cases", "_blank", "noopener,noreferrer");
     });
 
-    // メールフォーム送信 → ゲート解除
-    document.getElementById("emailCaptureForm").addEventListener("submit", function(e) {
+    // メルマガ登録フォーム送信
+    document.getElementById("newsletterForm").addEventListener("submit", function(e) {
       e.preventDefault();
       const emailInput = this.querySelector('input[type="email"]');
       const email = emailInput.value.trim();
       if (!email) return;
 
-      // localStorage に保存（メール配信サービス連携時にここにAPI呼び出しを追加）
-      localStorage.setItem("ds_email", email);
+      // localStorage に保存（MyASP連携時にここにAPI呼び出しを追加）
+      localStorage.setItem("ds_newsletter_email", email);
+      localStorage.setItem("ds_newsletter_type", currentDecision ? currentDecision.type : "");
 
-      // ゲート解除
-      const gatedEl = document.getElementById("gatedContent");
-      const emailEl = document.getElementById("emailCapture");
-      emailEl.style.display = "none";
-      gatedEl.classList.add("is-unlocked");
-
-      // ゲート内コンテンツにスムーススクロール
-      setTimeout(() => {
-        gatedEl.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 100);
+      // 完了表示
+      this.innerHTML = '<p class="ds-newsletter__done">ありがとうございます。ワークシートと最初の問いは、明日の朝届きます。</p>';
     });
 
     // Init
@@ -675,8 +689,7 @@
     // Preview Mode (#preview)
     // =================================
     if (location.hash.startsWith("#preview")) {
-      // ゲートを常に解除（プレビュー時はメールフォームを出さない）
-      localStorage.setItem("ds_email", "preview@debug");
+      // ゲート撤廃済み
 
       const allTypes = ["CRITICAL", "SHADOW", "SPIRIT", "MIND", "BODY", "INTEGRATED"];
       const previewScores = {
@@ -740,9 +753,8 @@
         renderReportFree(typeKey);
         renderReportGated(typeKey);
 
-        // Gate always unlocked in preview
-        document.getElementById("gatedContent").classList.add("is-unlocked");
-        document.getElementById("emailCapture").style.display = "none";
+        // ゲート撤廃済み — プレビューでも常時表示
+        currentDecision = { type: typeKey, label: TYPE_LABELS[typeKey] };
 
         resultCard.style.display = "block";
         resultCard.scrollIntoView({ behavior: "instant", block: "start" });

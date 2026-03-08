@@ -1368,13 +1368,288 @@ body .progress-bar-wrap + .wrap {
    =========================== */
 
 .ds-gated {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: max-height 1s ease, opacity 0.8s ease 0.2s;
+  max-height: none;
+  opacity: 1;
 }
 
-.ds-gated.is-unlocked {
-  max-height: 8000px;
-  opacity: 1;
+/* ===========================
+   Newsletter CTA
+   =========================== */
+
+.ds-newsletter {
+  margin-top: 2.5rem;
+  padding: 3rem 2rem;
+  border: 1px solid var(--border-accent);
+  background: linear-gradient(180deg, rgba(192, 168, 120, 0.06), var(--surface-deep));
+  position: relative;
+  text-align: center;
+}
+
+.ds-newsletter::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.ds-newsletter__heading {
+  font-family: "Shippori Mincho", "Noto Serif JP", serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-bright);
+  letter-spacing: 0.06em;
+  line-height: 2;
+  margin: 0 0 2rem;
+}
+
+/* --- Worksheet Preview Card --- */
+.ds-ws-preview {
+  margin: 0 auto 2.5rem;
+  perspective: 600px;
+}
+
+.ds-ws-preview__card {
+  position: relative;
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 2rem;
+  background: linear-gradient(170deg, #1e1e2f 0%, #141422 100%);
+  border: 1px solid rgba(192, 168, 120, 0.35);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.5),
+    0 0 60px rgba(192, 168, 120, 0.06),
+    inset 0 1px 0 rgba(192, 168, 120, 0.1);
+  transform: rotateY(-2deg) rotateX(1deg);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.ds-ws-preview__card:hover {
+  transform: rotateY(0deg) rotateX(0deg);
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.5),
+    0 0 80px rgba(192, 168, 120, 0.1),
+    inset 0 1px 0 rgba(192, 168, 120, 0.15);
+}
+
+.ds-ws-preview__label {
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(192, 168, 120, 0.5);
+  margin: 0 0 0.3rem;
+}
+
+.ds-ws-preview__title {
+  font-family: "Shippori Mincho", "Noto Serif JP", serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+  margin: 0 0 1.2rem;
+}
+
+.ds-ws-preview__divider {
+  width: 30px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 0 auto 1.2rem;
+}
+
+.ds-ws-preview__question {
+  font-family: "Shippori Mincho", "Noto Serif JP", serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-bright);
+  line-height: 2;
+  margin: 0 0 1.5rem;
+}
+
+.ds-ws-preview__steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.ds-ws-preview__step {
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  color: rgba(192, 168, 120, 0.45);
+}
+
+.ds-ws-preview__step-last {
+  font-family: "Shippori Mincho", "Noto Serif JP", serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.15em;
+  border: 1px solid rgba(192, 168, 120, 0.3);
+  padding: 0.2rem 0.8rem;
+}
+
+/* --- Newsletter body text --- */
+.ds-newsletter__lead {
+  font-family: "Shippori Mincho", "Noto Serif JP", serif;
+  font-size: 0.95rem;
+  color: var(--text-bright);
+  line-height: 2;
+  margin: 0 0 2rem;
+}
+
+.ds-newsletter__steps {
+  text-align: left;
+  max-width: 440px;
+  margin: 0 auto 2rem;
+}
+
+.ds-newsletter__step {
+  position: relative;
+  padding-left: 1.2rem;
+  margin: 0 0 1.2rem;
+  color: var(--body-text);
+  font-size: 0.88rem;
+  line-height: 1.9;
+}
+
+.ds-newsletter__step::before {
+  content: "";
+  position: absolute;
+  top: 0.65rem;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+
+.ds-newsletter__step span {
+  color: var(--muted-dim);
+}
+
+.ds-newsletter__desc {
+  margin: 0 0 1rem;
+  color: var(--body-text);
+  font-size: 0.88rem;
+  line-height: 2;
+}
+
+.ds-newsletter__sub {
+  margin: 0 0 2rem;
+  color: var(--muted-dim);
+  font-size: 0.82rem;
+  line-height: 1.8;
+}
+
+.ds-newsletter__form {
+  display: flex;
+  gap: 0;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.ds-newsletter__input {
+  flex: 1;
+  padding: 1rem 1.2rem;
+  background: var(--surface-deep);
+  border: 1px solid var(--border-accent);
+  border-right: none;
+  color: var(--text);
+  font-size: 0.88rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.ds-newsletter__input::placeholder {
+  color: var(--muted-dim);
+}
+
+.ds-newsletter__input:focus {
+  border-color: var(--gold);
+}
+
+.ds-newsletter__btn {
+  flex-shrink: 0;
+  padding: 1rem 1.8rem;
+  background: var(--gold);
+  color: var(--bg);
+  font-family: inherit;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  border: 1px solid var(--gold);
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.ds-newsletter__btn:hover {
+  background: transparent;
+  color: var(--gold);
+}
+
+.ds-newsletter__note {
+  margin: 1rem 0 0;
+  font-size: 0.75rem;
+  color: var(--muted-dim);
+  letter-spacing: 0.04em;
+}
+
+.ds-newsletter__done {
+  color: var(--gold);
+  font-family: "Shippori Mincho", "Noto Serif JP", serif;
+  font-size: 0.95rem;
+  line-height: 2;
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  .ds-newsletter {
+    padding: 2rem 1.2rem;
+  }
+
+  .ds-ws-preview__card {
+    transform: none;
+    max-width: 280px;
+    padding: 2rem 1.5rem 1.5rem;
+  }
+
+  .ds-ws-preview__card:hover {
+    transform: none;
+  }
+
+  .ds-newsletter__steps {
+    max-width: 100%;
+  }
+
+  .ds-newsletter__form {
+    flex-direction: column;
+  }
+
+  .ds-newsletter__input {
+    border-right: 1px solid var(--border-accent);
+    border-bottom: none;
+  }
+
+  .ds-newsletter__btn {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 1rem;
+    white-space: nowrap;
+    font-size: 0.82rem;
+  }
+
+  .ds-newsletter__heading {
+    font-size: 1.1rem;
+  }
+
+  .ds-newsletter__lead {
+    font-size: 0.88rem;
+  }
 }
