@@ -86,33 +86,21 @@
     .trial-spec__item {
       text-align: center;
       padding: 2.5rem 1.5rem;
-      border: 1px solid rgba(192, 168, 120, 0.15);
-      background: rgba(60, 50, 85, 0.95);
+      border: 1px solid rgba(192, 168, 120, 0.12);
+      background: rgba(15, 12, 25, 0.5);
       position: relative;
       box-shadow: 0 1px 12px rgba(0, 0, 0, 0.2);
-      overflow: hidden;
     }
 
     .trial-spec__item::before {
       content: "";
       position: absolute;
       top: 0;
-      left: 0;
-      width: 22px;
-      height: 22px;
-      border-top: 2px solid rgba(192, 168, 120, 0.4);
-      border-left: 2px solid rgba(192, 168, 120, 0.4);
-    }
-
-    .trial-spec__item::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 22px;
-      height: 22px;
-      border-bottom: 2px solid rgba(192, 168, 120, 0.4);
-      border-right: 2px solid rgba(192, 168, 120, 0.4);
+      left: 50%;
+      transform: translateX(-50%);
+      width: 24px;
+      height: 1px;
+      background: #c0a878;
     }
 
     .trial-spec__value {
@@ -133,36 +121,11 @@
 
     /* Condition notice */
     .trial-condition {
-      background: rgba(60, 50, 85, 0.95);
-      border: 1px solid rgba(192, 168, 120, 0.18);
+      background: rgba(15, 12, 25, 0.6);
+      border: 1px solid rgba(192, 168, 120, 0.15);
       padding: 2.5rem;
       margin: 3rem 0;
       text-align: center;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 2px 24px rgba(192, 168, 120, 0.05);
-    }
-
-    .trial-condition::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 32px;
-      height: 32px;
-      border-top: 2px solid rgba(192, 168, 120, 0.4);
-      border-left: 2px solid rgba(192, 168, 120, 0.4);
-    }
-
-    .trial-condition::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 32px;
-      height: 32px;
-      border-bottom: 2px solid rgba(192, 168, 120, 0.4);
-      border-right: 2px solid rgba(192, 168, 120, 0.4);
     }
 
     .trial-condition p {
@@ -191,7 +154,7 @@
       position: relative;
       margin-bottom: 1.5rem;
       padding: 2.5rem 2.5rem;
-      background: rgba(60, 50, 85, 0.95);
+      background: rgba(15, 12, 25, 0.7);
       border: 1px solid rgba(192, 168, 120, 0.12);
       box-shadow: 0 2px 24px rgba(192, 168, 120, 0.05);
       backdrop-filter: blur(8px);
@@ -204,21 +167,9 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 28px;
-      height: 28px;
-      border-top: 2px solid rgba(192, 168, 120, 0.4);
-      border-left: 2px solid rgba(192, 168, 120, 0.4);
-    }
-
-    .offering-item::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
       right: 0;
-      width: 28px;
-      height: 28px;
-      border-bottom: 2px solid rgba(192, 168, 120, 0.4);
-      border-right: 2px solid rgba(192, 168, 120, 0.4);
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.5), transparent);
     }
 
     .offering-item:hover {
@@ -230,33 +181,14 @@
       margin-bottom: 0;
     }
 
-    /* Color accents per offering */
-    .offering-item:nth-child(1) { border-left: 2px solid rgba(192, 168, 120, 0.5); background: linear-gradient(90deg, rgba(192, 168, 120, 0.08), rgba(60, 50, 85, 0.95) 40%); }
-    .offering-item:nth-child(2) { border-left: 2px solid rgba(200, 120, 120, 0.5); background: linear-gradient(90deg, rgba(200, 120, 120, 0.08), rgba(60, 50, 85, 0.95) 40%); }
-    .offering-item:nth-child(3) { border-left: 2px solid rgba(120, 155, 200, 0.5); background: linear-gradient(90deg, rgba(120, 155, 200, 0.08), rgba(60, 50, 85, 0.95) 40%); }
-    .offering-item:nth-child(4) { border-left: 2px solid rgba(160, 120, 200, 0.5); background: linear-gradient(90deg, rgba(160, 120, 200, 0.08), rgba(60, 50, 85, 0.95) 40%); }
-    .offering-item:nth-child(5) { border-left: 2px solid rgba(120, 180, 160, 0.5); background: linear-gradient(90deg, rgba(120, 180, 160, 0.08), rgba(60, 50, 85, 0.95) 40%); }
-
-    .offering-item:nth-child(1)::before, .offering-item:nth-child(1)::after { border-color: rgba(192, 168, 120, 0.35); }
-    .offering-item:nth-child(2)::before, .offering-item:nth-child(2)::after { border-color: rgba(200, 120, 120, 0.35); }
-    .offering-item:nth-child(3)::before, .offering-item:nth-child(3)::after { border-color: rgba(120, 155, 200, 0.35); }
-    .offering-item:nth-child(4)::before, .offering-item:nth-child(4)::after { border-color: rgba(160, 120, 200, 0.35); }
-    .offering-item:nth-child(5)::before, .offering-item:nth-child(5)::after { border-color: rgba(120, 180, 160, 0.35); }
-
     .offering-item p.offering-item__number {
       font-family: "Cormorant Garamond", "Times New Roman", serif;
-      font-size: 0.78rem;
+      font-size: 0.72rem;
       letter-spacing: 0.3em;
-      color: rgba(192, 168, 120, 0.5);
+      color: rgba(192, 168, 120, 0.4);
       text-transform: uppercase;
       margin-bottom: 1.2rem;
     }
-
-    .offering-item:nth-child(1) p.offering-item__number { color: rgba(192, 168, 120, 0.6); }
-    .offering-item:nth-child(2) p.offering-item__number { color: rgba(200, 120, 120, 0.6); }
-    .offering-item:nth-child(3) p.offering-item__number { color: rgba(120, 155, 200, 0.6); }
-    .offering-item:nth-child(4) p.offering-item__number { color: rgba(160, 120, 200, 0.6); }
-    .offering-item:nth-child(5) p.offering-item__number { color: rgba(120, 180, 160, 0.6); }
 
     .offering-item p.offering-item__poetry {
       font-size: 1.15rem;
@@ -279,8 +211,6 @@
         padding: 2rem 1.5rem;
         margin-bottom: 1.2rem;
       }
-      .offering-item::before { width: 20px; height: 20px; }
-      .offering-item::after { width: 20px; height: 20px; }
     }
 
     /* Schedule note */
@@ -302,14 +232,12 @@
       position: relative;
       margin-bottom: 1.5rem;
       padding: 2.5rem 2.5rem;
-      background: rgba(60, 50, 85, 0.95);
-      border: 1px solid rgba(192, 168, 120, 0.15);
+      background: rgba(15, 12, 25, 0.7);
+      border: 1px solid rgba(192, 168, 120, 0.12);
       box-shadow: 0 2px 24px rgba(192, 168, 120, 0.05);
       backdrop-filter: blur(8px);
       transition: box-shadow 0.4s ease, border-color 0.4s ease;
       overflow: hidden;
-      border-left: 2px solid rgba(200, 170, 100, 0.5);
-      background: linear-gradient(90deg, rgba(200, 170, 100, 0.08), rgba(60, 50, 85, 0.95) 40%);
     }
 
     .bonus-item::before {
@@ -317,21 +245,9 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 28px;
-      height: 28px;
-      border-top: 2px solid rgba(200, 170, 100, 0.35);
-      border-left: 2px solid rgba(200, 170, 100, 0.35);
-    }
-
-    .bonus-item::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
       right: 0;
-      width: 28px;
-      height: 28px;
-      border-bottom: 2px solid rgba(200, 170, 100, 0.35);
-      border-right: 2px solid rgba(200, 170, 100, 0.35);
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.5), transparent);
     }
 
     .bonus-item:hover {
@@ -345,9 +261,9 @@
 
     .bonus-item p.bonus-item__label {
       font-family: "Cormorant Garamond", "Times New Roman", serif;
-      font-size: 0.78rem;
+      font-size: 0.72rem;
       letter-spacing: 0.3em;
-      color: rgba(200, 170, 100, 0.6);
+      color: rgba(192, 168, 120, 0.4);
       text-transform: uppercase;
       margin-bottom: 1.2rem;
     }
@@ -380,8 +296,6 @@
         padding: 2rem 1.5rem;
         margin-bottom: 1.2rem;
       }
-      .bonus-item::before { width: 20px; height: 20px; }
-      .bonus-item::after { width: 20px; height: 20px; }
     }
 
     /* Guarantee cards */
@@ -389,7 +303,7 @@
       position: relative;
       margin-bottom: 1.5rem;
       padding: 2.5rem 2.5rem;
-      background: rgba(60, 50, 85, 0.95);
+      background: rgba(15, 12, 25, 0.7);
       border: 1px solid rgba(192, 168, 120, 0.12);
       box-shadow: 0 2px 24px rgba(192, 168, 120, 0.05);
       backdrop-filter: blur(8px);
@@ -402,21 +316,9 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 28px;
-      height: 28px;
-      border-top: 2px solid rgba(140, 180, 160, 0.35);
-      border-left: 2px solid rgba(140, 180, 160, 0.35);
-    }
-
-    .guarantee-item::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
       right: 0;
-      width: 28px;
-      height: 28px;
-      border-bottom: 2px solid rgba(140, 180, 160, 0.35);
-      border-right: 2px solid rgba(140, 180, 160, 0.35);
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.5), transparent);
     }
 
     .guarantee-item:hover {
@@ -428,25 +330,14 @@
       margin-bottom: 0;
     }
 
-    .guarantee-item:nth-child(1) { border-left: 2px solid rgba(120, 180, 160, 0.5); background: linear-gradient(90deg, rgba(120, 180, 160, 0.08), rgba(60, 50, 85, 0.95) 40%); }
-    .guarantee-item:nth-child(2) { border-left: 2px solid rgba(120, 155, 200, 0.5); background: linear-gradient(90deg, rgba(120, 155, 200, 0.08), rgba(60, 50, 85, 0.95) 40%); }
-    .guarantee-item:nth-child(3) { border-left: 2px solid rgba(160, 140, 200, 0.5); background: linear-gradient(90deg, rgba(160, 140, 200, 0.08), rgba(60, 50, 85, 0.95) 40%); }
-
-    .guarantee-item:nth-child(2)::before, .guarantee-item:nth-child(2)::after { border-color: rgba(120, 155, 200, 0.35); }
-    .guarantee-item:nth-child(3)::before, .guarantee-item:nth-child(3)::after { border-color: rgba(160, 140, 200, 0.35); }
-
     .guarantee-item p.guarantee-item__number {
       font-family: "Cormorant Garamond", "Times New Roman", serif;
-      font-size: 0.78rem;
+      font-size: 0.72rem;
       letter-spacing: 0.3em;
-      color: rgba(192, 168, 120, 0.5);
+      color: rgba(192, 168, 120, 0.4);
       text-transform: uppercase;
       margin-bottom: 1.2rem;
     }
-
-    .guarantee-item:nth-child(1) p.guarantee-item__number { color: rgba(120, 180, 160, 0.6); }
-    .guarantee-item:nth-child(2) p.guarantee-item__number { color: rgba(120, 155, 200, 0.6); }
-    .guarantee-item:nth-child(3) p.guarantee-item__number { color: rgba(160, 140, 200, 0.6); }
 
     .guarantee-item p.guarantee-item__label {
       font-size: 1.15rem;
@@ -467,8 +358,6 @@
         padding: 2rem 1.5rem;
         margin-bottom: 1.2rem;
       }
-      .guarantee-item::before { width: 20px; height: 20px; }
-      .guarantee-item::after { width: 20px; height: 20px; }
     }
 
     /* Price display */
@@ -477,9 +366,9 @@
       text-align: center;
       padding: 4rem 2.5rem;
       margin: 2rem 0;
-      background: rgba(60, 50, 85, 0.95);
-      border: 1px solid rgba(192, 168, 120, 0.2);
-      box-shadow: 0 4px 48px rgba(192, 168, 120, 0.08), inset 0 0 60px rgba(192, 168, 120, 0.03);
+      background: rgba(15, 12, 25, 0.7);
+      border: 1px solid rgba(192, 168, 120, 0.15);
+      box-shadow: 0 4px 48px rgba(192, 168, 120, 0.06);
       backdrop-filter: blur(8px);
       overflow: hidden;
     }
@@ -489,21 +378,19 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 40px;
-      height: 40px;
-      border-top: 2px solid rgba(192, 168, 120, 0.5);
-      border-left: 2px solid rgba(192, 168, 120, 0.5);
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.6), transparent);
     }
 
     .price-block::after {
       content: "";
       position: absolute;
       bottom: 0;
+      left: 0;
       right: 0;
-      width: 40px;
-      height: 40px;
-      border-bottom: 2px solid rgba(192, 168, 120, 0.5);
-      border-right: 2px solid rgba(192, 168, 120, 0.5);
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.6), transparent);
     }
 
     .price-block p.price-block__label {
@@ -560,9 +447,8 @@
       cursor: pointer;
       -webkit-user-select: none;
       user-select: none;
-      background: rgba(60, 50, 85, 0.95);
-      border: 1px solid rgba(192, 168, 120, 0.1);
-      border-left: 2px solid rgba(192, 168, 120, 0.3);
+      background: rgba(15, 12, 25, 0.7);
+      border: 1px solid rgba(192, 168, 120, 0.08);
       transition: border-color 0.4s ease, box-shadow 0.4s ease;
       overflow: hidden;
     }
@@ -572,10 +458,9 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 18px;
-      height: 18px;
-      border-top: 1px solid rgba(192, 168, 120, 0.25);
-      border-left: 1px solid rgba(192, 168, 120, 0.25);
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.3), transparent);
     }
 
     .checklist-item:hover {
