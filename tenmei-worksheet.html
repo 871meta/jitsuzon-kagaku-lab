@@ -219,29 +219,41 @@
   .btn-next {
     display: inline-block;
     margin-top: 28px;
-    padding: 14px 48px;
+    padding: 16px 52px;
     background: transparent;
     border: 1px solid var(--gold);
     color: var(--gold);
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 14px;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
   }
+  .btn-next::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%; width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(200,168,110,0.15), transparent);
+    transition: left 0.5s;
+  }
+  .btn-next:hover::before { left: 100%; }
   .btn-next:hover {
     background: var(--gold);
     color: var(--bg);
+    box-shadow: 0 4px 24px rgba(200,168,110,0.25);
   }
 
   /* ── ゴールドパネル ── */
   .gold-panel {
-    background: var(--panel);
-    border: 1px solid var(--panel-border);
-    border-left: 4px solid var(--gold);
-    padding: 28px 24px;
-    margin: 32px 0;
+    background: linear-gradient(135deg, var(--panel) 0%, rgba(30,28,24,0.95) 100%);
+    border: 1px solid rgba(200,168,110,0.12);
+    border-left: 3px solid var(--gold);
+    padding: 32px 28px;
+    margin: 36px 0;
     line-height: 2;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.2);
   }
   .gold-panel h3 {
     font-family: 'Noto Serif JP', serif;
@@ -269,52 +281,119 @@
 
   /* ── 統合ページ ── */
   .integration-title {
-    font-family: 'Noto Serif JP', serif;
-    font-size: 22px;
-    font-weight: 700;
+    font-family: 'Cormorant Garamond', 'Noto Serif JP', serif;
+    font-size: 28px;
+    font-weight: 600;
     color: var(--gold);
-    margin-bottom: 20px;
+    letter-spacing: 0.2em;
+    margin-bottom: 24px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 20px;
+  }
+  .integration-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 30%; right: 30%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
   }
   .bold-statement {
     font-family: 'Noto Serif JP', serif;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 700;
     color: var(--text-strong);
-    margin: 20px 0;
+    margin: 24px 0;
+    text-align: center;
+    letter-spacing: 0.05em;
   }
   .gold-question {
-    font-size: 14px;
+    font-size: 15px;
     color: var(--gold);
-    margin-bottom: 16px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
   }
 
   /* ── CTA ── */
   .cta-section {
     text-align: center;
-    margin-top: 48px;
-    padding-top: 32px;
-    border-top: 1px solid var(--divider);
+    margin-top: 56px;
+    padding: 48px 32px 40px;
+    background: linear-gradient(170deg, rgba(200,168,110,0.06) 0%, rgba(15,15,12,0.95) 40%, rgba(200,168,110,0.04) 100%);
+    border: 1px solid rgba(200,168,110,0.18);
+    border-radius: 2px;
+    position: relative;
   }
-  .cta-section .diamond { color: var(--gold-dark); font-size: 10px; margin-bottom: 16px; }
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    top: -1px; left: 20%; right: 20%; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  .cta-section::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; left: 20%; right: 20%; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-dark), transparent);
+  }
+  .cta-section .diamond { color: var(--gold); font-size: 12px; margin-bottom: 20px; opacity: 0.7; }
   .cta-section .cta-name {
-    font-size: 14px;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 18px;
     font-weight: 600;
     color: var(--gold);
-    margin-bottom: 8px;
+    letter-spacing: 0.15em;
+    margin-bottom: 12px;
   }
-  .cta-section a {
-    color: var(--text-dim);
-    font-size: 12px;
+  .cta-section .cta-desc {
+    color: var(--text);
+    font-size: 13px;
+    line-height: 2;
+    margin: 16px 0 28px;
+    text-align: center;
+  }
+  .cta-btn {
+    display: inline-block;
+    padding: 18px 44px;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+    color: var(--bg);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
     text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 2px 16px rgba(200,168,110,0.15);
+    position: relative;
+    overflow: hidden;
   }
-  .cta-section a:hover { color: var(--gold); }
+  .cta-btn::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%; width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.6s;
+  }
+  .cta-btn:hover::before { left: 100%; }
+  .cta-btn:hover {
+    box-shadow: 0 6px 32px rgba(200,168,110,0.35);
+    transform: translateY(-1px);
+  }
+  .cta-sub-text {
+    display: block;
+    margin-top: 16px;
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 0.05em;
+  }
 
   .footer {
     text-align: center;
     font-size: 11px;
     color: var(--text-dim);
-    margin-top: 40px;
-    padding-top: 20px;
+    margin-top: 48px;
+    padding-top: 24px;
     border-top: 1px solid var(--divider);
   }
 
@@ -422,7 +501,7 @@
       <div class="shadow-example">「本音を出したら居場所を失う」</div>
       <div class="shadow-example">「受け取ったら壊れる」</div>
       <p style="margin-top:16px">こうした信念は、あなたが選んだものではありません。<br>あなたの初期条件が、あなたに与えた構造です。</p>
-      <p class="highlight">ループしている答え、繰り返し出てくる言葉を覚えておいてください。</p>
+      <p class="highlight">ループしている答え、繰り返し出てくる言葉を覚えておいてください。<br>それが、あなたのシャドウです。</p>
     </div>
     <button class="btn-next" onclick="showStep(5)">次の問いへ →</button>
   </div>
@@ -434,7 +513,7 @@
     <div class="step-header" style="margin-top:24px">
       <div class="step-badge">5</div>
     </div>
-    <div class="step-question">丸をつけたもの ── それは、何のためにありますか？</div>
+    <div class="step-question">見つけたシャドウ ── それは、何のためにありますか？</div>
     <p class="step-guide">あなたのシャドウは、何かを守っています。それは何でしょうか。</p>
     <textarea class="write-area" id="answer5" placeholder=""></textarea>
     <button class="btn-next" onclick="showStep(6)">次の問いへ →</button>
@@ -482,8 +561,9 @@
     <div class="cta-section">
       <div class="diamond">◆</div>
       <div class="cta-name">天命の言語化セッション™</div>
-      <p style="color:var(--text); font-size:13px; line-height:2; margin: 16px 0 24px; text-align:left;">ワークシートで体験した問いの構造を、対面の対話で、あなたに向けて行います。<br>2時間、マンツーマン、オンライン。<br>トライアルセッションは無料です。</p>
-      <a href="https://jitsuzon-kagaku-lab.yanaihiroki.com/trial.html" style="display:inline-block; padding:16px 32px; background:var(--gold); color:var(--bg); font-family:'Noto Sans JP',sans-serif; font-size:14px; font-weight:600; letter-spacing:0.1em; text-decoration:none; transition:all 0.3s;">トライアルセッションはこちら</a>
+      <p class="cta-desc">ワークシートで体験した問いの構造を、<br>対面の対話で、あなたに向けて行います。<br>2時間、マンツーマン、オンライン。</p>
+      <a href="https://jitsuzon-kagaku-lab.yanaihiroki.com/trial.html" class="cta-btn">トライアルセッションに申し込む</a>
+      <span class="cta-sub-text">無料 ── 所要時間 約2時間</span>
     </div>
 
     <div class="footer">© 実存科学研究所　箭内宏紀</div>
