@@ -245,6 +245,29 @@
     box-shadow: 0 4px 24px rgba(200,168,110,0.25);
   }
 
+  /* ── ボタン群 ── */
+  .step-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 28px;
+  }
+  .btn-back {
+    display: inline-block;
+    padding: 16px 24px;
+    background: transparent;
+    border: 1px solid var(--text-dim);
+    color: var(--text-dim);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .btn-back:hover {
+    border-color: var(--text);
+    color: var(--text);
+  }
+
   /* ── ゴールドパネル ── */
   .gold-panel {
     background: linear-gradient(135deg, var(--panel) 0%, rgba(30,28,24,0.95) 100%);
@@ -440,10 +463,17 @@
     .step-section {
       margin: 28px 0;
     }
+    .step-buttons {
+      flex-direction: row;
+    }
+    .btn-back {
+      padding: 14px 20px;
+      font-size: 13px;
+    }
     .btn-next {
       padding: 14px 36px;
       font-size: 13px;
-      width: 100%;
+      flex: 1;
       text-align: center;
     }
     .meta-frame {
@@ -534,7 +564,9 @@
       <div class="meta-line" style="margin-top:8px">してあげたい。</div>
     </div>
     <p class="note">※ 「あなたは、あなたに何をプレゼントしてあげたいですか？」── これがすべての起点です。</p>
-    <button class="btn-next" onclick="showStep(2)">次の問いへ →</button>
+    <div class="step-buttons">
+      <button class="btn-next" onclick="showStep(2)">次の問いへ →</button>
+    </div>
   </div>
 
   <!-- STEP 2 -->
@@ -547,7 +579,10 @@
     <div class="step-question">では、なぜそれをプレゼントできていないのですか？</div>
     <p class="step-guide">頭に浮かんだことをそのまま書いてください。</p>
     <textarea class="write-area" id="answer2" placeholder=""></textarea>
-    <button class="btn-next" onclick="showStep(3)">次の問いへ →</button>
+    <div class="step-buttons">
+      <button class="btn-back" onclick="showStep(1)">← 戻る</button>
+      <button class="btn-next" onclick="showStep(3)">次の問いへ →</button>
+    </div>
   </div>
 
   <!-- STEP 3 -->
@@ -559,7 +594,10 @@
     <div class="step-question">その答えに対して、もう一度 ── なぜ？</div>
     <p class="step-guide">STEP 2の答えを読み返してください。その答えに対して、さらに「なぜ？」と問います。</p>
     <textarea class="write-area" id="answer3" placeholder=""></textarea>
-    <button class="btn-next" onclick="showStep(4)">次の問いへ →</button>
+    <div class="step-buttons">
+      <button class="btn-back" onclick="showStep(2)">← 戻る</button>
+      <button class="btn-next" onclick="showStep(4)">次の問いへ →</button>
+    </div>
   </div>
 
   <!-- STEP 4 -->
@@ -581,7 +619,10 @@
       <p style="margin-top:16px">こうした信念は、あなたが選んだものではありません。<br>あなたの初期条件が、あなたに与えた構造です。</p>
       <p class="highlight">ループしている答え、繰り返し出てくる言葉を覚えておいてください。<br>それが、あなたのシャドウです。</p>
     </div>
-    <button class="btn-next" onclick="showStep(5)">次の問いへ →</button>
+    <div class="step-buttons">
+      <button class="btn-back" onclick="showStep(3)">← 戻る</button>
+      <button class="btn-next" onclick="showStep(5)">次の問いへ →</button>
+    </div>
   </div>
 
   <!-- STEP 5 -->
@@ -598,7 +639,10 @@
     <div class="step-question">見つけたシャドウ ── それは、何のためにありますか？</div>
     <p class="step-guide">あなたのシャドウは、何かを守っています。それは何でしょうか。</p>
     <textarea class="write-area" id="answer5" placeholder=""></textarea>
-    <button class="btn-next" onclick="showStep(6)">次の問いへ →</button>
+    <div class="step-buttons">
+      <button class="btn-back" onclick="showStep(4)">← 戻る</button>
+      <button class="btn-next" onclick="showStep(6)">次の問いへ →</button>
+    </div>
   </div>
 
   <!-- STEP 6 -->
@@ -610,7 +654,10 @@
     <div class="step-question">その答えに対して、もう一度 ── 何のために？</div>
     <p class="step-guide">STEP 5の答えを見ながら、さらに奥へ。</p>
     <textarea class="write-area" id="answer6" placeholder=""></textarea>
-    <button class="btn-next" onclick="showStep(7)">次の問いへ →</button>
+    <div class="step-buttons">
+      <button class="btn-back" onclick="showStep(5)">← 戻る</button>
+      <button class="btn-next" onclick="showStep(7)">次の問いへ →</button>
+    </div>
   </div>
 
   <!-- STEP 7 -->
@@ -622,7 +669,10 @@
     <div class="step-question">さらにもう一度 ── 何のために？</div>
     <p class="step-guide">これが最後の問いです。<br>STEP 6の答えを見て、その先にあるものを書いてください。<br><br><span class="highlight">ここに書いたものが、あなたの天命の方向です。</span></p>
     <textarea class="write-area" id="answer7" placeholder="" style="min-height:200px"></textarea>
-    <button class="btn-next" onclick="showStep(8)">統合へ →</button>
+    <div class="step-buttons">
+      <button class="btn-back" onclick="showStep(6)">← 戻る</button>
+      <button class="btn-next" onclick="showStep(8)">統合へ →</button>
+    </div>
   </div>
 
   <!-- 統合 -->
