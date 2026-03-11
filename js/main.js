@@ -28,27 +28,32 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // --- Nav Dropdown (mobile tap) ---
-  const dropdown = document.querySelector('.nav-dropdown');
-  const dropdownToggle = document.querySelector('.nav-dropdown__toggle');
+  // --- Nav Dropdowns (mobile tap) ---
+  var dropdowns = document.querySelectorAll('.nav-dropdown');
 
-  if (dropdown && dropdownToggle) {
-    dropdownToggle.addEventListener('click', function (e) {
+  dropdowns.forEach(function (dd) {
+    var ddToggle = dd.querySelector('.nav-dropdown__toggle');
+    if (!ddToggle) return;
+
+    ddToggle.addEventListener('click', function (e) {
       e.preventDefault();
-      dropdown.classList.toggle('is-open');
-    });
-
-    // Close dropdown when clicking outside
-    document.addEventListener('click', function (e) {
-      if (!dropdown.contains(e.target)) {
-        dropdown.classList.remove('is-open');
+      var wasOpen = dd.classList.contains('is-open');
+      // Close all other dropdowns first
+      dropdowns.forEach(function (other) {
+        if (other !== dd) other.classList.remove('is-open');
+      });
+      // Toggle this one
+      if (wasOpen) {
+        dd.classList.remove('is-open');
+      } else {
+        dd.classList.add('is-open');
       }
     });
 
     // Close dropdown when a dropdown link is clicked
-    dropdown.querySelectorAll('.nav-dropdown__menu a').forEach(function (link) {
+    dd.querySelectorAll('.nav-dropdown__menu a').forEach(function (link) {
       link.addEventListener('click', function () {
-        dropdown.classList.remove('is-open');
+        dd.classList.remove('is-open');
         if (toggle && nav) {
           toggle.classList.remove('is-open');
           nav.classList.remove('is-open');
@@ -57,7 +62,16 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
     });
-  }
+  });
+
+  // Close all dropdowns when clicking outside
+  document.addEventListener('click', function (e) {
+    dropdowns.forEach(function (dd) {
+      if (!dd.contains(e.target)) {
+        dd.classList.remove('is-open');
+      }
+    });
+  });
 
   // --- Active Nav Highlight ---
   const currentPath = window.location.pathname.replace(/\/$/, '').split('/').pop() || 'index';
