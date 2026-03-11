@@ -174,6 +174,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     searchToggle.addEventListener('click', openSearch);
 
+    // Close button
+    var searchCloseBtn = searchOverlay.querySelector('.search-close');
+    if (searchCloseBtn) {
+      searchCloseBtn.addEventListener('click', closeSearch);
+    }
+
     // Close on overlay click (not modal)
     searchOverlay.addEventListener('click', function (e) {
       if (e.target === searchOverlay) closeSearch();

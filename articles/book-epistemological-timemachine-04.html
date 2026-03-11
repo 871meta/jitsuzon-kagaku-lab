@@ -70,7 +70,7 @@ input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); 
   <meta property="og:site_name" content="実存科学研究所">
 <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
 <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="../css/style.min.css?v=7">
+  <link rel="stylesheet" href="../css/style.min.css?v=8">
 </head>
 <body>
   <a href="#main" class="skip-link">メインコンテンツへスキップ</a>
@@ -308,7 +308,7 @@ input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); 
     </div>
   </footer>
 
-  <script src="../js/main.min.js?v=7"></script>
+  <script src="../js/main.min.js?v=8"></script>
 
 <script type="application/ld+json">
 {
@@ -337,13 +337,13 @@ input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); 
 </script>
   <!-- Search Modal -->
   <div class="search-overlay">
-    <div class="search-modal">
+    <div class="search-modal"><button class="search-close" aria-label="閉じる">&times;</button>
       <div class="search-input-wrap">
         <span class="search-input-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
         <input type="text" class="search-input" placeholder="キーワードで検索..." autocomplete="off">
       </div>
       <div class="search-results"></div>
-      <div class="search-hint">ESC to close · ⌘K to toggle</div>
+      <div class="search-hint"><span class="search-hint__desktop">ESC to close · ⌘K to toggle</span><span class="search-hint__mobile">背景タップまたは ✕ で閉じる</span></div>
     </div>
   </div>
 </body>

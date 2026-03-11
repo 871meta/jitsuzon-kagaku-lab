@@ -2552,6 +2552,7 @@ hr {
 }
 
 .search-modal {
+  position: relative;
   width: 90%;
   max-width: 580px;
 }
@@ -2643,6 +2644,27 @@ hr {
   font-size: 0.9rem;
 }
 
+.search-close {
+  position: absolute;
+  top: -3rem;
+  right: 0;
+  background: none;
+  border: 1px solid rgba(192, 168, 120, 0.2);
+  color: #8a8680;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+.search-close:hover {
+  color: #c0a878;
+  border-color: rgba(192, 168, 120, 0.4);
+}
+
 .search-hint {
   text-align: center;
   color: #4a4640;
@@ -2651,6 +2673,12 @@ hr {
   font-family: "Cormorant Garamond", serif;
   letter-spacing: 0.15em;
 }
+.search-hint__mobile {
+  display: none;
+}
+.search-hint__desktop {
+  display: inline;
+}
 
 @media (max-width: 480px) {
   .search-overlay {
@@ -2658,5 +2686,11 @@ hr {
   }
   .search-input {
     font-size: 1rem;
+  }
+  .search-hint__mobile {
+    display: inline;
+  }
+  .search-hint__desktop {
+    display: none;
   }
 }
