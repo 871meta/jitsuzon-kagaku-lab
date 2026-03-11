@@ -208,8 +208,8 @@
             </p>
             <p class="ds-newsletter__sub">ワークシートに加えて、あなたの構造を動かす問いが届きます。──1万時間のセッションから生まれた問いです。</p>
 
-            <form class="ds-newsletter__form" id="newsletterForm" action="#" method="post">
-              <input type="email" class="ds-newsletter__input" placeholder="メールアドレス" required>
+            <form class="ds-newsletter__form" id="newsletterForm" action="https://my26p.com/p/r/FR9eE6OG" method="post">
+              <input type="email" name="mail" class="ds-newsletter__input" placeholder="メールアドレス" required>
               <button type="submit" class="ds-newsletter__btn">ワークシートと問いを受け取る &rarr;</button>
             </form>
             <p class="ds-newsletter__note">※ 第三者への提供はありません</p>
@@ -666,19 +666,17 @@
       window.open("https://jitsuzon-kagaku-lab.yanaihiroki.com/kandou.html#cases", "_blank", "noopener,noreferrer");
     });
 
-    // メルマガ登録フォーム送信
+    // メルマガ登録フォーム送信（MyASP）
     document.getElementById("newsletterForm").addEventListener("submit", function(e) {
-      e.preventDefault();
       const emailInput = this.querySelector('input[type="email"]');
       const email = emailInput.value.trim();
-      if (!email) return;
+      if (!email) { e.preventDefault(); return; }
 
-      // localStorage に保存（MyASP連携時にここにAPI呼び出しを追加）
+      // localStorage に保存
       localStorage.setItem("ds_newsletter_email", email);
       localStorage.setItem("ds_newsletter_type", currentDecision ? currentDecision.type : "");
 
-      // 完了表示
-      this.innerHTML = '<p class="ds-newsletter__done">ありがとうございます。ワークシートと最初の問いは、明日の朝届きます。</p>';
+      // フォームはそのままMyASPへPOSTされる
     });
 
     // Init
