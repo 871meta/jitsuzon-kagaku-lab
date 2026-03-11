@@ -750,6 +750,23 @@
     <priority>0.6</priority>
   </url>
 
+  <!-- ===== Series 17: ベルセルク ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-berserk/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-berserk/guts.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-berserk/casca.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
   <!-- ===== Series 16: グッド・ウィル・ハンティング ===== -->
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-goodwillhunting/</loc>
