@@ -77,6 +77,7 @@ input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); 
   <header class="site-header">
     <div class="container--wide">
       <a href="../index.html" class="site-logo">実存科学研究所</a>
+      <button class="search-toggle" aria-label="検索"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
       <button class="nav-toggle" aria-label="メニューを開く">
         <span></span><span></span><span></span>
       </button>
@@ -104,6 +105,7 @@ input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); 
       </nav>
     </div>
   </header>
+  <div class="reading-progress"></div>
 
 <div class="page-container" id="main">
 
@@ -114,6 +116,7 @@ input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); 
     <p class="subtitle">自由意志崩壊から天命開示までの構造図</p>
     <p class="date">正式構成：現象 → 感情 → 意味 → 構造 → Meta → 中動態 → 完全構造</p>
   </header>
+  <div class="reading-progress"></div>
 
   <div class="pull-quote fade-in"><p>人間の経験世界を「7つの認識階層」に分解し、自由意志幻想の崩壊から天命の開示までを構造としてトレース可能にするための認識フレームワークである。</p></div>
 
@@ -579,5 +582,16 @@ input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); 
   }
 }
 </script>
+  <!-- Search Modal -->
+  <div class="search-overlay">
+    <div class="search-modal">
+      <div class="search-input-wrap">
+        <span class="search-input-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+        <input type="text" class="search-input" placeholder="キーワードで検索..." autocomplete="off">
+      </div>
+      <div class="search-results"></div>
+      <div class="search-hint">ESC to close · ⌘K to toggle</div>
+    </div>
+  </div>
 </body>
 </html>

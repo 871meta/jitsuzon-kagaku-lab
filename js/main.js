@@ -113,6 +113,136 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  // --- Reading Progress Bar ---
+  (function () {
+    var bar = document.querySelector('.reading-progress');
+    if (!bar) return;
+
+    function updateProgress() {
+      var scrollTop = window.scrollY || document.documentElement.scrollTop;
+      var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (docHeight <= 0) return;
+      var progress = Math.min((scrollTop / docHeight) * 100, 100);
+      bar.style.width = progress + '%';
+    }
+
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
+  })();
+
+  // --- Site Search ---
+  (function () {
+    var searchToggle = document.querySelector('.search-toggle');
+    var searchOverlay = document.querySelector('.search-overlay');
+    var searchInput = document.querySelector('.search-input');
+    if (!searchToggle || !searchOverlay || !searchInput) return;
+
+    var searchResults = searchOverlay.querySelector('.search-results');
+    var searchIndex = null;
+
+    // Determine base path for resolving URLs
+    var depth = (window.location.pathname.match(/\//g) || []).length - 1;
+    var basePath = '';
+    for (var i = 0; i < depth; i++) basePath += '../';
+
+    function openSearch() {
+      searchOverlay.classList.add('is-open');
+      setTimeout(function () { searchInput.focus(); }, 100);
+      // Lazy load index
+      if (!searchIndex) {
+        fetch(basePath + 'js/search-index.json')
+          .then(function (r) { return r.json(); })
+          .then(function (data) { searchIndex = data; })
+          .catch(function () {});
+      }
+    }
+
+    function closeSearch() {
+      searchOverlay.classList.remove('is-open');
+      searchInput.value = '';
+      searchResults.innerHTML = '';
+    }
+
+    searchToggle.addEventListener('click', openSearch);
+
+    // Close on overlay click (not modal)
+    searchOverlay.addEventListener('click', function (e) {
+      if (e.target === searchOverlay) closeSearch();
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && searchOverlay.classList.contains('is-open')) {
+        closeSearch();
+      }
+      // Cmd/Ctrl + K to open
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        if (searchOverlay.classList.contains('is-open')) {
+          closeSearch();
+        } else {
+          openSearch();
+        }
+      }
+    });
+
+    // Search logic
+    var debounceTimer;
+    searchInput.addEventListener('input', function () {
+      clearTimeout(debounceTimer);
+      var query = this.value.trim();
+      if (!query || query.length < 2 || !searchIndex) {
+        searchResults.innerHTML = query.length === 1
+          ? '<div class="search-empty">2文字以上で検索</div>'
+          : '';
+        return;
+      }
+      debounceTimer = setTimeout(function () {
+        var q = query.toLowerCase();
+        var results = [];
+        for (var i = 0; i < searchIndex.length; i++) {
+          var page = searchIndex[i];
+          var score = 0;
+          var titleLower = (page.t || '').toLowerCase();
+          var descLower = (page.d || '').toLowerCase();
+          var bodyLower = (page.b || '').toLowerCase();
+
+          if (titleLower.indexOf(q) !== -1) score += 10;
+          if (descLower.indexOf(q) !== -1) score += 5;
+          if (bodyLower.indexOf(q) !== -1) score += 1;
+
+          if (score > 0) {
+            results.push({ page: page, score: score });
+          }
+        }
+        results.sort(function (a, b) { return b.score - a.score; });
+
+        if (results.length === 0) {
+          searchResults.innerHTML = '<div class="search-empty">「' + query + '」に一致するページが見つかりませんでした</div>';
+          return;
+        }
+
+        var html = '';
+        var max = Math.min(results.length, 12);
+        for (var j = 0; j < max; j++) {
+          var p = results[j].page;
+          var url = basePath + p.u;
+          var desc = p.d || p.b.substring(0, 120);
+          // Highlight query in desc
+          var highlighted = desc.replace(new RegExp('(' + query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi'), '<mark>$1</mark>');
+          html += '<a class="search-result" href="' + url + '">'
+            + '<div class="search-result__title">' + p.t + '</div>'
+            + '<div class="search-result__desc">' + highlighted + '</div>'
+            + '</a>';
+        }
+        if (results.length > 12) {
+          html += '<div class="search-empty">他 ' + (results.length - 12) + ' 件</div>';
+        }
+        searchResults.innerHTML = html;
+      }, 200);
+    });
+  })();
+
   // --- Sticky CTA: show after HERO ---
   (function () {
     var sticky = document.getElementById('stickyCta');

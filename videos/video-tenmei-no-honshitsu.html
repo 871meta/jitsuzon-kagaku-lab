@@ -65,6 +65,7 @@
   <header class="site-header">
     <div class="container--wide">
       <a href="../index.html" class="site-logo">実存科学研究所</a>
+      <button class="search-toggle" aria-label="検索"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
       <button class="nav-toggle" aria-label="メニューを開く">
         <span></span><span></span><span></span>
       </button>
@@ -92,6 +93,7 @@
       </nav>
     </div>
   </header>
+  <div class="reading-progress"></div>
 
 <div class="page-container">
 
@@ -101,6 +103,7 @@
     <h1>「天命を悟り、日々全うすること」の本質</h1>
     <p class="subtitle">自我の中心からMetaの中心へ還っていく4つの意識段階</p>
   </header>
+  <div class="reading-progress"></div>
 
   <p class="video-meta fade-in">制作日：2025年11月　｜　収録時間：短編</p>
 
@@ -212,5 +215,16 @@
   "inLanguage": "ja"
 }
 </script>
+  <!-- Search Modal -->
+  <div class="search-overlay">
+    <div class="search-modal">
+      <div class="search-input-wrap">
+        <span class="search-input-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+        <input type="text" class="search-input" placeholder="キーワードで検索..." autocomplete="off">
+      </div>
+      <div class="search-results"></div>
+      <div class="search-hint">ESC to close · ⌘K to toggle</div>
+    </div>
+  </div>
 </body>
 </html>

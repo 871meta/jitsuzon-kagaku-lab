@@ -296,6 +296,7 @@ input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); 
   <header class="site-header">
     <div class="container--wide">
       <a href="../index.html" class="site-logo">実存科学研究所</a>
+      <button class="search-toggle" aria-label="検索"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
       <button class="nav-toggle" aria-label="メニューを開く">
         <span></span><span></span><span></span>
       </button>
@@ -323,6 +324,7 @@ input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); 
       </nav>
     </div>
   </header>
+  <div class="reading-progress"></div>
 
 <article class="container" id="main">
 
@@ -332,6 +334,7 @@ input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); 
     <div class="category-tag">コラム</div>
     <h1>「それで？」の使い方 —— Meta coachingの極意（4MAT実践ガイド）</h1>
   </header>
+  <div class="reading-progress"></div>
 
   <div class="pull-quote fade-in"><p>「それで？」の最大の違いは、何もしないことではありません。"更新"に燃料を与えないことです。</p></div>
 
@@ -716,5 +719,16 @@ input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); 
   }
 }
 </script>
+  <!-- Search Modal -->
+  <div class="search-overlay">
+    <div class="search-modal">
+      <div class="search-input-wrap">
+        <span class="search-input-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+        <input type="text" class="search-input" placeholder="キーワードで検索..." autocomplete="off">
+      </div>
+      <div class="search-results"></div>
+      <div class="search-hint">ESC to close · ⌘K to toggle</div>
+    </div>
+  </div>
 </body>
 </html>
