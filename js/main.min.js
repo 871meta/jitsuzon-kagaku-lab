@@ -80,13 +80,22 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
     }, {
-      threshold: 0.05,
-      rootMargin: '0px 0px -20px 0px'
+      threshold: 0.01,
+      rootMargin: '200px 0px 200px 0px'
     });
 
     fadeElements.forEach(function (el) {
       observer.observe(el);
     });
+
+    // Safety net: reveal any still-hidden elements after 3s
+    setTimeout(function () {
+      fadeElements.forEach(function (el) {
+        if (!el.classList.contains('is-visible')) {
+          el.classList.add('is-visible');
+        }
+      });
+    }, 3000);
   } else {
     // Fallback: show all immediately
     fadeElements.forEach(function (el) {
