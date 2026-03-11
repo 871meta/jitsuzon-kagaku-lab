@@ -277,14 +277,19 @@ input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); 
       <button class="nav-toggle" aria-label="メニューを開く">
         <span></span><span></span><span></span>
       </button>
-      <nav class="global-nav">
+            <nav class="global-nav">
         <a href="../index.html">Top</a>
-        <a href="../beginner.html">Guide</a>
-        <a href="../epistemology.html">Epistemology</a>
-        <a href="../semantics.html">Semantics</a>
-        <a href="../society.html">Society</a>
-        <a href="../founder.html">Founder</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">The Meta</button>
+          <div class="nav-dropdown__menu">
+            <a href="../about-existential-science.html">実存科学とは</a>
+            <a href="../epistemology.html">認識論──Metaと自由意志</a>
+            <a href="../semantics.html">意味論──天命と収束</a>
+            <a href="../society.html">社会論──心友™と文明</a>
+          </div>
+        </div>
         <a href="../session.html">Session</a>
+        <a href="../founder.html">Founder</a>
         <a href="../specials.html">Specials</a>
         <div class="nav-dropdown">
           <button class="nav-dropdown__toggle">More</button>
@@ -296,6 +301,7 @@ input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); 
             <a href="../uniqueness.html">独自性と射程</a>
             <a href="../archives.html">記事一覧</a>
             <a href="../faq.html">FAQ</a>
+            <a href="../beginner.html">はじめての方へ</a>
           </div>
         </div>
       </nav>
@@ -1661,8 +1667,9 @@ input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); 
           <a href="../session-flow.html">セッションの流れ</a>
           <a href="../glossary.html">用語集</a>
         </div>
-        <div class="footer-col">
+                <div class="footer-col">
           <p class="footer-col__title">Theory</p>
+          <a href="../about-existential-science.html">実存科学とは</a>
           <a href="../epistemology.html">認識論</a>
           <a href="../semantics.html">意味論</a>
           <a href="../society.html">社会論</a>
