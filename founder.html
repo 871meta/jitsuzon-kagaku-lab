@@ -278,54 +278,42 @@
       background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
     }
 
-    /* --- Narrative text-panel upgrade to glass cards --- */
-    .founder-narrative .text-panel {
-      background: var(--color-panel);
-      border: 1px solid var(--color-gold-a10);
-      box-shadow: 0 2px 24px var(--color-gold-a04);
-      backdrop-filter: blur(8px);
-      position: relative;
-      overflow: hidden;
+    /* --- Section chapter labels --- */
+    .founder-chapter-label {
+      font-family: var(--font-serif-en);
+      font-size: var(--fs-xs);
+      letter-spacing: 0.3em;
+      color: var(--color-gold-a40);
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
     }
 
-    .founder-narrative .text-panel::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--color-gold-a40), transparent);
+    .founder-section-title {
+      font-size: var(--fs-h3);
+      font-weight: 600;
+      color: var(--color-text-primary);
+      margin-bottom: 2rem;
+      letter-spacing: 0.06em;
+      line-height: 1.8;
     }
 
-    .founder-atmospheric .text-panel {
-      background: var(--color-panel-light);
-      border: 1px solid var(--color-gold-a10);
-      box-shadow: 0 2px 24px var(--color-gold-a04);
-      backdrop-filter: blur(8px);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .founder-atmospheric .text-panel::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--color-gold-a40), transparent);
-    }
-
+    /* --- Narrative text-panel upgrade to colored glass cards --- */
+    .founder-narrative .text-panel,
+    .founder-atmospheric .text-panel,
     .founder-declaration .text-panel {
-      background: var(--color-panel);
-      border: 1px solid var(--color-gold-a10);
-      box-shadow: 0 2px 24px var(--color-gold-a04);
-      backdrop-filter: blur(8px);
       position: relative;
+      margin-bottom: 1.5rem;
+      padding: 2.5rem 2.5rem;
+      background: rgba(15, 12, 25, 0.8);
+      border: 1px solid var(--color-gold-a12);
+      box-shadow: 0 2px 24px var(--color-gold-a05);
+      backdrop-filter: blur(8px);
+      transition: box-shadow 0.4s ease, border-color 0.4s ease;
       overflow: hidden;
     }
 
+    .founder-narrative .text-panel::before,
+    .founder-atmospheric .text-panel::before,
     .founder-declaration .text-panel::before {
       content: "";
       position: absolute;
@@ -333,7 +321,136 @@
       left: 0;
       right: 0;
       height: 1px;
-      background: linear-gradient(90deg, transparent, var(--color-gold-a40), transparent);
+      background: linear-gradient(90deg, transparent, var(--color-gold-a50), transparent);
+    }
+
+    .founder-narrative .text-panel:hover,
+    .founder-atmospheric .text-panel:hover,
+    .founder-declaration .text-panel:hover {
+      box-shadow: 0 4px 48px var(--color-gold-a10);
+      border-color: var(--color-gold-a25);
+    }
+
+    /* Color-coded sections — Gold (探求) */
+    .founder-section--gold .text-panel {
+      border-left: 2px solid rgba(192, 168, 120, 0.45);
+      background: linear-gradient(90deg, var(--color-gold-a06), transparent 35%);
+    }
+
+    /* Color-coded sections — Rose (崩壊と再生) */
+    .founder-section--rose .text-panel {
+      border-left: 2px solid rgba(200, 120, 120, 0.45);
+      background: linear-gradient(90deg, rgba(200, 120, 120, 0.06), transparent 35%);
+    }
+
+    /* Color-coded sections — Blue (社会論) */
+    .founder-section--blue .text-panel {
+      border-left: 2px solid rgba(120, 155, 200, 0.45);
+      background: linear-gradient(90deg, rgba(120, 155, 200, 0.06), transparent 35%);
+    }
+
+    /* Color-coded sections — Purple (宣言) */
+    .founder-section--purple .text-panel {
+      border-left: 2px solid rgba(160, 120, 200, 0.45);
+      background: linear-gradient(90deg, rgba(160, 120, 200, 0.06), transparent 35%);
+    }
+
+    /* --- Accordion for declaration --- */
+    .founder-accordion {
+      margin-bottom: 1.5rem;
+    }
+
+    .founder-accordion__trigger {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem 2.5rem;
+      background: rgba(15, 12, 25, 0.8);
+      border: 1px solid var(--color-gold-a12);
+      border-left: 2px solid rgba(160, 120, 200, 0.45);
+      color: var(--color-text-primary);
+      font-family: var(--font-serif-ja);
+      font-size: var(--fs-lead);
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      transition: box-shadow 0.4s ease, border-color 0.4s ease, background 0.3s ease;
+      text-align: left;
+      line-height: 1.8;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .founder-accordion__trigger::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--color-gold-a50), transparent);
+    }
+
+    .founder-accordion__trigger:hover {
+      box-shadow: 0 4px 48px var(--color-gold-a10);
+      border-color: var(--color-gold-a25);
+    }
+
+    .founder-accordion__icon {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      margin-left: 1.5rem;
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+
+    .founder-accordion__icon::before,
+    .founder-accordion__icon::after {
+      content: "";
+      position: absolute;
+      background: var(--color-gold);
+      transition: transform 0.3s ease;
+    }
+
+    .founder-accordion__icon::before {
+      top: 50%;
+      left: 4px;
+      right: 4px;
+      height: 1px;
+      transform: translateY(-50%);
+    }
+
+    .founder-accordion__icon::after {
+      left: 50%;
+      top: 4px;
+      bottom: 4px;
+      width: 1px;
+      transform: translateX(-50%);
+    }
+
+    .founder-accordion.is-open .founder-accordion__icon::after {
+      transform: translateX(-50%) rotate(90deg);
+      opacity: 0;
+    }
+
+    .founder-accordion__body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .founder-accordion.is-open .founder-accordion__body {
+      max-height: 2000px;
+    }
+
+    .founder-accordion__content {
+      padding: 2.5rem;
+      background: rgba(15, 12, 25, 0.6);
+      border: 1px solid var(--color-gold-a08);
+      border-top: none;
+      border-left: 2px solid rgba(160, 120, 200, 0.25);
     }
 
     /* --- Visibility boost: paragraph text brightness --- */
@@ -492,6 +609,15 @@
         padding: 2rem 1.2rem;
       }
 
+      .founder-accordion__trigger {
+        padding: 1.5rem 1.2rem;
+        font-size: var(--fs-body);
+      }
+
+      .founder-accordion__content {
+        padding: 2rem 1.2rem;
+      }
+
       /* Quote-block inside text-panels: reduce padding for 375px */
       .founder-narrative .quote-block,
       .founder-atmospheric .quote-block,
@@ -604,8 +730,10 @@
   </div>
 
   <!-- ===== NARRATIVE: 探求の軌跡 ===== -->
-  <section class="founder-narrative">
+  <section class="founder-narrative founder-section--gold">
     <div class="container">
+      <p class="founder-chapter-label fade-in">Chapter I</p>
+      <p class="founder-section-title fade-in">探求の軌跡</p>
       <div class="content-block text-panel fade-in">
         <p>
           2000年代初頭、箭内宏紀の探求は、「心理学」から始まった。
@@ -624,8 +752,10 @@
   </section>
 
   <!-- ===== ATMOSPHERIC: 崩壊と再生 ===== -->
-  <section class="founder-atmospheric fade-in">
+  <section class="founder-atmospheric founder-section--rose fade-in">
     <div class="container">
+      <p class="founder-chapter-label fade-in">Chapter II</p>
+      <p class="founder-section-title fade-in">崩壊と再生</p>
       <div class="content-block text-panel fade-in">
         <p>
           その過程で、一度、壊れている。
@@ -666,8 +796,10 @@
   </section>
 
   <!-- ===== NARRATIVE: 社会論への展開 ===== -->
-  <section class="founder-narrative">
+  <section class="founder-narrative founder-section--blue">
     <div class="container">
+      <p class="founder-chapter-label fade-in">Chapter III</p>
+      <p class="founder-section-title fade-in">社会論への展開</p>
       <div class="content-block text-panel fade-in">
         <p>
           しかし、ここで終わっていたら、実存科学は未完のままだった。
@@ -714,8 +846,11 @@
     </p>
   </div>
 
-  <section class="founder-declaration fade-in">
+  <section class="founder-declaration founder-section--purple fade-in">
     <div class="container">
+      <p class="founder-chapter-label fade-in">Chapter IV</p>
+      <p class="founder-section-title fade-in">なぜ箭内と対話するのか</p>
+
       <div class="content-block text-panel fade-in">
         <p>
           実存科学が結論として導いたことを、箭内はすでに知っていた。<br>
@@ -734,41 +869,53 @@
         </p>
       </div>
 
-      <hr class="separator">
-
-      <div class="content-block text-panel fade-in">
-        <p>
-          対話の場で箭内が行うことは、その再現である。
-        </p>
-        <p>
-          答えは語らない。自身の崩壊から、答えが人の認識を狭めることを学んだからだ。<br>
-          代わりに、<strong>ただ一つの問い</strong>を手渡す。深く考えるに値する、その人だけの問いを。
-        </p>
-        <p>
-          その問いは、外から何かを注ぐのではない。<br>
-          あなたの中にすでにある回路を接続する。<br>
-          本来つながるはずだった意味と意味が結ばれ、あなた自身の声で、あなたの天命が語り始める。
-        </p>
+      <div class="founder-accordion fade-in" data-accordion>
+        <button class="founder-accordion__trigger" aria-expanded="false">
+          <span>対話で箭内が行うこと</span>
+          <span class="founder-accordion__icon"></span>
+        </button>
+        <div class="founder-accordion__body">
+          <div class="founder-accordion__content">
+            <p>
+              対話の場で箭内が行うことは、その再現である。
+            </p>
+            <p>
+              答えは語らない。自身の崩壊から、答えが人の認識を狭めることを学んだからだ。<br>
+              代わりに、<strong>ただ一つの問い</strong>を手渡す。深く考えるに値する、その人だけの問いを。
+            </p>
+            <p>
+              その問いは、外から何かを注ぐのではない。<br>
+              あなたの中にすでにある回路を接続する。<br>
+              本来つながるはずだった意味と意味が結ばれ、あなた自身の声で、あなたの天命が語り始める。
+            </p>
+          </div>
+        </div>
       </div>
 
-      <hr class="separator">
-
-      <div class="content-block text-panel fade-in">
-        <p>
-          この瞬間に触れた人が、こう語った。
-        </p>
-        <div class="quote-block fade-in">
-          「生まれてきてよかった」
+      <div class="founder-accordion fade-in" data-accordion>
+        <button class="founder-accordion__trigger" aria-expanded="false">
+          <span>この瞬間に触れた人の声</span>
+          <span class="founder-accordion__icon"></span>
+        </button>
+        <div class="founder-accordion__body">
+          <div class="founder-accordion__content">
+            <p>
+              この瞬間に触れた人が、こう語った。
+            </p>
+            <div class="quote-block">
+              「生まれてきてよかった」
+            </div>
+            <div class="quote-block">
+              「やっと自分の人生が始まった」
+            </div>
+            <p>
+              <strong>箭内宏紀という人間に会う理由は、彼の理論が正しいからではない。</strong>
+            </p>
+            <p>
+              この人が、あの場所を通ってきたからである。
+            </p>
+          </div>
         </div>
-        <div class="quote-block fade-in">
-          「やっと自分の人生が始まった」
-        </div>
-        <p>
-          <strong>箭内宏紀という人間に会う理由は、彼の理論が正しいからではない。</strong>
-        </p>
-        <p>
-          この人が、あの場所を通ってきたからである。
-        </p>
       </div>
     </div>
   </section>
@@ -852,6 +999,16 @@
           });
         }
       }
+
+      // Accordion
+      document.querySelectorAll('[data-accordion]').forEach(function (acc) {
+        var trigger = acc.querySelector('.founder-accordion__trigger');
+        if (!trigger) return;
+        trigger.addEventListener('click', function () {
+          var isOpen = acc.classList.toggle('is-open');
+          trigger.setAttribute('aria-expanded', isOpen);
+        });
+      });
     });
   </script>
   <!-- Search Modal -->
