@@ -186,6 +186,13 @@
       margin-bottom: 0;
     }
 
+    /* アコーディオン内 highlight-block */
+    .es-accordion__content .es-highlight {
+      margin-top: 1.8rem;
+      padding-top: 1.6rem;
+      border-top: 1px solid rgba(192, 168, 120, 0.1);
+    }
+
     /* 開いた時のスタイル */
     .es-accordion__item.is-open {
       border-left-color: #c0a878;
@@ -269,7 +276,75 @@
       border-image: linear-gradient(180deg, #9aadbd 0%, rgba(154, 173, 189, 0.2) 100%) 1;
     }
 
+    /* ── 体験カード ── */
+    .es-experience-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.2rem;
+      margin-top: 2.5rem;
+    }
+    .es-exp-card {
+      position: relative;
+      display: block;
+      padding: 2rem 1.8rem;
+      background: linear-gradient(180deg, rgba(15, 12, 25, 0.6) 0%, rgba(8, 6, 16, 0.5) 100%);
+      border: 1px solid rgba(192, 168, 120, 0.1);
+      border-radius: 2px;
+      text-decoration: none;
+      transition: box-shadow 0.4s ease, border-color 0.4s ease;
+      overflow: hidden;
+    }
+    .es-exp-card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.2), transparent);
+    }
+    .es-exp-card:hover {
+      box-shadow: 0 4px 48px rgba(192, 168, 120, 0.08);
+      border-color: rgba(192, 168, 120, 0.2);
+    }
+    .es-exp-card__label {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(192, 168, 120, 0.5);
+      display: block;
+      margin-bottom: 0.8rem;
+    }
+    .es-exp-card__title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #e8e4df;
+      display: block;
+      line-height: 1.6;
+      border-bottom: none;
+    }
+    .es-exp-card__arrow {
+      display: block;
+      margin-top: 1.2rem;
+      font-size: 0.85rem;
+      color: rgba(192, 168, 120, 0.4);
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+    .es-exp-card:hover .es-exp-card__arrow {
+      color: #c0a878;
+      transform: translateX(4px);
+    }
+
     /* ── レスポンシブ ── */
+    @media (max-width: 768px) {
+      .es-experience-cards {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+      }
+      .es-exp-card {
+        padding: 1.5rem 1.3rem;
+      }
+    }
     @media (max-width: 600px) {
       .definition-declaration {
         margin-top: 60px;
@@ -364,63 +439,68 @@
           <span class="part-label__ja">構造</span>
         </div>
 
-        <!-- (a) 定義文セクション（常時表示） -->
-        <div class="text-panel fade-in">
-          <p>
-            人類は、<strong>「生きる意味」を語る言葉を失った。</strong>
-          </p>
-          <p>
-            いや、失ったのではない。
-          </p>
-          <p>
-            正確に言えば、失ったことにすら気づいていない。
-          </p>
-        </div>
-
-        <div class="text-panel fade-in">
-          <p>
-            <strong>宗教</strong>は信を求め、<strong>哲学</strong>は問いを閉じられず、
-            <strong>科学</strong>は沈黙し、<strong>心理学</strong>は構造の手前で立ち止まった。
-          </p>
-          <p>
-            いずれも正しかった。
-            しかし、いずれも、<strong>決定的に足りなかった。</strong>
-          </p>
-          <p>
-            足りなかったのは、たった一つの視点である。
-          </p>
-          <p>
-            <strong>私たちの「生きる意味」はどのような構造条件のもとで生成するか</strong>──
-          </p>
-          <p>
-            その一点が、数千年のあいだ見落とされていた。
-          </p>
-        </div>
-
-        <div class="highlight-block fade-in">
-          <p>
-            <strong>実存とは、「生きる意味」である。</strong><br>
-            <strong>科学とは、「再現可能な構造」である。</strong>
-          </p>
-          <p>
-            実存科学は、この二つを接続することで、
-            誰もが天命を悟り、日々全うできる社会の実現を目指す。
-          </p>
-          <p>
-            <strong>「生きる意味」を語れる社会をつくる。</strong>
-          </p>
-          <p>
-            これがこの学問の存在意義である。
-          </p>
-        </div>
-
         <!-- アコーディオン: STRUCTURE -->
         <div class="es-accordion fade-in">
+
+          <!-- (a) 「生きる意味」を語る言葉 ── 旧: 定義文＋highlight-block統合 -->
+          <div class="es-accordion__item">
+            <div class="es-accordion__header" role="button" tabindex="0" aria-expanded="false">
+              <span class="es-accordion__num">01</span>
+              <h3 class="es-accordion__title">「生きる意味」を語る言葉</h3>
+              <span class="es-accordion__icon"></span>
+            </div>
+            <div class="es-accordion__body">
+              <div class="es-accordion__content">
+                <p>
+                  人類は、<strong>「生きる意味」を語る言葉を失った。</strong>
+                </p>
+                <p>
+                  いや、失ったのではない。
+                </p>
+                <p>
+                  正確に言えば、失ったことにすら気づいていない。
+                </p>
+                <p>
+                  <strong>宗教</strong>は信を求め、<strong>哲学</strong>は問いを閉じられず、
+                  <strong>科学</strong>は沈黙し、<strong>心理学</strong>は構造の手前で立ち止まった。
+                </p>
+                <p>
+                  いずれも正しかった。
+                  しかし、いずれも、<strong>決定的に足りなかった。</strong>
+                </p>
+                <p>
+                  足りなかったのは、たった一つの視点である。
+                </p>
+                <p>
+                  <strong>私たちの「生きる意味」はどのような構造条件のもとで生成するか</strong>──
+                </p>
+                <p>
+                  その一点が、数千年のあいだ見落とされていた。
+                </p>
+                <div class="es-highlight">
+                  <p>
+                    <strong>実存とは、「生きる意味」である。</strong><br>
+                    <strong>科学とは、「再現可能な構造」である。</strong>
+                  </p>
+                  <p>
+                    実存科学は、この二つを接続することで、
+                    誰もが天命を悟り、日々全うできる社会の実現を目指す。
+                  </p>
+                  <p>
+                    <strong>「生きる意味」を語れる社会をつくる。</strong>
+                  </p>
+                  <p>
+                    これがこの学問の存在意義である。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <!-- (b) 三つの理論体系 -->
           <div class="es-accordion__item">
             <div class="es-accordion__header" role="button" tabindex="0" aria-expanded="false">
-              <span class="es-accordion__num">01</span>
+              <span class="es-accordion__num">02</span>
               <h3 class="es-accordion__title">三つの理論体系</h3>
               <span class="es-accordion__icon"></span>
             </div>
@@ -443,7 +523,7 @@
           <!-- (c) 理論からセッションへの橋渡し -->
           <div class="es-accordion__item">
             <div class="es-accordion__header" role="button" tabindex="0" aria-expanded="false">
-              <span class="es-accordion__num">02</span>
+              <span class="es-accordion__num">03</span>
               <h3 class="es-accordion__title">しかし、理論だけでは届かない。</h3>
               <span class="es-accordion__icon"></span>
             </div>
@@ -482,7 +562,7 @@
           <!-- (d) 天命の言語化セッション™の説明 -->
           <div class="es-accordion__item">
             <div class="es-accordion__header" role="button" tabindex="0" aria-expanded="false">
-              <span class="es-accordion__num">03</span>
+              <span class="es-accordion__num">04</span>
               <h3 class="es-accordion__title">「天命の言語化セッション™」とは？</h3>
               <span class="es-accordion__icon"></span>
             </div>
@@ -515,7 +595,7 @@
           <!-- (e) 天命を悟った人間の描写 -->
           <div class="es-accordion__item">
             <div class="es-accordion__header" role="button" tabindex="0" aria-expanded="false">
-              <span class="es-accordion__num">04</span>
+              <span class="es-accordion__num">05</span>
               <h3 class="es-accordion__title">天命を悟った人間は、どんな困難も乗り越えられる。</h3>
               <span class="es-accordion__icon"></span>
             </div>
@@ -568,7 +648,7 @@
           <!-- (f) 心友™の説明 -->
           <div class="es-accordion__item">
             <div class="es-accordion__header" role="button" tabindex="0" aria-expanded="false">
-              <span class="es-accordion__num">05</span>
+              <span class="es-accordion__num">06</span>
               <h3 class="es-accordion__title">心友™という「絆」</h3>
               <span class="es-accordion__icon"></span>
             </div>
@@ -602,7 +682,7 @@
           <!-- (g) 現代の武士道 -->
           <div class="es-accordion__item">
             <div class="es-accordion__header" role="button" tabindex="0" aria-expanded="false">
-              <span class="es-accordion__num">06</span>
+              <span class="es-accordion__num">07</span>
               <h3 class="es-accordion__title">現代の武士道</h3>
               <span class="es-accordion__icon"></span>
             </div>
@@ -637,7 +717,7 @@
           <!-- (h) 文明の再編 -->
           <div class="es-accordion__item">
             <div class="es-accordion__header" role="button" tabindex="0" aria-expanded="false">
-              <span class="es-accordion__num">07</span>
+              <span class="es-accordion__num">08</span>
               <h3 class="es-accordion__title">文明の再編</h3>
               <span class="es-accordion__icon"></span>
             </div>
@@ -697,7 +777,32 @@
     </div>
   </section>
 
-  <!-- Trilogy -->
+  <!-- Experience Cards -->
+  <section class="section section--bordered">
+    <div class="container fade-in">
+      <h2 class="section__title">実存科学に触れる</h2>
+      <div class="es-experience-cards">
+        <a href="lp.html" class="es-exp-card">
+          <span class="es-exp-card__label">Dark Side Assessment</span>
+          <span class="es-exp-card__title">ダークサイド診断</span>
+          <span class="es-exp-card__arrow">&rarr;</span>
+        </a>
+        <a href="omoidasu/" class="es-exp-card">
+          <span class="es-exp-card__label">Body Intelligence Assessment</span>
+          <span class="es-exp-card__title">身体的知性診断</span>
+          <span class="es-exp-card__arrow">&rarr;</span>
+        </a>
+        <a href="video-list.html" class="es-exp-card">
+          <span class="es-exp-card__label">Video Library</span>
+          <span class="es-exp-card__title">動画一覧</span>
+          <span class="es-exp-card__arrow">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trilogy（コメントアウト：このページの役割は論文への誘導ではない） -->
+  <!--
   <section class="section section--bordered">
     <div class="container--wide fade-in">
       <h2 class="section__title">『The Meta（主要論文三部作）』</h2>
@@ -736,6 +841,7 @@
       </p>
     </div>
   </section>
+  -->
 
   <!-- CTA -->
   <section class="cta-block fade-in">
