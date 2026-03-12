@@ -35,16 +35,16 @@
     .page-container { max-width: var(--max-width); margin: 0 auto; padding: 3rem 1.5rem 6rem; }
 
     .page-header { text-align: center; padding: 4rem 0 3rem; border-bottom: 2px solid var(--accent); margin-bottom: 3rem; }
-    .page-header .label { font-size: 0.85rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 0.8rem; font-family: var(--font-sans); }
-    .page-header .category-tag { font-family: var(--font-sans); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; background: var(--accent); padding: 0.15rem 0.6rem; display: inline-block; margin-bottom: 1rem; }
-    .page-header h1 { font-size: 1.5rem; font-weight: 700; line-height: 1.6; margin-bottom: 0.5rem; }
-    .page-header .date { font-size: 0.9rem; color: var(--text-secondary); font-family: var(--font-sans); }
+    .page-header .label { font-size: var(--fs-small); letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 0.8rem; font-family: var(--font-sans); }
+    .page-header .category-tag { font-family: var(--font-sans); font-size: var(--fs-caption); letter-spacing: 0.1em; text-transform: uppercase; color: #fff; background: var(--accent); padding: 0.15rem 0.6rem; display: inline-block; margin-bottom: 1rem; }
+    .page-header h1 { font-size: var(--fs-section); font-weight: 700; line-height: 1.6; margin-bottom: 0.5rem; }
+    .page-header .date { font-size: var(--fs-body); color: var(--text-secondary); font-family: var(--font-sans); }
 
     p { margin-bottom: 1rem; text-align: justify; }
     strong { font-weight: 700; }
 
-    .section-heading { font-size: 1.15rem; font-weight: 700; margin-top: 3rem; margin-bottom: 1rem; line-height: 1.6; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
-    .subsection-heading { font-size: 1rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.8rem; line-height: 1.6; }
+    .section-heading { font-size: var(--fs-h3); font-weight: 700; margin-top: 3rem; margin-bottom: 1rem; line-height: 1.6; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+    .subsection-heading { font-size: var(--fs-lead); font-weight: 700; margin-top: 2rem; margin-bottom: 0.8rem; line-height: 1.6; }
 
     blockquote { border-left: 3px solid var(--blockquote-border); padding: 0.8rem 1.5rem; margin: 1.5rem 0; color: var(--text-secondary); background: rgba(255,255,255,0.03); }
     blockquote p { margin-bottom: 0.5rem; }
@@ -54,32 +54,32 @@
     .item-list li { margin-bottom: 0.4rem; }
 
     .definition-block { background: var(--definition-bg); border: 1px solid var(--border); padding: 1.5rem 2rem; margin: 2rem 0; }
-    .definition-block h4 { font-size: 0.95rem; letter-spacing: 0.1em; margin-bottom: 1rem; font-family: var(--font-sans); border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+    .definition-block h4 { font-size: var(--fs-body); letter-spacing: 0.1em; margin-bottom: 1rem; font-family: var(--font-sans); border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
 
     .highlight-box { background: var(--highlight); padding: 1.5rem 2rem; border-left: 4px solid var(--accent); margin: 2rem 0; }
 
     hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
 
     /* 定義テーブル */
-    .def-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem; }
+    .def-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: var(--fs-body); }
     .def-table th, .def-table td { border: 1px solid var(--border); padding: 0.7rem 1rem; text-align: left; vertical-align: top; }
-    .def-table th { background: var(--definition-bg); font-weight: 700; white-space: nowrap; width: 8rem; font-family: var(--font-sans); font-size: 0.9rem; }
+    .def-table th { background: var(--definition-bg); font-weight: 700; white-space: nowrap; width: 8rem; font-family: var(--font-sans); font-size: var(--fs-body); }
     .def-table td { line-height: 1.8; }
 
     /* 段階カード */
     .stage { margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
     .stage:last-of-type { border-bottom: none; }
-    .stage-number { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.15em; color: var(--text-secondary); margin-bottom: 0.3rem; }
-    .stage h3 { font-size: 1.1rem; font-weight: 700; line-height: 1.7; margin-bottom: 1rem; }
+    .stage-number { font-family: var(--font-sans); font-size: var(--fs-small); font-weight: 700; letter-spacing: 0.15em; color: var(--text-secondary); margin-bottom: 0.3rem; }
+    .stage h3 { font-size: var(--fs-h3); font-weight: 700; line-height: 1.7; margin-bottom: 1rem; }
     .stage-item { margin-bottom: 0.8rem; }
-    .stage-item-label { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.05em; color: var(--text-secondary); margin-bottom: 0.2rem; }
-    .stage-item p { margin-bottom: 0; font-size: 0.95rem; }
+    .stage-item-label { font-family: var(--font-sans); font-size: var(--fs-small); font-weight: 700; letter-spacing: 0.05em; color: var(--text-secondary); margin-bottom: 0.2rem; }
+    .stage-item p { margin-bottom: 0; font-size: var(--fs-body); }
     .stage-item .inner-voice { font-style: normal; color: var(--text-secondary); }
 
     /* 補足 */
     .note-section { margin-top: 3rem; padding: 2rem; background: var(--definition-bg); border: 1px solid var(--border); }
-    .note-section h3 { font-size: 1rem; font-weight: 700; margin-bottom: 1rem; }
-    .note-section p { font-size: 0.95rem; }
+    .note-section h3 { font-size: var(--fs-lead); font-weight: 700; margin-bottom: 1rem; }
+    .note-section p { font-size: var(--fs-body); }
 
     .back-nav { margin-top: 4rem; padding: 1.5rem 2rem; background: var(--highlight); border: 1px solid var(--border); text-align: center; }
     .back-nav a { color: var(--accent); text-decoration: none; font-weight: 700; }

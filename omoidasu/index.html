@@ -112,7 +112,7 @@ body > * {
   color: var(--color-bg-deep);
   padding: 0.8rem 1.6rem;
   z-index: 10000;
-  font-size: 0.9rem;
+  font-size: var(--fs-body);
   text-decoration: none;
   border-radius: 0 0 4px 4px;
   transition: top 0.2s;
@@ -159,7 +159,7 @@ body > * {
 
 .header-english {
   font-family: var(--garamond);
-  font-size: 0.82rem;
+  font-size: var(--fs-small);
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--gold);
@@ -170,7 +170,7 @@ body > * {
 .header-tag {
   display: inline-block;
   font-family: var(--garamond);
-  font-size: 0.7rem;
+  font-size: var(--fs-caption);
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--gold);
@@ -182,7 +182,7 @@ body > * {
 
 .header h1 {
   font-family: var(--serif);
-  font-size: 2.4rem;
+  font-size: var(--fs-h1);
   font-weight: 700;
   line-height: 1.3;
   letter-spacing: 0.08em;
@@ -192,7 +192,7 @@ body > * {
 
 .header-sub {
   font-family: var(--garamond);
-  font-size: 1rem;
+  font-size: var(--fs-lead);
   color: var(--text-dim);
   letter-spacing: 0.15em;
   font-weight: 400;
@@ -216,7 +216,7 @@ body > * {
 .purpose p {
   margin-bottom: 1.6em;
   color: var(--text-sub);
-  font-size: 0.95rem;
+  font-size: var(--fs-body);
   line-height: 2.2;
 }
 
@@ -226,7 +226,7 @@ blockquote {
   margin: 2rem 0;
   background: var(--gold-bg);
   color: var(--text);
-  font-size: 1rem;
+  font-size: var(--fs-lead);
   line-height: 2.1;
   letter-spacing: 0.04em;
 }
@@ -244,7 +244,7 @@ blockquote strong {
 
 .scale-guide-title {
   font-family: var(--garamond);
-  font-size: 0.72rem;
+  font-size: var(--fs-xs);
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--gold);
@@ -273,13 +273,13 @@ blockquote strong {
   display: block;
   font-family: var(--garamond);
   font-weight: 600;
-  font-size: 1.4rem;
+  font-size: var(--fs-section);
   color: var(--gold);
 }
 
 .scale-item .label {
   display: block;
-  font-size: 0.7rem;
+  font-size: var(--fs-caption);
   color: var(--text-dim);
   font-family: var(--sans);
   margin-top: 0.3rem;
@@ -315,7 +315,7 @@ blockquote strong {
 
 .progress-label {
   font-family: var(--garamond);
-  font-size: 0.65rem;
+  font-size: var(--fs-caption);
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--color-gold-a50);
@@ -324,7 +324,7 @@ blockquote strong {
 
 .progress-count {
   font-family: var(--garamond);
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   font-weight: 600;
   color: var(--gold);
 }
@@ -385,7 +385,7 @@ blockquote strong {
 
 .rt-item .rt-name {
   font-family: var(--garamond);
-  font-size: 0.6rem;
+  font-size: var(--fs-micro);
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--color-gold-a50);
@@ -394,7 +394,7 @@ blockquote strong {
 
 .rt-item .rt-val {
   font-family: var(--serif);
-  font-size: 1.15rem;
+  font-size: var(--fs-h3);
   font-weight: 600;
   color: var(--text-muted);
   transition: color 0.3s;
@@ -412,7 +412,7 @@ blockquote strong {
 
 .q-section-title {
   font-family: var(--garamond);
-  font-size: 1.05rem;
+  font-size: var(--fs-lead);
   font-weight: 400;
   letter-spacing: 0.22em;
   color: var(--gold);
@@ -423,7 +423,7 @@ blockquote strong {
 }
 
 .q-section-note {
-  font-size: 0.8rem;
+  font-size: var(--fs-small);
   color: var(--text-dim);
   margin-bottom: 2.5rem;
   font-style: normal;
@@ -480,7 +480,7 @@ blockquote strong {
 
 .q-num {
   font-family: var(--garamond);
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   font-weight: 400;
   letter-spacing: 0.1em;
   color: var(--color-gold-a50);
@@ -489,7 +489,7 @@ blockquote strong {
 }
 
 .q-text {
-  font-size: 0.95rem;
+  font-size: var(--fs-body);
   line-height: 2.1;
   color: var(--text-sub);
 }
@@ -532,7 +532,7 @@ blockquote strong {
 .q-options .radio-btn .val {
   font-family: var(--garamond);
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: var(--fs-h3);
   color: var(--text-muted);
   transition: color 0.2s;
 }
@@ -566,7 +566,7 @@ blockquote strong {
   background: var(--gold);
   color: var(--bg);
   font-family: var(--garamond);
-  font-size: 0.85rem;
+  font-size: var(--fs-small);
   letter-spacing: 0.2em;
   border: 1px solid var(--gold);
   cursor: pointer;
@@ -583,7 +583,7 @@ blockquote strong {
 
 .error-msg {
   color: var(--status-crisis);
-  font-size: 0.82rem;
+  font-size: var(--fs-small);
   font-family: var(--sans);
   margin-top: 0.8rem;
   display: none;
@@ -619,7 +619,7 @@ blockquote strong {
 
 .results-type-name {
   font-family: var(--garamond);
-  font-size: 0.8rem;
+  font-size: var(--fs-small);
   letter-spacing: 0.25em;
   color: var(--gold);
   text-transform: uppercase;
@@ -649,7 +649,7 @@ blockquote strong {
 
 .total-score .of {
   font-family: var(--garamond);
-  font-size: 1.2rem;
+  font-size: var(--fs-h3);
   color: var(--text-dim);
   font-weight: 300;
 }
@@ -657,7 +657,7 @@ blockquote strong {
 .total-score .total-label {
   display: block;
   font-family: var(--garamond);
-  font-size: 0.65rem;
+  font-size: var(--fs-caption);
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--color-gold-a50);
@@ -681,7 +681,7 @@ blockquote strong {
 
 .bar-label {
   font-family: var(--garamond);
-  font-size: 0.72rem;
+  font-size: var(--fs-xs);
   font-weight: 400;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -718,7 +718,7 @@ blockquote strong {
 
 .bar-num {
   font-family: var(--serif);
-  font-size: 1.15rem;
+  font-size: var(--fs-h3);
   font-weight: 600;
   min-width: 1.8rem;
   color: var(--text-bright);
@@ -726,7 +726,7 @@ blockquote strong {
 
 .bar-status {
   font-family: var(--garamond);
-  font-size: 0.65rem;
+  font-size: var(--fs-caption);
   font-weight: 400;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -764,7 +764,7 @@ blockquote strong {
 
 .letter-card h2 {
   font-family: var(--serif);
-  font-size: 1.15rem;
+  font-size: var(--fs-h3);
   font-weight: 600;
   letter-spacing: 0.06em;
   color: var(--text-bright);
@@ -775,7 +775,7 @@ blockquote strong {
 
 .letter-card h3 {
   font-family: var(--garamond);
-  font-size: 1.05rem;
+  font-size: var(--fs-lead);
   font-weight: 400;
   letter-spacing: 0.22em;
   color: var(--gold);
@@ -786,7 +786,7 @@ blockquote strong {
 }
 
 .letter-card p {
-  font-size: 0.95rem;
+  font-size: var(--fs-body);
   line-height: 2.2;
   color: var(--text-sub);
   margin-bottom: 1.4rem;
@@ -802,7 +802,7 @@ blockquote strong {
 .letter-card ul,
 .letter-card ol {
   margin: 0.5rem 0 1.5rem 1rem;
-  font-size: 0.95rem;
+  font-size: var(--fs-body);
   line-height: 2.2;
   color: var(--text-sub);
   list-style: none;
@@ -827,7 +827,7 @@ blockquote strong {
   background: var(--gold-bg);
   padding: 1.5rem 2rem;
   margin: 1.8rem 0;
-  font-size: 0.95rem;
+  font-size: var(--fs-body);
   line-height: 2.2;
 }
 
@@ -848,7 +848,7 @@ blockquote strong {
 
 .copy-btn {
   font-family: var(--garamond);
-  font-size: 0.82rem;
+  font-size: var(--fs-small);
   font-weight: 400;
   letter-spacing: 0.15em;
   background: transparent;
@@ -871,7 +871,7 @@ blockquote strong {
 
 .retry-btn {
   font-family: var(--garamond);
-  font-size: 0.82rem;
+  font-size: var(--fs-small);
   font-weight: 400;
   letter-spacing: 0.15em;
   background: transparent;
@@ -909,7 +909,7 @@ blockquote strong {
 
 .cta-lead {
   font-family: var(--serif);
-  font-size: 1.5rem;
+  font-size: var(--fs-section);
   font-weight: 600;
   color: var(--text-bright);
   margin-bottom: 1rem;
@@ -917,7 +917,7 @@ blockquote strong {
 }
 
 .cta-sub {
-  font-size: 0.92rem;
+  font-size: var(--fs-body);
   color: var(--text-dim);
   margin-bottom: 2.5rem;
   line-height: 2.1;
@@ -932,7 +932,7 @@ blockquote strong {
   background: var(--gold);
   color: var(--bg);
   font-family: var(--garamond);
-  font-size: 0.85rem;
+  font-size: var(--fs-small);
   letter-spacing: 0.2em;
   border: 1px solid var(--gold);
   text-decoration: none;
@@ -969,22 +969,22 @@ blockquote strong {
   .header h1 { font-size: 1.9rem; }
 
   .scale-item { padding: 0.8rem 0.2rem; }
-  .scale-item .num { font-size: 1.1rem; }
-  .scale-item .label { font-size: 0.6rem; }
+  .scale-item .num { font-size: var(--fs-h3); }
+  .scale-item .label { font-size: var(--fs-micro); }
 
   .q-options { padding-left: 0; }
   .radio-btn { padding: 0.6rem 0.2rem !important; min-height: 42px !important; }
-  .radio-btn .val { font-size: 0.95rem !important; }
+  .radio-btn .val { font-size: var(--fs-body) !important; }
 
   .progress-inner, .realtime-inner { padding: 0 1.5rem; }
-  .rt-item .rt-val { font-size: 1rem; }
+  .rt-item .rt-val { font-size: var(--fs-lead); }
 
   .bar-row { gap: 0.5rem; }
-  .bar-label { min-width: 2.8rem; font-size: 0.6rem; }
-  .bar-num { font-size: 1rem; }
+  .bar-label { min-width: 2.8rem; font-size: var(--fs-micro); }
+  .bar-num { font-size: var(--fs-lead); }
   .bar-info { min-width: 4.5rem; gap: 0.3rem; }
 
-  .total-score .big-num { font-size: 3rem; }
+  .total-score .big-num { font-size: var(--fs-hero); }
 
   .letter-card { padding: 2rem 1.5rem; }
 

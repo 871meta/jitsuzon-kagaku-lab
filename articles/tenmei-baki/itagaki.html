@@ -37,7 +37,7 @@
 
 /* === 1. セクション見出し — 中央配置＋装飾 === */
 h2.chapter-heading {
-  font-size: 1.5rem;
+  font-size: var(--fs-section);
   font-weight: 700;
   line-height: 1.5;
   letter-spacing: 0.06em;
@@ -85,20 +85,20 @@ hr.separator::after {
   background: transparent;
   padding: 0 1.5rem;
   color: rgba(192,168,120,0.25);
-  font-size: 0.7rem;
+  font-size: var(--fs-caption);
 }
 
 /* === 3. h3 — 左ボーダー === */
 h3 {
   border-left: 3px solid var(--color-gold);
   padding-left: 0.8em;
-  font-size: 1.05rem;
+  font-size: var(--fs-lead);
   line-height: 1.6;
 }
 
 /* === 4. 手紙の宛名 === */
 .letter-address {
-  font-size: 1.1rem;
+  font-size: var(--fs-h3);
   color: var(--color-gold);
   font-weight: 600;
   letter-spacing: 0.06em;
@@ -123,12 +123,12 @@ h3 {
 }
 .character-letter-block h3 {
   color: var(--color-text-body);
-  font-size: 1.05rem;
+  font-size: var(--fs-lead);
   margin-bottom: 1rem;
   border-left: 3px solid rgba(192,168,120,0.5);
 }
 .character-letter-block p {
-  font-size: 0.92rem;
+  font-size: var(--fs-body);
   line-height: 2.2;
   color: var(--color-text-reading);
   margin-bottom: 0.8rem;
@@ -140,7 +140,7 @@ h3 {
 /* === 6. 天命動詞ライン === */
 .verb-line {
   margin-top: 1.2rem;
-  font-size: 0.95rem;
+  font-size: var(--fs-body);
   color: var(--color-gold);
   font-weight: 600;
   letter-spacing: 0.06em;
@@ -153,7 +153,7 @@ h3 {
   border-image: linear-gradient(180deg, var(--color-gold) 0%, rgba(192,168,120,0.15) 100%) 1;
   padding: 1.2rem 1.5rem;
   margin: 1.5rem 0;
-  font-size: 0.92rem;
+  font-size: var(--fs-body);
   line-height: 2.2;
   color: var(--color-text-body);
 }
@@ -168,7 +168,7 @@ h3 {
 .letter-signature {
   text-align: right;
   margin-top: 2rem;
-  font-size: 1rem;
+  font-size: var(--fs-lead);
   color: var(--color-gold);
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -180,7 +180,7 @@ h3 {
   border-left: 3px solid var(--color-gold);
   padding: 1.8rem 2rem;
   margin: 2rem 0;
-  font-size: 0.95rem;
+  font-size: var(--fs-body);
   font-weight: 500;
   line-height: 2.2;
   color: var(--color-text-primary);
@@ -204,7 +204,7 @@ h3 {
 }
 .profiling-block h3 {
   font-family: var(--font-serif-en);
-  font-size: 0.8rem;
+  font-size: var(--fs-small);
   font-weight: 600;
   letter-spacing: 0.25em;
   text-transform: uppercase;
@@ -214,7 +214,7 @@ h3 {
   padding-left: 0;
 }
 .profiling-block p {
-  font-size: 0.92rem;
+  font-size: var(--fs-body);
   line-height: 2.2;
   color: var(--color-text-reading);
 }

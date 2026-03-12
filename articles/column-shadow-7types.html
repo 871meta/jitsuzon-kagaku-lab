@@ -24,14 +24,14 @@
     body { font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif; color: var(--text); background: var(--bg); line-height: 2; -webkit-font-smoothing: antialiased; }
     .page-container { max-width: var(--max-width); margin: 0 auto; padding: 3rem 1.5rem 6rem; }
     .page-header { text-align: center; padding: 4rem 0 3rem; border-bottom: 2px solid var(--accent); margin-bottom: 3rem; }
-    .page-header .label { font-size: 0.85rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 0.8rem; font-family: var(--font-sans); }
-    .page-header .category-tag { font-family: var(--font-sans); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; background: var(--accent); padding: 0.15rem 0.6rem; display: inline-block; margin-bottom: 1rem; }
-    .page-header h1 { font-size: 1.4rem; font-weight: 700; line-height: 1.6; margin-bottom: 0.3rem; }
-    .page-header .subtitle { font-size: 0.95rem; color: var(--text-secondary); }
+    .page-header .label { font-size: var(--fs-small); letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 0.8rem; font-family: var(--font-sans); }
+    .page-header .category-tag { font-family: var(--font-sans); font-size: var(--fs-caption); letter-spacing: 0.1em; text-transform: uppercase; color: #fff; background: var(--accent); padding: 0.15rem 0.6rem; display: inline-block; margin-bottom: 1rem; }
+    .page-header h1 { font-size: var(--fs-section); font-weight: 700; line-height: 1.6; margin-bottom: 0.3rem; }
+    .page-header .subtitle { font-size: var(--fs-body); color: var(--text-secondary); }
     p { margin-bottom: 1rem; text-align: justify; }
     strong { font-weight: 700; }
     h2.chapter-heading { font-size: 1.3rem; font-weight: 700; margin-top: 4rem; margin-bottom: 1rem; line-height: 1.5; padding-bottom: 0.8rem; border-bottom: 2px solid var(--accent); }
-    h3.section-heading { font-size: 1.1rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.8rem; line-height: 1.6; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
+    h3.section-heading { font-size: var(--fs-h3); font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.8rem; line-height: 1.6; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
     blockquote { border-left: 3px solid var(--blockquote-border); padding: 0.8rem 1.5rem; margin: 1.5rem 0; color: var(--text-secondary); background: rgba(255,255,255,0.03); }
     blockquote p:last-child { margin-bottom: 0; }
     .item-list { margin: 1rem 0 1rem 1.5rem; line-height: 2; }
@@ -43,7 +43,7 @@
     .pull-quote::before, .pull-quote::after { content: ""; display: block; width: 32px; height: 1px; background: var(--color-gold-a30); margin: 0 auto; }
     .pull-quote::before { margin-bottom: 2rem; }
     .pull-quote::after { margin-top: 2rem; }
-    .pull-quote p { font-size: 1.05rem; font-weight: 600; color: var(--color-text-primary); line-height: 2; letter-spacing: 0.06em; margin-bottom: 0; }
+    .pull-quote p { font-size: var(--fs-lead); font-weight: 600; color: var(--color-text-primary); line-height: 2; letter-spacing: 0.06em; margin-bottom: 0; }
 
     /* Text Panel */
     .text-panel { background: linear-gradient(180deg, var(--color-panel) 0%, var(--color-overlay-soft) 100%); border: 1px solid var(--color-gold-a06); border-radius: 2px; padding: 2.5rem 2rem; margin-bottom: 1.5rem; position: relative; overflow: hidden; }
@@ -57,15 +57,15 @@
 
     /* Highlight Block (footer) */
     .highlight-block { background: var(--definition-bg); border-left: 2px solid; border-image: linear-gradient(180deg, var(--color-gold) 0%, var(--color-gold-a20) 100%) 1; padding: 2rem; margin: 2rem 0; }
-    .highlight-block p { font-size: 0.95rem; line-height: 2.2; margin-bottom: 0; }
+    .highlight-block p { font-size: var(--fs-body); line-height: 2.2; margin-bottom: 0; }
 
     /* Shadow Card */
     .shadow-card { background: linear-gradient(180deg, var(--color-panel) 0%, rgba(8, 6, 16, 0.5) 100%); border: 1px solid var(--color-gold-a08); border-radius: 2px; padding: 2.2rem 2rem; margin: 2rem 0; position: relative; overflow: hidden; }
     .shadow-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--color-gold-a25), transparent); }
-    .shadow-card__id { font-family: var(--font-serif-en); font-size: 0.85rem; letter-spacing: 0.15em; color: var(--accent); text-transform: uppercase; margin-bottom: 0.6rem; }
-    .shadow-card__title { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--color-text-primary); }
+    .shadow-card__id { font-family: var(--font-serif-en); font-size: var(--fs-small); letter-spacing: 0.15em; color: var(--accent); text-transform: uppercase; margin-bottom: 0.6rem; }
+    .shadow-card__title { font-size: var(--fs-h3); font-weight: 700; margin-bottom: 0.4rem; color: var(--color-text-primary); }
     .shadow-card__meta { display: flex; flex-direction: column; gap: 0.3rem; margin-bottom: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--color-gold-a10); }
-    .shadow-card__meta-item { font-size: 0.88rem; line-height: 1.8; }
+    .shadow-card__meta-item { font-size: var(--fs-body); line-height: 1.8; }
     .shadow-card__meta-label { color: var(--text-secondary); margin-right: 0.5rem; }
     .shadow-card p { margin-bottom: 1rem; }
     .shadow-card p:last-child { margin-bottom: 0; }
@@ -78,8 +78,8 @@
     /* Overview Table */
     .shadow-overview { margin: 2.5rem 0; overflow-x: auto; -webkit-overflow-scrolling: touch; }
     .shadow-overview table { width: 100%; border-collapse: collapse; min-width: 640px; }
-    .shadow-overview th { font-family: var(--font-serif-en); font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); padding: 0.8rem 1rem; border-bottom: 2px solid var(--color-gold-a20); text-align: left; white-space: nowrap; }
-    .shadow-overview td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--color-gold-a08); font-size: 0.88rem; line-height: 1.8; color: var(--color-text-subtle); vertical-align: top; }
+    .shadow-overview th { font-family: var(--font-serif-en); font-size: var(--fs-xs); letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); padding: 0.8rem 1rem; border-bottom: 2px solid var(--color-gold-a20); text-align: left; white-space: nowrap; }
+    .shadow-overview td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--color-gold-a08); font-size: var(--fs-body); line-height: 1.8; color: var(--color-text-subtle); vertical-align: top; }
     .shadow-overview td:first-child { font-weight: 600; color: var(--color-text-primary); white-space: nowrap; }
     .shadow-overview td:nth-child(2) { white-space: nowrap; }
     .shadow-overview tbody tr:nth-child(even) td { background: rgba(255, 255, 255, 0.015); }
@@ -87,25 +87,25 @@
     .shadow-overview tbody tr:last-child td { border-bottom: 1px solid var(--color-gold-a15); }
     .shadow-overview .type-dark { color: var(--text-secondary); }
     .shadow-overview .type-light { color: #e8d0a0; font-weight: 600; }
-    .table-scroll-hint { display: none; text-align: center; font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.5rem; }
+    .table-scroll-hint { display: none; text-align: center; font-size: var(--fs-xs); color: var(--text-secondary); margin-top: 0.5rem; }
 
     /* Phase Box */
     .phase-box { background: var(--color-panel-light); border: 1px solid var(--color-gold-a10); padding: 1.8rem 1.5rem; margin: 1.5rem 0; }
-    .phase-box__label { font-family: var(--font-serif-en); font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem; }
+    .phase-box__label { font-family: var(--font-serif-en); font-size: var(--fs-small); letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem; }
     .phase-box p { margin-bottom: 0.8rem; }
     .phase-box p:last-child { margin-bottom: 0; }
 
     /* Formula */
-    .formula-block { text-align: center; padding: 1.5rem; margin: 1.5rem 0; background: rgba(192, 168, 120, 0.03); border: 1px solid var(--color-gold-a10); font-family: "Cambria Math", "Noto Sans JP", monospace; font-size: 1.05rem; letter-spacing: 0.08em; color: var(--color-text-primary); }
+    .formula-block { text-align: center; padding: 1.5rem; margin: 1.5rem 0; background: rgba(192, 168, 120, 0.03); border: 1px solid var(--color-gold-a10); font-family: "Cambria Math", "Noto Sans JP", monospace; font-size: var(--fs-lead); letter-spacing: 0.08em; color: var(--color-text-primary); }
 
     /* Author */
     .author-block { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
-    .author-block p { font-size: 0.88rem; line-height: 2; color: var(--text-secondary); margin-bottom: 0.4rem; }
-    .author-block p:first-child { font-weight: 700; color: var(--text); font-size: 0.95rem; }
+    .author-block p { font-size: var(--fs-body); line-height: 2; color: var(--text-secondary); margin-bottom: 0.4rem; }
+    .author-block p:first-child { font-weight: 700; color: var(--text); font-size: var(--fs-body); }
 
     /* CTA */
     .cta-block { margin-top: 2rem; padding: 2rem; background: var(--definition-bg); border-left: 2px solid; border-image: linear-gradient(180deg, var(--color-gold) 0%, var(--color-gold-a20) 100%) 1; }
-    .cta-block p { font-size: 0.9rem; line-height: 2; margin-bottom: 0.5rem; }
+    .cta-block p { font-size: var(--fs-body); line-height: 2; margin-bottom: 0.5rem; }
     .cta-block p:last-child { margin-bottom: 0; }
     .cta-block a { color: var(--accent); font-weight: 700; }
     .cta-block a:hover { color: var(--color-gold-light); }
@@ -119,11 +119,11 @@
     @media (max-width: 600px) {
       html { font-size: 15px; }
       .page-container { padding: 2rem 1rem 4rem; }
-      .page-header h1 { font-size: 1.2rem; }
-      h2.chapter-heading { font-size: 1.15rem; }
+      .page-header h1 { font-size: var(--fs-h3); }
+      h2.chapter-heading { font-size: var(--fs-h3); }
       .text-panel { padding: 1.8rem 1.2rem; }
       .shadow-card { padding: 1.6rem 1.2rem; }
-      .shadow-overview td, .shadow-overview th { padding: 0.6rem 0.8rem; font-size: 0.78rem; }
+      .shadow-overview td, .shadow-overview th { padding: 0.6rem 0.8rem; font-size: var(--fs-xs); }
     }
 
 /* === Dark Theme Override === */

@@ -33,15 +33,15 @@
 
     /* HEADER */
     .page-header { text-align: center; padding: 4rem 0 2.5rem; border-bottom: 2px solid var(--accent); margin-bottom: 2rem; }
-    .page-header .label { font-size: 0.85rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 1rem; font-family: var(--font-sans); }
-    .page-header h1 { font-size: 1.5rem; font-weight: 700; line-height: 1.6; }
-    .page-header .desc { font-size: 0.95rem; color: var(--text-secondary); margin-top: 0.8rem; line-height: 1.8; }
+    .page-header .label { font-size: var(--fs-small); letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 1rem; font-family: var(--font-sans); }
+    .page-header h1 { font-size: var(--fs-section); font-weight: 700; line-height: 1.6; }
+    .page-header .desc { font-size: var(--fs-body); color: var(--text-secondary); margin-top: 0.8rem; line-height: 1.8; }
 
     /* CATEGORY FILTER */
     .category-filter { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
     .category-btn {
       font-family: var(--font-sans);
-      font-size: 0.85rem;
+      font-size: var(--fs-small);
       padding: 0.4rem 1rem;
       border: 1px solid var(--border);
       background: transparent;
@@ -70,7 +70,7 @@
     }
     .article-category {
       font-family: var(--font-sans);
-      font-size: 0.7rem;
+      font-size: var(--fs-caption);
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: #fff;
@@ -80,11 +80,11 @@
     }
     .article-date {
       font-family: var(--font-sans);
-      font-size: 0.8rem;
+      font-size: var(--fs-small);
       color: var(--text-secondary);
     }
     .article-title {
-      font-size: 1.05rem;
+      font-size: var(--fs-lead);
       font-weight: 700;
       line-height: 1.7;
       margin-bottom: 0.3rem;
@@ -95,7 +95,7 @@
     }
     .article-title a:hover { text-decoration: underline; }
     .article-excerpt {
-      font-size: 0.9rem;
+      font-size: var(--fs-body);
       color: var(--text-secondary);
       line-height: 1.8;
     }
@@ -103,7 +103,7 @@
     /* COUNT */
     .article-count {
       font-family: var(--font-sans);
-      font-size: 0.85rem;
+      font-size: var(--fs-small);
       color: var(--text-secondary);
       margin-bottom: 1.5rem;
     }
@@ -114,7 +114,7 @@
       .page-header { padding: 2rem 0; }
       .page-header h1 { font-size: 1.25rem; }
       .category-filter { gap: 0.3rem; }
-      .category-btn { font-size: 0.8rem; padding: 0.3rem 0.7rem; }
+      .category-btn { font-size: var(--fs-small); padding: 0.3rem 0.7rem; }
     }
 
 /* === Dark Theme Override === */

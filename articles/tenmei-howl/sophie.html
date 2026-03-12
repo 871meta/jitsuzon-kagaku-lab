@@ -36,7 +36,7 @@
 
 /* === 1. 章見出し — 中央配置＋装飾 === */
 h2.chapter-heading {
-  font-size: 1.5rem;
+  font-size: var(--fs-section);
   font-weight: 700;
   line-height: 1.5;
   letter-spacing: 0.06em;
@@ -70,7 +70,7 @@ h2.chapter-heading::after {
 .chapter-number {
   display: block;
   font-family: var(--font-serif-en);
-  font-size: 0.7rem;
+  font-size: var(--fs-caption);
   font-weight: 400;
   letter-spacing: 0.35em;
   text-transform: uppercase;
@@ -120,7 +120,7 @@ hr::after {
   top: -0.6em;
   left: 2rem;
   font-family: var(--font-serif-en);
-  font-size: 0.6rem;
+  font-size: var(--fs-micro);
   letter-spacing: 0.3em;
   color: rgba(192,168,120,0.4);
   background: var(--color-bg-deep);
@@ -130,8 +130,8 @@ hr::after {
   margin-bottom: 1.1em;
   line-height: 2.2;
 }
-.session-dialogue .speaker-yanai { color: var(--color-gold); font-weight: 600; font-size: 0.92rem; }
-.session-dialogue .speaker-sophie { color: var(--color-text-body); font-weight: 600; font-size: 0.92rem; }
+.session-dialogue .speaker-yanai { color: var(--color-gold); font-weight: 600; font-size: var(--fs-body); }
+.session-dialogue .speaker-sophie { color: var(--color-text-body); font-weight: 600; font-size: var(--fs-body); }
 
 /* 箭内の発言：金色の左ボーダー */
 .session-dialogue .line-yanai {
@@ -148,7 +148,7 @@ hr::after {
   font-style: italic;
   text-align: center;
   margin: 2em 0;
-  font-size: 0.85rem;
+  font-size: var(--fs-small);
   letter-spacing: 0.15em;
 }
 .session-dialogue .silence::before,
@@ -186,7 +186,7 @@ section > .text-panel:nth-of-type(even)::before {
   margin: 2.5rem 0;
 }
 .highlight-block p {
-  font-size: 1rem;
+  font-size: var(--fs-lead);
   font-weight: 500;
   line-height: 2.2;
   color: var(--color-text-primary);
@@ -194,7 +194,7 @@ section > .text-panel:nth-of-type(even)::before {
 
 /* === 6. セクション見出し（h3） === */
 h3.section-heading {
-  font-size: 1.1rem;
+  font-size: var(--fs-h3);
   font-weight: 600;
   color: var(--color-text-body);
   letter-spacing: 0.08em;
@@ -223,7 +223,7 @@ h3.section-heading {
   background: linear-gradient(90deg, transparent, rgba(192,168,120,0.4), transparent);
 }
 .profiling-block h3 {
-  font-size: 0.92rem;
+  font-size: var(--fs-body);
   color: var(--color-gold);
   letter-spacing: 0.15em;
   margin-bottom: 1.5rem;
@@ -239,7 +239,7 @@ h3.section-heading {
 .profiling-block ul li {
   margin-bottom: 1rem;
   color: var(--color-text-reading);
-  font-size: 0.9rem;
+  font-size: var(--fs-body);
   line-height: 1.9;
   padding-left: 1.6em;
   position: relative;
@@ -265,7 +265,7 @@ h3.section-heading {
   width: 100%;
   border-collapse: collapse;
   margin: 1.5rem 0;
-  font-size: 0.88rem;
+  font-size: var(--fs-body);
 }
 .comparison-table th,
 .comparison-table td {
@@ -278,7 +278,7 @@ h3.section-heading {
   color: var(--color-gold);
   font-weight: 600;
   letter-spacing: 0.1em;
-  font-size: 0.82rem;
+  font-size: var(--fs-small);
 }
 .comparison-table td { color: var(--color-text-reading); }
 
@@ -291,13 +291,13 @@ h3.section-heading {
   text-align: center;
 }
 .cta-block h3 {
-  font-size: 1.1rem;
+  font-size: var(--fs-h3);
   color: var(--color-text-body);
   margin-bottom: 1rem;
   font-weight: 600;
 }
 .cta-block p {
-  font-size: 0.92rem;
+  font-size: var(--fs-body);
   color: var(--color-text-reading);
   line-height: 2.2;
   margin-bottom: 1.2rem;
@@ -309,7 +309,7 @@ h3.section-heading {
   color: #080610;
   text-decoration: none;
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: var(--fs-body);
   letter-spacing: 0.1em;
   transition: opacity 0.2s;
   border-bottom: none;
@@ -322,13 +322,13 @@ h3.section-heading {
   padding-top: 2rem;
   border-top: 1px solid rgba(192,168,120,0.15);
 }
-.author-block p { font-size: 0.88rem; color: var(--color-text-reading); line-height: 2; }
+.author-block p { font-size: var(--fs-body); color: var(--color-text-reading); line-height: 2; }
 .author-block strong { color: var(--color-text-body); }
 
 /* === Source Note === */
 .source-note {
   margin-top: 2rem;
-  font-size: 0.82rem;
+  font-size: var(--fs-small);
   color: rgba(235,232,225,0.35);
 }
 
@@ -338,7 +338,7 @@ h3.section-heading {
   padding: 1.5rem 2rem;
   background: rgba(192,168,120,0.04);
   border: 1px solid rgba(192,168,120,0.1);
-  font-size: 0.88rem;
+  font-size: var(--fs-body);
   color: var(--color-text-reading);
   line-height: 2;
 }
@@ -352,12 +352,12 @@ h3.section-heading {
     padding-top: 1.5rem;
   }
   .chapter-number {
-    font-size: 0.6rem;
+    font-size: var(--fs-micro);
     letter-spacing: 0.25em;
     margin-bottom: 0.4rem;
   }
   h3.section-heading {
-    font-size: 1rem;
+    font-size: var(--fs-lead);
     margin-top: 2rem;
     padding-left: 1rem;
   }
@@ -370,7 +370,7 @@ h3.section-heading {
   .session-dialogue .line-character { margin-left: 0.8rem; }
   .profiling-block { padding: 1.5rem 1.2rem; }
   .cta-block { padding: 2rem 1.2rem; }
-  .comparison-table { font-size: 0.78rem; }
+  .comparison-table { font-size: var(--fs-xs); }
   .comparison-table th, .comparison-table td { padding: 0.5rem 0.6rem; }
   .highlight-block { padding: 1.5rem 1.2rem 1.5rem 1.4rem; }
   .text-panel { padding: 2rem 1.5rem; }
@@ -381,7 +381,7 @@ h3.section-heading {
   .highlight-block p br,
   .def-box p br,
   .session-dialogue p br { display: none; }
-  h2.chapter-heading { font-size: 1.15rem; }
+  h2.chapter-heading { font-size: var(--fs-h3); }
   .session-dialogue p:nth-child(10n) {
     margin-bottom: 1.5em;
     padding-bottom: 1em;
