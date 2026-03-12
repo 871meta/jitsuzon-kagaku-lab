@@ -29,7 +29,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="css/style.min.css?v=11">
+  <link rel="stylesheet" href="css/style.min.css?v=14">
   <style>
     /* ============================================
        Contact Page — Luxury Form Styles
@@ -255,6 +255,20 @@
       }
     }
   </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "お問い合わせ",
+  "description": "セッションに関するご質問、その他のお問い合わせはこちらから。",
+  "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/contact.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/"
+  }
+}
+</script>
 </head>
 
 <body>
@@ -288,6 +302,13 @@
   <!-- Page Hero -->
   <section class="page-hero" id="main">
     <div class="container">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="パンくずリスト">
+        <ol class="breadcrumb__list">
+          <li class="breadcrumb__item"><a href="index.html" class="breadcrumb__link">TOP</a></li>
+          <li class="breadcrumb__item"><span class="breadcrumb__current">お問い合わせ</span></li>
+        </ol>
+      </nav>
       <p class="page-hero__sub">Contact</p>
       <h1>お問い合わせ</h1>
       <p class="page-hero__lead">
@@ -339,6 +360,18 @@
         <p>ご連絡いただきありがとうございます。<br>通常3営業日以内にご返信いたします。</p>
       </div>
 
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-block fade-in">
+    <div class="container">
+      <h2 class="cta-block__title">天命の言語化セッション</h2>
+      <p class="cta-block__desc">
+        問い合わせの前に、まずセッションの詳細をご覧ください。<br>
+        2時間の対話で、あなたのMetaを言語化する。
+      </p>
+      <a href="trial.html" class="btn">セッション詳細を見る &rarr;</a>
     </div>
   </section>
 

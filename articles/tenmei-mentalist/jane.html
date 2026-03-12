@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../css/style.min.css?v=11">
+  <link rel="stylesheet" href="../../css/style.min.css?v=14">
 
 <style>
 /* =============================================
@@ -421,6 +421,15 @@ h3.section-heading {
   <!-- Page Hero -->
   <section class="page-hero">
     <div class="container">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="パンくずリスト">
+        <ol class="breadcrumb__list">
+          <li class="breadcrumb__item"><a href="../../index.html" class="breadcrumb__link">TOP</a></li>
+          <li class="breadcrumb__item"><a href="../../specials.html" class="breadcrumb__link">Specials</a></li>
+          <li class="breadcrumb__item"><a href="./" class="breadcrumb__link">メンタリスト篇</a></li>
+          <li class="breadcrumb__item"><span class="breadcrumb__current">パトリック・ジェーンのMeta</span></li>
+        </ol>
+      </nav>
       <p class="page-hero__sub">THE MENTALIST × Existential Science</p>
       <h1>パトリック・ジェーンのMeta ── 自由意志なき世界の天命論</h1>
       <p class="page-hero__lead">箭内宏紀｜実存科学研究所</p>
@@ -946,6 +955,86 @@ h3.section-heading {
     <p class="source-note fade-in">本稿で扱った作品：ブルーノ・ヘラー制作『THE MENTALIST（メンタリスト）』（CBS、2008-2015）</p>
 
   </main>
+
+  <!-- Floating TOC -->
+  <nav class="floating-toc" id="floatingToc" aria-label="目次">
+    <p class="floating-toc__title">Contents</p>
+    <ol class="floating-toc__list" id="floatingTocList"></ol>
+  </nav>
+  <button class="floating-toc-toggle" id="floatingTocToggle" aria-label="目次を開閉">☰</button>
+
+  <script>
+  (function(){
+    var headings = document.querySelectorAll('h2.chapter-heading');
+    var list = document.getElementById('floatingTocList');
+    var toc = document.getElementById('floatingToc');
+    var toggle = document.getElementById('floatingTocToggle');
+    if (!headings.length || !list) return;
+
+    // Build TOC
+    headings.forEach(function(h, i){
+      var id = 'toc-section-' + i;
+      h.id = id;
+      var li = document.createElement('li');
+      li.className = 'floating-toc__item';
+      var a = document.createElement('a');
+      a.className = 'floating-toc__link';
+      a.href = '#' + id;
+      // Extract text: skip .chapter-number spans
+      var text = h.textContent.replace(/\s+/g, ' ').trim();
+      var numSpan = h.querySelector('.chapter-number');
+      if (numSpan) {
+        text = text.replace(numSpan.textContent.replace(/\s+/g, ' ').trim(), '').trim();
+      }
+      // Truncate long titles
+      if (text.length > 28) text = text.substring(0, 28) + '\u2026';
+      a.textContent = text;
+      a.addEventListener('click', function(e){
+        e.preventDefault();
+        document.getElementById(id).scrollIntoView({behavior:'smooth', block:'start'});
+        // Close mobile TOC
+        toc.classList.remove('is-open');
+      });
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+
+    // Show/hide TOC based on scroll position
+    var heroEnd = 400;
+    var links = list.querySelectorAll('.floating-toc__link');
+
+    function updateToc(){
+      var scrollY = window.scrollY || window.pageYOffset;
+      var show = scrollY > heroEnd;
+      toc.classList.toggle('is-visible', show);
+      toggle.classList.toggle('is-visible', show);
+
+      // Highlight current section
+      var current = -1;
+      headings.forEach(function(h, i){
+        if (h.getBoundingClientRect().top < window.innerHeight * 0.35) current = i;
+      });
+      links.forEach(function(a, i){
+        a.classList.toggle('is-active', i === current);
+      });
+    }
+
+    window.addEventListener('scroll', updateToc, {passive: true});
+    updateToc();
+
+    // Mobile toggle
+    toggle.addEventListener('click', function(){
+      toc.classList.toggle('is-open');
+    });
+
+    // Close TOC on click outside (mobile)
+    document.addEventListener('click', function(e){
+      if (!toc.contains(e.target) && e.target !== toggle) {
+        toc.classList.remove('is-open');
+      }
+    });
+  })();
+  </script>
 
   <!-- Site Footer -->
   <footer class="site-footer">

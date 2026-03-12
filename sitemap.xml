@@ -108,11 +108,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/meta-install.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/faq.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
