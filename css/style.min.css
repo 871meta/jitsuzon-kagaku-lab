@@ -589,9 +589,10 @@ a.site-logo:not(.btn):not(.session-card__link):hover {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--color-gold-a20), transparent);
+  height: 120px;
+  background: linear-gradient(to bottom, transparent, var(--color-bg));
   z-index: 2;
+  pointer-events: none;
 }
 
 .hero::after {
