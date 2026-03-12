@@ -19,13 +19,13 @@
   <meta name="description" content="実存科学が導出した7つのシャドウの構造類型。闇のシャドウ（S1〜S6）とゴールデンシャドウ（S7）。あなたの痛みには構造がある。名前がつく。構造が見える。見えれば、扱える。">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --text: rgba(235, 232, 225, 0.92); --text-secondary: rgba(235, 232, 225, 0.55); --bg: #080610; --border: rgba(192, 168, 120, 0.15); --accent: #c0a878; --highlight: rgba(192, 168, 120, 0.06); --blockquote-border: rgba(192, 168, 120, 0.4); --definition-bg: rgba(192, 168, 120, 0.04); --max-width: 780px; }
+    :root { --text: rgba(235, 232, 225, 0.92); --text-secondary: rgba(235, 232, 225, 0.55); --bg: #080610; --border: var(--color-gold-a15); --accent: var(--color-gold); --highlight: var(--color-gold-a06); --blockquote-border: var(--color-gold-a40); --definition-bg: var(--color-gold-a04); --max-width: 780px; }
     html { font-size: 17px; scroll-behavior: smooth; }
     body { font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif; color: var(--text); background: var(--bg); line-height: 2; -webkit-font-smoothing: antialiased; }
     .page-container { max-width: var(--max-width); margin: 0 auto; padding: 3rem 1.5rem 6rem; }
     .page-header { text-align: center; padding: 4rem 0 3rem; border-bottom: 2px solid var(--accent); margin-bottom: 3rem; }
-    .page-header .label { font-size: 0.85rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 0.8rem; font-family: "Noto Sans JP", sans-serif; }
-    .page-header .category-tag { font-family: "Noto Sans JP", sans-serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; background: var(--accent); padding: 0.15rem 0.6rem; display: inline-block; margin-bottom: 1rem; }
+    .page-header .label { font-size: 0.85rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 0.8rem; font-family: var(--font-sans); }
+    .page-header .category-tag { font-family: var(--font-sans); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; background: var(--accent); padding: 0.15rem 0.6rem; display: inline-block; margin-bottom: 1rem; }
     .page-header h1 { font-size: 1.4rem; font-weight: 700; line-height: 1.6; margin-bottom: 0.3rem; }
     .page-header .subtitle { font-size: 0.95rem; color: var(--text-secondary); }
     p { margin-bottom: 1rem; text-align: justify; }
@@ -39,15 +39,15 @@
     hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
 
     /* Pull Quote */
-    .pull-quote { text-align: center; padding: 2.5rem 2rem; margin: 0 0 2.5rem; position: relative; background: rgba(10, 8, 18, 0.4); backdrop-filter: blur(4px); }
-    .pull-quote::before, .pull-quote::after { content: ""; display: block; width: 32px; height: 1px; background: rgba(192, 168, 120, 0.3); margin: 0 auto; }
+    .pull-quote { text-align: center; padding: 2.5rem 2rem; margin: 0 0 2.5rem; position: relative; background: var(--color-header-soft); backdrop-filter: blur(4px); }
+    .pull-quote::before, .pull-quote::after { content: ""; display: block; width: 32px; height: 1px; background: var(--color-gold-a30); margin: 0 auto; }
     .pull-quote::before { margin-bottom: 2rem; }
     .pull-quote::after { margin-top: 2rem; }
-    .pull-quote p { font-size: 1.05rem; font-weight: 600; color: #f0ece6; line-height: 2; letter-spacing: 0.06em; margin-bottom: 0; }
+    .pull-quote p { font-size: 1.05rem; font-weight: 600; color: var(--color-text-primary); line-height: 2; letter-spacing: 0.06em; margin-bottom: 0; }
 
     /* Text Panel */
-    .text-panel { background: linear-gradient(180deg, rgba(15, 12, 25, 0.7) 0%, rgba(8, 6, 16, 0.6) 100%); border: 1px solid rgba(192, 168, 120, 0.06); border-radius: 2px; padding: 2.5rem 2rem; margin-bottom: 1.5rem; position: relative; overflow: hidden; }
-    .text-panel::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.25), transparent); }
+    .text-panel { background: linear-gradient(180deg, var(--color-panel) 0%, var(--color-overlay-soft) 100%); border: 1px solid var(--color-gold-a06); border-radius: 2px; padding: 2.5rem 2rem; margin-bottom: 1.5rem; position: relative; overflow: hidden; }
+    .text-panel::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--color-gold-a25), transparent); }
     .text-panel p:last-child { margin-bottom: 0; }
 
     /* Highlight Box */
@@ -56,47 +56,47 @@
     .highlight-box p:last-child { margin-bottom: 0; }
 
     /* Highlight Block (footer) */
-    .highlight-block { background: var(--definition-bg); border-left: 2px solid; border-image: linear-gradient(180deg, #c0a878 0%, rgba(192, 168, 120, 0.2) 100%) 1; padding: 2rem; margin: 2rem 0; }
+    .highlight-block { background: var(--definition-bg); border-left: 2px solid; border-image: linear-gradient(180deg, var(--color-gold) 0%, var(--color-gold-a20) 100%) 1; padding: 2rem; margin: 2rem 0; }
     .highlight-block p { font-size: 0.95rem; line-height: 2.2; margin-bottom: 0; }
 
     /* Shadow Card */
-    .shadow-card { background: linear-gradient(180deg, rgba(15, 12, 25, 0.7) 0%, rgba(8, 6, 16, 0.5) 100%); border: 1px solid rgba(192, 168, 120, 0.08); border-radius: 2px; padding: 2.2rem 2rem; margin: 2rem 0; position: relative; overflow: hidden; }
-    .shadow-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.25), transparent); }
-    .shadow-card__id { font-family: "Cormorant Garamond", serif; font-size: 0.85rem; letter-spacing: 0.15em; color: var(--accent); text-transform: uppercase; margin-bottom: 0.6rem; }
-    .shadow-card__title { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.4rem; color: #f0ece6; }
-    .shadow-card__meta { display: flex; flex-direction: column; gap: 0.3rem; margin-bottom: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(192, 168, 120, 0.1); }
+    .shadow-card { background: linear-gradient(180deg, var(--color-panel) 0%, rgba(8, 6, 16, 0.5) 100%); border: 1px solid var(--color-gold-a08); border-radius: 2px; padding: 2.2rem 2rem; margin: 2rem 0; position: relative; overflow: hidden; }
+    .shadow-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--color-gold-a25), transparent); }
+    .shadow-card__id { font-family: var(--font-serif-en); font-size: 0.85rem; letter-spacing: 0.15em; color: var(--accent); text-transform: uppercase; margin-bottom: 0.6rem; }
+    .shadow-card__title { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--color-text-primary); }
+    .shadow-card__meta { display: flex; flex-direction: column; gap: 0.3rem; margin-bottom: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--color-gold-a10); }
     .shadow-card__meta-item { font-size: 0.88rem; line-height: 1.8; }
     .shadow-card__meta-label { color: var(--text-secondary); margin-right: 0.5rem; }
     .shadow-card p { margin-bottom: 1rem; }
     .shadow-card p:last-child { margin-bottom: 0; }
 
     /* Golden Card */
-    .shadow-card--golden { border-color: rgba(192, 168, 120, 0.2); }
+    .shadow-card--golden { border-color: var(--color-gold-a20); }
     .shadow-card--golden::before { background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.45), transparent); }
     .shadow-card--golden .shadow-card__id { color: #e8d0a0; }
 
     /* Overview Table */
     .shadow-overview { margin: 2.5rem 0; overflow-x: auto; -webkit-overflow-scrolling: touch; }
     .shadow-overview table { width: 100%; border-collapse: collapse; min-width: 640px; }
-    .shadow-overview th { font-family: "Cormorant Garamond", serif; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); padding: 0.8rem 1rem; border-bottom: 2px solid rgba(192, 168, 120, 0.2); text-align: left; white-space: nowrap; }
-    .shadow-overview td { padding: 0.8rem 1rem; border-bottom: 1px solid rgba(192, 168, 120, 0.08); font-size: 0.88rem; line-height: 1.8; color: #c8c4be; vertical-align: top; }
-    .shadow-overview td:first-child { font-weight: 600; color: #f0ece6; white-space: nowrap; }
+    .shadow-overview th { font-family: var(--font-serif-en); font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); padding: 0.8rem 1rem; border-bottom: 2px solid var(--color-gold-a20); text-align: left; white-space: nowrap; }
+    .shadow-overview td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--color-gold-a08); font-size: 0.88rem; line-height: 1.8; color: var(--color-text-subtle); vertical-align: top; }
+    .shadow-overview td:first-child { font-weight: 600; color: var(--color-text-primary); white-space: nowrap; }
     .shadow-overview td:nth-child(2) { white-space: nowrap; }
     .shadow-overview tbody tr:nth-child(even) td { background: rgba(255, 255, 255, 0.015); }
-    .shadow-overview tbody tr:hover td { background: rgba(192, 168, 120, 0.04); }
-    .shadow-overview tbody tr:last-child td { border-bottom: 1px solid rgba(192, 168, 120, 0.15); }
+    .shadow-overview tbody tr:hover td { background: var(--color-gold-a04); }
+    .shadow-overview tbody tr:last-child td { border-bottom: 1px solid var(--color-gold-a15); }
     .shadow-overview .type-dark { color: var(--text-secondary); }
     .shadow-overview .type-light { color: #e8d0a0; font-weight: 600; }
     .table-scroll-hint { display: none; text-align: center; font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.5rem; }
 
     /* Phase Box */
-    .phase-box { background: rgba(15, 12, 25, 0.5); border: 1px solid rgba(192, 168, 120, 0.1); padding: 1.8rem 1.5rem; margin: 1.5rem 0; }
-    .phase-box__label { font-family: "Cormorant Garamond", serif; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem; }
+    .phase-box { background: var(--color-panel-light); border: 1px solid var(--color-gold-a10); padding: 1.8rem 1.5rem; margin: 1.5rem 0; }
+    .phase-box__label { font-family: var(--font-serif-en); font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem; }
     .phase-box p { margin-bottom: 0.8rem; }
     .phase-box p:last-child { margin-bottom: 0; }
 
     /* Formula */
-    .formula-block { text-align: center; padding: 1.5rem; margin: 1.5rem 0; background: rgba(192, 168, 120, 0.03); border: 1px solid rgba(192, 168, 120, 0.1); font-family: "Cambria Math", "Noto Sans JP", monospace; font-size: 1.05rem; letter-spacing: 0.08em; color: #f0ece6; }
+    .formula-block { text-align: center; padding: 1.5rem; margin: 1.5rem 0; background: rgba(192, 168, 120, 0.03); border: 1px solid var(--color-gold-a10); font-family: "Cambria Math", "Noto Sans JP", monospace; font-size: 1.05rem; letter-spacing: 0.08em; color: var(--color-text-primary); }
 
     /* Author */
     .author-block { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
@@ -104,11 +104,11 @@
     .author-block p:first-child { font-weight: 700; color: var(--text); font-size: 0.95rem; }
 
     /* CTA */
-    .cta-block { margin-top: 2rem; padding: 2rem; background: var(--definition-bg); border-left: 2px solid; border-image: linear-gradient(180deg, #c0a878 0%, rgba(192, 168, 120, 0.2) 100%) 1; }
+    .cta-block { margin-top: 2rem; padding: 2rem; background: var(--definition-bg); border-left: 2px solid; border-image: linear-gradient(180deg, var(--color-gold) 0%, var(--color-gold-a20) 100%) 1; }
     .cta-block p { font-size: 0.9rem; line-height: 2; margin-bottom: 0.5rem; }
     .cta-block p:last-child { margin-bottom: 0; }
     .cta-block a { color: var(--accent); font-weight: 700; }
-    .cta-block a:hover { color: #e8d8b8; }
+    .cta-block a:hover { color: var(--color-gold-light); }
 
     /* Back nav */
     .back-nav { margin-top: 4rem; padding: 1.5rem 2rem; background: var(--highlight); border: 1px solid var(--border); text-align: center; }
@@ -127,16 +127,16 @@
     }
 
 /* === Dark Theme Override === */
-a:not(.btn):not(.session-card__link) { color: #c0a878; transition: color 0.2s; }
-a:not(.btn):not(.session-card__link):hover { color: #e8d8b8; }
-.category-tag { color: #080610 !important; background: #c0a878 !important; }
-.back-nav { background: rgba(192, 168, 120, 0.06); border-color: rgba(192, 168, 120, 0.15); }
-.back-nav a { color: #c0a878; }
+a:not(.btn):not(.session-card__link) { color: var(--color-gold); transition: color 0.2s; }
+a:not(.btn):not(.session-card__link):hover { color: var(--color-gold-light); }
+.category-tag { color: #080610 !important; background: var(--color-gold) !important; }
+.back-nav { background: var(--color-gold-a06); border-color: var(--color-gold-a15); }
+.back-nav a { color: var(--color-gold); }
 img { border-radius: 2px; }
 input, textarea, select { background: rgba(255,255,255,0.05); color: rgba(235,232,225,0.92); border-color: rgba(201,168,76,0.2); }
 input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); outline: none; }
 ::placeholder { color: rgba(235,232,225,0.3); }
-.submit-btn, button[type="submit"] { background: #c0a878; color: #080610; border: none; }
+.submit-btn, button[type="submit"] { background: var(--color-gold); color: #080610; border: none; }
 
 </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -151,7 +151,7 @@ input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); 
   <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
   <meta property="og:url" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-shadow-7types.html">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="../css/style.min.css?v=9">
+  <link rel="stylesheet" href="../css/style.min.css?v=10">
 </head>
 <body>
   <a href="#main" class="skip-link">メインコンテンツへスキップ</a>

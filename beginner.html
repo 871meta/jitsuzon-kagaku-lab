@@ -30,7 +30,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="css/style.min.css?v=9">
+  <link rel="stylesheet" href="css/style.min.css?v=10">
   <style>
     /* === Beginner page specific === */
     .path-cards {
@@ -43,9 +43,9 @@
     .path-card {
       position: relative;
       padding: 2.5rem 2.5rem;
-      background: rgba(15, 12, 25, 0.7);
-      border: 1px solid rgba(192, 168, 120, 0.12);
-      box-shadow: 0 2px 24px rgba(192, 168, 120, 0.05);
+      background: var(--color-panel);
+      border: 1px solid var(--color-gold-a12);
+      box-shadow: 0 2px 24px var(--color-gold-a05);
       backdrop-filter: blur(8px);
       transition: box-shadow 0.4s ease, border-color 0.4s ease;
       overflow: hidden;
@@ -58,19 +58,19 @@
       left: 0;
       right: 0;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.5), transparent);
+      background: linear-gradient(90deg, transparent, var(--color-gold-a50), transparent);
     }
 
     .path-card:hover {
-      box-shadow: 0 4px 48px rgba(192, 168, 120, 0.1);
-      border-color: rgba(192, 168, 120, 0.25);
+      box-shadow: 0 4px 48px var(--color-gold-a10);
+      border-color: var(--color-gold-a25);
     }
 
     .path-card__number {
-      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-family: var(--font-serif-en);
       font-size: 0.72rem;
       letter-spacing: 0.3em;
-      color: rgba(192, 168, 120, 0.4);
+      color: var(--color-gold-a40);
       text-transform: uppercase;
       margin-bottom: 1.2rem;
     }
@@ -78,7 +78,7 @@
     .path-card__title {
       font-size: 1.15rem;
       font-weight: 600;
-      color: #f0ece6;
+      color: var(--color-text-primary);
       margin-bottom: 0.8rem;
       letter-spacing: 0.06em;
       line-height: 2;
@@ -86,7 +86,7 @@
 
     .path-card__desc {
       font-size: 0.92rem;
-      color: #c0bbb4;
+      color: var(--color-text-reading);
       line-height: 2.2;
       margin-bottom: 1.2rem;
     }
@@ -103,14 +103,14 @@
 
     .path-card__links a {
       font-size: 0.9rem;
-      color: #c0a878;
+      color: var(--color-gold);
       text-decoration: none;
-      border-bottom: 1px solid rgba(192, 168, 120, 0.3);
+      border-bottom: 1px solid var(--color-gold-a30);
       transition: color 0.2s;
     }
 
     .path-card__links a:hover {
-      color: #e8d8b8;
+      color: var(--color-gold-light);
     }
 
     .sitemap-section {
@@ -122,14 +122,14 @@
     }
 
     .sitemap-group__title {
-      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-family: var(--font-serif-en);
       font-size: 0.78rem;
       letter-spacing: 0.25em;
-      color: #c0a878;
+      color: var(--color-gold);
       text-transform: uppercase;
       margin-bottom: 1rem;
       padding-bottom: 0.5rem;
-      border-bottom: 1px solid rgba(192, 168, 120, 0.15);
+      border-bottom: 1px solid var(--color-gold-a15);
     }
 
     .sitemap-group__list {
@@ -144,13 +144,13 @@
 
     .sitemap-group__list a {
       font-size: 0.92rem;
-      color: #e8e4df;
+      color: var(--color-text-body);
       text-decoration: none;
       transition: color 0.2s;
     }
 
     .sitemap-group__list a:hover {
-      color: #c0a878;
+      color: var(--color-gold);
     }
 
     .sitemap-group__list .desc {

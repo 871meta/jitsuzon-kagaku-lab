@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../css/style.min.css?v=9">
+  <link rel="stylesheet" href="../../css/style.min.css?v=10">
 
 <style>
 /* === Article Cards === */
@@ -49,17 +49,17 @@
 }
 .article-card__number {
   display: block;
-  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-family: var(--font-serif-en);
   font-size: 0.7rem;
   font-weight: 400;
   letter-spacing: 0.35em;
   text-transform: uppercase;
-  color: #c0a878;
+  color: var(--color-gold);
   margin-bottom: 0.6rem;
 }
 .article-card h3 {
   font-size: 1.2rem;
-  color: #f0ece6;
+  color: var(--color-text-primary);
   font-weight: 700;
   margin-bottom: 1.5rem;
   letter-spacing: 0.06em;
@@ -71,7 +71,7 @@
 }
 .article-card ul li {
   margin-bottom: 0.8rem;
-  color: #c0bbb4;
+  color: var(--color-text-reading);
   font-size: 0.88rem;
   line-height: 1.8;
   padding-left: 1.6em;
@@ -88,13 +88,13 @@
 .article-card .card-hook {
   background: rgba(192,168,120,0.06);
   border-left: 2px solid;
-  border-image: linear-gradient(180deg, #c0a878 0%, rgba(192,168,120,0.15) 100%) 1;
+  border-image: linear-gradient(180deg, var(--color-gold) 0%, rgba(192,168,120,0.15) 100%) 1;
   padding: 1.2rem 1.5rem;
   margin: 1.5rem 0;
   font-size: 0.95rem;
   font-weight: 500;
   line-height: 2;
-  color: #f0ece6;
+  color: var(--color-text-primary);
 }
 .article-card .card-target {
   font-size: 0.85rem;
@@ -105,7 +105,7 @@
 .article-card .card-link {
   display: inline-block;
   font-size: 0.9rem;
-  color: #c0a878;
+  color: var(--color-gold);
   text-decoration: none;
   letter-spacing: 0.05em;
   border-bottom: 1px solid rgba(192,168,120,0.3);
@@ -120,7 +120,7 @@
 }
 .article-card--coming-soon .coming-soon-label {
   display: inline-block;
-  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-family: var(--font-serif-en);
   font-size: 0.7rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
@@ -136,8 +136,8 @@
   padding-top: 2rem;
   border-top: 1px solid rgba(192,168,120,0.15);
 }
-.author-block p { font-size: 0.88rem; color: #c0bbb4; line-height: 2; }
-.author-block strong { color: #e8e4df; }
+.author-block p { font-size: 0.88rem; color: var(--color-text-reading); line-height: 2; }
+.author-block strong { color: var(--color-text-body); }
 
 /* === Source Note === */
 .source-note {
@@ -153,7 +153,7 @@
   background: rgba(192,168,120,0.04);
   border: 1px solid rgba(192,168,120,0.1);
   font-size: 0.88rem;
-  color: #c0bbb4;
+  color: var(--color-text-reading);
   line-height: 2;
 }
 
@@ -167,20 +167,20 @@
 }
 .cta-block h3 {
   font-size: 1.1rem;
-  color: #e8e4df;
+  color: var(--color-text-body);
   margin-bottom: 1rem;
   font-weight: 600;
 }
 .cta-block p {
   font-size: 0.92rem;
-  color: #c0bbb4;
+  color: var(--color-text-reading);
   line-height: 2.2;
   margin-bottom: 1.2rem;
 }
 .cta-block .cta-btn {
   display: inline-block;
   padding: 0.8rem 2.5rem;
-  background: #c0a878;
+  background: var(--color-gold);
   color: #080610;
   text-decoration: none;
   font-weight: 700;

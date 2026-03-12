@@ -47,10 +47,10 @@
       --text-primary: rgba(235, 232, 225, 0.92);
       --text-secondary: rgba(235, 232, 225, 0.6);
       --text-dim: rgba(235, 232, 225, 0.35);
-      --gold: #c0a878;
-      --gold-dim: rgba(192, 168, 120, 0.4);
-      --gold-glow: rgba(192, 168, 120, 0.15);
-      --separator: rgba(192, 168, 120, 0.2);
+      --gold: var(--color-gold);
+      --gold-dim: var(--color-gold-a40);
+      --gold-glow: var(--color-gold-a15);
+      --separator: var(--color-gold-a20);
       --font-serif: 'Shippori Mincho', 'Noto Serif JP', serif;
       --font-display: 'Cormorant Garamond', 'Shippori Mincho', serif;
     }
@@ -107,7 +107,7 @@
       padding: 80px 24px;
       position: relative;
       background:
-        radial-gradient(ellipse 60% 50% at 50% 45%, rgba(192, 168, 120, 0.04) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 50% at 50% 45%, var(--color-gold-a04) 0%, transparent 70%),
         var(--bg-deep);
     }
 
@@ -310,7 +310,7 @@
     }
 
     .audience__block--not .audience__item::before {
-      color: rgba(192, 168, 120, 0.15);
+      color: var(--color-gold-a15);
     }
 
     /* ===== Section 6: Registration Form ===== */
@@ -340,7 +340,7 @@
       font-size: 1rem;
       color: var(--text-primary);
       background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(192, 168, 120, 0.25);
+      border: 1px solid var(--color-gold-a25);
       border-radius: 2px;
       outline: none;
       transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -473,7 +473,7 @@
       display: block;
       width: 32px;
       height: 1px;
-      background: rgba(192, 168, 120, 0.3);
+      background: var(--color-gold-a30);
       margin: 0 auto;
     }
     .pull-quote::before { margin-bottom: 2rem; }
@@ -488,7 +488,7 @@
     }
 
     .highlight-block {
-      background: rgba(192, 168, 120, 0.04);
+      background: var(--color-gold-a04);
       border-left: 2px solid var(--gold);
       padding: 2rem;
       margin: 2rem 0;

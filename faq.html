@@ -30,7 +30,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="css/style.min.css?v=9">
+  <link rel="stylesheet" href="css/style.min.css?v=10">
   <style>
     /* ============================================
        FAQ Page — Specific Styles
@@ -42,15 +42,15 @@
       padding-top: 2rem;
     }
     .faq-section__title {
-      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-family: var(--font-serif-en);
       font-size: 0.75rem;
       font-weight: 400;
       letter-spacing: 0.3em;
       text-transform: uppercase;
-      color: #c0a878;
+      color: var(--color-gold);
       margin-bottom: 3rem;
       padding-bottom: 1rem;
-      border-bottom: 1px solid rgba(192, 168, 120, 0.15);
+      border-bottom: 1px solid var(--color-gold-a15);
     }
     .faq-item {
       margin-bottom: 4rem;
@@ -61,7 +61,7 @@
     .faq-item__q {
       font-size: 1.1rem;
       font-weight: 600;
-      color: #f0ece6;
+      color: var(--color-text-primary);
       line-height: 1.8;
       margin-bottom: 1.5rem;
       padding-left: 1.8rem;
@@ -72,10 +72,10 @@
       position: absolute;
       left: 0;
       top: 0;
-      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-family: var(--font-serif-en);
       font-size: 1rem;
       font-weight: 600;
-      color: #c0a878;
+      color: var(--color-gold);
       letter-spacing: 0;
     }
     .faq-item__a {
@@ -89,44 +89,44 @@
       top: 0.4rem;
       width: 1px;
       height: calc(100% - 0.8rem);
-      background: rgba(192, 168, 120, 0.15);
+      background: var(--color-gold-a15);
     }
     .faq-item__a p {
       font-size: 0.95rem;
-      color: #c8c4be;
+      color: var(--color-text-subtle);
       line-height: 2.2;
     }
     .faq-item__a p:last-child {
       margin-bottom: 0;
     }
     .faq-item__a strong {
-      color: #f0ece6;
+      color: var(--color-text-primary);
       font-weight: 600;
     }
     .faq-item__a em {
       font-style: normal;
-      color: #c0a878;
+      color: var(--color-gold);
     }
     .faq-link {
       display: inline-block;
       margin-top: 0.5rem;
       font-size: 0.85rem;
-      color: #c0a878;
-      border-bottom: 1px solid rgba(192, 168, 120, 0.3);
+      color: var(--color-gold);
+      border-bottom: 1px solid var(--color-gold-a30);
     }
     .faq-link:hover {
-      color: #e8d8b8;
-      border-color: #c0a878;
+      color: var(--color-gold-light);
+      border-color: var(--color-gold);
     }
     .faq-divider {
       text-align: center;
       padding: 2rem 0;
     }
     .faq-divider__mark {
-      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-family: var(--font-serif-en);
       font-size: 1.4rem;
       font-weight: 300;
-      color: rgba(192, 168, 120, 0.25);
+      color: var(--color-gold-a25);
       letter-spacing: 0.5em;
     }
     @media (max-width: 480px) {

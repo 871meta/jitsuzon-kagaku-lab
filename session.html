@@ -30,7 +30,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="css/style.min.css?v=9">
+  <link rel="stylesheet" href="css/style.min.css?v=10">
   <style>
     /* === Session navigation cards === */
     .session-nav-cards {
@@ -44,9 +44,9 @@
       position: relative;
       display: block;
       padding: 2rem 2rem 2.5rem;
-      background: rgba(15, 12, 25, 0.7);
-      border: 1px solid rgba(192, 168, 120, 0.12);
-      box-shadow: 0 2px 24px rgba(192, 168, 120, 0.05);
+      background: var(--color-panel);
+      border: 1px solid var(--color-gold-a12);
+      box-shadow: 0 2px 24px var(--color-gold-a05);
       backdrop-filter: blur(8px);
       text-decoration: none;
       transition: box-shadow 0.4s ease, border-color 0.4s ease;
@@ -60,19 +60,19 @@
       left: 0;
       right: 0;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.5), transparent);
+      background: linear-gradient(90deg, transparent, var(--color-gold-a50), transparent);
     }
 
     .session-nav-card:hover {
-      box-shadow: 0 4px 48px rgba(192, 168, 120, 0.1);
-      border-color: rgba(192, 168, 120, 0.25);
+      box-shadow: 0 4px 48px var(--color-gold-a10);
+      border-color: var(--color-gold-a25);
     }
 
     .session-nav-card__label {
-      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-family: var(--font-serif-en);
       font-size: 0.72rem;
       letter-spacing: 0.3em;
-      color: rgba(192, 168, 120, 0.4);
+      color: var(--color-gold-a40);
       text-transform: uppercase;
       margin-bottom: 0.8rem;
     }
@@ -80,7 +80,7 @@
     .session-nav-card__title {
       font-size: 1.1rem;
       font-weight: 600;
-      color: #f0ece6;
+      color: var(--color-text-primary);
       margin-bottom: 0.6rem;
       letter-spacing: 0.06em;
       line-height: 1.8;
@@ -88,7 +88,7 @@
 
     .session-nav-card__desc {
       font-size: 0.88rem;
-      color: #c0bbb4;
+      color: var(--color-text-reading);
       line-height: 2;
     }
 
@@ -97,12 +97,12 @@
       bottom: 1.2rem;
       right: 1.5rem;
       font-size: 1.2rem;
-      color: rgba(192, 168, 120, 0.4);
+      color: var(--color-gold-a40);
       transition: color 0.3s ease, transform 0.3s ease;
     }
 
     .session-nav-card:hover .session-nav-card__arrow {
-      color: rgba(192, 168, 120, 0.8);
+      color: var(--color-gold-a70);
       transform: translateX(4px);
     }
 

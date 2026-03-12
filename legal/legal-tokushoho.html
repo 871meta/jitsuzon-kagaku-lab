@@ -19,12 +19,12 @@
   <meta name="description" content="実存科学研究所の特定商取引法に基づく表記。事業者情報、サービス内容、料金、返品条件等。">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --text: rgba(235, 232, 225, 0.92); --text-secondary: rgba(235, 232, 225, 0.55); --bg: #080610; --border: rgba(192, 168, 120, 0.15); --accent: #c0a878; --highlight: rgba(192, 168, 120, 0.06); --blockquote-border: rgba(192, 168, 120, 0.4); --definition-bg: rgba(192, 168, 120, 0.04); --max-width: 780px; }
+    :root { --text: rgba(235, 232, 225, 0.92); --text-secondary: rgba(235, 232, 225, 0.55); --bg: #080610; --border: var(--color-gold-a15); --accent: var(--color-gold); --highlight: var(--color-gold-a06); --blockquote-border: var(--color-gold-a40); --definition-bg: var(--color-gold-a04); --max-width: 780px; }
     html { font-size: 17px; scroll-behavior: smooth; }
     body { font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif; color: var(--text); background: var(--bg); line-height: 2; -webkit-font-smoothing: antialiased; }
     .page-container { max-width: var(--max-width); margin: 0 auto; padding: 3rem 1.5rem 6rem; }
     .page-header { text-align: center; padding: 3rem 0 2.5rem; border-bottom: 2px solid var(--accent); margin-bottom: 3rem; }
-    .page-header .label { font-size: 0.85rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 0.5rem; font-family: "Noto Sans JP", sans-serif; }
+    .page-header .label { font-size: 0.85rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 0.5rem; font-family: var(--font-sans); }
     .page-header h1 { font-size: 1.4rem; font-weight: 700; line-height: 1.6; }
     .page-header .subtitle { font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem; }
     p { margin-bottom: 1rem; text-align: justify; }
@@ -39,7 +39,7 @@
       padding: 1rem 1.2rem 1rem 0;
       width: 30%;
       font-weight: 700;
-      font-family: "Noto Sans JP", sans-serif;
+      font-family: var(--font-sans);
       font-size: 0.9rem;
       color: var(--text);
       line-height: 1.8;
@@ -59,7 +59,7 @@
     .back-nav a { color: var(--accent); text-decoration: none; font-weight: 700; }
     .back-nav a:hover { opacity: 0.7; }
 
-    .update-date { text-align: right; font-size: 0.85rem; color: var(--text-secondary); margin-top: 2rem; font-family: "Noto Sans JP", sans-serif; }
+    .update-date { text-align: right; font-size: 0.85rem; color: var(--text-secondary); margin-top: 2rem; font-family: var(--font-sans); }
 
     @media (max-width: 600px) {
       html { font-size: 15px; }
@@ -70,16 +70,16 @@
     }
 
 /* === Dark Theme Override (scoped to page content) === */
-.page-container a:not(.btn):not(.session-card__link) { color: #c0a878; transition: color 0.2s; }
-.page-container a:not(.btn):not(.session-card__link):hover { color: #e8d8b8; }
-.category-tag { color: #080610 !important; background: #c9a84c !important; }
+.page-container a:not(.btn):not(.session-card__link) { color: var(--color-gold); transition: color 0.2s; }
+.page-container a:not(.btn):not(.session-card__link):hover { color: var(--color-gold-light); }
+.category-tag { color: #080610 !important; background: var(--color-gold) !important; }
 .back-nav { background: rgba(201, 168, 76, 0.06); border-color: rgba(201, 168, 76, 0.15); }
-.back-nav a { color: #c0a878; }
+.back-nav a { color: var(--color-gold); }
 img { border-radius: 2px; }
 input, textarea, select { background: rgba(255,255,255,0.05); color: rgba(235,232,225,0.92); border-color: rgba(201,168,76,0.2); }
 input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); outline: none; }
 ::placeholder { color: rgba(235,232,225,0.3); }
-.submit-btn, button[type="submit"] { background: #c9a84c; color: #080610; border: none; }
+.submit-btn, button[type="submit"] { background: var(--color-gold); color: #080610; border: none; }
 
 </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -87,7 +87,7 @@ input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); 
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.min.css?v=9">
+  <link rel="stylesheet" href="../css/style.min.css?v=10">
   <meta property="og:title" content="特定商取引法に基づく表記 | 実存科学研究所">
   <meta property="og:description" content="Notation based on the Specified Commercial Transactions Act">
   <meta property="og:type" content="article">

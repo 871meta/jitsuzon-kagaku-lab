@@ -30,13 +30,13 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="css/style.min.css?v=9">
+  <link rel="stylesheet" href="css/style.min.css?v=10">
   <style>
     /* === Axiom Card — 額装された公理 === */
     .axiom-card {
-      background: radial-gradient(ellipse at center, rgba(192, 168, 120, 0.05) 0%, rgba(15, 12, 25, 0.85) 70%);
-      border: 1px solid rgba(192, 168, 120, 0.3);
-      outline: 1px solid rgba(192, 168, 120, 0.1);
+      background: radial-gradient(ellipse at center, var(--color-gold-a05) 0%, rgba(15, 12, 25, 0.85) 70%);
+      border: 1px solid var(--color-gold-a30);
+      outline: 1px solid var(--color-gold-a10);
       outline-offset: 8px;
       padding: 5.5rem 4rem;
       max-width: 580px;
@@ -47,7 +47,7 @@
     .axiom-card::before {
       width: 60px;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.6), transparent);
+      background: linear-gradient(90deg, transparent, var(--color-gold-a60), transparent);
     }
     .axiom-card::after {
       content: "";
@@ -57,12 +57,12 @@
       transform: translateX(-50%);
       width: 60px;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.6), transparent);
+      background: linear-gradient(90deg, transparent, var(--color-gold-a60), transparent);
     }
     .axiom-card__label {
       font-size: 0.65rem;
       letter-spacing: 0.35em;
-      color: rgba(192, 168, 120, 0.7);
+      color: var(--color-gold-a70);
       margin-bottom: 1.8rem;
     }
     .axiom-card__formula {
@@ -73,11 +73,11 @@
     .axiom-card__desc {
       font-size: 0.85rem;
       letter-spacing: 0.14em;
-      color: rgba(192, 168, 120, 0.5);
+      color: var(--color-gold-a50);
     }
     @keyframes axiomGlow {
-      0%, 100% { text-shadow: 0 0 60px rgba(192, 168, 120, 0.15); }
-      50% { text-shadow: 0 0 80px rgba(192, 168, 120, 0.35), 0 0 140px rgba(192, 168, 120, 0.08); }
+      0%, 100% { text-shadow: 0 0 60px var(--color-gold-a15); }
+      50% { text-shadow: 0 0 80px var(--color-gold-a35), 0 0 140px var(--color-gold-a08); }
     }
 
     /* === Pull Quote — ミッションステートメント === */
@@ -90,12 +90,12 @@
     .pull-quote::before,
     .pull-quote::after {
       width: 100px;
-      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.25), transparent);
+      background: linear-gradient(90deg, transparent, var(--color-gold-a25), transparent);
     }
     .pull-quote::before { margin-bottom: 2.8rem; }
     .pull-quote::after { margin-top: 2.8rem; }
     .pull-quote p {
-      background: linear-gradient(135deg, #a89870 0%, #e0d4be 40%, #c0a878 60%, #d8ccb0 100%);
+      background: linear-gradient(135deg, #a89870 0%, #e0d4be 40%, var(--color-gold) 60%, #d8ccb0 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -108,21 +108,21 @@
     /* === CTA Block — セッション訴求 === */
     .cta-block {
       background: rgba(12, 10, 22, 0.5);
-      border-top: 1px solid rgba(192, 168, 120, 0.15);
-      border-bottom: 1px solid rgba(192, 168, 120, 0.08);
+      border-top: 1px solid var(--color-gold-a15);
+      border-bottom: 1px solid var(--color-gold-a08);
       backdrop-filter: blur(16px);
       padding: 6rem 2.5rem;
     }
     .cta-block::before {
       width: 48px;
-      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.5), transparent);
+      background: linear-gradient(90deg, transparent, var(--color-gold-a50), transparent);
     }
     .cta-block__title {
-      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-family: var(--font-serif-en);
       font-size: 1.8rem;
       font-weight: 300;
       letter-spacing: 0.12em;
-      color: #c0a878;
+      color: var(--color-gold);
       margin-bottom: 1.5rem;
     }
     .cta-block__desc {
@@ -135,7 +135,7 @@
       margin-bottom: 3.5rem;
     }
     .cta-block__feature {
-      border: 1px solid rgba(192, 168, 120, 0.2);
+      border: 1px solid var(--color-gold-a20);
       padding: 0.5rem 1.5rem;
       border-radius: 24px;
       font-size: 0.75rem;
@@ -145,11 +145,11 @@
       display: none;
     }
     .cta-block .btn {
-      border-color: rgba(192, 168, 120, 0.4);
+      border-color: var(--color-gold-a40);
       transition: all 0.4s ease;
     }
     .cta-block .btn:hover {
-      box-shadow: 0 0 30px rgba(192, 168, 120, 0.15), 0 0 60px rgba(192, 168, 120, 0.05);
+      box-shadow: 0 0 30px var(--color-gold-a15), 0 0 60px var(--color-gold-a05);
     }
 
     /* === Mobile === */

@@ -28,7 +28,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../css/style.min.css?v=9">
+  <link rel="stylesheet" href="../../css/style.min.css?v=10">
 
 <style>
 /* =============================================
@@ -41,7 +41,7 @@ h2.chapter-heading {
   font-weight: 700;
   line-height: 1.5;
   letter-spacing: 0.06em;
-  color: #f0ece6;
+  color: var(--color-text-primary);
   border-bottom: none;
   padding-bottom: 0;
   margin-top: 1rem;
@@ -58,7 +58,7 @@ h2.chapter-heading::before {
   transform: translateX(-50%);
   width: 40px;
   height: 1px;
-  background: #c0a878;
+  background: var(--color-gold);
 }
 h2.chapter-heading::after {
   content: "";
@@ -90,7 +90,7 @@ hr.separator::after {
 
 /* === 3. h3 — 左ボーダー === */
 h3 {
-  border-left: 3px solid #c0a878;
+  border-left: 3px solid var(--color-gold);
   padding-left: 0.8em;
   font-size: 1.05rem;
   line-height: 1.6;
@@ -99,7 +99,7 @@ h3 {
 /* === 4. 手紙の宛名 === */
 .letter-address {
   font-size: 1.1rem;
-  color: #c0a878;
+  color: var(--color-gold);
   font-weight: 600;
   letter-spacing: 0.06em;
   margin: 2rem 0 1rem;
@@ -122,7 +122,7 @@ h3 {
   background: linear-gradient(90deg, transparent, rgba(192,168,120,0.2), transparent);
 }
 .character-letter-block h3 {
-  color: #e8e4df;
+  color: var(--color-text-body);
   font-size: 1.05rem;
   margin-bottom: 1rem;
   border-left: 3px solid rgba(192,168,120,0.5);
@@ -130,7 +130,7 @@ h3 {
 .character-letter-block p {
   font-size: 0.92rem;
   line-height: 2.2;
-  color: #c0bbb4;
+  color: var(--color-text-reading);
   margin-bottom: 0.8rem;
 }
 .character-letter-block p:last-child {
@@ -141,7 +141,7 @@ h3 {
 .verb-line {
   margin-top: 1.2rem;
   font-size: 0.95rem;
-  color: #c0a878;
+  color: var(--color-gold);
   font-weight: 600;
   letter-spacing: 0.06em;
 }
@@ -150,12 +150,12 @@ h3 {
 .verb-pair-block {
   background: rgba(192,168,120,0.04);
   border-left: 2px solid;
-  border-image: linear-gradient(180deg, #c0a878 0%, rgba(192,168,120,0.15) 100%) 1;
+  border-image: linear-gradient(180deg, var(--color-gold) 0%, rgba(192,168,120,0.15) 100%) 1;
   padding: 1.2rem 1.5rem;
   margin: 1.5rem 0;
   font-size: 0.92rem;
   line-height: 2.2;
-  color: #e8e4df;
+  color: var(--color-text-body);
 }
 .verb-pair-block p {
   margin-bottom: 0.6rem;
@@ -169,7 +169,7 @@ h3 {
   text-align: right;
   margin-top: 2rem;
   font-size: 1rem;
-  color: #c0a878;
+  color: var(--color-gold);
   font-weight: 600;
   letter-spacing: 0.08em;
 }
@@ -177,13 +177,13 @@ h3 {
 /* === 9. 強調ブロック === */
 .highlight-block {
   background: rgba(192,168,120,0.06);
-  border-left: 3px solid #c0a878;
+  border-left: 3px solid var(--color-gold);
   padding: 1.8rem 2rem;
   margin: 2rem 0;
   font-size: 0.95rem;
   font-weight: 500;
   line-height: 2.2;
-  color: #f0ece6;
+  color: var(--color-text-primary);
 }
 
 /* === 10. プロファイリング風ブロック === */
@@ -203,12 +203,12 @@ h3 {
   background: linear-gradient(90deg, transparent, rgba(192,168,120,0.4), transparent);
 }
 .profiling-block h3 {
-  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-family: var(--font-serif-en);
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: #c0a878;
+  color: var(--color-gold);
   margin-bottom: 1.2rem;
   border-left: none;
   padding-left: 0;
@@ -216,7 +216,7 @@ h3 {
 .profiling-block p {
   font-size: 0.92rem;
   line-height: 2.2;
-  color: #c0bbb4;
+  color: var(--color-text-reading);
 }
 
 /* === Mobile === */

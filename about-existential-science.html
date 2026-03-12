@@ -30,7 +30,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="css/style.min.css?v=9">
+  <link rel="stylesheet" href="css/style.min.css?v=10">
   <style>
     /* 定義の宣言ブロック */
     .definition-declaration {
@@ -80,7 +80,7 @@
     }
     .es-accordion__item {
       margin-bottom: 0.6rem;
-      border-left: 2px solid rgba(192, 168, 120, 0.12);
+      border-left: 2px solid var(--color-gold-a12);
       transition: border-color 0.5s ease;
     }
 
@@ -92,7 +92,7 @@
       padding: 1.4rem 2rem;
       cursor: pointer;
       background: linear-gradient(180deg, rgba(15, 12, 25, 0.55) 0%, rgba(8, 6, 16, 0.45) 100%);
-      border: 1px solid rgba(192, 168, 120, 0.06);
+      border: 1px solid var(--color-gold-a06);
       border-left: none;
       border-radius: 2px;
       transition: background 0.4s ease, border-color 0.4s ease;
@@ -100,28 +100,28 @@
       -webkit-user-select: none;
     }
     .es-accordion__header:hover {
-      background: linear-gradient(180deg, rgba(15, 12, 25, 0.7) 0%, rgba(8, 6, 16, 0.6) 100%);
-      border-color: rgba(192, 168, 120, 0.12);
+      background: linear-gradient(180deg, var(--color-panel) 0%, var(--color-overlay-soft) 100%);
+      border-color: var(--color-gold-a12);
     }
 
     /* ナンバリング */
     .es-accordion__num {
-      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-family: var(--font-serif-en);
       font-size: 0.82rem;
       font-weight: 300;
       letter-spacing: 0.08em;
-      color: rgba(192, 168, 120, 0.35);
+      color: var(--color-gold-a35);
       flex-shrink: 0;
       min-width: 1.8em;
     }
 
     /* タイトル */
     .es-accordion__title {
-      font-family: "Shippori Mincho", serif;
+      font-family: var(--font-serif-short);
       font-size: 0.95rem;
       font-weight: 500;
       letter-spacing: 0.08em;
-      color: #e8e4df;
+      color: var(--color-text-body);
       flex-grow: 1;
       margin: 0;
       padding: 0;
@@ -165,7 +165,7 @@
     .es-accordion__content {
       padding: 1.8rem 2rem 2.2rem;
       background: linear-gradient(180deg, rgba(15, 12, 25, 0.65) 0%, rgba(8, 6, 16, 0.45) 100%);
-      border: 1px solid rgba(192, 168, 120, 0.06);
+      border: 1px solid var(--color-gold-a06);
       border-top: none;
       border-left: none;
       border-radius: 0 0 2px 0;
@@ -176,7 +176,7 @@
       position: absolute;
       top: 0; left: 2rem; right: 2rem;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.15), transparent);
+      background: linear-gradient(90deg, transparent, var(--color-gold-a15), transparent);
     }
     .es-accordion__content p {
       font-size: 0.95rem;
@@ -188,15 +188,15 @@
 
     /* 開いた時のスタイル */
     .es-accordion__item.is-open {
-      border-left-color: #c0a878;
+      border-left-color: var(--color-gold);
     }
     .es-accordion__item.is-open .es-accordion__header {
-      border-color: rgba(192, 168, 120, 0.12);
+      border-color: var(--color-gold-a12);
       border-bottom-color: transparent;
       border-radius: 2px 2px 0 0;
     }
     .es-accordion__item.is-open .es-accordion__num {
-      color: rgba(192, 168, 120, 0.6);
+      color: var(--color-gold-a60);
     }
     .es-accordion__item.is-open .es-accordion__content {
       box-shadow: inset 0 0 80px rgba(192, 168, 120, 0.025);

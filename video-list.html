@@ -18,23 +18,23 @@
   <title>映像作品一覧 | 実存科学研究所</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --text: rgba(235, 232, 225, 0.92); --text-secondary: rgba(235, 232, 225, 0.55); --bg: #080610; --border: rgba(192, 168, 120, 0.15); --accent: #c0a878; --highlight: rgba(192, 168, 120, 0.06); --blockquote-border: rgba(192, 168, 120, 0.4); --definition-bg: rgba(192, 168, 120, 0.04); --max-width: 780px; }
+    :root { --text: rgba(235, 232, 225, 0.92); --text-secondary: rgba(235, 232, 225, 0.55); --bg: #080610; --border: var(--color-gold-a15); --accent: var(--color-gold); --highlight: var(--color-gold-a06); --blockquote-border: var(--color-gold-a40); --definition-bg: var(--color-gold-a04); --max-width: 780px; }
     html { font-size: 17px; scroll-behavior: smooth; }
     body { font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif; color: var(--text); background: var(--bg); line-height: 2; -webkit-font-smoothing: antialiased; }
     .page-container { max-width: var(--max-width); margin: 0 auto; padding: 3rem 1.5rem 6rem; }
     .page-header { text-align: center; padding: 4rem 0 3rem; border-bottom: 2px solid var(--accent); margin-bottom: 3rem; }
-    .page-header .label { font-size: 0.85rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 0.8rem; font-family: "Noto Sans JP", sans-serif; }
-    .page-header .category-tag { font-family: "Noto Sans JP", sans-serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: #080610 !important; background: #c0a878 !important; padding: 0.15rem 0.6rem; display: inline-block; margin-bottom: 1rem; }
+    .page-header .label { font-size: 0.85rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 0.8rem; font-family: var(--font-sans); }
+    .page-header .category-tag { font-family: var(--font-sans); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: #080610 !important; background: var(--color-gold) !important; padding: 0.15rem 0.6rem; display: inline-block; margin-bottom: 1rem; }
     .page-header h1 { font-size: 1.4rem; font-weight: 700; line-height: 1.6; margin-bottom: 0.3rem; }
     .page-header .subtitle { font-size: 0.95rem; color: var(--text-secondary); }
     p { margin-bottom: 1rem; text-align: justify; }
     strong { font-weight: 700; }
     hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
-    .back-nav { margin-top: 4rem; padding: 1.5rem 2rem; background: rgba(192, 168, 120, 0.06); border: 1px solid rgba(192, 168, 120, 0.15); text-align: center; }
-    .back-nav a { color: #c0a878; text-decoration: none; font-weight: 700; }
+    .back-nav { margin-top: 4rem; padding: 1.5rem 2rem; background: var(--color-gold-a06); border: 1px solid var(--color-gold-a15); text-align: center; }
+    .back-nav a { color: var(--color-gold); text-decoration: none; font-weight: 700; }
     .back-nav a:hover { opacity: 0.7; }
-    a:not(.btn):not(.session-card__link) { color: #c0a878; transition: color 0.2s; }
-    a:not(.btn):not(.session-card__link):hover { color: #e8d8b8; }
+    a:not(.btn):not(.session-card__link) { color: var(--color-gold); transition: color 0.2s; }
+    a:not(.btn):not(.session-card__link):hover { color: var(--color-gold-light); }
     img { border-radius: 2px; }
 
     /* Video list specific */
@@ -42,8 +42,8 @@
     .video-item { padding: 2rem 0; border-bottom: 1px solid var(--border); }
     .video-item:first-child { padding-top: 0; }
     .video-item:last-child { border-bottom: none; }
-    .video-item__meta { font-family: "Noto Sans JP", sans-serif; font-size: 0.75rem; color: var(--text-secondary); letter-spacing: 0.05em; margin-bottom: 0.5rem; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
-    .video-item__type { font-family: "Noto Sans JP", sans-serif; font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase; color: #080610; background: var(--accent); padding: 0.1rem 0.5rem; border-radius: 2px; }
+    .video-item__meta { font-family: var(--font-sans); font-size: 0.75rem; color: var(--text-secondary); letter-spacing: 0.05em; margin-bottom: 0.5rem; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+    .video-item__type { font-family: var(--font-sans); font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase; color: #080610; background: var(--accent); padding: 0.1rem 0.5rem; border-radius: 2px; }
     .video-item__title { font-size: 1.15rem; font-weight: 700; line-height: 1.6; margin-bottom: 0.2rem; }
     .video-item__title a { color: var(--text); text-decoration: none; transition: color 0.2s; }
     .video-item__title a:hover { color: var(--accent); }
@@ -61,7 +61,7 @@
   <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
   <meta property="og:url" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/video-list.html">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="css/style.min.css?v=9">
+  <link rel="stylesheet" href="css/style.min.css?v=10">
 </head>
 <body>
   <a href="#main" class="skip-link">メインコンテンツへスキップ</a>

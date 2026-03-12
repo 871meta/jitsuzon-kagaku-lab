@@ -29,7 +29,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="css/style.min.css?v=9">
+  <link rel="stylesheet" href="css/style.min.css?v=10">
   <style>
     /* === Glossary specific === */
     .glossary-nav {
@@ -38,42 +38,42 @@
       gap: 0.5rem;
       margin-bottom: 2.5rem;
       padding-bottom: 1.5rem;
-      border-bottom: 1px solid rgba(192, 168, 120, 0.15);
+      border-bottom: 1px solid var(--color-gold-a15);
     }
     .glossary-nav a {
       font-family: "Noto Serif JP", sans-serif;
       font-size: 0.85rem;
       padding: 0.4rem 1rem;
-      border: 1px solid rgba(192, 168, 120, 0.15);
+      border: 1px solid var(--color-gold-a15);
       color: rgba(235, 232, 225, 0.55);
       text-decoration: none;
       transition: all 0.2s;
     }
     .glossary-nav a:hover {
-      border-color: #c0a878;
-      color: #e8e4df;
+      border-color: var(--color-gold);
+      color: var(--color-text-body);
     }
 
     .glossary-category {
       margin-bottom: 3rem;
     }
     .glossary-category__title {
-      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-family: var(--font-serif-en);
       font-size: 0.78rem;
       letter-spacing: 0.25em;
-      color: #c0a878;
+      color: var(--color-gold);
       text-transform: uppercase;
       margin-bottom: 1.5rem;
       padding-bottom: 0.5rem;
-      border-bottom: 1px solid rgba(192, 168, 120, 0.15);
+      border-bottom: 1px solid var(--color-gold-a15);
     }
 
     .glossary-item {
       position: relative;
       margin-bottom: 1.2rem;
       padding: 2rem 2.5rem;
-      background: rgba(15, 12, 25, 0.7);
-      border: 1px solid rgba(192, 168, 120, 0.08);
+      background: var(--color-panel);
+      border: 1px solid var(--color-gold-a08);
       transition: border-color 0.4s ease, box-shadow 0.4s ease;
       overflow: hidden;
     }
@@ -82,29 +82,29 @@
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.3), transparent);
+      background: linear-gradient(90deg, transparent, var(--color-gold-a30), transparent);
     }
     .glossary-item:hover {
-      border-color: rgba(192, 168, 120, 0.2);
-      box-shadow: 0 2px 24px rgba(192, 168, 120, 0.06);
+      border-color: var(--color-gold-a20);
+      box-shadow: 0 2px 24px var(--color-gold-a06);
     }
     .glossary-item__term {
       font-size: 1.1rem;
       font-weight: 600;
-      color: #f0ece6;
+      color: var(--color-text-primary);
       margin-bottom: 0.3rem;
       letter-spacing: 0.04em;
     }
     .glossary-item__reading {
-      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-family: var(--font-serif-en);
       font-size: 0.78rem;
       letter-spacing: 0.15em;
-      color: rgba(192, 168, 120, 0.5);
+      color: var(--color-gold-a50);
       margin-bottom: 0.8rem;
     }
     .glossary-item__def {
       font-size: 0.92rem;
-      color: #c0bbb4;
+      color: var(--color-text-reading);
       line-height: 2.2;
     }
     .glossary-item__ref {
@@ -112,12 +112,12 @@
     }
     .glossary-item__ref a {
       font-size: 0.82rem;
-      color: #c0a878;
+      color: var(--color-gold);
       text-decoration: none;
-      border-bottom: 1px solid rgba(192, 168, 120, 0.3);
+      border-bottom: 1px solid var(--color-gold-a30);
     }
     .glossary-item__ref a:hover {
-      color: #e8d8b8;
+      color: var(--color-gold-light);
     }
 
     @media (max-width: 480px) {

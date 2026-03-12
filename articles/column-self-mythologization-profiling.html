@@ -59,7 +59,7 @@ body {
   font-weight: 500;
   letter-spacing: 0.08em;
   color: #fff;
-  background: #c0a878;
+  background: var(--color-gold);
   padding: 3px 12px;
   margin-bottom: 20px;
 }
@@ -80,7 +80,7 @@ h2 {
   margin-top: 64px;
   margin-bottom: 24px;
   padding-bottom: 10px;
-  border-bottom: 2px solid rgba(192, 168, 120, 0.3);
+  border-bottom: 2px solid var(--color-gold-a30);
 }
 
 h3 {
@@ -90,7 +90,7 @@ h3 {
   margin-top: 48px;
   margin-bottom: 16px;
   padding-bottom: 8px;
-  border-bottom: 1px solid rgba(192, 168, 120, 0.15);
+  border-bottom: 1px solid var(--color-gold-a15);
 }
 
 h4 {
@@ -106,7 +106,7 @@ p { margin-bottom: 20px; }
 
 /* ── Blockquote ── */
 blockquote {
-  border-left: 3px solid rgba(192, 168, 120, 0.4);
+  border-left: 3px solid var(--color-gold-a40);
   background: rgba(255,255,255,0.03);
   padding: 16px 20px;
   margin: 24px 0;
@@ -128,14 +128,14 @@ strong { font-weight: 700; }
 /* ── Horizontal Rule ── */
 hr {
   border: none;
-  border-top: 1px solid rgba(192, 168, 120, 0.15);
+  border-top: 1px solid var(--color-gold-a15);
   margin: 48px 0;
 }
 
 /* ── Emphasis Box ── */
 .emphasis-box {
-  background: rgba(192, 168, 120, 0.04);
-  border-left: 4px solid #c0a878;
+  background: var(--color-gold-a04);
+  border-left: 4px solid var(--color-gold);
   padding: 20px 24px;
   margin: 28px 0;
 }
@@ -154,7 +154,7 @@ hr {
 .nav-bottom {
   margin-top: 64px;
   padding-top: 24px;
-  border-top: 1px solid rgba(192, 168, 120, 0.15);
+  border-top: 1px solid var(--color-gold-a15);
 }
 .nav-bottom a {
   font-family: 'Noto Sans JP', sans-serif;
@@ -176,16 +176,16 @@ hr {
 }
 
 /* === Dark Theme Override === */
-a:not(.btn):not(.session-card__link) { color: #c0a878; transition: color 0.2s; }
-a:not(.btn):not(.session-card__link):hover { color: #e8d8b8; }
-.category-tag { color: #080610 !important; background: #c0a878 !important; }
-.back-nav { background: rgba(192, 168, 120, 0.06); border-color: rgba(192, 168, 120, 0.15); }
-.back-nav a { color: #c0a878; }
+a:not(.btn):not(.session-card__link) { color: var(--color-gold); transition: color 0.2s; }
+a:not(.btn):not(.session-card__link):hover { color: var(--color-gold-light); }
+.category-tag { color: #080610 !important; background: var(--color-gold) !important; }
+.back-nav { background: var(--color-gold-a06); border-color: var(--color-gold-a15); }
+.back-nav a { color: var(--color-gold); }
 img { border-radius: 2px; }
 input, textarea, select { background: rgba(255,255,255,0.05); color: rgba(235,232,225,0.92); border-color: rgba(201,168,76,0.2); }
 input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); outline: none; }
 ::placeholder { color: rgba(235,232,225,0.3); }
-.submit-btn, button[type="submit"] { background: #c0a878; color: #080610; border: none; }
+.submit-btn, button[type="submit"] { background: var(--color-gold); color: #080610; border: none; }
 
 </style>
   <meta property="og:title" content="支援業界における&quot;自己神話化構造&quot;のプロファイリング｜実存科学研究所">
@@ -195,7 +195,7 @@ input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); 
 <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
   <meta property="og:url" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-self-mythologization-profiling.html">
 <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="../css/style.min.css?v=9">
+  <link rel="stylesheet" href="../css/style.min.css?v=10">
 </head>
 <body>
   <a href="#main" class="skip-link">メインコンテンツへスキップ</a>

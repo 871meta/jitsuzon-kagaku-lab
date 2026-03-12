@@ -30,7 +30,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="css/style.min.css?v=9">
+  <link rel="stylesheet" href="css/style.min.css?v=10">
   <style>
     /* === Kandou LP specific styles === */
 
@@ -38,7 +38,7 @@
     .kd-hero {
       padding: 14rem 0 5rem;
       text-align: center;
-      border-bottom: 1px solid rgba(192, 168, 120, 0.15);
+      border-bottom: 1px solid var(--color-gold-a15);
       position: relative;
     }
 
@@ -48,14 +48,14 @@
       letter-spacing: 0.08em;
       line-height: 1.6;
       margin-bottom: 2rem;
-      font-family: "Shippori Mincho", "Noto Serif JP", serif;
+      font-family: "Shippori Mincho", var(--font-serif-reading);
     }
 
     .kd-hero__sub {
-      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-family: var(--font-serif-en);
       font-size: 0.8rem;
       letter-spacing: 0.25em;
-      color: #c0a878;
+      color: var(--color-gold);
       margin-bottom: 2.5rem;
       text-transform: uppercase;
       font-weight: 400;
@@ -83,11 +83,11 @@
       /* Gold shimmer text */
       background: linear-gradient(
         90deg,
-        #f0ece6 0%,
-        #f0ece6 40%,
-        #c0a878 50%,
-        #f0ece6 60%,
-        #f0ece6 100%
+        var(--color-text-primary) 0%,
+        var(--color-text-primary) 40%,
+        var(--color-gold) 50%,
+        var(--color-text-primary) 60%,
+        var(--color-text-primary) 100%
       );
       background-size: 200% auto;
       -webkit-background-clip: text;
@@ -101,24 +101,24 @@
       display: block;
       width: 48px;
       height: 1px;
-      background: linear-gradient(90deg, transparent, #c0a878, transparent);
+      background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
       margin: 2.5rem auto 0;
-      box-shadow: 0 0 12px rgba(192, 168, 120, 0.3);
+      box-shadow: 0 0 12px var(--color-gold-a30);
       animation: kd-divider-glow 6s ease-in-out infinite;
     }
 
     .kd-hero__after {
       font-size: 1.4rem;
-      color: rgba(192, 168, 120, 0.7);
+      color: var(--color-gold-a70);
       margin-bottom: 0;
       letter-spacing: 0.08em;
       line-height: 1.8;
-      font-family: "Shippori Mincho", "Noto Serif JP", serif;
+      font-family: "Shippori Mincho", var(--font-serif-reading);
     }
 
     .kd-hero__hook {
       font-size: 1.1rem;
-      color: #f0ece6;
+      color: var(--color-text-primary);
       letter-spacing: 0.06em;
       margin-bottom: 2.5rem;
       line-height: 1.8;
@@ -127,12 +127,12 @@
     .kd-hero__lead {
       position: relative;
       font-size: 1.15rem;
-      color: #c0bbb4;
+      color: var(--color-text-reading);
       max-width: 600px;
       margin: 0 auto;
       padding: 2.5rem 3rem;
       line-height: 2.4;
-      border: 1px solid rgba(192, 168, 120, 0.25);
+      border: 1px solid var(--color-gold-a25);
       background: rgba(10, 8, 18, 0.5);
       backdrop-filter: blur(8px);
     }
@@ -143,13 +143,13 @@
       position: absolute;
       width: 16px;
       height: 16px;
-      border-color: #c0a878;
+      border-color: var(--color-gold);
       border-style: solid;
     }
 
     .kd-hero__lead em {
       font-style: normal;
-      color: #c0a878;
+      color: var(--color-gold);
     }
 
     .kd-hero__lead::before {
@@ -172,11 +172,11 @@
     .kd-symptom__title {
       text-align: center;
       font-size: 2.2rem;
-      font-family: "Shippori Mincho", "Noto Serif JP", serif;
-      color: #c0a878;
+      font-family: "Shippori Mincho", var(--font-serif-reading);
+      color: var(--color-gold);
       letter-spacing: 0.1em;
       font-weight: 600;
-      text-shadow: 0 0 40px rgba(192, 168, 120, 0.15);
+      text-shadow: 0 0 40px var(--color-gold-a15);
       margin-bottom: 3rem;
     }
 
@@ -188,7 +188,7 @@
 
     @keyframes kd-glow-pulse {
       0%, 100% { box-shadow: 0 0 0 rgba(192, 168, 120, 0); }
-      50%      { box-shadow: 0 0 20px rgba(192, 168, 120, 0.06); }
+      50%      { box-shadow: 0 0 20px var(--color-gold-a06); }
     }
 
     /* Category cards */
@@ -201,8 +201,8 @@
     .kd-card {
       position: relative;
       padding: 1.4rem 2rem;
-      background: rgba(15, 12, 25, 0.7);
-      border: 1px solid rgba(192, 168, 120, 0.06);
+      background: var(--color-panel);
+      border: 1px solid var(--color-gold-a06);
       backdrop-filter: blur(6px);
       transition: border-color 0.6s ease, box-shadow 0.6s ease, background 0.6s ease;
       overflow: hidden;
@@ -224,7 +224,7 @@
       left: -100%;
       width: 60%;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.5), transparent);
+      background: linear-gradient(90deg, transparent, var(--color-gold-a50), transparent);
       animation: kd-shimmer 5s ease-in-out infinite;
     }
 
@@ -242,13 +242,13 @@
       left: 10%;
       right: 10%;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.08), transparent);
+      background: linear-gradient(90deg, transparent, var(--color-gold-a08), transparent);
     }
 
     /* Hover: elegant gold glow */
     .kd-card:hover {
-      border-color: rgba(192, 168, 120, 0.2);
-      box-shadow: 0 0 30px rgba(192, 168, 120, 0.08), inset 0 0 30px rgba(192, 168, 120, 0.03);
+      border-color: var(--color-gold-a20);
+      box-shadow: 0 0 30px var(--color-gold-a08), inset 0 0 30px rgba(192, 168, 120, 0.03);
       background: rgba(20, 16, 30, 0.8);
     }
 
@@ -257,28 +257,28 @@
     .kd-card:nth-child(2) { border-left: 2px solid rgba(120, 155, 200, 0.5); background: linear-gradient(90deg, rgba(120, 155, 200, 0.06), transparent 40%); }
     .kd-card:nth-child(3) { border-left: 2px solid rgba(160, 120, 200, 0.5); background: linear-gradient(90deg, rgba(160, 120, 200, 0.06), transparent 40%); }
     .kd-card:nth-child(4) { border-left: 2px solid rgba(140, 140, 140, 0.5); background: linear-gradient(90deg, rgba(140, 140, 140, 0.06), transparent 40%); }
-    .kd-card:nth-child(5) { border-left: 2px solid rgba(192, 168, 120, 0.5); background: linear-gradient(90deg, rgba(192, 168, 120, 0.06), transparent 40%); }
+    .kd-card:nth-child(5) { border-left: 2px solid var(--color-gold-a50); background: linear-gradient(90deg, var(--color-gold-a06), transparent 40%); }
 
     .kd-card:nth-child(1) .kd-card__label { color: #c87878; text-shadow: 0 0 12px rgba(200, 120, 120, 0.2); }
     .kd-card:nth-child(2) .kd-card__label { color: #789bc8; text-shadow: 0 0 12px rgba(120, 155, 200, 0.2); }
     .kd-card:nth-child(3) .kd-card__label { color: #a078c8; text-shadow: 0 0 12px rgba(160, 120, 200, 0.2); }
     .kd-card:nth-child(4) .kd-card__label { color: #9a9a9a; text-shadow: 0 0 12px rgba(140, 140, 140, 0.2); }
-    .kd-card:nth-child(5) .kd-card__label { color: #c0a878; text-shadow: 0 0 12px rgba(192, 168, 120, 0.2); }
+    .kd-card:nth-child(5) .kd-card__label { color: var(--color-gold); text-shadow: 0 0 12px var(--color-gold-a20); }
 
     .kd-card__label {
       display: inline-block;
-      font-family: "Cormorant Garamond", serif;
+      font-family: var(--font-serif-en);
       font-size: 0.95rem;
-      color: #c0a878;
+      color: var(--color-gold);
       letter-spacing: 0.25em;
       text-transform: uppercase;
       margin-bottom: 0.6rem;
-      text-shadow: 0 0 12px rgba(192, 168, 120, 0.2);
+      text-shadow: 0 0 12px var(--color-gold-a20);
     }
 
     .kd-card__text {
       font-size: 0.95rem;
-      color: #c0bbb4;
+      color: var(--color-text-reading);
       line-height: 1.9;
       letter-spacing: 0.03em;
     }
@@ -287,19 +287,19 @@
       text-align: center;
       margin-top: 2.5rem;
       font-size: 1.05rem;
-      color: #f0ece6;
+      color: var(--color-text-primary);
       line-height: 2.2;
       letter-spacing: 0.04em;
     }
 
     .kd-check-note strong {
-      color: #c0a878;
+      color: var(--color-gold);
     }
 
     /* Body text sections */
     .kd-body {
       font-size: 0.95rem;
-      color: #c0bbb4;
+      color: var(--color-text-reading);
       line-height: 2.4;
       letter-spacing: 0.02em;
     }
@@ -313,13 +313,13 @@
     }
 
     .kd-body strong {
-      color: #f0ece6;
+      color: var(--color-text-primary);
       font-weight: 600;
     }
 
     .kd-body em {
       font-style: normal;
-      color: #c0a878;
+      color: var(--color-gold);
     }
 
     /* Accent line */
@@ -327,12 +327,12 @@
       text-align: center;
       padding: 4rem 0;
       font-size: 1.6rem;
-      color: #f0ece6;
+      color: var(--color-text-primary);
       line-height: 1.8;
       letter-spacing: 0.06em;
       font-weight: 500;
-      border-top: 1px solid rgba(192, 168, 120, 0.08);
-      border-bottom: 1px solid rgba(192, 168, 120, 0.08);
+      border-top: 1px solid var(--color-gold-a08);
+      border-bottom: 1px solid var(--color-gold-a08);
     }
 
     /* Case study cards */
@@ -340,9 +340,9 @@
       position: relative;
       margin-bottom: 3rem;
       padding: 3rem 2.5rem;
-      background: rgba(15, 12, 25, 0.7);
-      border: 1px solid rgba(192, 168, 120, 0.12);
-      box-shadow: 0 2px 24px rgba(192, 168, 120, 0.05);
+      background: var(--color-panel);
+      border: 1px solid var(--color-gold-a12);
+      box-shadow: 0 2px 24px var(--color-gold-a05);
       backdrop-filter: blur(8px);
       transition: box-shadow 0.4s ease, border-color 0.4s ease;
       overflow: hidden;
@@ -355,12 +355,12 @@
       left: 0;
       right: 0;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.5), transparent);
+      background: linear-gradient(90deg, transparent, var(--color-gold-a50), transparent);
     }
 
     .kd-case:hover {
-      box-shadow: 0 4px 48px rgba(192, 168, 120, 0.1);
-      border-color: rgba(192, 168, 120, 0.25);
+      box-shadow: 0 4px 48px var(--color-gold-a10);
+      border-color: var(--color-gold-a25);
     }
 
     .kd-case:last-of-type {
@@ -368,33 +368,33 @@
     }
 
     .kd-case__label {
-      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-family: var(--font-serif-en);
       font-size: 0.72rem;
       letter-spacing: 0.3em;
-      color: rgba(192, 168, 120, 0.4);
+      color: var(--color-gold-a40);
       text-transform: uppercase;
       margin-bottom: 1.5rem;
     }
 
     .kd-case__profile {
       font-size: 0.82rem;
-      color: #8a8680;
+      color: var(--color-text-faint);
       margin-bottom: 1.5rem;
       letter-spacing: 0.08em;
     }
 
     .kd-case__before {
       font-size: 0.95rem;
-      color: #a8a4a0;
+      color: var(--color-text-dim);
       line-height: 2.2;
       margin-bottom: 1.5rem;
       padding-bottom: 1.5rem;
-      border-bottom: 1px solid rgba(192, 168, 120, 0.08);
+      border-bottom: 1px solid var(--color-gold-a08);
     }
 
     .kd-case__after {
       font-size: 0.95rem;
-      color: #c0bbb4;
+      color: var(--color-text-reading);
       line-height: 2.2;
       margin-bottom: 1.5rem;
     }
@@ -402,28 +402,28 @@
     .kd-case__quote {
       position: relative;
       font-size: 1.05rem;
-      color: #f0ece6;
+      color: var(--color-text-primary);
       line-height: 2.2;
       padding-left: 1.5rem;
-      border-left: 2px solid rgba(192, 168, 120, 0.4);
+      border-left: 2px solid var(--color-gold-a40);
       font-weight: 500;
       letter-spacing: 0.04em;
     }
 
     .kd-case__phase {
-      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-family: var(--font-serif-en);
       font-size: 0.68rem;
       letter-spacing: 0.25em;
       text-transform: uppercase;
       margin-bottom: 0.8rem;
-      color: rgba(192, 168, 120, 0.35);
+      color: var(--color-gold-a35);
     }
 
     .kd-case__arrow {
       text-align: center;
       font-size: 0.7rem;
       letter-spacing: 0.3em;
-      color: rgba(192, 168, 120, 0.3);
+      color: var(--color-gold-a30);
       margin: 1.5rem 0;
     }
 
@@ -431,24 +431,24 @@
       display: inline-block;
       margin-top: 1.5rem;
       padding: 0.6rem 1.6rem;
-      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-family: var(--font-serif-en);
       font-size: 0.75rem;
       letter-spacing: 0.25em;
-      color: rgba(192, 168, 120, 0.6);
+      color: var(--color-gold-a60);
       background: transparent;
-      border: 1px solid rgba(192, 168, 120, 0.2);
+      border: 1px solid var(--color-gold-a20);
       cursor: pointer;
       transition: all 0.3s ease;
     }
 
     .kd-case__toggle:hover {
-      color: rgba(192, 168, 120, 0.9);
-      border-color: rgba(192, 168, 120, 0.4);
+      color: var(--color-gold-a70);
+      border-color: var(--color-gold-a40);
     }
 
     .kd-case__toggle[aria-expanded="true"] {
-      color: rgba(192, 168, 120, 0.4);
-      border-color: rgba(192, 168, 120, 0.1);
+      color: var(--color-gold-a40);
+      border-color: var(--color-gold-a10);
     }
 
     .kd-case__detail {
@@ -473,7 +473,7 @@
 
     .kd-cta__heading {
       font-size: 1.5rem;
-      color: #f0ece6;
+      color: var(--color-text-primary);
       margin-bottom: 2rem;
       letter-spacing: 0.08em;
       line-height: 1.8;
@@ -481,7 +481,7 @@
 
     .kd-cta__desc {
       font-size: 0.95rem;
-      color: #a8a4a0;
+      color: var(--color-text-dim);
       line-height: 2.4;
       max-width: 520px;
       margin: 0 auto 3rem;
@@ -490,12 +490,12 @@
     .btn--kandou {
       display: inline-block;
       padding: 1.2rem 4rem;
-      background: #c0a878;
-      color: #0c0a14;
-      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      background: var(--color-gold);
+      color: var(--color-bg-deep);
+      font-family: var(--font-serif-en);
       font-size: 0.9rem;
       letter-spacing: 0.18em;
-      border: 1px solid #c0a878;
+      border: 1px solid var(--color-gold);
       cursor: pointer;
       transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
       text-transform: uppercase;
@@ -505,13 +505,13 @@
 
     .btn--kandou:hover {
       background: transparent;
-      color: #c0a878;
-      border-color: #c0a878;
+      color: var(--color-gold);
+      border-color: var(--color-gold);
     }
 
     .kd-cta__note {
       font-size: 0.82rem;
-      color: #8a8680;
+      color: var(--color-text-faint);
       margin-top: 2rem;
       line-height: 2;
     }
@@ -521,7 +521,7 @@
       display: block;
       width: 32px;
       height: 1px;
-      background: rgba(192, 168, 120, 0.3);
+      background: var(--color-gold-a30);
       margin: 0 auto;
     }
 
@@ -543,7 +543,7 @@
     }
 
     .kd-compare thead th {
-      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-family: var(--font-serif-en);
       font-size: 1rem;
       font-weight: 600;
       letter-spacing: 0.06em;
@@ -551,19 +551,19 @@
     }
 
     .kd-compare thead th:nth-child(2) {
-      color: #8a8680;
+      color: var(--color-text-faint);
     }
 
     .kd-compare thead th:nth-child(3) {
-      color: #c0a878;
+      color: var(--color-gold);
     }
 
     .kd-compare tbody tr {
-      border-bottom: 1px solid rgba(192, 168, 120, 0.12);
+      border-bottom: 1px solid var(--color-gold-a12);
     }
 
     .kd-compare td:first-child {
-      color: #c0a878;
+      color: var(--color-gold);
       width: 20%;
       font-size: 0.82rem;
       font-weight: 600;
@@ -578,9 +578,9 @@
     }
 
     .kd-compare td:nth-child(3) {
-      color: #f0ece6;
+      color: var(--color-text-primary);
       width: 45%;
-      background: rgba(192, 168, 120, 0.06);
+      background: var(--color-gold-a06);
       font-weight: 500;
     }
 
@@ -597,7 +597,7 @@
         gap: 0;
         margin-bottom: 0.8rem;
         padding-bottom: 0.8rem;
-        border-bottom: 1px solid rgba(192, 168, 120, 0.12);
+        border-bottom: 1px solid var(--color-gold-a12);
       }
       .kd-compare td:first-child {
         grid-column: 1 / -1;
@@ -608,9 +608,9 @@
       .kd-compare td:nth-child(2) {
         background: none;
         padding: 0.4rem 0.5rem;
-        color: #8a8680;
+        color: var(--color-text-faint);
         width: auto;
-        border-right: 1px solid rgba(192, 168, 120, 0.1);
+        border-right: 1px solid var(--color-gold-a10);
       }
       .kd-compare td:nth-child(3) {
         background: none;
@@ -630,7 +630,7 @@
       }
       .kd-compare tr:first-child td:nth-child(3)::before {
         content: "天命の言語化セッション™";
-        color: #c0a878;
+        color: var(--color-gold);
       }
     }
 
@@ -652,7 +652,7 @@
       height: 100px;
       border-radius: 50%;
       overflow: hidden;
-      border: 1px solid rgba(192, 168, 120, 0.2);
+      border: 1px solid var(--color-gold-a20);
     }
 
     .kd-facilitator__photo {
@@ -663,19 +663,19 @@
 
     .kd-facilitator__role {
       font-size: 0.82rem;
-      color: #c0a878;
+      color: var(--color-gold);
       letter-spacing: 0.04em;
       line-height: 1.6;
     }
 
     .kd-facilitator__lead {
       font-size: 1.05rem;
-      color: #f0ece6;
+      color: var(--color-text-primary);
       line-height: 2;
       padding: 1.2rem 1.5rem;
       margin-bottom: 1.5rem;
-      background: rgba(192, 168, 120, 0.06);
-      border-left: 2px solid rgba(192, 168, 120, 0.4);
+      background: var(--color-gold-a06);
+      border-left: 2px solid var(--color-gold-a40);
     }
 
     @media (max-width: 600px) {
@@ -695,7 +695,7 @@
     /* 12の対話 catalog */
     .kd-catalog {
       padding: 5rem 0;
-      border-top: 1px solid rgba(192, 168, 120, 0.08);
+      border-top: 1px solid var(--color-gold-a08);
     }
 
     .kd-catalog__header {
@@ -712,7 +712,7 @@
     .kd-catalog__item {
       position: relative;
       overflow: hidden;
-      border: 1px solid rgba(192, 168, 120, 0.08);
+      border: 1px solid var(--color-gold-a08);
       transition: border-color 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease;
     }
 
@@ -724,7 +724,7 @@
       left: -100%;
       width: 60%;
       height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.08), transparent);
+      background: linear-gradient(90deg, transparent, var(--color-gold-a08), transparent);
       animation: kd-shimmer 6s ease-in-out infinite;
       z-index: 1;
       pointer-events: none;
@@ -744,8 +744,8 @@
     .kd-catalog__item:nth-child(12)::before { animation-delay: 5.5s; }
 
     .kd-catalog__item:hover {
-      border-color: rgba(192, 168, 120, 0.3);
-      box-shadow: 0 4px 40px rgba(192, 168, 120, 0.12);
+      border-color: var(--color-gold-a30);
+      box-shadow: 0 4px 40px var(--color-gold-a12);
       transform: translateY(-3px);
     }
 
@@ -767,7 +767,7 @@
       text-align: center;
       margin-top: 2.5rem;
       font-size: 0.92rem;
-      color: #8a8680;
+      color: var(--color-text-faint);
       line-height: 2;
       letter-spacing: 0.04em;
     }
@@ -781,7 +781,7 @@
       font-size: 0.65rem;
       color: rgba(240, 236, 230, 0.7);
       letter-spacing: 0.1em;
-      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-family: var(--font-serif-en);
       text-transform: uppercase;
       z-index: 2;
       text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
@@ -904,7 +904,7 @@
     .kd-bookstrip img {
       height: 90px;
       width: auto;
-      border: 1px solid rgba(192, 168, 120, 0.1);
+      border: 1px solid var(--color-gold-a10);
       filter: brightness(0.6) saturate(0.4);
       transition: filter 0.5s ease, border-color 0.5s ease, transform 0.5s ease;
     }
@@ -930,7 +930,7 @@
 
     .kd-bookstrip img:hover {
       filter: brightness(0.9) saturate(0.85);
-      border-color: rgba(192, 168, 120, 0.35);
+      border-color: var(--color-gold-a35);
       transform: translateY(-3px);
     }
 
@@ -962,7 +962,7 @@
       z-index: 900;
       background: rgba(12, 10, 20, 0.95);
       backdrop-filter: blur(12px);
-      border-top: 1px solid rgba(192, 168, 120, 0.2);
+      border-top: 1px solid var(--color-gold-a20);
       padding: 0.8rem 1.5rem;
       text-align: center;
       transform: translateY(100%);
@@ -974,26 +974,26 @@
     .kd-sticky-cta a {
       display: inline-block;
       padding: 0.7rem 2.5rem;
-      background: #c0a878;
-      color: #0c0a14;
-      font-family: "Cormorant Garamond", serif;
+      background: var(--color-gold);
+      color: var(--color-bg-deep);
+      font-family: var(--font-serif-en);
       font-size: 0.8rem;
       letter-spacing: 0.15em;
       text-decoration: none;
       font-weight: 600;
       text-transform: uppercase;
-      border: 1px solid #c0a878;
+      border: 1px solid var(--color-gold);
       transition: background 0.3s, color 0.3s;
     }
     .kd-sticky-cta a:hover {
       background: transparent;
-      color: #c0a878;
+      color: var(--color-gold);
     }
     .kd-sticky-cta__note {
       display: inline-block;
       margin-left: 1rem;
       font-size: 0.72rem;
-      color: #8a8680;
+      color: var(--color-text-faint);
       letter-spacing: 0.04em;
     }
     @media (max-width: 480px) {

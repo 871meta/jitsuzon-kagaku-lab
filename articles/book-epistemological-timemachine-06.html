@@ -19,12 +19,12 @@
   <meta name="description" content="第6章｜天命の言語化セッション™とは何か。2時間で天命を一文に結晶させる対話の方法論と構造。">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --text: rgba(235, 232, 225, 0.92); --text-secondary: rgba(235, 232, 225, 0.55); --bg: #080610; --border: rgba(192, 168, 120, 0.15); --accent: #c0a878; --highlight: rgba(192, 168, 120, 0.06); --blockquote-border: rgba(192, 168, 120, 0.4); --definition-bg: rgba(192, 168, 120, 0.04); --max-width: 780px; }
+    :root { --text: rgba(235, 232, 225, 0.92); --text-secondary: rgba(235, 232, 225, 0.55); --bg: #080610; --border: var(--color-gold-a15); --accent: var(--color-gold); --highlight: var(--color-gold-a06); --blockquote-border: var(--color-gold-a40); --definition-bg: var(--color-gold-a04); --max-width: 780px; }
     html { font-size: 17px; scroll-behavior: smooth; }
     body { font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif; color: var(--text); background: var(--bg); line-height: 2; -webkit-font-smoothing: antialiased; }
     .page-container { max-width: var(--max-width); margin: 0 auto; padding: 3rem 1.5rem 6rem; }
     .page-header { text-align: center; padding: 3rem 0 2.5rem; border-bottom: 2px solid var(--accent); margin-bottom: 3rem; }
-    .page-header .label { font-size: 0.85rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 0.5rem; font-family: "Noto Sans JP", sans-serif; }
+    .page-header .label { font-size: 0.85rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 0.5rem; font-family: var(--font-sans); }
     .page-header .book-title { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem; }
     .page-header h1 { font-size: 1.4rem; font-weight: 700; line-height: 1.6; }
     p { margin-bottom: 1rem; text-align: justify; }
@@ -32,7 +32,7 @@
     .section-heading { font-size: 1.15rem; font-weight: 700; margin-top: 3rem; margin-bottom: 1rem; line-height: 1.6; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
     blockquote { border-left: 3px solid var(--blockquote-border); padding: 0.8rem 1.5rem; margin: 1.5rem 0; color: var(--text-secondary); background: rgba(255,255,255,0.03); }
     blockquote p:last-child { margin-bottom: 0; }
-    .formula-block { background: var(--definition-bg); border: 1px solid var(--border); padding: 1.2rem 1.8rem; margin: 1.5rem 0; font-family: "Cambria Math", "Latin Modern Math", "Noto Serif JP", serif; font-size: 1.05rem; text-align: center; letter-spacing: 0.1em; }
+    .formula-block { background: var(--definition-bg); border: 1px solid var(--border); padding: 1.2rem 1.8rem; margin: 1.5rem 0; font-family: "Cambria Math", "Latin Modern Math", var(--font-serif-reading); font-size: 1.05rem; text-align: center; letter-spacing: 0.1em; }
     .formula-explain { margin: 0.8rem 0 0.8rem 1.5rem; font-size: 0.95rem; list-style: none; }
     .formula-explain li { margin-bottom: 0.3rem; }
     hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
@@ -42,16 +42,16 @@
     @media (max-width: 600px) { html { font-size: 15px; } .page-container { padding: 2rem 1rem 4rem; } .page-header h1 { font-size: 1.2rem; } .formula-block { font-size: 0.95rem; padding: 1rem; } }
 
 /* === Dark Theme Override === */
-a:not(.btn):not(.session-card__link) { color: #c0a878; transition: color 0.2s; }
-a:not(.btn):not(.session-card__link):hover { color: #e8d8b8; }
-.category-tag { color: #080610 !important; background: #c0a878 !important; }
-.back-nav { background: rgba(192, 168, 120, 0.06); border-color: rgba(192, 168, 120, 0.15); }
-.back-nav a { color: #c0a878; }
+a:not(.btn):not(.session-card__link) { color: var(--color-gold); transition: color 0.2s; }
+a:not(.btn):not(.session-card__link):hover { color: var(--color-gold-light); }
+.category-tag { color: #080610 !important; background: var(--color-gold) !important; }
+.back-nav { background: var(--color-gold-a06); border-color: var(--color-gold-a15); }
+.back-nav a { color: var(--color-gold); }
 img { border-radius: 2px; }
 input, textarea, select { background: rgba(255,255,255,0.05); color: rgba(235,232,225,0.92); border-color: rgba(201,168,76,0.2); }
 input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); outline: none; }
 ::placeholder { color: rgba(235,232,225,0.3); }
-.submit-btn, button[type="submit"] { background: #c0a878; color: #080610; border: none; }
+.submit-btn, button[type="submit"] { background: var(--color-gold); color: #080610; border: none; }
 
 </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -66,7 +66,7 @@ input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); 
 <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
   <meta property="og:url" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/book-epistemological-timemachine-06.html">
 <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="../css/style.min.css?v=9">
+  <link rel="stylesheet" href="../css/style.min.css?v=10">
 </head>
 <body>
   <a href="#main" class="skip-link">メインコンテンツへスキップ</a>

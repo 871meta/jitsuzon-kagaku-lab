@@ -28,11 +28,11 @@
   --text: rgba(235, 232, 225, 0.92);
   --text-secondary: rgba(235, 232, 225, 0.55);
   --bg: #080610;
-  --border: rgba(192, 168, 120, 0.15);
-  --accent: #c0a878;
-  --highlight: rgba(192, 168, 120, 0.06);
-  --blockquote-border: rgba(192, 168, 120, 0.4);
-  --definition-bg: rgba(192, 168, 120, 0.04);
+  --border: var(--color-gold-a15);
+  --accent: var(--color-gold);
+  --highlight: var(--color-gold-a06);
+  --blockquote-border: var(--color-gold-a40);
+  --definition-bg: var(--color-gold-a04);
   --max-width: 780px;
 }
 html { font-size: 17px; scroll-behavior: smooth; }
@@ -47,7 +47,7 @@ body {
 
 /* ── Header ── */
 .institute-label {
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.7rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
@@ -56,7 +56,7 @@ body {
 }
 .category-tag {
   display: inline-block;
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.65rem;
   letter-spacing: 0.08em;
   color: #fff;
@@ -158,7 +158,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
   border-top: 1px solid var(--border);
 }
 .nav-back a {
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.85rem;
   color: var(--text-secondary);
   text-decoration: none;
@@ -175,16 +175,16 @@ hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
 }
 
 /* === Dark Theme Override === */
-a:not(.btn):not(.session-card__link) { color: #c0a878; transition: color 0.2s; }
-a:not(.btn):not(.session-card__link):hover { color: #e8d8b8; }
-.category-tag { color: #080610 !important; background: #c0a878 !important; }
-.back-nav { background: rgba(192, 168, 120, 0.06); border-color: rgba(192, 168, 120, 0.15); }
-.back-nav a { color: #c0a878; }
+a:not(.btn):not(.session-card__link) { color: var(--color-gold); transition: color 0.2s; }
+a:not(.btn):not(.session-card__link):hover { color: var(--color-gold-light); }
+.category-tag { color: #080610 !important; background: var(--color-gold) !important; }
+.back-nav { background: var(--color-gold-a06); border-color: var(--color-gold-a15); }
+.back-nav a { color: var(--color-gold); }
 img { border-radius: 2px; }
 input, textarea, select { background: rgba(255,255,255,0.05); color: rgba(235,232,225,0.92); border-color: rgba(201,168,76,0.2); }
 input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); outline: none; }
 ::placeholder { color: rgba(235,232,225,0.3); }
-.submit-btn, button[type="submit"] { background: #c0a878; color: #080610; border: none; }
+.submit-btn, button[type="submit"] { background: var(--color-gold); color: #080610; border: none; }
 
 </style>
   <meta property="og:title" content="「それで？」──人生を先に進めてしまう究極の問い | 実存科学研究所">
@@ -194,7 +194,7 @@ input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); 
 <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
   <meta property="og:url" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-sorede.html">
 <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="../css/style.min.css?v=9">
+  <link rel="stylesheet" href="../css/style.min.css?v=10">
 </head>
 <body>
   <a href="#main" class="skip-link">メインコンテンツへスキップ</a>

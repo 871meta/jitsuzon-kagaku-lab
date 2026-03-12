@@ -27,7 +27,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.min.css?v=9">
+  <link rel="stylesheet" href="../css/style.min.css?v=10">
   <style>
     /* ============================================
        Agreement Page (Full) — Specific Styles
@@ -43,11 +43,11 @@
 
     .agreement-preamble {
       font-size: 0.95rem;
-      color: #a8a4a0;
+      color: var(--color-text-dim);
       line-height: 2.2;
       margin-bottom: 3rem;
       padding-bottom: 2rem;
-      border-bottom: 1px solid rgba(192, 168, 120, 0.1);
+      border-bottom: 1px solid var(--color-gold-a10);
     }
 
     .agreement-article {
@@ -57,23 +57,23 @@
     .agreement-article__title {
       font-size: 1rem;
       font-weight: 600;
-      color: #f0ece6;
+      color: var(--color-text-primary);
       margin-bottom: 1.2rem;
       letter-spacing: 0.04em;
     }
 
     .agreement-article__title span {
-      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-family: var(--font-serif-en);
       font-size: 0.8rem;
       font-weight: 400;
-      color: #c0a878;
+      color: var(--color-gold);
       letter-spacing: 0.15em;
       margin-right: 0.8rem;
     }
 
     .agreement-article p {
       font-size: 0.9rem;
-      color: #c8c4be;
+      color: var(--color-text-subtle);
       line-height: 2.2;
       margin-bottom: 1.2em;
     }
@@ -91,7 +91,7 @@
 
     .agreement-article ol li {
       font-size: 0.9rem;
-      color: #c8c4be;
+      color: var(--color-text-subtle);
       line-height: 2.2;
       margin-bottom: 0.8em;
       padding-left: 2em;
@@ -103,7 +103,7 @@
       content: "(" counter(clause) ")";
       position: absolute;
       left: 0;
-      color: #a8a4a0;
+      color: var(--color-text-dim);
       font-size: 0.85rem;
     }
 
@@ -115,10 +115,10 @@
     }
 
     .agreement-divider__mark {
-      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-family: var(--font-serif-en);
       font-size: 1.2rem;
       font-weight: 300;
-      color: rgba(192, 168, 120, 0.2);
+      color: var(--color-gold-a20);
       letter-spacing: 0.5em;
     }
 
@@ -126,16 +126,16 @@
     .agreement-consent {
       margin-top: 4rem;
       padding-top: 3rem;
-      border-top: 1px solid rgba(192, 168, 120, 0.15);
+      border-top: 1px solid var(--color-gold-a15);
     }
 
     .agreement-consent__title {
-      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-family: var(--font-serif-en);
       font-size: 0.75rem;
       font-weight: 400;
       letter-spacing: 0.3em;
       text-transform: uppercase;
-      color: #c0a878;
+      color: var(--color-gold);
       margin-bottom: 2rem;
     }
 
@@ -153,8 +153,8 @@
       width: 18px;
       height: 18px;
       min-width: 18px;
-      border: 1px solid rgba(192, 168, 120, 0.4);
-      background: rgba(12, 10, 20, 0.6);
+      border: 1px solid var(--color-gold-a40);
+      background: var(--color-table-bg);
       border-radius: 2px;
       cursor: pointer;
       margin-top: 0.35rem;
@@ -163,8 +163,8 @@
     }
 
     .agreement-checkbox input[type="checkbox"]:checked {
-      border-color: #c0a878;
-      background: rgba(192, 168, 120, 0.15);
+      border-color: var(--color-gold);
+      background: var(--color-gold-a15);
     }
 
     .agreement-checkbox input[type="checkbox"]:checked::after {
@@ -174,12 +174,12 @@
       left: 50%;
       transform: translate(-50%, -50%);
       font-size: 12px;
-      color: #c0a878;
+      color: var(--color-gold);
     }
 
     .agreement-checkbox__label {
       font-size: 0.9rem;
-      color: #c8c4be;
+      color: var(--color-text-subtle);
       line-height: 1.8;
       cursor: pointer;
     }
@@ -188,14 +188,14 @@
       display: inline-block;
       margin-top: 2rem;
       padding: 1rem 3rem;
-      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-family: var(--font-serif-en);
       font-size: 0.85rem;
       font-weight: 500;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: #0c0a14;
-      background: #c0a878;
-      border: 1px solid #c0a878;
+      color: var(--color-bg-deep);
+      background: var(--color-gold);
+      border: 1px solid var(--color-gold);
       border-radius: 0;
       cursor: pointer;
       transition: background 0.3s ease, color 0.3s ease, opacity 0.3s ease;
@@ -204,8 +204,8 @@
     }
 
     .agreement-submit:hover {
-      background: #e8d8b8;
-      color: #0c0a14;
+      background: var(--color-gold-light);
+      color: var(--color-bg-deep);
       border-bottom: none;
     }
 
@@ -218,7 +218,7 @@
     .agreement-date {
       margin-top: 2rem;
       font-size: 0.8rem;
-      color: #a8a4a0;
+      color: var(--color-text-dim);
     }
 
     @media (max-width: 480px) {

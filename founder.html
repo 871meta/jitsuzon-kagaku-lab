@@ -30,7 +30,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="css/style.min.css?v=9">
+  <link rel="stylesheet" href="css/style.min.css?v=10">
   <style>
     /* ============================================
        Founder Page — Enhanced Visual Design
@@ -58,10 +58,10 @@
     }
 
     .founder-hero__sub {
-      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-family: var(--font-serif-en);
       font-size: 0.8rem;
       letter-spacing: 0.25em;
-      color: #c0a878;
+      color: var(--color-gold);
       margin-bottom: 2rem;
       text-transform: uppercase;
       font-weight: 400;
@@ -71,7 +71,7 @@
       font-size: 2.8rem;
       font-weight: 700;
       letter-spacing: 0.1em;
-      color: #f0ece6;
+      color: var(--color-text-primary);
       margin-bottom: 0.4rem;
       line-height: 1.4;
     }
@@ -80,7 +80,7 @@
       font-size: 0.9rem;
       font-weight: 400;
       letter-spacing: 0.15em;
-      color: #c0a878;
+      color: var(--color-gold);
       display: block;
       margin-bottom: 2.5rem;
     }
@@ -103,12 +103,12 @@
     .founder-hero__intro .intro-role {
       font-size: 0.82rem;
       letter-spacing: 0.12em;
-      color: #c0a878;
+      color: var(--color-gold);
       margin-bottom: 1.8rem;
     }
 
     .founder-hero__intro .intro-accent {
-      color: #c0a878;
+      color: var(--color-gold);
     }
 
     .founder-hero__photo-wrap {
@@ -153,7 +153,7 @@
       display: block;
       width: 40px;
       height: 1px;
-      background: #c0a878;
+      background: var(--color-gold);
       margin: 3rem 0 0;
     }
 
@@ -171,14 +171,14 @@
       padding: 5rem 0;
       text-align: center;
       position: relative;
-      border-top: 1px solid rgba(192, 168, 120, 0.08);
-      border-bottom: 1px solid rgba(192, 168, 120, 0.08);
+      border-top: 1px solid var(--color-gold-a08);
+      border-bottom: 1px solid var(--color-gold-a08);
     }
 
     .founder-pullquote__text {
       font-size: 1.4rem;
       font-weight: 600;
-      color: #f0ece6;
+      color: var(--color-text-primary);
       line-height: 2;
       letter-spacing: 0.06em;
       max-width: 600px;
@@ -187,7 +187,7 @@
 
     .founder-pullquote__text em {
       font-style: normal;
-      color: #c0a878;
+      color: var(--color-gold);
     }
 
     .founder-pullquote::before {
@@ -198,7 +198,7 @@
       transform: translateX(-50%);
       width: 32px;
       height: 1px;
-      background: #c0a878;
+      background: var(--color-gold);
     }
 
     /* --- Visual Break: Atmospheric Section --- */
@@ -217,7 +217,7 @@
       right: 0;
       bottom: 0;
       background:
-        radial-gradient(ellipse 80% 60% at 30% 50%, rgba(192, 168, 120, 0.04) 0%, transparent 60%),
+        radial-gradient(ellipse 80% 60% at 30% 50%, var(--color-gold-a04) 0%, transparent 60%),
         radial-gradient(ellipse 60% 40% at 70% 50%, rgba(80, 60, 140, 0.03) 0%, transparent 50%);
       pointer-events: none;
     }
@@ -242,7 +242,7 @@
       transform: translate(-50%, -50%);
       width: 400px;
       height: 400px;
-      background: radial-gradient(circle, rgba(192, 168, 120, 0.06) 0%, transparent 70%);
+      background: radial-gradient(circle, var(--color-gold-a06) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -253,17 +253,17 @@
     }
 
     .founder-symbol__mark {
-      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-family: var(--font-serif-en);
       font-size: 2rem;
       font-weight: 300;
-      color: rgba(192, 168, 120, 0.3);
+      color: var(--color-gold-a30);
       letter-spacing: 0.5em;
     }
 
     /* --- Final declaration section --- */
     .founder-declaration {
       padding: 6rem 0;
-      border-top: 1px solid rgba(192, 168, 120, 0.1);
+      border-top: 1px solid var(--color-gold-a10);
       position: relative;
     }
 
@@ -275,14 +275,14 @@
       transform: translateX(-50%);
       width: 40px;
       height: 2px;
-      background: linear-gradient(90deg, transparent, #c0a878, transparent);
+      background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
     }
 
     /* --- Narrative text-panel upgrade to glass cards --- */
     .founder-narrative .text-panel {
-      background: rgba(15, 12, 25, 0.7);
-      border: 1px solid rgba(192, 168, 120, 0.10);
-      box-shadow: 0 2px 24px rgba(192, 168, 120, 0.04);
+      background: var(--color-panel);
+      border: 1px solid var(--color-gold-a10);
+      box-shadow: 0 2px 24px var(--color-gold-a04);
       backdrop-filter: blur(8px);
       position: relative;
       overflow: hidden;
@@ -295,13 +295,13 @@
       left: 0;
       right: 0;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.4), transparent);
+      background: linear-gradient(90deg, transparent, var(--color-gold-a40), transparent);
     }
 
     .founder-atmospheric .text-panel {
-      background: rgba(15, 12, 25, 0.5);
-      border: 1px solid rgba(192, 168, 120, 0.10);
-      box-shadow: 0 2px 24px rgba(192, 168, 120, 0.04);
+      background: var(--color-panel-light);
+      border: 1px solid var(--color-gold-a10);
+      box-shadow: 0 2px 24px var(--color-gold-a04);
       backdrop-filter: blur(8px);
       position: relative;
       overflow: hidden;
@@ -314,13 +314,13 @@
       left: 0;
       right: 0;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.4), transparent);
+      background: linear-gradient(90deg, transparent, var(--color-gold-a40), transparent);
     }
 
     .founder-declaration .text-panel {
-      background: rgba(15, 12, 25, 0.7);
-      border: 1px solid rgba(192, 168, 120, 0.10);
-      box-shadow: 0 2px 24px rgba(192, 168, 120, 0.04);
+      background: var(--color-panel);
+      border: 1px solid var(--color-gold-a10);
+      box-shadow: 0 2px 24px var(--color-gold-a04);
       backdrop-filter: blur(8px);
       position: relative;
       overflow: hidden;
@@ -333,7 +333,7 @@
       left: 0;
       right: 0;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.4), transparent);
+      background: linear-gradient(90deg, transparent, var(--color-gold-a40), transparent);
     }
 
     /* --- Visibility boost: paragraph text brightness --- */
@@ -345,9 +345,9 @@
 
     /* --- Glass card for opening pull-quote --- */
     .founder-narrative .pull-quote {
-      background: rgba(15, 12, 25, 0.7);
-      border: 1px solid rgba(192, 168, 120, 0.10);
-      box-shadow: 0 2px 24px rgba(192, 168, 120, 0.04);
+      background: var(--color-panel);
+      border: 1px solid var(--color-gold-a10);
+      box-shadow: 0 2px 24px var(--color-gold-a04);
       backdrop-filter: blur(8px);
       padding: 3rem 2.5rem;
       position: relative;
@@ -355,7 +355,7 @@
     }
 
     .founder-narrative .pull-quote::before {
-      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.4), transparent);
+      background: linear-gradient(90deg, transparent, var(--color-gold-a40), transparent);
       width: 100%;
       height: 1px;
       position: absolute;

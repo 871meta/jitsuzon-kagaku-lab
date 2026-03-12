@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../css/style.min.css?v=9">
+  <link rel="stylesheet" href="../../css/style.min.css?v=10">
 
 <style>
 /* =============================================
@@ -40,7 +40,7 @@ h2.chapter-heading {
   font-weight: 700;
   line-height: 1.5;
   letter-spacing: 0.06em;
-  color: #f0ece6;
+  color: var(--color-text-primary);
   border-bottom: none;
   padding-bottom: 0;
   margin-top: 1rem;
@@ -57,7 +57,7 @@ h2.chapter-heading::before {
   transform: translateX(-50%);
   width: 40px;
   height: 1px;
-  background: #c0a878;
+  background: var(--color-gold);
 }
 h2.chapter-heading::after {
   content: "";
@@ -69,12 +69,12 @@ h2.chapter-heading::after {
 }
 .chapter-number {
   display: block;
-  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-family: var(--font-serif-en);
   font-size: 0.7rem;
   font-weight: 400;
   letter-spacing: 0.35em;
   text-transform: uppercase;
-  color: #c0a878;
+  color: var(--color-gold);
   margin-bottom: 0.6rem;
 }
 
@@ -119,19 +119,19 @@ hr::after {
   position: absolute;
   top: -0.6em;
   left: 2rem;
-  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-family: var(--font-serif-en);
   font-size: 0.6rem;
   letter-spacing: 0.3em;
   color: rgba(192,168,120,0.4);
-  background: #0c0a14;
+  background: var(--color-bg-deep);
   padding: 0 0.8rem;
 }
 .session-dialogue p {
   margin-bottom: 1.1em;
   line-height: 2.2;
 }
-.session-dialogue .speaker-yanai { color: #c0a878; font-weight: 600; font-size: 0.92rem; }
-.session-dialogue .speaker-musashi { color: #e8e4df; font-weight: 600; font-size: 0.92rem; }
+.session-dialogue .speaker-yanai { color: var(--color-gold); font-weight: 600; font-size: 0.92rem; }
+.session-dialogue .speaker-musashi { color: var(--color-text-body); font-weight: 600; font-size: 0.92rem; }
 
 /* 箭内の発言：金色の左ボーダー */
 .session-dialogue .line-yanai {
@@ -181,7 +181,7 @@ section > .text-panel:nth-of-type(even)::before {
 .highlight-block {
   background: rgba(192,168,120,0.06);
   border-left: 2px solid;
-  border-image: linear-gradient(180deg, #c0a878 0%, rgba(192,168,120,0.15) 100%) 1;
+  border-image: linear-gradient(180deg, var(--color-gold) 0%, rgba(192,168,120,0.15) 100%) 1;
   padding: 2rem 2rem 2rem 2.2rem;
   margin: 2.5rem 0;
 }
@@ -189,14 +189,14 @@ section > .text-panel:nth-of-type(even)::before {
   font-size: 1rem;
   font-weight: 500;
   line-height: 2.2;
-  color: #f0ece6;
+  color: var(--color-text-primary);
 }
 
 /* === 6. セクション見出し（h3） === */
 h3.section-heading {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #e8e4df;
+  color: var(--color-text-body);
   letter-spacing: 0.08em;
   margin-top: 3rem;
   margin-bottom: 1.5rem;
@@ -224,7 +224,7 @@ h3.section-heading {
 }
 .profiling-block h3 {
   font-size: 0.92rem;
-  color: #c0a878;
+  color: var(--color-gold);
   letter-spacing: 0.15em;
   margin-bottom: 1.5rem;
   font-weight: 600;
@@ -238,7 +238,7 @@ h3.section-heading {
 }
 .profiling-block ul li {
   margin-bottom: 1rem;
-  color: #c0bbb4;
+  color: var(--color-text-reading);
   font-size: 0.9rem;
   line-height: 1.9;
   padding-left: 1.6em;
@@ -275,12 +275,12 @@ h3.section-heading {
 }
 .comparison-table th {
   background: rgba(192,168,120,0.08);
-  color: #c0a878;
+  color: var(--color-gold);
   font-weight: 600;
   letter-spacing: 0.1em;
   font-size: 0.82rem;
 }
-.comparison-table td { color: #c0bbb4; }
+.comparison-table td { color: var(--color-text-reading); }
 
 /* === CTA Block === */
 .cta-block {
@@ -292,20 +292,20 @@ h3.section-heading {
 }
 .cta-block h3 {
   font-size: 1.1rem;
-  color: #e8e4df;
+  color: var(--color-text-body);
   margin-bottom: 1rem;
   font-weight: 600;
 }
 .cta-block p {
   font-size: 0.92rem;
-  color: #c0bbb4;
+  color: var(--color-text-reading);
   line-height: 2.2;
   margin-bottom: 1.2rem;
 }
 .cta-block .cta-btn {
   display: inline-block;
   padding: 0.8rem 2.5rem;
-  background: #c0a878;
+  background: var(--color-gold);
   color: #080610;
   text-decoration: none;
   font-weight: 700;
@@ -322,8 +322,8 @@ h3.section-heading {
   padding-top: 2rem;
   border-top: 1px solid rgba(192,168,120,0.15);
 }
-.author-block p { font-size: 0.88rem; color: #c0bbb4; line-height: 2; }
-.author-block strong { color: #e8e4df; }
+.author-block p { font-size: 0.88rem; color: var(--color-text-reading); line-height: 2; }
+.author-block strong { color: var(--color-text-body); }
 
 /* === Source Note === */
 .source-note {
@@ -339,10 +339,10 @@ h3.section-heading {
   background: rgba(192,168,120,0.04);
   border: 1px solid rgba(192,168,120,0.1);
   font-size: 0.88rem;
-  color: #c0bbb4;
+  color: var(--color-text-reading);
   line-height: 2;
 }
-.series-note a { color: #c0a878; }
+.series-note a { color: var(--color-gold); }
 
 /* === 7. モバイル対応 === */
 @media (max-width: 600px) {

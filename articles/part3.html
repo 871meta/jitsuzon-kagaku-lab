@@ -31,12 +31,12 @@
       --text: rgba(235, 232, 225, 0.92);
       --text-secondary: rgba(235, 232, 225, 0.55);
       --bg: #080610;
-      --border: rgba(192, 168, 120, 0.15);
-      --accent: #c0a878;
-      --highlight: rgba(192, 168, 120, 0.06);
-      --blockquote-border: rgba(192, 168, 120, 0.4);
+      --border: var(--color-gold-a15);
+      --accent: var(--color-gold);
+      --highlight: var(--color-gold-a06);
+      --blockquote-border: var(--color-gold-a40);
       --bg-surface: rgba(255, 255, 255, 0.03);
-      --definition-bg: rgba(192, 168, 120, 0.04);
+      --definition-bg: var(--color-gold-a04);
       --proof-bg: rgba(192, 168, 120, 0.03);
       --max-width: 780px;
     }
@@ -73,7 +73,7 @@
       text-transform: uppercase;
       color: var(--text-secondary);
       margin-bottom: 1rem;
-      font-family: "Noto Sans JP", sans-serif;
+      font-family: var(--font-sans);
     }
 
     .paper-header h1 {
@@ -110,7 +110,7 @@
       font-size: 0.8rem;
       letter-spacing: 0.2em;
       color: var(--text-secondary);
-      font-family: "Noto Sans JP", sans-serif;
+      font-family: var(--font-sans);
       margin-bottom: 0.3rem;
     }
 
@@ -121,7 +121,7 @@
       margin-bottom: 1rem;
       line-height: 1.6;
       padding-left: 0.8rem;
-      border-left: 2px solid rgba(192, 168, 120, 0.4);
+      border-left: 2px solid var(--color-gold-a40);
     }
 
     .subsection-heading {
@@ -168,7 +168,7 @@
       font-size: 0.95rem;
       letter-spacing: 0.1em;
       margin-bottom: 1rem;
-      font-family: "Noto Sans JP", sans-serif;
+      font-family: var(--font-sans);
       border-bottom: 1px solid var(--border);
       padding-bottom: 0.5rem;
     }
@@ -213,7 +213,7 @@
       font-size: 1rem;
       letter-spacing: 0.2em;
       margin-bottom: 1rem;
-      font-family: "Noto Sans JP", sans-serif;
+      font-family: var(--font-sans);
     }
     .abstract p {
       font-size: 0.95rem;
@@ -249,7 +249,7 @@
       font-size: 1rem;
       letter-spacing: 0.2em;
       margin-bottom: 1.2rem;
-      font-family: "Noto Sans JP", sans-serif;
+      font-family: var(--font-sans);
     }
     .toc ol {
       list-style: none;
@@ -278,7 +278,7 @@
     .toc .toc-number {
       color: var(--accent);
       font-size: 0.85rem;
-      font-family: "Noto Sans JP", sans-serif;
+      font-family: var(--font-sans);
       min-width: 3.5rem;
       letter-spacing: 0.05em;
     }
@@ -305,7 +305,7 @@
       font-size: 0.95rem;
       font-weight: 700;
       margin-bottom: 0.5rem;
-      color: #c0a878;
+      color: var(--color-gold);
     }
 
     .four-layer-item p {
@@ -399,16 +399,16 @@
     }
 
 /* === Dark Theme Override === */
-a:not(.btn):not(.session-card__link) { color: #c0a878; transition: color 0.2s; }
-a:not(.btn):not(.session-card__link):hover { color: #e8d8b8; }
-.category-tag { color: #080610 !important; background: #c0a878 !important; }
-.back-nav { background: rgba(192, 168, 120, 0.06); border-color: rgba(192, 168, 120, 0.15); }
-.back-nav a { color: #c0a878; }
+a:not(.btn):not(.session-card__link) { color: var(--color-gold); transition: color 0.2s; }
+a:not(.btn):not(.session-card__link):hover { color: var(--color-gold-light); }
+.category-tag { color: #080610 !important; background: var(--color-gold) !important; }
+.back-nav { background: var(--color-gold-a06); border-color: var(--color-gold-a15); }
+.back-nav a { color: var(--color-gold); }
 img { border-radius: 2px; }
 input, textarea, select { background: rgba(255,255,255,0.05); color: rgba(235,232,225,0.92); border-color: rgba(201,168,76,0.2); }
 input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); outline: none; }
 ::placeholder { color: rgba(235,232,225,0.3); }
-.submit-btn, button[type="submit"] { background: #c0a878; color: #080610; border: none; }
+.submit-btn, button[type="submit"] { background: var(--color-gold); color: #080610; border: none; }
 
 </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -423,7 +423,7 @@ input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); 
 <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
   <meta property="og:url" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/part3.html">
 <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="../css/style.min.css?v=9">
+  <link rel="stylesheet" href="../css/style.min.css?v=10">
 </head>
 
 <body>

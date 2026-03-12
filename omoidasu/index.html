@@ -33,24 +33,24 @@
    ============================================================ */
 
 :root {
-  --bg: #0c0a14;
-  --bg-overlay: rgba(8, 6, 16, 0.80);
-  --surface: rgba(15, 12, 25, 0.7);
-  --surface-light: rgba(15, 12, 25, 0.5);
-  --text: #e8e4df;
-  --text-bright: #f0ece6;
-  --text-sub: #c0bbb4;
-  --text-dim: #a8a4a0;
-  --text-muted: #8a8680;
-  --gold: #c0a878;
-  --gold-dim: rgba(192, 168, 120, 0.7);
-  --gold-border: rgba(192, 168, 120, 0.12);
-  --gold-border-strong: rgba(192, 168, 120, 0.2);
-  --gold-glow: rgba(192, 168, 120, 0.05);
-  --gold-bg: rgba(192, 168, 120, 0.04);
+  --bg: var(--color-bg-deep);
+  --bg-overlay: var(--color-overlay-heavy);
+  --surface: var(--color-panel);
+  --surface-light: var(--color-panel-light);
+  --text: var(--color-text-body);
+  --text-bright: var(--color-text-primary);
+  --text-sub: var(--color-text-reading);
+  --text-dim: var(--color-text-dim);
+  --text-muted: var(--color-text-faint);
+  --gold: var(--color-gold);
+  --gold-dim: var(--color-gold-a70);
+  --gold-border: var(--color-gold-a12);
+  --gold-border-strong: var(--color-gold-a20);
+  --gold-glow: var(--color-gold-a05);
+  --gold-bg: var(--color-gold-a04);
   --serif: "Shippori Mincho", "Noto Serif JP", "游明朝", "Yu Mincho", serif;
-  --sans: "Noto Sans JP", sans-serif;
-  --garamond: "Cormorant Garamond", "Times New Roman", serif;
+  --sans: var(--font-sans);
+  --garamond: var(--font-serif-en);
 
   --status-stable: #7ee081;
   --status-caution: #ffd166;
@@ -108,8 +108,8 @@ body > * {
   top: -100%;
   left: 50%;
   transform: translateX(-50%);
-  background: #c0a878;
-  color: #0c0a14;
+  background: var(--color-gold);
+  color: var(--color-bg-deep);
   padding: 0.8rem 1.6rem;
   z-index: 10000;
   font-size: 0.9rem;
@@ -122,7 +122,7 @@ body > * {
 }
 
 ::selection {
-  background: rgba(192, 168, 120, 0.3);
+  background: var(--color-gold-a30);
   color: #fff;
 }
 
@@ -144,7 +144,7 @@ body > * {
 .header {
   text-align: center;
   padding: 6rem 0 3rem;
-  border-bottom: 1px solid rgba(192, 168, 120, 0.1);
+  border-bottom: 1px solid var(--color-gold-a10);
   position: relative;
 }
 
@@ -203,7 +203,7 @@ body > * {
 .separator {
   border: none;
   height: 1px;
-  background: linear-gradient(90deg, transparent 0%, rgba(192, 168, 120, 0.15) 50%, transparent 100%);
+  background: linear-gradient(90deg, transparent 0%, var(--color-gold-a15) 50%, transparent 100%);
   margin: 3.5rem 0;
 }
 
@@ -318,7 +318,7 @@ blockquote strong {
   font-size: 0.65rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: rgba(192, 168, 120, 0.5);
+  color: var(--color-gold-a50);
   font-weight: 400;
 }
 
@@ -331,13 +331,13 @@ blockquote strong {
 
 .progress-bar {
   height: 2px;
-  background: rgba(192, 168, 120, 0.1);
+  background: var(--color-gold-a10);
 }
 
 .progress-fill {
   height: 100%;
   width: 0%;
-  background: linear-gradient(90deg, rgba(192, 168, 120, 0.4), var(--gold));
+  background: linear-gradient(90deg, var(--color-gold-a40), var(--gold));
   transition: width 0.4s cubic-bezier(.4, 0, .2, 1);
 }
 
@@ -378,7 +378,7 @@ blockquote strong {
   padding: 0.6rem;
   border: 1px solid var(--gold-border);
   margin-left: -1px;
-  background: rgba(15, 12, 25, 0.5);
+  background: var(--color-panel-light);
 }
 
 .rt-item:first-child { margin-left: 0; }
@@ -388,7 +388,7 @@ blockquote strong {
   font-size: 0.6rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(192, 168, 120, 0.5);
+  color: var(--color-gold-a50);
   font-weight: 400;
 }
 
@@ -446,7 +446,7 @@ blockquote strong {
   width: 20px;
   height: 20px;
   min-width: 20px;
-  border: 1px solid rgba(192, 168, 120, 0.2);
+  border: 1px solid var(--color-gold-a20);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -483,7 +483,7 @@ blockquote strong {
   font-size: 0.75rem;
   font-weight: 400;
   letter-spacing: 0.1em;
-  color: rgba(192, 168, 120, 0.5);
+  color: var(--color-gold-a50);
   min-width: 1.8rem;
   padding-top: 0.15rem;
 }
@@ -539,8 +539,8 @@ blockquote strong {
 
 .q-options input[type="radio"]:checked + .radio-btn {
   border-color: var(--gold);
-  background: rgba(192, 168, 120, 0.08);
-  box-shadow: 0 0 0 1px var(--gold), 0 0 20px rgba(192, 168, 120, 0.08);
+  background: var(--color-gold-a08);
+  box-shadow: 0 0 0 1px var(--gold), 0 0 20px var(--color-gold-a08);
   position: relative;
   z-index: 1;
 }
@@ -550,7 +550,7 @@ blockquote strong {
 }
 
 .q-options label:hover .radio-btn {
-  border-color: rgba(192, 168, 120, 0.3);
+  border-color: var(--color-gold-a30);
 }
 
 /* ── Submit ── */
@@ -644,7 +644,7 @@ blockquote strong {
   color: var(--gold);
   line-height: 1;
   letter-spacing: 0.1em;
-  text-shadow: 0 0 40px rgba(192, 168, 120, 0.15);
+  text-shadow: 0 0 40px var(--color-gold-a15);
 }
 
 .total-score .of {
@@ -660,7 +660,7 @@ blockquote strong {
   font-size: 0.65rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: rgba(192, 168, 120, 0.5);
+  color: var(--color-gold-a50);
   margin-top: 0.5rem;
   font-weight: 400;
 }
@@ -685,7 +685,7 @@ blockquote strong {
   font-weight: 400;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(192, 168, 120, 0.6);
+  color: var(--color-gold-a60);
   min-width: 3.5rem;
   text-align: right;
 }
@@ -693,7 +693,7 @@ blockquote strong {
 .bar-track {
   flex: 1;
   height: 28px;
-  background: rgba(15, 12, 25, 0.5);
+  background: var(--color-panel-light);
   border: 1px solid var(--gold-border);
   overflow: hidden;
 }
@@ -759,7 +759,7 @@ blockquote strong {
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.5), transparent);
+  background: linear-gradient(90deg, transparent, var(--color-gold-a50), transparent);
 }
 
 .letter-card h2 {
@@ -768,7 +768,7 @@ blockquote strong {
   font-weight: 600;
   letter-spacing: 0.06em;
   color: var(--text-bright);
-  border-bottom: 1px solid rgba(192, 168, 120, 0.15);
+  border-bottom: 1px solid var(--color-gold-a15);
   padding-bottom: 1rem;
   margin-bottom: 2rem;
 }
@@ -819,7 +819,7 @@ blockquote strong {
   content: "\2014";
   position: absolute;
   left: 0;
-  color: rgba(192, 168, 120, 0.5);
+  color: var(--color-gold-a50);
 }
 
 .letter-card .insight-box {
@@ -875,7 +875,7 @@ blockquote strong {
   font-weight: 400;
   letter-spacing: 0.15em;
   background: transparent;
-  border: 1px solid rgba(192, 168, 120, 0.2);
+  border: 1px solid var(--color-gold-a20);
   color: var(--text-dim);
   padding: 0.8rem 2.5rem;
   cursor: pointer;
@@ -892,7 +892,7 @@ blockquote strong {
 .cta-section {
   text-align: center;
   padding: 4rem 0 6rem;
-  border-top: 1px solid rgba(192, 168, 120, 0.1);
+  border-top: 1px solid var(--color-gold-a10);
   position: relative;
 }
 

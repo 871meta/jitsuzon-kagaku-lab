@@ -22,11 +22,11 @@
       --text: rgba(235, 232, 225, 0.92);
       --text-secondary: rgba(235, 232, 225, 0.55);
       --bg: #080610;
-      --border: rgba(192, 168, 120, 0.15);
-      --accent: #c0a878;
-      --highlight: rgba(192, 168, 120, 0.06);
-      --blockquote-border: rgba(192, 168, 120, 0.4);
-      --definition-bg: rgba(192, 168, 120, 0.04);
+      --border: var(--color-gold-a15);
+      --accent: var(--color-gold);
+      --highlight: var(--color-gold-a06);
+      --blockquote-border: var(--color-gold-a40);
+      --definition-bg: var(--color-gold-a04);
       --max-width: 780px;
     }
     html { font-size: 17px; scroll-behavior: smooth; }
@@ -35,7 +35,7 @@
 
     /* HEADER */
     .page-header { text-align: center; padding: 4rem 0 3rem; border-bottom: 2px solid var(--accent); margin-bottom: 3rem; }
-    .page-header .label { font-size: 0.85rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 1rem; font-family: "Noto Sans JP", sans-serif; }
+    .page-header .label { font-size: 0.85rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 1rem; font-family: var(--font-sans); }
     .page-header h1 { font-size: 1.5rem; font-weight: 700; line-height: 1.6; margin-bottom: 0.5rem; }
     .page-header .subtitle { font-size: 1rem; color: var(--text-secondary); line-height: 1.8; }
 
@@ -57,7 +57,7 @@
     /* PART CARDS */
     .part-cards { margin: 2rem 0; }
     .part-card { padding: 1.5rem 2rem; border: 1px solid var(--border); background: var(--definition-bg); margin-bottom: 1rem; }
-    .part-card .part-label { font-family: "Noto Sans JP", sans-serif; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.15em; color: var(--text-secondary); margin-bottom: 0.5rem; }
+    .part-card .part-label { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.15em; color: var(--text-secondary); margin-bottom: 0.5rem; }
     .part-card h3 { font-size: 1.05rem; font-weight: 700; line-height: 1.6; margin-bottom: 0.8rem; }
     .part-card p { font-size: 0.95rem; margin-bottom: 0.5rem; }
     .part-card p:last-child { margin-bottom: 0; }
@@ -78,16 +78,16 @@
     }
 
 /* === Dark Theme Override === */
-a:not(.btn):not(.session-card__link) { color: #c0a878; transition: color 0.2s; }
-a:not(.btn):not(.session-card__link):hover { color: #e8d8b8; }
-.category-tag { color: #080610 !important; background: #c0a878 !important; }
-.back-nav { background: rgba(192, 168, 120, 0.06); border-color: rgba(192, 168, 120, 0.15); }
-.back-nav a { color: #c0a878; }
+a:not(.btn):not(.session-card__link) { color: var(--color-gold); transition: color 0.2s; }
+a:not(.btn):not(.session-card__link):hover { color: var(--color-gold-light); }
+.category-tag { color: #080610 !important; background: var(--color-gold) !important; }
+.back-nav { background: var(--color-gold-a06); border-color: var(--color-gold-a15); }
+.back-nav a { color: var(--color-gold); }
 img { border-radius: 2px; }
 input, textarea, select { background: rgba(255,255,255,0.05); color: rgba(235,232,225,0.92); border-color: rgba(201,168,76,0.2); }
 input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); outline: none; }
 ::placeholder { color: rgba(235,232,225,0.3); }
-.submit-btn, button[type="submit"] { background: #c0a878; color: #080610; border: none; }
+.submit-btn, button[type="submit"] { background: var(--color-gold); color: #080610; border: none; }
 
 </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -106,7 +106,7 @@ input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); 
 <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
   <meta property="og:url" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/trilogy-guide.html">
 <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="css/style.min.css?v=9">
+  <link rel="stylesheet" href="css/style.min.css?v=10">
 </head>
 <body>
   <a href="#main" class="skip-link">メインコンテンツへスキップ</a>
