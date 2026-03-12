@@ -30,6 +30,91 @@
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/style.min.css?v=9">
+  <style>
+    /* === Session navigation cards === */
+    .session-nav-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .session-nav-card {
+      position: relative;
+      display: block;
+      padding: 2rem 2rem 2.5rem;
+      background: rgba(15, 12, 25, 0.7);
+      border: 1px solid rgba(192, 168, 120, 0.12);
+      box-shadow: 0 2px 24px rgba(192, 168, 120, 0.05);
+      backdrop-filter: blur(8px);
+      text-decoration: none;
+      transition: box-shadow 0.4s ease, border-color 0.4s ease;
+      overflow: hidden;
+    }
+
+    .session-nav-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.5), transparent);
+    }
+
+    .session-nav-card:hover {
+      box-shadow: 0 4px 48px rgba(192, 168, 120, 0.1);
+      border-color: rgba(192, 168, 120, 0.25);
+    }
+
+    .session-nav-card__label {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.3em;
+      color: rgba(192, 168, 120, 0.4);
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+    }
+
+    .session-nav-card__title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #f0ece6;
+      margin-bottom: 0.6rem;
+      letter-spacing: 0.06em;
+      line-height: 1.8;
+    }
+
+    .session-nav-card__desc {
+      font-size: 0.88rem;
+      color: #c0bbb4;
+      line-height: 2;
+    }
+
+    .session-nav-card__arrow {
+      position: absolute;
+      bottom: 1.2rem;
+      right: 1.5rem;
+      font-size: 1.2rem;
+      color: rgba(192, 168, 120, 0.4);
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .session-nav-card:hover .session-nav-card__arrow {
+      color: rgba(192, 168, 120, 0.8);
+      transform: translateX(4px);
+    }
+
+    @media (max-width: 768px) {
+      .session-nav-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .session-nav-card {
+        padding: 1.8rem 1.5rem 2.2rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -165,6 +250,39 @@
 
       <div class="pull-quote fade-in">
         <p>「この自由意志なき世界で、私は何のために生きているのか」。</p>
+      </div>
+
+      <!-- Session Navigation Cards -->
+      <hr class="separator">
+
+      <div class="content-block fade-in" style="margin-top: 1rem;">
+        <h2 class="section__title">セッションを知る</h2>
+        <div class="session-nav-cards">
+          <a href="trial.html" class="session-nav-card">
+            <p class="session-nav-card__label">Free Trial</p>
+            <p class="session-nav-card__title">無料トライアル</p>
+            <p class="session-nav-card__desc">天命の言語化セッション™を、まず無料で体験する。</p>
+            <span class="session-nav-card__arrow">&rarr;</span>
+          </a>
+          <a href="session-menu.html" class="session-nav-card">
+            <p class="session-nav-card__label">12 Dialogues</p>
+            <p class="session-nav-card__title">12の対話（領域）</p>
+            <p class="session-nav-card__desc">心友™との対話の現場から生まれた、12の領域。</p>
+            <span class="session-nav-card__arrow">&rarr;</span>
+          </a>
+          <a href="uniqueness.html" class="session-nav-card">
+            <p class="session-nav-card__label">Uniqueness</p>
+            <p class="session-nav-card__title">独自性と射程</p>
+            <p class="session-nav-card__desc">天命の言語化セッション™は、なぜ唯一無二なのか。</p>
+            <span class="session-nav-card__arrow">&rarr;</span>
+          </a>
+          <a href="faq.html" class="session-nav-card">
+            <p class="session-nav-card__label">FAQ</p>
+            <p class="session-nav-card__title">よくある質問</p>
+            <p class="session-nav-card__desc">費用、申し込みの流れ、セッションの違いについて。</p>
+            <span class="session-nav-card__arrow">&rarr;</span>
+          </a>
+        </div>
       </div>
 
       <hr class="separator">
