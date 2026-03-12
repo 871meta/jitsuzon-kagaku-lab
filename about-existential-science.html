@@ -32,7 +32,7 @@
     rel="stylesheet">
   <link rel="stylesheet" href="css/style.min.css?v=9">
   <style>
-    /* 変更1: 定義の宣言ブロック */
+    /* 定義の宣言ブロック */
     .definition-declaration {
       text-align: center;
       margin-top: 90px;
@@ -43,7 +43,8 @@
       line-height: 2.8;
       margin: 0;
     }
-    /* 変更2: パートラベル */
+
+    /* パートラベル */
     .part-label {
       text-align: center;
       margin-top: 140px;
@@ -62,6 +63,213 @@
       color: #b8a070;
       margin-top: 0.3em;
     }
+
+    /* パートごとの色温度 */
+    .es-part--practice .part-label__en,
+    .es-part--practice .part-label__ja {
+      color: #c4956a;
+    }
+    .es-part--vision .part-label__en,
+    .es-part--vision .part-label__ja {
+      color: #9aadbd;
+    }
+
+    /* ── アコーディオン ── */
+    .es-accordion {
+      margin: 1.5rem 0;
+    }
+    .es-accordion__item {
+      margin-bottom: 0.6rem;
+      border-left: 2px solid rgba(192, 168, 120, 0.12);
+      transition: border-color 0.5s ease;
+    }
+
+    /* ヘッダー（クリック領域） */
+    .es-accordion__header {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      padding: 1.4rem 2rem;
+      cursor: pointer;
+      background: linear-gradient(180deg, rgba(15, 12, 25, 0.55) 0%, rgba(8, 6, 16, 0.45) 100%);
+      border: 1px solid rgba(192, 168, 120, 0.06);
+      border-left: none;
+      border-radius: 2px;
+      transition: background 0.4s ease, border-color 0.4s ease;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    .es-accordion__header:hover {
+      background: linear-gradient(180deg, rgba(15, 12, 25, 0.7) 0%, rgba(8, 6, 16, 0.6) 100%);
+      border-color: rgba(192, 168, 120, 0.12);
+    }
+
+    /* ナンバリング */
+    .es-accordion__num {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 0.82rem;
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      color: rgba(192, 168, 120, 0.35);
+      flex-shrink: 0;
+      min-width: 1.8em;
+    }
+
+    /* タイトル */
+    .es-accordion__title {
+      font-family: "Shippori Mincho", serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      color: #e8e4df;
+      flex-grow: 1;
+      margin: 0;
+      padding: 0;
+      border: none;
+      line-height: 1.8;
+    }
+
+    /* +/− アイコン */
+    .es-accordion__icon {
+      width: 11px;
+      height: 11px;
+      position: relative;
+      flex-shrink: 0;
+    }
+    .es-accordion__icon::before,
+    .es-accordion__icon::after {
+      content: "";
+      position: absolute;
+      background: rgba(192, 168, 120, 0.45);
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+    .es-accordion__icon::before {
+      top: 50%; left: 0; right: 0; height: 1px;
+      transform: translateY(-50%);
+    }
+    .es-accordion__icon::after {
+      left: 50%; top: 0; bottom: 0; width: 1px;
+      transform: translateX(-50%);
+    }
+    .es-accordion__item.is-open .es-accordion__icon::after {
+      transform: translateX(-50%) rotate(90deg);
+      opacity: 0;
+    }
+
+    /* 展開ボディ */
+    .es-accordion__body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .es-accordion__content {
+      padding: 1.8rem 2rem 2.2rem;
+      background: linear-gradient(180deg, rgba(15, 12, 25, 0.65) 0%, rgba(8, 6, 16, 0.45) 100%);
+      border: 1px solid rgba(192, 168, 120, 0.06);
+      border-top: none;
+      border-left: none;
+      border-radius: 0 0 2px 0;
+      position: relative;
+    }
+    .es-accordion__content::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 2rem; right: 2rem;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.15), transparent);
+    }
+    .es-accordion__content p {
+      font-size: 0.95rem;
+      line-height: 2.2;
+    }
+    .es-accordion__content p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 開いた時のスタイル */
+    .es-accordion__item.is-open {
+      border-left-color: #c0a878;
+    }
+    .es-accordion__item.is-open .es-accordion__header {
+      border-color: rgba(192, 168, 120, 0.12);
+      border-bottom-color: transparent;
+      border-radius: 2px 2px 0 0;
+    }
+    .es-accordion__item.is-open .es-accordion__num {
+      color: rgba(192, 168, 120, 0.6);
+    }
+    .es-accordion__item.is-open .es-accordion__content {
+      box-shadow: inset 0 0 80px rgba(192, 168, 120, 0.025);
+    }
+
+    /* ── PRACTICE パート固有色 ── */
+    .es-part--practice .es-accordion__item {
+      border-left-color: rgba(196, 149, 106, 0.12);
+    }
+    .es-part--practice .es-accordion__item.is-open {
+      border-left-color: #c4956a;
+    }
+    .es-part--practice .es-accordion__num {
+      color: rgba(196, 149, 106, 0.35);
+    }
+    .es-part--practice .es-accordion__item.is-open .es-accordion__num {
+      color: rgba(196, 149, 106, 0.6);
+    }
+    .es-part--practice .es-accordion__icon::before,
+    .es-part--practice .es-accordion__icon::after {
+      background: rgba(196, 149, 106, 0.45);
+    }
+    .es-part--practice .es-accordion__header:hover {
+      border-color: rgba(196, 149, 106, 0.12);
+    }
+    .es-part--practice .es-accordion__item.is-open .es-accordion__header {
+      border-color: rgba(196, 149, 106, 0.12);
+      border-bottom-color: transparent;
+    }
+    .es-part--practice .es-accordion__item.is-open .es-accordion__content {
+      box-shadow: inset 0 0 80px rgba(196, 149, 106, 0.025);
+    }
+    .es-part--practice .es-accordion__content::before {
+      background: linear-gradient(90deg, transparent, rgba(196, 149, 106, 0.15), transparent);
+    }
+
+    /* ── VISION パート固有色 ── */
+    .es-part--vision .es-accordion__item {
+      border-left-color: rgba(154, 173, 189, 0.12);
+    }
+    .es-part--vision .es-accordion__item.is-open {
+      border-left-color: #9aadbd;
+    }
+    .es-part--vision .es-accordion__num {
+      color: rgba(154, 173, 189, 0.35);
+    }
+    .es-part--vision .es-accordion__item.is-open .es-accordion__num {
+      color: rgba(154, 173, 189, 0.6);
+    }
+    .es-part--vision .es-accordion__icon::before,
+    .es-part--vision .es-accordion__icon::after {
+      background: rgba(154, 173, 189, 0.45);
+    }
+    .es-part--vision .es-accordion__header:hover {
+      border-color: rgba(154, 173, 189, 0.12);
+    }
+    .es-part--vision .es-accordion__item.is-open .es-accordion__header {
+      border-color: rgba(154, 173, 189, 0.12);
+      border-bottom-color: transparent;
+    }
+    .es-part--vision .es-accordion__item.is-open .es-accordion__content {
+      box-shadow: inset 0 0 80px rgba(154, 173, 189, 0.025);
+    }
+    .es-part--vision .es-accordion__content::before {
+      background: linear-gradient(90deg, transparent, rgba(154, 173, 189, 0.15), transparent);
+    }
+
+    /* ── highlight-block のパート色対応 ── */
+    .es-part--vision .highlight-block {
+      border-image: linear-gradient(180deg, #9aadbd 0%, rgba(154, 173, 189, 0.2) 100%) 1;
+    }
+
+    /* ── レスポンシブ ── */
     @media (max-width: 600px) {
       .definition-declaration {
         margin-top: 60px;
@@ -74,6 +282,22 @@
       .part-label {
         margin-top: 100px;
         margin-bottom: 40px;
+      }
+      .es-accordion__header {
+        padding: 1.2rem 1.2rem;
+        gap: 0.8rem;
+      }
+      .es-accordion__title {
+        font-size: 0.88rem;
+      }
+      .es-accordion__content {
+        padding: 1.4rem 1.2rem 1.8rem;
+      }
+      .es-accordion__content::before {
+        left: 1.2rem; right: 1.2rem;
+      }
+      .es-accordion__content p {
+        font-size: 0.9rem;
       }
     }
   </style>
@@ -123,263 +347,352 @@
   <section class="section">
     <div class="container">
 
-      <!-- 定義の宣言ブロック（変更1） -->
+      <!-- 定義の宣言ブロック（常時表示） -->
       <div class="definition-declaration fade-in">
         <p><strong>実存とは、「生きる意味」である。</strong></p>
         <p><strong>科学とは、「再現可能な構造」である。</strong></p>
         <p><strong>実存科学は、この二つを接続する。</strong></p>
       </div>
 
-      <!-- パートラベル: Structure（変更2） -->
-      <div class="part-label fade-in">
-        <span class="part-label__en">STRUCTURE</span>
-        <span class="part-label__ja">構造</span>
-      </div>
+      <!-- ═══════════════════════════════════ -->
+      <!-- PART 1: STRUCTURE                   -->
+      <!-- ═══════════════════════════════════ -->
+      <div class="es-part--structure">
 
-      <!-- (a) 定義文セクション -->
-      <div class="text-panel fade-in">
-        <p>
-          人類は、<strong>「生きる意味」を語る言葉を失った。</strong>
-        </p>
-        <p>
-          いや、失ったのではない。
-        </p>
-        <p>
-          正確に言えば、失ったことにすら気づいていない。
-        </p>
-      </div>
+        <div class="part-label fade-in">
+          <span class="part-label__en">STRUCTURE</span>
+          <span class="part-label__ja">構造</span>
+        </div>
 
-      <div class="text-panel fade-in">
-        <p>
-          <strong>宗教</strong>は信を求め、<strong>哲学</strong>は問いを閉じられず、
-          <strong>科学</strong>は沈黙し、<strong>心理学</strong>は構造の手前で立ち止まった。
-        </p>
-        <p>
-          いずれも正しかった。
-          しかし、いずれも、<strong>決定的に足りなかった。</strong>
-        </p>
-        <p>
-          足りなかったのは、たった一つの視点である。
-        </p>
-        <p>
-          <strong>私たちの「生きる意味」はどのような構造条件のもとで生成するか</strong>──
-        </p>
-        <p>
-          その一点が、数千年のあいだ見落とされていた。
-        </p>
-      </div>
+        <!-- (a) 定義文セクション（常時表示） -->
+        <div class="text-panel fade-in">
+          <p>
+            人類は、<strong>「生きる意味」を語る言葉を失った。</strong>
+          </p>
+          <p>
+            いや、失ったのではない。
+          </p>
+          <p>
+            正確に言えば、失ったことにすら気づいていない。
+          </p>
+        </div>
 
-      <div class="highlight-block fade-in">
-        <p>
-          <strong>実存とは、「生きる意味」である。</strong><br>
-          <strong>科学とは、「再現可能な構造」である。</strong>
-        </p>
-        <p>
-          実存科学は、この二つを接続することで、
-          誰もが天命を悟り、日々全うできる社会の実現を目指す。
-        </p>
-        <p>
-          <strong>「生きる意味」を語れる社会をつくる。</strong>
-        </p>
-        <p>
-          これがこの学問の存在意義である。
-        </p>
-      </div>
+        <div class="text-panel fade-in">
+          <p>
+            <strong>宗教</strong>は信を求め、<strong>哲学</strong>は問いを閉じられず、
+            <strong>科学</strong>は沈黙し、<strong>心理学</strong>は構造の手前で立ち止まった。
+          </p>
+          <p>
+            いずれも正しかった。
+            しかし、いずれも、<strong>決定的に足りなかった。</strong>
+          </p>
+          <p>
+            足りなかったのは、たった一つの視点である。
+          </p>
+          <p>
+            <strong>私たちの「生きる意味」はどのような構造条件のもとで生成するか</strong>──
+          </p>
+          <p>
+            その一点が、数千年のあいだ見落とされていた。
+          </p>
+        </div>
 
-      <!-- (b) 三つの理論体系 -->
-      <div class="text-panel fade-in">
-        <h3 class="content-block__heading">三つの理論体系</h3>
-        <p>
-          語りの生成条件を問う<strong>認識論（Meta）</strong>。<br>
-          意味がいかに収束するかを問う<strong>意味論（天命）</strong>。<br>
-          その意味が関係と文明へ波及する構造を問う<strong>社会論（心友™）</strong>。
-        </p>
-        <p>
-          この三層は、断片としてではなく、
-          <strong>一つの連続した構造運動＜真理＞</strong>として統合され、
-          論文として公開されている。
-        </p>
-      </div>
+        <div class="highlight-block fade-in">
+          <p>
+            <strong>実存とは、「生きる意味」である。</strong><br>
+            <strong>科学とは、「再現可能な構造」である。</strong>
+          </p>
+          <p>
+            実存科学は、この二つを接続することで、
+            誰もが天命を悟り、日々全うできる社会の実現を目指す。
+          </p>
+          <p>
+            <strong>「生きる意味」を語れる社会をつくる。</strong>
+          </p>
+          <p>
+            これがこの学問の存在意義である。
+          </p>
+        </div>
 
-      <!-- (c) 理論からセッションへの橋渡し -->
-      <div class="text-panel fade-in">
-        <h3 class="content-block__heading">しかし、理論だけでは届かない。</h3>
-        <p>
-          どれほど精緻な構造を記述しても、
-          それが一人の人間の「天命」として言語化されなければ、
-          学問は学問のまま閉じてしまう。
-        </p>
-        <p>
-          この三部作のすべてを、一回の対話で貫通する技術。
-          それが<strong>天命の言語化セッション™</strong>である。
-        </p>
-      </div>
+        <!-- アコーディオン: STRUCTURE -->
+        <div class="es-accordion fade-in">
 
-      <!-- パートラベル: Practice（変更2） -->
-      <div class="part-label fade-in">
-        <span class="part-label__en">PRACTICE</span>
-        <span class="part-label__ja">実践</span>
-      </div>
+          <!-- (b) 三つの理論体系 -->
+          <div class="es-accordion__item">
+            <div class="es-accordion__header" role="button" tabindex="0" aria-expanded="false">
+              <span class="es-accordion__num">01</span>
+              <h3 class="es-accordion__title">三つの理論体系</h3>
+              <span class="es-accordion__icon"></span>
+            </div>
+            <div class="es-accordion__body">
+              <div class="es-accordion__content">
+                <p>
+                  語りの生成条件を問う<strong>認識論（Meta）</strong>。<br>
+                  意味がいかに収束するかを問う<strong>意味論（天命）</strong>。<br>
+                  その意味が関係と文明へ波及する構造を問う<strong>社会論（心友™）</strong>。
+                </p>
+                <p>
+                  この三層は、断片としてではなく、
+                  <strong>一つの連続した構造運動＜真理＞</strong>として統合され、
+                  論文として公開されている。
+                </p>
+              </div>
+            </div>
+          </div>
 
-      <!-- (d) 天命の言語化セッション™の説明 -->
-      <div class="text-panel fade-in">
-        <h3 class="content-block__heading">「天命の言語化セッション™」とは？</h3>
-        <p>
-          人類は数千年にわたり、
-          <strong>「あなたは自由に選べる」</strong>という前提のうえに、
-          あらゆる対人技法を築いてきた。
-        </p>
-        <p>
-          しかし、このセッションはその前提を採用しない。
-        </p>
-        <p>
-          <strong>「Metaがある限り自由意志は存在しない」</strong>
-        </p>
-        <p>
-          認識論が導いたこの命題のうえに立ち、
-          意味論が示した収束構造に従い、
-          語りの生成条件から意味の収束点＜天命＞を
-          構造的に導出する。
-        </p>
-        <p>
-          いわば<strong>「自由意志なき世界」の「対話の技術」</strong>である。
-        </p>
-      </div>
+          <!-- (c) 理論からセッションへの橋渡し -->
+          <div class="es-accordion__item">
+            <div class="es-accordion__header" role="button" tabindex="0" aria-expanded="false">
+              <span class="es-accordion__num">02</span>
+              <h3 class="es-accordion__title">しかし、理論だけでは届かない。</h3>
+              <span class="es-accordion__icon"></span>
+            </div>
+            <div class="es-accordion__body">
+              <div class="es-accordion__content">
+                <p>
+                  どれほど精緻な構造を記述しても、
+                  それが一人の人間の「天命」として言語化されなければ、
+                  学問は学問のまま閉じてしまう。
+                </p>
+                <p>
+                  この三部作のすべてを、一回の対話で貫通する技術。
+                  それが<strong>天命の言語化セッション™</strong>である。
+                </p>
+              </div>
+            </div>
+          </div>
 
-      <!-- (e) 天命を悟った人間の描写 -->
-      <div class="text-panel fade-in">
-        <h3 class="content-block__heading">天命を悟った人間は、どんな困難も乗り越えられる。</h3>
-        <p>
-          AIが人間の仕事を代替し、
-          資本主義が限界を迎え、
-          社会の複雑さが人の認知を超えていく。
-        </p>
-        <p>
-          この先、何が来るかは誰にもわからない。
-        </p>
-        <p>
-          しかし、<strong>天命を悟った人間には何があっても折れない。</strong>
-        </p>
-        <p>
-          どのような時代が来ても、
-          どのような境遇に置かれても、
-          自分が何のために生きているかを知っている人間は、
-          <strong>その一点から世界を再構成できる。</strong>
-        </p>
-        <p>
-          損得では動かない。
-          比較では揺るがない。
-          孤独にも、逆風にも、喪失にも、
-          構造の中心から応答できる。
-        </p>
-      </div>
+        </div><!-- /.es-accordion (STRUCTURE) -->
 
-      <!-- パートラベル: Vision（変更2） -->
-      <div class="part-label fade-in">
-        <span class="part-label__en">VISION</span>
-        <span class="part-label__ja">未来</span>
-      </div>
+      </div><!-- /.es-part--structure -->
 
-      <!-- (f) 心友™の説明 -->
-      <div class="text-panel fade-in">
-        <h3 class="content-block__heading">心友™という「絆」</h3>
-        <p>
-          そしてその人間のそばには、心友™がいる。
-        </p>
-        <p>
-          天命を共有し、互いの存在意義を言葉にできる関係。
-        </p>
-        <p>
-          心友™とは、損得を超え、戦略を超えた、
-          <strong>人間が人間と結べる最も深い紐帯</strong>である。
-        </p>
-        <p>
-          そこには、<strong>「愛」</strong>がある。
-          損得でも依存でもない、互いの天命を敬い合うことから生まれる愛。
-        </p>
-        <p>
-          そこには、<strong>「友情」</strong>がある。
-          傷を舐め合うのではなく、互いの構造を見抜き、真実だけを差し出す友情。
-        </p>
-        <p>
-          心友™が愛と友情を育み、その関係が家族へ、組織へ、社会へと波及していく。
-        </p>
-      </div>
+      <!-- ═══════════════════════════════════ -->
+      <!-- PART 2: PRACTICE                    -->
+      <!-- ═══════════════════════════════════ -->
+      <div class="es-part--practice">
 
-      <!-- (g) 現代の武士道 -->
-      <div class="text-panel fade-in">
-        <h3 class="content-block__heading">現代の武士道</h3>
-        <p>
-          かつて武士は、
-          <strong>「何のために死ぬか」</strong>を定めることで、生を澄み渡らせた。
-        </p>
-        <p>
-          迷いが消え、恐れが消え、
-          魂の座標が定まった人間だけが纏う、
-          <strong>あの静けさ。</strong>
-        </p>
-        <p>
-          実存科学は、その精神を継承し、超える。
-        </p>
-        <p>
-          忠義の対象は主君ではない。<strong>天命</strong>である。
-        </p>
-        <p>
-          信仰ではなく、<strong>構造</strong>。
-          覚悟ではなく、<strong>必然</strong>。
-        </p>
-        <p>
-          <strong>これは、現代の武士道である。</strong>
-        </p>
-      </div>
+        <div class="part-label fade-in">
+          <span class="part-label__en">PRACTICE</span>
+          <span class="part-label__ja">実践</span>
+        </div>
 
-      <!-- (h) 文明の再編 -->
-      <div class="text-panel fade-in">
-        <h3 class="content-block__heading">文明の再編</h3>
-        <p>
-          天命と心友™。
-        </p>
-        <p>
-          この二つが社会の基本単位になったとき、
-          文明は初めて、
-          <strong>「生きる意味」を中心に再編される。</strong>
-        </p>
-        <p>
-          天命を悟った人間が社会の基盤に立つとき、
-          <strong>あらゆるものが根底から変わる。</strong>
-        </p>
-        <p>
-          <strong>教育</strong>は、適応ではなく天命の発見から始まる。
-        </p>
-        <p>
-          <strong>医療</strong>は、症状の除去ではなく生きる意味の回復から始まる。
-        </p>
-        <p>
-          <strong>労働</strong>は、生存の手段ではなく天命の実装になる。
-        </p>
-        <p>
-          <strong>政治</strong>は、利害の調整ではなく天命の支援を問う。
-        </p>
-        <p>
-          <strong>食</strong>は、天命を全うする身体を養う行為になる。
-        </p>
-        <p>
-          <strong>これは理想論ではない。</strong>
-          天命を悟った一人の人間の中で、すでに起きていることである。
-        </p>
-        <p>
-          それが心友™を介して、<strong>人へ、組織へ、社会へ</strong>と伝播する。
-        </p>
-      </div>
+        <!-- アコーディオン: PRACTICE -->
+        <div class="es-accordion fade-in">
 
-      <div class="highlight-block fade-in">
-        <p>
-          天命に生き、心友™と歩み、文明を書き換える。
-        </p>
-        <p>
-          <strong>それが、実存科学が拓く未来である。</strong>
-        </p>
-      </div>
+          <!-- (d) 天命の言語化セッション™の説明 -->
+          <div class="es-accordion__item">
+            <div class="es-accordion__header" role="button" tabindex="0" aria-expanded="false">
+              <span class="es-accordion__num">03</span>
+              <h3 class="es-accordion__title">「天命の言語化セッション™」とは？</h3>
+              <span class="es-accordion__icon"></span>
+            </div>
+            <div class="es-accordion__body">
+              <div class="es-accordion__content">
+                <p>
+                  人類は数千年にわたり、
+                  <strong>「あなたは自由に選べる」</strong>という前提のうえに、
+                  あらゆる対人技法を築いてきた。
+                </p>
+                <p>
+                  しかし、このセッションはその前提を採用しない。
+                </p>
+                <p>
+                  <strong>「Metaがある限り自由意志は存在しない」</strong>
+                </p>
+                <p>
+                  認識論が導いたこの命題のうえに立ち、
+                  意味論が示した収束構造に従い、
+                  語りの生成条件から意味の収束点＜天命＞を
+                  構造的に導出する。
+                </p>
+                <p>
+                  いわば<strong>「自由意志なき世界」の「対話の技術」</strong>である。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- (e) 天命を悟った人間の描写 -->
+          <div class="es-accordion__item">
+            <div class="es-accordion__header" role="button" tabindex="0" aria-expanded="false">
+              <span class="es-accordion__num">04</span>
+              <h3 class="es-accordion__title">天命を悟った人間は、どんな困難も乗り越えられる。</h3>
+              <span class="es-accordion__icon"></span>
+            </div>
+            <div class="es-accordion__body">
+              <div class="es-accordion__content">
+                <p>
+                  AIが人間の仕事を代替し、
+                  資本主義が限界を迎え、
+                  社会の複雑さが人の認知を超えていく。
+                </p>
+                <p>
+                  この先、何が来るかは誰にもわからない。
+                </p>
+                <p>
+                  しかし、<strong>天命を悟った人間には何があっても折れない。</strong>
+                </p>
+                <p>
+                  どのような時代が来ても、
+                  どのような境遇に置かれても、
+                  自分が何のために生きているかを知っている人間は、
+                  <strong>その一点から世界を再構成できる。</strong>
+                </p>
+                <p>
+                  損得では動かない。
+                  比較では揺るがない。
+                  孤独にも、逆風にも、喪失にも、
+                  構造の中心から応答できる。
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.es-accordion (PRACTICE) -->
+
+      </div><!-- /.es-part--practice -->
+
+      <!-- ═══════════════════════════════════ -->
+      <!-- PART 3: VISION                      -->
+      <!-- ═══════════════════════════════════ -->
+      <div class="es-part--vision">
+
+        <div class="part-label fade-in">
+          <span class="part-label__en">VISION</span>
+          <span class="part-label__ja">未来</span>
+        </div>
+
+        <!-- アコーディオン: VISION -->
+        <div class="es-accordion fade-in">
+
+          <!-- (f) 心友™の説明 -->
+          <div class="es-accordion__item">
+            <div class="es-accordion__header" role="button" tabindex="0" aria-expanded="false">
+              <span class="es-accordion__num">05</span>
+              <h3 class="es-accordion__title">心友™という「絆」</h3>
+              <span class="es-accordion__icon"></span>
+            </div>
+            <div class="es-accordion__body">
+              <div class="es-accordion__content">
+                <p>
+                  そしてその人間のそばには、心友™がいる。
+                </p>
+                <p>
+                  天命を共有し、互いの存在意義を言葉にできる関係。
+                </p>
+                <p>
+                  心友™とは、損得を超え、戦略を超えた、
+                  <strong>人間が人間と結べる最も深い紐帯</strong>である。
+                </p>
+                <p>
+                  そこには、<strong>「愛」</strong>がある。
+                  損得でも依存でもない、互いの天命を敬い合うことから生まれる愛。
+                </p>
+                <p>
+                  そこには、<strong>「友情」</strong>がある。
+                  傷を舐め合うのではなく、互いの構造を見抜き、真実だけを差し出す友情。
+                </p>
+                <p>
+                  心友™が愛と友情を育み、その関係が家族へ、組織へ、社会へと波及していく。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- (g) 現代の武士道 -->
+          <div class="es-accordion__item">
+            <div class="es-accordion__header" role="button" tabindex="0" aria-expanded="false">
+              <span class="es-accordion__num">06</span>
+              <h3 class="es-accordion__title">現代の武士道</h3>
+              <span class="es-accordion__icon"></span>
+            </div>
+            <div class="es-accordion__body">
+              <div class="es-accordion__content">
+                <p>
+                  かつて武士は、
+                  <strong>「何のために死ぬか」</strong>を定めることで、生を澄み渡らせた。
+                </p>
+                <p>
+                  迷いが消え、恐れが消え、
+                  魂の座標が定まった人間だけが纏う、
+                  <strong>あの静けさ。</strong>
+                </p>
+                <p>
+                  実存科学は、その精神を継承し、超える。
+                </p>
+                <p>
+                  忠義の対象は主君ではない。<strong>天命</strong>である。
+                </p>
+                <p>
+                  信仰ではなく、<strong>構造</strong>。
+                  覚悟ではなく、<strong>必然</strong>。
+                </p>
+                <p>
+                  <strong>これは、現代の武士道である。</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- (h) 文明の再編 -->
+          <div class="es-accordion__item">
+            <div class="es-accordion__header" role="button" tabindex="0" aria-expanded="false">
+              <span class="es-accordion__num">07</span>
+              <h3 class="es-accordion__title">文明の再編</h3>
+              <span class="es-accordion__icon"></span>
+            </div>
+            <div class="es-accordion__body">
+              <div class="es-accordion__content">
+                <p>
+                  天命と心友™。
+                </p>
+                <p>
+                  この二つが社会の基本単位になったとき、
+                  文明は初めて、
+                  <strong>「生きる意味」を中心に再編される。</strong>
+                </p>
+                <p>
+                  天命を悟った人間が社会の基盤に立つとき、
+                  <strong>あらゆるものが根底から変わる。</strong>
+                </p>
+                <p>
+                  <strong>教育</strong>は、適応ではなく天命の発見から始まる。
+                </p>
+                <p>
+                  <strong>医療</strong>は、症状の除去ではなく生きる意味の回復から始まる。
+                </p>
+                <p>
+                  <strong>労働</strong>は、生存の手段ではなく天命の実装になる。
+                </p>
+                <p>
+                  <strong>政治</strong>は、利害の調整ではなく天命の支援を問う。
+                </p>
+                <p>
+                  <strong>食</strong>は、天命を全うする身体を養う行為になる。
+                </p>
+                <p>
+                  <strong>これは理想論ではない。</strong>
+                  天命を悟った一人の人間の中で、すでに起きていることである。
+                </p>
+                <p>
+                  それが心友™を介して、<strong>人へ、組織へ、社会へ</strong>と伝播する。
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.es-accordion (VISION) -->
+
+        <div class="highlight-block fade-in">
+          <p>
+            天命に生き、心友™と歩み、文明を書き換える。
+          </p>
+          <p>
+            <strong>それが、実存科学が拓く未来である。</strong>
+          </p>
+        </div>
+
+      </div><!-- /.es-part--vision -->
 
     </div>
   </section>
@@ -489,6 +802,39 @@
       <div class="search-hint"><span class="search-hint__desktop">ESC to close · ⌘K to toggle</span><span class="search-hint__mobile">背景タップまたは ✕ で閉じる</span></div>
     </div>
   </div>
+
+  <!-- Accordion Script -->
+  <script>
+  (function() {
+    document.querySelectorAll('.es-accordion__header').forEach(function(header) {
+      header.addEventListener('click', function() {
+        var item = this.parentElement;
+        var body = item.querySelector('.es-accordion__body');
+        var content = body.querySelector('.es-accordion__content');
+        var isOpen = item.classList.contains('is-open');
+
+        // aria
+        this.setAttribute('aria-expanded', !isOpen);
+
+        if (isOpen) {
+          body.style.maxHeight = '0';
+          item.classList.remove('is-open');
+        } else {
+          body.style.maxHeight = content.scrollHeight + 'px';
+          item.classList.add('is-open');
+        }
+      });
+
+      // キーボードアクセシビリティ
+      header.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          this.click();
+        }
+      });
+    });
+  })();
+  </script>
 </body>
 
 </html>
