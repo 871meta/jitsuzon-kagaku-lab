@@ -153,6 +153,24 @@ document.addEventListener('DOMContentLoaded', function () {
     updateProgress();
   })();
 
+  // --- Header scroll state ---
+  (function () {
+    var header = document.querySelector('.site-header');
+    if (!header) return;
+    var threshold = 60;
+
+    function onScroll() {
+      if (window.scrollY > threshold) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  })();
+
   // --- Site Search ---
   (function () {
     var searchToggle = document.querySelector('.search-toggle');

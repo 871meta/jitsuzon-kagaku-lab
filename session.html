@@ -30,7 +30,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="css/style.min.css?v=10">
+  <link rel="stylesheet" href="css/style.min.css?v=11">
   <style>
     /* === Session navigation cards === */
     .session-nav-cards {
@@ -44,37 +44,138 @@
       position: relative;
       display: block;
       padding: 2rem 2rem 2.5rem;
-      background: var(--color-panel);
-      border: 1px solid var(--color-gold-a12);
-      box-shadow: 0 2px 24px var(--color-gold-a05);
-      backdrop-filter: blur(8px);
+      background: linear-gradient(
+        160deg,
+        rgba(15, 12, 25, 0.75) 0%,
+        rgba(8, 6, 16, 0.92) 100%
+      );
+      border: 1px solid var(--color-gold-a10);
+      border-left: 2px solid rgba(192, 168, 120, 0.3);
+      box-shadow:
+        0 2px 32px var(--color-gold-a04),
+        inset 0 1px 0 var(--color-gold-a08);
+      backdrop-filter: blur(12px);
       text-decoration: none;
-      transition: box-shadow 0.4s ease, border-color 0.4s ease;
+      transition: box-shadow 0.5s ease, border-color 0.5s ease, transform 0.4s ease;
       overflow: hidden;
     }
 
-    .session-nav-card::before {
+    /* Per-card color accents (trial.html design language) */
+    /* Card 1: Free Trial — strongest gold, visually prioritized */
+    .session-nav-card:nth-child(1) {
+      border-left: 2px solid rgba(192, 168, 120, 0.6);
+      background: linear-gradient(160deg, rgba(15, 12, 25, 0.7) 0%, rgba(8, 6, 16, 0.9) 100%),
+                  linear-gradient(90deg, rgba(192, 168, 120, 0.08), transparent 40%);
+      background-blend-mode: normal;
+    }
+    /* Card 2: 12 Dialogues — subtle purple */
+    .session-nav-card:nth-child(2) {
+      border-left: 2px solid rgba(150, 120, 190, 0.4);
+      background: linear-gradient(160deg, rgba(15, 12, 25, 0.75) 0%, rgba(8, 6, 16, 0.92) 100%),
+                  linear-gradient(90deg, rgba(150, 120, 190, 0.05), transparent 35%);
+    }
+    /* Card 3: Uniqueness — cool blue-gold */
+    .session-nav-card:nth-child(3) {
+      border-left: 2px solid rgba(120, 155, 200, 0.4);
+      background: linear-gradient(160deg, rgba(15, 12, 25, 0.75) 0%, rgba(8, 6, 16, 0.92) 100%),
+                  linear-gradient(90deg, rgba(120, 155, 200, 0.05), transparent 35%);
+    }
+    /* Card 4: FAQ — warm muted gold */
+    .session-nav-card:nth-child(4) {
+      border-left: 2px solid rgba(180, 160, 120, 0.3);
+      background: linear-gradient(160deg, rgba(15, 12, 25, 0.78) 0%, rgba(8, 6, 16, 0.94) 100%),
+                  linear-gradient(90deg, rgba(180, 160, 120, 0.04), transparent 35%);
+    }
+
+    /* Card 1 emphasis: stronger glow + larger top accent */
+    .session-nav-card:nth-child(1)::before {
       content: "";
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       height: 1px;
-      background: linear-gradient(90deg, transparent, var(--color-gold-a50), transparent);
+      background: linear-gradient(90deg, var(--color-gold-a60), var(--color-gold-a30), transparent 70%);
+    }
+    .session-nav-card:nth-child(1)::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1px;
+      height: 64px;
+      background: linear-gradient(180deg, var(--color-gold-a60), transparent);
+    }
+    .session-nav-card:nth-child(1):hover {
+      box-shadow:
+        0 8px 56px var(--color-gold-a15),
+        inset 0 0 48px var(--color-gold-a06);
+      border-color: var(--color-gold-a30);
+    }
+
+    /* Cards 2-4: standard L-accent */
+    .session-nav-card:nth-child(n+2)::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, var(--color-gold-a35), var(--color-gold-a15), transparent 70%);
+    }
+    .session-nav-card:nth-child(n+2)::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(180deg, var(--color-gold-a35), transparent);
     }
 
     .session-nav-card:hover {
-      box-shadow: 0 4px 48px var(--color-gold-a10);
-      border-color: var(--color-gold-a25);
+      box-shadow:
+        0 8px 48px var(--color-gold-a10),
+        inset 0 0 40px var(--color-gold-a04);
+      border-color: var(--color-gold-a20);
+      transform: translateY(-2px);
     }
 
     .session-nav-card__label {
       font-family: var(--font-serif-en);
       font-size: var(--fs-xs);
       letter-spacing: 0.3em;
-      color: var(--color-gold-a40);
+      color: var(--color-gold);
       text-transform: uppercase;
       margin-bottom: 0.8rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .session-nav-card__label::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: var(--color-gold-a25);
+    }
+
+    /* Card 1 label emphasis */
+    .session-nav-card:nth-child(1) .session-nav-card__label {
+      color: var(--color-gold-bright);
+    }
+    .session-nav-card:nth-child(1) .session-nav-card__label::after {
+      background: var(--color-gold-a40);
+    }
+
+    /* Card 2-4 label colors (subtle per-card tint) */
+    .session-nav-card:nth-child(2) .session-nav-card__label {
+      color: rgba(180, 160, 220, 0.85);
+    }
+    .session-nav-card:nth-child(3) .session-nav-card__label {
+      color: rgba(160, 190, 220, 0.85);
     }
 
     .session-nav-card__title {
@@ -97,13 +198,13 @@
       bottom: 1.2rem;
       right: 1.5rem;
       font-size: var(--fs-h3);
-      color: var(--color-gold-a40);
-      transition: color 0.3s ease, transform 0.3s ease;
+      color: var(--color-gold-a30);
+      transition: color 0.4s ease, transform 0.4s ease;
     }
 
     .session-nav-card:hover .session-nav-card__arrow {
-      color: var(--color-gold-a70);
-      transform: translateX(4px);
+      color: var(--color-gold);
+      transform: translateX(6px);
     }
 
     @media (max-width: 768px) {
