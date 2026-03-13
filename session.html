@@ -301,57 +301,65 @@
       opacity: 1;
     }
 
-    /* === Session Hero Statement === */
+    /* === Session Hero Card === */
     .session-hero-card {
-      text-align: left;
-      padding: 0;
-      border: none;
-      background: none;
+      text-align: center;
+      padding: 4rem 3rem 3.5rem;
+      background: linear-gradient(160deg, rgba(15,12,25,0.75) 0%, rgba(8,6,16,0.95) 100%);
+      border: 1px solid var(--color-gold-a10);
+      border-top: 1px solid var(--color-gold-a20);
       margin: 0 0 2rem;
       position: relative;
+      box-shadow: 0 8px 60px rgba(0,0,0,0.4);
+      backdrop-filter: blur(8px);
+    }
+    .session-hero-card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent 10%, var(--color-gold-a30) 50%, transparent 90%);
     }
     .session-hero-card__intro {
       font-family: var(--ff-serif);
-      font-size: 0.95rem;
-      color: var(--color-text-reading);
-      letter-spacing: 0.06em;
-      line-height: 1.8;
-      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      color: var(--color-text-dim);
+      letter-spacing: 0.1em;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
     }
     .session-hero-card__main {
       font-family: var(--ff-serif);
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       color: var(--color-gold);
-      letter-spacing: 0.08em;
-      line-height: 2;
-      margin-bottom: 0.8rem;
+      letter-spacing: 0.1em;
+      line-height: 1.8;
+      margin-bottom: 1rem;
       font-weight: 500;
     }
     .session-hero-card__sub {
       font-family: var(--ff-serif);
-      font-size: 1.05rem;
+      font-size: 0.95rem;
       color: var(--color-text-reading);
       letter-spacing: 0.06em;
-      line-height: 2;
-    }
-    .session-hero-card__divider {
-      display: block;
-      width: 48px;
-      height: 1px;
-      background: var(--color-gold-a25);
-      margin: 2rem 0;
+      line-height: 1.9;
+      margin-bottom: 2.5rem;
     }
     .session-hero-card__spec {
-      font-size: 0.82rem;
+      font-size: 0.78rem;
       color: var(--color-text-dim);
-      letter-spacing: 0.15em;
+      letter-spacing: 0.2em;
       display: flex;
+      justify-content: center;
       align-items: center;
       gap: 1rem;
       flex-wrap: wrap;
+      padding-top: 2rem;
+      border-top: 1px solid var(--color-gold-a08);
     }
     .session-hero-card__dot {
-      color: var(--color-gold-a25);
+      color: var(--color-gold-a20);
+      font-size: 0.5rem;
     }
 
     /* === Session Accordion === */
@@ -617,12 +625,11 @@
       .page-session .content-block { margin-bottom: 1.8rem !important; }
       .cta-block { padding: 4rem 1.2rem; }
       .cta-block .btn { padding: 1.2rem 3rem; }
-      .session-hero-card { margin: 0 0 1.5rem; }
-      .session-hero-card__intro { font-size: 0.88rem; }
-      .session-hero-card__main { font-size: 1.2rem; }
-      .session-hero-card__sub { font-size: 0.95rem; }
-      .session-hero-card__spec { font-size: 0.78rem; gap: 0.6rem; }
-      .session-hero-card__divider { margin: 1.5rem 0; }
+      .session-hero-card { padding: 3rem 1.8rem 2.5rem; margin: 0 0 1.5rem; }
+      .session-hero-card__intro { font-size: 0.85rem; margin-bottom: 1.2rem; }
+      .session-hero-card__main { font-size: 1.25rem; }
+      .session-hero-card__sub { font-size: 0.88rem; margin-bottom: 2rem; }
+      .session-hero-card__spec { font-size: 0.72rem; gap: 0.7rem; padding-top: 1.5rem; }
       .why-block { padding: 2rem 1.5rem; }
       .page-session .separator { margin: 3.5rem 0 !important; }
       .session-accordion { padding: 2rem 1.5rem; }
@@ -704,7 +711,6 @@
         <p class="session-hero-card__intro">このセッションを体験すると──</p>
         <p class="session-hero-card__main">残りの命の使い方が、言語化できる。</p>
         <p class="session-hero-card__sub">自由意志なき世界を、迷いなく生きられるようになる。</p>
-        <span class="session-hero-card__divider"></span>
         <div class="session-hero-card__spec">
           <span>2時間</span>
           <span class="session-hero-card__dot">·</span>
