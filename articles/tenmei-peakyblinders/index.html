@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-peakyblinders/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>自由意志なき世界の天命論 ── ピーキー・ブラインダーズ篇 | 実存科学研究所</title>
+  <meta name="description" content="ドラマ『ピーキー・ブラインダーズ』のトミー・シェルビー──凍結された戦略家が、穴を掘るのを止めても埋められなかった瞬間──を、実存科学の視点（Meta・シャドウ・天命）で構造的に読み解く。">
+  <meta property="og:title" content="自由意志なき世界の天命論 ── ピーキー・ブラインダーズ篇 | 実存科学研究所">
+  <meta property="og:description" content="ドラマ『ピーキー・ブラインダーズ』のトミー・シェルビー──凍結された戦略家が、穴を掘るのを止めても埋められなかった瞬間──を、実存科学の視点（Meta・シャドウ・天命）で構造的に読み解く。">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="実存科学研究所">
+  <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+  <meta property="og:url" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-peakyblinders/index.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.min.css?v=14">
+
+<style>
+/* === Article Cards === */
+.article-card {
+  background: rgba(15,12,25,0.5);
+  border: 1px solid rgba(192,168,120,0.1);
+  padding: 2.5rem 2rem;
+  margin: 2rem 0;
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+.article-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(192,168,120,0.4), transparent);
+}
+.article-card__number {
+  display: block;
+  font-family: var(--font-serif-en);
+  font-size: var(--fs-caption);
+  font-weight: 400;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 0.6rem;
+}
+.article-card h3 {
+  font-size: var(--fs-h3);
+  color: var(--color-text-primary);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.06em;
+}
+.article-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+.article-card ul li {
+  margin-bottom: 0.8rem;
+  color: var(--color-text-reading);
+  font-size: var(--fs-body);
+  line-height: 1.8;
+  padding-left: 1.6em;
+  position: relative;
+}
+.article-card ul li::before {
+  content: "\2500\2500";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgba(192,168,120,0.35);
+  font-size: 0.75em;
+}
+.article-card .card-hook {
+  background: rgba(192,168,120,0.06);
+  border-left: 2px solid;
+  border-image: linear-gradient(180deg, var(--color-gold) 0%, rgba(192,168,120,0.15) 100%) 1;
+  padding: 1.2rem 1.5rem;
+  margin: 1.5rem 0;
+  font-size: var(--fs-body);
+  font-weight: 500;
+  line-height: 2;
+  color: var(--color-text-primary);
+}
+.article-card .card-target {
+  font-size: var(--fs-small);
+  color: rgba(192,168,120,0.6);
+  font-style: italic;
+  margin-bottom: 1.2rem;
+}
+.article-card .card-link {
+  display: inline-block;
+  font-size: var(--fs-body);
+  color: var(--color-gold);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid rgba(192,168,120,0.3);
+  padding-bottom: 0.2em;
+  transition: opacity 0.2s;
+}
+.article-card .card-link:hover { opacity: 0.7; }
+
+/* === Author Block === */
+.author-block {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(192,168,120,0.15);
+}
+.author-block p { font-size: var(--fs-body); color: var(--color-text-reading); line-height: 2; }
+.author-block strong { color: var(--color-text-body); }
+
+/* === Source Note === */
+.source-note {
+  margin-top: 2rem;
+  font-size: var(--fs-small);
+  color: rgba(235,232,225,0.35);
+}
+
+/* === Series Note === */
+.series-note {
+  margin-top: 2rem;
+  padding: 1.5rem 2rem;
+  background: rgba(192,168,120,0.04);
+  border: 1px solid rgba(192,168,120,0.1);
+  font-size: var(--fs-body);
+  color: var(--color-text-reading);
+  line-height: 2;
+}
+
+/* === CTA Block === */
+.cta-block {
+  background: rgba(192,168,120,0.06);
+  border: 1px solid rgba(192,168,120,0.2);
+  padding: 2.5rem 2rem;
+  margin: 3rem 0;
+  text-align: center;
+}
+.cta-block h3 {
+  font-size: var(--fs-h3);
+  color: var(--color-text-body);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.cta-block p {
+  font-size: var(--fs-body);
+  color: var(--color-text-reading);
+  line-height: 2.2;
+  margin-bottom: 1.2rem;
+}
+.cta-block .cta-btn {
+  display: inline-block;
+  padding: 0.8rem 2.5rem;
+  background: var(--color-gold);
+  color: #080610;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: var(--fs-body);
+  letter-spacing: 0.1em;
+  transition: opacity 0.2s;
+  border-bottom: none;
+}
+.cta-block .cta-btn:hover { opacity: 0.8; }
+
+/* === Mobile === */
+@media (max-width: 600px) {
+  .article-card { padding: 1.5rem 1.2rem; }
+  .article-card h3 { font-size: var(--fs-lead); }
+  .article-card .card-hook { padding: 1rem 1.2rem; }
+  .cta-block { padding: 2rem 1.2rem; }
+}
+@media (max-width: 480px) {
+  .text-panel p br,
+  .pull-quote p br,
+  .highlight-block p br,
+  .def-box p br { display: none; }
+}
+</style>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="../../index.html" class="site-logo">実存科学研究所</a>
+      <button class="search-toggle" aria-label="検索"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+            <nav class="global-nav">
+        <a href="../../index.html">Top</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">The Meta</button>
+          <div class="nav-dropdown__menu">
+            <a href="../../beginner.html">はじめての方へ</a>
+            <a href="../../lp.html">ダークサイド診断</a>
+            <a href="../../omoidasu/">身体的知性診断</a>
+          </div>
+        </div>
+        <a href="../../session.html">Session</a>
+        <a href="../../founder.html">Founder</a>
+        <a href="../../specials.html">Specials</a>
+      </nav>
+    </div>
+  </header>
+  <div class="reading-progress"></div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="パンくずリスト">
+        <ol class="breadcrumb__list">
+          <li class="breadcrumb__item"><a href="../../index.html" class="breadcrumb__link">TOP</a></li>
+          <li class="breadcrumb__item"><a href="../../specials.html" class="breadcrumb__link">Specials</a></li>
+          <li class="breadcrumb__item"><span class="breadcrumb__current">ピーキー・ブラインダーズ篇</span></li>
+        </ol>
+      </nav>
+      <p class="page-hero__sub">Peaky Blinders</p>
+      <h1>自由意志なき世界の天命論</h1>
+      <p class="page-hero__lead">ピーキー・ブラインダーズ篇<br>箭内宏紀｜実存科学研究所</p>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <!-- ========== 導入 ========== -->
+    <section class="fade-in">
+
+      <div class="text-panel fade-in">
+        <p>ドラマ『ピーキー・ブラインダーズ』のトミー・シェルビーを、実存科学の三つの構造&mdash;&mdash;Meta（変えられない前提条件）、シャドウ（抑圧された影）、天命（Metaの必然的収束点）&mdash;&mdash;で読み解く。</p>
+        <p>凍結された戦略家。フランスの地下で凍結された男が、土に埋められないために地上に帝国を築き、その帝国のすべてが防衛でしかなかったことを知り、防衛を手放したとき、初めて&mdash;&mdash;ようやく&mdash;&mdash;静寂の中に立てた。</p>
+      </div>
+
+      <div class="pull-quote fade-in">
+        <p>穴を掘るのを止めても、埋められなかった。<br>ずっと、地上にいたんだ。</p>
+      </div>
+
+    </section>
+
+    <hr class="separator">
+
+    <!-- ========== 記事一覧 ========== -->
+    <section class="fade-in">
+
+      <div class="article-card fade-in">
+        <span class="article-card__number">Peaky Blinders &mdash; Peace</span>
+        <h3>トミー・シェルビーのMeta &mdash;&mdash; 自由意志なき世界の天命論</h3>
+        <ul>
+          <li>Meta：坑道兵としてフランスの地下で凍結された神経系。「静止＝致死」という条件付け。グレースの死による第二の凍結</li>
+          <li>シャドウ：「私は止まることができない」&mdash;&mdash;帝国の際限なき拡大は防衛であり、穴を掘り続けることだった</li>
+          <li>天命：平和&mdash;&mdash;内なる闘争を止める能力の獲得。黒い馬から白い馬へ</li>
+        </ul>
+        <div class="card-hook">穴を掘るのを止めても埋められなかった&mdash;&mdash;馬車を燃やし、鐘が鳴り、銃を下ろしたとき、ようやく停戦が来た。</div>
+        <p class="card-target">止まれない自分に気づいている人へ。</p>
+        <a href="tommy.html" class="card-link">トミー・シェルビーのMetaを読む &rarr;</a>
+      </div>
+
+    </section>
+
+    <hr class="separator">
+
+    <!-- ========== CTA ========== -->
+    <div class="cta-block fade-in">
+      <h3>天命の言語化セッション&trade;</h3>
+      <p>2時間で天命が言語化できる場所。</p>
+      <a href="../../trial.html" class="cta-btn">&#9654; 無料トライアルに申し込む</a>
+    </div>
+
+    <!-- ========== シリーズノート ========== -->
+    <div class="series-note fade-in">
+      <p>本シリーズ「自由意志なき世界の天命論」は、今後も新たな作品・キャラクターを追加していく。<br>
+      漫画のみならず、映画・小説・物語の登場人物を、実存科学の視点で読み解く。</p>
+      <p><a href="../tenmei-bohemianrhapsody/">&larr; ボヘミアン・ラプソディ篇はこちら</a>&emsp;｜&emsp;<a href="../../specials.html">&larr; 特別シリーズ一覧に戻る</a></p>
+    </div>
+
+    <!-- ========== 著者ブロック ========== -->
+    <div class="author-block fade-in">
+      <p><strong>箭内宏紀（やないひろき）</strong><br>
+      実存科学研究所 代表。「天命の言語化セッション&trade;」を提供。「Metaがある限り自由意志は存在しない」（M &rArr; &not;F）を第一公理とする実存科学を提唱。著書に『Metaがある限り&mdash;&mdash;自由意志・自分・他人は存在しない』『自由意志なき世界の歩き方』ほか。<br>
+      <a href="../../index.html">公式サイトはこちら</a>。</p>
+    </div>
+
+    <!-- ========== 出典表記 ========== -->
+    <p class="source-note fade-in">※ 本シリーズで扱う作品：スティーブン・ナイト制作・脚本『ピーキー・ブラインダーズ（Peaky Blinders）』（BBC / Netflix、2013-2022年、全6シーズン）。作品の著作権は原著者・制作会社に帰属します。</p>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+  <div class="container--wide">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <p class="footer-col__title">The Meta</p>
+        <a href="../../about-existential-science.html">実存科学とは</a>
+        <a href="../../epistemology.html">認識論</a>
+        <a href="../../semantics.html">意味論</a>
+        <a href="../../society.html">社会論</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Contents</p>
+        <a href="../../archives.html">記事一覧</a>
+        <a href="../../specials.html">特別シリーズ</a>
+        <a href="../../video-list.html">動画一覧</a>
+        <a href="../../glossary.html">用語集</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Session</p>
+        <a href="../../session.html">天命の言語化セッション™</a>
+        <a href="../../session-flow.html">セッションの流れ</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Institute</p>
+        <a href="../../founder.html">創始者</a>
+        <a href="../../contact.html">お問い合わせ</a>
+        <a href="../../legal/legal-tokushoho.html">特定商取引法</a>
+        <a href="../../legal/legal-privacy-policy.html">プライバシーポリシー</a>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; 実存科学研究所 — Existential Science Institute</p>
+  </div>
+</footer>
+
+  <script src="../../js/main.min.js?v=9"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "自由意志なき世界の天命論 ── ピーキー・ブラインダーズ篇",
+  "description": "ドラマ『ピーキー・ブラインダーズ』のトミー・シェルビー──凍結された戦略家が、穴を掘るのを止めても埋められなかった瞬間──を、実存科学の視点（Meta・シャドウ・天命）で構造的に読み解く。",
+  "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-peakyblinders/",
+  "author": {
+    "@type": "Person",
+    "name": "箭内宏紀",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/founder.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  },
+  "inLanguage": "ja"
+}
+</script>
+  <!-- Search Modal -->
+  <div class="search-overlay">
+    <div class="search-modal"><button class="search-close" aria-label="閉じる">&times;</button>
+      <div class="search-input-wrap">
+        <span class="search-input-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+        <input type="text" class="search-input" placeholder="キーワードで検索..." autocomplete="off">
+      </div>
+      <div class="search-results"></div>
+      <div class="search-hint"><span class="search-hint__desktop">ESC to close · ⌘K to toggle</span><span class="search-hint__mobile">背景タップまたは ✕ で閉じる</span></div>
+    </div>
+  </div>
+</body>
+</html>

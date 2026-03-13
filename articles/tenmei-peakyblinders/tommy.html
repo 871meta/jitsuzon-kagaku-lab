@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-peakyblinders/tommy.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>トミー・シェルビーのMeta ── 自由意志なき世界の天命論 | 実存科学研究所</title>
+  <meta name="description" content="ドラマ『ピーキー・ブラインダーズ』のトミー・シェルビーを、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。凍結された戦略家が、穴を掘るのを止めても埋められなかった瞬間。">
+  <meta property="og:title" content="トミー・シェルビーのMeta ── 自由意志なき世界の天命論 | 実存科学研究所">
+  <meta property="og:description" content="ドラマ『ピーキー・ブラインダーズ』のトミー・シェルビーを、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。凍結された戦略家が、穴を掘るのを止めても埋められなかった瞬間。">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="実存科学研究所">
+  <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+  <meta property="og:url" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-peakyblinders/tommy.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.min.css?v=14">
+
+<style>
+/* =============================================
+   視認性・読みやすさ強化CSS
+   ============================================= */
+
+/* === 1. 章見出し — 中央配置＋装飾 === */
+h2.chapter-heading {
+  font-size: var(--fs-section);
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  color: var(--color-text-primary);
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  position: relative;
+  padding-top: 2rem;
+}
+h2.chapter-heading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 1px;
+  background: var(--color-gold);
+}
+h2.chapter-heading::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(192,168,120,0.5), transparent);
+  margin: 1.2rem auto 0;
+}
+.chapter-number {
+  display: block;
+  font-family: var(--font-serif-en);
+  font-size: var(--fs-caption);
+  font-weight: 400;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 0.6rem;
+}
+
+/* === 2. 区切り線 — 装飾付き === */
+hr {
+  border: none;
+  height: auto;
+  background: none;
+  margin: 4.5rem 0;
+  text-align: center;
+  overflow: visible;
+}
+hr::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(192,168,120,0.08) 15%, rgba(192,168,120,0.2) 50%, rgba(192,168,120,0.08) 85%, transparent 100%);
+}
+hr::after {
+  content: "\25C6";
+  display: block;
+  font-size: 0.5rem;
+  color: rgba(192,168,120,0.3);
+  margin-top: -0.35em;
+  letter-spacing: 1em;
+  line-height: 1;
+}
+
+/* === 3. セッション対話 — 読みやすさ向上 === */
+.session-dialogue {
+  max-width: 680px;
+  margin: 2.5rem auto;
+  padding: 2.5rem 2rem;
+  background: rgba(10, 8, 18, 0.35);
+  border: 1px solid rgba(192,168,120,0.06);
+  border-radius: 2px;
+  position: relative;
+}
+.session-dialogue::before {
+  content: "SESSION";
+  position: absolute;
+  top: -0.6em;
+  left: 2rem;
+  font-family: var(--font-serif-en);
+  font-size: var(--fs-micro);
+  letter-spacing: 0.3em;
+  color: rgba(192,168,120,0.4);
+  background: var(--color-bg-deep);
+  padding: 0 0.8rem;
+}
+.session-dialogue p {
+  margin-bottom: 1.1em;
+  line-height: 2.2;
+}
+.session-dialogue .speaker-yanai { color: var(--color-gold); font-weight: 600; font-size: var(--fs-body); }
+.session-dialogue .speaker-tommy { color: var(--color-text-body); font-weight: 600; font-size: var(--fs-body); }
+
+/* 箭内の発言：金色の左ボーダー */
+.session-dialogue .line-yanai {
+  border-left: 2px solid rgba(192,168,120,0.15);
+  padding-left: 1.2rem;
+}
+/* キャラの発言：少しインデント */
+.session-dialogue .line-character {
+  margin-left: 1.4rem;
+}
+/* 沈黙マーカー：中央揃え＋装飾線 */
+.session-dialogue .silence {
+  color: rgba(235,232,225,0.3);
+  font-style: italic;
+  text-align: center;
+  margin: 2em 0;
+  font-size: var(--fs-small);
+  letter-spacing: 0.15em;
+}
+.session-dialogue .silence::before,
+.session-dialogue .silence::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: rgba(192,168,120,0.15);
+  vertical-align: middle;
+  margin: 0 1em;
+}
+/* 10発言ごとの視覚リズム */
+.session-dialogue p:nth-child(10n) {
+  margin-bottom: 2em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid rgba(192,168,120,0.06);
+}
+
+/* === 4. text-panel の単調さ解消 === */
+section > .text-panel:nth-of-type(even) {
+  background: rgba(8, 6, 16, 0.45);
+  border-color: transparent;
+}
+section > .text-panel:nth-of-type(even)::before {
+  display: none;
+}
+
+/* === 5. highlight-block の存在感微増 === */
+.highlight-block {
+  background: rgba(192,168,120,0.06);
+  border-left: 2px solid;
+  border-image: linear-gradient(180deg, var(--color-gold) 0%, rgba(192,168,120,0.15) 100%) 1;
+  padding: 2rem 2rem 2rem 2.2rem;
+  margin: 2.5rem 0;
+}
+.highlight-block p {
+  font-size: var(--fs-lead);
+  font-weight: 500;
+  line-height: 2.2;
+  color: var(--color-text-primary);
+}
+
+/* === 6. セクション見出し（h3） === */
+h3.section-heading {
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  color: var(--color-text-body);
+  letter-spacing: 0.08em;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1.2rem;
+  border-left: 2px solid rgba(192,168,120,0.4);
+  line-height: 1.6;
+}
+
+/* === Profiling Block === */
+.profiling-block {
+  background: rgba(15,12,25,0.5);
+  border: 1px solid rgba(192,168,120,0.1);
+  padding: 2.5rem 2rem;
+  margin: 2rem 0;
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+.profiling-block::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(192,168,120,0.4), transparent);
+}
+.profiling-block h3 {
+  font-size: var(--fs-body);
+  color: var(--color-gold);
+  letter-spacing: 0.15em;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(192,168,120,0.1);
+}
+.profiling-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+.profiling-block ul li {
+  margin-bottom: 1rem;
+  color: var(--color-text-reading);
+  font-size: var(--fs-body);
+  line-height: 1.9;
+  padding-left: 1.6em;
+  position: relative;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(192,168,120,0.04);
+}
+.profiling-block ul li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.profiling-block ul li::before {
+  content: "\2500\2500";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgba(192,168,120,0.35);
+  font-size: 0.75em;
+}
+
+/* === Comparison Table === */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: var(--fs-body);
+}
+.comparison-table th,
+.comparison-table td {
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(192,168,120,0.12);
+  text-align: left;
+}
+.comparison-table th {
+  background: rgba(192,168,120,0.08);
+  color: var(--color-gold);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  font-size: var(--fs-small);
+}
+.comparison-table td { color: var(--color-text-reading); }
+
+/* === CTA Block === */
+.cta-block {
+  background: rgba(192,168,120,0.06);
+  border: 1px solid rgba(192,168,120,0.2);
+  padding: 2.5rem 2rem;
+  margin: 3rem 0;
+  text-align: center;
+}
+.cta-block h3 {
+  font-size: var(--fs-h3);
+  color: var(--color-text-body);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.cta-block p {
+  font-size: var(--fs-body);
+  color: var(--color-text-reading);
+  line-height: 2.2;
+  margin-bottom: 1.2rem;
+}
+.cta-block .cta-btn {
+  display: inline-block;
+  padding: 0.8rem 2.5rem;
+  background: var(--color-gold);
+  color: #080610;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: var(--fs-body);
+  letter-spacing: 0.1em;
+  transition: opacity 0.2s;
+  border-bottom: none;
+}
+.cta-block .cta-btn:hover { opacity: 0.8; }
+
+/* === Author Block === */
+.author-block {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(192,168,120,0.15);
+}
+.author-block p { font-size: var(--fs-body); color: var(--color-text-reading); line-height: 2; }
+.author-block strong { color: var(--color-text-body); }
+
+/* === Source Note === */
+.source-note {
+  margin-top: 2rem;
+  font-size: var(--fs-small);
+  color: rgba(235,232,225,0.35);
+}
+
+/* === Series Note === */
+.series-note {
+  margin-top: 2rem;
+  padding: 1.5rem 2rem;
+  background: rgba(192,168,120,0.04);
+  border: 1px solid rgba(192,168,120,0.1);
+  font-size: var(--fs-body);
+  color: var(--color-text-reading);
+  line-height: 2;
+}
+
+/* === 7. モバイル対応 === */
+@media (max-width: 600px) {
+  h2.chapter-heading {
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    padding-top: 1.5rem;
+  }
+  .chapter-number {
+    font-size: var(--fs-micro);
+    letter-spacing: 0.25em;
+    margin-bottom: 0.4rem;
+  }
+  h3.section-heading {
+    font-size: var(--fs-lead);
+    margin-top: 2rem;
+    padding-left: 1rem;
+  }
+  hr { margin: 3rem 0; }
+  .session-dialogue {
+    padding: 1.5rem 1.2rem;
+    margin: 2rem auto;
+  }
+  .session-dialogue .line-yanai { padding-left: 0.8rem; }
+  .session-dialogue .line-character { margin-left: 0.8rem; }
+  .profiling-block { padding: 1.5rem 1.2rem; }
+  .cta-block { padding: 2rem 1.2rem; }
+  .comparison-table { font-size: var(--fs-xs); }
+  .comparison-table th, .comparison-table td { padding: 0.5rem 0.6rem; }
+  .highlight-block { padding: 1.5rem 1.2rem 1.5rem 1.4rem; }
+  .text-panel { padding: 2rem 1.5rem; }
+}
+@media (max-width: 480px) {
+  .text-panel p br,
+  .pull-quote p br,
+  .highlight-block p br,
+  .def-box p br,
+  .session-dialogue p br { display: none; }
+  h2.chapter-heading { font-size: var(--fs-h3); }
+  .session-dialogue p:nth-child(10n) {
+    margin-bottom: 1.5em;
+    padding-bottom: 1em;
+  }
+}
+</style>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="../../index.html" class="site-logo">実存科学研究所</a>
+      <button class="search-toggle" aria-label="検索"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+            <nav class="global-nav">
+        <a href="../../index.html">Top</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">The Meta</button>
+          <div class="nav-dropdown__menu">
+            <a href="../../beginner.html">はじめての方へ</a>
+            <a href="../../lp.html">ダークサイド診断</a>
+            <a href="../../omoidasu/">身体的知性診断</a>
+          </div>
+        </div>
+        <a href="../../session.html">Session</a>
+        <a href="../../founder.html">Founder</a>
+        <a href="../../specials.html">Specials</a>
+      </nav>
+    </div>
+  </header>
+  <div class="reading-progress"></div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="パンくずリスト">
+        <ol class="breadcrumb__list">
+          <li class="breadcrumb__item"><a href="../../index.html" class="breadcrumb__link">TOP</a></li>
+          <li class="breadcrumb__item"><a href="../../specials.html" class="breadcrumb__link">Specials</a></li>
+          <li class="breadcrumb__item"><a href="./" class="breadcrumb__link">ピーキー・ブラインダーズ篇</a></li>
+          <li class="breadcrumb__item"><span class="breadcrumb__current">トミー・シェルビーのMeta</span></li>
+        </ol>
+      </nav>
+      <p class="page-hero__sub">Peaky Blinders &times; Existential Science</p>
+      <h1>トミー・シェルビーのMeta<br>&mdash;&mdash; 自由意志なき世界の天命論</h1>
+      <p class="page-hero__lead">箭内宏紀｜実存科学研究所</p>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <!-- ========== ネタバレ注意 ========== -->
+    <div class="text-panel fade-in">
+      <p style="font-size:0.85rem; color:rgba(235,232,225,0.5); text-align:center;">※本稿は『ピーキー・ブラインダーズ』全6シーズンのネタバレを含みます。</p>
+    </div>
+
+    <!-- ========== 導入 ========== -->
+    <section class="fade-in">
+
+      <div class="text-panel fade-in">
+        <p>彼は、ガレージの薄暗がりに立っている。</p>
+        <p>ピーキーキャップを目深に被り、煙草の煙が顎の線を撫でる。氷のように青い瞳が、相手の額ではなく、その奥にある計算と恐怖を射抜いている。声は部屋の空気よりも低い。「俺のスーツの代金は、店のおごりだ。さもなければ店が燃える」&mdash;&mdash;脅迫ではない。予告だ。そしてトミー・シェルビーが予告したことは、必ず起きる。</p>
+        <p>バーミンガムのスモール・ヒースから這い上がり、ノミ屋の帳簿を血で塗り替え、ロンドンのイタリアン・マフィアをテーブルの下から蹴り上げ、ロシアの亡命貴族の金庫をこじ開け、ニューヨークのマフィアと握手し、国会議員の椅子に座り、ファシストの懐に片手を突っ込んだ。三つ揃えのスーツ。磨き上げた靴。剃刀の刃を仕込んだ帽子。全身が武装だ。だが彼が最も危険なのは、武器を持っているときではない。沈黙しているときだ。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>彼は、相手が喋り終わるまで待つ。煙草を一口吸い、煙を吐き、それから&mdash;&mdash;声を落とす。相手が身を乗り出して聴かなければならないほどに。その囁きの中に、帝国のすべてが詰まっている。</p>
+        <p>したたかさ。冷酷さ。狂気的な執着。大胆さ。</p>
+        <p>ファンが彼に惹かれる理由は、そのすべてが「演じている強さ」ではなく、「壊れた男が生き延びるために鋳造した鎧」だからだ。あの冷たい色気は、氷の下に封じ込められた莫大なエネルギーが放つ光だ。凍結されていなければ、あの静謐は存在しない。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>だが。帝国を際限なく拡大し続ける男は、なぜ止まれないのか。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>答えは、フランスの地下にある。第一次世界大戦。坑道兵。暗闇の底で、壁の向こうからドイツ軍が掘り進んでくる音だけを頼りに、三十ヶ月を生き延びた。音が近づけば敵が来る。音が止まれば&mdash;&mdash;爆薬が仕掛け終わった。数秒後に、土の中に消える。</p>
+        <p>彼にとって「止まること」は「トンネルの中で死を待つこと」と同義だ。静止は死。沈黙は起爆の前兆。だから彼は穴を掘り続ける&mdash;&mdash;地下ではなく地上に、帝国という名の穴を。</p>
+        <p>6つのシーズンの終わり、彼はついに馬車を燃やし、白い馬に乗って走り去った。シーズン1の黒い馬との、完璧な構造的反転。</p>
+        <p>その問いの先に、天命がある。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== シャドウ・プロファイリング ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading">トミー・シェルビー &mdash;&mdash; シャドウ・プロファイリング</h2>
+
+      <div class="profiling-block fade-in">
+        <h3>【Meta（変えられない前提条件）】</h3>
+        <p style="color:var(--color-text-reading); line-height:1.9; margin-bottom:1rem; font-style:italic;">── トミー・シェルビーさんのあらゆる選択を支配する、変更不可能な五層の前提構造。</p>
+        <ul>
+          <li><strong>生物基盤：</strong>第一次世界大戦の塹壕戦と坑道掘削が、神経系を不可逆的に変容させた。戦後も解除されない交感神経の過覚醒。極度の不眠症。自己治療としてのアヘン依存と絶え間ない喫煙。死を恐れる生物学的機能が焼き切れた肉体</li>
+          <li><strong>記憶・情動：</strong>第179トンネル中隊での極限体験&mdash;&mdash;暗闇と沈黙の地下空間で、敵の採掘音に耳を澄まし、予測を誤れば即座に生き埋めになるという恐怖。グレースさんの不条理な銃殺死による「第二の凍結」。叔母ポリーさんの暗殺と娘ルビーさんの病死による防衛システムの完全崩壊</li>
+          <li><strong>文化・社会：</strong>アイルランド系ロマの血統。冷徹な合理主義者として支配階級への上昇を企てる表の顔と、呪い・霊的な兆しに深く支配されるロマの精神的信念という二重構造。大戦後のイギリスで「劣等なジプシー」として差別され、用済みとして棄てられた帰還兵の冷酷なルサンチマン</li>
+          <li><strong>価値観・信念：</strong>「状況を完全にコントロールできなければ、状況によって破壊される」。「愛は弱点であり、世界は残酷に奪うものである」。力を持たない者は略取されるという戦場とスラムの論理</li>
+          <li><strong>言語構造：</strong>常に低く静かに、囁くように話す。状況が危険であるほど声は小さくなる。これは坑道において「音を立てることは死を意味する」という条件付けが言語に根付いた証拠。沈黙を武器として行使し、相手に空間を埋めさせて心理的優位を確保する</li>
+        </ul>
+      </div>
+
+      <div class="profiling-block fade-in">
+        <h3>【シャドウ（抑圧された本音）】</h3>
+        <p style="color:var(--color-text-reading); line-height:1.9; margin-bottom:1rem; font-style:italic;">── 類型判定：凍結されたシャドウ＋偽装されたシャドウのハイブリッド構造</p>
+        <ul>
+          <li><strong>核心：</strong>「私は止まることができない」&mdash;&mdash;静止することは暗闇の坑道の中で無力に死を待つことと同義であり、立ち止まった瞬間に未処理のトラウマと悲哀が怒涛のように押し寄せる</li>
+          <li><strong>深層の欲求：</strong>何も計画せず、何も耳を澄まさず、敵を待つこともない、ただ一夜の平和</li>
+          <li><strong>表層の代償行動：</strong>感情の代わりに知性で世界を処理する。帝国の際限なき拡大。剃刀の刃を仕込んだ帽子を常に頭部に纏う身体的宣言。アーサーさんへの暴力の外部化、アルフィーさんへの暗黒の投影</li>
+          <li><strong>止まれない理由：</strong>戦争が「静止＝致死」という条件付けを彼の肉体に刻み込んだため。計画の中にいる限り、トラウマのフラッシュバックが侵入する隙間を塞ぐことができる。野心は自己実現ではなく防衛</li>
+        </ul>
+      </div>
+
+      <div class="profiling-block fade-in">
+        <h3>【対比キャラクターとの比較表】</h3>
+        <p style="color:var(--color-text-reading); line-height:1.9; margin-bottom:1.5rem;">トミーさんのシャドウを浮き彫りにするために、二人の鏡像的キャラクターと対比する。</p>
+        <table class="comparison-table">
+          <tr>
+            <th>キャラクター</th>
+            <th>共通のMeta</th>
+            <th>出力の違い</th>
+          </tr>
+          <tr>
+            <td>アーサー・シェルビー</td>
+            <td>同じ戦争、同じトンネル、同じ帰還兵</td>
+            <td>「戦略」という防衛を持たない。トラウマが制御不能な怒りと暴力として噴出し続ける。トミーさんが理性を失っていたらこうなっていた姿</td>
+          </tr>
+          <tr>
+            <td>アルフィー・ソロモンズ</td>
+            <td>高い知性と冷酷さ</td>
+            <td>自分が怪物であることを完全に受容し、楽しんですらいる。トミーさんの欺瞞を容赦なく剥ぎ取る鏡。自己認識が決定的に異なる</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="profiling-block fade-in">
+        <h3>【天命への転換点】</h3>
+        <ul>
+          <li><strong>喪失：</strong>グレースさんの死（S3E1）&mdash;&mdash;凍結を溶かし得る唯一の熱源の喪失。ポリーさんの暗殺（S6）&mdash;&mdash;内的コンパスの完全な破壊。ルビーさんの病死（S6）&mdash;&mdash;権力によるコントロール・システムの最終的な無力化</li>
+          <li><strong>反転：</strong>偽の余命宣告を受け入れ、自らの死を準備する過程で「トーマス・シェルビーという防衛的自我」を解体する。11時の鐘の音と共に復讐の引き金を引くことを放棄する</li>
+          <li><strong>天命の萌芽：</strong>黒い馬から白い馬へ。「ついに平和が来た」&mdash;&mdash;内なる闘争を止める能力の獲得</li>
+        </ul>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>&mdash;&mdash;ここまでが、トミー・シェルビーさんの構造の地図だ。しかし、地図は地図でしかない。この構造が本人の口から、本人の声で露呈する瞬間を、見届けてほしい。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== セッション再現 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading">天命の言語化セッション&trade;<br>&mdash;&mdash;トミー・シェルビーさんの場合</h2>
+
+      <div class="session-dialogue fade-in">
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>シェルビーさん、セッションに来てくださってありがとうございます。あなたはあなたに何をプレゼントしてあげたいですか？</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>（椅子に座らない。壁に背を預け、帽子のつばに指を這わせながら、部屋の隅々を見渡している。出口、窓、机の下。それが終わって初めて、箭内を見る）</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>あんた、戦争に行ったことはあるか。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>ないだろうな。その手を見ればわかる。泥を掻いたことのない手だ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;まあいい。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>（コートの内ポケットからフラスクを出し、ウイスキーを一口含む。箭内には勧めない）</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>で、もう一度聞くが&mdash;&mdash;あんたは俺から何が欲しい？ 金か。情報か。保護か。&hellip;&hellip;人間は必ず、何かを欲しがる。何も欲しがらない人間は、嘘をついているか、死んでいるかのどちらかだ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;答えない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>（フラスクの蓋を閉める。視線が変わる。品定めが終わり、別の種類の注意に切り替わる）</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;面白い。普通、俺が黙ると相手が喋り出す。あんたは黙ったままだ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>いいだろう。あんたの質問に答えてやる。&hellip;&hellip;俺が俺に何をプレゼントしたいか。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>（煙草を取り出す。火をつける。煙が天井に昇る間、考えている&mdash;&mdash;あるいは、考えている振りをしている）</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;一晩でいい。何も計画しない夜が欲しい。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>では、なぜそれをプレゼントできていないんですか？</p>
+
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;簡単なことを聞くな。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>（煙を吐く。目を細める。相手を測り直している）</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>あんたの部屋は静かだな。俺は静かな場所が好きじゃない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;計画を止めたら、翌朝は来ない。俺が計画を止めたら、家族が死ぬ。アーサーが死ぬ。フィンが死ぬ。チャーリーが&hellip;&hellip;息子が、守られなくなる。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜですか？</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>なぜだと？ 俺の名前を聞いたことがないのか。シェルビー。スモール・ヒースでその名前を出せば、犬も黙る。黙る理由があるからだ。俺が三手先を読まなければ、全員やられる。キャンベルの時も。サバティーニの時も。チャンラグラッシーの時も。モズリーの時も。敵は常にいる。そして敵は常に、俺の家族から狙う。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、三手先を読まなければならないんですか？</p>
+
+        <p class="silence">（指に挟んだ煙草が、コンマ数秒だけ静止する）</p>
+
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;それは、フランスだ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>あんたに話しても伝わらんだろうが&mdash;&mdash;いや、伝わらなくていい。伝わる方が不幸だ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>トンネルの中では三手先じゃない。一手先だ。壁の向こうから音が聞こえる。掘っている音だ。そいつがこっちに向かっているのか、別の方向に掘っているのか。&hellip;&hellip;それを間違えたら、翌朝はない。ダニーはその音で壊れた。砲弾ショックだ。叫び出して、泣いて、震えが止まらなくなった。&hellip;&hellip;俺は壊れなかった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜですか？</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>俺は聴いていたからだ。音を。ダニーは恐怖に飲まれた。俺は恐怖を&hellip;&hellip;聴くことに変えた。聴いている限り、生きていられた。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>聴くことを止めたら死ぬ。それがフランスで学んだ唯一のことだ。</p>
+
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>（フラスクを再び取り出す。一口。今度は箭内の方を見る）</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;あんた、飲まないのか。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>飲まない男は信用できないと、うちの親父は言っていた。&hellip;&hellip;もっとも、親父自身が信用できない男だったがな。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;あの男は俺たちを置いて消えた。母が死んだ後。五人の子供を、ポリーに預けて。金も、理由も置いていかなかった。&hellip;&hellip;残されたのはロマの血と、スモール・ヒースの泥と、飢えだ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>俺はそこから這い上がった。ノミ屋の帳簿から始めて、ロンドンを手に入れ、国会の椅子に座った。あの泥の中から、帝国を築いた。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>それはなぜ、バーミンガムに戻っても止められなかったんですか？</p>
+
+        <p class="silence">（初めて、視線が箭内から外れる。遠くを見ている──この部屋ではない、別の場所を）</p>
+
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;帰ってきたとき、ハリーのバーに入った。みんなが笑っていた。音楽が鳴っていた。&hellip;&hellip;俺には何も聞こえなかった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>聞こえていたのは、壁の向こうの音だけだ。いつも。どこにいても。&hellip;&hellip;夜になると、あいつらがまだ掘っている。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>だから計画を止められない。計画の中にいれば、あの音が遠くなる。帝国を広げれば、トンネルから遠くなる。&hellip;&hellip;そう思っていた。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「思っていた」？</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;思っていた。</p>
+
+        <p class="silence">（長い沈黙。煙草を灰皿に押しつける）</p>
+
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;広げても広げても、遠くならなかった。国会議員になっても。金が山のようにあっても。毎晩、壁の向こうの音は同じだ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;一人だけ、あの音を消してくれた女がいた。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>グレース。</p>
+
+        <p class="silence">（声が変わる。帝国を語る声ではない。トンネルを語る声でもない。それ以前の、凍結される前の何かが、一瞬だけ顔を出す）</p>
+
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>彼女が隣にいるとき、音が止んだ。フランスの後で、初めてだった。&hellip;&hellip;彼女が歌ってくれると、俺は眠れた。ただそれだけのことだ。それだけのことが、俺の人生で最も贅沢なものだった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;そして彼女は死んだ。パーティの最中に。撃たれて。俺の腕の中で。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>あの瞬間から、音は前より大きくなった。もう二度と止まらない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;俺は知った。愛は弱点だ。誰かを愛するということは、世界にこう言っているのと同じだ&mdash;&mdash;「こいつを撃て。ここを撃てば、俺は崩れる」。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>だから二度と、ああいう愛し方はしなかった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;リジーのことを聞きたいんだろう。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>彼女は&hellip;&hellip;スモール・ヒースの女だ。戦争の前から知っている。</p>
+
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>（フラスクを見つめる。しかし飲まない）</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>あの女は娼婦だった。俺の弟ジョンがあの女と結婚したがった。俺はジョンを止めた。8ポンドを渡して、まだ客を取るか試した。&hellip;&hellip;取った。だから俺はジョンに言った。「あの女は変わっていない」と。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;あれは正しい判断だった。ジョンを守るための。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;正しい判断だった。</p>
+
+        <p class="silence">（二度繰り返す。だが声のトーンが違う。一度目は確信。二度目は、確信を装った何か）</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、二度言ったんですか？</p>
+
+        <p class="silence">（長い沈黙。帽子のつばに触れる指が止まる）</p>
+
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;グレースには、俺の一番いいところだけを見せたかった。泥もない、血もない、帳簿もない場所に彼女を置きたかった。あの女は&mdash;&mdash;光だった。光を汚したくなかった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>リジーは&hellip;&hellip;違う。あの女は最初から泥の中にいた。俺と同じ泥だ。俺がどれだけ汚い人間か、最初から知っている。俺の客だった時代から、秘書になった時代から、全部知っている。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>グレースには、美しい嘘をつけた。&hellip;&hellip;リジーには、嘘がつけない。あの女は、俺が何を考えているか、俺が言う前にわかっている。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;だから厄介なんだ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、それが厄介なんですか？</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;。</p>
+
+        <p class="silence">（長い沈黙。煙草に手を伸ばすが、箱は空だ）</p>
+
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>知られている、ということは&hellip;&hellip;コントロールできないということだ。グレースに対しては、俺は「トミー・シェルビー」でいられた。帝国の男。計画を立てる男。三手先を読む男。&hellip;&hellip;リジーの前では、それが通じない。あの女は俺の目を見て、「今夜も眠れないんだろう」と言う。俺が何も言っていないのに。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;それが怖いんだ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜですか？</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;知られたら、終わりだからだ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>トンネルの中では、音を聴いている限り生き延びられた。だが、こっちの音を敵に聴かれたら死ぬ。&hellip;&hellip;俺の音を聴ける人間がいるということは、俺が殺せるということだ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>グレースは俺の音を聴いた。&hellip;&hellip;そして死んだ。</p>
+
+        <p class="silence">（長い沈黙。これまでで最も長い。部屋の空気が変わる）</p>
+
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;だからリジーを遠ざけた。彼女が近づけば近づくほど、俺は冷たくなった。あの女が俺を読めば読むほど、俺は壁を厚くした。&hellip;&hellip;グレースの時と同じ過ちを繰り返さないために。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;愛したから壊したのか。壊したかったから愛したのか。&hellip;&hellip;もう、わからん。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;あんた、馬を知っているか。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>馬は嘘をつかない。人間と違う。&hellip;&hellip;俺はガキの頃から馬と一緒にいた。ロマの血だ。馬は、あんたが怖がっていれば怖がるし、落ち着いていれば落ち着く。鏡だ。あんたが何者かを、馬だけが正直に映す。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;グレースが死んでから、馬を走らせるのが怖くなった。理由はわからなかった。今はわかる。馬が俺の中を映すからだ。走っている間、俺の中にあるものが&hellip;&hellip;全部、伝わってしまう。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;音が。壁の向こうの音が、馬にも聞こえているんじゃないかと思った。馬が怯えたら、それは俺の中の音に怯えたんだ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;いつからこんな話をしている。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;あんた、厄介な人間だな。何も言わないくせに、俺に喋らせる。リジーと同じだ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;帰ってもいいか。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;帰りたいんじゃない。帰るべきだと思っている。これ以上喋ると&hellip;&hellip;。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;まずいことになる。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+
+        <p class="silence">（立ち上がりかける。だが、立ち上がらない。座り直す。帽子を脱ぐ。初めて）</p>
+
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;ポリーが死んだ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>唯一、俺に「お前は間違っている」と言える人間だった。&hellip;&hellip;あの女がいなくなった日から、俺は本当に一人になった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>そしてルビーが死んだ。娘だ。六歳だ。&hellip;&hellip;呪いだと言われた。ロマの呪い。ティクナ・モラ・オ・ベング。娘がうわ言でそう言ったとき、俺は&mdash;&mdash;</p>
+
+        <p class="silence">（声が途切れる。凍結されたシステムが、泣くことを許さない。だが声は震えている）</p>
+
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>俺がどれだけの金を持っていようが。何人の議員を動かせようが。娘を救えなかった。コントロールの外で。俺の手が届かない場所で。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;なら、俺が築いてきたものは何だったんだ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、築いてきたんですか？</p>
+
+        <p class="silence">（目が、一瞬だけ揺れる。初めて、氷が薄くなる）</p>
+
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;。</p>
+
+        <p class="silence">（長い沈黙。10秒。20秒。煙草の箱を指で弄んでいる。空の箱を）</p>
+
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;埋められないようにするためだ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;土に。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>トンネルの中で、何人も埋められた。目の前で。隣で寝ていたやつが、翌朝には土の下だ。声も出せない。叫べば、次は自分が埋められる。&hellip;&hellip;俺は、二度と土に埋められたくなかった。だから、土くれの中から帝国を築いた。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>だが、土は気にしない。俺がいくら金を持っていても。何人の部下がいても。土はそこで、ただ待っている。&hellip;&hellip;グレースを呑み込んだ。ポリーを呑み込んだ。ルビーを呑み込んだ。</p>
+
+        <p class="silence">（声が、もう囁きではない。かろうじて聞き取れる、喉の奥から絞り出される音）</p>
+
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;そして最後に、俺を呑み込む。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;医者が言った。脳に腫瘍がある。余命はわずかだ、と。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>その宣告を聞いたとき、何も感じなかった。恐怖もない。悲しみもない。&hellip;&hellip;ただ、「ようやくか」と思った。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、「ようやく」なんですか？</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>フランスで死ぬはずだった。ジェレミアが"In the Bleak Midwinter"を歌い始めたとき&mdash;&mdash;あの歌が終わったら、全員死ぬはずだった。だが生き延びた。理由はわからない。それからの人生は全部&hellip;&hellip;おまけだ。おまけの時間で帝国を築いた。おまけの時間で人を愛した。おまけの時間で人を殺した。全部、おまけだ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「おまけ」だったんですか？</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;おまけだと思い続けていた。だから死の宣告を聞いても何も感じなかった。もともと死んでいた人間が、ようやく追いついただけだ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;だが。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>あの日、ロマの馬車を燃やした。炎の前に立って見ていた。あの中にはトーマス・シェルビーのすべてが入っていた。帽子。レザーコート。帝国の書類。&hellip;&hellip;俺そのもの。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>燃えていくのを見ていた。そうしたら&mdash;&mdash;消えた。壁の向こうの音が。</p>
+
+        <p class="silence">（長い沈黙。部屋の中に、静寂が満ちる。だが今回の静寂は、起爆の前兆ではない）</p>
+
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>初めてだった。グレースの歌がなくても。計画がなくても。静かだった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>鐘が鳴った。11時の鐘だ。&hellip;&hellip;第一次大戦の停戦と同じ時刻の鐘だ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>俺は銃を持っていた。俺を騙した医者の頭に銃口を向けていた。引き金に指をかけていた。&hellip;&hellip;あの鐘が鳴って。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;下ろした。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜですか？</p>
+
+        <p class="silence">（火のついていない煙草を指の間で転がす。声は囁きに戻っている。だが、凍結の囁きではない。もっと柔らかい、聞いたことのない声）</p>
+
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>フランスで、俺は聴くことを学んだ。音を聴いて、敵を予測して、生き延びた。帰ってからも聴き続けた。三十年間。&hellip;&hellip;だが、あの鐘が鳴ったとき、俺が聴いたのは&mdash;&mdash;</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;何もなかった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>壁の向こうの音がなかった。掘り進んでくる音がなかった。起爆の前兆もなかった。&hellip;&hellip;ただ、鐘の音だけがあった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;ようやく、停戦だ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>あの戦争は、フランスで終わったんじゃなかった。バーミンガムでも終わっていなかった。ロンドンでも。国会でも。&hellip;&hellip;あの鐘が鳴った瞬間に、ようやく終わった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>俺は銃を下ろして、ホルフォードを見た。殺すべき人間だった。殺す理由があった。計画があった。&hellip;&hellip;だが、計画が要らなくなっていた。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>何のためだったんですか？</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;何のため？</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;全部、何のためだったのかと聞いているのか。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+
+        <p class="silence">（長い、長い沈黙。これまでで最も長い）</p>
+
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;土に埋められないためだった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>帝国を築いたのは、二度とあの地下に戻らなくて済むようにするためだ。&hellip;&hellip;だが毎晩目を閉じるたびに、俺はまだ、あの土の中にいた。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;穴を掘り続けていたんだ。フランスでも、バーミンガムでも。帝国を広げることは、穴を掘り続けることと同じだった。掘り続けている限り、埋められない。&hellip;&hellip;そう思い込んでいた。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>だが、穴を掘るのを止めても&hellip;&hellip;埋められなかった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>あの日、馬車が燃えて、鐘が鳴って、銃を下ろした。そのとき穴を掘るのを止めた。&hellip;&hellip;そうしたら、埋められなかった。地上に立っていた。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;ずっと、地上にいたんだ。</p>
+
+        <p class="silence">（声が震える。だが今度は、凍結が震えているのではない。氷が、溶けている）</p>
+
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>フランスでとっくに死んでいた。それからの人生はおまけだと思っていた。&hellip;&hellip;だが、おまけじゃなかった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;あれが、人生だった。</p>
+
+        <p class="silence">（沈黙）</p>
+
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;いや。都合がよすぎるかもしれない。こんなことを言う資格が俺にあるのか。俺がどれだけの人間を殺してきたか。ジョンの結婚を壊した。リジーを道具にした。グレースを守れなかった。ポリーを死なせた。&hellip;&hellip;あんたに綺麗な言葉を並べて、帳尻が合うわけがない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;だが。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;白い馬がいた。あの日。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>最初に来たとき、俺は黒い馬に乗っていた。フランスから帰ったとき。闘いの馬だ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>白い馬は違う。あいつは&hellip;&hellip;どこへ行くか、俺が決めたんじゃない。走り始めたのは馬で、俺はただ乗っていた。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;馬は嘘をつかない。あの白い馬は、俺の中に恐怖を見なかった。だから走った。&hellip;&hellip;初めてだ。俺の中に恐怖がない状態で、馬に乗ったのは。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-tommy">トミー：</span>&hellip;&hellip;もう穴を掘るのは終わりだ。土を、あるべき静寂に還してやる時だ。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== セッション解説 ========== -->
+    <section class="fade-in">
+
+      <div class="text-panel fade-in">
+        <p>セッション対話において、私は一度もトミーさんに答えを与えていない。</p>
+        <p>「なぜ？」という問いだけを渡し続けた。トミーさんは、三十年間聴き続けてきた「壁の向こうの音」を辿り、その音の正体&mdash;&mdash;トンネルの中で刻み込まれた「静止＝致死」という条件付け&mdash;&mdash;に自分の言葉で到達した。</p>
+        <p>「何のためだったんですか？」は、帝国の意味を問う問いではない。彼自身が「穴を掘り続けていたのは、埋められないため」だったと気づくための問いだ。</p>
+        <p>そして「穴を掘るのを止めても埋められなかった」&mdash;&mdash;この発見を、他の誰でもない、トミーさん自身が語った。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>実存科学の「天命の言語化セッション&trade;」は、この構造で動く。問いだけを渡し、答えが本人の内側から出てくるのを、待つ。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>上のセッション対話でトミーさんに行ったことと、同じことを、あなたに対して行います。</p>
+      </div>
+
+    </section>
+
+    <!-- ========== 中間CTA ========== -->
+    <div class="cta-block fade-in">
+      <h3>天命の言語化セッション&trade;</h3>
+      <p>2時間で天命が言語化できる場所。</p>
+      <a href="../../trial.html" class="cta-btn">&#9654; 無料トライアルに申し込む</a>
+    </div>
+
+    <hr>
+
+    <!-- ========== 第1章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading">
+        <span class="chapter-number">Chapter I</span>
+        坑道兵のMeta&mdash;&mdash;すべての起源としてのトンネル
+      </h2>
+
+      <div class="text-panel fade-in">
+        <p>トミーさんの全人格を支配する絶対的Meta（変えられない前提条件）は、第一次世界大戦のフランス戦線における坑道兵としての極限体験だ。</p>
+        <p>彼は通常の歩兵ではなかった。第179トンネル中隊に所属し、地下数十メートルの極小空間で、照明もなく、マッチの火すらガス爆発の危険を伴う暗闇の中、敵兵が自分たちに向けて土を掘る音を聴き続けた。</p>
+        <p>この環境が彼に刻み込んだものは、三つある。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>第一に、「聴くこと＝生存」という条件付け。地下では、音だけが情報源だ。敵の採掘方向を予測できなければ生き埋めになる。この極限の聴覚的過覚醒が、戦後の彼の「常に三手先を読む」強迫的な計画性の生物学的起源である。先読みの才能ではない。先読みしなければ死ぬ環境が、脳を不可逆的に書き換えた。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>第二に、「静止＝致死」という条件付け。音が止まることは、敵が爆薬を仕掛け終え、起爆の準備に入ったことを意味した。静寂は平和の前兆ではなく、死の前兆だった。これが、戦後のトミーさんが「止まれない男」になった構造的原因だ。帝国を拡大し続ける彼の野心は、自己実現でも権力欲でもない。「穴を掘り続けている限り、埋められない」という坑道兵の生存ロジックが、市民生活に転写されたものに過ぎない。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>第三に、「感情の凍結」。ダニー・ウィズバングさんが砲弾ショックで感情を暴走させたのに対し、トミーさんは感情を極度に理知的な戦略へと変換・抑圧した。恐怖を「聴くことに変えた」&mdash;&mdash;彼自身がセッション対話でそう語ったように。このとき、彼の感情システムは凍結された。実存科学では、これを「凍結されたシャドウ（Frozen Shadow）」と呼ぶ。感情が積極的に抑圧されたのではなく、生存のために機能停止させられた。氷河のように動かない、しかし融ければ膨大なエネルギーを秘めたシャドウ。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>帰還した彼を、バーテンダーのハリーはこう語る&mdash;&mdash;「あれがトミーだ。昔は素晴らしい、陽気な子供だった。だが戦争に行き、そして内部が死んだ状態で帰ってきた」。「内部の死」。これが、彼の全軌跡の出発点だ。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== 第2章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading">
+        <span class="chapter-number">Chapter II</span>
+        偽装された帝国&mdash;&mdash;凍結の上に築かれた鎧
+      </h2>
+
+      <div class="text-panel fade-in">
+        <p>凍結されたシャドウは、動かない。だが、凍結によって行き場を失った莫大な心理的エネルギーは消えない。トミーさんの場合、そのエネルギーはそっくりそのまま「冷徹な戦略的知性と底無しの野心」へと変換された。</p>
+        <p>これが「偽装されたシャドウ」の層だ。凍結が一次的基盤であり、偽装がその上に構築された。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>シーズン1からシーズン6にかけて、ピーキー・ブラインダーズの組織はバーミンガムの小規模なノミ屋から、ロンドン、ロシアの亡命貴族、NYマフィア、そして国政・ファシズムへの浸透へと際限なく拡大していく。この階層的で戦略的、かつ常に暴力を内包した組織の拡大構造そのものが、トミーさんの防衛的心理構造のフラクタル（自己相似形）だ。</p>
+        <p>帝国の拡大は、トンネルからの距離の確保を意味する。合法・非合法のビジネス、政治的権力、何重もの部下&mdash;&mdash;これらはすべて、かつて無力だった「地下の自分」と「地上」との間に重ねられた防弾装甲だ。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>だが、装甲の内側は空虚のままだ。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>実存科学では、この構造を「S3：手に入れたのに満たされない」と呼ぶ。金、政治力、合法的なビジネス帝国を獲得し、愛するグレースさんと結ばれても、内面の空虚は埋まらない。なぜなら帝国を築く動機が自己実現ではなく「埋められないための防衛」だからだ。防衛のための行動は、いくら積み上げても「満たす」方向には働かない。</p>
+        <p>同時に、「S4：本音を出したら居場所を失う」も重なる。もし彼がPTSDや恐怖、悲哀を露わにすれば、冷酷な強者として彼に依存している一族と組織のシステムは崩壊する。弱さの露呈は組織的死に直結する。だから彼は仮面を脱げない。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>ここに、剃刀の刃を仕込んだ帽子の象徴的意味がある。ピーキー・ブラインダーズの名前の由来であるこの帽子は、常に頭部に致死的な武器を身につけているという身体的宣言だ。「戦争は決して終わっていない」&mdash;&mdash;彼は帽子を被るたびに、それを自分自身に宣言し続けている。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== 第3章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading">
+        <span class="chapter-number">Chapter III</span>
+        グレースの死&mdash;&mdash;第二の凍結と失われた熱源
+      </h2>
+
+      <div class="text-panel fade-in">
+        <p>シーズン3第1話。トミーさんの人生が、取り返しのつかない形で折れる瞬間。</p>
+        <p>グレースさんは、潜入捜査官としてトミーさんに近づき、やがて彼の妻になった女性だ。彼女はトミーさんにとって、凍結されたシステムを「解凍」し得る唯一の熱源だった。</p>
+        <p>セッション対話で彼はこう語った&mdash;&mdash;「彼女が隣にいるとき&hellip;&hellip;あの音が止んだ。初めてだった」。壁の向こうから掘り進んでくる音&mdash;&mdash;フランス以来、一度も止んだことのなかった音が、グレースさんの歌声で消えた。トミーさんが「眠れた」のは、彼女が隣にいるときだけだった。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>彼女の不条理な銃殺死は、トミーさんの魂に「第二の絶対的トラウマ」を刻み込んだ。</p>
+        <p>一度目の凍結はフランスで起きた。戦争が感情システムをシャットダウンさせた。だがグレースさんという熱源が、その氷を溶かし始めていた。彼女の死によって、感情システムは以前よりも分厚い氷で再凍結された。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>このとき刻み込まれた非合理的信念は、「愛は弱点であり、世界は残酷に奪うものである」。誰かを愛することは、残酷な世界に対して「奪い取るための標的」を差し出すことに他ならない。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>以降のトミーさんの帝国拡張は、質的に変わる。シーズン1〜2の拡張は「トンネルから離れるため」だった。シーズン3以降の拡張は、「内なる空虚から逃避するための自己破壊的な代償行動」へと変質する。</p>
+        <p>第二の妻リジーさんは、トミーさんを愛し支えようとするが、トミーさんの中心にある「グレースの霊廟」と「戦争の暗闇」には決して立ち入れない。リジーさんの孤独は、防衛を極めた男が周囲にいかに深い精神的飢餓をもたらすかを示している。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>構造的に見れば、グレースさんの死は「必要なプロセス」だった。この「失われた安らぎ」の喪失こそが、彼に限界まで帝国を拡張させ、その自己破壊的な頂点においてすべての偽装&mdash;&mdash;権力、富、政治力&mdash;&mdash;が完全に無意味であることを骨の髄まで悟らせるために、構造が要請したプロセスだった。</p>
+        <p>実存科学の公理「M &rArr; &not;F（Metaがある限り自由意志は存在しない）」が、ここで機能している。グレースさんの死を「受け入れるか否か」はトミーさんの自由意志による選択ではない。その喪失が彼のMetaに刻み込まれ、以降の全行動を自動的に規定した。彼が「愛を拒絶し帝国を拡大する」という反応パターンを「選んだ」のではない。Metaがそう駆動した。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== 第4章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading">
+        <span class="chapter-number">Chapter IV</span>
+        補助キャラクターの構造&mdash;&mdash;シャドウの外部化
+      </h2>
+
+      <div class="text-panel fade-in">
+        <p>トミーさんの強固な防衛メカニズムは、周囲の主要人物たちへのシャドウの投影として明確にプロットされている。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p><strong>アーサーさん&mdash;&mdash;抑圧された暴力と生のPTSD。</strong> 同じ戦争を経験しながら、「戦略」という防衛を持たない。トミーさんのトラウマがコントロール不能な怒りと狂気として噴出し続ける姿&mdash;&mdash;もしトミーさんが「聴くことに変える」ことができなかったら、こうなっていた。トミーさんはアーサーさんを暴力装置として「利用」しながら、実はアーサーさんに自分の制御不能な感情を代理させている。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p><strong>アルフィー・ソロモンズさん&mdash;&mdash;暗黒の鏡。</strong> 同じく高い知性と冷酷さを持つユダヤ系ギャング。だがアルフィーさんは、自分が怪物であることを完全に受容し、楽しんですらいる。トミーさんが「家族のため」と自己正当化する欺瞞を、アルフィーさんは容赦なく剥ぎ取る。「お前も俺と同じだ」&mdash;&mdash;この一言が、トミーさんにとって最も耐え難い真実だ。なぜなら、それが事実だからだ。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p><strong>ポリーさん&mdash;&mdash;超自我と唯一の対等な鏡。</strong> トミーさんの知性と等しい洞察力を持ち、彼に「No」を突きつけ、感情的盲点を指摘できる唯一の存在。ロマの霊的側面の体現者でもある。彼女のシーズン6での死は、トミーさんの内的コンパスの完全な破壊を意味した。もう誰も、彼に「お前は間違っている」と言えない。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p><strong>グレースさん&mdash;&mdash;平和の可能性と究極の喪失。</strong> 彼女の存在は「戦争か愛か」という実存的問いそのものだった。彼女が奪われたことで、「世界は残酷であり、守りを固めるしかない」という非合理的信念は不可逆的なものとなった。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>この四人は、トミーさんが直視できない自己の側面&mdash;&mdash;暴力、怪物性、道徳的コンパス、愛&mdash;&mdash;を構造的に外部化した存在だ。彼が一人の人間として統合すべきものが、四人のキャラクターに分散されている。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== 第5章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading">
+        <span class="chapter-number">Chapter V</span>
+        白い馬&mdash;&mdash;「自我の死」と天命の露呈
+      </h2>
+
+      <div class="text-panel fade-in">
+        <p>シーズン6最終話。トミーさんは結核腫（脳腫瘍）による余命宣告を受け入れ、すべての身辺整理を終える。だがそれがモズリーの陰謀による偽の診断であったことに気づく。</p>
+        <p>彼は復讐のために医師ホルフォードに銃を突きつける。引き金に指をかける。ここまではトミー・シェルビーの全シーズンを通じたパターンだ&mdash;&mdash;脅威を特定し、計画を立て、排除する。坑道兵の生存ロジック。</p>
+        <p>だが、11時の鐘が鳴る。</p>
+        <p>第一次世界大戦の停戦記念日の鐘と同じ時刻。</p>
+        <p>彼は銃を下ろす。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>実存科学の観点から見れば、この瞬間に起きたことは、「トーマス・シェルビーというMetaによって構築された防衛的自我の完全な死」だ。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>鐘が鳴る前のトミーさんは、自動的に復讐を実行するシステムだった。敵を特定し、排除する。それが彼のMetaが駆動するパターンだ。「M &rArr; &not;F」&mdash;&mdash;Metaがある限り、自由意志は存在しない。</p>
+        <p>だが、鐘が鳴った瞬間、彼はそのパターンから降りた。復讐の引き金を引くことを放棄した。</p>
+        <p>これは「自由意志による決断」ではない。実存科学的に正確に言えば、彼の防衛的自我（＝トーマス・シェルビーという鎧）が「死んだ」のだ。死を本気で受け入れ、馬車に自分のすべてを入れて燃やし、何もかもを手放した過程で、鎧そのものが溶解した。鎧が溶けたとき、鎧に支配されていたパターンも機能を停止した。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>天命は「見つける」ものではない。Metaによる防衛が崩壊したとき「露呈する」ものだ。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>トミーさんの天命は「平和」だった。</p>
+        <p>平和とは、紛争の不在ではない。「内なる闘争を止める能力」の獲得だ。壁の向こうの音が止むこと。静寂が「起爆の前兆」ではなく、ただの静寂であると信じられること。穴を掘るのを止めても、埋められないこと。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>彼はロマの馬車&mdash;&mdash;トーマス・シェルビーそのもの&mdash;&mdash;を燃やし、白い馬に乗って走り去る。シーズン1第1話で黒い馬に乗って登場したこととの、完璧な構造的対比だ。</p>
+        <p>黒い馬は闘いの馬だった。戦場から帰ってきた男の馬。白い馬は、彼がセッションで語った通り、「どこへ行くか、俺が決めたんじゃない」馬だ。走り始めたのは馬であり、トミーさんはただ乗っていた。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>実存科学ではこれを「中動態」と呼ぶ。「する」でも「される」でもない、「起きる」という態。天命に生きるとは、自分の意志でも強制でもなく、構造によって「起きる」ことの中に身を置くことだ。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>トミー・シェルビーさんは、六つのシーズンをかけて、ようやく地上に出た。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== 結び ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading">結び</h2>
+
+      <div class="text-panel fade-in">
+        <p>トミー・シェルビーさんの軌跡は、こう要約できる。</p>
+        <p>フランスの地下で凍結された男が、土に埋められないために地上に帝国を築き、その帝国のすべてが防衛でしかなかったことを知り、防衛を手放したとき、初めて&mdash;&mdash;ようやく&mdash;&mdash;静寂の中に立てた。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>彼の並外れた戦略的知性と冷酷さは、生来の資質ではない。致命的なトラウマに対する極端な防衛機制だ。「凍結された戦略家」という表面の下には、夜ごと壁の向こうの音を聴き続ける二十歳の坑道兵が、三十年間ずっとうずくまっている。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>現代のSNSにおいて、感情を殺して戦略に徹するトミー・シェルビーさんの姿は「シグマ・メイル」&mdash;&mdash;孤高で冷酷な成功者&mdash;&mdash;の理想像として若年層の男性に消費されている。だがそれは、構造的なアイロニーだ。視聴者が憧れる「完璧な自己統制」こそが、彼の実存的な空虚と自己破壊を招いている最大の原因である。Metaの呪縛による不自由（&not;F）を「自由」と取り違える人間の認知構造を、この作品は容赦なく映し出している。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>あなたにとっての「壁の向こうの音」とは何か。</p>
+        <p>あなたが掘り続けている「穴」とは何か。</p>
+        <p>その穴を掘るのを止めたとき&mdash;&mdash;本当に埋められるのか。</p>
+        <p>それとも、ずっと地上にいたのか。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>あなた自身のMeta（変えられない前提条件）を見つめ、シャドウ（抑圧された本音）に触れ、天命（あなたの人生が最初から向かおうとしていた場所）を言語化する。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== 最終CTA ========== -->
+    <div class="cta-block fade-in">
+      <h3>天命の言語化セッション&trade;</h3>
+      <p>2時間で天命が言語化できる場所。</p>
+      <a href="../../trial.html" class="cta-btn">&#9654; 無料トライアルに申し込む</a>
+    </div>
+
+    <!-- ========== 著者ブロック ========== -->
+    <div class="author-block fade-in">
+      <p><strong>箭内宏紀（やないひろき）</strong><br>
+      実存科学研究所 代表。<br>
+      「天命の言語化セッション&trade;」を提供。<br>
+      「Metaがある限り自由意志は存在しない」（M &rArr; &not;F）を第一公理とする実存科学を提唱。<br>
+      著書に『Metaがある限り&mdash;&mdash;自由意志・自分・他人は存在しない』<br>
+      『自由意志なき世界の歩き方』ほか。</p>
+    </div>
+
+    <!-- ========== 出典表記 ========== -->
+    <p class="source-note fade-in">※ 本稿で扱った作品：スティーブン・ナイト制作・脚本『ピーキー・ブラインダーズ（Peaky Blinders）』（BBC / Netflix、2013-2022年、全6シーズン）。作品の著作権は原著者・制作会社に帰属します。</p>
+
+    <!-- ========== シリーズノート ========== -->
+    <div class="series-note fade-in">
+      <p>本シリーズ「自由意志なき世界の天命論」は、今後も新たな作品・キャラクターを追加していく。<br>
+      漫画のみならず、映画・小説・物語の登場人物を、実存科学の視点で読み解く。</p>
+      <p><a href="./">&larr; ピーキー・ブラインダーズ篇一覧に戻る</a>&emsp;｜&emsp;<a href="../../specials.html">&larr; 特別シリーズ一覧に戻る</a></p>
+    </div>
+
+  </main>
+
+  <!-- Floating TOC -->
+  <nav class="floating-toc" id="floatingToc" aria-label="目次">
+    <p class="floating-toc__title">Contents</p>
+    <ol class="floating-toc__list" id="floatingTocList"></ol>
+  </nav>
+  <button class="floating-toc-toggle" id="floatingTocToggle" aria-label="目次を開閉">&#9776;</button>
+
+  <script>
+  (function(){
+    var headings = document.querySelectorAll('h2.chapter-heading');
+    var list = document.getElementById('floatingTocList');
+    var toc = document.getElementById('floatingToc');
+    var toggle = document.getElementById('floatingTocToggle');
+    if (!headings.length || !list) return;
+
+    headings.forEach(function(h, i){
+      var id = 'toc-section-' + i;
+      h.id = id;
+      var li = document.createElement('li');
+      li.className = 'floating-toc__item';
+      var a = document.createElement('a');
+      a.className = 'floating-toc__link';
+      a.href = '#' + id;
+      var text = h.textContent.replace(/\s+/g, ' ').trim();
+      var numSpan = h.querySelector('.chapter-number');
+      if (numSpan) {
+        text = text.replace(numSpan.textContent.replace(/\s+/g, ' ').trim(), '').trim();
+      }
+      if (text.length > 28) text = text.substring(0, 28) + '\u2026';
+      a.textContent = text;
+      a.addEventListener('click', function(e){
+        e.preventDefault();
+        document.getElementById(id).scrollIntoView({behavior:'smooth', block:'start'});
+        toc.classList.remove('is-open');
+      });
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+
+    var heroEnd = 400;
+    var links = list.querySelectorAll('.floating-toc__link');
+
+    function updateToc(){
+      var scrollY = window.scrollY || window.pageYOffset;
+      var show = scrollY > heroEnd;
+      toc.classList.toggle('is-visible', show);
+      toggle.classList.toggle('is-visible', show);
+      var current = -1;
+      headings.forEach(function(h, i){
+        if (h.getBoundingClientRect().top < window.innerHeight * 0.35) current = i;
+      });
+      links.forEach(function(a, i){
+        a.classList.toggle('is-active', i === current);
+      });
+    }
+
+    window.addEventListener('scroll', updateToc, {passive: true});
+    updateToc();
+
+    toggle.addEventListener('click', function(){
+      toc.classList.toggle('is-open');
+    });
+
+    document.addEventListener('click', function(e){
+      if (!toc.contains(e.target) && e.target !== toggle) {
+        toc.classList.remove('is-open');
+      }
+    });
+  })();
+  </script>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+  <div class="container--wide">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <p class="footer-col__title">The Meta</p>
+        <a href="../../about-existential-science.html">実存科学とは</a>
+        <a href="../../epistemology.html">認識論</a>
+        <a href="../../semantics.html">意味論</a>
+        <a href="../../society.html">社会論</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Contents</p>
+        <a href="../../archives.html">記事一覧</a>
+        <a href="../../specials.html">特別シリーズ</a>
+        <a href="../../video-list.html">動画一覧</a>
+        <a href="../../glossary.html">用語集</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Session</p>
+        <a href="../../session.html">天命の言語化セッション™</a>
+        <a href="../../session-flow.html">セッションの流れ</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Institute</p>
+        <a href="../../founder.html">創始者</a>
+        <a href="../../contact.html">お問い合わせ</a>
+        <a href="../../legal/legal-tokushoho.html">特定商取引法</a>
+        <a href="../../legal/legal-privacy-policy.html">プライバシーポリシー</a>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; 実存科学研究所 — Existential Science Institute</p>
+  </div>
+</footer>
+
+  <script src="../../js/main.min.js?v=9"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "トミー・シェルビーのMeta ── 自由意志なき世界の天命論",
+  "description": "ドラマ『ピーキー・ブラインダーズ』のトミー・シェルビーを、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。凍結された戦略家が、穴を掘るのを止めても埋められなかった瞬間。",
+  "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-peakyblinders/tommy.html",
+  "author": {
+    "@type": "Person",
+    "name": "箭内宏紀",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/founder.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  },
+  "inLanguage": "ja"
+}
+</script>
+  <!-- Search Modal -->
+  <div class="search-overlay">
+    <div class="search-modal"><button class="search-close" aria-label="閉じる">&times;</button>
+      <div class="search-input-wrap">
+        <span class="search-input-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+        <input type="text" class="search-input" placeholder="キーワードで検索..." autocomplete="off">
+      </div>
+      <div class="search-results"></div>
+      <div class="search-hint"><span class="search-hint__desktop">ESC to close · ⌘K to toggle</span><span class="search-hint__mobile">背景タップまたは ✕ で閉じる</span></div>
+    </div>
+  </div>
+</body>
+</html>
