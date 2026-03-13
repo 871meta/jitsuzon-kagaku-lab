@@ -309,28 +309,20 @@
       background: linear-gradient(160deg, rgba(15,12,25,0.78) 0%, rgba(8,6,16,0.95) 100%),
                   linear-gradient(90deg, rgba(192,168,120,0.05), transparent 50%);
       border: 1px solid var(--color-gold-a10);
-      border-left: 2px solid rgba(192,168,120,0.45);
+      border-top: 1px solid var(--color-gold-a20);
       backdrop-filter: blur(14px);
       box-shadow: 0 8px 64px rgba(0,0,0,0.45),
                   0 2px 32px var(--color-gold-a04),
                   inset 0 1px 0 var(--color-gold-a08);
       overflow: hidden;
     }
-    /* Top gold line */
+    /* Top gold line — centered */
     .session-genesis::before {
       content: "";
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 1px;
-      background: linear-gradient(90deg, var(--color-gold-a60), var(--color-gold-a25), transparent 75%);
-    }
-    /* Left vertical accent */
-    .session-genesis::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 1px; height: 80px;
-      background: linear-gradient(180deg, var(--color-gold-a60), transparent);
+      background: linear-gradient(90deg, transparent 10%, var(--color-gold-a40) 50%, transparent 90%);
     }
 
     /* --- Definition half --- */
@@ -341,12 +333,14 @@
       letter-spacing: 0.25em;
       text-transform: uppercase;
       margin-bottom: 2rem;
+      text-align: center;
     }
     .session-genesis__def {
       font-family: var(--ff-serif);
       font-size: 1.35rem;
       letter-spacing: 0.06em;
       line-height: 2.1;
+      text-align: center;
       background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
       background-size: 200% 100%;
       -webkit-background-clip: text;
@@ -369,14 +363,16 @@
       font-size: 0.8rem;
       color: var(--color-gold-a40);
       letter-spacing: 0.15em;
+      text-align: center;
     }
 
     /* --- Divider --- */
     .session-genesis__divider {
-      margin: 2.5rem 0;
+      margin: 2.5rem auto;
       border: none;
       height: 1px;
-      background: linear-gradient(90deg, var(--color-gold-a25), var(--color-gold-a08), transparent 80%);
+      width: 60%;
+      background: linear-gradient(90deg, transparent, var(--color-gold-a25), transparent);
     }
 
     /* --- Outcome half --- */
@@ -693,7 +689,7 @@
       .page-session .quote-block { margin: 2.2rem 0 !important; }
       .page-session .content-block { margin-bottom: 1.8rem !important; }
       .session-genesis { padding: 2.5rem 1.5rem 2.2rem; }
-      .session-genesis__def { font-size: 1.15rem; }
+      .session-genesis__def { font-size: 1.05rem; }
       .session-genesis__divider { margin: 2rem 0; }
       .session-genesis__bridge { font-size: 0.82rem; margin-bottom: 1.2rem; }
       .session-genesis__outcome { font-size: 1.25rem; }
@@ -778,7 +774,7 @@
 
       <div class="session-genesis fade-in">
         <p class="session-genesis__label">Definition</p>
-        <p class="session-genesis__def"><em>天命</em>とは、<br>生まれてきた意味であり、<br>生きる目的である。</p>
+        <p class="session-genesis__def"><em>天命</em>とは、<br>「生まれてきた意味」<wbr>であり、<br>「生きる目的」である。</p>
         <p class="session-genesis__author">── 箭内宏紀</p>
 
         <hr class="session-genesis__divider">
