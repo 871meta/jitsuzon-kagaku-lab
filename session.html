@@ -207,19 +207,137 @@
       transform: translateX(6px);
     }
 
+    /* === Item 1: Breathing — expanded spacing === */
+    .page-session .separator { margin-top: 5.5rem !important; margin-bottom: 5.5rem !important; }
+    .page-session .section__title { margin-top: 1rem !important; margin-bottom: 3.5rem !important; }
+    .page-session .content-block { margin-bottom: 3rem !important; }
+    .page-session .pull-quote { margin-top: 4.5rem !important; margin-bottom: 4.5rem !important; }
+    .page-session .def-box { margin-top: 3.5rem !important; margin-bottom: 3.5rem !important; }
+    .page-session .highlight-block { margin-top: 3.5rem !important; margin-bottom: 3.5rem !important; }
+    .page-session .framed-list { margin-top: 2.5rem !important; margin-bottom: 2.5rem !important; }
+    .page-session .quote-block { margin-top: 4rem !important; margin-bottom: 4rem !important; }
+    .page-session .step-flow { margin-top: 3.5rem !important; margin-bottom: 3.5rem !important; }
+    .page-session .step-flow__item { margin-bottom: 3.5rem !important; }
+
+    /* === Item 2: Clickable vs non-clickable separation === */
+    /* (A) Nav cards: stronger "clickable" signals */
+    .session-nav-card__arrow {
+      color: var(--color-gold-a60);
+    }
+    .session-nav-card {
+      border-bottom: 1px solid var(--color-gold-a25);
+      cursor: pointer;
+    }
+    .session-nav-card:hover {
+      border-bottom-color: var(--color-gold-a60);
+    }
+    /* (B) Text blocks: suppress any hover, mute borders */
+    .def-box,
+    .highlight-block,
+    .framed-list,
+    .quote-block {
+      cursor: default;
+      pointer-events: auto;
+    }
+    .def-box:hover,
+    .highlight-block:hover,
+    .framed-list:hover,
+    .quote-block:hover {
+      box-shadow: 0 2px 24px var(--color-gold-a04);
+      border-color: var(--color-gold-a08);
+    }
+
+    /* === Item 3: Step-flow visibility === */
+    .step-flow__num {
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+      font-size: 1.5rem;
+      color: var(--color-gold-a40);
+      border-color: var(--color-gold-a20);
+    }
+    .step-flow__item:not(:last-child)::after {
+      left: 23px;
+      top: 52px;
+    }
+    .step-flow__content h4 {
+      font-size: 1.05rem;
+      letter-spacing: 0.15em;
+      margin-bottom: 0.6rem;
+    }
+    .step-flow__content p {
+      font-size: var(--fs-body);
+      color: var(--color-text-reading);
+    }
+
+    /* === Item 4: CTA block elevation === */
+    .cta-block {
+      margin-top: 2rem;
+      padding: 6rem 2.5rem;
+    }
+    .cta-block__title {
+      margin-bottom: 1.5rem;
+    }
+    .cta-block .btn {
+      padding: 1.4rem 4.5rem;
+      font-size: var(--fs-body);
+    }
+    .cta-block .btn:hover {
+      padding: 1.4rem 4.5rem;
+    }
+
+    /* === Item 5: Spec display enhancement === */
+    .session-spec {
+      margin: 3.5rem 0 4.5rem;
+      gap: 2.2rem;
+    }
+    .session-spec__value {
+      font-size: var(--fs-h2);
+      margin-bottom: 0.8rem;
+    }
+
+    /* === Mobile adjustments === */
     @media (max-width: 768px) {
       .session-nav-cards {
         grid-template-columns: 1fr;
       }
-
       .session-nav-card {
         padding: 1.8rem 1.5rem 2.2rem;
+      }
+
+      /* Scale down breathing for mobile */
+      .page-session .separator { margin-top: 3.5rem !important; margin-bottom: 3.5rem !important; }
+      .page-session .pull-quote { margin-top: 3rem !important; margin-bottom: 3rem !important; }
+      .page-session .def-box { margin-top: 2.5rem !important; margin-bottom: 2.5rem !important; }
+      .page-session .highlight-block { margin-top: 2.5rem !important; margin-bottom: 2.5rem !important; }
+      .page-session .quote-block { margin-top: 2.5rem !important; margin-bottom: 2.5rem !important; }
+      .page-session .step-flow__item { margin-bottom: 2.5rem !important; }
+      .cta-block { padding: 4rem 1.2rem; }
+      .cta-block .btn { padding: 1.2rem 3rem; }
+      .session-spec { gap: 1rem; }
+      .session-spec__value { font-size: var(--fs-section); }
+    }
+
+    @media (max-width: 480px) {
+      .page-session .separator { margin-top: 2.8rem !important; margin-bottom: 2.8rem !important; }
+      .page-session .pull-quote { margin-top: 2.2rem !important; margin-bottom: 2.2rem !important; }
+      .page-session .def-box { margin-top: 2rem !important; margin-bottom: 2rem !important; }
+      .page-session .highlight-block { margin-top: 2rem !important; margin-bottom: 2rem !important; }
+      .step-flow__num {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        font-size: 1.2rem;
+      }
+      .step-flow__item:not(:last-child)::after {
+        left: 19px;
+        top: 44px;
       }
     }
   </style>
 </head>
 
-<body>
+<body class="page-session">
   <a href="#main" class="skip-link">メインコンテンツへスキップ</a>
 
   <!-- Header -->
@@ -492,7 +610,7 @@
         <span class="cta-block__feature">対話のみ</span>
       </div>
       <a href="trial.html" class="btn" id="session-cta">無料トライアルに申し込む &rarr;</a>
-      <p style="margin-top: 1.5rem; font-size: 0.85rem; color: #a8a4a0;">
+      <p style="margin-top: 2rem; font-size: 0.78rem; color: #a8a4a0; letter-spacing: 0.04em;">
         <a href="faq.html" style="color: #c0a878; border-bottom: 1px solid rgba(192,168,120,0.3);">よくある質問 &rarr;</a>
         <span style="margin: 0 0.8rem; opacity: 0.4;">|</span>
         <a href="legal/agreement.html" style="color: #c0a878; border-bottom: 1px solid rgba(192,168,120,0.3);">同意書（本契約） &rarr;</a>
