@@ -101,11 +101,51 @@
       font-size: var(--fs-lead);
       font-weight: 600;
       color: var(--color-text-primary);
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+      letter-spacing: 0.04em;
+      line-height: 1.6;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .agreement-article__title:hover {
+      color: var(--color-gold);
+    }
+
+    .agreement-article__title::after {
+      content: "+";
+      font-size: 1.3rem;
+      color: var(--color-gold-a40);
+      flex-shrink: 0;
+      font-weight: 400;
+    }
+
+    .agreement-article.is-open .agreement-article__title {
       margin-bottom: 1.5rem;
       padding-bottom: 1.2rem;
       border-bottom: 1px solid var(--color-gold-a08);
-      letter-spacing: 0.04em;
-      line-height: 1.6;
+    }
+
+    .agreement-article.is-open .agreement-article__title::after {
+      content: "−";
+    }
+
+    .agreement-article__body {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.4s ease, opacity 0.3s ease;
+    }
+
+    .agreement-article.is-open .agreement-article__body {
+      max-height: 800px;
+      opacity: 1;
     }
 
     .agreement-article__title span {
@@ -490,68 +530,78 @@
       <!-- 第1条 -->
       <div class="agreement-article fade-in">
         <h3 class="agreement-article__title"><span>Art. 1</span>セッションの性質</h3>
-        <p>
-          「天命の言語化セッション™」は、医学的治療・診断、精神分析、心理療法またはカウンセリングを目的とするものではない。ファシリテーターはセッションにおいて、これらに該当する行為を行わない。
-        </p>
-        <p>
-          セッションにおいて語られた内容に基づく行動は、クライアント自身の判断と責任に基づくものであり、ファシリテーターはその結果について一切の責任を負わない。
-        </p>
-        <p>
-          本セッションは、何らの結果を保証するものではない。
-        </p>
+        <div class="agreement-article__body">
+          <p>
+            「天命の言語化セッション™」は、医学的治療・診断、精神分析、心理療法またはカウンセリングを目的とするものではない。ファシリテーターはセッションにおいて、これらに該当する行為を行わない。
+          </p>
+          <p>
+            セッションにおいて語られた内容に基づく行動は、クライアント自身の判断と責任に基づくものであり、ファシリテーターはその結果について一切の責任を負わない。
+          </p>
+          <p>
+            本セッションは、何らの結果を保証するものではない。
+          </p>
+        </div>
       </div>
 
       <!-- 第2条 -->
       <div class="agreement-article fade-in">
         <h3 class="agreement-article__title"><span>Art. 2</span>機密情報の定義</h3>
-        <p>
-          本同意書における「機密情報」とは、以下の情報をいう。
-        </p>
-        <ol>
-          <li>クライアントが「天命の言語化セッション™」を受けている事実（個人が特定される形での開示）</li>
-          <li>セッション中にクライアントから話された一切の情報（対話の内容、目標達成の状況、個人的な環境に関する情報等を含む）</li>
-          <li>セッション中にファシリテーターから提供された一切の情報（助言、質問、構造的な分析等を含む）</li>
-        </ol>
+        <div class="agreement-article__body">
+          <p>
+            本同意書における「機密情報」とは、以下の情報をいう。
+          </p>
+          <ol>
+            <li>クライアントが「天命の言語化セッション™」を受けている事実（個人が特定される形での開示）</li>
+            <li>セッション中にクライアントから話された一切の情報（対話の内容、目標達成の状況、個人的な環境に関する情報等を含む）</li>
+            <li>セッション中にファシリテーターから提供された一切の情報（助言、質問、構造的な分析等を含む）</li>
+          </ol>
+        </div>
       </div>
 
       <!-- 第3条 -->
       <div class="agreement-article fade-in">
         <h3 class="agreement-article__title"><span>Art. 3</span>ファシリテーターの守秘義務</h3>
-        <p>
-          ファシリテーターは、クライアントの個人情報および機密情報について守秘義務を負う。
-        </p>
-        <p>
-          ただし、以下のいずれかに該当する場合はこの限りではない。
-        </p>
-        <ol>
-          <li>開示を受けた際、すでに公知となっている情報</li>
-          <li>開示を受けた後、ファシリテーターの責めによらず公知となった情報</li>
-          <li>書面により事前にクライアントの同意を得た情報</li>
-          <li>法令、規則、命令等に基づき公的機関から開示を要求された情報</li>
-          <li>裁判所、行政機関、児童相談所等に対し、法令によって通報が義務付けられているとファシリテーターが判断した情報</li>
-        </ol>
+        <div class="agreement-article__body">
+          <p>
+            ファシリテーターは、クライアントの個人情報および機密情報について守秘義務を負う。
+          </p>
+          <p>
+            ただし、以下のいずれかに該当する場合はこの限りではない。
+          </p>
+          <ol>
+            <li>開示を受けた際、すでに公知となっている情報</li>
+            <li>開示を受けた後、ファシリテーターの責めによらず公知となった情報</li>
+            <li>書面により事前にクライアントの同意を得た情報</li>
+            <li>法令、規則、命令等に基づき公的機関から開示を要求された情報</li>
+            <li>裁判所、行政機関、児童相談所等に対し、法令によって通報が義務付けられているとファシリテーターが判断した情報</li>
+          </ol>
+        </div>
       </div>
 
       <!-- 第4条 -->
       <div class="agreement-article fade-in">
         <h3 class="agreement-article__title"><span>Art. 4</span>クライアントの守秘義務</h3>
-        <p>
-          クライアントは、セッション中にファシリテーターから提供されたノウハウ、技法、構造的知見その他の情報を、ファシリテーターの書面による事前の許可なく、第三者に開示、公開、伝達してはならない。
-        </p>
-        <p>
-          また、ファシリテーターの事前の許可なく、セッションの録音・録画を行ってはならない。
-        </p>
+        <div class="agreement-article__body">
+          <p>
+            クライアントは、セッション中にファシリテーターから提供されたノウハウ、技法、構造的知見その他の情報を、ファシリテーターの書面による事前の許可なく、第三者に開示、公開、伝達してはならない。
+          </p>
+          <p>
+            また、ファシリテーターの事前の許可なく、セッションの録音・録画を行ってはならない。
+          </p>
+        </div>
       </div>
 
       <!-- 第5条 -->
       <div class="agreement-article fade-in">
         <h3 class="agreement-article__title"><span>Art. 5</span>日時変更およびキャンセル</h3>
-        <p>
-          クライアントの事情によりセッション日時を変更する場合は、セッション予定時刻の24時間前までに連絡するものとする。24時間前までに連絡がなかった場合は、セッションが実施されたものとみなす。
-        </p>
-        <p>
-          連絡なくセッション開始時刻から15分以上遅れた場合は、キャンセルとみなす。
-        </p>
+        <div class="agreement-article__body">
+          <p>
+            クライアントの事情によりセッション日時を変更する場合は、セッション予定時刻の24時間前までに連絡するものとする。24時間前までに連絡がなかった場合は、セッションが実施されたものとみなす。
+          </p>
+          <p>
+            連絡なくセッション開始時刻から15分以上遅れた場合は、キャンセルとみなす。
+          </p>
+        </div>
       </div>
 
       <!-- 同意セクション -->
@@ -619,6 +669,14 @@
 </footer>
 
   <script src="../js/main.min.js?v=9"></script>
+  <script>
+    // Accordion for article cards
+    document.querySelectorAll('.agreement-article').forEach(function(article) {
+      article.querySelector('.agreement-article__title').addEventListener('click', function() {
+        article.classList.toggle('is-open');
+      });
+    });
+  </script>
   <script>
     (function () {
       var checkboxes = document.querySelectorAll('.agreement-consent input[type="checkbox"]');
