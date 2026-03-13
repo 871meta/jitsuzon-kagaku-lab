@@ -301,6 +301,32 @@
       opacity: 1;
     }
 
+    /* === Tenmei Definition === */
+    .tenmei-definition {
+      text-align: center;
+      padding: 5rem 2rem 4rem;
+      margin-bottom: 3rem;
+    }
+    .tenmei-definition__word {
+      font-family: var(--ff-serif);
+      font-size: 1.6rem;
+      color: var(--color-gold);
+      letter-spacing: 0.25em;
+      line-height: 1;
+      margin-bottom: 2rem;
+    }
+    .tenmei-definition__line {
+      font-family: var(--ff-serif);
+      font-size: 1.05rem;
+      color: var(--color-text-reading);
+      letter-spacing: 0.15em;
+      line-height: 1;
+      margin-bottom: 1.4rem;
+    }
+    .tenmei-definition__line:last-child {
+      margin-bottom: 0;
+    }
+
     /* === Session Hero Card === */
     .session-hero-card {
       text-align: center;
@@ -631,6 +657,9 @@
       .page-session .content-block { margin-bottom: 1.8rem !important; }
       .cta-block { padding: 4rem 1.2rem; }
       .cta-block .btn { padding: 1.2rem 3rem; }
+      .tenmei-definition { padding: 3.5rem 1.5rem 3rem; margin-bottom: 2rem; }
+      .tenmei-definition__word { font-size: 1.35rem; letter-spacing: 0.2em; }
+      .tenmei-definition__line { font-size: 0.95rem; letter-spacing: 0.12em; }
       .session-hero-card { padding: 3rem 1.8rem 2.5rem; margin: 0 0 1.5rem; }
       .session-hero-card__intro { font-size: 0.85rem; margin-bottom: 1.2rem; }
       .session-hero-card__main { font-size: 1.25rem; }
@@ -712,6 +741,12 @@
   <!-- ━━━ What：これは何か ━━━ -->
   <section class="section">
     <div class="container">
+
+      <div class="tenmei-definition fade-in">
+        <p class="tenmei-definition__word">天命とは、</p>
+        <p class="tenmei-definition__line">生まれてきた意味であり、</p>
+        <p class="tenmei-definition__line">生きる目的である。</p>
+      </div>
 
       <div class="session-hero-card fade-in">
         <p class="session-hero-card__intro">このセッションを体験すると&mdash;&mdash;</p>
