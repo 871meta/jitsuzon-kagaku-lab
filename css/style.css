@@ -1126,9 +1126,11 @@ a.site-logo:not(.btn):not(.session-card__link):hover {
 /* --- CTA Block --- */
 .cta-block {
   text-align: center;
-  padding: 5rem 2.5rem;
-  border-top: 1px solid var(--color-gold-a10);
-  background: var(--color-header-mid);
+  padding: 6rem 2.5rem;
+  border-top: 1px solid var(--color-gold-a15);
+  border-bottom: 1px solid var(--color-gold-a08);
+  background: rgba(12, 10, 22, 0.5);
+  backdrop-filter: blur(16px);
   position: relative;
 }
 
@@ -1138,15 +1140,17 @@ a.site-logo:not(.btn):not(.session-card__link):hover {
   top: -1px;
   left: 50%;
   transform: translateX(-50%);
-  width: 32px;
+  width: 48px;
   height: 1px;
-  background: var(--color-gold);
+  background: linear-gradient(90deg, transparent, var(--color-gold-a50), transparent);
 }
 
 .cta-block__title {
+  font-family: var(--font-serif-en);
   font-size: var(--fs-section);
-  margin-bottom: 1.2rem;
-  letter-spacing: 0.06em;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.12em;
   background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
@@ -1181,24 +1185,32 @@ a.site-logo:not(.btn):not(.session-card__link):hover {
 .cta-block__features {
   display: flex;
   justify-content: center;
-  gap: 3rem;
-  margin-bottom: 3rem;
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
   flex-wrap: wrap;
 }
 
 .cta-block__feature {
-  font-size: var(--fs-small);
+  font-size: var(--fs-xs);
   color: var(--color-gold);
-  letter-spacing: 0.06em;
+  letter-spacing: 0.1em;
   position: relative;
+  border: 1px solid var(--color-gold-a20);
+  padding: 0.5rem 1.5rem;
+  border-radius: 24px;
 }
 
 .cta-block__feature+.cta-block__feature::before {
-  content: "\00b7";
-  position: absolute;
-  left: -1.7rem;
-  color: var(--color-gold-a50);
-  font-size: var(--fs-h3);
+  display: none;
+}
+
+.cta-block .btn {
+  border-color: var(--color-gold-a40);
+  transition: all 0.4s ease;
+}
+
+.cta-block .btn:hover {
+  box-shadow: 0 0 30px var(--color-gold-a15), 0 0 60px var(--color-gold-a05);
 }
 
 /* --- Button --- */
@@ -2249,11 +2261,12 @@ a.site-logo:not(.btn):not(.session-card__link):hover {
   .highlight-block { padding: 1.8rem 1.5rem; }
 
   .cta-block__features {
-    gap: 1.5rem;
+    gap: 1rem;
   }
 
-  .cta-block__feature+.cta-block__feature::before {
-    left: -1rem;
+  .cta-block__feature {
+    padding: 0.4rem 1rem;
+    font-size: var(--fs-xs);
   }
 
   /* Mobile nav */
@@ -2422,8 +2435,10 @@ a.site-logo:not(.btn):not(.session-card__link):hover {
 
   /* Mobile luxury: section + cta + quote-block */
   .section { padding: 5rem 0; }
-  .cta-block { padding: 3.5rem 1.2rem; }
-  .cta-block .btn { margin-bottom: 1rem; }
+  .cta-block { padding: 4.5rem 1.5rem; }
+  .cta-block__title { font-size: clamp(1.15rem, 5vw, var(--fs-section)); white-space: nowrap; }
+  .cta-block__desc { font-size: clamp(0.85rem, 3.8vw, var(--fs-body)); }
+  .cta-block .btn { margin-bottom: 1rem; font-size: var(--fs-xs); letter-spacing: 0.12em; white-space: nowrap; }
   .cta-block .btn:last-child { margin-bottom: 0; }
   .quote-block { padding: 1.4rem 1.5rem; margin: 2rem 0; }
   .separator { margin: 2.5rem 0; }

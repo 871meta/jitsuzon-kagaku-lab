@@ -30,7 +30,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="css/style.min.css?v=20">
+  <link rel="stylesheet" href="css/style.min.css?v=21">
   <style>
     /* === Hero — トップページ専用演出 === */
     .hero .container::before {
@@ -197,47 +197,7 @@
       font-weight: 500;
     }
 
-    /* === CTA Block — セッション訴求 === */
-    .cta-block {
-      background: rgba(12, 10, 22, 0.5);
-      border-top: 1px solid var(--color-gold-a15);
-      border-bottom: 1px solid var(--color-gold-a08);
-      backdrop-filter: blur(16px);
-      padding: 6rem 2.5rem;
-    }
-    .cta-block::before {
-      width: 48px;
-      background: linear-gradient(90deg, transparent, var(--color-gold-a50), transparent);
-    }
-    /* CTA shimmer — now in global style.css */
-    .cta-block__title {
-      font-family: var(--font-serif-en);
-      font-size: 1.8rem;
-      font-weight: 300;
-      letter-spacing: 0.12em;
-      margin-bottom: 1.5rem;
-    }
-    .cta-block__features {
-      gap: 1.5rem;
-      margin-bottom: 3.5rem;
-    }
-    .cta-block__feature {
-      border: 1px solid var(--color-gold-a20);
-      padding: 0.5rem 1.5rem;
-      border-radius: 24px;
-      font-size: var(--fs-xs);
-      letter-spacing: 0.1em;
-    }
-    .cta-block__feature+.cta-block__feature::before {
-      display: none;
-    }
-    .cta-block .btn {
-      border-color: var(--color-gold-a40);
-      transition: all 0.4s ease;
-    }
-    .cta-block .btn:hover {
-      box-shadow: 0 0 30px var(--color-gold-a15), 0 0 60px var(--color-gold-a05);
-    }
+    /* === CTA — now fully in global style.css === */
 
     /* === Mobile === */
     @media (max-width: 768px) {
@@ -248,12 +208,6 @@
       .axiom-card__formula { font-size: 2.8rem; }
       .pull-quote { padding: 3rem 2rem; outline-offset: 5px; }
       .pull-quote p { font-size: clamp(0.88rem, 3.6vw, var(--fs-h3)); letter-spacing: 0.04em; }
-      .cta-block { padding: 4.5rem 1.5rem; }
-      .cta-block__title { font-size: clamp(1.15rem, 5vw, var(--fs-section)); white-space: nowrap; }
-      .cta-block__desc { font-size: clamp(0.85rem, 3.8vw, var(--fs-body)); }
-      .cta-block__features { gap: 1rem; }
-      .cta-block__feature { padding: 0.4rem 1rem; font-size: var(--fs-xs); }
-      .cta-block .btn { font-size: var(--fs-xs); letter-spacing: 0.12em; white-space: nowrap; }
     }
   </style>
 </head>
