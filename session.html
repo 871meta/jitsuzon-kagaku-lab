@@ -301,75 +301,89 @@
       opacity: 1;
     }
 
-    /* === Session Hero Card (Premium) === */
+    /* === Session Hero Statement === */
     .session-hero-card {
-      text-align: center;
-      padding: 5rem 3.5rem 4rem;
-      border: 1px solid var(--color-gold-a20);
-      background: radial-gradient(ellipse at center, rgba(192,168,120,0.04) 0%, rgba(12,10,22,0.92) 70%);
-      margin: 3rem 0 4rem;
+      text-align: left;
+      padding: 0;
+      border: none;
+      background: none;
+      margin: 4rem 0 2rem;
       position: relative;
-      outline: 1px solid var(--color-gold-a08);
-      outline-offset: 8px;
-      box-shadow:
-        0 4px 60px rgba(0,0,0,0.5),
-        inset 0 0 80px rgba(192,168,120,0.03);
     }
-    .session-hero-card::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 50%;
-      transform: translateX(-50%);
-      width: 80px;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--color-gold-a60), transparent);
-    }
-    .session-hero-card::after {
-      content: "";
-      position: absolute;
-      bottom: 0; left: 50%;
-      transform: translateX(-50%);
-      width: 60px;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--color-gold-a30), transparent);
+    .session-hero-card__label {
+      font-family: var(--font-serif-en);
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--color-gold-a60);
+      margin-bottom: 2rem;
+      display: block;
     }
     .session-hero-card__headline {
       font-family: var(--ff-serif);
-      font-size: var(--fs-h2);
+      font-size: 1.5rem;
+      color: var(--color-text-primary);
+      letter-spacing: 0.08em;
+      margin-bottom: 0;
+      line-height: 2.2;
+      font-weight: 400;
+    }
+    .session-hero-card__headline strong {
       color: var(--color-gold);
-      letter-spacing: 0.15em;
-      margin-bottom: 2.2rem;
-      line-height: 1.8;
-      text-shadow: 0 0 40px rgba(192,168,120,0.12);
+      font-weight: 500;
     }
     .session-hero-card__divider {
       display: block;
-      width: 40px;
+      width: 48px;
       height: 1px;
-      background: linear-gradient(90deg, transparent, var(--color-gold-a40), transparent);
-      margin: 0 auto 2rem;
+      background: var(--color-gold-a25);
+      margin: 2.5rem 0;
     }
     .session-hero-card__spec {
-      font-size: 0.88rem;
-      color: var(--color-text-reading);
-      letter-spacing: 0.12em;
+      font-size: 0.82rem;
+      color: var(--color-text-dim);
+      letter-spacing: 0.15em;
       display: flex;
-      justify-content: center;
       align-items: center;
-      gap: 0.8rem;
+      gap: 1rem;
       flex-wrap: wrap;
     }
     .session-hero-card__dot {
-      color: var(--color-gold-a40);
+      color: var(--color-gold-a25);
     }
 
     /* === Session Accordion === */
     .session-accordion {
       position: relative;
       padding: 2.5rem;
-      background: var(--color-panel);
-      border: 1px solid var(--color-gold-a12);
+      background: linear-gradient(160deg, rgba(15,12,25,0.7) 0%, rgba(8,6,16,0.92) 100%);
+      border: 1px solid var(--color-gold-a08);
+      border-left: 2px solid var(--color-gold-a25);
       margin-bottom: 2rem;
+      transition: border-color 0.5s ease, box-shadow 0.5s ease;
+    }
+    .session-accordion:hover {
+      border-color: var(--color-gold-a15);
+      box-shadow: 0 4px 48px rgba(192,168,120,0.04), inset 0 0 40px rgba(192,168,120,0.02);
+    }
+    /* Per-section accent colors */
+    .session-accordion--what {
+      border-left-color: rgba(180,140,140,0.4);
+    }
+    .session-accordion--what:hover {
+      box-shadow: 0 4px 48px rgba(180,140,140,0.04), inset 0 0 40px rgba(180,140,140,0.02);
+    }
+    .session-accordion--why {
+      border-left-color: rgba(140,170,210,0.4);
+    }
+    .session-accordion--why:hover {
+      box-shadow: 0 4px 48px rgba(140,170,210,0.04), inset 0 0 40px rgba(140,170,210,0.02);
+    }
+    .session-accordion--how {
+      border-left-color: rgba(130,185,160,0.4);
+    }
+    .session-accordion--how:hover {
+      box-shadow: 0 4px 48px rgba(130,185,160,0.04), inset 0 0 40px rgba(130,185,160,0.02);
     }
     .session-accordion__trigger {
       cursor: pointer;
@@ -386,7 +400,10 @@
       color: var(--color-gold-a40);
       font-size: 1.3rem;
       flex-shrink: 0;
-      transition: transform 0.3s ease;
+      transition: color 0.3s ease;
+    }
+    .session-accordion:hover .session-accordion__trigger::after {
+      color: var(--color-gold);
     }
     .session-accordion.is-open .session-accordion__trigger::after {
       content: "−";
@@ -598,9 +615,10 @@
       .page-session .content-block { margin-bottom: 1.8rem !important; }
       .cta-block { padding: 4rem 1.2rem; }
       .cta-block .btn { padding: 1.2rem 3rem; }
-      .session-hero-card { padding: 3.5rem 2rem 2.5rem; margin: 2rem 0 3rem; outline-offset: 4px; }
-      .session-hero-card__headline { font-size: var(--fs-section); letter-spacing: 0.08em; }
-      .session-hero-card__spec { font-size: 0.82rem; gap: 0.4rem; }
+      .session-hero-card { margin: 2.5rem 0 1.5rem; }
+      .session-hero-card__headline { font-size: 1.25rem; letter-spacing: 0.06em; line-height: 2; }
+      .session-hero-card__spec { font-size: 0.78rem; gap: 0.6rem; }
+      .session-hero-card__divider { margin: 2rem 0; }
       .why-block { padding: 2rem 1.5rem; }
       .page-session .separator { margin: 3.5rem 0 !important; }
       .session-accordion { padding: 2rem 1.5rem; }
@@ -679,7 +697,12 @@
     <div class="container">
 
       <div class="session-hero-card fade-in">
-        <p class="session-hero-card__headline">残りの命の使い方が、言語化できる。<br>自由意志なき世界を、迷いなく生きられるようになる。</p>
+        <span class="session-hero-card__label">What You Get</span>
+        <p class="session-hero-card__headline">
+          このセッションを体験すると──<br>
+          <strong>残りの命の使い方</strong>が、言語化できる。<br>
+          自由意志なき世界を、迷いなく生きられるようになる。
+        </p>
         <span class="session-hero-card__divider"></span>
         <div class="session-hero-card__spec">
           <span>2時間</span>
@@ -689,11 +712,13 @@
           <span>対話のみ</span>
         </div>
       </div>
+      <!-- 旧ヒーローカード（テキスト保全原則）-->
+      <!-- <p class="session-hero-card__headline">残りの命の使い方が、言語化できる。<br>自由意志なき世界を、迷いなく生きられるようになる。</p> -->
 
       <hr class="separator">
 
       <!-- このセッションでは何をしないのか -->
-      <div class="session-accordion fade-in">
+      <div class="session-accordion session-accordion--what fade-in">
         <div class="session-accordion__trigger" onclick="this.parentElement.classList.toggle('is-open')">
           <h2 class="section__title section__title--left">このセッションでは何をしないのか</h2>
         </div>
@@ -728,7 +753,7 @@
       <!-- ━━━ Why：なぜ天命なのか ━━━ -->
       <hr class="separator">
 
-      <div class="session-accordion fade-in">
+      <div class="session-accordion session-accordion--why fade-in">
         <div class="session-accordion__trigger" onclick="this.parentElement.classList.toggle('is-open')">
           <h2 class="section__title section__title--left">なぜ天命なのか</h2>
         </div>
@@ -768,7 +793,7 @@
       <hr class="separator">
 
       <!-- 統合アコーディオン -->
-      <div class="session-accordion fade-in">
+      <div class="session-accordion session-accordion--how fade-in">
         <div class="session-accordion__trigger" onclick="this.parentElement.classList.toggle('is-open')">
           <h2 class="section__title section__title--left">何が起こるのか</h2>
         </div>
