@@ -30,7 +30,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="css/style.min.css?v=21">
+  <link rel="stylesheet" href="css/style.min.css?v=22">
   <style>
     /* === Trial LP specific styles === */
     /* Headline section */
@@ -72,7 +72,7 @@
       font-size: var(--fs-body);
       color: var(--color-text-dim);
       max-width: 560px;
-      margin: 0 auto;
+      margin: 0 auto 0.5rem;
       line-height: 2.2;
     }
 
@@ -267,6 +267,10 @@
       margin-bottom: 0;
     }
 
+    /* Bonus color accents */
+    .bonus-item:nth-of-type(1) { border-left: 2px solid rgba(200, 170, 100, 0.45); background: linear-gradient(90deg, rgba(200, 170, 100, 0.06), transparent 35%); }
+    .bonus-item:nth-of-type(2) { border-left: 2px solid rgba(150, 120, 190, 0.45); background: linear-gradient(90deg, rgba(150, 120, 190, 0.06), transparent 35%); }
+
     .bonus-item p.bonus-item__label {
       font-family: var(--font-serif-en);
       font-size: var(--fs-xs);
@@ -337,6 +341,11 @@
     .guarantee-item:last-child {
       margin-bottom: 0;
     }
+
+    /* Guarantee color accents */
+    .guarantee-item:nth-of-type(1) { border-left: 2px solid rgba(192, 168, 120, 0.45); background: linear-gradient(90deg, rgba(192, 168, 120, 0.06), transparent 35%); }
+    .guarantee-item:nth-of-type(2) { border-left: 2px solid rgba(120, 170, 200, 0.45); background: linear-gradient(90deg, rgba(120, 170, 200, 0.06), transparent 35%); }
+    .guarantee-item:nth-of-type(3) { border-left: 2px solid rgba(120, 180, 140, 0.45); background: linear-gradient(90deg, rgba(120, 180, 140, 0.06), transparent 35%); }
 
     .guarantee-item p.guarantee-item__number {
       font-family: var(--font-serif-en);
@@ -583,13 +592,25 @@
       }
     }
 
+    /* sp-only line breaks: hidden on desktop, shown on mobile */
+    @media (min-width: 481px) {
+      .sp-only { display: none; }
+    }
+
     @media (max-width: 480px) {
       .trial-hero h1 {
         font-size: var(--fs-h2);
       }
 
-      .trial-hero__lead br {
+      .trial-hero__lead {
+        text-align: left;
+      }
+      .trial-hero__lead br:not(.sp-only) {
         display: none;
+      }
+
+      .trial-condition {
+        text-align: left;
       }
 
       .price-block {
@@ -661,23 +682,18 @@
       </nav>
       <p class="trial-hero__sub">Trial Session</p>
       <h1>あなたの天命を、<br>2時間で言語化します。</h1>
-      <p class="trial-hero__lead">
-        天命とは、あなたの「生まれてきた意味・生きる目的」です。<br>
-        実存科学研究所が提供する「天命の言語化セッション™︎」は、<br>
-        あなたの天命が２時間で言語化できる対話技法です。
-      </p>
 </div>
   </section>
   <!-- ===== SESSION OVERVIEW ===== -->
   <section class="section">
     <div class="container">
       <div class="pull-quote fade-in">
-        <p>天命を悟り、日々全うする生き方を、共に築く。</p>
+        <p>天命を悟り、<br class="sp-only">日々全うする生き方を、<br class="sp-only">共に築く。</p>
       </div>
       <div class="content-block text-panel fade-in">
         <p>
-          本セッションでは、実存科学研究所 代表・箭内宏紀が、<br>
-          2時間の対話を通じて、あなたの天命を100%言語化いたします。
+          本セッションでは、<br class="sp-only">実存科学研究所 代表・箭内宏紀が、<br>
+          2時間の対話を通じて、<br class="sp-only">あなたの天命を100%言語化いたします。
         </p>
       </div>
       <div class="trial-spec fade-in">
@@ -697,19 +713,18 @@
       <div class="trial-condition fade-in">
         <p>
           ただし、本セッションは<br>
-          <strong>すべての方に開かれたものではありません。</strong>
+          <strong>すべての方に開かれた<br class="sp-only">ものではありません。</strong>
         </p>
         <br>
         <p>
-          このセッションは、天命を悟った後も<br>
-          箭内と共に天命の道を歩み続ける<br>
+          このセッションは、<br class="sp-only">天命を悟った後も箭内と共に<br class="sp-only">天命の道を歩み続ける<br>
           ＜年間パートナーシップ＞<br>
-          <strong>「心友™」</strong>への参加をご検討いただける方のみを対象としています。
+          <strong>「心友™」</strong>への参加を<br class="sp-only">ご検討いただける方のみを<br class="sp-only">対象としています。
         </p>
         <br>
         <p>
           以下の内容をご確認の上、<br>
-          すべてにご納得いただけた方だけ、お申し込みください。
+          すべてにご納得いただけた方だけ、<br>お申し込みください。
         </p>
       </div>
       <div class="diagram-box fade-in">
@@ -732,37 +747,37 @@
         <p class="shinyu-label">Shin-Yu™︎</p>
         <h2 class="section__title section__title--left">心友™とは</h2>
         <p>
-          セッションを受けて天命を言語化した。<br>
-          その瞬間、あなたは確かに「わかる」はずです。
+          セッションを受けて<br class="sp-only">天命を言語化した。<br>
+          その瞬間、<br class="sp-only">あなたは確かに「わかる」はずです。
         </p>
         <p>
           しかし──
         </p>
         <p>
-          <strong>「あれ、私の天命って何だっけ？」</strong>
+          <strong>「あれ、私の天命って<br class="sp-only">何だっけ？」</strong>
         </p>
         <p>
-          日常に戻ると、あの確信が霞んでいく。
+          日常に戻ると、<br class="sp-only">あの確信が霞んでいく。
         </p>
         <p>
           天命はあるのに、身体が動かない。<br>
-          天命に生きたはずの日々を、思い出せない。
+          天命に生きたはずの日々を、<br class="sp-only">思い出せない。
         </p>
         <p>
-          これは、あなたが弱いからではありません。
+          これは、あなたが弱いからでは<br class="sp-only">ありません。
         </p>
         <p>
-          <strong>「天命を悟った人だけ」が、必ず通る道です。</strong>
+          <strong>「天命を悟った人だけ」が、<br class="sp-only">必ず通る道です。</strong>
         </p>
         <p>
           そしてもう一つ。
         </p>
         <p>
-          <strong>これまで天命に生きてこなかった人ほど、最初は「孤独」を感じます。</strong>
+          <strong>これまで天命に生きて<br class="sp-only">こなかった人ほど、<br class="sp-only">最初は「孤独」を感じます。</strong>
         </p>
         <p>
-          周りには自分の天命を語れる相手がほとんどいない。<br>
-          職場にも、家庭にも、友人の中にも…。
+          周りには自分の天命を語れる相手が<br class="sp-only">ほとんどいない。<br>
+          職場にも、家庭にも、<br class="sp-only">友人の中にも…。
         </p>
         <p>
           でも、ご安心ください。
@@ -770,11 +785,11 @@
         <div class="def-box fade-in">
           <p class="def-box__term">Shin-Yu™︎</p>
           <p>
-            <strong>「心友™」は、その孤独を終わらせるために存在します。</strong>
+            <strong>「心友™」は、その孤独を<br class="sp-only">終わらせるために存在します。</strong>
           </p>
           <p>
             箭内宏紀と1年間、共に歩む。<br>
-            「天命を悟り、日々全うする」ための、<br>
+            「天命を悟り、日々全うする」<br class="sp-only">ための、<br>
             ただ一つのパートナーシップです。
           </p>
         </div>
@@ -782,34 +797,34 @@
       <hr class="separator">
       <!-- Offerings -->
       <div class="content-block fade-in">
-        <h2 class="section__title section__title--left">1年間で、あなたに届けるもの</h2>
+        <h2 class="section__title section__title--left">1年間で、<br class="sp-only">あなたに届けるもの</h2>
         <div class="offering-item">
           <p class="offering-item__number">01</p>
-          <p class="offering-item__poetry">天命を、何度でも取り戻せる場所。</p>
+          <p class="offering-item__poetry">天命を、<br class="sp-only">何度でも取り戻せる場所。</p>
           <p class="offering-item__detail">個人セッション（2時間×6回）</p>
         </div>
         <div class="offering-item">
           <p class="offering-item__number">02</p>
-          <p class="offering-item__poetry">あなた自身が、誰かの天命を覚醒させる力。</p>
-          <p class="offering-item__detail">ファシリテータートレーニング（2時間×6回）</p>
+          <p class="offering-item__poetry">あなた自身が、<br class="sp-only">誰かの天命を覚醒させる力。</p>
+          <p class="offering-item__detail">ファシリテータートレーニング<br class="sp-only">（2時間×6回）</p>
         </div>
         <div class="offering-item">
           <p class="offering-item__number">03</p>
-          <p class="offering-item__poetry">天命に生きた日々が、消えずに残る場所。</p>
-          <p class="offering-item__detail">天命のアルバム（ドキュメンタリー＋遺言の記録）</p>
+          <p class="offering-item__poetry">天命に生きた日々が、<br class="sp-only">消えずに残る場所。</p>
+          <p class="offering-item__detail">天命のアルバム<br class="sp-only">（ドキュメンタリー＋遺言の記録）</p>
         </div>
         <div class="offering-item">
           <p class="offering-item__number">04</p>
-          <p class="offering-item__poetry">言葉にならない葛藤を、言葉にできる場所。</p>
-          <p class="offering-item__detail">天命のダイアログ（チャット・24時間365日）</p>
+          <p class="offering-item__poetry">言葉にならない葛藤を、<br class="sp-only">言葉にできる場所。</p>
+          <p class="offering-item__detail">天命のダイアログ<br class="sp-only">（チャット・24時間365日）</p>
         </div>
         <div class="offering-item">
           <p class="offering-item__number">05</p>
-          <p class="offering-item__poetry">天命を語れる人と、ただ一緒にいられる場所。</p>
+          <p class="offering-item__poetry">天命を語れる人と、<br class="sp-only">ただ一緒にいられる場所。</p>
           <p class="offering-item__detail">天命のお茶の間（コミュニティ）</p>
         </div>
         <div class="schedule-note">
-          <p>セッションは月1回×1年間（全12回）。<br>さらにチャットサポートで365日、あなたの天命に伴走し続けます。</p>
+          <p>セッションは月1回×1年間<br class="sp-only">（全12回）。<br>さらにチャットサポートで365日、<br class="sp-only">あなたの天命に伴走し続けます。</p>
         </div>
       </div>
       <hr class="separator">
@@ -818,15 +833,15 @@
         <h2 class="section__title section__title--left">特典</h2>
         <div class="bonus-item">
           <p class="bonus-item__label">Bonus I</p>
-          <p class="bonus-item__poetry">未来の自分に、手紙を送る。</p>
+          <p class="bonus-item__poetry">未来の自分に、<br class="sp-only">手紙を送る。</p>
           <p class="bonus-item__detail">タイムカプセル製作・上映会</p>
-          <p class="bonus-item__desc">1ヶ月後、3ヶ月後、6ヶ月後、1年後の自分へ、ビデオレターを届けます。</p>
+          <p class="bonus-item__desc">1ヶ月後、3ヶ月後、6ヶ月後、<br class="sp-only">1年後の自分へ、<br class="sp-only">ビデオレターを届けます。</p>
         </div>
         <div class="bonus-item">
           <p class="bonus-item__label">Bonus II</p>
-          <p class="bonus-item__poetry">天命に生きる人と、直接会える。</p>
+          <p class="bonus-item__poetry">天命に生きる人と、<br class="sp-only">直接会える。</p>
           <p class="bonus-item__detail">天命の饗宴（きょうえん）</p>
-          <p class="bonus-item__desc">心友™同士がリアルで交流できる集いへの参加権です。</p>
+          <p class="bonus-item__desc">心友™同士がリアルで交流できる<br class="sp-only">集いへの参加権です。</p>
         </div>
       </div>
       <hr class="separator">
@@ -836,29 +851,17 @@
         <div class="guarantee-item">
           <p class="guarantee-item__number">Guarantee I</p>
           <p class="guarantee-item__label">満足</p>
-          <p>
-            あなたは天命を100%言語化できます。<br>
-            万が一叶わなかった場合は、無料で追加セッションをお受けいただけます。<br>
-            ただし、毎回のセッション前に環境を整え、覚悟を決めてお臨みください。
-          </p>
+          <p>あなたは天命を100%言語化できます。<br>万が一叶わなかった場合は、無料で追加セッションをお受けいただけます。<br>ただし、毎回のセッション前に環境を整え、覚悟を決めてお臨みください。</p>
         </div>
         <div class="guarantee-item">
           <p class="guarantee-item__number">Guarantee II</p>
           <p class="guarantee-item__label">安心</p>
-          <p>
-            「こういうサポートがほしい」というリクエストを、無制限にお受けします。<br>
-            すべてに応じられるわけではありませんが、<br>
-            あなたに最適な環境へ、共にアップデートし続けます。
-          </p>
+          <p>「こういうサポートがほしい」というリクエストを、無制限にお受けします。<br>すべてに応じられるわけではありませんが、あなたに最適な環境へ、共にアップデートし続けます。</p>
         </div>
         <div class="guarantee-item">
           <p class="guarantee-item__number">Guarantee III</p>
           <p class="guarantee-item__label">安全</p>
-          <p>
-            守秘義務を結びます。<br>
-            あなたの許可なく個人情報を共有することは一切ありません。<br>
-            箭内だけが取り扱います。詳細は契約書にて。
-          </p>
+          <p>守秘義務を結びます。<br>あなたの許可なく個人情報を共有することは一切ありません。<br>箭内だけが取り扱います。詳細は契約書にて。</p>
         </div>
       </div>
       <hr class="separator">
@@ -871,8 +874,8 @@
           <p class="price-block__tax">（税込）</p>
           <span class="price-block__sep"></span>
           <p class="price-block__payment">
-            クレジットカード：24回払いまで対応<br>
-            銀行振込：一括（分割はご相談ください）
+            クレジットカード：<br class="sp-only">24回払いまで対応<br>
+            銀行振込：一括<br class="sp-only">（分割はご相談ください）
           </p>
         </div>
       </div>
@@ -937,8 +940,8 @@
         <a href="legal/agreement-trial.html" class="btn--trial is-disabled"
           id="cta-btn">同意書を確認して申し込みに進む &rarr;</a>
         <div class="notation">
-          <p>※本セッションは、箭内がすべて一人で対応しております。<br>
-          そのため、お申し込み多数の場合はお待ちいただくことがございます。</p>
+          <p>※本セッションは、<br class="sp-only">箭内がすべて一人で対応しております。<br>
+          そのため、お申し込み多数の場合は<br class="sp-only">お待ちいただくことがございます。</p>
         </div>
         <p style="margin-top: 2rem; font-size: 0.85rem;">
           <a href="faq.html" style="color: #c0a878; border-bottom: 1px solid rgba(192,168,120,0.3);">よくある質問はこちら &rarr;</a>

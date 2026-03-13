@@ -2444,18 +2444,17 @@ a.site-logo:not(.btn):not(.session-card__link):hover {
   .separator { margin: 2.5rem 0; }
   .btn { padding: 1rem 2.5rem; width: 100%; box-sizing: border-box; text-align: center; }
 
-  /* Hide br in content blocks on mobile for better text flow */
-  .content-block br,
-  .text-panel br,
-  .highlight-block br,
-  .cta-block br,
-  .cta-block__desc br,
-  .framed-list br,
-  .def-box br,
-  .quote-block br,
-  .trial-condition br,
-  .schedule-note br,
-  .notation br { display: none; }
+  /* Hide br in content blocks on mobile for better text flow (preserve .sp-only) */
+  .content-block br:not(.sp-only),
+  .text-panel br:not(.sp-only),
+  .highlight-block br:not(.sp-only),
+  .cta-block br:not(.sp-only),
+  .cta-block__desc br:not(.sp-only),
+  .framed-list br:not(.sp-only),
+  .def-box br:not(.sp-only),
+  .quote-block br:not(.sp-only),
+  .schedule-note br:not(.sp-only),
+  .notation br:not(.sp-only) { display: none; }
 
   /* Trilogy card mobile padding */
   .trilogy-card { padding: 2rem 1.5rem; }
