@@ -303,55 +303,51 @@
 
     /* === Tenmei Definition === */
     .tenmei-definition {
-      text-align: center;
-      padding: 3.5rem 3rem 3rem;
+      text-align: left;
+      padding: 2.5rem 2.5rem 2.8rem;
       margin-bottom: 2.5rem;
-      background: linear-gradient(160deg, rgba(15,12,25,0.6) 0%, rgba(8,6,16,0.85) 100%);
-      border: 1px solid var(--color-gold-a08);
+      background: linear-gradient(160deg, rgba(15,12,25,0.75) 0%, rgba(8,6,16,0.92) 100%),
+                  linear-gradient(135deg, rgba(140,160,210,0.06), transparent 50%);
+      border: 1px solid var(--color-gold-a10);
+      border-left: 2px solid rgba(160,150,200,0.4);
       position: relative;
-      backdrop-filter: blur(6px);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 2px 32px var(--color-gold-a04),
+                  inset 0 1px 0 var(--color-gold-a08);
+      overflow: hidden;
     }
     .tenmei-definition::before {
       content: "";
       position: absolute;
-      top: 0; left: 20%; right: 20%;
+      top: 0; left: 0; right: 0;
       height: 1px;
-      background: linear-gradient(90deg, transparent, var(--color-gold-a20), transparent);
+      background: linear-gradient(90deg, rgba(160,150,200,0.3) 0%, transparent 60%);
     }
-    .tenmei-definition::after {
-      content: "";
-      position: absolute;
-      bottom: 0; left: 20%; right: 20%;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--color-gold-a10), transparent);
-    }
-    .tenmei-definition__quote {
+    .tenmei-definition__label {
       font-family: var(--font-serif-en);
-      font-size: 2.4rem;
-      color: var(--color-gold-a20);
-      line-height: 1;
-      margin-bottom: 0.5rem;
-      user-select: none;
+      font-size: 0.7rem;
+      color: var(--color-text-dim);
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
     }
     .tenmei-definition__text {
       font-family: var(--ff-serif);
-      font-size: 1.15rem;
-      color: var(--color-text-reading);
-      letter-spacing: 0.12em;
-      line-height: 2.2;
+      font-size: 1.3rem;
+      color: var(--color-text);
+      letter-spacing: 0.06em;
+      line-height: 2;
     }
     .tenmei-definition__text em {
       font-style: normal;
       color: var(--color-gold);
-      font-size: 1.25rem;
     }
     .tenmei-definition__author {
-      margin-top: 1.8rem;
-      font-family: var(--font-serif-en);
-      font-size: 0.78rem;
+      margin-top: 2rem;
+      font-family: var(--ff-serif);
+      font-size: 0.8rem;
       color: var(--color-gold-a40);
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
+      letter-spacing: 0.15em;
     }
 
     /* === Session Hero Card === */
@@ -684,10 +680,8 @@
       .page-session .content-block { margin-bottom: 1.8rem !important; }
       .cta-block { padding: 4rem 1.2rem; }
       .cta-block .btn { padding: 1.2rem 3rem; }
-      .tenmei-definition { padding: 2.5rem 1.5rem 2rem; margin-bottom: 1.5rem; }
-      .tenmei-definition__text { font-size: 1rem; letter-spacing: 0.08em; }
-      .tenmei-definition__text em { font-size: 1.1rem; }
-      .tenmei-definition__quote { font-size: 2rem; }
+      .tenmei-definition { padding: 2rem 1.5rem 2.2rem; margin-bottom: 1.5rem; }
+      .tenmei-definition__text { font-size: 1.1rem; }
       .session-hero-card { padding: 3rem 1.8rem 2.5rem; margin: 0 0 1.5rem; }
       .session-hero-card__intro { font-size: 0.85rem; margin-bottom: 1.2rem; }
       .session-hero-card__main { font-size: 1.25rem; }
@@ -771,9 +765,9 @@
     <div class="container">
 
       <div class="tenmei-definition fade-in">
-        <p class="tenmei-definition__quote">&ldquo;</p>
-        <p class="tenmei-definition__text"><em>天命</em>とは、<br>生まれてきた意味であり、<br>生きる目的である。</p>
-        <p class="tenmei-definition__author">&mdash;&mdash; Hiroki Yanai</p>
+        <p class="tenmei-definition__label">Definition</p>
+        <p class="tenmei-definition__text"><em>天命</em>とは、生まれてきた意味であり、生きる目的である。</p>
+        <p class="tenmei-definition__author">&mdash;&mdash; 箭内宏紀</p>
       </div>
 
       <div class="session-hero-card fade-in">
