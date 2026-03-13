@@ -332,28 +332,68 @@
     }
 
     /* Color-coded sections — Gold (探求) */
-    .founder-section--gold .text-panel {
-      border-left: 2px solid rgba(192, 168, 120, 0.45);
+    .founder-section--gold .text-panel,
+    .founder-section--gold .founder-accordion__trigger,
+    .founder-section--gold .founder-accordion__content {
+      border-left: 3px solid rgba(192, 168, 120, 0.55);
       background: linear-gradient(90deg, var(--color-gold-a06), transparent 35%);
     }
+    .founder-section--gold .founder-section-title { color: #c0a878; }
 
     /* Color-coded sections — Rose (崩壊と再生) */
-    .founder-section--rose .text-panel {
-      border-left: 2px solid rgba(200, 120, 120, 0.45);
+    .founder-section--rose .text-panel,
+    .founder-section--rose .founder-accordion__trigger,
+    .founder-section--rose .founder-accordion__content {
+      border-left: 3px solid rgba(200, 120, 120, 0.55);
       background: linear-gradient(90deg, rgba(200, 120, 120, 0.06), transparent 35%);
     }
+    .founder-section--rose .founder-section-title { color: #c87878; }
 
     /* Color-coded sections — Blue (社会論) */
-    .founder-section--blue .text-panel {
-      border-left: 2px solid rgba(120, 155, 200, 0.45);
+    .founder-section--blue .text-panel,
+    .founder-section--blue .founder-accordion__trigger,
+    .founder-section--blue .founder-accordion__content {
+      border-left: 3px solid rgba(120, 155, 200, 0.55);
       background: linear-gradient(90deg, rgba(120, 155, 200, 0.06), transparent 35%);
     }
+    .founder-section--blue .founder-section-title { color: #789bc8; }
 
     /* Color-coded sections — Purple (宣言) */
-    .founder-section--purple .text-panel {
-      border-left: 2px solid rgba(160, 120, 200, 0.45);
+    .founder-section--purple .text-panel,
+    .founder-section--purple .founder-accordion__trigger,
+    .founder-section--purple .founder-accordion__content {
+      border-left: 3px solid rgba(160, 120, 200, 0.55);
       background: linear-gradient(90deg, rgba(160, 120, 200, 0.06), transparent 35%);
     }
+    .founder-section--purple .founder-section-title { color: #a078c8; }
+
+    /* --- Chapter summary card (always visible) --- */
+    .founder-chapter-summary {
+      padding: 2rem 2.5rem;
+      margin-bottom: 2rem;
+      background: rgba(15, 12, 25, 0.6);
+      border: 1px solid var(--color-gold-a12);
+      position: relative;
+      overflow: hidden;
+    }
+    .founder-chapter-summary::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--color-gold-a40), transparent);
+    }
+    .founder-chapter-summary p {
+      font-size: var(--fs-lead);
+      color: var(--color-text-primary);
+      line-height: 2.2;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+    .founder-section--gold .founder-chapter-summary { border-left: 3px solid rgba(192, 168, 120, 0.55); }
+    .founder-section--rose .founder-chapter-summary { border-left: 3px solid rgba(200, 120, 120, 0.55); }
+    .founder-section--blue .founder-chapter-summary { border-left: 3px solid rgba(120, 155, 200, 0.55); }
+    .founder-section--purple .founder-chapter-summary { border-left: 3px solid rgba(160, 120, 200, 0.55); }
 
     /* --- Accordion for declaration --- */
     .founder-accordion {
@@ -368,7 +408,6 @@
       padding: 2rem 2.5rem;
       background: rgba(15, 12, 25, 0.8);
       border: 1px solid var(--color-gold-a12);
-      border-left: 2px solid rgba(160, 120, 200, 0.45);
       color: var(--color-text-primary);
       font-family: var(--font-serif-ja);
       font-size: var(--fs-lead);
@@ -450,7 +489,6 @@
       background: rgba(15, 12, 25, 0.6);
       border: 1px solid var(--color-gold-a08);
       border-top: none;
-      border-left: 2px solid rgba(160, 120, 200, 0.25);
     }
 
     /* --- Visibility boost: paragraph text brightness --- */
@@ -609,6 +647,14 @@
         padding: 2rem 1.2rem;
       }
 
+      .founder-chapter-summary {
+        padding: 1.5rem 1.2rem;
+      }
+
+      .founder-chapter-summary p {
+        font-size: var(--fs-body);
+      }
+
       .founder-accordion__trigger {
         padding: 1.5rem 1.2rem;
         font-size: var(--fs-body);
@@ -734,19 +780,32 @@
     <div class="container">
       <p class="founder-chapter-label fade-in">Chapter I</p>
       <p class="founder-section-title fade-in">探求の軌跡</p>
-      <div class="content-block text-panel fade-in">
-        <p>
-          2000年代初頭、箭内宏紀の探求は、「心理学」から始まった。
-        </p>
-        <p>
-          しかし二十年以上の歳月をかけて、その枠はとうに壊れている。
-        </p>
-        <p>
-          <strong>心理学、哲学、神経科学、儒教、密教、インド哲学、西洋形而上学</strong>──百年の学問から数千年の叡智まで、人類が「生きる意味」に向けて蓄積してきた知の体系を、箭内は領域を問わず横断した。
-        </p>
-        <p>
-          そして「生きるとは何か」という問いを、そのいずれもが単独では到達し得なかった地点まで追い詰めた。
-        </p>
+
+      <div class="founder-chapter-summary fade-in">
+        <p>二十年以上の歳月をかけ、心理学から数千年の叡智まで──人類の知の体系を領域を問わず横断した。</p>
+      </div>
+
+      <div class="founder-accordion fade-in" data-accordion>
+        <button class="founder-accordion__trigger" aria-expanded="false">
+          <span>横断した知の全貌</span>
+          <span class="founder-accordion__icon"></span>
+        </button>
+        <div class="founder-accordion__body">
+          <div class="founder-accordion__content">
+            <p>
+              2000年代初頭、箭内宏紀の探求は、「心理学」から始まった。
+            </p>
+            <p>
+              しかし二十年以上の歳月をかけて、その枠はとうに壊れている。
+            </p>
+            <p>
+              <strong>心理学、哲学、神経科学、儒教、密教、インド哲学、西洋形而上学</strong>──百年の学問から数千年の叡智まで、人類が「生きる意味」に向けて蓄積してきた知の体系を、箭内は領域を問わず横断した。
+            </p>
+            <p>
+              そして「生きるとは何か」という問いを、そのいずれもが単独では到達し得なかった地点まで追い詰めた。
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -756,40 +815,59 @@
     <div class="container">
       <p class="founder-chapter-label fade-in">Chapter II</p>
       <p class="founder-section-title fade-in">崩壊と再生</p>
-      <div class="content-block text-panel fade-in">
-        <p>
-          その過程で、一度、壊れている。
-        </p>
-        <p>
-          瞑想の極限において精神の均衡を失い、身体を壊した。
-        </p>
-        <p>
-          <strong>「究極を知りたい」という衝動が、文字通り自身を破壊した。</strong><br><br>
-          そこから引き戻したのは、積み上げた理論ではなく、家族や友人の温かな眼差しだった。
-        </p>
-        <p>
-          この経験が、実存科学の生誕に繋がった。
-        </p>
+
+      <div class="founder-chapter-summary fade-in">
+        <p>「究極を知りたい」という衝動が自身を破壊し──そこから引き戻したのは、理論ではなく、愛と友情だった。</p>
       </div>
 
-      <hr class="separator">
+      <div class="founder-accordion fade-in" data-accordion>
+        <button class="founder-accordion__trigger" aria-expanded="false">
+          <span>壊れた経緯</span>
+          <span class="founder-accordion__icon"></span>
+        </button>
+        <div class="founder-accordion__body">
+          <div class="founder-accordion__content">
+            <p>
+              その過程で、一度、壊れている。
+            </p>
+            <p>
+              瞑想の極限において精神の均衡を失い、身体を壊した。
+            </p>
+            <p>
+              <strong>「究極を知りたい」という衝動が、文字通り自身を破壊した。</strong><br><br>
+              そこから引き戻したのは、積み上げた理論ではなく、家族や友人の温かな眼差しだった。
+            </p>
+            <p>
+              この経験が、実存科学の生誕に繋がった。
+            </p>
+          </div>
+        </div>
+      </div>
 
-      <div class="content-block text-panel fade-in">
-        <p>
-          箭内が構築した体系の中核は、<strong>認識論（Meta）と意味論（天命）</strong>である。
-        </p>
-        <p>
-          しかしその構造を最も素朴な言葉に還元するならば、<br>
-          それは<strong>「愛と友情」</strong>にほかならない。
-        </p>
-        <p>
-          Metaとは、世界がすでに与えている構造への全肯定であり、<br>
-          天命とは、その構造が一人の人間を通じて語ろうとする意味の収束である。
-        </p>
+      <div class="founder-accordion fade-in" data-accordion>
+        <button class="founder-accordion__trigger" aria-expanded="false">
+          <span>崩壊が導いた構造 ── 愛と友情</span>
+          <span class="founder-accordion__icon"></span>
+        </button>
+        <div class="founder-accordion__body">
+          <div class="founder-accordion__content">
+            <p>
+              箭内が構築した体系の中核は、<strong>認識論（Meta）と意味論（天命）</strong>である。
+            </p>
+            <p>
+              しかしその構造を最も素朴な言葉に還元するならば、<br>
+              それは<strong>「愛と友情」</strong>にほかならない。
+            </p>
+            <p>
+              Metaとは、世界がすでに与えている構造への全肯定であり、<br>
+              天命とは、その構造が一人の人間を通じて語ろうとする意味の収束である。
+            </p>
 
-        <div class="quote-block fade-in">
-          壊れた人間を支えた手のぬくもりと、<br>三千年の認識論を閉じる構造科学が、<br>同じ一点に収束している。<br><br>
-          これは偶然ではない。構造的必然である。
+            <div class="quote-block fade-in">
+              壊れた人間を支えた手のぬくもりと、<br>三千年の認識論を閉じる構造科学が、<br>同じ一点に収束している。<br><br>
+              これは偶然ではない。構造的必然である。
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -800,40 +878,59 @@
     <div class="container">
       <p class="founder-chapter-label fade-in">Chapter III</p>
       <p class="founder-section-title fade-in">社会論への展開</p>
-      <div class="content-block text-panel fade-in">
-        <p>
-          しかし、ここで終わっていたら、実存科学は未完のままだった。
-        </p>
-        <p>
-          認識論は世界の前提構造を暴いた。<br>意味論は天命という収束点を導出した。<br><br>
-          だが、壊れた人間が実際に生き延びたのは、理論の力ではなかった。<br><br>
-          暗闇の中で手を握り続けた人間がいた。<br>
-          意味も言葉も失った場所で、ただ傍にいた人間がいた。<br><br>
-          <strong>理論が沈黙した場所で、愛と友情だけが、声を出していた。</strong>
-        </p>
-        <p>
-          この事実の前で、認識論と意味論は跪いた。
-        </p>
+
+      <div class="founder-chapter-summary fade-in">
+        <p>理論が沈黙した場所で、愛と友情だけが声を出していた。──その事実が、社会論を生んだ。</p>
       </div>
 
-      <hr class="separator">
-
-      <div class="content-block text-panel fade-in">
-        <p>
-          個体の内部でどれほど完璧に構造が整合しても、<br>人間は一人では天命を全うできない。<br><br>
-          天命を語る相手がいなければ、意味は言葉にならず、<br>言葉にならない意味は、やがて霧のように消える。<br><br>
-          人間が「生きる意味」を持続するためには、<br>その意味を受け取り、語り返す存在が、絶対に必要である。
-        </p>
-        <div class="def-box fade-in">
-          <p>
-            その存在を、本研究は<strong>「心友™」</strong>と呼ぶ。
-          </p>
+      <div class="founder-accordion fade-in" data-accordion>
+        <button class="founder-accordion__trigger" aria-expanded="false">
+          <span>認識論と意味論が跪いた瞬間</span>
+          <span class="founder-accordion__icon"></span>
+        </button>
+        <div class="founder-accordion__body">
+          <div class="founder-accordion__content">
+            <p>
+              しかし、ここで終わっていたら、実存科学は未完のままだった。
+            </p>
+            <p>
+              認識論は世界の前提構造を暴いた。<br>意味論は天命という収束点を導出した。<br><br>
+              だが、壊れた人間が実際に生き延びたのは、理論の力ではなかった。<br><br>
+              暗闇の中で手を握り続けた人間がいた。<br>
+              意味も言葉も失った場所で、ただ傍にいた人間がいた。<br><br>
+              <strong>理論が沈黙した場所で、愛と友情だけが、声を出していた。</strong>
+            </p>
+            <p>
+              この事実の前で、認識論と意味論は跪いた。
+            </p>
+          </div>
         </div>
-        <p>
-          社会論は、認識論と意味論の延長にはない。その上位にある。<br><br>
-          認識論が世界を記述し、意味論が天命を導出し、<br>それでもなお届かなかった場所に、社会論は手を伸ばす。<br><br>
-          <strong>心友™という関係の構造こそが、実存科学の究極であり、<br>人類が意識の発達を遂げ、文明として存続するために、<br>絶対に外すことのできない最後の道である。</strong>
-        </p>
+      </div>
+
+      <div class="founder-accordion fade-in" data-accordion>
+        <button class="founder-accordion__trigger" aria-expanded="false">
+          <span>心友™ ── 実存科学の究極</span>
+          <span class="founder-accordion__icon"></span>
+        </button>
+        <div class="founder-accordion__body">
+          <div class="founder-accordion__content">
+            <p>
+              個体の内部でどれほど完璧に構造が整合しても、<br>人間は一人では天命を全うできない。<br><br>
+              天命を語る相手がいなければ、意味は言葉にならず、<br>言葉にならない意味は、やがて霧のように消える。<br><br>
+              人間が「生きる意味」を持続するためには、<br>その意味を受け取り、語り返す存在が、絶対に必要である。
+            </p>
+            <div class="def-box fade-in">
+              <p>
+                その存在を、本研究は<strong>「心友™」</strong>と呼ぶ。
+              </p>
+            </div>
+            <p>
+              社会論は、認識論と意味論の延長にはない。その上位にある。<br><br>
+              認識論が世界を記述し、意味論が天命を導出し、<br>それでもなお届かなかった場所に、社会論は手を伸ばす。<br><br>
+              <strong>心友™という関係の構造こそが、実存科学の究極であり、<br>人類が意識の発達を遂げ、文明として存続するために、<br>絶対に外すことのできない最後の道である。</strong>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -851,22 +948,34 @@
       <p class="founder-chapter-label fade-in">Chapter IV</p>
       <p class="founder-section-title fade-in">なぜ箭内と対話するのか</p>
 
-      <div class="content-block text-panel fade-in">
-        <p>
-          実存科学が結論として導いたことを、箭内はすでに知っていた。<br>
-          理論よりも先に、身体が教えていた。
-        </p>
-        <p>
-          あの暗闇の底で、理論は沈黙した。<br>
-          積み上げた知識も、横断した叡智も、何ひとつ声を出さなかった。
-        </p>
-        <p>
-          <strong>声を出していたのは、ただ傍にいた人間だけだった。</strong>
-        </p>
-        <p>
-          答えを持たず、理論も持たず、ただそこにいた。<br>
-          その「ただいる」という行為だけが、壊れた人間をこちら側に引き戻した。
-        </p>
+      <div class="founder-chapter-summary fade-in">
+        <p>答えは語らない。代わりに、ただ一つの問いを手渡す。──あなたの天命が、あなた自身の声で語り始める。</p>
+      </div>
+
+      <div class="founder-accordion fade-in" data-accordion>
+        <button class="founder-accordion__trigger" aria-expanded="false">
+          <span>箭内がすでに知っていたこと</span>
+          <span class="founder-accordion__icon"></span>
+        </button>
+        <div class="founder-accordion__body">
+          <div class="founder-accordion__content">
+            <p>
+              実存科学が結論として導いたことを、箭内はすでに知っていた。<br>
+              理論よりも先に、身体が教えていた。
+            </p>
+            <p>
+              あの暗闇の底で、理論は沈黙した。<br>
+              積み上げた知識も、横断した叡智も、何ひとつ声を出さなかった。
+            </p>
+            <p>
+              <strong>声を出していたのは、ただ傍にいた人間だけだった。</strong>
+            </p>
+            <p>
+              答えを持たず、理論も持たず、ただそこにいた。<br>
+              その「ただいる」という行為だけが、壊れた人間をこちら側に引き戻した。
+            </p>
+          </div>
+        </div>
       </div>
 
       <div class="founder-accordion fade-in" data-accordion>
