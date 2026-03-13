@@ -647,6 +647,71 @@
       line-height: 2.2;
     }
 
+    /* --- Video embed --- */
+    .founder-story__video {
+      margin: 2rem 0;
+    }
+
+    .founder-story__video video {
+      width: 100%;
+      max-width: 760px;
+      display: block;
+      border: 1px solid var(--color-gold-a12);
+    }
+
+    .founder-story__video-label {
+      font-size: var(--fs-small);
+      color: var(--color-gold-a40);
+      letter-spacing: 0.1em;
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    /* --- Story accordion (reuses .founder-accordion base) --- */
+    .founder-story .founder-accordion {
+      margin-bottom: 0;
+    }
+
+    .founder-story .founder-accordion__trigger {
+      border-left: 3px solid var(--color-gold-a30);
+      background: linear-gradient(90deg, var(--color-gold-a04), transparent 40%);
+    }
+
+    .founder-story .founder-accordion__content {
+      border-left: 3px solid var(--color-gold-a12);
+    }
+
+    .founder-story .founder-accordion__content p {
+      font-size: 1rem;
+      color: #d0ccc6;
+      line-height: 2.4;
+      margin-bottom: 2rem;
+      letter-spacing: 0.03em;
+    }
+
+    .founder-story .founder-accordion__content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .founder-story .founder-accordion__content p strong {
+      color: var(--color-text-primary);
+      font-weight: 600;
+    }
+
+    .founder-story .founder-accordion__content .founder-story__testimonial {
+      border-left: 2px solid rgba(192, 168, 120, 0.4);
+      padding: 0.8rem 0 0.8rem 2rem;
+      margin: 1.5rem 0;
+    }
+
+    .founder-story .founder-accordion__content .founder-story__testimonial p {
+      font-size: var(--fs-lead);
+      color: var(--color-text-primary);
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      margin-bottom: 0;
+    }
+
     /* --- Responsive 900px --- */
     @media (max-width: 900px) {
       .founder-hero__inner {
@@ -850,6 +915,29 @@
       .founder-story__closing p.founder-story__final {
         font-size: var(--fs-body);
       }
+
+      .founder-story .founder-accordion__trigger {
+        padding: 1.5rem 1.2rem;
+        font-size: var(--fs-body);
+      }
+
+      .founder-story .founder-accordion__content {
+        padding: 2rem 1.2rem;
+      }
+
+      .founder-story .founder-accordion__content p {
+        font-size: 0.92rem;
+        line-height: 2.3;
+        margin-bottom: 1.6rem;
+      }
+
+      .founder-story .founder-accordion__content .founder-story__testimonial {
+        padding-left: 1.2rem;
+      }
+
+      .founder-story .founder-accordion__content .founder-story__testimonial p {
+        font-size: var(--fs-body);
+      }
     }
   </style>
 </head>
@@ -922,13 +1010,13 @@
     <div class="founder-hero__divider"></div>
   </section>
 
-  <!-- 旧テキスト保全: 箭内宏紀とは accordion + Chapter I〜IV (探求の軌跡 / 崩壊と再生 / 社会論への展開 / なぜ箭内と対話するのか) — git履歴に保全 -->
+  <!-- 旧テキスト保全: 平文ナラティブ版 + Chapter I〜IV — git履歴に保全 -->
 
-  <!-- ===== FOUNDER STORY — Cinematic Narrative ===== -->
+  <!-- ===== FOUNDER STORY — Accordion Narrative ===== -->
   <section class="founder-story">
     <div class="container">
 
-      <!-- Scene 1: Opening Hook -->
+      <!-- Scene 1: Opening Hook (always visible) -->
       <div class="founder-story__scene fade-in">
         <p class="founder-story__hook">彼は人生で何度か死にかけている。</p>
         <p class="founder-story__sub">その中でも最もシンドかった時の話をしよう。</p>
@@ -937,98 +1025,169 @@
       <div class="founder-story__divider"></div>
 
       <!-- Scene 2: Success & Emptiness -->
-      <div class="founder-story__scene fade-in">
-        <p>金を稼ぐのは得意だった。</p>
-        <p>大学で心理学を学び、2015年に株式会社Nimbus Creationを創業。オンライン講座で受講者1,300人、累計売上5億円超。ビジネスとしては、完璧に成功していた。</p>
-        <p><strong>だが人間としては最低だった。</strong></p>
-        <p>二度の離婚。親との絶縁。愛する人を傷つけてばかりいた。自分が人に教えている内容を、自分自身にも適用しているはずなのに、人生の空虚さだけは消えなかった。</p>
-        <p>成功したのに不幸になった。こんなバカな話があるか。</p>
-        <p>頭の中は、過去への後悔と将来への不安でいっぱいだった。もう元には戻れない。でもできることなら、人生をやり直したい。</p>
+      <div class="founder-accordion fade-in" data-accordion>
+        <button class="founder-accordion__trigger" aria-expanded="false">
+          <span>だが人間としては最低だった。</span>
+          <span class="founder-accordion__icon"></span>
+        </button>
+        <div class="founder-accordion__body">
+          <div class="founder-accordion__content">
+            <p>金を稼ぐのは得意だった。</p>
+            <p>大学で心理学を学び、2015年に株式会社Nimbus Creationを創業。オンライン講座で受講者1,300人、累計売上5億円超。ビジネスとしては、完璧に成功していた。</p>
+            <p><strong>だが人間としては最低だった。</strong></p>
+            <p>二度の離婚。親との絶縁。愛する人を傷つけてばかりいた。自分が人に教えている内容を、自分自身にも適用しているはずなのに、人生の空虚さだけは消えなかった。</p>
+            <p>成功したのに不幸になった。こんなバカな話があるか。</p>
+            <p>頭の中は、過去への後悔と将来への不安でいっぱいだった。もう元には戻れない。でもできることなら、人生をやり直したい。</p>
+          </div>
+        </div>
       </div>
 
       <div class="founder-story__divider"></div>
 
       <!-- Scene 3: Descent -->
-      <div class="founder-story__scene fade-in">
-        <p class="founder-story__hook">じゃあ神にでもなろうか。</p>
-        <p>自分でもバカだと思う。でも、もうどうでもよかった。自暴自棄になっていたのだ。</p>
-        <p>心理学、哲学、神経科学、儒教、密教、インド哲学、西洋形而上学──百年の学問から数千年の叡智まで、人類が「生きる意味」に向けて蓄積してきた知の体系を、二十年以上かけて領域を問わず横断した。</p>
-        <p>ある者は彼を「狂人」と呼んだ。</p>
-        <p>とりわけ瞑想の世界には、行ってはならない禁足地が存在する。自暴自棄になった彼は、超えてはならない一線を超えることにした。</p>
+      <div class="founder-accordion fade-in" data-accordion>
+        <button class="founder-accordion__trigger" aria-expanded="false">
+          <span>じゃあ神にでもなろうか。</span>
+          <span class="founder-accordion__icon"></span>
+        </button>
+        <div class="founder-accordion__body">
+          <div class="founder-accordion__content">
+            <p>自分でもバカだと思う。でも、もうどうでもよかった。自暴自棄になっていたのだ。</p>
+            <p>心理学、哲学、神経科学、儒教、密教、インド哲学、西洋形而上学──百年の学問から数千年の叡智まで、人類が「生きる意味」に向けて蓄積してきた知の体系を、二十年以上かけて領域を問わず横断した。</p>
+            <p>ある者は彼を「狂人」と呼んだ。</p>
+            <p>とりわけ瞑想の世界には、行ってはならない禁足地が存在する。自暴自棄になった彼は、超えてはならない一線を超えることにした。</p>
+          </div>
+        </div>
       </div>
 
       <div class="founder-story__divider"></div>
 
       <!-- Scene 4: Breaking -->
-      <div class="founder-story__scene fade-in">
-        <p class="founder-story__hook">すぐに恐ろしいことが起こった。</p>
-        <p>もっと見たい、もっと知りたい──好奇心が止まらなかった。見えないものが見え、聞こえないものが聞こえるようになった。</p>
-        <p>けれども、どんどん自分が壊れていった。</p>
-        <p>体が言うことを聞かなくなった。思ってもいないことを口にしてしまう。周りとのトラブルが増えた。まるで自分じゃない何かが、自分を支配しているみたいだった。</p>
-        <p>でもやめるわけがない。こっちは人間を超えたくてやっているのだ。</p>
-        <p>そして──一線を超えた。</p>
-        <p>頭の中で爆発が起こったみたいに、すべての機能が停止した。</p>
-        <p>気を失った。</p>
-        <p><strong>目が覚めると、言語障害および右半身麻痺。</strong></p>
+      <div class="founder-accordion fade-in" data-accordion>
+        <button class="founder-accordion__trigger" aria-expanded="false">
+          <span>目が覚めると、言語障害および右半身麻痺。</span>
+          <span class="founder-accordion__icon"></span>
+        </button>
+        <div class="founder-accordion__body">
+          <div class="founder-accordion__content">
+            <p>すぐに恐ろしいことが起こった。</p>
+            <p>もっと見たい、もっと知りたい──好奇心が止まらなかった。見えないものが見え、聞こえないものが聞こえるようになった。</p>
+            <p>けれども、どんどん自分が壊れていった。</p>
+            <p>体が言うことを聞かなくなった。思ってもいないことを口にしてしまう。周りとのトラブルが増えた。まるで自分じゃない何かが、自分を支配しているみたいだった。</p>
+            <p>でもやめるわけがない。こっちは人間を超えたくてやっているのだ。</p>
+            <p>そして──一線を超えた。</p>
+            <p>頭の中で爆発が起こったみたいに、すべての機能が停止した。</p>
+            <p>気を失った。</p>
+            <p><strong>目が覚めると、言語障害および右半身麻痺。</strong></p>
+          </div>
+        </div>
       </div>
 
       <div class="founder-story__divider"></div>
 
-      <!-- Scene 5: Recovery (3rd person) -->
-      <div class="founder-story__scene fade-in">
-        <p>しばらくの間、寝たきりになった。</p>
-        <p>積み上げた理論は、何ひとつ声を出さなかった。二十年かけて横断した叡智も、獲得した知識も、壊れた人間の前では完全に沈黙した。</p>
-        <p>声を出していたのは、傍にいた人間だけだった。</p>
-        <p>家族が、友達が、仕事仲間が、毎日そこにいた。答えを持たず、理論も持たず、ただそこにいた。</p>
-        <p><strong>「ただいる」。</strong></p>
-        <p>その行為だけが、壊れた人間をこちら側に引き戻した。</p>
+      <!-- Scene 5: Recovery -->
+      <div class="founder-accordion fade-in" data-accordion>
+        <button class="founder-accordion__trigger" aria-expanded="false">
+          <span>「ただいる」。</span>
+          <span class="founder-accordion__icon"></span>
+        </button>
+        <div class="founder-accordion__body">
+          <div class="founder-accordion__content">
+            <p>しばらくの間、寝たきりになった。</p>
+            <p>積み上げた理論は、何ひとつ声を出さなかった。二十年かけて横断した叡智も、獲得した知識も、壊れた人間の前では完全に沈黙した。</p>
+            <p>声を出していたのは、傍にいた人間だけだった。</p>
+            <p>家族が、友達が、仕事仲間が、毎日そこにいた。答えを持たず、理論も持たず、ただそこにいた。</p>
+            <p><strong>「ただいる」。</strong></p>
+            <p>その行為だけが、壊れた人間をこちら側に引き戻した。</p>
+          </div>
+        </div>
       </div>
 
       <div class="founder-story__divider"></div>
 
-      <!-- Scene 6: Perspective shift — 3rd person → 1st person -->
-      <div class="founder-story__scene fade-in">
-        <p>回復まで丸1年。</p>
-        <p>その1年で、私は一つのことを知った。</p>
-        <p>真理を「知る」ことと、真理を「生きる」ことの間には、絶望的な断崖がある。</p>
-        <p>知の体系を横断し、人間が到達し得る認識の果てまで行った。そこで見たものは確かに存在していた。だが、それを「知った」だけでは、壊れた。</p>
-        <p>断崖を越えさせたのは、理論ではなかった。傍にいた人間の手だった。</p>
-        <p><strong>真理は、知識の中にはなかった。</strong></p>
-        <p><strong>生きている人間の、温かな手の中にあった。</strong></p>
+      <!-- Scene 6: Revelation -->
+      <div class="founder-accordion fade-in" data-accordion>
+        <button class="founder-accordion__trigger" aria-expanded="false">
+          <span>真理は、知識の中にはなかった。</span>
+          <span class="founder-accordion__icon"></span>
+        </button>
+        <div class="founder-accordion__body">
+          <div class="founder-accordion__content">
+            <p>回復まで丸1年。</p>
+            <p>その1年で、私は一つのことを知った。</p>
+            <p>真理を「知る」ことと、真理を「生きる」ことの間には、絶望的な断崖がある。</p>
+            <p>知の体系を横断し、人間が到達し得る認識の果てまで行った。そこで見たものは確かに存在していた。だが、それを「知った」だけでは、壊れた。</p>
+            <p>断崖を越えさせたのは、理論ではなかった。傍にいた人間の手だった。</p>
+            <p><strong>真理は、知識の中にはなかった。</strong></p>
+            <p><strong>生きている人間の、温かな手の中にあった。</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video: 私が真理を悟った時の話 -->
+      <div class="founder-story__video fade-in">
+        <video controls preload="metadata" poster="">
+          <source src="videos/shinri-wo-satotta-toki.mp4" type="video/mp4">
+        </video>
+        <p class="founder-story__video-label">私が真理を悟った時の話</p>
       </div>
 
       <div class="founder-story__divider"></div>
 
       <!-- Scene 7: Birth of Existential Science -->
-      <div class="founder-story__scene fade-in">
-        <p>回復の過程で、あるものが降りてきた。</p>
-        <p>ある日突然、「メタがある限り自由意志はない」という構造が見えた。ある日突然、天命の言語化セッション™が降りてきた。ある日突然、「生きる意味を語れる社会を作る」という理念が降りてきた。ある日突然、愛の定義が降りてきた。</p>
-        <p>学んで到達したのではない。壊れた後に、降りてきた。</p>
-        <p>宗教でも思想哲学でもスピリチュアルでもなかった。再現性のある論理だった。だから実存科学と名付けた。</p>
-        <p>2025年12月、実存科学研究所を設立。</p>
+      <div class="founder-accordion fade-in" data-accordion>
+        <button class="founder-accordion__trigger" aria-expanded="false">
+          <span>壊れた後に、降りてきた。</span>
+          <span class="founder-accordion__icon"></span>
+        </button>
+        <div class="founder-accordion__body">
+          <div class="founder-accordion__content">
+            <p>回復の過程で、あるものが降りてきた。</p>
+            <p>ある日突然、「メタがある限り自由意志はない」という構造が見えた。ある日突然、天命の言語化セッション™が降りてきた。ある日突然、「生きる意味を語れる社会を作る」という理念が降りてきた。ある日突然、愛の定義が降りてきた。</p>
+            <p>学んで到達したのではない。壊れた後に、降りてきた。</p>
+            <p>宗教でも思想哲学でもスピリチュアルでもなかった。再現性のある論理だった。だから実存科学と名付けた。</p>
+            <p>2025年12月、実存科学研究所を設立。</p>
+          </div>
+        </div>
       </div>
 
       <div class="founder-story__divider"></div>
 
       <!-- Scene 8: What I do in sessions -->
-      <div class="founder-story__scene fade-in">
-        <p>対話の場で私が行うことは、あの経験の再現である。</p>
-        <p>答えは語らない。自分の崩壊から、答えが人の認識を狭めることを学んだ。</p>
-        <p>真理を「知っている」だけの人間は、答えを語る。真理を「生きている」人間は、問いを手渡す。</p>
-        <p>なぜなら、真理は誰かから受け取るものではないからだ。あなたの中にすでにある。本来つながるはずだった意味と意味が結ばれた瞬間、あなた自身の声で、あなたの天命が語り始める。</p>
-        <p>私がやるのは、ただ一つの問いを手渡すことだけだ。深く考えるに値する、あなただけの問いを。</p>
-        <p>この瞬間に触れた人が、こう語った。</p>
-        <div class="founder-story__testimonial">
-          <p>「生まれてきてよかった」</p>
+      <div class="founder-accordion fade-in" data-accordion>
+        <button class="founder-accordion__trigger" aria-expanded="false">
+          <span>ただ一つの問いを手渡す。</span>
+          <span class="founder-accordion__icon"></span>
+        </button>
+        <div class="founder-accordion__body">
+          <div class="founder-accordion__content">
+            <p>対話の場で私が行うことは、あの経験の再現である。</p>
+            <p>答えは語らない。自分の崩壊から、答えが人の認識を狭めることを学んだ。</p>
+            <p>真理を「知っている」だけの人間は、答えを語る。真理を「生きている」人間は、問いを手渡す。</p>
+            <p>なぜなら、真理は誰かから受け取るものではないからだ。あなたの中にすでにある。本来つながるはずだった意味と意味が結ばれた瞬間、あなた自身の声で、あなたの天命が語り始める。</p>
+            <p>私がやるのは、ただ一つの問いを手渡すことだけだ。深く考えるに値する、あなただけの問いを。</p>
+            <p>この瞬間に触れた人が、こう語った。</p>
+            <div class="founder-story__testimonial">
+              <p>「生まれてきてよかった」</p>
+            </div>
+            <div class="founder-story__testimonial">
+              <p>「やっと自分の人生が始まった」</p>
+            </div>
+          </div>
         </div>
-        <div class="founder-story__testimonial">
-          <p>「やっと自分の人生が始まった」</p>
-        </div>
+      </div>
+
+      <!-- Video: 天命を悟り、日々全うすること -->
+      <div class="founder-story__video fade-in">
+        <video controls preload="metadata" poster="">
+          <source src="videos/tenmei-wo-mattou-suru.mp4" type="video/mp4">
+        </video>
+        <p class="founder-story__video-label">「天命を悟り、日々全うすること」の本質</p>
       </div>
 
       <div class="founder-story__divider"></div>
 
-      <!-- Scene 9: Closing Declaration -->
+      <!-- Scene 9: Closing Declaration (always visible) -->
       <div class="founder-story__closing fade-in">
         <p><strong>箭内宏紀という人間に会う理由は、彼の理論が正しいからではない。</strong></p>
         <p>この人が、あの場所を通ってきたからである。</p>
