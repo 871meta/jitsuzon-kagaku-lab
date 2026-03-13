@@ -341,13 +341,37 @@
     .tenmei-definition__text {
       font-family: var(--ff-serif);
       font-size: 1.3rem;
-      color: var(--color-text);
       letter-spacing: 0.06em;
       line-height: 2;
+      color: #c0a878;
+      text-shadow: 0 0 20px rgba(192,168,120,0.3),
+                   0 0 40px rgba(192,168,120,0.15),
+                   0 0 80px rgba(192,168,120,0.08);
+      background: linear-gradient(
+        90deg,
+        #c0a878 0%,
+        #c0a878 40%,
+        #f0e6c8 50%,
+        #c0a878 60%,
+        #c0a878 100%
+      );
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: tenmei-shimmer 4s ease-in-out infinite;
+    }
+    @keyframes tenmei-shimmer {
+      0%, 100% { background-position: 100% 50%; }
+      50% { background-position: 0% 50%; }
+    }
+    /* text-shadow doesn't work with background-clip:text, use filter instead */
+    .tenmei-definition__text {
+      filter: drop-shadow(0 0 12px rgba(192,168,120,0.25))
+              drop-shadow(0 0 30px rgba(192,168,120,0.12));
     }
     .tenmei-definition__text em {
       font-style: normal;
-      color: var(--color-gold);
     }
     .tenmei-definition__author {
       margin-top: 2rem;
