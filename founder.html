@@ -675,10 +675,84 @@
     .founder-story .founder-accordion__trigger {
       border-left: 3px solid var(--color-gold-a30);
       background: linear-gradient(90deg, var(--color-gold-a04), transparent 40%);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
     }
 
     .founder-story .founder-accordion__content {
       border-left: 3px solid var(--color-gold-a12);
+    }
+
+    /* ── Scene color themes ── */
+
+    /* 1. Fall — deep burgundy */
+    .founder-accordion--fall .founder-accordion__trigger {
+      border-left-color: rgba(160, 60, 70, 0.6);
+      background: linear-gradient(90deg, rgba(80, 20, 30, 0.35), rgba(0,0,0,0.4) 70%);
+    }
+    .founder-accordion--fall .founder-accordion__content {
+      border-left-color: rgba(160, 60, 70, 0.25);
+      background: rgba(40, 10, 15, 0.3);
+    }
+
+    /* 2. Seek — deep indigo */
+    .founder-accordion--seek .founder-accordion__trigger {
+      border-left-color: rgba(80, 90, 180, 0.6);
+      background: linear-gradient(90deg, rgba(20, 25, 70, 0.4), rgba(0,0,0,0.4) 70%);
+    }
+    .founder-accordion--seek .founder-accordion__content {
+      border-left-color: rgba(80, 90, 180, 0.25);
+      background: rgba(10, 12, 40, 0.3);
+    }
+
+    /* 3. Break — dark crimson */
+    .founder-accordion--break .founder-accordion__trigger {
+      border-left-color: rgba(180, 40, 40, 0.6);
+      background: linear-gradient(90deg, rgba(70, 10, 10, 0.4), rgba(0,0,0,0.4) 70%);
+    }
+    .founder-accordion--break .founder-accordion__content {
+      border-left-color: rgba(180, 40, 40, 0.2);
+      background: rgba(40, 5, 5, 0.3);
+    }
+
+    /* 4. Still — deep teal */
+    .founder-accordion--still .founder-accordion__trigger {
+      border-left-color: rgba(60, 160, 140, 0.5);
+      background: linear-gradient(90deg, rgba(10, 50, 45, 0.4), rgba(0,0,0,0.4) 70%);
+    }
+    .founder-accordion--still .founder-accordion__content {
+      border-left-color: rgba(60, 160, 140, 0.2);
+      background: rgba(5, 30, 25, 0.3);
+    }
+
+    /* 5. Awake — deep purple */
+    .founder-accordion--awake .founder-accordion__trigger {
+      border-left-color: rgba(140, 80, 190, 0.55);
+      background: linear-gradient(90deg, rgba(45, 20, 70, 0.4), rgba(0,0,0,0.4) 70%);
+    }
+    .founder-accordion--awake .founder-accordion__content {
+      border-left-color: rgba(140, 80, 190, 0.2);
+      background: rgba(25, 10, 40, 0.3);
+    }
+
+    /* 6. Rebirth — warm amber */
+    .founder-accordion--rebirth .founder-accordion__trigger {
+      border-left-color: rgba(200, 150, 50, 0.55);
+      background: linear-gradient(90deg, rgba(65, 45, 10, 0.4), rgba(0,0,0,0.4) 70%);
+    }
+    .founder-accordion--rebirth .founder-accordion__content {
+      border-left-color: rgba(200, 150, 50, 0.2);
+      background: rgba(35, 25, 5, 0.3);
+    }
+
+    /* 7. Mission — luminous gold */
+    .founder-accordion--mission .founder-accordion__trigger {
+      border-left-color: rgba(210, 185, 110, 0.6);
+      background: linear-gradient(90deg, rgba(70, 55, 20, 0.4), rgba(0,0,0,0.35) 70%);
+    }
+    .founder-accordion--mission .founder-accordion__content {
+      border-left-color: rgba(210, 185, 110, 0.2);
+      background: rgba(40, 30, 8, 0.3);
     }
 
     .founder-story .founder-accordion__content p {
@@ -1025,7 +1099,7 @@
       <div class="founder-story__divider"></div>
 
       <!-- Scene 2: Success & Emptiness -->
-      <div class="founder-accordion fade-in" data-accordion>
+      <div class="founder-accordion fade-in founder-accordion--fall" data-accordion>
         <button class="founder-accordion__trigger" aria-expanded="false">
           <span>だが人間としては最低だった。</span>
           <span class="founder-accordion__icon"></span>
@@ -1045,7 +1119,7 @@
       <div class="founder-story__divider"></div>
 
       <!-- Scene 3: Descent -->
-      <div class="founder-accordion fade-in" data-accordion>
+      <div class="founder-accordion fade-in founder-accordion--seek" data-accordion>
         <button class="founder-accordion__trigger" aria-expanded="false">
           <span>じゃあ神にでもなろうか。</span>
           <span class="founder-accordion__icon"></span>
@@ -1063,7 +1137,7 @@
       <div class="founder-story__divider"></div>
 
       <!-- Scene 4: Breaking -->
-      <div class="founder-accordion fade-in" data-accordion>
+      <div class="founder-accordion fade-in founder-accordion--break" data-accordion>
         <button class="founder-accordion__trigger" aria-expanded="false">
           <span>目が覚めると、言語障害および右半身麻痺。</span>
           <span class="founder-accordion__icon"></span>
@@ -1086,7 +1160,7 @@
       <div class="founder-story__divider"></div>
 
       <!-- Scene 5: Recovery -->
-      <div class="founder-accordion fade-in" data-accordion>
+      <div class="founder-accordion fade-in founder-accordion--still" data-accordion>
         <button class="founder-accordion__trigger" aria-expanded="false">
           <span>「ただいる」。</span>
           <span class="founder-accordion__icon"></span>
@@ -1106,7 +1180,7 @@
       <div class="founder-story__divider"></div>
 
       <!-- Scene 6: Revelation -->
-      <div class="founder-accordion fade-in" data-accordion>
+      <div class="founder-accordion fade-in founder-accordion--awake" data-accordion>
         <button class="founder-accordion__trigger" aria-expanded="false">
           <span>真理は、知識の中にはなかった。</span>
           <span class="founder-accordion__icon"></span>
@@ -1135,7 +1209,7 @@
       <div class="founder-story__divider"></div>
 
       <!-- Scene 7: Birth of Existential Science -->
-      <div class="founder-accordion fade-in" data-accordion>
+      <div class="founder-accordion fade-in founder-accordion--rebirth" data-accordion>
         <button class="founder-accordion__trigger" aria-expanded="false">
           <span>壊れた後に、降りてきた。</span>
           <span class="founder-accordion__icon"></span>
@@ -1154,7 +1228,7 @@
       <div class="founder-story__divider"></div>
 
       <!-- Scene 8: What I do in sessions -->
-      <div class="founder-accordion fade-in" data-accordion>
+      <div class="founder-accordion fade-in founder-accordion--mission" data-accordion>
         <button class="founder-accordion__trigger" aria-expanded="false">
           <span>ただ一つの問いを手渡す。</span>
           <span class="founder-accordion__icon"></span>
