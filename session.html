@@ -208,21 +208,21 @@
     }
 
     /* === Item 1: Breathing — expanded spacing === */
-    .page-session .separator { margin-top: 5.5rem !important; margin-bottom: 5.5rem !important; }
-    .page-session .section__title { margin-top: 1rem !important; margin-bottom: 3.5rem !important; }
-    .page-session .content-block { margin-bottom: 3rem !important; }
-    .page-session .pull-quote { margin-top: 4.5rem !important; margin-bottom: 4.5rem !important; }
-    .page-session .def-box { margin-top: 3.5rem !important; margin-bottom: 3.5rem !important; }
-    .page-session .highlight-block { margin-top: 3.5rem !important; margin-bottom: 3.5rem !important; }
-    .page-session .framed-list { margin-top: 2.5rem !important; margin-bottom: 2.5rem !important; }
-    .page-session .quote-block { margin-top: 4rem !important; margin-bottom: 4rem !important; }
-    .page-session .step-flow { margin-top: 3.5rem !important; margin-bottom: 3.5rem !important; }
-    .page-session .step-flow__item { margin-bottom: 3.5rem !important; }
+    .page-session .separator { margin: 4.5rem 0 !important; }
+    .page-session .section__title { margin-top: 1rem !important; margin-bottom: 2rem !important; }
+    .page-session .content-block { margin-bottom: 2.5rem !important; }
+    .page-session .pull-quote { margin: 4rem 0 !important; }
+    .page-session .def-box { margin: 3rem 0 !important; }
+    .page-session .highlight-block { margin: 3rem 0 !important; }
+    .page-session .framed-list { margin: 2.5rem 0 !important; }
+    .page-session .quote-block { margin: 3rem 0 !important; }
+    .page-session .step-flow { margin: 3rem 0 !important; }
+    .page-session .step-flow__item { margin-bottom: 3rem !important; }
 
     /* === Item 2: Clickable vs non-clickable separation === */
     /* (A) Nav cards: stronger "clickable" signals */
     .session-nav-card__arrow {
-      color: var(--color-gold-a60);
+      color: rgba(192,168,120,0.5);
     }
     .session-nav-card {
       border-bottom: 1px solid var(--color-gold-a25);
@@ -369,16 +369,19 @@
       transition: max-height 0.5s ease, opacity 0.4s ease;
     }
     .session-accordion.is-open .session-accordion__body {
-      max-height: 3000px;
+      max-height: 6000px;
       opacity: 1;
+    }
+    .session-accordion__trigger h3 {
+      margin-bottom: 0;
     }
 
     /* === Transformation Cards === */
     .transformation-cards {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-      margin: 2.5rem 0;
+      gap: 2rem;
+      margin: 3rem 0;
     }
     .transformation-card {
       padding: 2.2rem 2rem;
@@ -410,25 +413,42 @@
     .transformation-card:nth-child(2) .transformation-card__num { color: rgba(140,170,210,0.4); }
     .transformation-card:nth-child(3) .transformation-card__num { color: rgba(190,130,140,0.4); }
     .transformation-card:nth-child(4) .transformation-card__num { color: rgba(130,185,160,0.4); }
-    .transformation-card__title {
-      font-size: 1.05rem;
-      letter-spacing: 0.12em;
-      color: var(--color-gold);
-      margin-bottom: 0;
+    .transformation-card__header {
       cursor: pointer;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
       gap: 1rem;
     }
-    .transformation-card__title::after {
-      content: "+";
+    .transformation-card__en {
+      display: block;
+      font-family: var(--font-serif-en);
+      font-size: 1.15rem;
+      letter-spacing: 0.15em;
+      color: var(--color-gold);
+      line-height: 1.3;
+    }
+    .transformation-card__ruby {
+      display: block;
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
+      color: var(--color-text-dim, rgba(168,164,160,0.6));
+      margin-top: 0.3rem;
+      line-height: 1;
+    }
+    .transformation-card__sub {
+      display: block;
+      font-size: 0.92rem;
+      letter-spacing: 0.06em;
+      color: var(--color-text-primary);
+      margin-top: 0.5rem;
+      line-height: 1.4;
+    }
+    .transformation-card__toggle {
       font-size: 1.1rem;
       color: var(--color-gold-a40);
       flex-shrink: 0;
-    }
-    .transformation-card.is-open .transformation-card__title::after {
-      content: "−";
+      margin-top: 0.2rem;
     }
     .transformation-card__desc {
       max-height: 0;
@@ -448,7 +468,7 @@
 
     /* === Item 4: CTA block elevation === */
     .cta-block {
-      margin-top: 2rem;
+      margin-top: 4rem;
       padding: 6rem 2.5rem;
     }
     .cta-block__title {
@@ -482,12 +502,12 @@
       }
 
       /* Scale down breathing for mobile */
-      .page-session .separator { margin-top: 3.5rem !important; margin-bottom: 3.5rem !important; }
-      .page-session .pull-quote { margin-top: 3rem !important; margin-bottom: 3rem !important; }
-      .page-session .def-box { margin-top: 2.5rem !important; margin-bottom: 2.5rem !important; }
-      .page-session .highlight-block { margin-top: 2.5rem !important; margin-bottom: 2.5rem !important; }
-      .page-session .quote-block { margin-top: 2.5rem !important; margin-bottom: 2.5rem !important; }
-      .page-session .step-flow__item { margin-bottom: 2.5rem !important; }
+      .page-session .separator { margin: 3.2rem 0 !important; }
+      .page-session .pull-quote { margin: 2.8rem 0 !important; }
+      .page-session .def-box { margin: 2.2rem 0 !important; }
+      .page-session .highlight-block { margin: 2.2rem 0 !important; }
+      .page-session .quote-block { margin: 2.2rem 0 !important; }
+      .page-session .content-block { margin-bottom: 1.8rem !important; }
       .cta-block { padding: 4rem 1.2rem; }
       .cta-block .btn { padding: 1.2rem 3rem; }
       .session-hero-card { padding: 2.5rem 1.5rem 2rem; margin: 2rem 0 3rem; }
@@ -498,10 +518,11 @@
     }
 
     @media (max-width: 480px) {
-      .page-session .separator { margin-top: 2.8rem !important; margin-bottom: 2.8rem !important; }
-      .page-session .pull-quote { margin-top: 2.2rem !important; margin-bottom: 2.2rem !important; }
-      .page-session .def-box { margin-top: 2rem !important; margin-bottom: 2rem !important; }
-      .page-session .highlight-block { margin-top: 2rem !important; margin-bottom: 2rem !important; }
+      .page-session .separator { margin: 2.5rem 0 !important; }
+      .page-session .pull-quote { margin: 2rem 0 !important; }
+      .page-session .def-box { margin: 1.8rem 0 !important; }
+      .page-session .highlight-block { margin: 1.8rem 0 !important; }
+      .page-session .content-block { margin-bottom: 1.5rem !important; }
       .step-flow__num {
         width: 40px;
         height: 40px;
@@ -563,7 +584,7 @@
     </div>
   </section>
 
-  <!-- Spec -->
+  <!-- ━━━ What：これは何か ━━━ -->
   <section class="section">
     <div class="container">
 
@@ -575,47 +596,6 @@
           <span>事前学習不要</span>
           <span class="session-hero-card__dot">·</span>
           <span>対話のみ</span>
-        </div>
-      </div>
-
-      <hr class="separator">
-
-      <!-- 何をするか -->
-      <div class="session-accordion fade-in">
-        <div class="session-accordion__trigger" onclick="this.parentElement.classList.toggle('is-open')">
-          <h2 class="section__title section__title--left">何をするか</h2>
-        </div>
-        <p class="session-accordion__summary">対話は約二時間。扱う問いは二つだけである。</p>
-        <div class="session-accordion__body">
-
-          <div class="def-box">
-            <p class="def-box__term">Two Questions</p>
-            <p>
-              ──<strong>なぜ？</strong><br>
-              ──<strong>何のために？</strong>
-            </p>
-            <p>この２つの問いを、言葉が尽きるまで掘り下げる。</p>
-          </div>
-
-          <div class="content-block text-panel">
-            <p>
-              その過程で、あなたが「自分の意志で語ってきた」と信じていた言葉の足場が崩壊する。<br><br>
-              主語・時制・因果──あなたの語りを支えてきた編集装置が、すべて可視化される。
-            </p>
-            <p>そしてその奥に、あなたが一度も見たことのないものが現れる。</p>
-          </div>
-
-          <div class="highlight-block">
-            <p><strong>意味が、一点に収束する。それが天命である。</strong></p>
-          </div>
-
-          <div class="content-block text-panel">
-            <p>
-              事前の学習は一切不要である。<br>
-              必要なのは、自分の語りが崩壊することを恐れない覚悟だけである。
-            </p>
-          </div>
-
         </div>
       </div>
 
@@ -651,11 +631,188 @@
         </div>
       </div>
 
-      <!-- Session Navigation Cards -->
+      <!-- ━━━ Why：なぜ天命なのか ━━━ -->
       <hr class="separator">
 
+      <div class="content-block fade-in">
+        <h2 class="section__title section__title--left">なぜ天命なのか</h2>
+      </div>
+
+      <div class="content-block text-panel fade-in">
+        <p>そもそも、大半の人間は、天命など考えない。</p>
+        <p>
+          目的は生き延びることであり、人生は「正解か失敗か」で測られ、損得勘定（コスパ）がすべての判断を支配する。
+        </p>
+        <p>ビジョン、ゴール、目標、やりたいことリスト…。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>それらはすべて、自由意志構文が生み出した幻影である。<br><br>
+          その幻影を追い続ける限り、人は永遠に迷い続ける。<br><br>
+          なぜなら、<strong>存在しないものを探しているから</strong>である。</p>
+      </div>
+
+      <div class="content-block text-panel fade-in">
+        <p><strong>天命は、そのすべてを過去にする。</strong></p>
+      </div>
+
+      <div class="pull-quote fade-in">
+        <p>天命は人生そのものを「究極の遊び」に変える。</p>
+      </div>
+
+      <!-- ━━━ How：何が起こるのか ━━━ -->
+      <hr class="separator">
+
+      <div class="content-block fade-in">
+        <h2 class="section__title section__title--left">何が起こるのか</h2>
+      </div>
+
+      <!-- 対話の過程（アコーディオン） -->
+      <div class="session-accordion fade-in">
+        <div class="session-accordion__trigger" onclick="this.parentElement.classList.toggle('is-open')">
+          <h3 style="font-size: 1.1rem; letter-spacing: 0.12em; color: var(--color-gold); margin: 0;">対話の過程</h3>
+        </div>
+        <p class="session-accordion__summary">問いは二つだけ。── なぜ？ 何のために？</p>
+        <div class="session-accordion__body">
+
+          <div class="def-box">
+            <p class="def-box__term">Two Questions</p>
+            <p>
+              ──<strong>なぜ？</strong><br>
+              ──<strong>何のために？</strong>
+            </p>
+            <p>この２つの問いを、言葉が尽きるまで掘り下げる。</p>
+          </div>
+
+          <div class="content-block text-panel">
+            <p>
+              その過程で、あなたが「自分の意志で語ってきた」と信じていた言葉の足場が崩壊する。<br><br>
+              主語・時制・因果──あなたの語りを支えてきた編集装置が、すべて可視化される。
+            </p>
+            <p>そしてその奥に、あなたが一度も見たことのないものが現れる。</p>
+          </div>
+
+          <div class="highlight-block">
+            <p><strong>意味が、一点に収束する。それが天命である。</strong></p>
+          </div>
+
+          <div class="content-block text-panel">
+            <p>
+              事前の学習は一切不要である。<br>
+              必要なのは、自分の語りが崩壊することを恐れない覚悟だけである。
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 意識の変容（アコーディオン） -->
+      <div class="session-accordion fade-in">
+        <div class="session-accordion__trigger" onclick="this.parentElement.classList.toggle('is-open')">
+          <h3 style="font-size: 1.1rem; letter-spacing: 0.12em; color: var(--color-gold); margin: 0;">意識の変容</h3>
+        </div>
+        <p class="session-accordion__summary">「天命を悟り、日々全うする」──という生き方が始まる。</p>
+        <div class="session-accordion__body">
+
+          <div class="content-block text-panel">
+            <p>
+              その生き方に移行したとき、人間の意識そのものが、元に戻らない形で変容する。
+            </p>
+          </div>
+
+          <div class="def-box">
+            <p class="def-box__term">Ekstasis</p>
+            <p>
+              古代ギリシアはそれを「エクスタシス（自己の外に立つこと＝究極の恍惚体験）」と呼んだ。<br><br>
+              本研究はこれを、構造の整合が極まったときに「必然」として到来する意識の変容として再定義する。
+            </p>
+          </div>
+
+          <div class="quote-block">
+            天命に生きる人間は、迷わない。迷えない。<br><br>
+            損得勘定が消失し、比較が消失し、残りの命を何に使うかという一点だけが、澄み切った水のように残る。
+          </div>
+
+          <div class="content-block text-panel">
+            <p>
+              起こる出来事のすべてに必然を見出し、
+              気づいたときには「天命を悟り、日々全うする」という生が、すでに始まっている。
+            </p>
+            <p><strong>そのとき、意識に四つの変容が起きる。不可逆的に。</strong></p>
+          </div>
+
+          <!-- 4つの変容カード -->
+          <div class="transformation-cards">
+            <div class="transformation-card" onclick="this.classList.toggle('is-open'); var t=this.querySelector('.transformation-card__toggle'); t.textContent=this.classList.contains('is-open')?'−':'+';">
+              <p class="transformation-card__num">1</p>
+              <div class="transformation-card__header">
+                <div class="transformation-card__titles">
+                  <span class="transformation-card__en">Egolessness</span>
+                  <span class="transformation-card__ruby">エゴレスネス</span>
+                  <span class="transformation-card__sub">自我が、消える。</span>
+                </div>
+                <span class="transformation-card__toggle">+</span>
+              </div>
+              <p class="transformation-card__desc">「私が」「あなたが」という語りの境界が溶け、承認欲求も嫉妬も後悔も不安も、発生源を失って静まる。残るのは、世界と自分が分かれていなかったという、途方もない静けさだけである。</p>
+            </div>
+            <div class="transformation-card" onclick="this.classList.toggle('is-open'); var t=this.querySelector('.transformation-card__toggle'); t.textContent=this.classList.contains('is-open')?'−':'+';">
+              <p class="transformation-card__num">2</p>
+              <div class="transformation-card__header">
+                <div class="transformation-card__titles">
+                  <span class="transformation-card__en">Effortlessness</span>
+                  <span class="transformation-card__ruby">エフォートレスネス</span>
+                  <span class="transformation-card__sub">努力が、消える。</span>
+                </div>
+                <span class="transformation-card__toggle">+</span>
+              </div>
+              <p class="transformation-card__desc">「やる気」という概念が意味を失う。天命に整合した行動は、意志ではなく構造によって起きる。呼吸するように動き、一を聞いて十が見え、かつて困難だったすべてが、嘘のように軽くなる。</p>
+            </div>
+            <div class="transformation-card" onclick="this.classList.toggle('is-open'); var t=this.querySelector('.transformation-card__toggle'); t.textContent=this.classList.contains('is-open')?'−':'+';">
+              <p class="transformation-card__num">3</p>
+              <div class="transformation-card__header">
+                <div class="transformation-card__titles">
+                  <span class="transformation-card__en">Timelessness</span>
+                  <span class="transformation-card__ruby">タイムレスネス</span>
+                  <span class="transformation-card__sub">時間が、消える。</span>
+                </div>
+                <span class="transformation-card__toggle">+</span>
+              </div>
+              <p class="transformation-card__desc">過去は後悔を生まず、未来は不安を生まず、「今」だけが際限なく広がる。数分が永遠に、数時間が一瞬に。あなたはもう、時間に追われない。時間の外に、立っている。</p>
+            </div>
+            <div class="transformation-card" onclick="this.classList.toggle('is-open'); var t=this.querySelector('.transformation-card__toggle'); t.textContent=this.classList.contains('is-open')?'−':'+';">
+              <p class="transformation-card__num">4</p>
+              <div class="transformation-card__header">
+                <div class="transformation-card__titles">
+                  <span class="transformation-card__en">Richness</span>
+                  <span class="transformation-card__ruby">リッチネス</span>
+                  <span class="transformation-card__sub">世界が豊かに、美しく輝く。</span>
+                </div>
+                <span class="transformation-card__toggle">+</span>
+              </div>
+              <p class="transformation-card__desc">五感が開き、視界が変わる。濃密に、多層的に立ち現れる。花の色が違う。空気の手触りが違う。すべてが必然として輝き、世界そのものが、圧倒的な「豊かさ」として溢れ出す。</p>
+            </div>
+          </div>
+
+          <div class="content-block text-panel">
+            <p>
+              自我が消え、努力が消え、時間が消え、
+              世界が立ち上がったとき、あなたはようやく知る。<br><br>
+              「生きる」とは、こういうことだったのかと。
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ━━━ Now：次のステップ ━━━ -->
+      <hr class="separator">
+
+      <!-- コメントアウト：旧見出し（テキスト保全原則） -->
+      <!-- <div class="content-block fade-in">
+        <h2 class="section__title section__title--left">セッションを受けるとどうなるのか？</h2>
+      </div> -->
+
       <div class="content-block fade-in" style="margin-top: 1rem;">
-        <h2 class="section__title">セッションの詳細</h2>
         <div class="session-nav-cards">
           <a href="trial.html" class="session-nav-card">
             <p class="session-nav-card__label">Free Trial</p>
@@ -684,103 +841,6 @@
         </div>
       </div>
 
-      <hr class="separator">
-
-      <div class="content-block fade-in">
-        <h2 class="section__title section__title--left">セッションを受けるとどうなるのか？</h2>
-      </div>
-
-      <div class="pull-quote fade-in">
-        <p>天命は人生そのものを「究極の遊び」に変える。</p>
-      </div>
-
-      <!-- 意識の変容について（アコーディオン） -->
-      <div class="session-accordion fade-in">
-        <div class="session-accordion__trigger" onclick="this.parentElement.classList.toggle('is-open')">
-          <h3 style="font-size: 1.1rem; letter-spacing: 0.12em; color: var(--color-gold); margin: 0;">意識の変容について</h3>
-        </div>
-        <p class="session-accordion__summary">「天命を悟り、日々全うする」──という生き方が始まる。</p>
-        <div class="session-accordion__body">
-
-          <div class="content-block text-panel">
-            <p>
-              その生き方に移行したとき、人間の意識そのものが、元に戻らない形で変容する。
-            </p>
-          </div>
-
-          <div class="def-box">
-            <p class="def-box__term">Ekstasis</p>
-            <p>
-              古代ギリシアはそれを「エクスタシス（自己の外に立つこと＝究極の恍惚体験）」と呼んだ。<br><br>
-              本研究はこれを、構造の整合が極まったときに「必然」として到来する意識の変容として再定義する。
-            </p>
-          </div>
-
-          <div class="content-block text-panel">
-            <p>そもそも、大半の人間は、天命など考えない。</p>
-            <p>
-              目的は生き延びることであり、人生は「正解か失敗か」で測られ、損得勘定（コスパ）がすべての判断を支配する。
-            </p>
-            <p>ビジョン、ゴール、目標、やりたいことリスト…。</p>
-          </div>
-
-          <div class="highlight-block">
-            <p>それらはすべて、自由意志構文が生み出した幻影である。<br><br>
-              その幻影を追い続ける限り、人は永遠に迷い続ける。<br><br>
-              なぜなら、<strong>存在しないものを探しているから</strong>である。</p>
-          </div>
-
-          <div class="content-block text-panel">
-            <p><strong>天命は、そのすべてを過去にする。</strong></p>
-          </div>
-
-          <div class="quote-block">
-            天命に生きる人間は、迷わない。迷えない。<br><br>
-            損得勘定が消失し、比較が消失し、残りの命を何に使うかという一点だけが、澄み切った水のように残る。
-          </div>
-
-          <div class="content-block text-panel">
-            <p>
-              起こる出来事のすべてに必然を見出し、
-              気づいたときには「天命を悟り、日々全うする」という生が、すでに始まっている。
-            </p>
-            <p><strong>そのとき、意識に四つの変容が起きる。不可逆的に。</strong></p>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- 4つの変容カード -->
-      <div class="transformation-cards fade-in">
-        <div class="transformation-card" onclick="this.classList.toggle('is-open')">
-          <p class="transformation-card__num">1</p>
-          <h4 class="transformation-card__title">エゴレスネス｜自我が、消える。</h4>
-          <p class="transformation-card__desc">「私が」「あなたが」という語りの境界が溶け、承認欲求も嫉妬も後悔も不安も、発生源を失って静まる。残るのは、世界と自分が分かれていなかったという、途方もない静けさだけである。</p>
-        </div>
-        <div class="transformation-card" onclick="this.classList.toggle('is-open')">
-          <p class="transformation-card__num">2</p>
-          <h4 class="transformation-card__title">エフォートレスネス｜努力が、消える。</h4>
-          <p class="transformation-card__desc">「やる気」という概念が意味を失う。天命に整合した行動は、意志ではなく構造によって起きる。呼吸するように動き、一を聞いて十が見え、かつて困難だったすべてが、嘘のように軽くなる。</p>
-        </div>
-        <div class="transformation-card" onclick="this.classList.toggle('is-open')">
-          <p class="transformation-card__num">3</p>
-          <h4 class="transformation-card__title">タイムレスネス｜時間が、消える。</h4>
-          <p class="transformation-card__desc">過去は後悔を生まず、未来は不安を生まず、「今」だけが際限なく広がる。数分が永遠に、数時間が一瞬に。あなたはもう、時間に追われない。時間の外に、立っている。</p>
-        </div>
-        <div class="transformation-card" onclick="this.classList.toggle('is-open')">
-          <p class="transformation-card__num">4</p>
-          <h4 class="transformation-card__title">リッチネス｜世界が豊かに、美しく輝く。</h4>
-          <p class="transformation-card__desc">五感が開き、視界が変わる。濃密に、多層的に立ち現れる。花の色が違う。空気の手触りが違う。すべてが必然として輝き、世界そのものが、圧倒的な「豊かさ」として溢れ出す。</p>
-        </div>
-      </div>
-
-      <div class="content-block text-panel fade-in">
-        <p>
-          自我が消え、努力が消え、時間が消え、
-          世界が立ち上がったとき、あなたはようやく知る。<br><br>
-          「生きる」とは、こういうことだったのかと。
-        </p>
-      </div>
     </div>
   </section>
 
