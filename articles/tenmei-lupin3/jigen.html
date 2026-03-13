@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-lupin3/jigen.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>次元大介のMeta &mdash;&mdash; 自由意志なき世界の天命論 | 実存科学研究所</title>
+  <meta name="description" content="『ルパン三世 カリオストロの城』の次元大介を、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。黙って隣にいることには、返済がない。だから壊れない。">
+  <meta property="og:title" content="次元大介のMeta &mdash;&mdash; 自由意志なき世界の天命論 | 実存科学研究所">
+  <meta property="og:description" content="『ルパン三世 カリオストロの城』の次元大介を、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。黙って隣にいることには、返済がない。だから壊れない。">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="実存科学研究所">
+  <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+  <meta property="og:url" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-lupin3/jigen.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.min.css?v=14">
+
+<style>
+/* =============================================
+   視認性・読みやすさ強化CSS
+   ============================================= */
+
+/* === 1. 章見出し — 中央配置＋装飾 === */
+h2.chapter-heading {
+  font-size: var(--fs-section);
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  color: var(--color-text-primary);
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  position: relative;
+  padding-top: 2rem;
+}
+h2.chapter-heading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 1px;
+  background: var(--color-gold);
+}
+h2.chapter-heading::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(192,168,120,0.5), transparent);
+  margin: 1.2rem auto 0;
+}
+.chapter-number {
+  display: block;
+  font-family: var(--font-serif-en);
+  font-size: var(--fs-caption);
+  font-weight: 400;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 0.6rem;
+}
+
+/* === 2. 区切り線 — 装飾付き === */
+hr {
+  border: none;
+  height: auto;
+  background: none;
+  margin: 4.5rem 0;
+  text-align: center;
+  overflow: visible;
+}
+hr::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(192,168,120,0.08) 15%, rgba(192,168,120,0.2) 50%, rgba(192,168,120,0.08) 85%, transparent 100%);
+}
+hr::after {
+  content: "\25C6";
+  display: block;
+  font-size: 0.5rem;
+  color: rgba(192,168,120,0.3);
+  margin-top: -0.35em;
+  letter-spacing: 1em;
+  line-height: 1;
+}
+
+/* === 3. セッション対話 — 読みやすさ向上 === */
+.session-dialogue {
+  max-width: 680px;
+  margin: 2.5rem auto;
+  padding: 2.5rem 2rem;
+  background: rgba(10, 8, 18, 0.35);
+  border: 1px solid rgba(192,168,120,0.06);
+  border-radius: 2px;
+  position: relative;
+}
+.session-dialogue::before {
+  content: "SESSION";
+  position: absolute;
+  top: -0.6em;
+  left: 2rem;
+  font-family: var(--font-serif-en);
+  font-size: var(--fs-micro);
+  letter-spacing: 0.3em;
+  color: rgba(192,168,120,0.4);
+  background: var(--color-bg-deep);
+  padding: 0 0.8rem;
+}
+.session-dialogue p {
+  margin-bottom: 1.1em;
+  line-height: 2.2;
+}
+.session-dialogue .speaker-yanai { color: var(--color-gold); font-weight: 600; font-size: var(--fs-body); }
+.session-dialogue .speaker-jigen { color: var(--color-text-body); font-weight: 600; font-size: var(--fs-body); }
+
+/* 箭内の発言：金色の左ボーダー */
+.session-dialogue .line-yanai {
+  border-left: 2px solid rgba(192,168,120,0.15);
+  padding-left: 1.2rem;
+}
+/* キャラの発言：少しインデント */
+.session-dialogue .line-character {
+  margin-left: 1.4rem;
+}
+/* 沈黙マーカー：中央揃え＋装飾線 */
+.session-dialogue .silence {
+  color: rgba(235,232,225,0.3);
+  font-style: italic;
+  text-align: center;
+  margin: 2em 0;
+  font-size: var(--fs-small);
+  letter-spacing: 0.15em;
+}
+.session-dialogue .silence::before,
+.session-dialogue .silence::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: rgba(192,168,120,0.15);
+  vertical-align: middle;
+  margin: 0 1em;
+}
+/* 10発言ごとの視覚リズム */
+.session-dialogue p:nth-child(10n) {
+  margin-bottom: 2em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid rgba(192,168,120,0.06);
+}
+
+/* === 4. text-panel の単調さ解消 === */
+section > .text-panel:nth-of-type(even) {
+  background: rgba(8, 6, 16, 0.45);
+  border-color: transparent;
+}
+section > .text-panel:nth-of-type(even)::before {
+  display: none;
+}
+
+/* === 5. highlight-block の存在感微増 === */
+.highlight-block {
+  background: rgba(192,168,120,0.06);
+  border-left: 2px solid;
+  border-image: linear-gradient(180deg, var(--color-gold) 0%, rgba(192,168,120,0.15) 100%) 1;
+  padding: 2rem 2rem 2rem 2.2rem;
+  margin: 2.5rem 0;
+}
+.highlight-block p {
+  font-size: var(--fs-lead);
+  font-weight: 500;
+  line-height: 2.2;
+  color: var(--color-text-primary);
+}
+
+/* === 6. セクション見出し（h3） === */
+h3.section-heading {
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  color: var(--color-text-body);
+  letter-spacing: 0.08em;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1.2rem;
+  border-left: 2px solid rgba(192,168,120,0.4);
+  line-height: 1.6;
+}
+
+/* === Profiling Block === */
+.profiling-block {
+  background: rgba(15,12,25,0.5);
+  border: 1px solid rgba(192,168,120,0.1);
+  padding: 2.5rem 2rem;
+  margin: 2rem 0;
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+.profiling-block::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(192,168,120,0.4), transparent);
+}
+.profiling-block h3 {
+  font-size: var(--fs-body);
+  color: var(--color-gold);
+  letter-spacing: 0.15em;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(192,168,120,0.1);
+}
+.profiling-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+.profiling-block ul li {
+  margin-bottom: 1rem;
+  color: var(--color-text-reading);
+  font-size: var(--fs-body);
+  line-height: 1.9;
+  padding-left: 1.6em;
+  position: relative;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(192,168,120,0.04);
+}
+.profiling-block ul li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.profiling-block ul li::before {
+  content: "\2500\2500";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgba(192,168,120,0.35);
+  font-size: 0.75em;
+}
+
+/* === Comparison Table === */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: var(--fs-body);
+}
+.comparison-table th,
+.comparison-table td {
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(192,168,120,0.12);
+  text-align: left;
+}
+.comparison-table th {
+  background: rgba(192,168,120,0.08);
+  color: var(--color-gold);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  font-size: var(--fs-small);
+}
+.comparison-table td { color: var(--color-text-reading); }
+
+/* === CTA Block === */
+.cta-block {
+  background: rgba(192,168,120,0.06);
+  border: 1px solid rgba(192,168,120,0.2);
+  padding: 2.5rem 2rem;
+  margin: 3rem 0;
+  text-align: center;
+}
+.cta-block h3 {
+  font-size: var(--fs-h3);
+  color: var(--color-text-body);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.cta-block p {
+  font-size: var(--fs-body);
+  color: var(--color-text-reading);
+  line-height: 2.2;
+  margin-bottom: 1.2rem;
+}
+.cta-block .cta-btn {
+  display: inline-block;
+  padding: 0.8rem 2.5rem;
+  background: var(--color-gold);
+  color: #080610;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: var(--fs-body);
+  letter-spacing: 0.1em;
+  transition: opacity 0.2s;
+  border-bottom: none;
+}
+.cta-block .cta-btn:hover { opacity: 0.8; }
+
+/* === Author Block === */
+.author-block {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(192,168,120,0.15);
+}
+.author-block p { font-size: var(--fs-body); color: var(--color-text-reading); line-height: 2; }
+.author-block strong { color: var(--color-text-body); }
+
+/* === Source Note === */
+.source-note {
+  margin-top: 2rem;
+  font-size: var(--fs-small);
+  color: rgba(235,232,225,0.35);
+}
+
+/* === Series Note === */
+.series-note {
+  margin-top: 2rem;
+  padding: 1.5rem 2rem;
+  background: rgba(192,168,120,0.04);
+  border: 1px solid rgba(192,168,120,0.1);
+  font-size: var(--fs-body);
+  color: var(--color-text-reading);
+  line-height: 2;
+}
+
+/* === 7. モバイル対応 === */
+@media (max-width: 600px) {
+  h2.chapter-heading {
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    padding-top: 1.5rem;
+  }
+  .chapter-number {
+    font-size: var(--fs-micro);
+    letter-spacing: 0.25em;
+    margin-bottom: 0.4rem;
+  }
+  h3.section-heading {
+    font-size: var(--fs-lead);
+    margin-top: 2rem;
+    padding-left: 1rem;
+  }
+  hr { margin: 3rem 0; }
+  .session-dialogue {
+    padding: 1.5rem 1.2rem;
+    margin: 2rem auto;
+  }
+  .session-dialogue .line-yanai { padding-left: 0.8rem; }
+  .session-dialogue .line-character { margin-left: 0.8rem; }
+  .profiling-block { padding: 1.5rem 1.2rem; }
+  .cta-block { padding: 2rem 1.2rem; }
+  .comparison-table { font-size: var(--fs-xs); }
+  .comparison-table th, .comparison-table td { padding: 0.5rem 0.6rem; }
+  .highlight-block { padding: 1.5rem 1.2rem 1.5rem 1.4rem; }
+  .text-panel { padding: 2rem 1.5rem; }
+}
+@media (max-width: 480px) {
+  .text-panel p br,
+  .pull-quote p br,
+  .highlight-block p br,
+  .def-box p br,
+  .session-dialogue p br { display: none; }
+  h2.chapter-heading { font-size: var(--fs-h3); }
+  .session-dialogue p:nth-child(10n) {
+    margin-bottom: 1.5em;
+    padding-bottom: 1em;
+  }
+}
+</style>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="../../index.html" class="site-logo">実存科学研究所</a>
+      <button class="search-toggle" aria-label="検索"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+            <nav class="global-nav">
+        <a href="../../index.html">Top</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">The Meta</button>
+          <div class="nav-dropdown__menu">
+            <a href="../../beginner.html">はじめての方へ</a>
+            <a href="../../lp.html">ダークサイド診断</a>
+            <a href="../../omoidasu/">身体的知性診断</a>
+          </div>
+        </div>
+        <a href="../../session.html">Session</a>
+        <a href="../../founder.html">Founder</a>
+        <a href="../../specials.html">Specials</a>
+      </nav>
+    </div>
+  </header>
+  <div class="reading-progress"></div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="パンくずリスト">
+        <ol class="breadcrumb__list">
+          <li class="breadcrumb__item"><a href="../../index.html" class="breadcrumb__link">TOP</a></li>
+          <li class="breadcrumb__item"><a href="../../specials.html" class="breadcrumb__link">Specials</a></li>
+          <li class="breadcrumb__item"><a href="./" class="breadcrumb__link">ルパン三世篇</a></li>
+          <li class="breadcrumb__item"><span class="breadcrumb__current">次元大介のMeta</span></li>
+        </ol>
+      </nav>
+      <p class="page-hero__sub">Lupin the Third &times; Existential Science</p>
+      <h1>次元大介のMeta<br>&mdash;&mdash; 自由意志なき世界の天命論</h1>
+      <p class="page-hero__lead">箭内宏紀｜実存科学研究所</p>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <!-- ========== ネタバレ注意 ========== -->
+    <div class="text-panel fade-in">
+      <p style="font-size:0.85rem; color:rgba(235,232,225,0.5); text-align:center;">※本稿は『ルパン三世 カリオストロの城』および『ルパン三世』フランチャイズ全体のネタバレを含みます。</p>
+    </div>
+
+    <!-- ========== 導入 ========== -->
+    <section class="fade-in">
+
+      <div class="text-panel fade-in">
+        <p>彼は、タバコに火をつけた。</p>
+        <p>カリオストロの城が崩れ、湖底からローマの遺跡が姿を現し、銭形警部が「ヤツはとんでもないものを盗んでいきました」と叫んだあの日の午後。ルパン三世がクラリスとの別れを終え、くたびれたフィアット500に戻ってきたとき、次元大介は後部座席に身を置いていた。</p>
+        <p>何も言わなかった。</p>
+        <p>「辛かったな」とも、「馬鹿な真似を」とも、「なぜ連れてこなかったんだ」とも言わない。彼はただ、ポケットからショートピースを取り出し、使い古したジッポで火をつけ、窓の外に目をやった。煙が地中海の午後の風に吸い込まれていく。ルパンがエンジンをかける。フィアットがゆっくりと動き出す。二人の間に、一言も交わされない。</p>
+        <p>それだけだった。</p>
+        <p>0.3秒で引き金を引ける男が、百二十分の映画の結末で選んだ行為が&mdash;&mdash;タバコに火をつけることだった。世界最高峰の射撃手。単独で国家権力と対峙し、対戦車ライフルで城の装甲車を吹き飛ばした男。その男が最後に行使した力は、ジッポの回転火石を親指で擦る、ただそれだけの動作だった。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>彼が帽子を目深に被るのは、世界を見たくないからではない。世界に見られたくないからだ。自分が何者であるかを、言葉にしたくないからだ。</p>
+        <p>なぜか。</p>
+        <p>言葉にしてしまえば、それは「維持しなければならない約束」に変わる。約束は借用書だ。いつか返済を求められる。半世紀、一度もそんな野暮な真似をしなかった男が、今さら口を開けるわけがない。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>黙って隣にいることには、返済がない。だから壊れない。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>その問いの先に、天命がある。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== シャドウ・プロファイリング ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Shadow Profiling</span>シャドウ・プロファイリング</h2>
+
+      <div class="profiling-block fade-in">
+        <h3>【Meta（変えられない前提条件）】</h3>
+        <ul>
+          <li>ニューヨーク・ブロンクス出身。幼少期からマフィア組織に身を置き、ジョー・オブ・スペーズの下で銃の手ほどきを受けた。南米での傭兵生活、ヨーロッパのイタリアン・マフィアへの参画&mdash;&mdash;常に「死と隣り合わせの孤独なガンマン」としての前史を持つ</li>
+          <li>S&amp;W M19コンバットマグナム、ボルサリーノ帽、一日六十本のタバコ&mdash;&mdash;銃（他者への力）、帽子（自己への防壁）、タバコ（内面の鎮静）。この三点のみで自己を完結させる</li>
+          <li>カトリーヌ・モロとの離別、チッチョリーナによる偽装自殺事件&mdash;&mdash;「他者を無防備に信じることは致命的である」という学習がMetaの記憶層に刻まれた</li>
+          <li>0.3秒の早撃ち&mdash;&mdash;自らの存在理由を「決定的な瞬間に致死的な力を正確に行使すること」という単一の機能へ還元している</li>
+          <li>休息時の身体は猫背で気怠い。行動時には一瞬にして爆発的かつ精密な動作を見せ、直後に即座に静止へ戻る。「道具としての肉体」を完成させた男</li>
+        </ul>
+      </div>
+
+      <div class="profiling-block fade-in">
+        <h3>【シャドウ（抑圧された本音）】</h3>
+        <ul>
+          <li>覆い方の類型： 偽装されたゴールデンシャドウ（偽装＋光のシャドウの複合態）</li>
+          <li>ペイン構造： S4（本音を出したら居場所を失う）が主軸。S7（受け取ったら壊れる）が副軸。S2（この役割を脱いだら空っぽだ）が最深部</li>
+          <li>核心：「私は一人では存在できない」&mdash;&mdash;孤独なガンマンとして生存する能力を完全に持ちながら、ルパンの隣でしか実存的に「生きる」ことができない。しかしこれを認めることは、自立したプロのガンマンとしてのアイデンティティの崩壊を意味する</li>
+          <li>深層の欲求： 絶対に裏切らない他者との永続的な絆。しかしそれを「欲求」として自覚することすら拒絶している</li>
+          <li>代償行動：「腐れ縁だ」「付き合ってやるぜ」という皮肉で忠誠を偽装する。女性不信を盾にして、ロマンチックな関係がもたらす裏切りのリスクを予防的に排除する。銃の話題に逃げ込み、内面の問いを機能の話にすり替える</li>
+          <li>止まれない理由： ルパンの傍らにいること以外に自己の存在を証明する方法を持たない。「ルパンの相棒」という役割を剥奪されたとき、残るのは「銃と帽子を持ったただの男」</li>
+        </ul>
+      </div>
+
+      <div class="profiling-block fade-in">
+        <h3>【対比：ルパン三世との構造的比較】</h3>
+        <p style="color:var(--color-text-reading); line-height:2; margin-bottom:1.5rem;">同じフィアットの中で隣り合う二人。ルパンさんは「受け取ること」を恐れる男だ&mdash;&mdash;クラリスさんからの愛を受け取れば、泥棒としての自由が死ぬ。対して次元さんが恐れているのは「言葉にすること」そのものだ。ルパンさんは愛を受け取れないから去る。次元さんは忠誠を言葉にできないから黙る。受け取れないものは違う。だが、二人の恐怖はあのフィアットの中で完璧に噛み合っている。</p>
+        <table class="comparison-table">
+          <tr><th>比較軸</th><th>ルパン三世</th><th>次元大介</th></tr>
+          <tr><td>世界への介入方法</td><td>変装&mdash;&mdash;他者になるための自己拡張</td><td>帽子&mdash;&mdash;自己を隠蔽するための収縮</td></tr>
+          <tr><td>言語の機能</td><td>発散&mdash;&mdash;長広舌、冗談、無謀な計画の語り</td><td>収束&mdash;&mdash;短い肯定、皮肉、沈黙</td></tr>
+          <tr><td>天命の方向性</td><td>解放者（Liberator）&mdash;&mdash;障壁を突破する</td><td>不可欠条件（Enabler）&mdash;&mdash;解放を可能にする基盤</td></tr>
+          <tr><td>身体性</td><td>流動的、アクロバティック、道化の柔らかさ</td><td>経済的、爆発的かつ精密、即座に静止へ戻る</td></tr>
+          <tr><td>感情の表出</td><td>過剰に見せる（しかし核心は隠す）</td><td>過剰に隠す（しかし行動ですべてを示す）</td></tr>
+          <tr><td>シャドウの構造</td><td>善良さを「泥棒」で偽装</td><td>深い献身を「プロ」で偽装</td></tr>
+        </table>
+      </div>
+
+      <div class="profiling-block fade-in">
+        <h3>【天命への転換点】</h3>
+        <ul>
+          <li>喪失： ルパンと出会う以前の全人生&mdash;&mdash;殺し屋としての空虚な実存。弾は的に当たっていた。しかしそれだけだ。当たっても、何も変わらない。金が入り、次の依頼が来る</li>
+          <li>反転： ルパンとの邂逅。予測不可能でありながら、絶対に自分を裏切らない存在との出会い。閉ざされた「信頼の回路」が、初めて安全な対象に向けて全量投下された</li>
+          <li>天命の萌芽： 自らの弾丸に「意味」が宿った瞬間&mdash;&mdash;彼の弾が壁を崩し、崩れた壁の向こうからルパンが誰かを連れ出す。一人で撃っていた弾が、世界を変える男の道を拓く弾になった</li>
+        </ul>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>&mdash;&mdash;ここまでが、次元大介さんの構造の地図だ。</p>
+        <p>しかし、地図は地図でしかない。帽子の奥で何を見つめ、何を黙殺し、何を守り続けてきたのか。それが本人の口から、本人の声で露呈する瞬間を、見届けてほしい。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== セッション対話 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Session</span>天命の言語化セッション&trade;</h2>
+
+      <div class="session-dialogue fade-in">
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>次元さん、セッションに来てくださってありがとうございます。あなたはあなたに何をプレゼントしてあげたいですか？</p>
+        <p class="silence">（長い沈黙。ボルサリーノ帽のツバが深く落ち、目元は完全に隠れている。口元にくわえたタバコの先端だけが、かすかに明滅する。彼は無意識のうちに出口の位置、射線、死角を確認している）</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;プレゼント？</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>ふん。&hellip;&hellip;不二子みたいなことを言うな、あんた。プレゼント、プレゼントっていうのは、女が男から何か巻き上げるときに使う言葉だろう。俺にゃ関係のない話だ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、関係ないんですか？</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>俺に必要なのは、弾と、タバコと、まともな依頼だけだ。それ以外は荷物になる。走るとき邪魔になるんだよ。&hellip;&hellip;あんた、そんなことも分からないのか。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;まあいい。プレゼントか。そうだな。もう一箱タバコでも買ってやるか。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、タバコなんですか？</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;タバコは裏切らねえ。火をつけりゃ燃える。吸えば煙が出る。余計なことはしない。期待もさせない。借りも作らない。手のかからない相棒ってやつだ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「裏切らない」？</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>ああ。</p>
+        <p class="silence">（タバコの煙がゆっくりと天井に向かう。次元は窓の方に目をやる）</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、「裏切らないもの」をプレゼントしたいんですか？</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;変な聞き方をするな。裏切るものが欲しい物好きがどこにいる。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="silence">（長い沈黙。次元は腕を組み、椅子の背にもたれかかる。入り口を一瞥する。彼にとって閉じた部屋は&mdash;&mdash;逃げ場のない場所は&mdash;&mdash;構造的に危険な空間だ）</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;あんた、何が聞きたいんだ。回りくどいのは性に合わないんでね。銃口を向けるなら、さっさと向けてくれ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;。S&amp;W M19コンバットマグナムの話なら一晩でもしてやるがね。シリンダーの回転速度、ハンマースプリングのテンション調整、トリガープルの重量&mdash;&mdash;あんたが退屈で眠っちまうまで付き合うぜ。だが、心の中身なんてのは、撃鉄を下ろす役には立たねえ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;乗ってこないねえ。愛想のない男だな、あんた。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="silence">（沈黙が続く。次元はゆっくりとタバコを灰皿に押しつけ、新しい一本を取り出す。帽子のツバを指で押し下げる&mdash;&mdash;「これ以上踏み込むな」という物理的な防壁の再構築）</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;そういう面倒な話なら、あいつに聞くんだな。ルパンに。あいつはこういう話が好きだ。女口説くのと同じノリでぺらぺら喋るよ。俺はただの運転手兼ボディガードだ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、「ただの」なんですか？</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>事実だからだよ。あいつが計画を立てる。俺が援護する。それだけの関係だ。ビジネスパートナーってやつさ。対等なね。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、「対等」という言葉を使うんですか？</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;何だ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;対等じゃなけりゃ何だっていうんだ。俺はあいつの子分じゃないし、あいつも俺の親分じゃない。単純な話だろう。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「単純」？</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>ああ。単純だ。あいつが行くところに、俺も行く。それだけだ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、あいつが行くところに、次元さんも行くんですか？</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>腕が必要だからだよ。あいつ一人じゃ、銃撃戦になったとき持たない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;それに、あいつは無茶をやるんだ。女が絡むとろくなことにならない。不二子に引っかかって何度死にかけたか、数える気にもならねえ。誰かが見ていなけりゃ&mdash;&mdash;</p>
+        <p class="silence">（言葉が途切れる。タバコを深く吸い、煙を長く吐く）</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「誰かが見ていなけりゃ」？</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;いいんだよ。別に。あいつは大人だ。ルパン三世だぞ。自分の面倒くらい&mdash;&mdash;</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;見られるはずだろう。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「はずだろう」？</p>
+        <p class="silence">（長い沈黙）</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;見られるさ。俺なんかいなくたって、やっていける。あいつは天才だ。俺とは格が違う。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;ただの泥棒じゃない。あいつの頭の中には、俺には見えない世界が広がっている。壁の向こう、金庫の向こう、誰にも見えないものを見て、手を伸ばして、開けちまう。そういう男だ。俺なんかいなくたって&mdash;&mdash;</p>
+        <p class="silence">（同じ言葉が、二度繰り返される）</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;いなくたって、やっていける。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、やめるんですか？</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;何を。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;あいつの話をしに来たんじゃねえ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;。</p>
+        <p class="silence">（長い沈黙。タバコが短くなっていく。次元は新しい一本を取り出さない）</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;感情だの愛だのってのが知りたいなら、不二子にでも聞くんだな。あの手の女は、甘い言葉で男を地獄に落とすのが得意だからな。俺は御免こうむる。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;あんた、帰っていいか。カリオストロの後片付けがまだ残ってるんだ。フィアットのキャブレターも調子が悪い。ルパンの運転は荒えからな、あの車はいつも&mdash;&mdash;</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="silence">（次元は立ち上がりかける。そして、止まる。帽子のツバに手をかけたまま、座り直す）</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;帰れねえな。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;ちくしょう。</p>
+        <p class="silence">（低く、押し殺した声。怒りではない。自分自身への苦い笑い）</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;あんた、さっき聞いたな。俺が俺にプレゼントしたいものは何か、って。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;わかったよ。答えてやる。タバコなんかじゃない。本当は。</p>
+        <p class="silence">（帽子を微かに持ち上げる。目元はまだ見えないが、声の温度がほんの少し変わる）</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;一人で銃を抱えて眠らなくていい夜だ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>あいつに会う前&mdash;&mdash;傭兵のとき、殺し屋のとき&mdash;&mdash;俺は毎晩、マグナムを枕元に置いて眠ってた。ドアに背を向けたことは一度もない。壁を背にして、銃を握って、目を閉じる。目を閉じるっていうのは、正確じゃないな。意識を薄くする、くらいが正しい。熟睡したことなんか、なかったんだ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、そうしていたんですか？</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;信じた相手から渡されたのは、裏切りっていう名の凶弾だった。</p>
+        <p class="silence">（声が低くなる。帽子が深く下がる）</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>チッチョリーナ&mdash;&mdash;あの女は、自分の死に俺を巻き込む形で偽装自殺をやった。俺に殺人の罪と、消えねえ傷を残して。あの日から、誰かに背中を見せることは&mdash;&mdash;死ぬことと同義になった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;カトリーヌのときも、そうだ。信じて、背中を見せて、撃たれた。比喩じゃないぜ。本当に撃たれたんだ。この体に残ってる弾痕の半分は、敵からもらったんじゃない。信じた奴からもらったもんだ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;だから、眠るときは銃を握る。背中を壁につける。それが俺の「安全」だった。安全っていうか&mdash;&mdash;生きるために必要な最低限の儀式だ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;だが、あいつは&mdash;&mdash;</p>
+        <p class="silence">（言葉が詰まる。タバコを灰皿に押しつけるが、すぐに新しい一本を取り出す。指がわずかに震えている）</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>ルパンは&mdash;&mdash;あいつだけは、俺の背中を撃つ銃に弾を込めなかった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>五十年だ。五十年、背中を預けて、一度も。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;それがどれだけのことか、あんたに分かるか。人間の一生を、まるまる一人の男に預けたんだ。毎日、毎晩、あいつの隣で眠って&mdash;&mdash;銃を握らずに。壁に背をつけずに。&hellip;&hellip;生まれて初めて、ぐっすり眠れた夜のことを、俺は覚えている。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;だから、タバコなんかじゃねえ。</p>
+        <p class="silence">（帽子のツバをゆっくりと上げる&mdash;&mdash;しかし、すぐにまた下ろす。見せかけて、隠す）</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>一人で銃を抱えて眠らなくていい理由を&mdash;&mdash;あいつがくれた。それだけで十分だ。それ以上、何を望むっていうんだ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、「それ以上、何を望む」と聞き返すんですか？</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;何だ？</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、「十分だ」で終わりにしたいんですか？</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>十分だからだよ。俺は贅沢な人間じゃない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;あいつの隣にいられる。それで&mdash;&mdash;</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;それで全部だ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「全部」？</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>ああ。全部だ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;。</p>
+        <p class="silence">（沈黙が深くなる。次元は立ち上がりかける。帽子に手をかける。そして、また、止まる）</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;あんた。一つ、聞いていいか。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>俺はこれまで、言葉にしたことがない。あいつに対しても、ルパンに対しても。「お前がいなければ空虚だ」とか、「二度と置いていくな」とか&mdash;&mdash;そんなことは一度も。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜですか？</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;言葉にしちまったら、それは「維持しなきゃならねえ約束」に変わっちまう。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;約束ってのは借用書だ。「あのとき、こう言ったじゃないか」と、いつか返済を求められる。俺たちは半世紀、一度もそんな野暮な真似はしてこなかった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>ただ、隣にいる。朝起きたら、あいつがフィアットのボンネットに座ってコーヒーを飲んでる。夜になったら、どっちからともなく火を消す。それだけだ。言葉なんかなくても、あいつが行くなら俺も行く。理由は&mdash;&mdash;要らない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、理由が要らないんですか？</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;。</p>
+        <p class="silence">（長い沈黙。次元はタバコの煙を見つめている。その煙が天井に消えていくのを、ただ見ている）</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;理由をつけたら、壊れるからだ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>あの女たちのとき&mdash;&mdash;カトリーヌのとき、チッチョリーナのとき&mdash;&mdash;理由があった。「愛している」っていう理由が。愛してるから信じた。信じたから背中を見せた。背中を見せたから&mdash;&mdash;撃たれた。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;理由ってのは、照準器だ。あんた。狙いが定まるってことは、狙い返されるってことでもある。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>あいつとの間には、照準器がない。狙い合わない関係だ。だから&mdash;&mdash;五十年、持った。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;黙って隣にいることには、返済がない。約束も、理由も、言葉も&mdash;&mdash;全部、返済を求めてくる。だが、タバコに火をつけて、助手席で黙っていることには、誰も返済を求めない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>だから壊れない。</p>
+        <p class="silence">（声が低く、静かになる。ほとんど独り言に近い）</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;分かるか、あんた。俺が黙ってるのは、冷てえからじゃない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>壊したくねえから、黙ってるんだ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="silence">（長い沈黙。タバコが灰皿の上で燃え尽きる。次元は新しい一本を取り出さない。初めて、手が空になる）</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;カリオストロの最後のことを、覚えてるか。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>あいつは&mdash;&mdash;ルパンは&mdash;&mdash;あのお姫様から離れることを選んだ。自分が本当に欲しいものを手放した。泥棒の汚れから、あの子を遠ざけたんだ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;あいつがフィアットに戻ってきたとき、俺は何も言わなかった。「辛かったな」とも、「馬鹿だな」とも。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜですか？</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;そんな言葉は、あいつを安くする。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>あいつがやったことは&mdash;&mdash;自分の欲望よりも、誰かの未来を選んだってことだ。あの城から千年分の財宝が出てきたのを見て、「こいつは俺たちのポケットには大きすぎらぁ」って笑ったんだ。あいつは。&hellip;&hellip;そんな男に、気の利いた慰めなんざ必要ねえよ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>俺にできたのは、タバコに火をつけて、後部座席で黙っていることだけだ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;それが、俺の&mdash;&mdash;</p>
+        <p class="silence">（言葉が途切れる。初めて、帽子のツバが上がる。完全にではない。しかし、目元がわずかに見える）</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;それが、俺のやり方だ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「やり方」ですか。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;。</p>
+        <p class="silence">（長い沈黙。次元はゆっくりと、新しいタバコを取り出す。しかし、火をつけない。ただ指の間で転がしている）</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;あんた。俺は五十年、一つのことだけをやってきた。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>あいつの背中を守る。あいつが自由に飛べるように、邪魔なものを排除する。あいつが&mdash;&mdash;あいつの道を行けるように。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、それを五十年続けたんですか？</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;。</p>
+        <p class="silence">（沈黙が最も長い。次元は天井を見上げる。帽子のツバが上がり、目が&mdash;&mdash;初めて&mdash;&mdash;天井の光を受ける）</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;分からない、と言ったら嘘になる。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;あいつの隣にいるとき、俺の弾は&mdash;&mdash;外さねえ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>一人でいたとき&mdash;&mdash;傭兵のとき、殺し屋のとき&mdash;&mdash;弾は当たっていた。的に。標的に。だがそれだけだ。当たっても何も変わらない。金が入り、次の依頼が来る。弾が的に当たるだけの人生だ。命中率百パーセントの、空虚な日々だ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>あいつの隣で引き金を引くと&mdash;&mdash;弾は、意味を持つ。俺の弾が壁を崩す。崩れた壁の向こうから、あいつが誰かを連れ出す。カリオストロじゃ、あの子を連れ出した。俺の弾が&mdash;&mdash;世界を変える男の、道を拓く。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;都合がよすぎるかもしれねえ。俺は結局、自分の弾に意味が欲しかっただけかもしれない。ルパンを利用しているだけかもしれねえ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>だが&mdash;&mdash;</p>
+        <p class="silence">（タバコに、ようやく火をつける。ジッポの音が、静かな部屋に響く）</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>五十年、外さなかった。一発も。あいつの隣では、一発も。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;誰の記憶に残らなくたって構わねえ。栄光も、名声も、要らねえ。俺が引き金を引くことで、あいつが自由に飛べるなら&mdash;&mdash;</p>
+        <p class="silence">（煙を長く、ゆっくりと吐く。煙が天井の光に透けて、薄い金色に見える）</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>俺の弾丸は、永遠に目標を外さない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;これが俺の&mdash;&mdash;仕事だ。</p>
+        <p class="silence">（帽子を深く被り直す。だが、その動作は最初とは違う。隠すためではなく、整えるための動作。出発の準備をする男の所作）</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;あいつが待ってる。行かなきゃならねえ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;あんた。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-jigen">次元：</span>&hellip;&hellip;悪くなかったぜ。</p>
+      </div>
+
+    </section>
+
+    <!-- ========== セッション解説 ========== -->
+    <section class="fade-in">
+
+      <div class="text-panel fade-in">
+        <p>このセッションで、私は一度も、答えを与えていない。</p>
+        <p>「なぜ？」と問うたびに、次元さんは自分自身の構造に一歩ずつ降りていった。タバコが裏切らないこと。荷物を持たない理由。「対等」という言葉の下に隠されていたもの。そして&mdash;&mdash;「一人で銃を抱えて眠らなくていい夜」という、彼が自分自身に与えたかったものの正体。</p>
+        <p>「なぜ？」は前提を掘り返す。「何のために？」は方向を照らす。</p>
+        <p>次元さんは「言葉にしたら壊れる」と言った。約束は借用書であり、理由は照準器だと。しかし、セッションの中で彼は&mdash;&mdash;自ら気づかぬまま&mdash;&mdash;五十年間の沈黙を、言葉に変えた。壊れなかった。なぜなら、問いは約束ではないからだ。問いには返済がない。</p>
+        <p>私は一度も、答えを与えていない。</p>
+      </div>
+
+    </section>
+
+    <!-- ========== 中間CTA ========== -->
+    <div class="cta-block fade-in">
+      <p>上の対話でキャラクターに行ったことと、同じことを、あなたに対して行います。</p>
+      <a href="../../trial.html" class="cta-btn">&#9654; トライアルセッションの詳細はこちら</a>
+    </div>
+
+    <div class="text-panel fade-in">
+      <p>ここからは、セッションで露出した構造を、実存科学の概念で正確にたどり直す。次元さんのMetaがどのように形成され、シャドウがいかに偽装され、天命がどこに収束するのかを、物語の時系列に沿って解読していく。</p>
+    </div>
+
+    <hr>
+
+    <!-- ========== 第1章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Chapter One</span>機能への還元&mdash;&mdash;0.3秒に凝縮された実存</h2>
+
+      <div class="text-panel fade-in">
+        <p>次元大介さんという存在は、一つの数字に集約される。0.3秒。</p>
+        <p>この数字は単なる反射速度ではない。彼の全実存が「決定的な瞬間に致死的な力を正確に行使すること」という単一の機能へと還元されていることの証明である。</p>
+        <p>実存科学において、Meta（前提構造）は人間のあらゆる認識と行為を規定する。次元さんのMetaの最深部にある生物基盤は、この0.3秒の早撃ちという形で具現化している。彼の身体は休息時には猫背で気怠げであり、エネルギーの消費を極限まで抑え込んでいる。しかし行動時には一瞬にして爆発的かつ精密な動作を見せ、直後に即座に元の静止状態へと戻る。停止から爆発へ、爆発から停止へ。この極端なコントラストは、自らが何のために存在しているのかを完全に決定した人間の身体性だ。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>彼はS&amp;W M19コンバットマグナムを愛用する。オートマチック銃の利便性を拒絶し、装弾数や連射性能で劣るリボルバーを選ぶ。なぜか。変動する不確実な世界において、彼自身が完全にコントロール可能な「信頼性」という錨が必要だからだ。銃は裏切らない。引き金を引けば弾が出る。それだけだ&mdash;&mdash;セッションで彼がタバコについて語ったのと、まったく同じ論理で。</p>
+        <p>そしてボルサリーノ帽。この帽子は装飾品ではない。外部世界との間に引かれた絶対的な「境界線」である。</p>
+        <p>ルパンさんの変装（マスク）が「他者になるための自己拡張」であるのに対し、次元さんの帽子は「自己を隠蔽し後退するための収縮」だ。帽子を深く被ることで、他者が自分をどこまで視認できるかを完全に統制している。自己表現の放棄と引き換えに、恒久的な安全地帯を確保する。セッションの中で、核心的な問いが飛んできたとき、次元さんは帽子のツバをさらに下に引っ張った。あれは「これ以上踏み込むな」という物理的かつ心理的な防壁の再構築だった。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>銃、帽子、タバコ。この三つだけで次元大介さんは自己を定義する。「それ以外は荷物になる」と、彼は言った。だが本当にそうだろうか&mdash;&mdash;彼の人生には、この三つに収まらない巨大な何かが、五十年間ずっと同居していたはずだ。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== 第2章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Chapter Two</span>裏切りの凶弾&mdash;&mdash;記憶層が閉ざした信頼の回路</h2>
+
+      <div class="text-panel fade-in">
+        <p>次元さんの情動層は、喪失と裏切りによって重層的に構成されている。</p>
+        <p>マフィア時代の恋人カトリーヌ・モロさんとの離別。そしてイタリアン・マフィアのボスの妻チッチョリーナさんとの悲劇的な結末。特にチッチョリーナさんが自らの死に次元さんを巻き込む形で偽装自殺を図り、殺人の罪とトラウマを背負わせた経験は、彼の信頼構造を根底から破壊した。</p>
+        <p>セッションで次元さんは言った。「信じた相手から渡されたのは、裏切りっていう名の凶弾だった」と。そして「この体に残ってる弾痕の半分は、敵からもらったんじゃない。信じた奴からもらったもんだ」と。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>「他者を無防備に信じることは致命的である」&mdash;&mdash;これはMetaの記憶層に刻まれた学習であり、次元さんの全行動を規定する非合理的信念となった。「非合理的」と呼ぶのは、すべての人間が裏切るわけではないからだ。しかし、一度刻まれたMetaは合理的な検証を受け付けない。M &rArr; &not;F。Metaがある限り、自由意志は存在しない。次元さんは「信じない」ことを選んだのではない。信じることができない構造に、組み込まれたのである。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>この閉鎖された信頼の回路が、たった一箇所だけ例外を持った。</p>
+        <p>ルパン三世。</p>
+        <p>原作漫画において、次元さんは当初ルパンさんを暗殺するために雇われたヒットマンだった。敵対関係から始まり、共闘へと移行するプロセスの中で、次元さんはある事実を発見した&mdash;&mdash;ルパンさんは予測不可能でありながら、絶対に自分を裏切らない。取引の道具にしない。背中を撃つ銃に弾を込めない。</p>
+        <p>セッションで次元さんが語った言葉が、ここで構造的な意味を帯びる。「理由ってのは照準器だ。狙いが定まるってことは、狙い返されるってことでもある」。ルパンさんとの関係に「理由」を置かなかったのは、照準器を外すためだった。狙い合わない関係&mdash;&mdash;それだけが、裏切りの凶弾を受け続けた男が生き残れる唯一の形態だったのだ。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>女性に対して完全に閉ざされた信頼の回路が、ルパンさんという絶対的に安全な対象に向けて全量投下された。これが半世紀に及ぶパートナーシップの起源である。</p>
+        <p>次元さんの「女性不信」の構造についても触れておく必要がある。峰不二子さんを極度に警戒し、「女が絡むとろくなことにならない」と常にルパンさんに警告を発する彼の態度は、単なる女性嫌悪ではない。不二子さんは「裏切る可能性」の象徴であり、次元さんが最も恐れる「関係性の破綻」を具現化した存在だ。彼は人間そのものを信じていないわけではない&mdash;&mdash;ルパンさんのことは絶対的に信じている。彼が不信を向けるのは、ロマンチックな関係性がもたらす「裏切りのリスク」そのものなのである。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== 第3章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Chapter Three</span>偽装されたゴールデンシャドウ&mdash;&mdash;冷徹の鎧が覆い隠す巨大な献身</h2>
+
+      <div class="text-panel fade-in">
+        <p>実存科学において、シャドウ（抑圧された影）は天命が形になるための素材である。次元さんのシャドウは、通常の「闇のシャドウ」とも、単純な「ゴールデンシャドウ」とも異なる&mdash;&mdash;偽装を纏ったゴールデンシャドウとでも呼ぶべき複合態だ。</p>
+        <p>彼が深く抑圧しているのは暗い衝動ではない。深い愛情と献身の能力&mdash;&mdash;温かさである。</p>
+        <p>ルパンさんもまた、ゴールデンシャドウを持つ男だ&mdash;&mdash;彼は「善良さ」を「泥棒」という仮面で偽装していた。次元さんのそれは「深い献身をプロフェッショナリズムで偽装する」構造である。「俺はガンマンだ」という自己定義は、ルパンさんの「ただの泥棒さ」と同じ機能を持つ。それ以上の深い実存的問いから目を背けるための保護膜だ。自らを単なる銃の専門家と規定することで、過剰な忠誠心を「プロの仕事」という名目にすり替えて正当化している。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>セッションの中で、次元さんの偽装が最も鮮明に露出した瞬間がある。「壊したくねえから、黙ってるんだ」&mdash;&mdash;あの一言は、冷徹な男の「冷徹ではない」核心を暴露していた。彼が黙っているのは、感情がないからではない。感情がありすぎるからだ。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>シャドウの痛み構造としては、S4（本音を出したら居場所を失う）が主軸にある。もし次元さんが「お前がいなければ自分の人生は空虚だ」とルパンさんに吐露してしまえば、二人の間にある「対等なプロフェッショナル同士のドライな関係」という暗黙の前提が崩壊する。彼はルパンさんの世界における自分の居場所&mdash;&mdash;クールな相棒という席&mdash;&mdash;を永遠に失うことを恐れている。</p>
+        <p>これに加えてS7（受け取ったら壊れる）が副次的に機能する。次元さんはルパンさんに対して無尽蔵に忠誠と命を「与える」ことができる。しかし、ルパンさんから直接的な感謝や愛情の言葉を「受け取る」ことは徹底して拒絶する。関係性が明確な言葉によって言語化されれば、それは「借用書」&mdash;&mdash;維持しなければならない重荷&mdash;&mdash;となり、かつてのトラウマ的な脆さを呼び覚ます。</p>
+        <p>ルパンさんのS7は「クラリスさんの愛を受け取ったら、泥棒としての自由が死ぬ」&mdash;&mdash;だから彼は去った。次元さんのS7は「忠誠を言葉にしたら、関係そのものが壊れる」&mdash;&mdash;だから彼は黙った。同じS7でありながら、受け取れないものがまったく違う。ルパンさんが恐れるのは「定住」であり、次元さんが恐れるのは「言語化」そのものである。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>そしてS2（この役割を脱いだら空っぽだ）が最深部に横たわる。「ルパンの相棒」という役割を剥奪されたとき、次元さんに残るのは「銃と帽子を持ったただの男」だ。セッションで「俺なんかいなくたって、やっていける」と二度繰り返した瞬間&mdash;&mdash;彼は自分で言った言葉の意味に、気づいていただろうか。「いなくたっていい」という言葉を繰り返すこと自体が、「いなきゃならない」という切実さの裏返しだった。</p>
+        <p>この三重のシャドウ構造&mdash;&mdash;S4、S7、S2&mdash;&mdash;が、次元大介さんという男の「沈黙」を生み出している。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== 第4章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Chapter Four</span>不可欠条件&mdash;&mdash;他者の天命を通じて発現する天命</h2>
+
+      <div class="text-panel fade-in">
+        <p>天命（Tenmei）とは、自由意志的に「見つける」ものではなく、Metaが個体に与えた初期条件が必然的に向かう収束点である。</p>
+        <p>次元大介さんの天命は、「凄腕の狙撃手になること」ではない。それは単なる物理的スキルにすぎない。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>彼の天命は&mdash;&mdash;「他者の天命を可能にするための不可欠な条件となること」である。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>ルパンさんの天命が、世界中のあらゆる障壁を突破する「解放者（Liberator）」であるならば、次元さんの天命は、その解放劇が崩壊しないための「基盤（Enabler）」となることだ。</p>
+        <p>セッションの中で、次元さんはこの構造を自らの言葉で語った。「俺の弾が壁を崩す。崩れた壁の向こうから、あいつが誰かを連れ出す」。一人で撃っていた弾は「当たっても何も変わらない」空虚な弾丸だった。しかしルパンさんの隣で引き金を引いたとき、弾は&mdash;&mdash;初めて&mdash;&mdash;意味を持った。</p>
+        <p>この構造は、実存科学が「中動態」と呼ぶ語りの態で正確に記述できる。次元さんはルパンさんに「仕える」のでもなく、ルパンさんに「仕えさせられる」のでもない。彼の全実存がルパンさんの隣にいることへと収束していく&mdash;&mdash;その構造が、彼を通して起きている。「する」でも「される」でもなく、「起きる」。</p>
+        <p>これは隷属でも従属でもない。自分の天命が「他者を輝かせ、他者の目的を達成するための背景になること」であると完全に受容した人間だけが到達できる、極めて静謐で強靭な実存の形態だ。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>『カリオストロの城』は、この「不可欠条件」が最も完璧に機能しているテキストである。</p>
+        <p>冒頭のカジノ強奪からの逃走シーン。ルパンさんがハンドルを握り、次元さんが後部座席から追手を射撃する。奪った札束がゴート札と判明した瞬間、ルパンさんが個人的な因縁に向かって急激にハンドルを切る。次元さんは理由を問いただすことも拒絶することもなく、ただ札を空に放り投げてそれに追従する。「あいつが行くなら、理由はどうあれ俺も行く」&mdash;&mdash;M &rArr; &not;Fの即時出力が、この軽快な冒頭に凝縮されている。</p>
+        <p>攻城戦において、次元さんは単独で行動する場面が多い。対戦車ライフル（シモノフPTRS1941）を使用するシーンは、彼が単なる拳銃使いではなく、国家権力とも対峙しうる戦争レベルの暴力の専門家であることを示している。彼はルパンさんに依存しているのではない。自らの圧倒的な暴力を「ルパンさんの作戦のピース」として機能させることを、自発的に選んでいるのだ。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>そして結末。</p>
+        <p>ルパンさんがクラリスさんとの別れを選び、フィアットに戻ってくる。次元さんは何も語らず、タバコに火をつける。</p>
+        <p>セッションで次元さんは言った。「そんな言葉は、あいつを安くする」と。</p>
+        <p>この沈黙は、実存科学的に見れば「完璧な受容と肯定」である。次元さんは、ルパンさんが自らの欲望を犠牲にしてでも他者の光を守る男であることを理解している。そして、そうした気高い生き方にこそ、自分は全実存を賭けて付き合っているのだと再確認している。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>「何も語らず、タバコに火をつけ、ただ同じ車に乗って走り去る」&mdash;&mdash;これこそが、次元大介さんという男が全存在を懸けて放った天命の言語化である。</p>
+        <p>次元さんの場合、沈黙こそが言語化なのだ。彼の言語構造において「言葉」は偽装のためのツールにすぎない。彼にとっての真の天命の言語化とは、「何もしゃべらずに傍らに留まり続けること」&mdash;&mdash;Presenceそのものだ。『カリオストロの城』のあのタバコの煙と沈黙は、彼の天命が極まった瞬間にほかならない。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== 第5章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Chapter Five</span>五十年の弾道&mdash;&mdash;現実が証明した天命</h2>
+
+      <div class="text-panel fade-in">
+        <p>次元大介さんの天命を語る上で、声優・小林清志さんの歩みに触れないわけにはいかない。</p>
+        <p>1971年のTVシリーズ放送開始から2021年の『PART6』初回エピソードまで。約五十年間、次元さんに命を吹き込み続け、大塚明夫さんにバトンを渡した。</p>
+        <p>同一の声優が半世紀にわたって一人のキャラクターを務め上げたという事実。これはエンターテインメント史における奇跡であると同時に、実存科学が「メタ構造の反復」と呼ぶ現象の、最も純粋な実例である。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>小林さんが五十年間、決して表にしゃしゃり出ることなく、常に「ルパンの傍らにいる次元の声」であり続けた事実は、次元大介さんというキャラクターがルパンさんに対して抱いている「永遠の忠誠と傍らに留まる決意」そのものの、現実世界における具現化だ。声優の役に対する忠誠が、キャラクターの相棒に対する忠誠と完全にフラクタルな構造を成している。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>『LUPIN THE IIIRD 次元大介の墓標』が描いた構造も、ここに接続する。暗殺者ヤエル・奥崎さんの計算された射撃の前に、次元さんの0.3秒は一度完全に敗北した。「機能への還元」の行き着く先は、「より優れた機能を持った者によって廃棄されること」かもしれなかった。しかし、彼が死の淵から蘇れたのは、彼が単なる「孤独なヒットマン」ではなく、ルパン三世という相棒を持つ存在だったからだ。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>一人では到達できない限界領域へ、パートナーシップを通じて到達する&mdash;&mdash;これもまた「不可欠条件」の構造が、逆方向に機能した実存的証明である。不可欠条件は一方通行ではない。次元さんがルパンさんの天命を可能にしているように、ルパンさんもまた次元さんの天命を可能にしている。二人の天命は、あのフィアットの中で、互いを前提として初めて成立する。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== 結び ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Conclusion</span>結び</h2>
+
+      <div class="text-panel fade-in">
+        <p>次元大介さんは、ボルサリーノ帽を脱ぎ捨てる日は来ないだろう。</p>
+        <p>だが、その帽子の下にある目は、世界でただ一人、ルパン三世の行く末だけを永遠に見据えている。</p>
+        <p>彼は能力において同等でありながら、主体的に「他者の傍らに立つこと」を選んだ。誰の記憶に残らなくてもいい。栄光も名声も要らない。自分が引き金を引くことで、世界を変える男が自由に飛べるなら&mdash;&mdash;それだけで十分だ。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>実存科学の第一公理は言う。M &rArr; &not;F。Metaがある限り、自由意志は存在しない。</p>
+        <p>次元さんはルパンさんの傍らに立つことを「選んだ」のではない。裏切りの凶弾が閉ざした信頼の回路と、たった一人の「背中を撃たなかった男」との出会いが、彼の全実存をその一点に収束させた。</p>
+        <p>変えられないものを引き受けた先に、天命がある。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>次元大介さんの天命は&mdash;&mdash;「世界を変える男の背中を、誰よりも近くで守り抜くこと」。</p>
+        <p>彼はそれを、言葉で語ったことは一度もない。ただ、タバコに火をつけ、黙って隣にいた。</p>
+        <p>五十年。</p>
+        <p>一発も、外さなかった。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== 最終CTA ========== -->
+    <div class="cta-block fade-in">
+      <h3>天命の言語化セッション&trade;</h3>
+      <p>あなたの人生にも、変えられないものがある。</p>
+      <p>あなたが選ばなかった出生。刻まれた記憶。信じ込まされた価値観。それらの前提条件が、あなたのあらゆる選択を&mdash;&mdash;あなたが「自分で選んだ」と思っている選択を&mdash;&mdash;規定している。</p>
+      <p>しかし、その前提条件の先に、あなたにしか辿り着けない収束点がある。</p>
+      <p>天命の言語化セッション&trade;は、120分の対話を通じて、その収束点を言語化する場です。</p>
+      <p>上の対話で次元大介さんに行ったことと、同じことを、あなたに対して行います。</p>
+      <p>私は答えを与えません。「なぜ？」と「何のために？」。この二つの問いだけを、渡します。</p>
+      <a href="../../trial.html" class="cta-btn">&#9654; トライアルセッションの詳細はこちら</a>
+    </div>
+
+    <!-- ========== 著者ブロック ========== -->
+    <div class="author-block fade-in">
+      <p><strong>箭内宏紀（やないひろき）</strong><br>
+      実存科学研究所 代表。<br>
+      「天命の言語化セッション&trade;」を提供。<br>
+      「Metaがある限り自由意志は存在しない」（M &rArr; &not;F）を第一公理とする実存科学を提唱。<br>
+      著書に『Metaがある限り&mdash;&mdash;自由意志・自分・他人は存在しない』<br>
+      『自由意志なき世界の歩き方』ほか。</p>
+    </div>
+
+    <!-- ========== 出典表記 ========== -->
+    <p class="source-note fade-in">※ 本稿で扱った作品：モンキー・パンチ原作『ルパン三世』シリーズ、宮崎駿監督『ルパン三世 カリオストロの城』（東京ムービー新社、1979年）、小池健監督『LUPIN THE IIIRD 次元大介の墓標』（テレコム・アニメーションフィルム、2014年）。作品の著作権は原著者・制作会社に帰属します。</p>
+
+    <!-- ========== シリーズノート ========== -->
+    <div class="series-note fade-in">
+      <p>本シリーズ「自由意志なき世界の天命論」は、今後も新たな作品・キャラクターを追加していく。<br>
+      漫画のみならず、映画・小説・物語の登場人物を、実存科学の視点で読み解く。</p>
+      <p><a href="./">&larr; ルパン三世篇一覧に戻る</a>&emsp;｜&emsp;<a href="../../specials.html">&larr; 特別シリーズ一覧に戻る</a></p>
+    </div>
+
+  </main>
+
+  <!-- Floating TOC -->
+  <nav class="floating-toc" id="floatingToc" aria-label="目次">
+    <p class="floating-toc__title">Contents</p>
+    <ol class="floating-toc__list" id="floatingTocList"></ol>
+  </nav>
+  <button class="floating-toc-toggle" id="floatingTocToggle" aria-label="目次を開閉">&#9776;</button>
+
+  <script>
+  (function(){
+    var headings = document.querySelectorAll('h2.chapter-heading');
+    var list = document.getElementById('floatingTocList');
+    var toc = document.getElementById('floatingToc');
+    var toggle = document.getElementById('floatingTocToggle');
+    if (!headings.length || !list) return;
+
+    headings.forEach(function(h, i){
+      var id = 'toc-section-' + i;
+      h.id = id;
+      var li = document.createElement('li');
+      li.className = 'floating-toc__item';
+      var a = document.createElement('a');
+      a.className = 'floating-toc__link';
+      a.href = '#' + id;
+      var text = h.textContent.replace(/\s+/g, ' ').trim();
+      var numSpan = h.querySelector('.chapter-number');
+      if (numSpan) {
+        text = text.replace(numSpan.textContent.replace(/\s+/g, ' ').trim(), '').trim();
+      }
+      if (text.length > 28) text = text.substring(0, 28) + '\u2026';
+      a.textContent = text;
+      a.addEventListener('click', function(e){
+        e.preventDefault();
+        document.getElementById(id).scrollIntoView({behavior:'smooth', block:'start'});
+        toc.classList.remove('is-open');
+      });
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+
+    var heroEnd = 400;
+    var links = list.querySelectorAll('.floating-toc__link');
+
+    function updateToc(){
+      var scrollY = window.scrollY || window.pageYOffset;
+      var show = scrollY > heroEnd;
+      toc.classList.toggle('is-visible', show);
+      toggle.classList.toggle('is-visible', show);
+      var current = -1;
+      headings.forEach(function(h, i){
+        if (h.getBoundingClientRect().top < 200) current = i;
+      });
+      links.forEach(function(l, i){
+        l.classList.toggle('is-active', i === current);
+      });
+    }
+
+    window.addEventListener('scroll', updateToc, {passive:true});
+    toggle.addEventListener('click', function(){ toc.classList.toggle('is-open'); });
+    updateToc();
+  })();
+  </script>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+  <div class="container--wide">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <p class="footer-col__title">The Meta</p>
+        <a href="../../about-existential-science.html">実存科学とは</a>
+        <a href="../../epistemology.html">認識論</a>
+        <a href="../../semantics.html">意味論</a>
+        <a href="../../society.html">社会論</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Contents</p>
+        <a href="../../archives.html">記事一覧</a>
+        <a href="../../specials.html">特別シリーズ</a>
+        <a href="../../video-list.html">動画一覧</a>
+        <a href="../../glossary.html">用語集</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Session</p>
+        <a href="../../session.html">天命の言語化セッション™</a>
+        <a href="../../session-flow.html">セッションの流れ</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Institute</p>
+        <a href="../../founder.html">創始者</a>
+        <a href="../../contact.html">お問い合わせ</a>
+        <a href="../../legal/legal-tokushoho.html">特定商取引法</a>
+        <a href="../../legal/legal-privacy-policy.html">プライバシーポリシー</a>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; 実存科学研究所 — Existential Science Institute</p>
+  </div>
+</footer>
+
+  <script src="../../js/main.min.js?v=9"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "次元大介のMeta —— 自由意志なき世界の天命論",
+  "description": "『ルパン三世 カリオストロの城』の次元大介を、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。黙って隣にいることには、返済がない。だから壊れない。",
+  "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-lupin3/jigen.html",
+  "author": {
+    "@type": "Person",
+    "name": "箭内宏紀",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/founder.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  },
+  "inLanguage": "ja"
+}
+</script>
+  <!-- Search Modal -->
+  <div class="search-overlay">
+    <div class="search-modal"><button class="search-close" aria-label="閉じる">&times;</button>
+      <div class="search-input-wrap">
+        <span class="search-input-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+        <input type="text" class="search-input" placeholder="キーワードで検索..." autocomplete="off">
+      </div>
+      <div class="search-results"></div>
+      <div class="search-hint"><span class="search-hint__desktop">ESC to close · ⌘K to toggle</span><span class="search-hint__mobile">背景タップまたは ✕ で閉じる</span></div>
+    </div>
+  </div>
+</body>
+</html>
