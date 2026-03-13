@@ -263,11 +263,42 @@
     .step-flow__content h4 {
       font-size: 1.05rem;
       letter-spacing: 0.15em;
+      margin-bottom: 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      transition: color 0.3s ease;
+    }
+    .step-flow__content h4:hover {
+      color: var(--color-gold);
+    }
+    .step-flow__content h4::after {
+      content: "+";
+      font-size: 1.2rem;
+      color: var(--color-gold-a40);
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+    }
+    .step-flow__item.is-open .step-flow__content h4 {
       margin-bottom: 0.6rem;
+    }
+    .step-flow__item.is-open .step-flow__content h4::after {
+      content: "−";
     }
     .step-flow__content p {
       font-size: var(--fs-body);
       color: var(--color-text-reading);
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.3s ease;
+      margin: 0;
+    }
+    .step-flow__item.is-open .step-flow__content p {
+      max-height: 300px;
+      opacity: 1;
     }
 
     /* === Item 4: CTA block elevation === */
@@ -580,6 +611,14 @@
             </div>
           </div>
         </div>
+
+        <script>
+          document.querySelectorAll('.step-flow__item').forEach(function(item) {
+            item.querySelector('h4').addEventListener('click', function() {
+              item.classList.toggle('is-open');
+            });
+          });
+        </script>
 
         <div class="content-block text-panel fade-in">
           <p>
