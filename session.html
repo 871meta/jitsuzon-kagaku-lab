@@ -553,6 +553,12 @@
     .page-session .text-panel { border-color: var(--color-gold-a06) !important; }
     .page-session .def-box { border-color: var(--color-gold-a08) !important; }
     .page-session .framed-list { border-color: var(--color-gold-a08) !important; }
+    .not-included-reason {
+      margin-top: 2rem;
+      font-size: 0.92rem;
+      line-height: 2;
+      color: var(--color-text-dim);
+    }
     .page-session .separator { margin: 5rem 0 !important; }
 
     .transformation-card {
@@ -727,9 +733,9 @@
       <!-- このセッションでは何をしないのか -->
       <div class="session-accordion session-accordion--what fade-in">
         <div class="session-accordion__trigger" onclick="this.parentElement.classList.toggle('is-open')">
-          <h2 class="section__title section__title--left">このセッションでは何をしないのか</h2>
+          <h2 class="section__title section__title--left">このセッションでは<br>何をしないのか</h2>
         </div>
-        <p class="session-accordion__summary">このセッションは、以下のいずれでもない。</p>
+        <p class="session-accordion__summary">天命を悟るために、以下のことはやらなくてよい。</p>
         <div class="session-accordion__body">
 
           <div class="framed-list">
@@ -745,6 +751,8 @@
               <li>メンタリング</li>
             </ul>
           </div>
+
+          <p class="not-included-reason">これらはいずれも二元論的世界観——上下、勝ち負け、成功と失敗——を強化する。その認識が続く限り、天命にはたどり着けない。</p>
 
           <!-- 旧配置：以下2ブロックはWhyセクションへ移動（テキスト保全原則） -->
           <!-- <div class="content-block text-panel">
