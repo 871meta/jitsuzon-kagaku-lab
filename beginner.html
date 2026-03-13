@@ -159,6 +159,60 @@
       margin-left: 0.5rem;
     }
 
+    /* --- Path card color accents --- */
+
+    /* Path 02: Silver Blue */
+    .path-card:nth-child(2)::before {
+      background: linear-gradient(90deg, transparent, rgba(140, 170, 210, 0.5), transparent);
+    }
+    .path-card:nth-child(2):hover {
+      border-color: rgba(140, 170, 210, 0.22);
+    }
+    .path-card:nth-child(2) .path-card__number {
+      color: rgba(140, 170, 210, 0.5);
+    }
+
+    /* Path 03: Rose */
+    .path-card:nth-child(3)::before {
+      background: linear-gradient(90deg, transparent, rgba(190, 130, 140, 0.5), transparent);
+    }
+    .path-card:nth-child(3):hover {
+      border-color: rgba(190, 130, 140, 0.22);
+    }
+    .path-card:nth-child(3) .path-card__number {
+      color: rgba(190, 130, 140, 0.5);
+    }
+
+    /* Path 04: Emerald */
+    .path-card:nth-child(4)::before {
+      background: linear-gradient(90deg, transparent, rgba(130, 185, 160, 0.5), transparent);
+    }
+    .path-card:nth-child(4):hover {
+      border-color: rgba(130, 185, 160, 0.22);
+    }
+    .path-card:nth-child(4) .path-card__number {
+      color: rgba(130, 185, 160, 0.5);
+    }
+
+    /* Path 05: Lavender */
+    .path-card:nth-child(5)::before {
+      background: linear-gradient(90deg, transparent, rgba(165, 145, 195, 0.5), transparent);
+    }
+    .path-card:nth-child(5):hover {
+      border-color: rgba(165, 145, 195, 0.22);
+    }
+    .path-card:nth-child(5) .path-card__number {
+      color: rgba(165, 145, 195, 0.5);
+    }
+
+    /* Sub description for path cards */
+    .path-card__sub {
+      font-size: var(--fs-small);
+      color: var(--color-text-subtle);
+      line-height: 2;
+      margin-bottom: 1.2rem;
+    }
+
     @media (max-width: 480px) {
       .path-card {
         padding: 2rem 1.5rem;
@@ -249,10 +303,13 @@
         <div class="path-card fade-in">
           <p class="path-card__number">Path 03</p>
           <p class="path-card__title">物語</p>
+          <!-- 旧テキスト：漫画・映画・ドラマの登場人物を、実存科学の構造──Meta、シャドウ、天命──で読み解くシリーズ。ナウシカ、ゴッドファーザー、刃牙、マトリックス、ファイト・クラブほか。物語の中に、あなた自身の構造が映る。 -->
           <p class="path-card__desc">
-            漫画・映画・ドラマの登場人物を、実存科学の構造──Meta、シャドウ、天命──で読み解くシリーズ。<br>
-            ナウシカ、ゴッドファーザー、刃牙、マトリックス、ファイト・クラブほか。<br>
+            漫画、映画、ドラマ、アニメ──あらゆるフィクションの登場人物を、実存科学の構造で読み解くシリーズ。<br>
             物語の中に、あなた自身の構造が映る。
+          </p>
+          <p class="path-card__sub">
+            記事一覧には、理論的探求から実践論まで90本超の論考が収録されている。推薦の声も掲載。
           </p>
           <ul class="path-card__links">
             <li><a href="specials.html">特別シリーズ一覧 &rarr;</a></li>
