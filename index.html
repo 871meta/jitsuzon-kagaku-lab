@@ -46,16 +46,50 @@
       z-index: -1;
     }
     .hero h1 {
-      text-shadow:
-        0 0 50px var(--color-gold-a15),
-        0 0 100px var(--color-gold-a08),
-        0 0 200px var(--color-gold-a03);
+      background: linear-gradient(
+        90deg,
+        #c0a878 0%,
+        #c0a878 40%,
+        #f0e6c8 50%,
+        #c0a878 60%,
+        #c0a878 100%
+      );
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: index-gold-shimmer 4s ease-in-out infinite;
+      filter: drop-shadow(0 0 20px rgba(192,168,120,0.3))
+              drop-shadow(0 0 50px rgba(192,168,120,0.15))
+              drop-shadow(0 0 100px rgba(192,168,120,0.06));
+    }
+    @keyframes index-gold-shimmer {
+      0%, 100% { background-position: 100% 50%; }
+      50% { background-position: 0% 50%; }
     }
     .hero__institute {
       text-shadow: 0 0 30px var(--color-gold-a10);
     }
     .hero__tagline {
-      text-shadow: 0 0 25px var(--color-gold-a08);
+      background: linear-gradient(
+        90deg,
+        #b8a0d8 0%,
+        #b8a0d8 40%,
+        #e0d0f0 50%,
+        #b8a0d8 60%,
+        #b8a0d8 100%
+      );
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: index-purple-shimmer 5s ease-in-out infinite;
+      filter: drop-shadow(0 0 14px rgba(160,130,210,0.3))
+              drop-shadow(0 0 35px rgba(160,130,210,0.12));
+    }
+    @keyframes index-purple-shimmer {
+      0%, 100% { background-position: 100% 50%; }
+      50% { background-position: 0% 50%; }
     }
 
     /* === Axiom Card — 氷の中に封じられた公理（Platinum） === */
