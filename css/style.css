@@ -1147,15 +1147,35 @@ a.site-logo:not(.btn):not(.session-card__link):hover {
   font-size: var(--fs-section);
   margin-bottom: 1.2rem;
   letter-spacing: 0.06em;
-  color: var(--color-text-primary);
+  background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: cta-gold-shimmer 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 16px rgba(192,168,120,0.3)) drop-shadow(0 0 40px rgba(192,168,120,0.12));
+}
+@keyframes cta-gold-shimmer {
+  0%, 100% { background-position: 100% 50%; }
+  50% { background-position: 0% 50%; }
 }
 
 .cta-block__desc {
   font-size: var(--fs-body);
-  color: var(--color-text-dim);
   max-width: 480px;
   margin: 0 auto 2.5rem;
   line-height: 2.1;
+  background: linear-gradient(90deg, #b8a0d8 0%, #b8a0d8 40%, #e0d0f0 50%, #b8a0d8 60%, #b8a0d8 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: cta-purple-shimmer 5s ease-in-out infinite;
+  filter: drop-shadow(0 0 12px rgba(160,130,210,0.25)) drop-shadow(0 0 30px rgba(160,130,210,0.1));
+}
+@keyframes cta-purple-shimmer {
+  0%, 100% { background-position: 100% 50%; }
+  50% { background-position: 0% 50%; }
 }
 
 .cta-block__features {
