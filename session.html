@@ -600,15 +600,36 @@
       padding: 3rem 2.5rem;
       background: var(--color-panel);
       border: 1px solid var(--color-gold-a06);
-      line-height: 2.2;
+      line-height: 2.4;
     }
     .why-block p {
-      margin-bottom: 1.8rem;
+      margin-bottom: 2rem;
       font-size: var(--fs-body);
       color: var(--color-text-reading);
     }
     .why-block p:last-child {
       margin-bottom: 0;
+    }
+    .why-block__lead {
+      font-size: 1.1rem !important;
+      color: var(--color-text-primary) !important;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.5rem !important;
+    }
+    .why-block__divider {
+      width: 40px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--color-gold-a40), transparent);
+      margin: 2.2rem 0;
+    }
+    .why-block__reveal {
+      font-size: 1.05rem !important;
+      color: var(--color-gold) !important;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      line-height: 2.2 !important;
+      margin: 2rem 0 !important;
     }
     .why-block__emphasis {
       font-size: var(--fs-h3) !important;
@@ -617,6 +638,13 @@
       letter-spacing: 0.06em;
       line-height: 2 !important;
       margin: 2.5rem 0 !important;
+    }
+    .why-block__bridge {
+      text-align: center;
+      font-size: 0.92rem !important;
+      color: var(--color-text-dim) !important;
+      letter-spacing: 0.1em;
+      margin-top: 2rem !important;
     }
 
     /* === Why Pull Quote (際立たせたカード) === */
@@ -735,7 +763,13 @@
       .session-genesis__sub { font-size: 0.88rem; margin-bottom: 2rem; }
       .session-genesis__spec { gap: 1rem; padding-top: 1.5rem; }
       .session-genesis__pill { padding: 0.4rem 1rem; font-size: var(--fs-xs); }
-      .why-block { padding: 2rem 1.5rem; }
+      .why-block { padding: 2rem 1.5rem; line-height: 2.2; }
+      .why-block p { margin-bottom: 1.8rem; font-size: 0.92rem !important; }
+      .why-block__lead { font-size: 1rem !important; }
+      .why-block__divider { margin: 1.8rem 0; }
+      .why-block__reveal { font-size: 0.95rem !important; }
+      .why-block__emphasis { font-size: 1.05rem !important; }
+      .why-block__bridge { font-size: 0.85rem !important; }
       .why-pull-quote { padding: 2rem 1rem; }
       .why-pull-quote p { font-size: 0.95rem; letter-spacing: 0.02em; line-height: 1.9; }
       .why-closing { padding: 1.5rem 1rem; }
@@ -848,21 +882,23 @@
         <div class="session-accordion__body">
 
           <div class="why-block">
-            <p>大半の人間は、天命など考えない。<br>
-              目的は生き延びることであり、<br>
-              人生は「正解か失敗か」で測られ、<br>
-              損得勘定がすべての判断を支配する。</p>
+            <p class="why-block__lead">大半の人間は、<br>天命など考えない。</p>
 
-            <p>ビジョン、ゴール、目標、やりたいことリスト……。<br>
-              それらはすべて、<br>
-              「自分の意志で選んでいる」という前提の上に建っている。<br>
-              だが、その前提そのものが、存在しない。</p>
+            <p>目的は生き延びることであり、人生は「正解か失敗か」で測られ、損得勘定がすべての判断を支配する。</p>
 
-            <p class="why-block__emphasis"><strong>存在しないものの上に、<br>何を積み上げても、迷いは終わらない。</strong></p>
+            <div class="why-block__divider"></div>
 
-            <p class="why-block__emphasis"><strong>天命は、そのすべてを過去にする。</strong></p>
+            <p>ビジョン、ゴール、目標、やりたいことリスト……。それらはすべて、「自分の意志で選んでいる」という前提の上に建っている。</p>
 
-            <p>残るのは、ただ一つの問いだけである。</p>
+            <p class="why-block__reveal">だが、その前提そのものが、<br>存在しない。</p>
+
+            <div class="why-block__divider"></div>
+
+            <p class="why-block__emphasis"><strong>存在しないものの上に、<br>何を積み上げても、<br>迷いは終わらない。</strong></p>
+
+            <p class="why-block__emphasis"><strong>天命は、<br>そのすべてを過去にする。</strong></p>
+
+            <p class="why-block__bridge">残るのは、ただ一つの問いだけである。</p>
           </div>
 
           <div class="pull-quote why-pull-quote">
