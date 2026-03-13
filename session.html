@@ -304,27 +304,54 @@
     /* === Tenmei Definition === */
     .tenmei-definition {
       text-align: center;
-      padding: 5rem 2rem 4rem;
-      margin-bottom: 3rem;
+      padding: 3.5rem 3rem 3rem;
+      margin-bottom: 2.5rem;
+      background: linear-gradient(160deg, rgba(15,12,25,0.6) 0%, rgba(8,6,16,0.85) 100%);
+      border: 1px solid var(--color-gold-a08);
+      position: relative;
+      backdrop-filter: blur(6px);
     }
-    .tenmei-definition__word {
-      font-family: var(--ff-serif);
-      font-size: 1.6rem;
-      color: var(--color-gold);
-      letter-spacing: 0.25em;
+    .tenmei-definition::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 20%; right: 20%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--color-gold-a20), transparent);
+    }
+    .tenmei-definition::after {
+      content: "";
+      position: absolute;
+      bottom: 0; left: 20%; right: 20%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--color-gold-a10), transparent);
+    }
+    .tenmei-definition__quote {
+      font-family: var(--font-serif-en);
+      font-size: 2.4rem;
+      color: var(--color-gold-a20);
       line-height: 1;
-      margin-bottom: 2rem;
+      margin-bottom: 0.5rem;
+      user-select: none;
     }
-    .tenmei-definition__line {
+    .tenmei-definition__text {
       font-family: var(--ff-serif);
-      font-size: 1.05rem;
+      font-size: 1.15rem;
       color: var(--color-text-reading);
-      letter-spacing: 0.15em;
-      line-height: 1;
-      margin-bottom: 1.4rem;
+      letter-spacing: 0.12em;
+      line-height: 2.2;
     }
-    .tenmei-definition__line:last-child {
-      margin-bottom: 0;
+    .tenmei-definition__text em {
+      font-style: normal;
+      color: var(--color-gold);
+      font-size: 1.25rem;
+    }
+    .tenmei-definition__author {
+      margin-top: 1.8rem;
+      font-family: var(--font-serif-en);
+      font-size: 0.78rem;
+      color: var(--color-gold-a40);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
     }
 
     /* === Session Hero Card === */
@@ -657,9 +684,10 @@
       .page-session .content-block { margin-bottom: 1.8rem !important; }
       .cta-block { padding: 4rem 1.2rem; }
       .cta-block .btn { padding: 1.2rem 3rem; }
-      .tenmei-definition { padding: 3.5rem 1.5rem 3rem; margin-bottom: 2rem; }
-      .tenmei-definition__word { font-size: 1.35rem; letter-spacing: 0.2em; }
-      .tenmei-definition__line { font-size: 0.95rem; letter-spacing: 0.12em; }
+      .tenmei-definition { padding: 2.5rem 1.5rem 2rem; margin-bottom: 1.5rem; }
+      .tenmei-definition__text { font-size: 1rem; letter-spacing: 0.08em; }
+      .tenmei-definition__text em { font-size: 1.1rem; }
+      .tenmei-definition__quote { font-size: 2rem; }
       .session-hero-card { padding: 3rem 1.8rem 2.5rem; margin: 0 0 1.5rem; }
       .session-hero-card__intro { font-size: 0.85rem; margin-bottom: 1.2rem; }
       .session-hero-card__main { font-size: 1.25rem; }
@@ -743,9 +771,9 @@
     <div class="container">
 
       <div class="tenmei-definition fade-in">
-        <p class="tenmei-definition__word">天命とは、</p>
-        <p class="tenmei-definition__line">生まれてきた意味であり、</p>
-        <p class="tenmei-definition__line">生きる目的である。</p>
+        <p class="tenmei-definition__quote">&ldquo;</p>
+        <p class="tenmei-definition__text"><em>天命</em>とは、<br>生まれてきた意味であり、<br>生きる目的である。</p>
+        <p class="tenmei-definition__author">&mdash;&mdash; Hiroki Yanai</p>
       </div>
 
       <div class="session-hero-card fade-in">
