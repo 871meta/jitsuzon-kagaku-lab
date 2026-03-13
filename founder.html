@@ -111,11 +111,59 @@
       color: var(--color-gold);
     }
 
+    /* --- Role Tags --- */
+    .founder-hero__role-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    .founder-hero__role-tag {
+      font-size: var(--fs-xs);
+      letter-spacing: 0.1em;
+      color: var(--color-gold);
+      border: 1px solid var(--color-gold-a30);
+      padding: 0.4rem 1.2rem;
+      display: inline-block;
+    }
+
+    /* --- Key Statement --- */
+    .founder-hero__statement {
+      font-size: var(--fs-lead);
+      font-weight: 600;
+      color: var(--color-text-primary);
+      line-height: 2;
+      margin-bottom: 2rem;
+      letter-spacing: 0.04em;
+    }
+
+    /* --- Fact List --- */
+    .founder-hero__facts {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      border-top: 1px solid var(--color-gold-a12);
+      padding-top: 1.5rem;
+    }
+    .founder-hero__facts li {
+      font-size: var(--fs-small);
+      color: #d4d0ca;
+      line-height: 2.2;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+    .founder-hero__facts li::before {
+      content: "▸";
+      position: absolute;
+      left: 0;
+      color: var(--color-gold-a40);
+    }
+
     .founder-hero__photo-wrap {
       position: relative;
       overflow: hidden;
-      width: 520px;
-      height: 520px;
+      width: 364px;
+      height: 364px;
       margin: 2rem auto;
       border-radius: 50%;
     }
@@ -535,12 +583,11 @@
 
       .founder-hero__text {
         padding-bottom: 2rem;
-        text-align: center;
+        text-align: left;
       }
 
       .founder-hero__intro {
         max-width: 100%;
-        margin: 0 auto;
       }
 
       .founder-hero__name {
@@ -732,11 +779,23 @@
         <h1 class="founder-hero__name">箭内宏紀</h1>
         <span class="founder-hero__ruby">やないひろき</span>
         <div class="founder-hero__intro">
-          <p class="intro-role">実存科学者。<br>「天命の言語化セッション™︎」ファシリテーター。</p>
-          <p><span class="intro-accent">「Metaがある限り、自由意志は存在しない」</span>という命題から認識論3000年に終止符を打ち、世界のOSを書き換える。</p>
-          <p>「深く考えるに値する問い」を通じて、あなたの<span class="intro-accent">「天命（生まれた理由・生きる目的）」</span>を一文に結晶させる対話を提供する。</p>
-          <p><span class="intro-accent">「生きる意味」を語れる社会</span>を創るために「実存科学」という学問体系を拓く。</p>
+          <div class="founder-hero__role-tags">
+            <span class="founder-hero__role-tag">実存科学者</span>
+            <span class="founder-hero__role-tag">天命の言語化セッション™ ファシリテーター</span>
+          </div>
+          <p class="founder-hero__statement">認識論3000年に終止符を打ち、<br>世界のOSを書き換える。</p>
+          <ul class="founder-hero__facts">
+            <li>探求歴20年超 ── 心理学・哲学・神経科学・儒教・密教・インド哲学・西洋形而上学を横断</li>
+            <li>著書9冊 ──『Metaがある限り──自由意志・自分・他人は存在しない』ほか</li>
+            <li>「天命の言語化セッション™」── 2時間の対話で天命を一文に結晶させる</li>
+          </ul>
         </div>
+        <!-- 旧テキスト保全
+          <p class="intro-role">実存科学者。「天命の言語化セッション™︎」ファシリテーター。</p>
+          <p>「Metaがある限り、自由意志は存在しない」という命題から認識論3000年に終止符を打ち、世界のOSを書き換える。</p>
+          <p>「深く考えるに値する問い」を通じて、あなたの「天命（生まれた理由・生きる目的）」を一文に結晶させる対話を提供する。</p>
+          <p>「生きる意味」を語れる社会を創るために「実存科学」という学問体系を拓く。</p>
+        -->
       </div>
       <div class="founder-hero__photo-wrap fade-in">
         <picture>
@@ -748,7 +807,7 @@
     <div class="founder-hero__divider"></div>
   </section>
 
-  <!-- ===== OPENING: Pull Quote ===== -->
+  <!-- ===== OPENING: 統合導入セクション ===== -->
   <section class="founder-narrative">
     <div class="container">
       <div class="pull-quote fade-in">
@@ -758,22 +817,36 @@
       </div>
       <div class="content-block text-panel fade-in">
         <p>
-          それは侮辱ではない。<br><br>
-          「多くの人間が踏み込まない領域に、なぜ命を賭けるのか」<br>
-          <br>この問いに対する、最も率直な印象である。
+          心理学、哲学、神経科学、儒教、密教、インド哲学、西洋形而上学──<br>
+          二十年以上をかけて、人類が「生きる意味」に向けて蓄積した知の体系を、領域を問わず横断した。
+        </p>
+        <p>
+          その過程で一度、壊れた。<br>
+          瞑想の極限で精神の均衡を失い、身体を壊した。
+        </p>
+        <p>
+          引き戻したのは理論ではなく、傍にいた人間の手だった。
+        </p>
+        <p>
+          <strong>この事実が、実存科学を生んだ。</strong>
         </p>
       </div>
     </div>
   </section>
 
-  <!-- ===== PULL QUOTE ===== -->
+  <!-- 旧テキスト保全
+  <section class="founder-narrative">
+    <div class="container">
+      <div class="pull-quote fade-in"><p>ある者は彼を「狂人」と呼んだ。</p></div>
+      <div class="content-block text-panel fade-in">
+        <p>それは侮辱ではない。「多くの人間が踏み込まない領域に、なぜ命を賭けるのか」この問いに対する、最も率直な印象である。</p>
+      </div>
+    </div>
+  </section>
   <div class="founder-pullquote fade-in">
-    <p class="founder-pullquote__text">
-      百年の学問から数千年の叡智まで、<br>
-      人類が<em>「生きる意味」</em>に向けて蓄積してきた<br>
-      知の体系を、領域を問わず横断した。
-    </p>
+    <p class="founder-pullquote__text">百年の学問から数千年の叡智まで、人類が「生きる意味」に向けて蓄積してきた知の体系を、領域を問わず横断した。</p>
   </div>
+  -->
 
   <!-- ===== NARRATIVE: 探求の軌跡 ===== -->
   <section class="founder-narrative founder-section--gold">
