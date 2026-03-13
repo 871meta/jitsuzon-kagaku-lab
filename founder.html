@@ -127,13 +127,13 @@
       display: inline-block;
     }
 
-    /* --- Key Statement --- */
+    /* --- Key Statement (hero tagline) --- */
     .founder-hero__statement {
-      font-size: var(--fs-lead);
-      font-weight: 600;
-      color: var(--color-text-primary);
-      line-height: 2;
-      margin-bottom: 2rem;
+      font-size: var(--fs-body);
+      font-weight: 400;
+      color: #d0ccc6;
+      line-height: 2.2;
+      margin-top: 0.5rem;
       letter-spacing: 0.04em;
     }
 
@@ -554,6 +554,99 @@
       backdrop-filter: blur(6px);
     }
 
+    /* ============================================
+       Founder Story — Cinematic Narrative Flow
+       ============================================ */
+    .founder-story {
+      padding: 5rem 0 2rem;
+    }
+
+    .founder-story .container {
+      max-width: 760px;
+    }
+
+    .founder-story__scene {
+      margin-bottom: 0;
+    }
+
+    .founder-story__scene p {
+      font-size: 1rem;
+      color: #d0ccc6;
+      line-height: 2.4;
+      margin-bottom: 2rem;
+      letter-spacing: 0.03em;
+    }
+
+    .founder-story__scene p:last-child {
+      margin-bottom: 0;
+    }
+
+    .founder-story__scene p strong {
+      color: var(--color-text-primary);
+      font-weight: 600;
+    }
+
+    .founder-story__hook {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--color-text-primary);
+      line-height: 1.9;
+      letter-spacing: 0.06em;
+    }
+
+    .founder-story__sub {
+      font-size: var(--fs-body);
+      color: #b0ada6;
+      margin-top: 0.5rem;
+    }
+
+    .founder-story__divider {
+      width: 40px;
+      height: 1px;
+      background: var(--color-gold);
+      margin: 4rem auto;
+      opacity: 0.6;
+    }
+
+    .founder-story__scene .founder-story__testimonial {
+      border-left: 2px solid rgba(192, 168, 120, 0.4);
+      padding: 0.8rem 0 0.8rem 2rem;
+      margin: 1.5rem 0;
+    }
+
+    .founder-story__scene .founder-story__testimonial p {
+      font-size: var(--fs-lead);
+      color: var(--color-text-primary);
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      margin-bottom: 0;
+    }
+
+    .founder-story__closing p {
+      font-size: 1rem;
+      color: #d0ccc6;
+      line-height: 2.4;
+      margin-bottom: 2rem;
+      letter-spacing: 0.03em;
+    }
+
+    .founder-story__closing p:last-child {
+      margin-bottom: 0;
+    }
+
+    .founder-story__closing p strong {
+      color: var(--color-text-primary);
+      font-weight: 600;
+    }
+
+    .founder-story__closing p.founder-story__final {
+      font-size: var(--fs-lead);
+      color: var(--color-gold);
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      line-height: 2.2;
+    }
+
     /* --- Responsive 900px --- */
     @media (max-width: 900px) {
       .founder-hero__inner {
@@ -581,6 +674,14 @@
 
       .founder-pullquote__text {
         font-size: var(--fs-h3);
+      }
+
+      .founder-story {
+        padding: 3.5rem 0 2rem;
+      }
+
+      .founder-story__hook {
+        font-size: 1.35rem;
       }
     }
 
@@ -711,6 +812,44 @@
       .founder-narrative .pull-quote {
         padding: 2rem 1.2rem;
       }
+
+      /* --- Story narrative mobile --- */
+      .founder-story {
+        padding: 3rem 0 1.5rem;
+      }
+
+      .founder-story__hook {
+        font-size: 1.2rem;
+        line-height: 2;
+      }
+
+      .founder-story__divider {
+        margin: 3rem auto;
+      }
+
+      .founder-story__scene p {
+        font-size: 0.92rem;
+        line-height: 2.3;
+        margin-bottom: 1.6rem;
+      }
+
+      .founder-story__scene .founder-story__testimonial {
+        padding-left: 1.2rem;
+      }
+
+      .founder-story__scene .founder-story__testimonial p {
+        font-size: var(--fs-body);
+      }
+
+      .founder-story__closing p {
+        font-size: 0.92rem;
+        line-height: 2.3;
+        margin-bottom: 1.6rem;
+      }
+
+      .founder-story__closing p.founder-story__final {
+        font-size: var(--fs-body);
+      }
     }
   </style>
 </head>
@@ -760,10 +899,11 @@
         <span class="founder-hero__ruby">やないひろき</span>
         <div class="founder-hero__intro">
           <div class="founder-hero__role-tags">
-            <span class="founder-hero__role-tag">実存科学者</span>
+            <span class="founder-hero__role-tag">実存科学研究所 代表</span>
             <span class="founder-hero__role-tag">天命の言語化セッション™ ファシリテーター</span>
           </div>
-          <!-- <p class="founder-hero__statement">認識論3000年に終止符を打ち、世界のOSを書き換える。</p> -->
+          <p class="founder-hero__statement">壊れた人間を支えた手のぬくもり。<br>その手を、今度は、あなたに差し出す。</p>
+          <!-- 旧テキスト保全: <p class="founder-hero__statement">認識論3000年に終止符を打ち、世界のOSを書き換える。</p> -->
         </div>
         <!-- 旧テキスト保全
           <p class="intro-role">実存科学者。「天命の言語化セッション™︎」ファシリテーター。</p>
@@ -782,316 +922,120 @@
     <div class="founder-hero__divider"></div>
   </section>
 
-  <!-- ===== OPENING: 箭内宏紀とは ===== -->
-  <section class="founder-narrative">
+  <!-- 旧テキスト保全: 箭内宏紀とは accordion + Chapter I〜IV (探求の軌跡 / 崩壊と再生 / 社会論への展開 / なぜ箭内と対話するのか) — git履歴に保全 -->
+
+  <!-- ===== FOUNDER STORY — Cinematic Narrative ===== -->
+  <section class="founder-story">
     <div class="container">
-      <div class="founder-accordion fade-in" data-accordion>
-        <button class="founder-accordion__trigger" aria-expanded="false">
-          <span>箭内宏紀とは</span>
-          <span class="founder-accordion__icon"></span>
-        </button>
-        <div class="founder-accordion__body">
-          <div class="founder-accordion__content">
-            <!-- 旧テキスト保全: ある者は彼を「狂人」と呼んだ。心理学、哲学、神経科学、儒教、密教、インド哲学、西洋形而上学──二十年以上をかけて、人類が「生きる意味」に向けて蓄積した知の体系を、領域を問わず横断した。その過程で一度、壊れた。瞑想の極限で精神の均衡を失い、身体を壊した。引き戻したのは理論ではなく、傍にいた人間の手だった。この事実が、実存科学を生んだ。 -->
-            <p>
-              大学で心理学を学び、2015年に株式会社Nimbus Creationを創業。<br>
-              「心理学で食べていく」をコンセプトにオンライン講座を展開し、<br>
-              受講者1,300人、累計売上5億円超。ビジネスとしては、成功していた。
-            </p>
-            <p>
-              しかし、私生活では二度の離婚と親との絶縁を経験していた。<br>
-              自分が教えている内容を自分自身にも適用しているはずなのに、<br>
-              人生の空虚さは消えなかった。
-            </p>
-            <p>
-              そこから精神世界の探求が始まった。
-            </p>
-            <p>
-              心理学、哲学、神経科学、儒教、密教、インド哲学、西洋形而上学──<br>
-              領域を問わず、人類が「生きる意味」に向けて蓄積した知の体系を横断した。<br>
-              ある者は彼を「狂人」と呼んだ。
-            </p>
-            <p>
-              十年目──瞑想の極限で、心身のバランスを崩した。
-            </p>
-            <p>
-              引き戻したのは理論ではなく、傍にいた人間の手だった。
-            </p>
-            <p>
-              <strong>この事実が、実存科学を生んだ。</strong><br>
-              2025年12月、実存科学研究所を設立。
-            </p>
-          </div>
+
+      <!-- Scene 1: Opening Hook -->
+      <div class="founder-story__scene fade-in">
+        <p class="founder-story__hook">彼は人生で何度か死にかけている。</p>
+        <p class="founder-story__sub">その中でも最もシンドかった時の話をしよう。</p>
+      </div>
+
+      <div class="founder-story__divider"></div>
+
+      <!-- Scene 2: Success & Emptiness -->
+      <div class="founder-story__scene fade-in">
+        <p>金を稼ぐのは得意だった。</p>
+        <p>大学で心理学を学び、2015年に株式会社Nimbus Creationを創業。オンライン講座で受講者1,300人、累計売上5億円超。ビジネスとしては、完璧に成功していた。</p>
+        <p><strong>だが人間としては最低だった。</strong></p>
+        <p>二度の離婚。親との絶縁。愛する人を傷つけてばかりいた。自分が人に教えている内容を、自分自身にも適用しているはずなのに、人生の空虚さだけは消えなかった。</p>
+        <p>成功したのに不幸になった。こんなバカな話があるか。</p>
+        <p>頭の中は、過去への後悔と将来への不安でいっぱいだった。もう元には戻れない。でもできることなら、人生をやり直したい。</p>
+      </div>
+
+      <div class="founder-story__divider"></div>
+
+      <!-- Scene 3: Descent -->
+      <div class="founder-story__scene fade-in">
+        <p class="founder-story__hook">じゃあ神にでもなろうか。</p>
+        <p>自分でもバカだと思う。でも、もうどうでもよかった。自暴自棄になっていたのだ。</p>
+        <p>心理学、哲学、神経科学、儒教、密教、インド哲学、西洋形而上学──百年の学問から数千年の叡智まで、人類が「生きる意味」に向けて蓄積してきた知の体系を、二十年以上かけて領域を問わず横断した。</p>
+        <p>ある者は彼を「狂人」と呼んだ。</p>
+        <p>とりわけ瞑想の世界には、行ってはならない禁足地が存在する。自暴自棄になった彼は、超えてはならない一線を超えることにした。</p>
+      </div>
+
+      <div class="founder-story__divider"></div>
+
+      <!-- Scene 4: Breaking -->
+      <div class="founder-story__scene fade-in">
+        <p class="founder-story__hook">すぐに恐ろしいことが起こった。</p>
+        <p>もっと見たい、もっと知りたい──好奇心が止まらなかった。見えないものが見え、聞こえないものが聞こえるようになった。</p>
+        <p>けれども、どんどん自分が壊れていった。</p>
+        <p>体が言うことを聞かなくなった。思ってもいないことを口にしてしまう。周りとのトラブルが増えた。まるで自分じゃない何かが、自分を支配しているみたいだった。</p>
+        <p>でもやめるわけがない。こっちは人間を超えたくてやっているのだ。</p>
+        <p>そして──一線を超えた。</p>
+        <p>頭の中で爆発が起こったみたいに、すべての機能が停止した。</p>
+        <p>気を失った。</p>
+        <p><strong>目が覚めると、言語障害および右半身麻痺。</strong></p>
+      </div>
+
+      <div class="founder-story__divider"></div>
+
+      <!-- Scene 5: Recovery (3rd person) -->
+      <div class="founder-story__scene fade-in">
+        <p>しばらくの間、寝たきりになった。</p>
+        <p>積み上げた理論は、何ひとつ声を出さなかった。二十年かけて横断した叡智も、獲得した知識も、壊れた人間の前では完全に沈黙した。</p>
+        <p>声を出していたのは、傍にいた人間だけだった。</p>
+        <p>家族が、友達が、仕事仲間が、毎日そこにいた。答えを持たず、理論も持たず、ただそこにいた。</p>
+        <p><strong>「ただいる」。</strong></p>
+        <p>その行為だけが、壊れた人間をこちら側に引き戻した。</p>
+      </div>
+
+      <div class="founder-story__divider"></div>
+
+      <!-- Scene 6: Perspective shift — 3rd person → 1st person -->
+      <div class="founder-story__scene fade-in">
+        <p>回復まで丸1年。</p>
+        <p>その1年で、私は一つのことを知った。</p>
+        <p>真理を「知る」ことと、真理を「生きる」ことの間には、絶望的な断崖がある。</p>
+        <p>知の体系を横断し、人間が到達し得る認識の果てまで行った。そこで見たものは確かに存在していた。だが、それを「知った」だけでは、壊れた。</p>
+        <p>断崖を越えさせたのは、理論ではなかった。傍にいた人間の手だった。</p>
+        <p><strong>真理は、知識の中にはなかった。</strong></p>
+        <p><strong>生きている人間の、温かな手の中にあった。</strong></p>
+      </div>
+
+      <div class="founder-story__divider"></div>
+
+      <!-- Scene 7: Birth of Existential Science -->
+      <div class="founder-story__scene fade-in">
+        <p>回復の過程で、あるものが降りてきた。</p>
+        <p>ある日突然、「メタがある限り自由意志はない」という構造が見えた。ある日突然、天命の言語化セッション™が降りてきた。ある日突然、「生きる意味を語れる社会を作る」という理念が降りてきた。ある日突然、愛の定義が降りてきた。</p>
+        <p>学んで到達したのではない。壊れた後に、降りてきた。</p>
+        <p>宗教でも思想哲学でもスピリチュアルでもなかった。再現性のある論理だった。だから実存科学と名付けた。</p>
+        <p>2025年12月、実存科学研究所を設立。</p>
+      </div>
+
+      <div class="founder-story__divider"></div>
+
+      <!-- Scene 8: What I do in sessions -->
+      <div class="founder-story__scene fade-in">
+        <p>対話の場で私が行うことは、あの経験の再現である。</p>
+        <p>答えは語らない。自分の崩壊から、答えが人の認識を狭めることを学んだ。</p>
+        <p>真理を「知っている」だけの人間は、答えを語る。真理を「生きている」人間は、問いを手渡す。</p>
+        <p>なぜなら、真理は誰かから受け取るものではないからだ。あなたの中にすでにある。本来つながるはずだった意味と意味が結ばれた瞬間、あなた自身の声で、あなたの天命が語り始める。</p>
+        <p>私がやるのは、ただ一つの問いを手渡すことだけだ。深く考えるに値する、あなただけの問いを。</p>
+        <p>この瞬間に触れた人が、こう語った。</p>
+        <div class="founder-story__testimonial">
+          <p>「生まれてきてよかった」</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 旧テキスト保全
-  <section class="founder-narrative">
-    <div class="container">
-      <div class="pull-quote fade-in"><p>ある者は彼を「狂人」と呼んだ。</p></div>
-      <div class="content-block text-panel fade-in">
-        <p>それは侮辱ではない。「多くの人間が踏み込まない領域に、なぜ命を賭けるのか」この問いに対する、最も率直な印象である。</p>
-      </div>
-    </div>
-  </section>
-  <div class="founder-pullquote fade-in">
-    <p class="founder-pullquote__text">百年の学問から数千年の叡智まで、人類が「生きる意味」に向けて蓄積してきた知の体系を、領域を問わず横断した。</p>
-  </div>
-  -->
-
-  <!-- ===== NARRATIVE: 探求の軌跡 ===== -->
-  <section class="founder-narrative founder-section--gold">
-    <div class="container">
-      <p class="founder-chapter-label fade-in">Chapter I</p>
-      <p class="founder-section-title fade-in">探求の軌跡</p>
-
-      <div class="founder-chapter-summary fade-in">
-        <p>二十年以上の歳月をかけ、心理学から数千年の叡智まで──人類の知の体系を領域を問わず横断した。</p>
-      </div>
-
-      <div class="founder-accordion fade-in" data-accordion>
-        <button class="founder-accordion__trigger" aria-expanded="false">
-          <span>横断した知の全貌</span>
-          <span class="founder-accordion__icon"></span>
-        </button>
-        <div class="founder-accordion__body">
-          <div class="founder-accordion__content">
-            <p>
-              2000年代初頭、箭内宏紀の探求は、「心理学」から始まった。
-            </p>
-            <p>
-              しかし二十年以上の歳月をかけて、その枠はとうに壊れている。
-            </p>
-            <p>
-              <strong>心理学、哲学、神経科学、儒教、密教、インド哲学、西洋形而上学</strong>──百年の学問から数千年の叡智まで、人類が「生きる意味」に向けて蓄積してきた知の体系を、箭内は領域を問わず横断した。
-            </p>
-            <p>
-              そして「生きるとは何か」という問いを、そのいずれもが単独では到達し得なかった地点まで追い詰めた。
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== ATMOSPHERIC: 崩壊と再生 ===== -->
-  <section class="founder-atmospheric founder-section--rose fade-in">
-    <div class="container">
-      <p class="founder-chapter-label fade-in">Chapter II</p>
-      <p class="founder-section-title fade-in">崩壊と再生</p>
-
-      <div class="founder-chapter-summary fade-in">
-        <p>「究極を知りたい」という衝動が自身を破壊し──そこから引き戻したのは、理論ではなく、愛と友情だった。</p>
-      </div>
-
-      <div class="founder-accordion fade-in" data-accordion>
-        <button class="founder-accordion__trigger" aria-expanded="false">
-          <span>壊れた経緯</span>
-          <span class="founder-accordion__icon"></span>
-        </button>
-        <div class="founder-accordion__body">
-          <div class="founder-accordion__content">
-            <p>
-              その過程で、一度、壊れている。
-            </p>
-            <p>
-              瞑想の極限において精神の均衡を失い、身体を壊した。
-            </p>
-            <p>
-              <strong>「究極を知りたい」という衝動が、文字通り自身を破壊した。</strong><br><br>
-              そこから引き戻したのは、積み上げた理論ではなく、家族や友人の温かな眼差しだった。
-            </p>
-            <p>
-              この経験が、実存科学の生誕に繋がった。
-            </p>
-          </div>
+        <div class="founder-story__testimonial">
+          <p>「やっと自分の人生が始まった」</p>
         </div>
       </div>
 
-      <div class="founder-accordion fade-in" data-accordion>
-        <button class="founder-accordion__trigger" aria-expanded="false">
-          <span>崩壊が導いた構造 ── 愛と友情</span>
-          <span class="founder-accordion__icon"></span>
-        </button>
-        <div class="founder-accordion__body">
-          <div class="founder-accordion__content">
-            <p>
-              箭内が構築した体系の中核は、<strong>認識論（Meta）と意味論（天命）</strong>である。
-            </p>
-            <p>
-              しかしその構造を最も素朴な言葉に還元するならば、<br>
-              それは<strong>「愛と友情」</strong>にほかならない。
-            </p>
-            <p>
-              Metaとは、世界がすでに与えている構造への全肯定であり、<br>
-              天命とは、その構造が一人の人間を通じて語ろうとする意味の収束である。
-            </p>
+      <div class="founder-story__divider"></div>
 
-            <div class="quote-block fade-in">
-              壊れた人間を支えた手のぬくもりと、<br>三千年の認識論を閉じる構造科学が、<br>同じ一点に収束している。<br><br>
-              これは偶然ではない。構造的必然である。
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== NARRATIVE: 社会論への展開 ===== -->
-  <section class="founder-narrative founder-section--blue">
-    <div class="container">
-      <p class="founder-chapter-label fade-in">Chapter III</p>
-      <p class="founder-section-title fade-in">社会論への展開</p>
-
-      <div class="founder-chapter-summary fade-in">
-        <p>理論が沈黙した場所で、愛と友情だけが声を出していた。──その事実が、社会論を生んだ。</p>
+      <!-- Scene 9: Closing Declaration -->
+      <div class="founder-story__closing fade-in">
+        <p><strong>箭内宏紀という人間に会う理由は、彼の理論が正しいからではない。</strong></p>
+        <p>この人が、あの場所を通ってきたからである。</p>
+        <p>真理を知った人間は多い。</p>
+        <p class="founder-story__final">真理を生きている人間は、少ない。</p>
       </div>
 
-      <div class="founder-accordion fade-in" data-accordion>
-        <button class="founder-accordion__trigger" aria-expanded="false">
-          <span>認識論と意味論が跪いた瞬間</span>
-          <span class="founder-accordion__icon"></span>
-        </button>
-        <div class="founder-accordion__body">
-          <div class="founder-accordion__content">
-            <p>
-              しかし、ここで終わっていたら、実存科学は未完のままだった。
-            </p>
-            <p>
-              認識論は世界の前提構造を暴いた。<br>意味論は天命という収束点を導出した。<br><br>
-              だが、壊れた人間が実際に生き延びたのは、理論の力ではなかった。<br><br>
-              暗闇の中で手を握り続けた人間がいた。<br>
-              意味も言葉も失った場所で、ただ傍にいた人間がいた。<br><br>
-              <strong>理論が沈黙した場所で、愛と友情だけが、声を出していた。</strong>
-            </p>
-            <p>
-              この事実の前で、認識論と意味論は跪いた。
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="founder-accordion fade-in" data-accordion>
-        <button class="founder-accordion__trigger" aria-expanded="false">
-          <span>心友™ ── 実存科学の究極</span>
-          <span class="founder-accordion__icon"></span>
-        </button>
-        <div class="founder-accordion__body">
-          <div class="founder-accordion__content">
-            <p>
-              個体の内部でどれほど完璧に構造が整合しても、<br>人間は一人では天命を全うできない。<br><br>
-              天命を語る相手がいなければ、意味は言葉にならず、<br>言葉にならない意味は、やがて霧のように消える。<br><br>
-              人間が「生きる意味」を持続するためには、<br>その意味を受け取り、語り返す存在が、絶対に必要である。
-            </p>
-            <div class="def-box fade-in">
-              <p>
-                その存在を、本研究は<strong>「心友™」</strong>と呼ぶ。
-              </p>
-            </div>
-            <p>
-              社会論は、認識論と意味論の延長にはない。その上位にある。<br><br>
-              認識論が世界を記述し、意味論が天命を導出し、<br>それでもなお届かなかった場所に、社会論は手を伸ばす。<br><br>
-              <strong>心友™という関係の構造こそが、実存科学の究極であり、<br>人類が意識の発達を遂げ、文明として存続するために、<br>絶対に外すことのできない最後の道である。</strong>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== CLOSING: なぜ箭内と対話するのか ===== -->
-  <div class="founder-pullquote fade-in">
-    <p class="founder-pullquote__text">
-      壊れた人間を支えた手のぬくもり。<br>
-      その手を、今度は、<em>あなた</em>に差し出す。
-    </p>
-  </div>
-
-  <section class="founder-declaration founder-section--purple fade-in">
-    <div class="container">
-      <p class="founder-chapter-label fade-in">Chapter IV</p>
-      <p class="founder-section-title fade-in">なぜ箭内と対話するのか</p>
-
-      <div class="founder-chapter-summary fade-in">
-        <p>答えは語らない。代わりに、ただ一つの問いを手渡す。──あなたの天命が、あなた自身の声で語り始める。</p>
-      </div>
-
-      <div class="founder-accordion fade-in" data-accordion>
-        <button class="founder-accordion__trigger" aria-expanded="false">
-          <span>箭内がすでに知っていたこと</span>
-          <span class="founder-accordion__icon"></span>
-        </button>
-        <div class="founder-accordion__body">
-          <div class="founder-accordion__content">
-            <p>
-              実存科学が結論として導いたことを、箭内はすでに知っていた。<br>
-              理論よりも先に、身体が教えていた。
-            </p>
-            <p>
-              あの暗闇の底で、理論は沈黙した。<br>
-              積み上げた知識も、横断した叡智も、何ひとつ声を出さなかった。
-            </p>
-            <p>
-              <strong>声を出していたのは、ただ傍にいた人間だけだった。</strong>
-            </p>
-            <p>
-              答えを持たず、理論も持たず、ただそこにいた。<br>
-              その「ただいる」という行為だけが、壊れた人間をこちら側に引き戻した。
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="founder-accordion fade-in" data-accordion>
-        <button class="founder-accordion__trigger" aria-expanded="false">
-          <span>対話で箭内が行うこと</span>
-          <span class="founder-accordion__icon"></span>
-        </button>
-        <div class="founder-accordion__body">
-          <div class="founder-accordion__content">
-            <p>
-              対話の場で箭内が行うことは、その再現である。
-            </p>
-            <p>
-              答えは語らない。自身の崩壊から、答えが人の認識を狭めることを学んだからだ。<br>
-              代わりに、<strong>ただ一つの問い</strong>を手渡す。深く考えるに値する、その人だけの問いを。
-            </p>
-            <p>
-              その問いは、外から何かを注ぐのではない。<br>
-              あなたの中にすでにある回路を接続する。<br>
-              本来つながるはずだった意味と意味が結ばれ、あなた自身の声で、あなたの天命が語り始める。
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="founder-accordion fade-in" data-accordion>
-        <button class="founder-accordion__trigger" aria-expanded="false">
-          <span>この瞬間に触れた人の声</span>
-          <span class="founder-accordion__icon"></span>
-        </button>
-        <div class="founder-accordion__body">
-          <div class="founder-accordion__content">
-            <p>
-              この瞬間に触れた人が、こう語った。
-            </p>
-            <div class="quote-block">
-              「生まれてきてよかった」
-            </div>
-            <div class="quote-block">
-              「やっと自分の人生が始まった」
-            </div>
-            <p>
-              <strong>箭内宏紀という人間に会う理由は、彼の理論が正しいからではない。</strong>
-            </p>
-            <p>
-              この人が、あの場所を通ってきたからである。
-            </p>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
