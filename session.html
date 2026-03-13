@@ -778,6 +778,8 @@
       .session-accordion { padding: 2rem 1.5rem; }
       .session-accordion__trigger h2.section__title { font-size: 1.25rem; }
       .transformation-cards { grid-template-columns: 1fr; }
+      /* Re-enable br in highlight-block for controlled line breaks */
+      .page-session .highlight-block br { display: inline !important; }
     }
 
     @media (max-width: 480px) {
@@ -959,7 +961,7 @@
           </div>
 
           <div class="highlight-block">
-            <p><strong>意味が、一点に収束する。それが天命である。</strong></p>
+            <p><strong>意味が、一点に収束する。<br>それが天命である。</strong></p>
           </div>
 
           <div class="content-block text-panel">
