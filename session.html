@@ -619,6 +619,45 @@
       margin: 2.5rem 0 !important;
     }
 
+    /* === Why Pull Quote (際立たせたカード) === */
+    .why-pull-quote {
+      background: linear-gradient(160deg, rgba(20,15,35,0.85) 0%, rgba(10,8,20,0.95) 100%),
+                  linear-gradient(90deg, rgba(184,160,216,0.08), transparent 50%);
+      border: 1px solid rgba(184,160,216,0.2);
+      box-shadow: 0 4px 40px rgba(184,160,216,0.1),
+                  0 2px 24px var(--color-gold-a04),
+                  inset 0 1px 0 rgba(184,160,216,0.12);
+    }
+    .why-pull-quote::before {
+      background: linear-gradient(90deg, rgba(184,160,216,0.5), rgba(192,168,120,0.3), transparent 70%);
+    }
+    .why-pull-quote::after {
+      background: linear-gradient(180deg, rgba(184,160,216,0.5), transparent);
+    }
+
+    /* === Why Closing (ゴールドシマー) === */
+    .why-closing {
+      text-align: center;
+      padding: 2rem 2.5rem;
+    }
+    .why-closing__text {
+      font-size: var(--fs-h3);
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      line-height: 2;
+      background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gold-shimmer 4s ease-in-out infinite;
+      filter: drop-shadow(0 0 16px rgba(192,168,120,0.3)) drop-shadow(0 0 40px rgba(192,168,120,0.12));
+    }
+    @keyframes gold-shimmer {
+      0%, 100% { background-position: 100% 50%; }
+      50% { background-position: 0% 50%; }
+    }
+
     /* === Design Refinement === */
     .page-session .text-panel { border-color: var(--color-gold-a06) !important; }
     .page-session .def-box { border-color: var(--color-gold-a08) !important; }
@@ -697,6 +736,10 @@
       .session-genesis__spec { gap: 1rem; padding-top: 1.5rem; }
       .session-genesis__pill { padding: 0.4rem 1rem; font-size: var(--fs-xs); }
       .why-block { padding: 2rem 1.5rem; }
+      .why-pull-quote { padding: 2rem 1rem; }
+      .why-pull-quote p { font-size: 0.95rem; letter-spacing: 0.02em; line-height: 1.9; }
+      .why-closing { padding: 1.5rem 1rem; }
+      .why-closing__text { font-size: 1rem; }
       .page-session .separator { margin: 3.5rem 0 !important; }
       .session-accordion { padding: 2rem 1.5rem; }
       .session-accordion__trigger h2.section__title { font-size: 1.25rem; }
@@ -859,13 +902,12 @@
             <p>残るのは、ただ一つの問いだけである。</p>
           </div>
 
-          <div class="pull-quote">
-            <p>「この自由意志なき世界で、<br>私は何のために生きているのか」。</p>
+          <div class="pull-quote why-pull-quote">
+            <p>この自由意志なき世界で<br>私は何のために<br>生きていくのか？</p>
           </div>
 
-          <div class="why-block" style="border: none; padding-top: 0;">
-            <p>その問いに答えが出たとき、<br>
-              人生そのものが「究極の遊び」に変わる。</p>
+          <div class="why-closing">
+            <p class="why-closing__text">その問いに答えが出たとき、<br>人生そのものが<br>「究極の遊び」に変わる。</p>
           </div>
 
         </div>
