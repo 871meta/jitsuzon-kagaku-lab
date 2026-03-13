@@ -411,11 +411,29 @@
     .session-hero-card__main {
       font-family: var(--ff-serif);
       font-size: 1.5rem;
-      color: var(--color-gold);
       letter-spacing: 0.1em;
       line-height: 1.8;
       margin-bottom: 1rem;
       font-weight: 500;
+      background: linear-gradient(
+        90deg,
+        #b8a0d8 0%,
+        #b8a0d8 40%,
+        #e0d0f0 50%,
+        #b8a0d8 60%,
+        #b8a0d8 100%
+      );
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: hero-shimmer 5s ease-in-out infinite;
+      filter: drop-shadow(0 0 14px rgba(160,130,210,0.3))
+              drop-shadow(0 0 35px rgba(160,130,210,0.12));
+    }
+    @keyframes hero-shimmer {
+      0%, 100% { background-position: 100% 50%; }
+      50% { background-position: 0% 50%; }
     }
     .session-hero-card__sub {
       font-family: var(--ff-serif);
