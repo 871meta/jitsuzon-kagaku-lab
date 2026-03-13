@@ -647,23 +647,52 @@
       line-height: 2.2;
     }
 
-    /* --- Video embed --- */
-    .founder-story__video {
-      margin: 2rem 0;
+    /* --- Videos Section --- */
+    .founder-videos {
+      padding: 5rem 0 4rem;
+      border-top: 1px solid var(--color-gold-a12);
     }
 
-    .founder-story__video video {
-      width: 100%;
+    .founder-videos .container {
       max-width: 760px;
+    }
+
+    .founder-videos__heading {
+      font-size: var(--fs-lead);
+      font-weight: 600;
+      color: var(--color-text-primary);
+      letter-spacing: 0.08em;
+      text-align: center;
+      margin-bottom: 0.8rem;
+    }
+
+    .founder-videos__sub {
+      font-size: var(--fs-small);
+      color: #a09a90;
+      text-align: center;
+      letter-spacing: 0.06em;
+      margin-bottom: 4rem;
+    }
+
+    .founder-videos__item {
+      margin-bottom: 4rem;
+    }
+
+    .founder-videos__item:last-child {
+      margin-bottom: 0;
+    }
+
+    .founder-videos__item video {
+      width: 100%;
       display: block;
       border: 1px solid var(--color-gold-a12);
     }
 
-    .founder-story__video-label {
+    .founder-videos__label {
       font-size: var(--fs-small);
       color: var(--color-gold-a40);
       letter-spacing: 0.1em;
-      margin-top: 1rem;
+      margin-top: 1.2rem;
       text-align: center;
     }
 
@@ -1198,13 +1227,7 @@
         </div>
       </div>
 
-      <!-- Video: 私が真理を悟った時の話 -->
-      <div class="founder-story__video fade-in">
-        <video controls preload="metadata" poster="">
-          <source src="videos/shinri-wo-satotta-toki.mp4" type="video/mp4">
-        </video>
-        <p class="founder-story__video-label">私が真理を悟った時の話</p>
-      </div>
+      <!-- Video moved to bottom section -->
 
       <div class="founder-story__divider"></div>
 
@@ -1251,13 +1274,7 @@
         </div>
       </div>
 
-      <!-- Video: 天命を悟り、日々全うすること -->
-      <div class="founder-story__video fade-in">
-        <video controls preload="metadata" poster="">
-          <source src="videos/tenmei-wo-mattou-suru.mp4" type="video/mp4">
-        </video>
-        <p class="founder-story__video-label">「天命を悟り、日々全うすること」の本質</p>
-      </div>
+      <!-- Video moved to bottom section -->
 
       <div class="founder-story__divider"></div>
 
@@ -1269,6 +1286,28 @@
         <p class="founder-story__final">真理を生きている人間は、少ない。</p>
       </div>
 
+    </div>
+  </section>
+
+  <!-- Videos Section -->
+  <section class="founder-videos fade-in">
+    <div class="container">
+      <h2 class="founder-videos__heading">箭内宏紀が語る</h2>
+      <p class="founder-videos__sub">彼自身の言葉で、あの経験を。</p>
+
+      <div class="founder-videos__item">
+        <video controls preload="metadata" poster="">
+          <source src="videos/shinri-wo-satotta-toki.mp4" type="video/mp4">
+        </video>
+        <p class="founder-videos__label">私が真理を悟った時の話</p>
+      </div>
+
+      <div class="founder-videos__item">
+        <video controls preload="metadata" poster="">
+          <source src="videos/tenmei-wo-mattou-suru.mp4" type="video/mp4">
+        </video>
+        <p class="founder-videos__label">「天命を悟り、日々全うすること」の本質</p>
+      </div>
     </div>
   </section>
 
