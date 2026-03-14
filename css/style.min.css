@@ -3137,3 +3137,284 @@ hr {
     display: flex;
   }
 }
+
+/* ============================================
+   Article Page Template (.article-page)
+   For: column-*.html, book-*.html
+   ============================================ */
+
+/* ── Layout (handles both .page-container and .container) ── */
+.article-page .page-container,
+.article-page > .container,
+.article-page > article.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
+
+/* ── Page Header (handles both .page-header and .header) ── */
+.article-page .page-header,
+.article-page .header {
+  text-align: center;
+  padding: 3rem 0 2.5rem;
+  border-bottom: 2px solid var(--color-gold);
+  margin-bottom: 3rem;
+}
+.article-page .page-header .label,
+.article-page .header .label,
+.article-page .page-header .institute-label,
+.article-page .header .institute-label {
+  font-size: var(--fs-caption);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--color-text-dim);
+  margin-bottom: 0.5rem;
+  font-family: var(--font-sans);
+}
+.article-page .page-header .category-tag,
+.article-page .header .category-tag {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: var(--fs-caption);
+  letter-spacing: 0.08em;
+  color: #080610;
+  background: var(--color-gold);
+  padding: 3px 12px;
+  margin-bottom: 1.2rem;
+}
+.article-page .page-header h1,
+.article-page .header h1 {
+  font-size: var(--fs-section);
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.3rem;
+  background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: article-gold-shimmer 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 16px rgba(192,168,120,0.3)) drop-shadow(0 0 40px rgba(192,168,120,0.12));
+}
+@keyframes article-gold-shimmer {
+  0%, 100% { background-position: 100% 50%; }
+  50% { background-position: 0% 50%; }
+}
+.article-page .page-header .subtitle,
+.article-page .header .subtitle {
+  font-size: var(--fs-body);
+  color: var(--color-text-dim);
+  background: linear-gradient(90deg, #b8a0d8 0%, #b8a0d8 40%, #e0d0f0 50%, #b8a0d8 60%, #b8a0d8 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: article-purple-shimmer 5s ease-in-out infinite;
+  filter: drop-shadow(0 0 12px rgba(160,130,210,0.25)) drop-shadow(0 0 30px rgba(160,130,210,0.1));
+}
+@keyframes article-purple-shimmer {
+  0%, 100% { background-position: 100% 50%; }
+  50% { background-position: 0% 50%; }
+}
+
+/* ── Section Heading (h2) ── */
+.article-page h2.section-heading,
+.article-page article h2,
+.article-page .page-container > h2,
+.article-page .container > h2 {
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  margin-top: 3.5rem;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.6rem;
+  line-height: 1.6;
+  border-bottom: 2px solid var(--color-gold-a40);
+  background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: article-gold-shimmer 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 8px rgba(192,168,120,0.2));
+}
+
+/* ── Body Text ── */
+.article-page article p,
+.article-page .page-container > p,
+.article-page .container > p {
+  margin-bottom: 1rem;
+  text-align: justify;
+  line-height: 2;
+}
+.article-page article strong,
+.article-page .page-container strong,
+.article-page .container strong {
+  font-weight: 700;
+}
+
+/* ── Blockquote ── */
+.article-page blockquote {
+  border-left: 3px solid var(--color-gold-a40);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  background: linear-gradient(160deg, rgba(15,12,25,0.5) 0%, rgba(8,6,16,0.7) 100%);
+  border: 1px solid var(--color-gold-a08);
+  border-left: 3px solid var(--color-gold-a40);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 16px var(--color-gold-a04), inset 0 1px 0 var(--color-gold-a06);
+}
+.article-page blockquote p {
+  color: var(--color-text-muted);
+}
+.article-page blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Core Insight ── */
+.article-page .core-insight {
+  background: linear-gradient(160deg, rgba(15,12,25,0.55) 0%, rgba(8,6,16,0.75) 100%);
+  border: 1px solid var(--color-gold-a15);
+  border-left: 4px solid var(--color-gold);
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+  font-size: var(--fs-lead);
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.8;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 16px var(--color-gold-a04), inset 0 1px 0 var(--color-gold-a06);
+  position: relative;
+}
+.article-page .core-insight::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, var(--color-gold-a50), var(--color-gold-a20), transparent 60%);
+}
+
+/* ── Item List ── */
+.article-page .item-list {
+  margin: 1rem 0 1rem 1.5rem;
+  line-height: 2;
+}
+.article-page .item-list li {
+  margin-bottom: 0.4rem;
+}
+.article-page .item-list li::marker {
+  color: var(--color-gold-a60);
+}
+
+/* ── Item List (also handle bare ul in Pattern A) ── */
+.article-page .page-container > ul,
+.article-page .container > ul,
+.article-page article > ul {
+  margin: 1rem 0 1rem 1.5rem;
+  line-height: 2;
+}
+.article-page .page-container > ul li,
+.article-page .container > ul li,
+.article-page article > ul li {
+  margin-bottom: 0.4rem;
+}
+.article-page .page-container > ul li::marker,
+.article-page .container > ul li::marker,
+.article-page article > ul li::marker {
+  color: var(--color-gold-a60);
+}
+
+/* ── Horizontal Rule ── */
+.article-page article hr,
+.article-page .page-container > hr,
+.article-page .container > hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold-a25), transparent);
+  margin: 3rem 0;
+}
+
+/* ── Back Navigation ── */
+.article-page .back-nav {
+  margin-top: 4rem;
+  padding: 1.5rem 2rem;
+  background: var(--color-gold-a06);
+  border: 1px solid var(--color-gold-a15);
+  text-align: center;
+  backdrop-filter: blur(4px);
+}
+.article-page .back-nav a {
+  color: var(--color-gold);
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.2s;
+}
+.article-page .back-nav a:hover {
+  color: var(--color-gold-light);
+}
+
+/* ── Dark Theme Override for Articles ── */
+.article-page a:not(.btn):not(.session-card__link):not(.site-logo):not(.global-nav a):not(.breadcrumb__link) {
+  color: var(--color-gold);
+  transition: color 0.2s;
+}
+.article-page a:not(.btn):not(.session-card__link):not(.site-logo):not(.global-nav a):not(.breadcrumb__link):hover {
+  color: var(--color-gold-light);
+}
+.article-page img {
+  border-radius: 2px;
+}
+
+/* ── Chapter Navigation (book series) ── */
+.article-page .chapter-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-gold-a15);
+}
+.article-page .chapter-nav a {
+  color: var(--color-gold);
+  text-decoration: none;
+  font-size: var(--fs-small);
+  transition: color 0.2s;
+}
+.article-page .chapter-nav a:hover {
+  color: var(--color-gold-light);
+}
+
+/* ── Article Page Responsive ── */
+@media (max-width: 768px) {
+  .article-page .page-container {
+    padding: 2rem 1.2rem 3rem;
+  }
+  .article-page .page-header {
+    padding: 2rem 0 2rem;
+  }
+  .article-page .page-header h1 {
+    font-size: clamp(1.1rem, 5vw, var(--fs-section));
+  }
+  .article-page h2.section-heading {
+    font-size: var(--fs-lead);
+    margin-top: 2.5rem;
+  }
+  .article-page blockquote {
+    padding: 0.8rem 1rem;
+  }
+  .article-page .core-insight {
+    padding: 1.2rem 1.5rem;
+    font-size: var(--fs-body);
+  }
+  .article-page .back-nav {
+    padding: 1.2rem 1.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .article-page .page-container {
+    padding: 1.5rem 1rem 2.5rem;
+  }
+  .article-page .page-header h1 {
+    font-size: 1.1rem;
+  }
+}
