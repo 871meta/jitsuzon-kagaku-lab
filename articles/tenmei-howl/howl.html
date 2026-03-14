@@ -276,10 +276,6 @@ h3.section-heading {
 
 /* === Comparison Table === */
 
-
-
-
-
 /* === CTA Block === */
 /* === Author Block === */
 .author-block {
@@ -349,75 +345,6 @@ h3.section-heading {
   .session-dialogue p:nth-child(10n) {
     margin-bottom: 1.5em;
     padding-bottom: 1em;
-  }
-}
-/* ── 対比グリッド ── */
-.comparison-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border: 1px solid rgba(192,168,120,0.12);
-  background: rgba(15, 12, 25, 0.45);
-}
-.comparison-grid__head {
-  font-size: var(--fs-small);
-  font-weight: 600;
-  color: var(--color-gold);
-  letter-spacing: 0.08em;
-  padding: 0.6rem 0.8rem;
-  text-align: center;
-  background: rgba(192,168,120,0.06);
-  border-bottom: 1px solid rgba(192,168,120,0.2);
-}
-.comparison-grid__head:first-child {
-  border-right: 1px solid rgba(192,168,120,0.1);
-}
-.comparison-grid__cell {
-  padding: 0.55rem 0.8rem;
-  font-size: var(--fs-small);
-  line-height: 1.7;
-  color: var(--color-text-reading);
-  border-bottom: 1px solid rgba(192,168,120,0.06);
-  min-width: 0;
-  overflow-wrap: break-word;
-}
-.comparison-grid__cell:nth-child(odd) {
-  border-right: 1px solid rgba(192,168,120,0.1);
-}
-.comparison-grid__cell:nth-last-child(-n+2) {
-  border-bottom: none;
-}
-.comparison-table .comparison-note {
-  margin-top: 1rem;
-  padding: 0.8rem 1rem;
-  font-size: var(--fs-micro);
-  color: rgba(235,232,225,0.55);
-  line-height: 1.8;
-  background: rgba(192,168,120,0.03);
-  border-left: 2px solid rgba(192,168,120,0.15);
-}
-@media (max-width: 768px) {
-  .comparison-grid {
-    grid-template-columns: 1fr;
-  }
-  .comparison-grid__head {
-    border-right: none !important;
-  }
-  .comparison-grid__head:first-child {
-    border-right: none;
-  }
-  .comparison-grid__cell {
-    border-right: none;
-  }
-  .comparison-grid__cell:nth-child(odd) {
-    border-right: none;
-    padding-top: 0.8rem;
-    color: var(--color-gold);
-    font-weight: 600;
-    font-size: var(--fs-micro);
-  }
-  .comparison-grid__cell:nth-child(even) {
-    padding-top: 0.2rem;
-    padding-bottom: 0.8rem;
   }
 }
 </style>
@@ -547,24 +474,6 @@ h3.section-heading {
 
       <div class="profiling-block fade-in">
         <h3>【対比キャラクター：ソフィーとの比較表】</h3>
-        <div class="comparison-table">
-  <div class="comparison-grid">
-    <div class="comparison-grid__head">ハウル</div>
-    <div class="comparison-grid__head">ソフィー</div>
-    <div class="comparison-grid__cell"><strong>鎧の種類：</strong>美しさ（空洞を隠す）</div>
-    <div class="comparison-grid__cell"><strong>鎧の種類：</strong>老い（本来の強さを解放する）</div>
-    <div class="comparison-grid__cell"><strong>自己認識：</strong>「美しくなければ生きている意味がない」</div>
-    <div class="comparison-grid__cell"><strong>自己認識：</strong>「私はきれいじゃない。長女だから特別なことなんて起こらない」</div>
-    <div class="comparison-grid__cell"><strong>呪いの構造：</strong>自ら心臓を手放した（能動的分離）</div>
-    <div class="comparison-grid__cell"><strong>呪いの構造：</strong>他者に老いを与えられた（受動的変容）</div>
-    <div class="comparison-grid__cell"><strong>呪いの効果：</strong>浅さの永続化</div>
-    <div class="comparison-grid__cell"><strong>呪いの効果：</strong>内面の外在化（愛や勇気を感じると若返る）</div>
-    <div class="comparison-grid__cell"><strong>回避の方法：</strong>能動的回避（言葉が多すぎる）</div>
-    <div class="comparison-grid__cell"><strong>回避の方法：</strong>受動的回避（控えめ・自己消去）</div>
-    <div class="comparison-grid__cell"><strong>天命への道筋：</strong>他者（ソフィー）が心臓を胸に戻す</div>
-    <div class="comparison-grid__cell"><strong>天命への道筋：</strong>ハウルの空洞に入り込むことで自分の鎧を外す</div>
-  </div>
-</div>
       </div>
 
       <div class="profiling-block fade-in">
