@@ -92,24 +92,35 @@
       50% { background-position: 0% 50%; }
     }
 
-    /* === Axiom Card — 氷の中に封じられた公理（Platinum） === */
-    .axiom-card {
-      background: radial-gradient(ellipse at center, rgba(200, 210, 230, 0.04) 0%, rgba(12, 10, 22, 0.9) 70%);
-      border: 1px solid rgba(180, 190, 210, 0.25);
-      outline: 1px solid rgba(180, 190, 210, 0.10);
-      outline-offset: 8px;
-      padding: 5.5rem 4rem;
+    /* === Stele Card — 碑文型統合カード（招待状 / ギフトカード） === */
+    .stele-card {
+      background: radial-gradient(ellipse at 50% 30%, rgba(200, 210, 230, 0.04) 0%, rgba(12, 10, 22, 0.92) 60%);
+      border: 1px solid rgba(180, 190, 210, 0.22);
+      outline: 1px solid rgba(180, 190, 210, 0.08);
+      outline-offset: 10px;
+      padding: 5rem 4rem 3.5rem;
       max-width: 580px;
+      margin: 0 auto;
+      position: relative;
+      text-align: center;
       box-shadow:
         0 4px 80px rgba(0, 0, 0, 0.6),
-        inset 0 0 120px rgba(180, 195, 220, 0.04);
+        0 0 160px rgba(180, 195, 220, 0.03),
+        inset 0 0 120px rgba(180, 195, 220, 0.03);
     }
-    .axiom-card::before {
+    /* 上辺の装飾ライン */
+    .stele-card::before {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: 50%;
+      transform: translateX(-50%);
       width: 80px;
       height: 1px;
       background: linear-gradient(90deg, transparent, rgba(200, 210, 230, 0.5), rgba(220, 200, 160, 0.3), transparent);
     }
-    .axiom-card::after {
+    /* 下辺の装飾ライン */
+    .stele-card::after {
       content: "";
       position: absolute;
       bottom: -1px;
@@ -117,15 +128,17 @@
       transform: translateX(-50%);
       width: 80px;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(220, 200, 160, 0.3), rgba(200, 210, 230, 0.5), transparent);
+      background: linear-gradient(90deg, transparent, rgba(190, 150, 120, 0.4), rgba(160, 120, 180, 0.35), rgba(100, 130, 180, 0.4), transparent);
     }
-    .axiom-card__label {
+
+    /* Axiom 領域 */
+    .stele-card__label {
       font-size: var(--fs-caption);
       letter-spacing: 0.35em;
       color: rgba(190, 200, 220, 0.7);
       margin-bottom: 1.8rem;
     }
-    .axiom-card__formula {
+    .stele-card__formula {
       font-size: 4rem;
       margin-bottom: 2.4rem;
       background: linear-gradient(135deg, rgba(200, 210, 230, 0.9) 0%, rgba(230, 220, 190, 0.85) 50%, rgba(190, 200, 220, 0.9) 100%);
@@ -134,7 +147,7 @@
       background-clip: text;
       animation: axiomGlow 5s ease-in-out infinite;
     }
-    .axiom-card__desc {
+    .stele-card__axiom-desc {
       font-size: var(--fs-small);
       letter-spacing: 0.14em;
       color: rgba(180, 190, 210, 0.5);
@@ -144,49 +157,24 @@
       50% { filter: drop-shadow(0 0 60px rgba(200, 215, 240, 0.3)) drop-shadow(0 0 120px rgba(200, 215, 240, 0.08)); }
     }
 
-    /* === Telos Card — 額装されたテロス（Twilight） === */
-    .pull-quote {
-      padding: 4rem 3.5rem;
-      margin: 3.5rem 0;
-      background: radial-gradient(ellipse at center, rgba(30, 40, 70, 0.08) 0%, rgba(15, 12, 25, 0.85) 70%);
-      border: 1px solid rgba(90, 110, 160, 0.25);
-      outline: 1px solid rgba(90, 110, 160, 0.10);
-      outline-offset: 8px;
-      max-width: 580px;
-      box-shadow:
-        0 4px 80px rgba(0, 0, 0, 0.5),
-        inset 0 0 100px rgba(80, 100, 150, 0.03);
-      backdrop-filter: none;
-    }
-    .pull-quote::before {
-      content: "";
-      position: absolute;
-      top: -1px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80px;
+    /* 区切りライン — 公理と帰結の転換点 */
+    .stele-card__divider {
+      width: 60px;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(100, 130, 180, 0.5), rgba(160, 120, 180, 0.4), rgba(190, 150, 120, 0.5), transparent);
+      margin: 3rem auto;
+      background: linear-gradient(90deg, transparent, rgba(180, 190, 210, 0.3), rgba(192, 168, 120, 0.25), rgba(160, 120, 180, 0.2), transparent);
     }
-    .pull-quote::after {
-      content: "";
-      position: absolute;
-      bottom: -1px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80px;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(190, 150, 120, 0.5), rgba(160, 120, 180, 0.4), rgba(100, 130, 180, 0.5), transparent);
-    }
-    .pull-quote__label {
+
+    /* Telos 領域 */
+    .stele-card__telos-label {
       font-family: var(--font-serif-en);
       font-size: var(--fs-caption);
       letter-spacing: 0.35em;
-      color: rgba(150, 170, 210, 0.75);
+      color: rgba(150, 170, 210, 0.7);
       margin-bottom: 1.8rem;
       text-transform: uppercase;
     }
-    .pull-quote p {
+    .stele-card__telos-text {
       background: linear-gradient(135deg, #7090c0 0%, #b0a0d0 35%, #d4b896 65%, #c8a878 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -197,17 +185,27 @@
       font-weight: 500;
     }
 
+    /* 必然の一行 — 気づく人だけが気づく余韻 */
+    .stele-card__coda {
+      margin-top: 3.5rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      color: rgba(180, 190, 210, 0.3);
+      line-height: 1.8;
+    }
+
     /* === CTA — now fully in global style.css === */
 
     /* === Mobile === */
     @media (max-width: 768px) {
-      .axiom-card {
-        padding: 4rem 2rem;
-        outline-offset: 5px;
+      .stele-card {
+        padding: 4rem 2rem 3rem;
+        outline-offset: 6px;
       }
-      .axiom-card__formula { font-size: 2.8rem; }
-      .pull-quote { padding: 3rem 2rem; outline-offset: 5px; }
-      .pull-quote p { font-size: clamp(0.88rem, 3.6vw, var(--fs-h3)); letter-spacing: 0.04em; }
+      .stele-card__formula { font-size: 2.8rem; }
+      .stele-card__telos-text { font-size: clamp(0.88rem, 3.6vw, var(--fs-h3)); letter-spacing: 0.04em; }
+      .stele-card__divider { margin: 2.4rem auto; }
+      .stele-card__coda { margin-top: 2.8rem; }
     }
   </style>
 </head>
@@ -257,19 +255,17 @@
     </div>
   </section>
 
-  <!-- Axiom -->
+  <!-- Stele — 公理と帰結の碑文 -->
   <section class="section section--bordered">
     <div class="container fade-in">
-      <div class="axiom-card">
-        <p class="axiom-card__label">First Axiom</p>
-        <p class="axiom-card__formula">M ⇒ ¬F</p>
-        <p class="axiom-card__desc">
-          Metaがある限り自由意志はない
-        </p>
-      </div>
-      <div class="pull-quote">
-        <p class="pull-quote__label">Telos</p>
-        <p>「生きる意味」を語れる社会を創る</p>
+      <div class="stele-card">
+        <p class="stele-card__label">First Axiom</p>
+        <p class="stele-card__formula">M ⇒ ¬F</p>
+        <p class="stele-card__axiom-desc">Metaがある限り自由意志はない</p>
+        <div class="stele-card__divider"></div>
+        <p class="stele-card__telos-label">Telos</p>
+        <p class="stele-card__telos-text">「生きる意味」を語れる社会を創る</p>
+        <p class="stele-card__coda">あなたがここにいることもまた、必然の構造の中にある。</p>
       </div>
     </div>
   </section>
