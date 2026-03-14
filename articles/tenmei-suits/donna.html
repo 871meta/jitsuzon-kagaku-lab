@@ -275,26 +275,10 @@ h3.section-heading {
 }
 
 /* === Comparison Table === */
-.comparison-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1.5rem 0;
-  font-size: var(--fs-body);
-}
-.comparison-table th,
-.comparison-table td {
-  padding: 0.8rem 1rem;
-  border: 1px solid rgba(192,168,120,0.12);
-  text-align: left;
-}
-.comparison-table th {
-  background: rgba(192,168,120,0.08);
-  color: var(--color-gold);
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  font-size: var(--fs-small);
-}
-.comparison-table td { color: var(--color-text-reading); }
+
+
+
+
 
 /* === CTA Block === */
 /* === Author Block === */
@@ -328,8 +312,8 @@ h3.section-heading {
 @media (max-width: 600px) {
   .session-dialogue { padding: 1.5rem 1.2rem; }
   .profiling-block { padding: 1.5rem 1.2rem; }
-  .comparison-table { font-size: var(--fs-xs); }
-  .comparison-table th, .comparison-table td { padding: 0.5rem 0.6rem; }
+  
+  
   .highlight-block { padding: 1.5rem 1.2rem 1.5rem 1.4rem; }
 }
 @media (max-width: 480px) {
@@ -337,6 +321,75 @@ h3.section-heading {
   .pull-quote p br,
   .highlight-block p br,
   .def-box p br { display: none; }
+}
+/* ── 対比グリッド ── */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid rgba(192,168,120,0.12);
+  background: rgba(15, 12, 25, 0.45);
+}
+.comparison-grid__head {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-gold);
+  letter-spacing: 0.08em;
+  padding: 0.6rem 0.8rem;
+  text-align: center;
+  background: rgba(192,168,120,0.06);
+  border-bottom: 1px solid rgba(192,168,120,0.2);
+}
+.comparison-grid__head:first-child {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell {
+  padding: 0.55rem 0.8rem;
+  font-size: var(--fs-small);
+  line-height: 1.7;
+  color: var(--color-text-reading);
+  border-bottom: 1px solid rgba(192,168,120,0.06);
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+.comparison-grid__cell:nth-child(odd) {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+.comparison-table .comparison-note {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  font-size: var(--fs-micro);
+  color: rgba(235,232,225,0.55);
+  line-height: 1.8;
+  background: rgba(192,168,120,0.03);
+  border-left: 2px solid rgba(192,168,120,0.15);
+}
+@media (max-width: 768px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+  .comparison-grid__head {
+    border-right: none !important;
+  }
+  .comparison-grid__head:first-child {
+    border-right: none;
+  }
+  .comparison-grid__cell {
+    border-right: none;
+  }
+  .comparison-grid__cell:nth-child(odd) {
+    border-right: none;
+    padding-top: 0.8rem;
+    color: var(--color-gold);
+    font-weight: 600;
+    font-size: var(--fs-micro);
+  }
+  .comparison-grid__cell:nth-child(even) {
+    padding-top: 0.2rem;
+    padding-bottom: 0.8rem;
+  }
 }
 </style>
 </head>
@@ -454,42 +507,22 @@ h3.section-heading {
 
       <div class="profiling-block fade-in">
         <h3>【対比キャラクターとの比較表：ドナ・ポールセン vs ハーヴィ・スペクター】</h3>
-        <table class="comparison-table">
-          <thead>
-            <tr>
-              <th>比較軸</th>
-              <th>ドナ・ポールセン</th>
-              <th>ハーヴィ・スペクター</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>封印の対象</td>
-              <td>愛を「求める」能力</td>
-              <td>愛を「受け取る」能力</td>
-            </tr>
-            <tr>
-              <td>封印の方法</td>
-              <td>与え続けることで、求めずに済む構造を作る</td>
-              <td>勝ち続けることで、脆さを見せずに済む構造を作る</td>
-            </tr>
-            <tr>
-              <td>防衛の言語</td>
-              <td>「I&rsquo;m Donna」（自己完結による遮断）</td>
-              <td>映画の引用・ワンライナー（フィクションへの迂回）</td>
-            </tr>
-            <tr>
-              <td>あの一夜の後</td>
-              <td>自分から扉を閉めた（「職場の男とは関係を持たない」）</td>
-              <td>閉じられた扉の内側で固まった（感情の凍結）</td>
-            </tr>
-            <tr>
-              <td>シャドウの核</td>
-              <td>見る者が見られることを恐れる（S7）</td>
-              <td>守る者が守られることを恐れる（S7）</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="comparison-table">
+  <div class="comparison-grid">
+    <div class="comparison-grid__head">ドナ・ポールセン</div>
+    <div class="comparison-grid__head">ハーヴィ・スペクター</div>
+    <div class="comparison-grid__cell"><strong>封印の対象：</strong>愛を「求める」能力</div>
+    <div class="comparison-grid__cell"><strong>封印の対象：</strong>愛を「受け取る」能力</div>
+    <div class="comparison-grid__cell"><strong>封印の方法：</strong>与え続けることで、求めずに済む構造を作る</div>
+    <div class="comparison-grid__cell"><strong>封印の方法：</strong>勝ち続けることで、脆さを見せずに済む構造を作る</div>
+    <div class="comparison-grid__cell"><strong>防衛の言語：</strong>「I&rsquo;m Donna」（自己完結による遮断）</div>
+    <div class="comparison-grid__cell"><strong>防衛の言語：</strong>映画の引用・ワンライナー（フィクションへの迂回）</div>
+    <div class="comparison-grid__cell"><strong>あの一夜の後：</strong>自分から扉を閉めた（「職場の男とは関係を持たない」）</div>
+    <div class="comparison-grid__cell"><strong>あの一夜の後：</strong>閉じられた扉の内側で固まった（感情の凍結）</div>
+    <div class="comparison-grid__cell"><strong>シャドウの核：</strong>見る者が見られることを恐れる（S7）</div>
+    <div class="comparison-grid__cell"><strong>シャドウの核：</strong>守る者が守られることを恐れる（S7）</div>
+  </div>
+</div>
         <p>同じ一夜から、対称的な二つのシャドウが分岐した。ドナは「求めない」ことで自分を守り、ハーヴィは「受け取らない」ことで自分を守った。二人は鏡像であり、互いのゴールデンシャドウを映し合う存在だった。</p>
       </div>
 

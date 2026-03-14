@@ -270,26 +270,10 @@ h3.section-heading {
 }
 
 /* === Comparison Table === */
-.comparison-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1.5rem 0;
-  font-size: var(--fs-body);
-}
-.comparison-table th,
-.comparison-table td {
-  padding: 0.8rem 1rem;
-  border: 1px solid rgba(192,168,120,0.12);
-  text-align: left;
-}
-.comparison-table th {
-  background: rgba(192,168,120,0.08);
-  color: var(--color-gold);
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  font-size: var(--fs-small);
-}
-.comparison-table td { color: var(--color-text-reading); }
+
+
+
+
 
 /* === CTA Block === */
 /* === Author Block === */
@@ -334,8 +318,8 @@ h3.section-heading {
   .session-dialogue .line-yanai { padding-left: 0.8rem; }
   .session-dialogue .line-character { margin-left: 0.8rem; }
   .profiling-block { padding: 1.5rem 1.2rem; }
-  .comparison-table { font-size: var(--fs-xs); }
-  .comparison-table th, .comparison-table td { padding: 0.5rem 0.6rem; }
+  
+  
   .highlight-block { padding: 1.5rem 1.2rem 1.5rem 1.4rem; }
   .text-panel { padding: 2rem 1.5rem; }
 }
@@ -343,6 +327,75 @@ h3.section-heading {
   .text-panel p br, .pull-quote p br, .highlight-block p br, .def-box p br, .session-dialogue p br { display: none; }
   h2.chapter-heading { font-size: var(--fs-h3); }
   .session-dialogue p:nth-child(10n) { margin-bottom: 1.5em; padding-bottom: 1em; }
+}
+/* ── 対比グリッド ── */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid rgba(192,168,120,0.12);
+  background: rgba(15, 12, 25, 0.45);
+}
+.comparison-grid__head {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-gold);
+  letter-spacing: 0.08em;
+  padding: 0.6rem 0.8rem;
+  text-align: center;
+  background: rgba(192,168,120,0.06);
+  border-bottom: 1px solid rgba(192,168,120,0.2);
+}
+.comparison-grid__head:first-child {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell {
+  padding: 0.55rem 0.8rem;
+  font-size: var(--fs-small);
+  line-height: 1.7;
+  color: var(--color-text-reading);
+  border-bottom: 1px solid rgba(192,168,120,0.06);
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+.comparison-grid__cell:nth-child(odd) {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+.comparison-table .comparison-note {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  font-size: var(--fs-micro);
+  color: rgba(235,232,225,0.55);
+  line-height: 1.8;
+  background: rgba(192,168,120,0.03);
+  border-left: 2px solid rgba(192,168,120,0.15);
+}
+@media (max-width: 768px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+  .comparison-grid__head {
+    border-right: none !important;
+  }
+  .comparison-grid__head:first-child {
+    border-right: none;
+  }
+  .comparison-grid__cell {
+    border-right: none;
+  }
+  .comparison-grid__cell:nth-child(odd) {
+    border-right: none;
+    padding-top: 0.8rem;
+    color: var(--color-gold);
+    font-weight: 600;
+    font-size: var(--fs-micro);
+  }
+  .comparison-grid__cell:nth-child(even) {
+    padding-top: 0.2rem;
+    padding-bottom: 0.8rem;
+  }
 }
 </style>
 </head>
@@ -465,33 +518,20 @@ h3.section-heading {
       <div class="profiling-block fade-in">
         <h3>【ヴィトーとの対比──Part III版】</h3>
         <p style="font-size:0.85rem; color:#c0bbb4; margin-bottom:1rem; line-height:1.8;">三部作の対比構造が、ここで最終的に合流する。</p>
-        <table class="comparison-table">
-          <tr>
-            <th>比較軸</th>
-            <th>マイケル</th>
-            <th>ヴィトー</th>
-          </tr>
-          <tr>
-            <td>最期</td>
-            <td>シチリアの中庭で、犬だけを傍らに、椅子から崩れ落ちて死ぬ</td>
-            <td>ニューヨークの庭で、孫と遊びながら、トマトの木の間で穏やかに倒れる</td>
-          </tr>
-          <tr>
-            <td>赦し</td>
-            <td>求めたが、構造的に届かなかった</td>
-            <td>求めなかった。赦しの外側で完結していた</td>
-          </tr>
-          <tr>
-            <td>孤立</td>
-            <td>全員が去った後に残された</td>
-            <td>家族に囲まれたまま去った</td>
-          </tr>
-          <tr>
-            <td>天命</td>
-            <td>到達しなかった</td>
-            <td>無自覚に生きていた可能性がある</td>
-          </tr>
-        </table>
+        <div class="comparison-table">
+  <div class="comparison-grid">
+    <div class="comparison-grid__head">マイケル</div>
+    <div class="comparison-grid__head">ヴィトー</div>
+    <div class="comparison-grid__cell"><strong>最期：</strong>シチリアの中庭で、犬だけを傍らに、椅子から崩れ落ちて死ぬ</div>
+    <div class="comparison-grid__cell"><strong>最期：</strong>ニューヨークの庭で、孫と遊びながら、トマトの木の間で穏やかに倒れる</div>
+    <div class="comparison-grid__cell"><strong>赦し：</strong>求めたが、構造的に届かなかった</div>
+    <div class="comparison-grid__cell"><strong>赦し：</strong>求めなかった。赦しの外側で完結していた</div>
+    <div class="comparison-grid__cell"><strong>孤立：</strong>全員が去った後に残された</div>
+    <div class="comparison-grid__cell"><strong>孤立：</strong>家族に囲まれたまま去った</div>
+    <div class="comparison-grid__cell"><strong>天命：</strong>到達しなかった</div>
+    <div class="comparison-grid__cell"><strong>天命：</strong>無自覚に生きていた可能性がある</div>
+  </div>
+</div>
       </div>
 
       <div class="profiling-block fade-in">

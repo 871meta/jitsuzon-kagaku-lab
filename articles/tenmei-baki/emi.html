@@ -275,26 +275,10 @@ h3.section-heading {
 }
 
 /* === Comparison Table === */
-.comparison-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1.5rem 0;
-  font-size: var(--fs-body);
-}
-.comparison-table th,
-.comparison-table td {
-  padding: 0.8rem 1rem;
-  border: 1px solid rgba(192,168,120,0.12);
-  text-align: left;
-}
-.comparison-table th {
-  background: rgba(192,168,120,0.08);
-  color: var(--color-gold);
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  font-size: var(--fs-small);
-}
-.comparison-table td { color: var(--color-text-reading); }
+
+
+
+
 
 /* === CTA Block === */
 /* === Author Block === */
@@ -351,8 +335,8 @@ h3.section-heading {
   .session-dialogue .line-yanai { padding-left: 0.8rem; }
   .session-dialogue .line-character { margin-left: 0.8rem; }
   .profiling-block { padding: 1.5rem 1.2rem; }
-  .comparison-table { font-size: var(--fs-xs); }
-  .comparison-table th, .comparison-table td { padding: 0.5rem 0.6rem; }
+  
+  
   .highlight-block { padding: 1.5rem 1.2rem 1.5rem 1.4rem; }
   .text-panel { padding: 2rem 1.5rem; }
 }
@@ -366,6 +350,75 @@ h3.section-heading {
   .session-dialogue p:nth-child(10n) {
     margin-bottom: 1.5em;
     padding-bottom: 1em;
+  }
+}
+/* ── 対比グリッド ── */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid rgba(192,168,120,0.12);
+  background: rgba(15, 12, 25, 0.45);
+}
+.comparison-grid__head {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-gold);
+  letter-spacing: 0.08em;
+  padding: 0.6rem 0.8rem;
+  text-align: center;
+  background: rgba(192,168,120,0.06);
+  border-bottom: 1px solid rgba(192,168,120,0.2);
+}
+.comparison-grid__head:first-child {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell {
+  padding: 0.55rem 0.8rem;
+  font-size: var(--fs-small);
+  line-height: 1.7;
+  color: var(--color-text-reading);
+  border-bottom: 1px solid rgba(192,168,120,0.06);
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+.comparison-grid__cell:nth-child(odd) {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+.comparison-table .comparison-note {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  font-size: var(--fs-micro);
+  color: rgba(235,232,225,0.55);
+  line-height: 1.8;
+  background: rgba(192,168,120,0.03);
+  border-left: 2px solid rgba(192,168,120,0.15);
+}
+@media (max-width: 768px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+  .comparison-grid__head {
+    border-right: none !important;
+  }
+  .comparison-grid__head:first-child {
+    border-right: none;
+  }
+  .comparison-grid__cell {
+    border-right: none;
+  }
+  .comparison-grid__cell:nth-child(odd) {
+    border-right: none;
+    padding-top: 0.8rem;
+    color: var(--color-gold);
+    font-weight: 600;
+    font-size: var(--fs-micro);
+  }
+  .comparison-grid__cell:nth-child(even) {
+    padding-top: 0.2rem;
+    padding-bottom: 0.8rem;
   }
 }
 </style>
@@ -476,38 +529,22 @@ h3.section-heading {
       <div class="profiling-block fade-in">
         <h3>【対比キャラクターとの比較表（vs ジャック・ハンマーの母・ダイアン・ニール）】</h3>
         <p style="font-size:0.85rem; color:#c0bbb4; margin-bottom:1rem; line-height:1.8;">両者とも「勇次郎の女」という同じMetaの原点を持ちながら、出力が完全に真逆である。江珠は勇次郎を愛したがゆえに息子を道具にし、ダイアンは勇次郎を憎んだがゆえに息子を守った。しかし皮肉なことに、江珠もダイアンも、最後には「母」としての天命に収束する。Metaの初期条件がどれほど異なっても、天命が向かう先は同じだったのだ。</p>
-        <table class="comparison-table">
-          <tr>
-            <th>比較軸</th>
-            <th>朱沢江珠</th>
-            <th>ダイアン・ニール</th>
-          </tr>
-          <tr>
-            <td>Metaの原点</td>
-            <td>勇次郎の女（愛）</td>
-            <td>勇次郎の被害者（憎悪）</td>
-          </tr>
-          <tr>
-            <td>勇次郎への感情</td>
-            <td>残虐性の共鳴による狂信</td>
-            <td>暴行の記憶による憎悪</td>
-          </tr>
-          <tr>
-            <td>息子への態度</td>
-            <td>道具（勇次郎への貢物）</td>
-            <td>保護（守り抜くべき存在）</td>
-          </tr>
-          <tr>
-            <td>シャドウの核心</td>
-            <td>「ただ抱きしめたかった」</td>
-            <td>「息子の中に勇次郎を見てしまう」</td>
-          </tr>
-          <tr>
-            <td>天命の収束</td>
-            <td>母としての抱擁（死の瞬間）</td>
-            <td>母としての献身（生涯を通じて）</td>
-          </tr>
-        </table>
+        <div class="comparison-table">
+  <div class="comparison-grid">
+    <div class="comparison-grid__head">朱沢江珠</div>
+    <div class="comparison-grid__head">ダイアン・ニール</div>
+    <div class="comparison-grid__cell"><strong>Metaの原点：</strong>勇次郎の女（愛）</div>
+    <div class="comparison-grid__cell"><strong>Metaの原点：</strong>勇次郎の被害者（憎悪）</div>
+    <div class="comparison-grid__cell"><strong>勇次郎への感情：</strong>残虐性の共鳴による狂信</div>
+    <div class="comparison-grid__cell"><strong>勇次郎への感情：</strong>暴行の記憶による憎悪</div>
+    <div class="comparison-grid__cell"><strong>息子への態度：</strong>道具（勇次郎への貢物）</div>
+    <div class="comparison-grid__cell"><strong>息子への態度：</strong>保護（守り抜くべき存在）</div>
+    <div class="comparison-grid__cell"><strong>シャドウの核心：</strong>「ただ抱きしめたかった」</div>
+    <div class="comparison-grid__cell"><strong>シャドウの核心：</strong>「息子の中に勇次郎を見てしまう」</div>
+    <div class="comparison-grid__cell"><strong>天命の収束：</strong>母としての抱擁（死の瞬間）</div>
+    <div class="comparison-grid__cell"><strong>天命の収束：</strong>母としての献身（生涯を通じて）</div>
+  </div>
+</div>
       </div>
 
       <div class="profiling-block fade-in">

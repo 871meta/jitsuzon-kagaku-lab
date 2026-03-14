@@ -275,26 +275,10 @@ h3.section-heading {
 }
 
 /* === Comparison Table === */
-.comparison-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1.5rem 0;
-  font-size: var(--fs-body);
-}
-.comparison-table th,
-.comparison-table td {
-  padding: 0.8rem 1rem;
-  border: 1px solid rgba(192,168,120,0.12);
-  text-align: left;
-}
-.comparison-table th {
-  background: rgba(192,168,120,0.08);
-  color: var(--color-gold);
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  font-size: var(--fs-small);
-}
-.comparison-table td { color: var(--color-text-reading); }
+
+
+
+
 
 /* === CTA Block === */
 /* === Author Block === */
@@ -350,8 +334,8 @@ h3.section-heading {
   .session-dialogue .line-yanai { padding-left: 0.8rem; }
   .session-dialogue .line-character { margin-left: 0.8rem; }
   .profiling-block { padding: 1.5rem 1.2rem; }
-  .comparison-table { font-size: var(--fs-xs); }
-  .comparison-table th, .comparison-table td { padding: 0.5rem 0.6rem; }
+  
+  
   .highlight-block { padding: 1.5rem 1.2rem 1.5rem 1.4rem; }
   .text-panel { padding: 2rem 1.5rem; }
 }
@@ -365,6 +349,75 @@ h3.section-heading {
   .session-dialogue p:nth-child(10n) {
     margin-bottom: 1.5em;
     padding-bottom: 1em;
+  }
+}
+/* ── 対比グリッド ── */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid rgba(192,168,120,0.12);
+  background: rgba(15, 12, 25, 0.45);
+}
+.comparison-grid__head {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-gold);
+  letter-spacing: 0.08em;
+  padding: 0.6rem 0.8rem;
+  text-align: center;
+  background: rgba(192,168,120,0.06);
+  border-bottom: 1px solid rgba(192,168,120,0.2);
+}
+.comparison-grid__head:first-child {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell {
+  padding: 0.55rem 0.8rem;
+  font-size: var(--fs-small);
+  line-height: 1.7;
+  color: var(--color-text-reading);
+  border-bottom: 1px solid rgba(192,168,120,0.06);
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+.comparison-grid__cell:nth-child(odd) {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+.comparison-table .comparison-note {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  font-size: var(--fs-micro);
+  color: rgba(235,232,225,0.55);
+  line-height: 1.8;
+  background: rgba(192,168,120,0.03);
+  border-left: 2px solid rgba(192,168,120,0.15);
+}
+@media (max-width: 768px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+  .comparison-grid__head {
+    border-right: none !important;
+  }
+  .comparison-grid__head:first-child {
+    border-right: none;
+  }
+  .comparison-grid__cell {
+    border-right: none;
+  }
+  .comparison-grid__cell:nth-child(odd) {
+    border-right: none;
+    padding-top: 0.8rem;
+    color: var(--color-gold);
+    font-weight: 600;
+    font-size: var(--fs-micro);
+  }
+  .comparison-grid__cell:nth-child(even) {
+    padding-top: 0.2rem;
+    padding-bottom: 0.8rem;
   }
 }
 </style>
@@ -472,38 +525,22 @@ h3.section-heading {
 
       <div class="profiling-block fade-in">
         <h3>【ハウルとの対比】</h3>
-        <table class="comparison-table">
-          <tr>
-            <th>比較軸</th>
-            <th>ソフィー</th>
-            <th>ハウル</th>
-          </tr>
-          <tr>
-            <td>自己の扱い方</td>
-            <td>自分の価値を内側で凍結し、存在しないものとして扱う</td>
-            <td>自分の心臓を外側に抽出し、感じる力を手放す</td>
-          </tr>
-          <tr>
-            <td>呪いの機能</td>
-            <td>解放装置として機能する（失うものがなくなり、勇敢になる）</td>
-            <td>束縛装置として機能する（失う恐怖で縛られる）</td>
-          </tr>
-          <tr>
-            <td>回避の方法</td>
-            <td>受動的回避──自分のことを聞かれると他者の話に逃げる</td>
-            <td>攻撃的回避──魅力と知識と逆質問で躱す</td>
-          </tr>
-          <tr>
-            <td>存在理由の確保</td>
-            <td>他者に尽くすことで「ここにいる理由」を作る</td>
-            <td>他者を魅了することで存在を確保する</td>
-          </tr>
-          <tr>
-            <td>天命の交差</td>
-            <td>ハウルの心臓を戻すことで、自分の呪いも解ける</td>
-            <td>ソフィーに心を返されることで、感じる力が戻る</td>
-          </tr>
-        </table>
+        <div class="comparison-table">
+  <div class="comparison-grid">
+    <div class="comparison-grid__head">ソフィー</div>
+    <div class="comparison-grid__head">ハウル</div>
+    <div class="comparison-grid__cell"><strong>自己の扱い方：</strong>自分の価値を内側で凍結し、存在しないものとして扱う</div>
+    <div class="comparison-grid__cell"><strong>自己の扱い方：</strong>自分の心臓を外側に抽出し、感じる力を手放す</div>
+    <div class="comparison-grid__cell"><strong>呪いの機能：</strong>解放装置として機能する（失うものがなくなり、勇敢になる）</div>
+    <div class="comparison-grid__cell"><strong>呪いの機能：</strong>束縛装置として機能する（失う恐怖で縛られる）</div>
+    <div class="comparison-grid__cell"><strong>回避の方法：</strong>受動的回避──自分のことを聞かれると他者の話に逃げる</div>
+    <div class="comparison-grid__cell"><strong>回避の方法：</strong>攻撃的回避──魅力と知識と逆質問で躱す</div>
+    <div class="comparison-grid__cell"><strong>存在理由の確保：</strong>他者に尽くすことで「ここにいる理由」を作る</div>
+    <div class="comparison-grid__cell"><strong>存在理由の確保：</strong>他者を魅了することで存在を確保する</div>
+    <div class="comparison-grid__cell"><strong>天命の交差：</strong>ハウルの心臓を戻すことで、自分の呪いも解ける</div>
+    <div class="comparison-grid__cell"><strong>天命の交差：</strong>ソフィーに心を返されることで、感じる力が戻る</div>
+  </div>
+</div>
         <div class="text-panel fade-in" style="margin-top:1.5rem; padding:1.2rem 1.5rem; background:rgba(192,168,120,0.04);">
           <p style="font-size:0.9rem;">両者の天命は相補的である。ハウルは一人では心臓を取り戻せない。ソフィーの天命は、まさにその返還行為そのものである。</p>
         </div>

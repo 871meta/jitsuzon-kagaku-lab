@@ -275,26 +275,10 @@ h3.section-heading {
 }
 
 /* === Comparison Table === */
-.comparison-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1.5rem 0;
-  font-size: var(--fs-body);
-}
-.comparison-table th,
-.comparison-table td {
-  padding: 0.8rem 1rem;
-  border: 1px solid rgba(192,168,120,0.12);
-  text-align: left;
-}
-.comparison-table th {
-  background: rgba(192,168,120,0.08);
-  color: var(--color-gold);
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  font-size: var(--fs-small);
-}
-.comparison-table td { color: var(--color-text-reading); }
+
+
+
+
 
 /* === CTA Block === */
 /* === Author Block === */
@@ -350,8 +334,8 @@ h3.section-heading {
   .session-dialogue .line-yanai { padding-left: 0.8rem; }
   .session-dialogue .line-character { margin-left: 0.8rem; }
   .profiling-block { padding: 1.5rem 1.2rem; }
-  .comparison-table { font-size: var(--fs-xs); }
-  .comparison-table th, .comparison-table td { padding: 0.5rem 0.6rem; }
+  
+  
   .highlight-block { padding: 1.5rem 1.2rem 1.5rem 1.4rem; }
   .text-panel { padding: 2rem 1.5rem; }
 }
@@ -365,6 +349,75 @@ h3.section-heading {
   .session-dialogue p:nth-child(10n) {
     margin-bottom: 1.5em;
     padding-bottom: 1em;
+  }
+}
+/* ── 対比グリッド ── */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid rgba(192,168,120,0.12);
+  background: rgba(15, 12, 25, 0.45);
+}
+.comparison-grid__head {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-gold);
+  letter-spacing: 0.08em;
+  padding: 0.6rem 0.8rem;
+  text-align: center;
+  background: rgba(192,168,120,0.06);
+  border-bottom: 1px solid rgba(192,168,120,0.2);
+}
+.comparison-grid__head:first-child {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell {
+  padding: 0.55rem 0.8rem;
+  font-size: var(--fs-small);
+  line-height: 1.7;
+  color: var(--color-text-reading);
+  border-bottom: 1px solid rgba(192,168,120,0.06);
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+.comparison-grid__cell:nth-child(odd) {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+.comparison-table .comparison-note {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  font-size: var(--fs-micro);
+  color: rgba(235,232,225,0.55);
+  line-height: 1.8;
+  background: rgba(192,168,120,0.03);
+  border-left: 2px solid rgba(192,168,120,0.15);
+}
+@media (max-width: 768px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+  .comparison-grid__head {
+    border-right: none !important;
+  }
+  .comparison-grid__head:first-child {
+    border-right: none;
+  }
+  .comparison-grid__cell {
+    border-right: none;
+  }
+  .comparison-grid__cell:nth-child(odd) {
+    border-right: none;
+    padding-top: 0.8rem;
+    color: var(--color-gold);
+    font-weight: 600;
+    font-size: var(--fs-micro);
+  }
+  .comparison-grid__cell:nth-child(even) {
+    padding-top: 0.2rem;
+    padding-bottom: 0.8rem;
   }
 }
 </style>
@@ -490,17 +543,28 @@ h3.section-heading {
 
       <div class="profiling-block fade-in">
         <h3>【五ェ門 &times; ルパンの対比表】</h3>
-        <table class="comparison-table">
-          <tr><th>構造軸</th><th>石川五ェ門</th><th>ルパン三世</th></tr>
-          <tr><td>Metaの性質</td><td>アイデンティティそのもの（自分＝Meta）</td><td>環境的制約（三世の名を遊ぶ）</td></tr>
-          <tr><td>自己との関係</td><td>「自分」と「掟」の境界が完全に消失</td><td>仮面と素顔の区別を自覚している</td></tr>
-          <tr><td>行動原理</td><td>義務、忠義、規律</td><td>欲望、美学、即興</td></tr>
-          <tr><td>失敗への態度</td><td>切腹を覚悟するほどの恥辱</td><td>高笑いして次へ進む</td></tr>
-          <tr><td>身体の使い方</td><td>直線的・完結的──空間そのものを切断する</td><td>伸縮自在・混沌──環境に即興で適応する</td></tr>
-          <tr><td>時間軸</td><td>過去（十二代の重み）に縛られる</td><td>常に現在を生きる</td></tr>
-          <tr><td>沈黙の意味</td><td>瞑想、規律としての不要語の排除</td><td>状況観察、発言の選択</td></tr>
-          <tr><td>シャドウの形態</td><td>継承されたシャドウ＋凍結（Meta＝Shadow）</td><td>偽装されたゴールデンシャドウ</td></tr>
-        </table>
+        <div class="comparison-table">
+  <div class="comparison-grid">
+    <div class="comparison-grid__head">石川五ェ門</div>
+    <div class="comparison-grid__head">ルパン三世</div>
+    <div class="comparison-grid__cell"><strong>Metaの性質：</strong>アイデンティティそのもの（自分＝Meta）</div>
+    <div class="comparison-grid__cell"><strong>Metaの性質：</strong>環境的制約（三世の名を遊ぶ）</div>
+    <div class="comparison-grid__cell"><strong>自己との関係：</strong>「自分」と「掟」の境界が完全に消失</div>
+    <div class="comparison-grid__cell"><strong>自己との関係：</strong>仮面と素顔の区別を自覚している</div>
+    <div class="comparison-grid__cell"><strong>行動原理：</strong>義務、忠義、規律</div>
+    <div class="comparison-grid__cell"><strong>行動原理：</strong>欲望、美学、即興</div>
+    <div class="comparison-grid__cell"><strong>失敗への態度：</strong>切腹を覚悟するほどの恥辱</div>
+    <div class="comparison-grid__cell"><strong>失敗への態度：</strong>高笑いして次へ進む</div>
+    <div class="comparison-grid__cell"><strong>身体の使い方：</strong>直線的・完結的──空間そのものを切断する</div>
+    <div class="comparison-grid__cell"><strong>身体の使い方：</strong>伸縮自在・混沌──環境に即興で適応する</div>
+    <div class="comparison-grid__cell"><strong>時間軸：</strong>過去（十二代の重み）に縛られる</div>
+    <div class="comparison-grid__cell"><strong>時間軸：</strong>常に現在を生きる</div>
+    <div class="comparison-grid__cell"><strong>沈黙の意味：</strong>瞑想、規律としての不要語の排除</div>
+    <div class="comparison-grid__cell"><strong>沈黙の意味：</strong>状況観察、発言の選択</div>
+    <div class="comparison-grid__cell"><strong>シャドウの形態：</strong>継承されたシャドウ＋凍結（Meta＝Shadow）</div>
+    <div class="comparison-grid__cell"><strong>シャドウの形態：</strong>偽装されたゴールデンシャドウ</div>
+  </div>
+</div>
       </div>
 
       <div class="profiling-block fade-in">

@@ -275,26 +275,10 @@ h3.section-heading {
 }
 
 /* === Comparison Table === */
-.comparison-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1.5rem 0;
-  font-size: var(--fs-body);
-}
-.comparison-table th,
-.comparison-table td {
-  padding: 0.8rem 1rem;
-  border: 1px solid rgba(192,168,120,0.12);
-  text-align: left;
-}
-.comparison-table th {
-  background: rgba(192,168,120,0.08);
-  color: var(--color-gold);
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  font-size: var(--fs-small);
-}
-.comparison-table td { color: var(--color-text-reading); }
+
+
+
+
 
 /* === CTA Block === */
 /* === Author Block === */
@@ -350,8 +334,8 @@ h3.section-heading {
   .session-dialogue .line-yanai { padding-left: 0.8rem; }
   .session-dialogue .line-character { margin-left: 0.8rem; }
   .profiling-block { padding: 1.5rem 1.2rem; }
-  .comparison-table { font-size: var(--fs-xs); }
-  .comparison-table th, .comparison-table td { padding: 0.5rem 0.6rem; }
+  
+  
   .highlight-block { padding: 1.5rem 1.2rem 1.5rem 1.4rem; }
   .text-panel { padding: 2rem 1.5rem; }
 }
@@ -365,6 +349,75 @@ h3.section-heading {
   .session-dialogue p:nth-child(10n) {
     margin-bottom: 1.5em;
     padding-bottom: 1em;
+  }
+}
+/* ── 対比グリッド ── */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid rgba(192,168,120,0.12);
+  background: rgba(15, 12, 25, 0.45);
+}
+.comparison-grid__head {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-gold);
+  letter-spacing: 0.08em;
+  padding: 0.6rem 0.8rem;
+  text-align: center;
+  background: rgba(192,168,120,0.06);
+  border-bottom: 1px solid rgba(192,168,120,0.2);
+}
+.comparison-grid__head:first-child {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell {
+  padding: 0.55rem 0.8rem;
+  font-size: var(--fs-small);
+  line-height: 1.7;
+  color: var(--color-text-reading);
+  border-bottom: 1px solid rgba(192,168,120,0.06);
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+.comparison-grid__cell:nth-child(odd) {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+.comparison-table .comparison-note {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  font-size: var(--fs-micro);
+  color: rgba(235,232,225,0.55);
+  line-height: 1.8;
+  background: rgba(192,168,120,0.03);
+  border-left: 2px solid rgba(192,168,120,0.15);
+}
+@media (max-width: 768px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+  .comparison-grid__head {
+    border-right: none !important;
+  }
+  .comparison-grid__head:first-child {
+    border-right: none;
+  }
+  .comparison-grid__cell {
+    border-right: none;
+  }
+  .comparison-grid__cell:nth-child(odd) {
+    border-right: none;
+    padding-top: 0.8rem;
+    color: var(--color-gold);
+    font-weight: 600;
+    font-size: var(--fs-micro);
+  }
+  .comparison-grid__cell:nth-child(even) {
+    padding-top: 0.2rem;
+    padding-bottom: 0.8rem;
   }
 }
 </style>
@@ -488,42 +541,24 @@ h3.section-heading {
 
       <div class="profiling-block fade-in">
         <h3>【対比キャラクター：サンとの比較表】</h3>
-        <table class="comparison-table">
-          <tr>
-            <th>比較軸</th>
-            <th>エボシ</th>
-            <th>サン</th>
-          </tr>
-          <tr>
-            <td>人間社会との関係</td>
-            <td>捨てられた &rarr; 戻って再建する</td>
-            <td>捨てられた &rarr; 人間を拒絶する</td>
-          </tr>
-          <tr>
-            <td>「捨てられた」への応答</td>
-            <td>建設（二度と捨てられない場所を作る）</td>
-            <td>攻撃（人間を滅ぼす）</td>
-          </tr>
-          <tr>
-            <td>自然との関係</td>
-            <td>聖域の物質基盤として破壊する</td>
-            <td>森の一部として一体化する</td>
-          </tr>
-          <tr>
-            <td>アイデンティティ</td>
-            <td>保護者・建設者</td>
-            <td>森の娘・戦士</td>
-          </tr>
-          <tr>
-            <td>共通のMeta</td>
-            <td colspan="2" style="text-align:center;">人間社会に捨てられた存在</td>
-          </tr>
-          <tr>
-            <td>出力の差を生む初期条件</td>
-            <td>社会を経験してから捨てられた &rarr; 社会を作り直す</td>
-            <td>幼児期に捨てられた &rarr; 社会を知らない &rarr; 拒絶する</td>
-          </tr>
-        </table>
+        <div class="comparison-table">
+  <div class="comparison-grid">
+    <div class="comparison-grid__head">エボシ</div>
+    <div class="comparison-grid__head">サン</div>
+    <div class="comparison-grid__cell"><strong>人間社会との関係：</strong>捨てられた &rarr; 戻って再建する</div>
+    <div class="comparison-grid__cell"><strong>人間社会との関係：</strong>捨てられた &rarr; 人間を拒絶する</div>
+    <div class="comparison-grid__cell"><strong>「捨てられた」への応答：</strong>建設（二度と捨てられない場所を作る）</div>
+    <div class="comparison-grid__cell"><strong>「捨てられた」への応答：</strong>攻撃（人間を滅ぼす）</div>
+    <div class="comparison-grid__cell"><strong>自然との関係：</strong>聖域の物質基盤として破壊する</div>
+    <div class="comparison-grid__cell"><strong>自然との関係：</strong>森の一部として一体化する</div>
+    <div class="comparison-grid__cell"><strong>アイデンティティ：</strong>保護者・建設者</div>
+    <div class="comparison-grid__cell"><strong>アイデンティティ：</strong>森の娘・戦士</div>
+    <div class="comparison-grid__cell">共通のMeta</div>
+    <div class="comparison-grid__cell">人間社会に捨てられた存在</div>
+    <div class="comparison-grid__cell"><strong>出力の差を生む初期条件：</strong>社会を経験してから捨てられた &rarr; 社会を作り直す</div>
+    <div class="comparison-grid__cell"><strong>出力の差を生む初期条件：</strong>幼児期に捨てられた &rarr; 社会を知らない &rarr; 拒絶する</div>
+  </div>
+</div>
         <div class="text-panel fade-in" style="margin-top:1.5rem;">
           <p>エボシとサンは、ともに人間社会に捨てられた存在でありながら、捨てられた時期の違いが、建設と破壊という正反対の出力を生んでいる。同じMetaでも初期条件が違えば、出力が変わる。</p>
         </div>

@@ -275,26 +275,10 @@ h3.section-heading {
 }
 
 /* === Comparison Table === */
-.comparison-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1.5rem 0;
-  font-size: var(--fs-body);
-}
-.comparison-table th,
-.comparison-table td {
-  padding: 0.8rem 1rem;
-  border: 1px solid rgba(192,168,120,0.12);
-  text-align: left;
-}
-.comparison-table th {
-  background: rgba(192,168,120,0.08);
-  color: var(--color-gold);
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  font-size: var(--fs-small);
-}
-.comparison-table td { color: var(--color-text-reading); }
+
+
+
+
 
 /* === CTA Block === */
 /* === Author Block === */
@@ -350,8 +334,8 @@ h3.section-heading {
   .session-dialogue .line-yanai { padding-left: 0.8rem; }
   .session-dialogue .line-character { margin-left: 0.8rem; }
   .profiling-block { padding: 1.5rem 1.2rem; }
-  .comparison-table { font-size: var(--fs-xs); }
-  .comparison-table th, .comparison-table td { padding: 0.5rem 0.6rem; }
+  
+  
   .highlight-block { padding: 1.5rem 1.2rem 1.5rem 1.4rem; }
   .text-panel { padding: 2rem 1.5rem; }
 }
@@ -365,6 +349,75 @@ h3.section-heading {
   .session-dialogue p:nth-child(10n) {
     margin-bottom: 1.5em;
     padding-bottom: 1em;
+  }
+}
+/* ── 対比グリッド ── */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid rgba(192,168,120,0.12);
+  background: rgba(15, 12, 25, 0.45);
+}
+.comparison-grid__head {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-gold);
+  letter-spacing: 0.08em;
+  padding: 0.6rem 0.8rem;
+  text-align: center;
+  background: rgba(192,168,120,0.06);
+  border-bottom: 1px solid rgba(192,168,120,0.2);
+}
+.comparison-grid__head:first-child {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell {
+  padding: 0.55rem 0.8rem;
+  font-size: var(--fs-small);
+  line-height: 1.7;
+  color: var(--color-text-reading);
+  border-bottom: 1px solid rgba(192,168,120,0.06);
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+.comparison-grid__cell:nth-child(odd) {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+.comparison-table .comparison-note {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  font-size: var(--fs-micro);
+  color: rgba(235,232,225,0.55);
+  line-height: 1.8;
+  background: rgba(192,168,120,0.03);
+  border-left: 2px solid rgba(192,168,120,0.15);
+}
+@media (max-width: 768px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+  .comparison-grid__head {
+    border-right: none !important;
+  }
+  .comparison-grid__head:first-child {
+    border-right: none;
+  }
+  .comparison-grid__cell {
+    border-right: none;
+  }
+  .comparison-grid__cell:nth-child(odd) {
+    border-right: none;
+    padding-top: 0.8rem;
+    color: var(--color-gold);
+    font-weight: 600;
+    font-size: var(--fs-micro);
+  }
+  .comparison-grid__cell:nth-child(even) {
+    padding-top: 0.2rem;
+    padding-bottom: 0.8rem;
   }
 }
 </style>
@@ -452,43 +505,24 @@ h3.section-heading {
       <div class="profiling-block fade-in">
         <h3>【刃牙との対比】</h3>
         <p style="font-size:0.85rem; color:#c0bbb4; margin-bottom:1rem; line-height:1.8;">同じ父・範馬勇次郎の血を引きながら、二人の出力は完全に真逆である。刃牙は「超えたい」（挑戦）、ジャックは「認められたい」（承認）。この差はMetaの初期条件──出生と幼少期の愛──が決定づけている。</p>
-        <table class="comparison-table">
-          <tr>
-            <th>比較軸</th>
-            <th>範馬刃牙</th>
-            <th>ジャック・ハンマー</th>
-          </tr>
-          <tr>
-            <td>父への態度</td>
-            <td>「超えたい」（挑戦）</td>
-            <td>「認められたい」（承認）</td>
-          </tr>
-          <tr>
-            <td>強さの獲得</td>
-            <td>自然体の鍛錬</td>
-            <td>薬物・骨延長・義歯</td>
-          </tr>
-          <tr>
-            <td>闘いの動機</td>
-            <td>楽しむ</td>
-            <td>証明する</td>
-          </tr>
-          <tr>
-            <td>人間関係</td>
-            <td>恋人・仲間あり</td>
-            <td>ほぼ孤立</td>
-          </tr>
-          <tr>
-            <td>鬼の貌</td>
-            <td>出現する</td>
-            <td>一度も出ていない</td>
-          </tr>
-          <tr>
-            <td>幼少期の愛</td>
-            <td>母に愛された記憶あり</td>
-            <td>なし</td>
-          </tr>
-        </table>
+        <div class="comparison-table">
+  <div class="comparison-grid">
+    <div class="comparison-grid__head">範馬刃牙</div>
+    <div class="comparison-grid__head">ジャック・ハンマー</div>
+    <div class="comparison-grid__cell"><strong>父への態度：</strong>「超えたい」（挑戦）</div>
+    <div class="comparison-grid__cell"><strong>父への態度：</strong>「認められたい」（承認）</div>
+    <div class="comparison-grid__cell"><strong>強さの獲得：</strong>自然体の鍛錬</div>
+    <div class="comparison-grid__cell"><strong>強さの獲得：</strong>薬物・骨延長・義歯</div>
+    <div class="comparison-grid__cell"><strong>闘いの動機：</strong>楽しむ</div>
+    <div class="comparison-grid__cell"><strong>闘いの動機：</strong>証明する</div>
+    <div class="comparison-grid__cell"><strong>人間関係：</strong>恋人・仲間あり</div>
+    <div class="comparison-grid__cell"><strong>人間関係：</strong>ほぼ孤立</div>
+    <div class="comparison-grid__cell"><strong>鬼の貌：</strong>出現する</div>
+    <div class="comparison-grid__cell"><strong>鬼の貌：</strong>一度も出ていない</div>
+    <div class="comparison-grid__cell"><strong>幼少期の愛：</strong>母に愛された記憶あり</div>
+    <div class="comparison-grid__cell"><strong>幼少期の愛：</strong>なし</div>
+  </div>
+</div>
       </div>
 
       <div class="profiling-block fade-in">

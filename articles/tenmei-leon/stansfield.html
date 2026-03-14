@@ -291,26 +291,10 @@ h3.section-heading {
 }
 
 /* === Comparison Table === */
-.comparison-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1.5rem 0;
-  font-size: var(--fs-body);
-}
-.comparison-table th,
-.comparison-table td {
-  padding: 0.8rem 1rem;
-  border: 1px solid rgba(192,168,120,0.12);
-  text-align: left;
-}
-.comparison-table th {
-  background: rgba(192,168,120,0.08);
-  color: var(--color-gold);
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  font-size: var(--fs-small);
-}
-.comparison-table td { color: var(--color-text-reading); }
+
+
+
+
 
 /* === CTA Block === */
 /* === Author Block === */
@@ -366,8 +350,8 @@ h3.section-heading {
   .session-dialogue .line-yanai { padding-left: 0.8rem; }
   .session-dialogue .line-character { margin-left: 0.8rem; }
   .profiling-block { padding: 1.5rem 1.2rem; }
-  .comparison-table { font-size: var(--fs-xs); }
-  .comparison-table th, .comparison-table td { padding: 0.5rem 0.6rem; }
+  
+  
   .highlight-block { padding: 1.5rem 1.2rem 1.5rem 1.4rem; }
   .text-panel { padding: 2rem 1.5rem; }
 }
@@ -381,6 +365,75 @@ h3.section-heading {
   .session-dialogue p:nth-child(10n) {
     margin-bottom: 1.5em;
     padding-bottom: 1em;
+  }
+}
+/* ── 対比グリッド ── */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid rgba(192,168,120,0.12);
+  background: rgba(15, 12, 25, 0.45);
+}
+.comparison-grid__head {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-gold);
+  letter-spacing: 0.08em;
+  padding: 0.6rem 0.8rem;
+  text-align: center;
+  background: rgba(192,168,120,0.06);
+  border-bottom: 1px solid rgba(192,168,120,0.2);
+}
+.comparison-grid__head:first-child {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell {
+  padding: 0.55rem 0.8rem;
+  font-size: var(--fs-small);
+  line-height: 1.7;
+  color: var(--color-text-reading);
+  border-bottom: 1px solid rgba(192,168,120,0.06);
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+.comparison-grid__cell:nth-child(odd) {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+.comparison-table .comparison-note {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  font-size: var(--fs-micro);
+  color: rgba(235,232,225,0.55);
+  line-height: 1.8;
+  background: rgba(192,168,120,0.03);
+  border-left: 2px solid rgba(192,168,120,0.15);
+}
+@media (max-width: 768px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+  .comparison-grid__head {
+    border-right: none !important;
+  }
+  .comparison-grid__head:first-child {
+    border-right: none;
+  }
+  .comparison-grid__cell {
+    border-right: none;
+  }
+  .comparison-grid__cell:nth-child(odd) {
+    border-right: none;
+    padding-top: 0.8rem;
+    color: var(--color-gold);
+    font-weight: 600;
+    font-size: var(--fs-micro);
+  }
+  .comparison-grid__cell:nth-child(even) {
+    padding-top: 0.2rem;
+    padding-bottom: 0.8rem;
   }
 }
 </style>
@@ -523,53 +576,28 @@ h3.section-heading {
 
       <div class="profiling-block fade-in">
         <h3>【対比：レオンとスタンスフィールド】</h3>
-        <table class="comparison-table">
-          <tr>
-            <th>比較軸</th>
-            <th>レオン</th>
-            <th>スタンスフィールド</th>
-          </tr>
-          <tr>
-            <td>暴力のスタイル</td>
-            <td>精密で無感情、常に距離を保つ</td>
-            <td>混沌と恍惚の中で距離をゼロにし、暴力を浴びる</td>
-          </tr>
-          <tr>
-            <td>残存する価値</td>
-            <td>「女と子供は殺さない」が一つだけ残っていた</td>
-            <td>ゼロ。すべてのルールを踏み越える</td>
-          </tr>
-          <tr>
-            <td>自己認識</td>
-            <td>自分が止まっていることにすら気づいていない</td>
-            <td>自分を哲学者だと思っている</td>
-          </tr>
-          <tr>
-            <td>薬物</td>
-            <td>ミルクだけを飲む（幼児的退行の身体化）</td>
-            <td>リブリウムを常用し、感覚を人工的に増幅させる</td>
-          </tr>
-          <tr>
-            <td>音楽との関係</td>
-            <td>ジーン・ケリーを静かに鑑賞する（感情の代理体験）</td>
-            <td>ベートーヴェンを虐殺の前奏曲として「味わう」</td>
-          </tr>
-          <tr>
-            <td>最後の言葉</td>
-            <td>「これはマチルダからだ」（天命の完成）</td>
-            <td>「クソッ」（哲学も美学も剥がれ、空虚だけが残る）</td>
-          </tr>
-          <tr>
-            <td>死の意味</td>
-            <td>天命の瞬間的完成であり、植物が根を持つ</td>
-            <td>構造的な意味がない。虚無の帰結</td>
-          </tr>
-          <tr>
-            <td>「距離ゼロ」の意味</td>
-            <td>守るための接触</td>
-            <td>破壊するための密着</td>
-          </tr>
-        </table>
+        <div class="comparison-table">
+  <div class="comparison-grid">
+    <div class="comparison-grid__head">レオン</div>
+    <div class="comparison-grid__head">スタンスフィールド</div>
+    <div class="comparison-grid__cell"><strong>暴力のスタイル：</strong>精密で無感情、常に距離を保つ</div>
+    <div class="comparison-grid__cell"><strong>暴力のスタイル：</strong>混沌と恍惚の中で距離をゼロにし、暴力を浴びる</div>
+    <div class="comparison-grid__cell"><strong>残存する価値：</strong>「女と子供は殺さない」が一つだけ残っていた</div>
+    <div class="comparison-grid__cell"><strong>残存する価値：</strong>ゼロ。すべてのルールを踏み越える</div>
+    <div class="comparison-grid__cell"><strong>自己認識：</strong>自分が止まっていることにすら気づいていない</div>
+    <div class="comparison-grid__cell"><strong>自己認識：</strong>自分を哲学者だと思っている</div>
+    <div class="comparison-grid__cell"><strong>薬物：</strong>ミルクだけを飲む（幼児的退行の身体化）</div>
+    <div class="comparison-grid__cell"><strong>薬物：</strong>リブリウムを常用し、感覚を人工的に増幅させる</div>
+    <div class="comparison-grid__cell"><strong>音楽との関係：</strong>ジーン・ケリーを静かに鑑賞する（感情の代理体験）</div>
+    <div class="comparison-grid__cell"><strong>音楽との関係：</strong>ベートーヴェンを虐殺の前奏曲として「味わう」</div>
+    <div class="comparison-grid__cell"><strong>最後の言葉：</strong>「これはマチルダからだ」（天命の完成）</div>
+    <div class="comparison-grid__cell"><strong>最後の言葉：</strong>「クソッ」（哲学も美学も剥がれ、空虚だけが残る）</div>
+    <div class="comparison-grid__cell"><strong>死の意味：</strong>天命の瞬間的完成であり、植物が根を持つ</div>
+    <div class="comparison-grid__cell"><strong>死の意味：</strong>構造的な意味がない。虚無の帰結</div>
+    <div class="comparison-grid__cell"><strong>「距離ゼロ」の意味：</strong>守るための接触</div>
+    <div class="comparison-grid__cell"><strong>「距離ゼロ」の意味：</strong>破壊するための密着</div>
+  </div>
+</div>
       </div>
 
       <div class="profiling-block fade-in">

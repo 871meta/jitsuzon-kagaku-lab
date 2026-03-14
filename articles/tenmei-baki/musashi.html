@@ -275,26 +275,10 @@ h3.section-heading {
 }
 
 /* === Comparison Table === */
-.comparison-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1.5rem 0;
-  font-size: var(--fs-body);
-}
-.comparison-table th,
-.comparison-table td {
-  padding: 0.8rem 1rem;
-  border: 1px solid rgba(192,168,120,0.12);
-  text-align: left;
-}
-.comparison-table th {
-  background: rgba(192,168,120,0.08);
-  color: var(--color-gold);
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  font-size: var(--fs-small);
-}
-.comparison-table td { color: var(--color-text-reading); }
+
+
+
+
 
 /* === CTA Block === */
 /* === Author Block === */
@@ -351,8 +335,8 @@ h3.section-heading {
   .session-dialogue .line-yanai { padding-left: 0.8rem; }
   .session-dialogue .line-character { margin-left: 0.8rem; }
   .profiling-block { padding: 1.5rem 1.2rem; }
-  .comparison-table { font-size: var(--fs-xs); }
-  .comparison-table th, .comparison-table td { padding: 0.5rem 0.6rem; }
+  
+  
   .highlight-block { padding: 1.5rem 1.2rem 1.5rem 1.4rem; }
   .text-panel { padding: 2rem 1.5rem; }
 }
@@ -366,6 +350,75 @@ h3.section-heading {
   .session-dialogue p:nth-child(10n) {
     margin-bottom: 1.5em;
     padding-bottom: 1em;
+  }
+}
+/* ── 対比グリッド ── */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid rgba(192,168,120,0.12);
+  background: rgba(15, 12, 25, 0.45);
+}
+.comparison-grid__head {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-gold);
+  letter-spacing: 0.08em;
+  padding: 0.6rem 0.8rem;
+  text-align: center;
+  background: rgba(192,168,120,0.06);
+  border-bottom: 1px solid rgba(192,168,120,0.2);
+}
+.comparison-grid__head:first-child {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell {
+  padding: 0.55rem 0.8rem;
+  font-size: var(--fs-small);
+  line-height: 1.7;
+  color: var(--color-text-reading);
+  border-bottom: 1px solid rgba(192,168,120,0.06);
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+.comparison-grid__cell:nth-child(odd) {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+.comparison-table .comparison-note {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  font-size: var(--fs-micro);
+  color: rgba(235,232,225,0.55);
+  line-height: 1.8;
+  background: rgba(192,168,120,0.03);
+  border-left: 2px solid rgba(192,168,120,0.15);
+}
+@media (max-width: 768px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+  .comparison-grid__head {
+    border-right: none !important;
+  }
+  .comparison-grid__head:first-child {
+    border-right: none;
+  }
+  .comparison-grid__cell {
+    border-right: none;
+  }
+  .comparison-grid__cell:nth-child(odd) {
+    border-right: none;
+    padding-top: 0.8rem;
+    color: var(--color-gold);
+    font-weight: 600;
+    font-size: var(--fs-micro);
+  }
+  .comparison-grid__cell:nth-child(even) {
+    padding-top: 0.2rem;
+    padding-bottom: 0.8rem;
   }
 }
 </style>
@@ -479,38 +532,22 @@ h3.section-heading {
       <div class="profiling-block fade-in">
         <h3>【対比キャラクターとの比較表（vs 範馬勇次郎）】</h3>
         <p style="font-size:0.85rem; color:#c0bbb4; margin-bottom:1rem; line-height:1.8;">武蔵と勇次郎は、同じ「最強」でありながら、その強さの意味が根本的に異なる。勇次郎は戦うために生まれた。武蔵は生きるために戦った。この違いは個人の性格ではなく、二人を駆動するMetaの初期条件の違いである。しかし皮肉なことに、どちらも「自分で選んだ」のではない。勇次郎の純粋さも、武蔵の不純さも、Metaが出力した必然だった。</p>
-        <table class="comparison-table">
-          <tr>
-            <th>比較軸</th>
-            <th>宮本武蔵</th>
-            <th>範馬勇次郎</th>
-          </tr>
-          <tr>
-            <td>闘いの意味</td>
-            <td>生存・出世・承認の手段</td>
-            <td>存在理由そのもの</td>
-          </tr>
-          <tr>
-            <td>Metaの時代</td>
-            <td>戦国（斬らねば死ぬ）</td>
-            <td>超時代的（最強の血統）</td>
-          </tr>
-          <tr>
-            <td>「純度」</td>
-            <td>低い（時代が付与した不純物）</td>
-            <td>極限的に高い（闘争のみ）</td>
-          </tr>
-          <tr>
-            <td>シャドウの核心</td>
-            <td>「何のために斬るのかわからない」</td>
-            <td>（問いそのものが不要）</td>
-          </tr>
-          <tr>
-            <td>天命の動詞</td>
-            <td>断つ（自分自身のMetaを）</td>
-            <td>（闘争そのものが天命）</td>
-          </tr>
-        </table>
+        <div class="comparison-table">
+  <div class="comparison-grid">
+    <div class="comparison-grid__head">宮本武蔵</div>
+    <div class="comparison-grid__head">範馬勇次郎</div>
+    <div class="comparison-grid__cell"><strong>闘いの意味：</strong>生存・出世・承認の手段</div>
+    <div class="comparison-grid__cell"><strong>闘いの意味：</strong>存在理由そのもの</div>
+    <div class="comparison-grid__cell"><strong>Metaの時代：</strong>戦国（斬らねば死ぬ）</div>
+    <div class="comparison-grid__cell"><strong>Metaの時代：</strong>超時代的（最強の血統）</div>
+    <div class="comparison-grid__cell"><strong>「純度」：</strong>低い（時代が付与した不純物）</div>
+    <div class="comparison-grid__cell"><strong>「純度」：</strong>極限的に高い（闘争のみ）</div>
+    <div class="comparison-grid__cell"><strong>シャドウの核心：</strong>「何のために斬るのかわからない」</div>
+    <div class="comparison-grid__cell"><strong>シャドウの核心：</strong>（問いそのものが不要）</div>
+    <div class="comparison-grid__cell"><strong>天命の動詞：</strong>断つ（自分自身のMetaを）</div>
+    <div class="comparison-grid__cell"><strong>天命の動詞：</strong>（闘争そのものが天命）</div>
+  </div>
+</div>
       </div>
 
       <div class="profiling-block fade-in">

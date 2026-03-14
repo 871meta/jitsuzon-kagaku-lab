@@ -273,34 +273,11 @@ h3.section-heading {
 }
 
 /* === Comparison Table === */
-.comparison-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 2rem 0;
-  font-size: var(--fs-body);
-}
-.comparison-table th,
-.comparison-table td {
-  border: 1px solid rgba(192,168,120,0.12);
-  padding: 0.8rem 1rem;
-  line-height: 1.8;
-  vertical-align: top;
-}
-.comparison-table th {
-  background: rgba(192,168,120,0.08);
-  color: var(--color-gold);
-  font-weight: 600;
-  font-size: var(--fs-small);
-  letter-spacing: 0.05em;
-}
-.comparison-table td {
-  color: var(--color-text-reading);
-}
-.comparison-table td:first-child {
-  color: var(--color-text-body);
-  font-weight: 500;
-  white-space: nowrap;
-}
+
+
+
+
+
 
 /* === Author Block === */
 .author-block {
@@ -334,15 +311,84 @@ h3.section-heading {
 @media (max-width: 600px) {
   .session-dialogue { padding: 1.5rem 1.2rem; }
   .profiling-block { padding: 1.5rem 1.2rem; }
-  .comparison-table { font-size: var(--fs-small); }
-  .comparison-table th, .comparison-table td { padding: 0.5rem 0.6rem; }
+  
+  
   }
 @media (max-width: 480px) {
   .text-panel p br,
   .pull-quote p br,
   .highlight-block p br,
   .def-box p br { display: none; }
-  .comparison-table td:first-child { white-space: normal; }
+  
+}
+/* ── 対比グリッド ── */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid rgba(192,168,120,0.12);
+  background: rgba(15, 12, 25, 0.45);
+}
+.comparison-grid__head {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-gold);
+  letter-spacing: 0.08em;
+  padding: 0.6rem 0.8rem;
+  text-align: center;
+  background: rgba(192,168,120,0.06);
+  border-bottom: 1px solid rgba(192,168,120,0.2);
+}
+.comparison-grid__head:first-child {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell {
+  padding: 0.55rem 0.8rem;
+  font-size: var(--fs-small);
+  line-height: 1.7;
+  color: var(--color-text-reading);
+  border-bottom: 1px solid rgba(192,168,120,0.06);
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+.comparison-grid__cell:nth-child(odd) {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+.comparison-table .comparison-note {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  font-size: var(--fs-micro);
+  color: rgba(235,232,225,0.55);
+  line-height: 1.8;
+  background: rgba(192,168,120,0.03);
+  border-left: 2px solid rgba(192,168,120,0.15);
+}
+@media (max-width: 768px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+  .comparison-grid__head {
+    border-right: none !important;
+  }
+  .comparison-grid__head:first-child {
+    border-right: none;
+  }
+  .comparison-grid__cell {
+    border-right: none;
+  }
+  .comparison-grid__cell:nth-child(odd) {
+    border-right: none;
+    padding-top: 0.8rem;
+    color: var(--color-gold);
+    font-weight: 600;
+    font-size: var(--fs-micro);
+  }
+  .comparison-grid__cell:nth-child(even) {
+    padding-top: 0.2rem;
+    padding-bottom: 0.8rem;
+  }
 }
 </style>
 </head>
@@ -463,37 +509,20 @@ h3.section-heading {
       <!-- 対比キャラクター -->
       <div class="profiling-block fade-in">
         <h3>対比キャラクターとの比較表</h3>
-        <table class="comparison-table">
-          <thead>
-            <tr>
-              <th>比較軸</th>
-              <th>ガッツ</th>
-              <th>グリフィス</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>蝕に対する選択</td>
-              <td>生贄にされた側。人間性を保ったまま歩む</td>
-              <td>仲間を売り、ゴッド・ハンドに転身した側</td>
-            </tr>
-            <tr>
-              <td>シャドウの処理</td>
-              <td>汚泥にまみれた自己から目を逸らさない</td>
-              <td>傷ついた自己を直視できず、絶対者に逃避</td>
-            </tr>
-            <tr>
-              <td>弱さへの態度</td>
-              <td>他者に弱さを晒し、寄りかかることを学んでいく</td>
-              <td>他者からの同情に耐えられず、弱さを完全に凍結</td>
-            </tr>
-            <tr>
-              <td>天命</td>
-              <td>守るべきもののために生き、内なる獣を飼い慣らす</td>
-              <td>天命を放棄し、因果律に身を委ねた</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="comparison-table">
+  <div class="comparison-grid">
+    <div class="comparison-grid__head">ガッツ</div>
+    <div class="comparison-grid__head">グリフィス</div>
+    <div class="comparison-grid__cell"><strong>蝕に対する選択：</strong>生贄にされた側。人間性を保ったまま歩む</div>
+    <div class="comparison-grid__cell"><strong>蝕に対する選択：</strong>仲間を売り、ゴッド・ハンドに転身した側</div>
+    <div class="comparison-grid__cell"><strong>シャドウの処理：</strong>汚泥にまみれた自己から目を逸らさない</div>
+    <div class="comparison-grid__cell"><strong>シャドウの処理：</strong>傷ついた自己を直視できず、絶対者に逃避</div>
+    <div class="comparison-grid__cell"><strong>弱さへの態度：</strong>他者に弱さを晒し、寄りかかることを学んでいく</div>
+    <div class="comparison-grid__cell"><strong>弱さへの態度：</strong>他者からの同情に耐えられず、弱さを完全に凍結</div>
+    <div class="comparison-grid__cell"><strong>天命：</strong>守るべきもののために生き、内なる獣を飼い慣らす</div>
+    <div class="comparison-grid__cell"><strong>天命：</strong>天命を放棄し、因果律に身を委ねた</div>
+  </div>
+</div>
       </div>
 
       <!-- 転換点 -->

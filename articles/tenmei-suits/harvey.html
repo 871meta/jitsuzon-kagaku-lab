@@ -275,26 +275,10 @@ h3.section-heading {
 }
 
 /* === Comparison Table === */
-.comparison-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1.5rem 0;
-  font-size: var(--fs-body);
-}
-.comparison-table th,
-.comparison-table td {
-  padding: 0.8rem 1rem;
-  border: 1px solid rgba(192,168,120,0.12);
-  text-align: left;
-}
-.comparison-table th {
-  background: rgba(192,168,120,0.08);
-  color: var(--color-gold);
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  font-size: var(--fs-small);
-}
-.comparison-table td { color: var(--color-text-reading); }
+
+
+
+
 
 /* === CTA Block === */
 /* === Author Block === */
@@ -350,8 +334,8 @@ h3.section-heading {
   .session-dialogue .line-yanai { padding-left: 0.8rem; }
   .session-dialogue .line-character { margin-left: 0.8rem; }
   .profiling-block { padding: 1.5rem 1.2rem; }
-  .comparison-table { font-size: var(--fs-xs); }
-  .comparison-table th, .comparison-table td { padding: 0.5rem 0.6rem; }
+  
+  
   .highlight-block { padding: 1.5rem 1.2rem 1.5rem 1.4rem; }
   .text-panel { padding: 2rem 1.5rem; }
 }
@@ -365,6 +349,75 @@ h3.section-heading {
   .session-dialogue p:nth-child(10n) {
     margin-bottom: 1.5em;
     padding-bottom: 1em;
+  }
+}
+/* ── 対比グリッド ── */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid rgba(192,168,120,0.12);
+  background: rgba(15, 12, 25, 0.45);
+}
+.comparison-grid__head {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-gold);
+  letter-spacing: 0.08em;
+  padding: 0.6rem 0.8rem;
+  text-align: center;
+  background: rgba(192,168,120,0.06);
+  border-bottom: 1px solid rgba(192,168,120,0.2);
+}
+.comparison-grid__head:first-child {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell {
+  padding: 0.55rem 0.8rem;
+  font-size: var(--fs-small);
+  line-height: 1.7;
+  color: var(--color-text-reading);
+  border-bottom: 1px solid rgba(192,168,120,0.06);
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+.comparison-grid__cell:nth-child(odd) {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+.comparison-table .comparison-note {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  font-size: var(--fs-micro);
+  color: rgba(235,232,225,0.55);
+  line-height: 1.8;
+  background: rgba(192,168,120,0.03);
+  border-left: 2px solid rgba(192,168,120,0.15);
+}
+@media (max-width: 768px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+  .comparison-grid__head {
+    border-right: none !important;
+  }
+  .comparison-grid__head:first-child {
+    border-right: none;
+  }
+  .comparison-grid__cell {
+    border-right: none;
+  }
+  .comparison-grid__cell:nth-child(odd) {
+    border-right: none;
+    padding-top: 0.8rem;
+    color: var(--color-gold);
+    font-weight: 600;
+    font-size: var(--fs-micro);
+  }
+  .comparison-grid__cell:nth-child(even) {
+    padding-top: 0.2rem;
+    padding-bottom: 0.8rem;
   }
 }
 </style>
@@ -480,13 +533,20 @@ h3.section-heading {
 
       <div class="profiling-block fade-in">
         <h3>【対比キャラクターとの比較表】</h3>
-        <table class="comparison-table">
-          <tr><th>比較軸</th><th>ハーヴィ・スペクター</th><th>ルイス・リット</th></tr>
-          <tr><td>傷の存在</td><td>あり（母親の裏切り）</td><td>あり（承認の欠落）</td></tr>
-          <tr><td>傷の処理</td><td>完璧に偽装し、冷酷な勝負師のペルソナで覆い隠す</td><td>偽装できず、不安と感情が常に外部に漏出する</td></tr>
-          <tr><td>感情の出力</td><td>取引・貸し借り・勝敗のフレームに翻訳</td><td>衝動的・直接的に放出</td></tr>
-          <tr><td>結果</td><td>社会的成功と内面の孤立</td><td>社会的不安定と感情的接続の可能性</td></tr>
-        </table>
+        <div class="comparison-table">
+  <div class="comparison-grid">
+    <div class="comparison-grid__head">ハーヴィ・スペクター</div>
+    <div class="comparison-grid__head">ルイス・リット</div>
+    <div class="comparison-grid__cell"><strong>傷の存在：</strong>あり（母親の裏切り）</div>
+    <div class="comparison-grid__cell"><strong>傷の存在：</strong>あり（承認の欠落）</div>
+    <div class="comparison-grid__cell"><strong>傷の処理：</strong>完璧に偽装し、冷酷な勝負師のペルソナで覆い隠す</div>
+    <div class="comparison-grid__cell"><strong>傷の処理：</strong>偽装できず、不安と感情が常に外部に漏出する</div>
+    <div class="comparison-grid__cell"><strong>感情の出力：</strong>取引・貸し借り・勝敗のフレームに翻訳</div>
+    <div class="comparison-grid__cell"><strong>感情の出力：</strong>衝動的・直接的に放出</div>
+    <div class="comparison-grid__cell"><strong>結果：</strong>社会的成功と内面の孤立</div>
+    <div class="comparison-grid__cell"><strong>結果：</strong>社会的不安定と感情的接続の可能性</div>
+  </div>
+</div>
         <p style="color:var(--color-text-reading); line-height:2; margin-top:1.5rem;">同じ「傷を抱えた弁護士」というMetaでありながら、ハーヴィは偽装に成功し、ルイスは偽装に失敗した。しかし偽装の失敗者であるルイスの方が、感情的な他者との接続を早く獲得した。偽装の成功は、別の意味での失敗だった。</p>
       </div>
 

@@ -379,6 +379,75 @@ h3.section-heading {
     padding-bottom: 1em;
   }
 }
+/* ── 対比グリッド ── */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid rgba(192,168,120,0.12);
+  background: rgba(15, 12, 25, 0.45);
+}
+.comparison-grid__head {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-gold);
+  letter-spacing: 0.08em;
+  padding: 0.6rem 0.8rem;
+  text-align: center;
+  background: rgba(192,168,120,0.06);
+  border-bottom: 1px solid rgba(192,168,120,0.2);
+}
+.comparison-grid__head:first-child {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell {
+  padding: 0.55rem 0.8rem;
+  font-size: var(--fs-small);
+  line-height: 1.7;
+  color: var(--color-text-reading);
+  border-bottom: 1px solid rgba(192,168,120,0.06);
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+.comparison-grid__cell:nth-child(odd) {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+.comparison-table .comparison-note {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  font-size: var(--fs-micro);
+  color: rgba(235,232,225,0.55);
+  line-height: 1.8;
+  background: rgba(192,168,120,0.03);
+  border-left: 2px solid rgba(192,168,120,0.15);
+}
+@media (max-width: 768px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+  .comparison-grid__head {
+    border-right: none !important;
+  }
+  .comparison-grid__head:first-child {
+    border-right: none;
+  }
+  .comparison-grid__cell {
+    border-right: none;
+  }
+  .comparison-grid__cell:nth-child(odd) {
+    border-right: none;
+    padding-top: 0.8rem;
+    color: var(--color-gold);
+    font-weight: 600;
+    font-size: var(--fs-micro);
+  }
+  .comparison-grid__cell:nth-child(even) {
+    padding-top: 0.2rem;
+    padding-bottom: 0.8rem;
+  }
+}
 </style>
 </head>
 <body>
@@ -501,38 +570,22 @@ h3.section-heading {
       <!-- 対比：モンキー・パンチ版 vs 宮崎版 -->
       <div class="profiling-block fade-in">
         <h3>対比：モンキー・パンチ版ルパン vs 宮崎版ルパン</h3>
-        <table>
-          <tr>
-            <th>構造軸</th>
-            <th>モンキー・パンチ版</th>
-            <th>宮崎駿版（カリオストロ）</th>
-          </tr>
-          <tr>
-            <td>基本駆動軸</td>
-            <td>欲望・利己主義・快楽</td>
-            <td>贖罪・献身・道徳的義憤</td>
-          </tr>
-          <tr>
-            <td>シャドウの形態</td>
-            <td>露出したダークシャドウ（暴力性・性衝動）</td>
-            <td>偽装されたゴールデンシャドウ（優しさ・定住欲）</td>
-          </tr>
-          <tr>
-            <td>女性との関係</td>
-            <td>性的対象・利用すべき駒</td>
-            <td>保護すべき存在・聖性の象徴</td>
-          </tr>
-          <tr>
-            <td>行動の帰結</td>
-            <td>物質的奪取とカタルシス</td>
-            <td>精神的解放と自己犠牲による喪失</td>
-          </tr>
-          <tr>
-            <td>実存的テーマ</td>
-            <td>ニヒリズムとアナーキーな自由の謳歌</td>
-            <td>人生の意義の探求と、老い・疲労の受容</td>
-          </tr>
-        </table>
+        <div class="comparison-table">
+  <div class="comparison-grid">
+    <div class="comparison-grid__head">モンキー・パンチ版</div>
+    <div class="comparison-grid__head">宮崎駿版（カリオストロ）</div>
+    <div class="comparison-grid__cell"><strong>基本駆動軸：</strong>欲望・利己主義・快楽</div>
+    <div class="comparison-grid__cell"><strong>基本駆動軸：</strong>贖罪・献身・道徳的義憤</div>
+    <div class="comparison-grid__cell"><strong>シャドウの形態：</strong>露出したダークシャドウ（暴力性・性衝動）</div>
+    <div class="comparison-grid__cell"><strong>シャドウの形態：</strong>偽装されたゴールデンシャドウ（優しさ・定住欲）</div>
+    <div class="comparison-grid__cell"><strong>女性との関係：</strong>性的対象・利用すべき駒</div>
+    <div class="comparison-grid__cell"><strong>女性との関係：</strong>保護すべき存在・聖性の象徴</div>
+    <div class="comparison-grid__cell"><strong>行動の帰結：</strong>物質的奪取とカタルシス</div>
+    <div class="comparison-grid__cell"><strong>行動の帰結：</strong>精神的解放と自己犠牲による喪失</div>
+    <div class="comparison-grid__cell"><strong>実存的テーマ：</strong>ニヒリズムとアナーキーな自由の謳歌</div>
+    <div class="comparison-grid__cell"><strong>実存的テーマ：</strong>人生の意義の探求と、老い・疲労の受容</div>
+  </div>
+</div>
         <p>同じ「ルパン三世」という名前でありながら、初期条件が異なれば出力はまったく違うものになる。</p>
 <p>モンキー・パンチ版が「人間の底なしの欲望」を体現するならば、宮崎版は「無軌道な青春を通り過ぎた後、自らの人生に意味を与えようと葛藤する男の実存」を描いている。</p>
 <p>これは裏切りでも美化でもない。同じ構造体の、別のフェーズが露出したのだ。</p>
