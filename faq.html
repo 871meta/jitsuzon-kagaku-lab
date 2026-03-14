@@ -201,8 +201,10 @@
         font-size: var(--fs-caption);
       }
     }
-    /* highlight-block の br は常に表示 */
-    .highlight-block br { display: inline !important; }
+    /* highlight-block の br はモバイルで常に表示 */
+    @media (max-width: 480px) {
+      .highlight-block br { display: inline !important; }
+    }
   </style>
 </head>
 <body>
@@ -426,7 +428,7 @@
   <div class="section" style="padding-top: 0;">
     <div class="container">
       <div class="highlight-block fade-in">
-        <p>壊れて、愛されて、そこから立ち上がった構造。<br>それが実存科学である。</p>
+        <p>壊れて、愛されて、<br class="sp-only">そこから立ち上がった構造。<br>それが「実存科学」である。</p>
       </div>
     </div>
   </div>
