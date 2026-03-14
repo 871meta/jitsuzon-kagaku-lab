@@ -185,13 +185,20 @@
       font-weight: 500;
     }
 
-    /* 必然の一行 — 気づく人だけが気づく余韻 */
+    /* 必然の一行 — パープルシマーで静かに存在する */
     .stele-card__coda {
       margin-top: 3.5rem;
-      font-size: 0.7rem;
+      font-size: 0.78rem;
       letter-spacing: 0.12em;
-      color: rgba(180, 190, 210, 0.3);
-      line-height: 1.8;
+      line-height: 2;
+      background: linear-gradient(90deg, #b8a0d8 0%, #b8a0d8 40%, #e0d0f0 50%, #b8a0d8 60%, #b8a0d8 100%);
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: index-purple-shimmer 5s ease-in-out infinite;
+      filter: drop-shadow(0 0 8px rgba(160,130,210,0.15));
+      opacity: 0.55;
     }
 
     /* === CTA — now fully in global style.css === */
@@ -265,7 +272,7 @@
         <div class="stele-card__divider"></div>
         <p class="stele-card__telos-label">Telos</p>
         <p class="stele-card__telos-text">「生きる意味」を語れる社会を創る</p>
-        <p class="stele-card__coda">あなたがここにいることもまた、必然の構造の中にある。</p>
+        <p class="stele-card__coda">あなたがここにいることもまた、<br>必然の構造の中にある。</p>
       </div>
     </div>
   </section>
