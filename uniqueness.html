@@ -31,6 +31,126 @@
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/style.min.css?v=23">
+<style>
+/* ===== uniqueness.html — ダークラグジュアリー強化 ===== */
+
+/* ── セクションタイトル: ゴールドシマー ── */
+.section__title {
+  background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gold-shimmer 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 16px rgba(192,168,120,0.3)) drop-shadow(0 0 40px rgba(192,168,120,0.12));
+}
+
+/* ── サブタイトル: ゴールド強化 ── */
+.section__subtitle {
+  color: var(--color-gold-light);
+  border-bottom-color: var(--color-gold-a25);
+}
+
+/* ── テキストパネル: 高不透明度化 ── */
+.text-panel {
+  background: linear-gradient(180deg, rgba(15, 12, 25, 0.88) 0%, rgba(8, 6, 16, 0.94) 100%);
+  border-color: var(--color-gold-a12);
+  box-shadow: 0 2px 24px rgba(192,168,120,0.04), inset 0 1px 0 var(--color-gold-a08);
+}
+.text-panel::before {
+  background: linear-gradient(90deg, transparent, var(--color-gold-a40), transparent);
+}
+
+/* ── プルクォート: 高不透明度 + ゴールド輝き ── */
+.pull-quote {
+  background: linear-gradient(160deg, rgba(15, 12, 25, 0.88) 0%, rgba(8, 6, 16, 0.95) 100%);
+  border-color: var(--color-gold-a15);
+  box-shadow: 0 4px 32px rgba(192,168,120,0.08), inset 0 1px 0 var(--color-gold-a10);
+}
+.pull-quote p {
+  color: var(--color-gold-light);
+  filter: drop-shadow(0 0 8px rgba(192,168,120,0.15));
+}
+
+/* ── ハイライトブロック: 高不透明度 + 左ボーダー強化 ── */
+.highlight-block {
+  background: linear-gradient(160deg, rgba(15, 12, 25, 0.90) 0%, rgba(8, 6, 16, 0.96) 100%);
+  border-color: var(--color-gold-a15);
+  border-image: linear-gradient(180deg, var(--color-gold-a70) 0%, var(--color-gold-a25) 100%) 1;
+  box-shadow: 0 4px 32px rgba(192,168,120,0.06), inset 0 1px 0 var(--color-gold-a10);
+}
+.highlight-block strong {
+  color: var(--color-gold-light);
+}
+
+/* ── テーブル: 高不透明度背景 + ゴールドアクセント ── */
+.table-wrapper {
+  background: rgba(8, 6, 16, 0.92);
+  border-color: var(--color-gold-a15);
+  box-shadow: 0 4px 32px rgba(0,0,0,0.3), inset 0 1px 0 var(--color-gold-a06);
+}
+
+.comparison-table th {
+  background: rgba(192, 168, 120, 0.08);
+  border-bottom-color: var(--color-gold-a35);
+  color: var(--color-gold-light);
+  text-shadow: 0 0 12px rgba(192,168,120,0.2);
+}
+
+.comparison-table td {
+  color: rgba(224, 220, 214, 0.95);
+  border-bottom-color: var(--color-gold-a10);
+}
+
+.comparison-table td:first-child {
+  color: var(--color-text-primary);
+}
+
+.comparison-table .row-highlight td {
+  background: rgba(192, 168, 120, 0.08);
+  border-left-width: 3px;
+  box-shadow: inset 4px 0 12px rgba(192,168,120,0.06);
+}
+
+.comparison-table .row-highlight td:first-child {
+  color: var(--color-gold-light);
+  text-shadow: 0 0 8px rgba(192,168,120,0.2);
+}
+
+.comparison-table .row-highlight:nth-child(even) td {
+  background: rgba(192, 168, 120, 0.08);
+}
+
+.comparison-table tbody tr:nth-child(even) td {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.comparison-table tr:hover td {
+  background: rgba(192, 168, 120, 0.06);
+}
+
+/* ── 罫線: ゴールドグラデーション ── */
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold-a30), var(--color-gold-a50), var(--color-gold-a30), transparent);
+  margin: 4rem 0;
+}
+
+/* ── notation: 視認性向上 ── */
+.notation {
+  border-top-color: var(--color-gold-a15);
+  border-bottom-color: var(--color-gold-a15);
+}
+.notation p {
+  color: var(--color-text-subtle);
+}
+
+/* ── スクロールヒント: 視認性 ── */
+.table-scroll-hint {
+  color: var(--color-gold-a60);
+}
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
