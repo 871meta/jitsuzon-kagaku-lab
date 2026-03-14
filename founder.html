@@ -724,47 +724,133 @@
       border-left: 3px solid var(--color-gold-a12);
     }
 
-    /* ── 3幕構成: 闇→光→天命 ── */
+    /* ── 3幕構成: 章カード + サブアコーディオン ── */
 
-    /* 第一幕: 闇の章 — purple */
-    .founder-accordion--darkness .founder-accordion__trigger {
-      border-left-color: rgba(160, 130, 210, 0.4);
-      background: linear-gradient(90deg, rgba(50, 30, 80, 0.3), rgba(0,0,0,0.4) 70%);
-    }
-    .founder-accordion--darkness .founder-accordion__content {
-      border-left-color: rgba(160, 130, 210, 0.18);
-      background: rgba(30, 18, 50, 0.22);
-    }
-
-    /* 第二幕: 光の章 — gold (medium) */
-    .founder-accordion--light .founder-accordion__trigger {
-      border-left-color: rgba(192, 168, 120, 0.35);
-      background: linear-gradient(90deg, rgba(60, 48, 18, 0.3), rgba(0,0,0,0.4) 70%);
-    }
-    .founder-accordion--light .founder-accordion__content {
-      border-left-color: rgba(192, 168, 120, 0.15);
-      background: rgba(38, 30, 10, 0.22);
+    /* --- 章カード (founder-act) --- */
+    .founder-act {
+      padding: 2.5rem 2.5rem 2rem;
+      background: linear-gradient(160deg, rgba(15, 12, 25, 0.82) 0%, rgba(8, 6, 16, 0.92) 100%);
+      border: 1px solid var(--color-gold-a10);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 2px 32px var(--color-gold-a04), inset 0 1px 0 var(--color-gold-a08);
+      position: relative;
+      overflow: hidden;
     }
 
-    /* 第三幕: 天命の章 — gold (dense) */
-    .founder-accordion--tenmei .founder-accordion__trigger {
-      border-left-color: rgba(192, 168, 120, 0.45);
-      background: linear-gradient(90deg, rgba(65, 52, 20, 0.35), rgba(0,0,0,0.38) 70%);
-    }
-    .founder-accordion--tenmei .founder-accordion__content {
-      border-left-color: rgba(192, 168, 120, 0.2);
-      background: rgba(40, 32, 10, 0.25);
-    }
-
-    /* 章内セパレーター */
-    .founder-story__chapter-break {
-      width: 32px;
+    .founder-act::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
       height: 1px;
-      background: var(--color-gold-a20);
-      margin: 2.5rem 0;
+      background: linear-gradient(90deg, var(--color-gold-a50), var(--color-gold-a20), transparent 70%);
     }
 
-    .founder-story .founder-accordion__content p {
+    .founder-act__label {
+      font-family: var(--font-serif-en);
+      font-size: var(--fs-xs);
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+    }
+
+    .founder-act__title {
+      font-size: var(--fs-h3);
+      font-weight: 600;
+      color: var(--color-text-primary);
+      letter-spacing: 0.06em;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    /* 第一幕: 闇 — purple accent */
+    .founder-act--darkness {
+      border-left: 3px solid rgba(160, 130, 210, 0.4);
+    }
+    .founder-act--darkness .founder-act__label { color: rgba(184, 160, 216, 0.6); }
+    .founder-act--darkness .founder-act__title { color: #b8a0d8; }
+
+    /* 第二幕: 光 — gold accent */
+    .founder-act--light {
+      border-left: 3px solid rgba(192, 168, 120, 0.35);
+    }
+    .founder-act--light .founder-act__label { color: var(--color-gold-a40); }
+    .founder-act--light .founder-act__title { color: #c0a878; }
+
+    /* 第三幕: 天命 — gold dense accent */
+    .founder-act--tenmei {
+      border-left: 3px solid rgba(192, 168, 120, 0.5);
+    }
+    .founder-act--tenmei .founder-act__label { color: var(--color-gold-a50); }
+    .founder-act--tenmei .founder-act__title { color: #c0a878; }
+
+    /* --- サブアコーディオン --- */
+    .founder-sub-accordion {
+      margin-bottom: 0.5rem;
+    }
+    .founder-sub-accordion:last-child {
+      margin-bottom: 0;
+    }
+
+    .founder-sub-accordion__trigger {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.4rem 1.8rem;
+      background: rgba(10, 8, 18, 0.5);
+      border: 1px solid var(--color-gold-a06);
+      color: #d0ccc6;
+      font-family: var(--font-serif-ja);
+      font-size: var(--fs-body);
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      transition: box-shadow 0.4s ease, border-color 0.4s ease, background 0.3s ease;
+      text-align: left;
+      line-height: 1.8;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .founder-sub-accordion__trigger:hover {
+      border-color: var(--color-gold-a20);
+      box-shadow: 0 2px 24px var(--color-gold-a06);
+      background: rgba(15, 12, 25, 0.6);
+    }
+
+    /* 闇の章サブトリガー */
+    .founder-act--darkness .founder-sub-accordion__trigger {
+      border-left: 2px solid rgba(160, 130, 210, 0.25);
+    }
+    .founder-act--darkness .founder-sub-accordion__trigger:hover {
+      border-left-color: rgba(160, 130, 210, 0.45);
+    }
+
+    /* 光の章サブトリガー */
+    .founder-act--light .founder-sub-accordion__trigger {
+      border-left: 2px solid rgba(192, 168, 120, 0.2);
+    }
+    .founder-act--light .founder-sub-accordion__trigger:hover {
+      border-left-color: rgba(192, 168, 120, 0.4);
+    }
+
+    /* 天命の章サブトリガー */
+    .founder-act--tenmei .founder-sub-accordion__trigger {
+      border-left: 2px solid rgba(192, 168, 120, 0.25);
+    }
+    .founder-act--tenmei .founder-sub-accordion__trigger:hover {
+      border-left-color: rgba(192, 168, 120, 0.5);
+    }
+
+    .founder-sub-accordion__content {
+      padding: 2rem 1.8rem;
+      background: rgba(10, 8, 18, 0.35);
+      border: 1px solid var(--color-gold-a04);
+      border-top: none;
+    }
+
+    .founder-sub-accordion__content p {
       font-size: 1rem;
       color: #d0ccc6;
       line-height: 2.4;
@@ -772,27 +858,44 @@
       letter-spacing: 0.03em;
     }
 
-    .founder-story .founder-accordion__content p:last-child {
+    .founder-sub-accordion__content p:last-child {
       margin-bottom: 0;
     }
 
-    .founder-story .founder-accordion__content p strong {
+    .founder-sub-accordion__content p strong {
       color: var(--color-text-primary);
       font-weight: 600;
     }
 
-    .founder-story .founder-accordion__content .founder-story__testimonial {
+    .founder-sub-accordion__content .founder-story__testimonial {
       border-left: 2px solid rgba(192, 168, 120, 0.4);
       padding: 0.8rem 0 0.8rem 2rem;
       margin: 1.5rem 0;
     }
 
-    .founder-story .founder-accordion__content .founder-story__testimonial p {
+    .founder-sub-accordion__content .founder-story__testimonial p {
       font-size: var(--fs-lead);
       color: var(--color-text-primary);
       font-weight: 500;
       letter-spacing: 0.04em;
       margin-bottom: 0;
+    }
+
+    /* サブアコーディオン開閉（is-openクラス） */
+    .founder-sub-accordion .founder-accordion__body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .founder-sub-accordion.is-open .founder-accordion__body {
+      max-height: 2000px;
+    }
+    .founder-sub-accordion .founder-accordion__icon::after {
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .founder-sub-accordion.is-open .founder-accordion__icon::after {
+      transform: translateX(-50%) rotate(90deg);
+      opacity: 0;
     }
 
     /* --- Responsive 900px --- */
@@ -1110,34 +1213,59 @@
       <div class="founder-story__divider"></div>
 
       <!-- ===== 第一幕: 闇の章 ===== -->
-      <div class="founder-accordion fade-in founder-accordion--darkness" data-accordion>
-        <button class="founder-accordion__trigger" aria-expanded="false">
-          <span>成功したのに不幸になった。</span>
-          <span class="founder-accordion__icon"></span>
-        </button>
-        <div class="founder-accordion__body">
-          <div class="founder-accordion__content">
-            <p>金を稼ぐのは得意だった。</p>
-            <p>大学で心理学を学び、2015年に株式会社Nimbus Creationを創業。オンライン講座で受講者1,300人、累計売上5億円超。ビジネスとしては、完璧に成功していた。</p>
-            <p><strong>だが人間としては最低だった。</strong></p>
-            <p>二度の離婚。親との絶縁。愛する人を傷つけてばかりいた。自分が人に教えている内容を、自分自身にも適用しているはずなのに、人生の空虚さだけは消えなかった。</p>
-            <p>成功したのに不幸になった。こんなバカな話があるか。</p>
-            <p>頭の中は、過去への後悔と将来への不安でいっぱいだった。もう元には戻れない。でもできることなら、人生をやり直したい。</p>
-            <div class="founder-story__chapter-break"></div>
-            <p>自分でもバカだと思う。でも、もうどうでもよかった。自暴自棄になっていたのだ。</p>
-            <p>心理学、哲学、神経科学、儒教、密教、インド哲学、西洋形而上学──百年の学問から数千年の叡智まで、人類が「生きる意味」に向けて蓄積してきた知の体系を、二十年以上かけて領域を問わず横断した。</p>
-            <p>ある者は彼を「狂人」と呼んだ。</p>
-            <p>とりわけ瞑想の世界には、行ってはならない禁足地が存在する。自暴自棄になった彼は、超えてはならない一線を超えることにした。</p>
-            <div class="founder-story__chapter-break"></div>
-            <p>すぐに恐ろしいことが起こった。</p>
-            <p>もっと見たい、もっと知りたい──好奇心が止まらなかった。見えないものが見え、聞こえないものが聞こえるようになった。</p>
-            <p>けれども、どんどん自分が壊れていった。</p>
-            <p>体が言うことを聞かなくなった。思ってもいないことを口にしてしまう。周りとのトラブルが増えた。まるで自分じゃない何かが、自分を支配しているみたいだった。</p>
-            <p>でもやめるわけがない。こっちは人間を超えたくてやっているのだ。</p>
-            <p>そして──一線を超えた。</p>
-            <p>頭の中で爆発が起こったみたいに、すべての機能が停止した。</p>
-            <p>気を失った。</p>
-            <p><strong>目が覚めると、言語障害および右半身麻痺。</strong></p>
+      <div class="founder-act fade-in founder-act--darkness">
+        <p class="founder-act__label">第一幕</p>
+        <h3 class="founder-act__title">成功したのに不幸になった。</h3>
+
+        <div class="founder-sub-accordion" data-accordion>
+          <button class="founder-sub-accordion__trigger" aria-expanded="false">
+            <span>だが人間としては最低だった。</span>
+            <span class="founder-accordion__icon"></span>
+          </button>
+          <div class="founder-accordion__body">
+            <div class="founder-sub-accordion__content">
+              <p>金を稼ぐのは得意だった。</p>
+              <p>大学で心理学を学び、2015年に株式会社Nimbus Creationを創業。オンライン講座で受講者1,300人、累計売上5億円超。ビジネスとしては、完璧に成功していた。</p>
+              <p><strong>だが人間としては最低だった。</strong></p>
+              <p>二度の離婚。親との絶縁。愛する人を傷つけてばかりいた。自分が人に教えている内容を、自分自身にも適用しているはずなのに、人生の空虚さだけは消えなかった。</p>
+              <p>成功したのに不幸になった。こんなバカな話があるか。</p>
+              <p>頭の中は、過去への後悔と将来への不安でいっぱいだった。もう元には戻れない。でもできることなら、人生をやり直したい。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="founder-sub-accordion" data-accordion>
+          <button class="founder-sub-accordion__trigger" aria-expanded="false">
+            <span>じゃあ神にでもなろうか。</span>
+            <span class="founder-accordion__icon"></span>
+          </button>
+          <div class="founder-accordion__body">
+            <div class="founder-sub-accordion__content">
+              <p>自分でもバカだと思う。でも、もうどうでもよかった。自暴自棄になっていたのだ。</p>
+              <p>心理学、哲学、神経科学、儒教、密教、インド哲学、西洋形而上学──百年の学問から数千年の叡智まで、人類が「生きる意味」に向けて蓄積してきた知の体系を、二十年以上かけて領域を問わず横断した。</p>
+              <p>ある者は彼を「狂人」と呼んだ。</p>
+              <p>とりわけ瞑想の世界には、行ってはならない禁足地が存在する。自暴自棄になった彼は、超えてはならない一線を超えることにした。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="founder-sub-accordion" data-accordion>
+          <button class="founder-sub-accordion__trigger" aria-expanded="false">
+            <span>目が覚めると、言語障害および右半身麻痺。</span>
+            <span class="founder-accordion__icon"></span>
+          </button>
+          <div class="founder-accordion__body">
+            <div class="founder-sub-accordion__content">
+              <p>すぐに恐ろしいことが起こった。</p>
+              <p>もっと見たい、もっと知りたい──好奇心が止まらなかった。見えないものが見え、聞こえないものが聞こえるようになった。</p>
+              <p>けれども、どんどん自分が壊れていった。</p>
+              <p>体が言うことを聞かなくなった。思ってもいないことを口にしてしまう。周りとのトラブルが増えた。まるで自分じゃない何かが、自分を支配しているみたいだった。</p>
+              <p>でもやめるわけがない。こっちは人間を超えたくてやっているのだ。</p>
+              <p>そして──一線を超えた。</p>
+              <p>頭の中で爆発が起こったみたいに、すべての機能が停止した。</p>
+              <p>気を失った。</p>
+              <p><strong>目が覚めると、言語障害および右半身麻痺。</strong></p>
+            </div>
           </div>
         </div>
       </div>
@@ -1145,33 +1273,58 @@
       <div class="founder-story__divider"></div>
 
       <!-- ===== 第二幕: 光の章 ===== -->
-      <div class="founder-accordion fade-in founder-accordion--light" data-accordion>
-        <button class="founder-accordion__trigger" aria-expanded="false">
-          <span>壊れた人間を支えた手のぬくもり。</span>
-          <span class="founder-accordion__icon"></span>
-        </button>
-        <div class="founder-accordion__body">
-          <div class="founder-accordion__content">
-            <p>しばらくの間、寝たきりになった。</p>
-            <p>積み上げた理論は、何ひとつ声を出さなかった。二十年かけて横断した叡智も、獲得した知識も、壊れた人間の前では完全に沈黙した。</p>
-            <p>声を出していたのは、傍にいた人間だけだった。</p>
-            <p>家族が、友達が、仕事仲間が、毎日そこにいた。答えを持たず、理論も持たず、ただそこにいた。</p>
-            <p><strong>「ただいる」。</strong></p>
-            <p>その行為だけが、壊れた人間をこちら側に引き戻した。</p>
-            <div class="founder-story__chapter-break"></div>
-            <p>回復まで丸1年。</p>
-            <p>その1年で、私は一つのことを知った。</p>
-            <p>真理を「知る」ことと、真理を「生きる」ことの間には、絶望的な断崖がある。</p>
-            <p>知の体系を横断し、人間が到達し得る認識の果てまで行った。そこで見たものは確かに存在していた。だが、それを「知った」だけでは、壊れた。</p>
-            <p>断崖を越えさせたのは、理論ではなかった。傍にいた人間の手だった。</p>
-            <p><strong>真理は、知識の中にはなかった。</strong></p>
-            <p><strong>生きている人間の、温かな手の中にあった。</strong></p>
-            <div class="founder-story__chapter-break"></div>
-            <p>回復の過程で、あるものが降りてきた。</p>
-            <p>ある日突然、「Metaがある限り自由意志はない」という構造が見えた。ある日突然、天命の言語化セッション™が降りてきた。ある日突然、「生きる意味を語れる社会を作る」という理念が降りてきた。ある日突然、愛の定義が降りてきた。</p>
-            <p>学んで到達したのではない。壊れた後に、降りてきた。</p>
-            <p>宗教でも思想哲学でもスピリチュアルでもなかった。再現性のある論理だった。だから実存科学と名付けた。</p>
-            <p>2025年12月、実存科学研究所を設立。</p>
+      <div class="founder-act fade-in founder-act--light">
+        <p class="founder-act__label">第二幕</p>
+        <h3 class="founder-act__title">壊れた人間を支えた手のぬくもり。</h3>
+
+        <div class="founder-sub-accordion" data-accordion>
+          <button class="founder-sub-accordion__trigger" aria-expanded="false">
+            <span>「ただいる」。</span>
+            <span class="founder-accordion__icon"></span>
+          </button>
+          <div class="founder-accordion__body">
+            <div class="founder-sub-accordion__content">
+              <p>しばらくの間、寝たきりになった。</p>
+              <p>積み上げた理論は、何ひとつ声を出さなかった。二十年かけて横断した叡智も、獲得した知識も、壊れた人間の前では完全に沈黙した。</p>
+              <p>声を出していたのは、傍にいた人間だけだった。</p>
+              <p>家族が、友達が、仕事仲間が、毎日そこにいた。答えを持たず、理論も持たず、ただそこにいた。</p>
+              <p><strong>「ただいる」。</strong></p>
+              <p>その行為だけが、壊れた人間をこちら側に引き戻した。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="founder-sub-accordion" data-accordion>
+          <button class="founder-sub-accordion__trigger" aria-expanded="false">
+            <span>真理は、知識の中にはなかった。</span>
+            <span class="founder-accordion__icon"></span>
+          </button>
+          <div class="founder-accordion__body">
+            <div class="founder-sub-accordion__content">
+              <p>回復まで丸1年。</p>
+              <p>その1年で、私は一つのことを知った。</p>
+              <p>真理を「知る」ことと、真理を「生きる」ことの間には、絶望的な断崖がある。</p>
+              <p>知の体系を横断し、人間が到達し得る認識の果てまで行った。そこで見たものは確かに存在していた。だが、それを「知った」だけでは、壊れた。</p>
+              <p>断崖を越えさせたのは、理論ではなかった。傍にいた人間の手だった。</p>
+              <p><strong>真理は、知識の中にはなかった。</strong></p>
+              <p><strong>生きている人間の、温かな手の中にあった。</strong></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="founder-sub-accordion" data-accordion>
+          <button class="founder-sub-accordion__trigger" aria-expanded="false">
+            <span>壊れた後に、降りてきた。</span>
+            <span class="founder-accordion__icon"></span>
+          </button>
+          <div class="founder-accordion__body">
+            <div class="founder-sub-accordion__content">
+              <p>回復の過程で、あるものが降りてきた。</p>
+              <p>ある日突然、「Metaがある限り自由意志はない」という構造が見えた。ある日突然、天命の言語化セッション™が降りてきた。ある日突然、「生きる意味を語れる社会を作る」という理念が降りてきた。ある日突然、愛の定義が降りてきた。</p>
+              <p>学んで到達したのではない。壊れた後に、降りてきた。</p>
+              <p>宗教でも思想哲学でもスピリチュアルでもなかった。再現性のある論理だった。だから実存科学と名付けた。</p>
+              <p>2025年12月、実存科学研究所を設立。</p>
+            </div>
           </div>
         </div>
       </div>
@@ -1179,24 +1332,29 @@
       <div class="founder-story__divider"></div>
 
       <!-- ===== 第三幕: 天命の章 ===== -->
-      <div class="founder-accordion fade-in founder-accordion--tenmei" data-accordion>
-        <button class="founder-accordion__trigger" aria-expanded="false">
-          <span>深く考えるに値する質問を渡す。</span>
-          <span class="founder-accordion__icon"></span>
-        </button>
-        <div class="founder-accordion__body">
-          <div class="founder-accordion__content">
-            <p>対話の場で私が行うことは、あの経験の再現である。</p>
-            <p>答えは語らない。自分の崩壊から、答えが人の認識を狭めることを学んだ。</p>
-            <p>真理を「知っている」だけの人間は、答えを語る。真理を「生きている」人間は、問いを手渡す。</p>
-            <p>なぜなら、真理は誰かから受け取るものではないからだ。あなたの中にすでにある。本来つながるはずだった意味と意味が結ばれた瞬間、あなた自身の声で、あなたの天命が語り始める。</p>
-            <p>私がやるのは、深く考えるに値する質問を渡すことだけだ。あなただけの問いを。</p>
-            <p>この瞬間に触れた人が、こう語った。</p>
-            <div class="founder-story__testimonial">
-              <p>「生まれてきてよかった」</p>
-            </div>
-            <div class="founder-story__testimonial">
-              <p>「やっと自分の人生が始まった」</p>
+      <div class="founder-act fade-in founder-act--tenmei">
+        <p class="founder-act__label">第三幕</p>
+        <h3 class="founder-act__title">深く考えるに値する質問を渡す。</h3>
+
+        <div class="founder-sub-accordion" data-accordion>
+          <button class="founder-sub-accordion__trigger" aria-expanded="false">
+            <span>問いを手渡す。</span>
+            <span class="founder-accordion__icon"></span>
+          </button>
+          <div class="founder-accordion__body">
+            <div class="founder-sub-accordion__content">
+              <p>対話の場で私が行うことは、あの経験の再現である。</p>
+              <p>答えは語らない。自分の崩壊から、答えが人の認識を狭めることを学んだ。</p>
+              <p>真理を「知っている」だけの人間は、答えを語る。真理を「生きている」人間は、問いを手渡す。</p>
+              <p>なぜなら、真理は誰かから受け取るものではないからだ。あなたの中にすでにある。本来つながるはずだった意味と意味が結ばれた瞬間、あなた自身の声で、あなたの天命が語り始める。</p>
+              <p>私がやるのは、深く考えるに値する質問を渡すことだけだ。あなただけの問いを。</p>
+              <p>この瞬間に触れた人が、こう語った。</p>
+              <div class="founder-story__testimonial">
+                <p>「生まれてきてよかった」</p>
+              </div>
+              <div class="founder-story__testimonial">
+                <p>「やっと自分の人生が始まった」</p>
+              </div>
             </div>
           </div>
         </div>
@@ -1324,7 +1482,7 @@
 
       // Accordion
       document.querySelectorAll('[data-accordion]').forEach(function (acc) {
-        var trigger = acc.querySelector('.founder-accordion__trigger');
+        var trigger = acc.querySelector('.founder-accordion__trigger') || acc.querySelector('.founder-sub-accordion__trigger');
         if (!trigger) return;
         trigger.addEventListener('click', function () {
           var isOpen = acc.classList.toggle('is-open');
