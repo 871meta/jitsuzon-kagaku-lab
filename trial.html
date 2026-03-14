@@ -313,6 +313,24 @@
       margin-bottom: 2rem;
     }
 
+    /* Single accordion variant (Block 3) */
+    .shinyu-accordion--single {
+      margin: 1.5rem 0;
+    }
+    .shinyu-accordion--single .shinyu-accordion__item {
+      border-left-color: rgba(192, 168, 120, 0.45);
+    }
+    .shinyu-accordion--single .shinyu-accordion__item.is-open {
+      border-left-color: rgba(192, 168, 120, 0.8);
+    }
+    .shinyu-accordion--single .shinyu-accordion__header {
+      background: linear-gradient(90deg, rgba(192, 168, 120, 0.06), transparent 40%);
+    }
+    .shinyu-accordion--single .shinyu-accordion__title {
+      color: var(--color-gold);
+      font-size: var(--fs-body);
+    }
+
     /* Offering items */
     .offering-item {
       position: relative;
@@ -905,9 +923,7 @@
         <p class="shinyu-label">Shin-Yu™︎</p>
         <h2 class="section__title section__title--left">心友™とは</h2>
         <p class="confession" style="color: var(--color-gold); font-size: var(--fs-small); letter-spacing: 0.05em;">一つ、告白をさせてください。</p>
-        <p>天命の言語化セッション™を受ければ、あなたは自分の天命を言語化できます。<br>その瞬間、確かに「わかる」はずです。</p>
-        <p><strong>しかし、「わかる」だけでは、<br>天命を生きることはできません。</strong></p>
-        <p>これは可能性の話ではなく、私がこれまでのセッションで目の当たりにしてきた事実です。</p>
+        <p>天命の言語化セッション™を受ければ、あなたは自分の天命を言語化できます。その瞬間、確かに「わかる」はずです。<br><strong>しかし、「わかる」だけでは、天命を生きることはできません。</strong><br>これは可能性の話ではなく、私がこれまでのセッションで目の当たりにしてきた事実です。</p>
         <p>天命を言語化した。涙を流した。「やっと見つけた」と確信した。<br>──それでも、早い人で1週間、多くの人が数ヶ月で、<br><strong>あの確信を見失っていきました。</strong></p>
         <p>なぜか。<br>天命を悟った人だけが、必ず直面する5つの課題があるからです。</p>
       </div>
@@ -994,14 +1010,31 @@
       <!-- Block 3: 結論 -->
       <div class="content-block text-panel fade-in">
         <p>これらは、あなたが弱いからではありません。<br>天命とは「悟って終わり」ではなく、<br><strong>日々、全うし続けるものだからです。</strong></p>
-        <p>本来の自分の生き方がわかってしまった。<br>なのに、それを人生に実装していくことがあまりにも大変で、苦しくて、孤独で──<br>でも天命だから、諦めるわけにもいかない。</p>
-        <p>その板挟みの中で、人は動けなくなります。</p>
-        <div class="shinyu-emphasis">
-          <p>私はこれを<strong>「認識論的自殺」</strong>と呼んでいます。</p>
-          <p>天命を知りながら、天命に生きないということ。<br>それは5年、10年、場合によっては30年、50年もの間、<br><strong>「自分ではない生き方」を続けてしまうということです。</strong></p>
+
+        <!-- 「なぜ、環境なのか」アコーディオン -->
+        <div class="shinyu-accordion shinyu-accordion--single fade-in">
+          <div class="shinyu-accordion__item">
+            <div class="shinyu-accordion__header" role="button" tabindex="0" aria-expanded="false">
+              <div class="shinyu-accordion__titles">
+                <h3 class="shinyu-accordion__title">なぜ、環境なのか</h3>
+              </div>
+              <span class="shinyu-accordion__icon"></span>
+            </div>
+            <div class="shinyu-accordion__body">
+              <div class="shinyu-accordion__content">
+                <p>本来の自分の生き方がわかってしまった。<br>なのに、それを人生に実装していくことがあまりにも大変で、苦しくて、孤独で──<br>でも天命だから、諦めるわけにもいかない。</p>
+                <p>その板挟みの中で、人は動けなくなります。</p>
+                <div class="shinyu-emphasis">
+                  <p>私はこれを<strong>「認識論的自殺」</strong>と呼んでいます。</p>
+                  <p>天命を知りながら、天命に生きないということ。<br>それは5年、10年、場合によっては30年、50年もの間、<br><strong>「自分ではない生き方」を続けてしまうということです。</strong></p>
+                </div>
+                <p>この5つの課題に、意志の力で立ち向かえる人はいません。<br>なぜなら、あなたを今日まで形づくってきたすべての前提──環境、価値観、習慣、関係性──が、<br><strong>あなたを元の構造に引き戻そうとするからです。</strong></p>
+                <p>しかし、セッション後も継続的に共に歩んだ方には、<br><strong>明らかな変容が起きていました。</strong></p>
+              </div>
+            </div>
+          </div>
         </div>
-        <p>この5つの課題に、意志の力で立ち向かえる人はいません。<br>なぜなら、あなたを今日まで形づくってきたすべての前提──環境、価値観、習慣、関係性──が、<br><strong>あなたを元の構造に引き戻そうとするからです。</strong></p>
-        <p>しかし、セッション後も継続的に共に歩んだ方には、<br><strong>明らかな変容が起きていました。</strong></p>
+
         <p>天命を「悟ること」と、天命を「生きること」は、まったく別の問題です。<br>そして、その間を埋めるものは決意でも、努力でもありません。</p>
         <p><strong style="font-size: var(--fs-h3); letter-spacing: 0.1em;">環境です。</strong></p>
         <div class="def-box fade-in">
