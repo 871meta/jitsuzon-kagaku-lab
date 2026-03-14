@@ -64,8 +64,33 @@
       font-size: 2.6rem;
       margin-bottom: 1.5rem;
       letter-spacing: 0.08em;
-      color: var(--color-text-primary);
       line-height: 1.5;
+      background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: trial-gold-shimmer 4s ease-in-out infinite;
+      filter: drop-shadow(0 0 16px rgba(192,168,120,0.3)) drop-shadow(0 0 40px rgba(192,168,120,0.12));
+    }
+    @keyframes trial-gold-shimmer {
+      0%, 100% { background-position: 100% 50%; }
+      50% { background-position: 0% 50%; }
+    }
+
+    /* Pull-quote purple shimmer (trial page) */
+    .trial-pull-quote p {
+      background: linear-gradient(90deg, #b8a0d8 0%, #b8a0d8 40%, #e0d0f0 50%, #b8a0d8 60%, #b8a0d8 100%);
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: trial-purple-shimmer 5s ease-in-out infinite;
+      filter: drop-shadow(0 0 12px rgba(160,130,210,0.25)) drop-shadow(0 0 30px rgba(160,130,210,0.1));
+    }
+    @keyframes trial-purple-shimmer {
+      0%, 100% { background-position: 100% 50%; }
+      50% { background-position: 0% 50%; }
     }
 
     .trial-hero__lead {
@@ -687,7 +712,7 @@
   <!-- ===== SESSION OVERVIEW ===== -->
   <section class="section">
     <div class="container">
-      <div class="pull-quote fade-in">
+      <div class="pull-quote trial-pull-quote fade-in">
         <p>天命を悟り、<br class="sp-only">日々全うする生き方を、<br class="sp-only">共に築く。</p>
       </div>
       <div class="content-block text-panel fade-in">
