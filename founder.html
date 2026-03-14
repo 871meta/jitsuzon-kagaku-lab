@@ -724,77 +724,44 @@
       border-left: 3px solid var(--color-gold-a12);
     }
 
-    /* ── Scene color themes: Purple → Gold narrative arc ── */
-    /* 闇の章（パープル濃→薄）→ 転換点（混合）→ 光の章（ゴールド薄→濃） */
+    /* ── 3幕構成: 闇→光→天命 ── */
 
-    /* 1. Fall — purple (dense) */
-    .founder-accordion--fall .founder-accordion__trigger {
-      border-left-color: rgba(160, 130, 210, 0.45);
-      background: linear-gradient(90deg, rgba(50, 30, 80, 0.35), rgba(0,0,0,0.4) 70%);
+    /* 第一幕: 闇の章 — purple */
+    .founder-accordion--darkness .founder-accordion__trigger {
+      border-left-color: rgba(160, 130, 210, 0.4);
+      background: linear-gradient(90deg, rgba(50, 30, 80, 0.3), rgba(0,0,0,0.4) 70%);
     }
-    .founder-accordion--fall .founder-accordion__content {
-      border-left-color: rgba(160, 130, 210, 0.2);
-      background: rgba(30, 18, 50, 0.25);
-    }
-
-    /* 2. Seek — purple (medium) */
-    .founder-accordion--seek .founder-accordion__trigger {
-      border-left-color: rgba(160, 130, 210, 0.35);
-      background: linear-gradient(90deg, rgba(45, 25, 70, 0.3), rgba(0,0,0,0.4) 70%);
-    }
-    .founder-accordion--seek .founder-accordion__content {
-      border-left-color: rgba(160, 130, 210, 0.15);
-      background: rgba(28, 16, 45, 0.22);
+    .founder-accordion--darkness .founder-accordion__content {
+      border-left-color: rgba(160, 130, 210, 0.18);
+      background: rgba(30, 18, 50, 0.22);
     }
 
-    /* 3. Break — purple (light) */
-    .founder-accordion--break .founder-accordion__trigger {
-      border-left-color: rgba(160, 130, 210, 0.25);
-      background: linear-gradient(90deg, rgba(40, 22, 60, 0.25), rgba(0,0,0,0.4) 70%);
-    }
-    .founder-accordion--break .founder-accordion__content {
-      border-left-color: rgba(160, 130, 210, 0.1);
-      background: rgba(25, 14, 40, 0.18);
-    }
-
-    /* 4. Still — transition (purple + gold blend) */
-    .founder-accordion--still .founder-accordion__trigger {
-      border-left-color: rgba(170, 148, 180, 0.3);
-      background: linear-gradient(90deg, rgba(45, 30, 55, 0.2), rgba(50, 40, 20, 0.15) 50%, rgba(0,0,0,0.4) 70%);
-    }
-    .founder-accordion--still .founder-accordion__content {
-      border-left-color: rgba(170, 148, 180, 0.12);
-      background: rgba(30, 22, 35, 0.18);
-    }
-
-    /* 5. Awake — gold (light) */
-    .founder-accordion--awake .founder-accordion__trigger {
-      border-left-color: rgba(192, 168, 120, 0.25);
-      background: linear-gradient(90deg, rgba(55, 42, 15, 0.25), rgba(0,0,0,0.4) 70%);
-    }
-    .founder-accordion--awake .founder-accordion__content {
-      border-left-color: rgba(192, 168, 120, 0.1);
-      background: rgba(35, 28, 10, 0.18);
-    }
-
-    /* 6. Rebirth — gold (medium) */
-    .founder-accordion--rebirth .founder-accordion__trigger {
+    /* 第二幕: 光の章 — gold (medium) */
+    .founder-accordion--light .founder-accordion__trigger {
       border-left-color: rgba(192, 168, 120, 0.35);
       background: linear-gradient(90deg, rgba(60, 48, 18, 0.3), rgba(0,0,0,0.4) 70%);
     }
-    .founder-accordion--rebirth .founder-accordion__content {
+    .founder-accordion--light .founder-accordion__content {
       border-left-color: rgba(192, 168, 120, 0.15);
       background: rgba(38, 30, 10, 0.22);
     }
 
-    /* 7. Mission — gold (dense) */
-    .founder-accordion--mission .founder-accordion__trigger {
+    /* 第三幕: 天命の章 — gold (dense) */
+    .founder-accordion--tenmei .founder-accordion__trigger {
       border-left-color: rgba(192, 168, 120, 0.45);
       background: linear-gradient(90deg, rgba(65, 52, 20, 0.35), rgba(0,0,0,0.38) 70%);
     }
-    .founder-accordion--mission .founder-accordion__content {
+    .founder-accordion--tenmei .founder-accordion__content {
       border-left-color: rgba(192, 168, 120, 0.2);
       background: rgba(40, 32, 10, 0.25);
+    }
+
+    /* 章内セパレーター */
+    .founder-story__chapter-break {
+      width: 32px;
+      height: 1px;
+      background: var(--color-gold-a20);
+      margin: 2.5rem 0;
     }
 
     .founder-story .founder-accordion__content p {
@@ -1141,10 +1108,10 @@
 
       <div class="founder-story__divider"></div>
 
-      <!-- Scene 2: Success & Emptiness -->
-      <div class="founder-accordion fade-in founder-accordion--fall" data-accordion>
+      <!-- ===== 第一幕: 闇の章 ===== -->
+      <div class="founder-accordion fade-in founder-accordion--darkness" data-accordion>
         <button class="founder-accordion__trigger" aria-expanded="false">
-          <span>だが人間としては最低だった。</span>
+          <span>成功したのに不幸になった。</span>
           <span class="founder-accordion__icon"></span>
         </button>
         <div class="founder-accordion__body">
@@ -1155,38 +1122,12 @@
             <p>二度の離婚。親との絶縁。愛する人を傷つけてばかりいた。自分が人に教えている内容を、自分自身にも適用しているはずなのに、人生の空虚さだけは消えなかった。</p>
             <p>成功したのに不幸になった。こんなバカな話があるか。</p>
             <p>頭の中は、過去への後悔と将来への不安でいっぱいだった。もう元には戻れない。でもできることなら、人生をやり直したい。</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="founder-story__divider"></div>
-
-      <!-- Scene 3: Descent -->
-      <div class="founder-accordion fade-in founder-accordion--seek" data-accordion>
-        <button class="founder-accordion__trigger" aria-expanded="false">
-          <span>じゃあ神にでもなろうか。</span>
-          <span class="founder-accordion__icon"></span>
-        </button>
-        <div class="founder-accordion__body">
-          <div class="founder-accordion__content">
+            <div class="founder-story__chapter-break"></div>
             <p>自分でもバカだと思う。でも、もうどうでもよかった。自暴自棄になっていたのだ。</p>
             <p>心理学、哲学、神経科学、儒教、密教、インド哲学、西洋形而上学──百年の学問から数千年の叡智まで、人類が「生きる意味」に向けて蓄積してきた知の体系を、二十年以上かけて領域を問わず横断した。</p>
             <p>ある者は彼を「狂人」と呼んだ。</p>
             <p>とりわけ瞑想の世界には、行ってはならない禁足地が存在する。自暴自棄になった彼は、超えてはならない一線を超えることにした。</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="founder-story__divider"></div>
-
-      <!-- Scene 4: Breaking -->
-      <div class="founder-accordion fade-in founder-accordion--break" data-accordion>
-        <button class="founder-accordion__trigger" aria-expanded="false">
-          <span>目が覚めると、言語障害および右半身麻痺。</span>
-          <span class="founder-accordion__icon"></span>
-        </button>
-        <div class="founder-accordion__body">
-          <div class="founder-accordion__content">
+            <div class="founder-story__chapter-break"></div>
             <p>すぐに恐ろしいことが起こった。</p>
             <p>もっと見たい、もっと知りたい──好奇心が止まらなかった。見えないものが見え、聞こえないものが聞こえるようになった。</p>
             <p>けれども、どんどん自分が壊れていった。</p>
@@ -1202,10 +1143,10 @@
 
       <div class="founder-story__divider"></div>
 
-      <!-- Scene 5: Recovery -->
-      <div class="founder-accordion fade-in founder-accordion--still" data-accordion>
+      <!-- ===== 第二幕: 光の章 ===== -->
+      <div class="founder-accordion fade-in founder-accordion--light" data-accordion>
         <button class="founder-accordion__trigger" aria-expanded="false">
-          <span>「ただいる」。</span>
+          <span>壊れた人間を支えた手のぬくもり。</span>
           <span class="founder-accordion__icon"></span>
         </button>
         <div class="founder-accordion__body">
@@ -1216,20 +1157,7 @@
             <p>家族が、友達が、仕事仲間が、毎日そこにいた。答えを持たず、理論も持たず、ただそこにいた。</p>
             <p><strong>「ただいる」。</strong></p>
             <p>その行為だけが、壊れた人間をこちら側に引き戻した。</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="founder-story__divider"></div>
-
-      <!-- Scene 6: Revelation -->
-      <div class="founder-accordion fade-in founder-accordion--awake" data-accordion>
-        <button class="founder-accordion__trigger" aria-expanded="false">
-          <span>真理は、知識の中にはなかった。</span>
-          <span class="founder-accordion__icon"></span>
-        </button>
-        <div class="founder-accordion__body">
-          <div class="founder-accordion__content">
+            <div class="founder-story__chapter-break"></div>
             <p>回復まで丸1年。</p>
             <p>その1年で、私は一つのことを知った。</p>
             <p>真理を「知る」ことと、真理を「生きる」ことの間には、絶望的な断崖がある。</p>
@@ -1237,22 +1165,7 @@
             <p>断崖を越えさせたのは、理論ではなかった。傍にいた人間の手だった。</p>
             <p><strong>真理は、知識の中にはなかった。</strong></p>
             <p><strong>生きている人間の、温かな手の中にあった。</strong></p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Video moved to bottom section -->
-
-      <div class="founder-story__divider"></div>
-
-      <!-- Scene 7: Birth of Existential Science -->
-      <div class="founder-accordion fade-in founder-accordion--rebirth" data-accordion>
-        <button class="founder-accordion__trigger" aria-expanded="false">
-          <span>壊れた後に、降りてきた。</span>
-          <span class="founder-accordion__icon"></span>
-        </button>
-        <div class="founder-accordion__body">
-          <div class="founder-accordion__content">
+            <div class="founder-story__chapter-break"></div>
             <p>回復の過程で、あるものが降りてきた。</p>
             <p>ある日突然、「Metaがある限り自由意志はない」という構造が見えた。ある日突然、天命の言語化セッション™が降りてきた。ある日突然、「生きる意味を語れる社会を作る」という理念が降りてきた。ある日突然、愛の定義が降りてきた。</p>
             <p>学んで到達したのではない。壊れた後に、降りてきた。</p>
@@ -1264,8 +1177,8 @@
 
       <div class="founder-story__divider"></div>
 
-      <!-- Scene 8: What I do in sessions -->
-      <div class="founder-accordion fade-in founder-accordion--mission" data-accordion>
+      <!-- ===== 第三幕: 天命の章 ===== -->
+      <div class="founder-accordion fade-in founder-accordion--tenmei" data-accordion>
         <button class="founder-accordion__trigger" aria-expanded="false">
           <span>深く考えるに値する質問を渡す。</span>
           <span class="founder-accordion__icon"></span>
@@ -1287,8 +1200,6 @@
           </div>
         </div>
       </div>
-
-      <!-- Video moved to bottom section -->
 
       <div class="founder-story__divider"></div>
 
