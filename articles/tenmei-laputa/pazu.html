@@ -343,6 +343,75 @@ h3.section-heading {
     padding-bottom: 1em;
   }
 }
+/* ── 対比グリッド ── */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid rgba(192,168,120,0.12);
+  background: rgba(15, 12, 25, 0.45);
+}
+.comparison-grid__head {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-gold);
+  letter-spacing: 0.08em;
+  padding: 0.6rem 0.8rem;
+  text-align: center;
+  background: rgba(192,168,120,0.06);
+  border-bottom: 1px solid rgba(192,168,120,0.2);
+}
+.comparison-grid__head:first-child {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell {
+  padding: 0.55rem 0.8rem;
+  font-size: var(--fs-small);
+  line-height: 1.7;
+  color: var(--color-text-reading);
+  border-bottom: 1px solid rgba(192,168,120,0.06);
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+.comparison-grid__cell:nth-child(odd) {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+.comparison-table .comparison-note {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  font-size: var(--fs-micro);
+  color: rgba(235,232,225,0.55);
+  line-height: 1.8;
+  background: rgba(192,168,120,0.03);
+  border-left: 2px solid rgba(192,168,120,0.15);
+}
+@media (max-width: 768px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+  .comparison-grid__head {
+    border-right: none !important;
+  }
+  .comparison-grid__head:first-child {
+    border-right: none;
+  }
+  .comparison-grid__cell {
+    border-right: none;
+  }
+  .comparison-grid__cell:nth-child(odd) {
+    border-right: none;
+    padding-top: 0.8rem;
+    color: var(--color-gold);
+    font-weight: 600;
+    font-size: var(--fs-micro);
+  }
+  .comparison-grid__cell:nth-child(even) {
+    padding-top: 0.2rem;
+    padding-bottom: 0.8rem;
+  }
+}
 </style>
 </head>
 <body>
@@ -463,6 +532,23 @@ h3.section-heading {
           <li>パズー &rarr; 天命に到達──力の手放しを通じて<br>ムスカ &rarr; 天命に不到達──力への執着の果てに滅びる</li>
           <li>共通点 &rarr; どちらもラピュタの「遺産」に駆動されている。一方は手放すことで天命に到達し、他方は握り締めることで破滅した</li>
         </ul>
+
+        <div class="comparison-table">
+          <div class="comparison-grid">
+            <div class="comparison-grid__head">パズー</div>
+            <div class="comparison-grid__head">ムスカ</div>
+            <div class="comparison-grid__cell"><strong>ラピュタへの接続：</strong>父の遺産（記憶と物語）として接続</div>
+            <div class="comparison-grid__cell"><strong>ラピュタへの接続：</strong>血統（ラピュタ王族の末裔）として接続</div>
+            <div class="comparison-grid__cell"><strong>力への態度：</strong>真実を確認したのち、力を手放す</div>
+            <div class="comparison-grid__cell"><strong>力への態度：</strong>力を掌握し、支配しようとする</div>
+            <div class="comparison-grid__cell"><strong>シータとの関係：</strong>意思を尊重する対等な関係</div>
+            <div class="comparison-grid__cell"><strong>シータとの関係：</strong>飛行石の媒介としてのみ利用する</div>
+            <div class="comparison-grid__cell"><strong>Meta：</strong>労働者階級の連帯と誠実のMeta</div>
+            <div class="comparison-grid__cell"><strong>Meta：</strong>貴族的血統と支配のMeta</div>
+            <div class="comparison-grid__cell"><strong>結末：</strong>天命に到達──力の手放しを通じて</div>
+            <div class="comparison-grid__cell"><strong>結末：</strong>天命に不到達──力への執着の果てに滅びる</div>
+          </div>
+        </div>
       </div>
 
       <!-- 天命への転換点 -->

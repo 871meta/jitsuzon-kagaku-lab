@@ -350,6 +350,75 @@ h3.section-heading {
     padding-bottom: 1em;
   }
 }
+/* ── 対比グリッド ── */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid rgba(192,168,120,0.12);
+  background: rgba(15, 12, 25, 0.45);
+}
+.comparison-grid__head {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-gold);
+  letter-spacing: 0.08em;
+  padding: 0.6rem 0.8rem;
+  text-align: center;
+  background: rgba(192,168,120,0.06);
+  border-bottom: 1px solid rgba(192,168,120,0.2);
+}
+.comparison-grid__head:first-child {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell {
+  padding: 0.55rem 0.8rem;
+  font-size: var(--fs-small);
+  line-height: 1.7;
+  color: var(--color-text-reading);
+  border-bottom: 1px solid rgba(192,168,120,0.06);
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+.comparison-grid__cell:nth-child(odd) {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+.comparison-table .comparison-note {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  font-size: var(--fs-micro);
+  color: rgba(235,232,225,0.55);
+  line-height: 1.8;
+  background: rgba(192,168,120,0.03);
+  border-left: 2px solid rgba(192,168,120,0.15);
+}
+@media (max-width: 768px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+  .comparison-grid__head {
+    border-right: none !important;
+  }
+  .comparison-grid__head:first-child {
+    border-right: none;
+  }
+  .comparison-grid__cell {
+    border-right: none;
+  }
+  .comparison-grid__cell:nth-child(odd) {
+    border-right: none;
+    padding-top: 0.8rem;
+    color: var(--color-gold);
+    font-weight: 600;
+    font-size: var(--fs-micro);
+  }
+  .comparison-grid__cell:nth-child(even) {
+    padding-top: 0.2rem;
+    padding-bottom: 0.8rem;
+  }
+}
 </style>
 </head>
 <body>
@@ -487,6 +556,21 @@ h3.section-heading {
 <p>失うことへの恐怖と、得られないものへの欲望。この二つのペダルを交互に踏めば、人間は永遠に走り続ける。</p>
         <p>アナリストは天命の言語化セッション&trade;のダークサイドそのものだ。セラピストの信頼を武器に、覚醒を病理として管理する。「あなたの記憶は本物かもしれない。</p>
 <p>でもそう思い込むことが危険なんです」──この一言で、構造の認識が精神疾患に読み替えられる。</p>
+
+        <div class="comparison-table">
+          <div class="comparison-grid">
+            <div class="comparison-grid__head">ネオ</div>
+            <div class="comparison-grid__head">アナリスト</div>
+            <div class="comparison-grid__cell"><strong>「見ること」の用途：</strong>構造を見ることで覚醒した。天命の出発点</div>
+            <div class="comparison-grid__cell"><strong>「見ること」の用途：</strong>構造を見ることで他者を支配する。制御の道具に転用</div>
+            <div class="comparison-grid__cell"><strong>問いの方向：</strong>オラクルの問いかけに導かれた。問いは方向を開くためにあった</div>
+            <div class="comparison-grid__cell"><strong>問いの方向：</strong>セラピストとしてネオに問いかける。問いは方向を閉じるためにある</div>
+            <div class="comparison-grid__cell"><strong>ピルの選択：</strong>赤いピルを選んだ</div>
+            <div class="comparison-grid__cell"><strong>ピルの選択：</strong>青いピルを処方する──しかも毎日</div>
+            <div class="comparison-grid__cell"><strong>管理手法：</strong>構造の認識によって覚醒し、自由へ向かう</div>
+            <div class="comparison-grid__cell"><strong>管理手法：</strong>感情（恐怖と欲望）で人間を管理する</div>
+          </div>
+        </div>
       </div>
 
       <!-- Profiling: Turning Points -->

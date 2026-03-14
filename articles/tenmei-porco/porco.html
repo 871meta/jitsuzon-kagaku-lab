@@ -350,6 +350,75 @@ h3.section-heading {
     padding-bottom: 1em;
   }
 }
+/* ── 対比グリッド ── */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid rgba(192,168,120,0.12);
+  background: rgba(15, 12, 25, 0.45);
+}
+.comparison-grid__head {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-gold);
+  letter-spacing: 0.08em;
+  padding: 0.6rem 0.8rem;
+  text-align: center;
+  background: rgba(192,168,120,0.06);
+  border-bottom: 1px solid rgba(192,168,120,0.2);
+}
+.comparison-grid__head:first-child {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell {
+  padding: 0.55rem 0.8rem;
+  font-size: var(--fs-small);
+  line-height: 1.7;
+  color: var(--color-text-reading);
+  border-bottom: 1px solid rgba(192,168,120,0.06);
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+.comparison-grid__cell:nth-child(odd) {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+.comparison-table .comparison-note {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  font-size: var(--fs-micro);
+  color: rgba(235,232,225,0.55);
+  line-height: 1.8;
+  background: rgba(192,168,120,0.03);
+  border-left: 2px solid rgba(192,168,120,0.15);
+}
+@media (max-width: 768px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+  .comparison-grid__head {
+    border-right: none !important;
+  }
+  .comparison-grid__head:first-child {
+    border-right: none;
+  }
+  .comparison-grid__cell {
+    border-right: none;
+  }
+  .comparison-grid__cell:nth-child(odd) {
+    border-right: none;
+    padding-top: 0.8rem;
+    color: var(--color-gold);
+    font-weight: 600;
+    font-size: var(--fs-micro);
+  }
+  .comparison-grid__cell:nth-child(even) {
+    padding-top: 0.2rem;
+    padding-bottom: 0.8rem;
+  }
+}
 </style>
 </head>
 <body>
@@ -472,6 +541,21 @@ h3.section-heading {
           <li>ポルコ &rarr; 過去に属する男。冒険飛行家の時代に生き、新しい時代を拒否する<br>カーチス &rarr; 未来に向かう男。新しい時代を積極的に取りに行く</li>
           <li>同じ「エース・パイロット」でありながら、初期条件が異なる──仲間を失ったか否か、生存者の罪悪感があるか否か──だけで、出力がここまで変わる。カーチスはポルコが手放したものすべてを体現する構造的逆像である</li>
         </ul>
+
+        <div class="comparison-table">
+          <div class="comparison-grid">
+            <div class="comparison-grid__head">ポルコ</div>
+            <div class="comparison-grid__head">カーチス</div>
+            <div class="comparison-grid__cell"><strong>人生への態度：</strong>人生から撤退。愛から撤退。飛ぶことだけに留まる</div>
+            <div class="comparison-grid__cell"><strong>人生への態度：</strong>人生に全面参加。愛にも野心にも政治にも飛び込む</div>
+            <div class="comparison-grid__cell"><strong>義務への態度：</strong>豚の顔で義務から逃れる。「俺は俺の稼ぎでしか飛ばねぇよ」</div>
+            <div class="comparison-grid__cell"><strong>義務への態度：</strong>人間の顔で義務を引き受ける。ハリウッド、大統領、ジーナ──すべてを欲しがる</div>
+            <div class="comparison-grid__cell"><strong>名誉規範：</strong>沈黙の名誉規範。卑怯なことはしないが、それを誰にも言わない</div>
+            <div class="comparison-grid__cell"><strong>名誉規範：</strong>声高な自己宣伝。自分が正しいことを全員に知らせたがる</div>
+            <div class="comparison-grid__cell"><strong>時間軸：</strong>過去に属する男。冒険飛行家の時代に生き、新しい時代を拒否する</div>
+            <div class="comparison-grid__cell"><strong>時間軸：</strong>未来に向かう男。新しい時代を積極的に取りに行く</div>
+          </div>
+        </div>
       </div>
 
       <!-- 天命への転換点 -->

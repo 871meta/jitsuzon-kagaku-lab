@@ -350,6 +350,75 @@ h3.section-heading {
     padding-bottom: 1em;
   }
 }
+/* ── 対比グリッド ── */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid rgba(192,168,120,0.12);
+  background: rgba(15, 12, 25, 0.45);
+}
+.comparison-grid__head {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-gold);
+  letter-spacing: 0.08em;
+  padding: 0.6rem 0.8rem;
+  text-align: center;
+  background: rgba(192,168,120,0.06);
+  border-bottom: 1px solid rgba(192,168,120,0.2);
+}
+.comparison-grid__head:first-child {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell {
+  padding: 0.55rem 0.8rem;
+  font-size: var(--fs-small);
+  line-height: 1.7;
+  color: var(--color-text-reading);
+  border-bottom: 1px solid rgba(192,168,120,0.06);
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+.comparison-grid__cell:nth-child(odd) {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+.comparison-table .comparison-note {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  font-size: var(--fs-micro);
+  color: rgba(235,232,225,0.55);
+  line-height: 1.8;
+  background: rgba(192,168,120,0.03);
+  border-left: 2px solid rgba(192,168,120,0.15);
+}
+@media (max-width: 768px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+  .comparison-grid__head {
+    border-right: none !important;
+  }
+  .comparison-grid__head:first-child {
+    border-right: none;
+  }
+  .comparison-grid__cell {
+    border-right: none;
+  }
+  .comparison-grid__cell:nth-child(odd) {
+    border-right: none;
+    padding-top: 0.8rem;
+    color: var(--color-gold);
+    font-weight: 600;
+    font-size: var(--fs-micro);
+  }
+  .comparison-grid__cell:nth-child(even) {
+    padding-top: 0.2rem;
+    padding-bottom: 0.8rem;
+  }
+}
 </style>
 </head>
 <body>
@@ -480,6 +549,21 @@ h3.section-heading {
         <p>ショーン &rarr; 他者のMetaを正確に観測できる。自分のMetaには動けない<br>ウィル &rarr; 他者のMetaを知性で見抜く。しかしそれを武器にして距離を取る</p>
         <p>ショーン &rarr; ナンシーとの経験が存在の基盤。失ったから停止している<br>ウィル &rarr; 何も持っていない。持っていないから、失う恐怖で開けない</p>
         <p>ショーン &rarr; 20年後のウィル。同じ構造の、別の時間断面<br>ウィル &rarr; 20年前のショーン。まだ「選ぶか／閉じるか」の分岐点にいる</p>
+
+        <div class="comparison-table">
+          <div class="comparison-grid">
+            <div class="comparison-grid__head">ショーン・マグワイア</div>
+            <div class="comparison-grid__head">ウィル・ハンティング</div>
+            <div class="comparison-grid__cell"><strong>愛との関係：</strong>愛を知り、失い、停止した。問題は「開いたものを閉じたこと」</div>
+            <div class="comparison-grid__cell"><strong>愛との関係：</strong>愛を知らず、恐れ、拒絶する。問題は「一度も開いたことがないこと」</div>
+            <div class="comparison-grid__cell"><strong>Metaの観測：</strong>他者のMetaを正確に観測できる。自分のMetaには動けない</div>
+            <div class="comparison-grid__cell"><strong>Metaの観測：</strong>他者のMetaを知性で見抜く。しかしそれを武器にして距離を取る</div>
+            <div class="comparison-grid__cell"><strong>存在の基盤：</strong>ナンシーとの経験が存在の基盤。失ったから停止している</div>
+            <div class="comparison-grid__cell"><strong>存在の基盤：</strong>何も持っていない。持っていないから、失う恐怖で開けない</div>
+            <div class="comparison-grid__cell"><strong>構造的位置：</strong>20年後のウィル。同じ構造の、別の時間断面</div>
+            <div class="comparison-grid__cell"><strong>構造的位置：</strong>20年前のショーン。まだ「選ぶか／閉じるか」の分岐点にいる</div>
+          </div>
+        </div>
       </div>
 
       <!-- 天命への転換点 -->

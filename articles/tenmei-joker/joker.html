@@ -351,6 +351,75 @@ h3.section-heading {
     padding-bottom: 1em;
   }
 }
+/* ── 対比グリッド ── */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid rgba(192,168,120,0.12);
+  background: rgba(15, 12, 25, 0.45);
+}
+.comparison-grid__head {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-gold);
+  letter-spacing: 0.08em;
+  padding: 0.6rem 0.8rem;
+  text-align: center;
+  background: rgba(192,168,120,0.06);
+  border-bottom: 1px solid rgba(192,168,120,0.2);
+}
+.comparison-grid__head:first-child {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell {
+  padding: 0.55rem 0.8rem;
+  font-size: var(--fs-small);
+  line-height: 1.7;
+  color: var(--color-text-reading);
+  border-bottom: 1px solid rgba(192,168,120,0.06);
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+.comparison-grid__cell:nth-child(odd) {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+.comparison-table .comparison-note {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  font-size: var(--fs-micro);
+  color: rgba(235,232,225,0.55);
+  line-height: 1.8;
+  background: rgba(192,168,120,0.03);
+  border-left: 2px solid rgba(192,168,120,0.15);
+}
+@media (max-width: 768px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+  .comparison-grid__head {
+    border-right: none !important;
+  }
+  .comparison-grid__head:first-child {
+    border-right: none;
+  }
+  .comparison-grid__cell {
+    border-right: none;
+  }
+  .comparison-grid__cell:nth-child(odd) {
+    border-right: none;
+    padding-top: 0.8rem;
+    color: var(--color-gold);
+    font-weight: 600;
+    font-size: var(--fs-micro);
+  }
+  .comparison-grid__cell:nth-child(even) {
+    padding-top: 0.2rem;
+    padding-bottom: 0.8rem;
+  }
+}
 </style>
 </head>
 <body>
@@ -481,6 +550,21 @@ h3.section-heading {
           <li>マイケル &rarr; 暴力を「手段」として用いた。ソロッツォとマクラスキーの射殺は、ファミリーを守るための構造的決断<br>アーサー &rarr; 暴力が「自己の発現」になった。地下鉄の三発は自衛から始まったが、存在の確認へと変質した</li>
           <li>マイケル &rarr; 天命は歪んだ形で発火した。ファミリーを守る&rarr;支配するへの変質。しかし天命のプロセス自体は機能している<br>アーサー &rarr; 天命は発火していない。天命を問うための最低条件──「自分が何者であるか」の基盤──が構造的に存在しない</li>
         </ul>
+
+        <div class="comparison-table">
+          <div class="comparison-grid">
+            <div class="comparison-grid__head">アーサー・フレック</div>
+            <div class="comparison-grid__head">マイケル・コルレオーネ</div>
+            <div class="comparison-grid__cell"><strong>出発点：</strong>ゴッサムの底辺。養子。母は精神疾患。父は不在。社会的資本がゼロ</div>
+            <div class="comparison-grid__cell"><strong>出発点：</strong>名門コルレオーネ家の末息子。ダートマス大学卒、海兵隊の英雄。社会的資本が潤沢</div>
+            <div class="comparison-grid__cell"><strong>選択肢：</strong>選択肢そのものがない。唯一の出口だと信じたものが塞がれた結果の暴発</div>
+            <div class="comparison-grid__cell"><strong>選択肢：</strong>「堅気でいたい」という選択肢を持っていた。選択肢があった上で、それを手放した</div>
+            <div class="comparison-grid__cell"><strong>暴力の意味：</strong>暴力が「自己の発現」になった。地下鉄の三発は自衛から始まったが、存在の確認へと変質した</div>
+            <div class="comparison-grid__cell"><strong>暴力の意味：</strong>暴力を「手段」として用いた。ソロッツォとマクラスキーの射殺は、ファミリーを守るための構造的決断</div>
+            <div class="comparison-grid__cell"><strong>天命：</strong>天命は発火していない。天命を問うための最低条件──「自分が何者であるか」の基盤──が構造的に存在しない</div>
+            <div class="comparison-grid__cell"><strong>天命：</strong>天命は歪んだ形で発火した。ファミリーを守る→支配するへの変質。しかし天命のプロセス自体は機能している</div>
+          </div>
+        </div>
       </div>
 
       <!-- 天命への転換点 -->
