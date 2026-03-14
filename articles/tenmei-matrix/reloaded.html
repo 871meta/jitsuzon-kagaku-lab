@@ -350,75 +350,6 @@ h3.section-heading {
     padding-bottom: 1em;
   }
 }
-/* ── 対比グリッド ── */
-.comparison-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border: 1px solid rgba(192,168,120,0.12);
-  background: rgba(15, 12, 25, 0.45);
-}
-.comparison-grid__head {
-  font-size: var(--fs-small);
-  font-weight: 600;
-  color: var(--color-gold);
-  letter-spacing: 0.08em;
-  padding: 0.6rem 0.8rem;
-  text-align: center;
-  background: rgba(192,168,120,0.06);
-  border-bottom: 1px solid rgba(192,168,120,0.2);
-}
-.comparison-grid__head:first-child {
-  border-right: 1px solid rgba(192,168,120,0.1);
-}
-.comparison-grid__cell {
-  padding: 0.55rem 0.8rem;
-  font-size: var(--fs-small);
-  line-height: 1.7;
-  color: var(--color-text-reading);
-  border-bottom: 1px solid rgba(192,168,120,0.06);
-  min-width: 0;
-  overflow-wrap: break-word;
-}
-.comparison-grid__cell:nth-child(odd) {
-  border-right: 1px solid rgba(192,168,120,0.1);
-}
-.comparison-grid__cell:nth-last-child(-n+2) {
-  border-bottom: none;
-}
-.comparison-table .comparison-note {
-  margin-top: 1rem;
-  padding: 0.8rem 1rem;
-  font-size: var(--fs-micro);
-  color: rgba(235,232,225,0.55);
-  line-height: 1.8;
-  background: rgba(192,168,120,0.03);
-  border-left: 2px solid rgba(192,168,120,0.15);
-}
-@media (max-width: 768px) {
-  .comparison-grid {
-    grid-template-columns: 1fr;
-  }
-  .comparison-grid__head {
-    border-right: none !important;
-  }
-  .comparison-grid__head:first-child {
-    border-right: none;
-  }
-  .comparison-grid__cell {
-    border-right: none;
-  }
-  .comparison-grid__cell:nth-child(odd) {
-    border-right: none;
-    padding-top: 0.8rem;
-    color: var(--color-gold);
-    font-weight: 600;
-    font-size: var(--fs-micro);
-  }
-  .comparison-grid__cell:nth-child(even) {
-    padding-top: 0.2rem;
-    padding-bottom: 0.8rem;
-  }
-}
 </style>
 </head>
 <body>
@@ -558,20 +489,6 @@ h3.section-heading {
         <p>これはMeta知識のダークサイドだ。Metaを見ることは道徳的に中立である。知識は解放にも支配にも使える。</p>
 <p>デザートのシーンで女性の身体反応をプログラムしたメロヴィンジアンは、Metaの構造を他者の自律を奪うために行使している。</p>
 <p>ネオの天命が「見せること」なら、メロヴィンジアンは「操ること」に堕した者だ。</p>
-
-        <div class="comparison-table">
-          <div class="comparison-grid">
-            <div class="comparison-grid__head">ネオ</div>
-            <div class="comparison-grid__head">メロヴィンジアン</div>
-            <div class="comparison-grid__cell"><strong>Metaの認識：</strong>Metaが見える。しかし見えたものの「意味」を問い続けている</div>
-            <div class="comparison-grid__cell"><strong>Metaの認識：</strong>Metaが見える。そして「意味」を支配のために使う</div>
-            <div class="comparison-grid__cell"><strong>因果律の扱い：</strong>因果律の中にいながら、因果律を超える行為を選ぶ</div>
-            <div class="comparison-grid__cell"><strong>因果律の扱い：</strong>因果律を「唯一の真実」と断じ、知識を支配のために使う</div>
-            <div class="comparison-grid__cell"><strong>Meta知識の行使：</strong>構造を「見せること」が天命</div>
-            <div class="comparison-grid__cell"><strong>Meta知識の行使：</strong>構造を他者の自律を奪うために行使する</div>
-            <div class="comparison-grid__cell"><strong>自己適用：</strong>自分自身にもMetaの構造を適用し、問い続ける</div>
-            <div class="comparison-grid__cell"><strong>自己適用：</strong>自分に因果律を適用されることを拒否する</div>
-          </div>
         </div>
       </div>
 

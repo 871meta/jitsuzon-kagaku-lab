@@ -273,13 +273,6 @@ h3.section-heading {
   color: rgba(192,168,120,0.35);
   font-size: 0.75em;
 }
-
-/* === Comparison Table === */
-
-
-
-
-
 /* === CTA Block === */
 /* === Author Block === */
 .author-block {
@@ -351,74 +344,6 @@ h3.section-heading {
     padding-bottom: 1em;
   }
 }
-/* ── 対比グリッド ── */
-.comparison-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border: 1px solid rgba(192,168,120,0.12);
-  background: rgba(15, 12, 25, 0.45);
-}
-.comparison-grid__head {
-  font-size: var(--fs-small);
-  font-weight: 600;
-  color: var(--color-gold);
-  letter-spacing: 0.08em;
-  padding: 0.6rem 0.8rem;
-  text-align: center;
-  background: rgba(192,168,120,0.06);
-  border-bottom: 1px solid rgba(192,168,120,0.2);
-}
-.comparison-grid__head:first-child {
-  border-right: 1px solid rgba(192,168,120,0.1);
-}
-.comparison-grid__cell {
-  padding: 0.55rem 0.8rem;
-  font-size: var(--fs-small);
-  line-height: 1.7;
-  color: var(--color-text-reading);
-  border-bottom: 1px solid rgba(192,168,120,0.06);
-  min-width: 0;
-  overflow-wrap: break-word;
-}
-.comparison-grid__cell:nth-child(odd) {
-  border-right: 1px solid rgba(192,168,120,0.1);
-}
-.comparison-grid__cell:nth-last-child(-n+2) {
-  border-bottom: none;
-}
-.comparison-table .comparison-note {
-  margin-top: 1rem;
-  padding: 0.8rem 1rem;
-  font-size: var(--fs-micro);
-  color: rgba(235,232,225,0.55);
-  line-height: 1.8;
-  background: rgba(192,168,120,0.03);
-  border-left: 2px solid rgba(192,168,120,0.15);
-}
-@media (max-width: 768px) {
-  .comparison-grid {
-    grid-template-columns: 1fr;
-  }
-  .comparison-grid__head {
-    border-right: none !important;
-  }
-  .comparison-grid__head:first-child {
-    border-right: none;
-  }
-  .comparison-grid__cell {
-    border-right: none;
-  }
-  .comparison-grid__cell:nth-child(odd) {
-    border-right: none;
-    padding-top: 0.8rem;
-    color: var(--color-gold);
-    font-weight: 600;
-    font-size: var(--fs-micro);
-  }
-  .comparison-grid__cell:nth-child(even) {
-    padding-top: 0.2rem;
-    padding-bottom: 0.8rem;
-  }
 }
 </style>
 </head>
@@ -961,25 +886,6 @@ h3.section-heading {
       <div class="profiling-block fade-in">
         <h3>【ジャック・ハンマーとの対比】</h3>
         <p style="font-size:0.85rem; color:#c0bbb4; margin-bottom:1rem; line-height:1.8;">花山薫とジャック・ハンマー──同じ「自由意志なき構造」に駆動されながら、その方向は完全に真逆である。一方は「否定」によって壊れ、もう一方は「肯定」によって固まった。</p>
-        <div class="comparison-table">
-  <div class="comparison-grid">
-    <div class="comparison-grid__head">花山薫</div>
-    <div class="comparison-grid__head">ジャック・ハンマー</div>
-    <div class="comparison-grid__cell"><strong>シャドウの種類：</strong>ゴールデンシャドウ（光の影）</div>
-    <div class="comparison-grid__cell"><strong>シャドウの種類：</strong>闇のシャドウ</div>
-    <div class="comparison-grid__cell"><strong>束縛の起点：</strong>「肯定」── 母の笑顔と愛</div>
-    <div class="comparison-grid__cell"><strong>束縛の起点：</strong>「否定」── 父の「血が薄い」</div>
-    <div class="comparison-grid__cell"><strong>連鎖の形式：</strong>内的誓約 ── 自ら課した呪縛</div>
-    <div class="comparison-grid__cell"><strong>連鎖の形式：</strong>外部否定 ── 父のたった一言</div>
-    <div class="comparison-grid__cell"><strong>抑圧されたもの：</strong>弱さ・無防備さ・受け取ること</div>
-    <div class="comparison-grid__cell"><strong>抑圧されたもの：</strong>ありのままの自分の価値</div>
-    <div class="comparison-grid__cell"><strong>Metaへの態度：</strong>与えられた光を手放さない</div>
-    <div class="comparison-grid__cell"><strong>Metaへの態度：</strong>与えられなかったものを埋めようとする</div>
-    <div class="comparison-grid__cell"><strong>天命の構造：</strong>何も手放さなかった</div>
-    <div class="comparison-grid__cell"><strong>天命の構造：</strong>失ったものから創った</div>
-    <div class="comparison-grid__cell"><strong>天命動詞：</strong>握る</div>
-    <div class="comparison-grid__cell"><strong>天命動詞：</strong>噛み砕く</div>
-  </div>
 </div>
       </div>
     </section>

@@ -274,27 +274,6 @@ h3.section-heading {
   font-size: 0.75em;
 }
 
-/* === Comparison Table === */
-.comparison-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1.5rem 0;
-  font-size: var(--fs-body);
-}
-.comparison-table th,
-.comparison-table td {
-  padding: 0.8rem 1rem;
-  border: 1px solid rgba(192,168,120,0.12);
-  text-align: left;
-}
-.comparison-table th {
-  background: rgba(192,168,120,0.08);
-  color: var(--color-gold);
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  font-size: var(--fs-small);
-}
-.comparison-table td { color: var(--color-text-reading); }
 
 /* === CTA Block === */
 /* === Author Block === */
@@ -350,8 +329,6 @@ h3.section-heading {
   .session-dialogue .line-yanai { padding-left: 0.8rem; }
   .session-dialogue .line-character { margin-left: 0.8rem; }
   .profiling-block { padding: 1.5rem 1.2rem; }
-  .comparison-table { font-size: var(--fs-xs); }
-  .comparison-table th, .comparison-table td { padding: 0.5rem 0.6rem; }
   .highlight-block { padding: 1.5rem 1.2rem 1.5rem 1.4rem; }
   .text-panel { padding: 2rem 1.5rem; }
 }
@@ -365,75 +342,6 @@ h3.section-heading {
   .session-dialogue p:nth-child(10n) {
     margin-bottom: 1.5em;
     padding-bottom: 1em;
-  }
-}
-/* ── 対比グリッド ── */
-.comparison-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border: 1px solid rgba(192,168,120,0.12);
-  background: rgba(15, 12, 25, 0.45);
-}
-.comparison-grid__head {
-  font-size: var(--fs-small);
-  font-weight: 600;
-  color: var(--color-gold);
-  letter-spacing: 0.08em;
-  padding: 0.6rem 0.8rem;
-  text-align: center;
-  background: rgba(192,168,120,0.06);
-  border-bottom: 1px solid rgba(192,168,120,0.2);
-}
-.comparison-grid__head:first-child {
-  border-right: 1px solid rgba(192,168,120,0.1);
-}
-.comparison-grid__cell {
-  padding: 0.55rem 0.8rem;
-  font-size: var(--fs-small);
-  line-height: 1.7;
-  color: var(--color-text-reading);
-  border-bottom: 1px solid rgba(192,168,120,0.06);
-  min-width: 0;
-  overflow-wrap: break-word;
-}
-.comparison-grid__cell:nth-child(odd) {
-  border-right: 1px solid rgba(192,168,120,0.1);
-}
-.comparison-grid__cell:nth-last-child(-n+2) {
-  border-bottom: none;
-}
-.comparison-table .comparison-note {
-  margin-top: 1rem;
-  padding: 0.8rem 1rem;
-  font-size: var(--fs-micro);
-  color: rgba(235,232,225,0.55);
-  line-height: 1.8;
-  background: rgba(192,168,120,0.03);
-  border-left: 2px solid rgba(192,168,120,0.15);
-}
-@media (max-width: 768px) {
-  .comparison-grid {
-    grid-template-columns: 1fr;
-  }
-  .comparison-grid__head {
-    border-right: none !important;
-  }
-  .comparison-grid__head:first-child {
-    border-right: none;
-  }
-  .comparison-grid__cell {
-    border-right: none;
-  }
-  .comparison-grid__cell:nth-child(odd) {
-    border-right: none;
-    padding-top: 0.8rem;
-    color: var(--color-gold);
-    font-weight: 600;
-    font-size: var(--fs-micro);
-  }
-  .comparison-grid__cell:nth-child(even) {
-    padding-top: 0.2rem;
-    padding-bottom: 0.8rem;
   }
 }
 </style>
@@ -563,22 +471,6 @@ h3.section-heading {
         <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-bottom:1.5rem;">ジェーン ── 天命に到達した（再び愛し、愛されることを許した）<br>
         レッド・ジョン ── 天命に到達しなかった（シャドウを直視せず死亡）</p>
         <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2;">──同じ観察力というMetaを持ちながら、一方は贖罪に向かい、一方は支配に向かった。初期条件の差異が、同じ才能を全く異なる出力に変換している。</p>
-
-        <div class="comparison-table">
-          <div class="comparison-grid">
-            <div class="comparison-grid__head">ジェーン</div>
-            <div class="comparison-grid__head">レッド・ジョン</div>
-            <div class="comparison-grid__cell"><strong>観察力の用途：</strong>「解決し、救済するため」に使う</div>
-            <div class="comparison-grid__cell"><strong>観察力の用途：</strong>「支配し、破壊するため」に使う</div>
-            <div class="comparison-grid__cell"><strong>才能への態度：</strong>才能がもたらした罪悪感を背負い続ける</div>
-            <div class="comparison-grid__cell"><strong>才能への態度：</strong>才能を「特別さの証明」として誇示する</div>
-            <div class="comparison-grid__cell"><strong>凡庸さへの関係：</strong>凡庸な幸福（沈黙、安心、リズボン）を渇望する</div>
-            <div class="comparison-grid__cell"><strong>凡庸さへの関係：</strong>凡庸であることを絶対的に恐怖する</div>
-            <div class="comparison-grid__cell"><strong>仮面の下：</strong>演技の仮面の下に壊れた人間がいる</div>
-            <div class="comparison-grid__cell"><strong>仮面の下：</strong>保安官という仮面の下に殺人鬼がいる</div>
-            <div class="comparison-grid__cell"><strong>天命：</strong>天命に到達した（再び愛し、愛されることを許した）</div>
-            <div class="comparison-grid__cell"><strong>天命：</strong>天命に到達しなかった（シャドウを直視せず死亡）</div>
-          </div>
         </div>
       </div>
 

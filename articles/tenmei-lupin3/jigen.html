@@ -351,75 +351,6 @@ h3.section-heading {
     padding-bottom: 1em;
   }
 }
-/* ── 対比グリッド ── */
-.comparison-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border: 1px solid rgba(192,168,120,0.12);
-  background: rgba(15, 12, 25, 0.45);
-}
-.comparison-grid__head {
-  font-size: var(--fs-small);
-  font-weight: 600;
-  color: var(--color-gold);
-  letter-spacing: 0.08em;
-  padding: 0.6rem 0.8rem;
-  text-align: center;
-  background: rgba(192,168,120,0.06);
-  border-bottom: 1px solid rgba(192,168,120,0.2);
-}
-.comparison-grid__head:first-child {
-  border-right: 1px solid rgba(192,168,120,0.1);
-}
-.comparison-grid__cell {
-  padding: 0.55rem 0.8rem;
-  font-size: var(--fs-small);
-  line-height: 1.7;
-  color: var(--color-text-reading);
-  border-bottom: 1px solid rgba(192,168,120,0.06);
-  min-width: 0;
-  overflow-wrap: break-word;
-}
-.comparison-grid__cell:nth-child(odd) {
-  border-right: 1px solid rgba(192,168,120,0.1);
-}
-.comparison-grid__cell:nth-last-child(-n+2) {
-  border-bottom: none;
-}
-.comparison-table .comparison-note {
-  margin-top: 1rem;
-  padding: 0.8rem 1rem;
-  font-size: var(--fs-micro);
-  color: rgba(235,232,225,0.55);
-  line-height: 1.8;
-  background: rgba(192,168,120,0.03);
-  border-left: 2px solid rgba(192,168,120,0.15);
-}
-@media (max-width: 768px) {
-  .comparison-grid {
-    grid-template-columns: 1fr;
-  }
-  .comparison-grid__head {
-    border-right: none !important;
-  }
-  .comparison-grid__head:first-child {
-    border-right: none;
-  }
-  .comparison-grid__cell {
-    border-right: none;
-  }
-  .comparison-grid__cell:nth-child(odd) {
-    border-right: none;
-    padding-top: 0.8rem;
-    color: var(--color-gold);
-    font-weight: 600;
-    font-size: var(--fs-micro);
-  }
-  .comparison-grid__cell:nth-child(even) {
-    padding-top: 0.2rem;
-    padding-bottom: 0.8rem;
-  }
-}
 </style>
 </head>
 <body>
@@ -544,23 +475,6 @@ h3.section-heading {
 <p style="color:var(--color-text-reading); line-height:2; margin-bottom:1.5rem;">対して次元が恐れているのは「言葉にすること」そのものだ。ルパンは愛を受け取れないから去る。</p>
 <p style="color:var(--color-text-reading); line-height:2; margin-bottom:1.5rem;">次元は忠誠を言葉にできないから黙る。受け取れないものは違う。</p>
 <p style="color:var(--color-text-reading); line-height:2; margin-bottom:1.5rem;">だが、二人の恐怖はあのフィアットの中で完璧に噛み合っている。</p>
-        <div class="comparison-table">
-  <div class="comparison-grid">
-    <div class="comparison-grid__head">ルパン三世</div>
-    <div class="comparison-grid__head">次元大介</div>
-    <div class="comparison-grid__cell"><strong>世界への介入方法：</strong>変装──他者になるための自己拡張</div>
-    <div class="comparison-grid__cell"><strong>世界への介入方法：</strong>帽子──自己を隠蔽するための収縮</div>
-    <div class="comparison-grid__cell"><strong>言語の機能：</strong>発散──長広舌、冗談、無謀な計画の語り</div>
-    <div class="comparison-grid__cell"><strong>言語の機能：</strong>収束──短い肯定、皮肉、沈黙</div>
-    <div class="comparison-grid__cell"><strong>天命の方向性：</strong>解放者（Liberator）──障壁を突破する</div>
-    <div class="comparison-grid__cell"><strong>天命の方向性：</strong>不可欠条件（Enabler）──解放を可能にする基盤</div>
-    <div class="comparison-grid__cell"><strong>身体性：</strong>流動的、アクロバティック、道化の柔らかさ</div>
-    <div class="comparison-grid__cell"><strong>身体性：</strong>経済的、爆発的かつ精密、即座に静止へ戻る</div>
-    <div class="comparison-grid__cell"><strong>感情の表出：</strong>過剰に見せる（しかし核心は隠す）</div>
-    <div class="comparison-grid__cell"><strong>感情の表出：</strong>過剰に隠す（しかし行動ですべてを示す）</div>
-    <div class="comparison-grid__cell"><strong>シャドウの構造：</strong>善良さを「泥棒」で偽装</div>
-    <div class="comparison-grid__cell"><strong>シャドウの構造：</strong>深い献身を「プロ」で偽装</div>
-  </div>
 </div>
       </div>
 

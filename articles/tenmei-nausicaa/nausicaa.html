@@ -350,59 +350,7 @@ h3.section-heading {
     margin-bottom: 1.5em;
     padding-bottom: 1em;
   }
-  .comparison-grid__head,
-  .comparison-grid__cell { padding: 0.4rem 0.5rem; font-size: var(--fs-micro); line-height: 1.6; }
-  .comparison-table .comparison-note { font-size: var(--fs-micro); padding: 0.6rem 0.7rem; }
 }
-
-/* === 8. 対比キャラクター比較テーブル === */
-.comparison-table {
-  margin: 1.5rem 0;
-}
-.comparison-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border: 1px solid rgba(192,168,120,0.12);
-  background: rgba(15, 12, 25, 0.45);
-}
-.comparison-grid__head {
-  font-size: var(--fs-small);
-  font-weight: 600;
-  color: var(--color-gold);
-  letter-spacing: 0.08em;
-  padding: 0.6rem 0.8rem;
-  text-align: center;
-  background: rgba(192,168,120,0.06);
-  border-bottom: 1px solid rgba(192,168,120,0.2);
-}
-.comparison-grid__head:first-child {
-  border-right: 1px solid rgba(192,168,120,0.1);
-}
-.comparison-grid__cell {
-  padding: 0.55rem 0.8rem;
-  font-size: var(--fs-small);
-  line-height: 1.7;
-  color: var(--color-text-reading);
-  border-bottom: 1px solid rgba(192,168,120,0.06);
-  min-width: 0;
-  overflow-wrap: break-word;
-}
-.comparison-grid__cell:nth-child(odd) {
-  border-right: 1px solid rgba(192,168,120,0.1);
-}
-.comparison-grid__cell:nth-last-child(-n+2) {
-  border-bottom: none;
-}
-.comparison-table .comparison-note {
-  margin-top: 1rem;
-  padding: 0.8rem 1rem;
-  font-size: var(--fs-micro);
-  color: rgba(235,232,225,0.55);
-  line-height: 1.8;
-  background: rgba(192,168,120,0.03);
-  border-left: 2px solid rgba(192,168,120,0.15);
-}
-
 </style>
 </head>
 <body>
@@ -514,19 +462,6 @@ h3.section-heading {
       <!-- 対比：クシャナ -->
       <div class="profiling-block fade-in">
         <h3>対比キャラクター：クシャナ</h3>
-        <div class="comparison-table">
-          <div class="comparison-grid">
-            <div class="comparison-grid__head">ナウシカ</div>
-            <div class="comparison-grid__head">クシャナ</div>
-            <div class="comparison-grid__cell">幼少期の王蟲の子の記憶が、腐海との「接続」の型板を与えた</div>
-            <div class="comparison-grid__cell">幼少期の蟲による身体損壊が、腐海との「戦争」の型板を与えた</div>
-            <div class="comparison-grid__cell">腐海を「生きている、浄化している」と認知する</div>
-            <div class="comparison-grid__cell">腐海を「私の身体を奪った、焼き払うべき」と認知する</div>
-            <div class="comparison-grid__cell">暴力を忌避する（だが能力はある）</div>
-            <div class="comparison-grid__cell">暴力を手段として受容する</div>
-            <div class="comparison-grid__cell">巨神兵に恐怖と拒絶を示す</div>
-            <div class="comparison-grid__cell">巨神兵を道具として利用しようとする</div>
-          </div>
           <p class="comparison-note">ナウシカがクシャナより「善い」のではない。異なるMeta（前提構造）を持っているのだ。幼少期の王蟲の記憶は、腐海との「接続」の型板を与えた。幼少期の蟲に奪われた身体は、腐海との「戦争」の型板を与えた。どちらの反応も「選ばれた」ものではない。どちらもMeta出力である。</p>
         </div>
       </div>

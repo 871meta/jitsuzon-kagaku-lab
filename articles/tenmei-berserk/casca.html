@@ -271,14 +271,6 @@ h3.section-heading {
   left: 0;
   color: var(--color-gold);
 }
-
-/* === Comparison Table === */
-
-
-
-
-
-
 /* === Author Block === */
 .author-block {
   margin-top: 3rem;
@@ -321,74 +313,6 @@ h3.section-heading {
   .def-box p br { display: none; }
   
 }
-/* ── 対比グリッド ── */
-.comparison-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border: 1px solid rgba(192,168,120,0.12);
-  background: rgba(15, 12, 25, 0.45);
-}
-.comparison-grid__head {
-  font-size: var(--fs-small);
-  font-weight: 600;
-  color: var(--color-gold);
-  letter-spacing: 0.08em;
-  padding: 0.6rem 0.8rem;
-  text-align: center;
-  background: rgba(192,168,120,0.06);
-  border-bottom: 1px solid rgba(192,168,120,0.2);
-}
-.comparison-grid__head:first-child {
-  border-right: 1px solid rgba(192,168,120,0.1);
-}
-.comparison-grid__cell {
-  padding: 0.55rem 0.8rem;
-  font-size: var(--fs-small);
-  line-height: 1.7;
-  color: var(--color-text-reading);
-  border-bottom: 1px solid rgba(192,168,120,0.06);
-  min-width: 0;
-  overflow-wrap: break-word;
-}
-.comparison-grid__cell:nth-child(odd) {
-  border-right: 1px solid rgba(192,168,120,0.1);
-}
-.comparison-grid__cell:nth-last-child(-n+2) {
-  border-bottom: none;
-}
-.comparison-table .comparison-note {
-  margin-top: 1rem;
-  padding: 0.8rem 1rem;
-  font-size: var(--fs-micro);
-  color: rgba(235,232,225,0.55);
-  line-height: 1.8;
-  background: rgba(192,168,120,0.03);
-  border-left: 2px solid rgba(192,168,120,0.15);
-}
-@media (max-width: 768px) {
-  .comparison-grid {
-    grid-template-columns: 1fr;
-  }
-  .comparison-grid__head {
-    border-right: none !important;
-  }
-  .comparison-grid__head:first-child {
-    border-right: none;
-  }
-  .comparison-grid__cell {
-    border-right: none;
-  }
-  .comparison-grid__cell:nth-child(odd) {
-    border-right: none;
-    padding-top: 0.8rem;
-    color: var(--color-gold);
-    font-weight: 600;
-    font-size: var(--fs-micro);
-  }
-  .comparison-grid__cell:nth-child(even) {
-    padding-top: 0.2rem;
-    padding-bottom: 0.8rem;
-  }
 }
 </style>
 </head>
@@ -504,19 +428,6 @@ h3.section-heading {
       <!-- 対比キャラクター -->
       <div class="profiling-block fade-in">
         <h3>対比キャラクターとの比較表</h3>
-        <div class="comparison-table">
-  <div class="comparison-grid">
-    <div class="comparison-grid__head">キャスカ</div>
-    <div class="comparison-grid__head">ガッツ</div>
-    <div class="comparison-grid__cell"><strong>蝕への対処：</strong>内への遮断（退行・凍結）</div>
-    <div class="comparison-grid__cell"><strong>蝕への対処：</strong>外への怒り（復讐・狂戦士）</div>
-    <div class="comparison-grid__cell"><strong>他者の夢との関係：</strong>グリフィスの夢の「部品」として生きた</div>
-    <div class="comparison-grid__cell"><strong>他者の夢との関係：</strong>グリフィスの夢と「対等」であろうとした</div>
-    <div class="comparison-grid__cell"><strong>回復後の構造：</strong>愛する者を拒絶する自分への罪悪感</div>
-    <div class="comparison-grid__cell"><strong>回復後の構造：</strong>愛する者を守れなかった自分への怒り</div>
-    <div class="comparison-grid__cell"><strong>現在の方向性：</strong>与えられた安寧を拒否し、自らの意志で動き始めている</div>
-    <div class="comparison-grid__cell"><strong>現在の方向性：</strong>守るべき者を失い、再び闇に沈みつつある</div>
-  </div>
 </div>
       </div>
 

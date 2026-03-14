@@ -271,14 +271,6 @@ h3.section-heading {
   left: 0;
   color: var(--color-gold);
 }
-
-/* === Comparison Table === */
-
-
-
-
-
-
 /* === Author Block === */
 .author-block {
   margin-top: 3rem;
@@ -321,74 +313,6 @@ h3.section-heading {
   .def-box p br { display: none; }
   
 }
-/* ── 対比グリッド ── */
-.comparison-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border: 1px solid rgba(192,168,120,0.12);
-  background: rgba(15, 12, 25, 0.45);
-}
-.comparison-grid__head {
-  font-size: var(--fs-small);
-  font-weight: 600;
-  color: var(--color-gold);
-  letter-spacing: 0.08em;
-  padding: 0.6rem 0.8rem;
-  text-align: center;
-  background: rgba(192,168,120,0.06);
-  border-bottom: 1px solid rgba(192,168,120,0.2);
-}
-.comparison-grid__head:first-child {
-  border-right: 1px solid rgba(192,168,120,0.1);
-}
-.comparison-grid__cell {
-  padding: 0.55rem 0.8rem;
-  font-size: var(--fs-small);
-  line-height: 1.7;
-  color: var(--color-text-reading);
-  border-bottom: 1px solid rgba(192,168,120,0.06);
-  min-width: 0;
-  overflow-wrap: break-word;
-}
-.comparison-grid__cell:nth-child(odd) {
-  border-right: 1px solid rgba(192,168,120,0.1);
-}
-.comparison-grid__cell:nth-last-child(-n+2) {
-  border-bottom: none;
-}
-.comparison-table .comparison-note {
-  margin-top: 1rem;
-  padding: 0.8rem 1rem;
-  font-size: var(--fs-micro);
-  color: rgba(235,232,225,0.55);
-  line-height: 1.8;
-  background: rgba(192,168,120,0.03);
-  border-left: 2px solid rgba(192,168,120,0.15);
-}
-@media (max-width: 768px) {
-  .comparison-grid {
-    grid-template-columns: 1fr;
-  }
-  .comparison-grid__head {
-    border-right: none !important;
-  }
-  .comparison-grid__head:first-child {
-    border-right: none;
-  }
-  .comparison-grid__cell {
-    border-right: none;
-  }
-  .comparison-grid__cell:nth-child(odd) {
-    border-right: none;
-    padding-top: 0.8rem;
-    color: var(--color-gold);
-    font-weight: 600;
-    font-size: var(--fs-micro);
-  }
-  .comparison-grid__cell:nth-child(even) {
-    padding-top: 0.2rem;
-    padding-bottom: 0.8rem;
-  }
 }
 </style>
 </head>
@@ -524,17 +448,6 @@ h3.section-heading {
       <div class="profiling-block fade-in">
         <h3>対比：グリフィスとガッツ</h3>
         <p>同じ孤独な世界から出発し、同じ暴力の世界を生きながら、正反対の構造を形成した双生児。</p>
-        <div class="comparison-table">
-  <div class="comparison-grid">
-    <div class="comparison-grid__head">グリフィス</div>
-    <div class="comparison-grid__head">ガッツ</div>
-    <div class="comparison-grid__cell"><strong>トラウマの処理：</strong>抑圧と凍結。社会的記号（王城・階級）を操作して欠落を埋めようとする</div>
-    <div class="comparison-grid__cell"><strong>トラウマの処理：</strong>身体的・意識的な抵抗。関係性の中で自らを癒やしていく</div>
-    <div class="comparison-grid__cell"><strong>蝕での選択：</strong>「過去の死者の正当化」。残された手段が『捧げる』しかなかった</div>
-    <div class="comparison-grid__cell"><strong>蝕での選択：</strong>「今ある関係を守る」。キャスカという守るべき対象が残っていた</div>
-    <div class="comparison-grid__cell"><strong>天命との関係：</strong>天命の究極的な放棄</div>
-    <div class="comparison-grid__cell"><strong>天命との関係：</strong>天命を生きる方向へ向かう</div>
-  </div>
 </div>
         <p>両者の分岐は「Metaの残量」にあった。ガッツにはまだ剣を振るう肉体と、守るべき人がいた。グリフィスは拷問によってすべてを喪失しており、残されていたのは「死者への負債」と「城の幻影」だけだった。</p>
       </div>

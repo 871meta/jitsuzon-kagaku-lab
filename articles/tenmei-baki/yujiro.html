@@ -273,13 +273,6 @@ h3.section-heading {
   color: rgba(192,168,120,0.35);
   font-size: 0.75em;
 }
-
-/* === Comparison Table === */
-
-
-
-
-
 /* === CTA Block === */
 /* === Author Block === */
 .author-block {
@@ -351,74 +344,6 @@ h3.section-heading {
     padding-bottom: 1em;
   }
 }
-/* ── 対比グリッド ── */
-.comparison-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border: 1px solid rgba(192,168,120,0.12);
-  background: rgba(15, 12, 25, 0.45);
-}
-.comparison-grid__head {
-  font-size: var(--fs-small);
-  font-weight: 600;
-  color: var(--color-gold);
-  letter-spacing: 0.08em;
-  padding: 0.6rem 0.8rem;
-  text-align: center;
-  background: rgba(192,168,120,0.06);
-  border-bottom: 1px solid rgba(192,168,120,0.2);
-}
-.comparison-grid__head:first-child {
-  border-right: 1px solid rgba(192,168,120,0.1);
-}
-.comparison-grid__cell {
-  padding: 0.55rem 0.8rem;
-  font-size: var(--fs-small);
-  line-height: 1.7;
-  color: var(--color-text-reading);
-  border-bottom: 1px solid rgba(192,168,120,0.06);
-  min-width: 0;
-  overflow-wrap: break-word;
-}
-.comparison-grid__cell:nth-child(odd) {
-  border-right: 1px solid rgba(192,168,120,0.1);
-}
-.comparison-grid__cell:nth-last-child(-n+2) {
-  border-bottom: none;
-}
-.comparison-table .comparison-note {
-  margin-top: 1rem;
-  padding: 0.8rem 1rem;
-  font-size: var(--fs-micro);
-  color: rgba(235,232,225,0.55);
-  line-height: 1.8;
-  background: rgba(192,168,120,0.03);
-  border-left: 2px solid rgba(192,168,120,0.15);
-}
-@media (max-width: 768px) {
-  .comparison-grid {
-    grid-template-columns: 1fr;
-  }
-  .comparison-grid__head {
-    border-right: none !important;
-  }
-  .comparison-grid__head:first-child {
-    border-right: none;
-  }
-  .comparison-grid__cell {
-    border-right: none;
-  }
-  .comparison-grid__cell:nth-child(odd) {
-    border-right: none;
-    padding-top: 0.8rem;
-    color: var(--color-gold);
-    font-weight: 600;
-    font-size: var(--fs-micro);
-  }
-  .comparison-grid__cell:nth-child(even) {
-    padding-top: 0.2rem;
-    padding-bottom: 0.8rem;
-  }
 }
 </style>
 </head>
@@ -527,27 +452,6 @@ h3.section-heading {
       <div class="profiling-block fade-in">
         <h3>【花山薫との対比】</h3>
         <p style="font-size:0.85rem; color:#c0bbb4; margin-bottom:1rem; line-height:1.8;">同じゴールデンシャドウを持つ二人。しかし光の構造が根本的に異なる。花山は光に「凍結」された。勇次郎は光に「閉じ込められた」。</p>
-        <div class="comparison-table">
-  <div class="comparison-grid">
-    <div class="comparison-grid__head">範馬勇次郎</div>
-    <div class="comparison-grid__head">花山薫</div>
-    <div class="comparison-grid__cell"><strong>ゴールデンシャドウの型：</strong>光の過剰（強すぎて世界を壊してしまう）</div>
-    <div class="comparison-grid__cell"><strong>ゴールデンシャドウの型：</strong>光の凍結（強すぎて動けない）</div>
-    <div class="comparison-grid__cell"><strong>メタクエスチョンへの回答：</strong>「不要だ」（世界に満たされるものがない）</div>
-    <div class="comparison-grid__cell"><strong>メタクエスチョンへの回答：</strong>「要らねェ」（今のままでいい）</div>
-    <div class="comparison-grid__cell"><strong>光が生む不自由：</strong>常に手加減を強いられる</div>
-    <div class="comparison-grid__cell"><strong>光が生む不自由：</strong>鍛えることも避けることも許されない</div>
-    <div class="comparison-grid__cell"><strong>光の源泉：</strong>生物基盤そのもの（選択以前に完成）</div>
-    <div class="comparison-grid__cell"><strong>光の源泉：</strong>母の笑顔と侠客としての誓い</div>
-    <div class="comparison-grid__cell"><strong>愛の構造：</strong>全力で触れると壊してしまう</div>
-    <div class="comparison-grid__cell"><strong>愛の構造：</strong>両手が塞がっていて受け取れない</div>
-    <div class="comparison-grid__cell"><strong>孤独の質：</strong>高みから誰にも触れられない「神の孤独」</div>
-    <div class="comparison-grid__cell"><strong>孤独の質：</strong>強すぎて誰も近づけない「凍土の孤独」</div>
-    <div class="comparison-grid__cell"><strong>天命動詞：</strong>解き放つ</div>
-    <div class="comparison-grid__cell"><strong>天命動詞：</strong>握る</div>
-    <div class="comparison-grid__cell"><strong>天命の到達：</strong>壊れない息子と出会い、光の檻を破壊した</div>
-    <div class="comparison-grid__cell"><strong>天命の到達：</strong>すべてを握ったまま立ち続けた</div>
-  </div>
 </div>
       </div>
 

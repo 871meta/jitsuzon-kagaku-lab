@@ -351,75 +351,6 @@ h3.section-heading {
     padding-bottom: 1em;
   }
 }
-/* ── 対比グリッド ── */
-.comparison-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border: 1px solid rgba(192,168,120,0.12);
-  background: rgba(15, 12, 25, 0.45);
-}
-.comparison-grid__head {
-  font-size: var(--fs-small);
-  font-weight: 600;
-  color: var(--color-gold);
-  letter-spacing: 0.08em;
-  padding: 0.6rem 0.8rem;
-  text-align: center;
-  background: rgba(192,168,120,0.06);
-  border-bottom: 1px solid rgba(192,168,120,0.2);
-}
-.comparison-grid__head:first-child {
-  border-right: 1px solid rgba(192,168,120,0.1);
-}
-.comparison-grid__cell {
-  padding: 0.55rem 0.8rem;
-  font-size: var(--fs-small);
-  line-height: 1.7;
-  color: var(--color-text-reading);
-  border-bottom: 1px solid rgba(192,168,120,0.06);
-  min-width: 0;
-  overflow-wrap: break-word;
-}
-.comparison-grid__cell:nth-child(odd) {
-  border-right: 1px solid rgba(192,168,120,0.1);
-}
-.comparison-grid__cell:nth-last-child(-n+2) {
-  border-bottom: none;
-}
-.comparison-table .comparison-note {
-  margin-top: 1rem;
-  padding: 0.8rem 1rem;
-  font-size: var(--fs-micro);
-  color: rgba(235,232,225,0.55);
-  line-height: 1.8;
-  background: rgba(192,168,120,0.03);
-  border-left: 2px solid rgba(192,168,120,0.15);
-}
-@media (max-width: 768px) {
-  .comparison-grid {
-    grid-template-columns: 1fr;
-  }
-  .comparison-grid__head {
-    border-right: none !important;
-  }
-  .comparison-grid__head:first-child {
-    border-right: none;
-  }
-  .comparison-grid__cell {
-    border-right: none;
-  }
-  .comparison-grid__cell:nth-child(odd) {
-    border-right: none;
-    padding-top: 0.8rem;
-    color: var(--color-gold);
-    font-weight: 600;
-    font-size: var(--fs-micro);
-  }
-  .comparison-grid__cell:nth-child(even) {
-    padding-top: 0.2rem;
-    padding-bottom: 0.8rem;
-  }
-}
 </style>
 </head>
 <body>
@@ -534,19 +465,6 @@ h3.section-heading {
       <div class="profiling-block fade-in">
         <h3>【ジェイクとアロンゾの対比】</h3>
         <p style="color:var(--color-text-reading); line-height:2; margin-bottom:1.5rem;">二人は「同じ環境（Meta）に置かれても、初期条件が異なれば出力は正反対になる」という実存科学の公理の実験場である。</p>
-        <div class="comparison-table">
-  <div class="comparison-grid">
-    <div class="comparison-grid__head">ジェイク</div>
-    <div class="comparison-grid__head">アロンゾ</div>
-    <div class="comparison-grid__cell"><strong>道徳的ベースライン：</strong>計算なき利他性を初期条件として保持</div>
-    <div class="comparison-grid__cell"><strong>道徳的ベースライン：</strong>「目的が手段を正当化する」虚無主義</div>
-    <div class="comparison-grid__cell"><strong>環境への曝露時間：</strong>たった一日。十三年分の腐敗の濃縮液</div>
-    <div class="comparison-grid__cell"><strong>環境への曝露時間：</strong>十三年間の緩慢な浸食</div>
-    <div class="comparison-grid__cell"><strong>関係性：</strong>従属する弟子 &rarr; 最終局面で逆転</div>
-    <div class="comparison-grid__cell"><strong>関係性：</strong>師 &rarr; 最終局面で完全に逆転</div>
-    <div class="comparison-grid__cell"><strong>最終出力：</strong>極限のトラウマを負いながらも生存</div>
-    <div class="comparison-grid__cell"><strong>最終出力：</strong>孤立無援の中で蜂の巣にされて死亡</div>
-  </div>
 </div>
       </div>
 

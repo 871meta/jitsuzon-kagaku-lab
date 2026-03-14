@@ -351,75 +351,6 @@ h3.section-heading {
     padding-bottom: 1em;
   }
 }
-/* ── 対比グリッド ── */
-.comparison-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border: 1px solid rgba(192,168,120,0.12);
-  background: rgba(15, 12, 25, 0.45);
-}
-.comparison-grid__head {
-  font-size: var(--fs-small);
-  font-weight: 600;
-  color: var(--color-gold);
-  letter-spacing: 0.08em;
-  padding: 0.6rem 0.8rem;
-  text-align: center;
-  background: rgba(192,168,120,0.06);
-  border-bottom: 1px solid rgba(192,168,120,0.2);
-}
-.comparison-grid__head:first-child {
-  border-right: 1px solid rgba(192,168,120,0.1);
-}
-.comparison-grid__cell {
-  padding: 0.55rem 0.8rem;
-  font-size: var(--fs-small);
-  line-height: 1.7;
-  color: var(--color-text-reading);
-  border-bottom: 1px solid rgba(192,168,120,0.06);
-  min-width: 0;
-  overflow-wrap: break-word;
-}
-.comparison-grid__cell:nth-child(odd) {
-  border-right: 1px solid rgba(192,168,120,0.1);
-}
-.comparison-grid__cell:nth-last-child(-n+2) {
-  border-bottom: none;
-}
-.comparison-table .comparison-note {
-  margin-top: 1rem;
-  padding: 0.8rem 1rem;
-  font-size: var(--fs-micro);
-  color: rgba(235,232,225,0.55);
-  line-height: 1.8;
-  background: rgba(192,168,120,0.03);
-  border-left: 2px solid rgba(192,168,120,0.15);
-}
-@media (max-width: 768px) {
-  .comparison-grid {
-    grid-template-columns: 1fr;
-  }
-  .comparison-grid__head {
-    border-right: none !important;
-  }
-  .comparison-grid__head:first-child {
-    border-right: none;
-  }
-  .comparison-grid__cell {
-    border-right: none;
-  }
-  .comparison-grid__cell:nth-child(odd) {
-    border-right: none;
-    padding-top: 0.8rem;
-    color: var(--color-gold);
-    font-weight: 600;
-    font-size: var(--fs-micro);
-  }
-  .comparison-grid__cell:nth-child(even) {
-    padding-top: 0.2rem;
-    padding-bottom: 0.8rem;
-  }
-}
 </style>
 </head>
 <body>
@@ -527,23 +458,6 @@ h3.section-heading {
 
       <div class="profiling-block fade-in">
         <h3>【対比キャラクターとの比較表：マイク・ロス vs ハーヴィ・スペクター】</h3>
-        <div class="comparison-table">
-  <div class="comparison-grid">
-    <div class="comparison-grid__head">マイク・ロス</div>
-    <div class="comparison-grid__head">ハーヴィ・スペクター</div>
-    <div class="comparison-grid__cell"><strong>傷の種類：</strong>存在的な傷（資格がない事実）</div>
-    <div class="comparison-grid__cell"><strong>傷の種類：</strong>感情的な傷（母親の不貞による人間不信）</div>
-    <div class="comparison-grid__cell"><strong>装甲の構造：</strong>傷そのもの（詐称）が装甲として機能</div>
-    <div class="comparison-grid__cell"><strong>装甲の構造：</strong>傷を隠すために完璧な装甲（スーツと傲慢さ）を纏う</div>
-    <div class="comparison-grid__cell"><strong>映画引用の機能：</strong>繋がり（Connection）として使う</div>
-    <div class="comparison-grid__cell"><strong>映画引用の機能：</strong>感情を隠す装甲（Armor）として使う</div>
-    <div class="comparison-grid__cell"><strong>忠誠の基盤：</strong>ハーヴィへの圧倒的な負債感</div>
-    <div class="comparison-grid__cell"><strong>忠誠の基盤：</strong>ジェシカへの尊敬と恩義</div>
-    <div class="comparison-grid__cell"><strong>道徳的コンパス：</strong>正義と共感が核にある</div>
-    <div class="comparison-grid__cell"><strong>道徳的コンパス：</strong>「勝つこと」がゲームの目的</div>
-    <div class="comparison-grid__cell"><strong>シャドウの核：</strong>ありのままでは無価値だ（S1）</div>
-    <div class="comparison-grid__cell"><strong>シャドウの核：</strong>感情を出したら破壊される（S4）</div>
-  </div>
 </div>
       </div>
 

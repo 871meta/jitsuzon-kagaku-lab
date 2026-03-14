@@ -351,75 +351,6 @@ h3.section-heading {
     padding-bottom: 1em;
   }
 }
-/* ── 対比グリッド ── */
-.comparison-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border: 1px solid rgba(192,168,120,0.12);
-  background: rgba(15, 12, 25, 0.45);
-}
-.comparison-grid__head {
-  font-size: var(--fs-small);
-  font-weight: 600;
-  color: var(--color-gold);
-  letter-spacing: 0.08em;
-  padding: 0.6rem 0.8rem;
-  text-align: center;
-  background: rgba(192,168,120,0.06);
-  border-bottom: 1px solid rgba(192,168,120,0.2);
-}
-.comparison-grid__head:first-child {
-  border-right: 1px solid rgba(192,168,120,0.1);
-}
-.comparison-grid__cell {
-  padding: 0.55rem 0.8rem;
-  font-size: var(--fs-small);
-  line-height: 1.7;
-  color: var(--color-text-reading);
-  border-bottom: 1px solid rgba(192,168,120,0.06);
-  min-width: 0;
-  overflow-wrap: break-word;
-}
-.comparison-grid__cell:nth-child(odd) {
-  border-right: 1px solid rgba(192,168,120,0.1);
-}
-.comparison-grid__cell:nth-last-child(-n+2) {
-  border-bottom: none;
-}
-.comparison-table .comparison-note {
-  margin-top: 1rem;
-  padding: 0.8rem 1rem;
-  font-size: var(--fs-micro);
-  color: rgba(235,232,225,0.55);
-  line-height: 1.8;
-  background: rgba(192,168,120,0.03);
-  border-left: 2px solid rgba(192,168,120,0.15);
-}
-@media (max-width: 768px) {
-  .comparison-grid {
-    grid-template-columns: 1fr;
-  }
-  .comparison-grid__head {
-    border-right: none !important;
-  }
-  .comparison-grid__head:first-child {
-    border-right: none;
-  }
-  .comparison-grid__cell {
-    border-right: none;
-  }
-  .comparison-grid__cell:nth-child(odd) {
-    border-right: none;
-    padding-top: 0.8rem;
-    color: var(--color-gold);
-    font-weight: 600;
-    font-size: var(--fs-micro);
-  }
-  .comparison-grid__cell:nth-child(even) {
-    padding-top: 0.2rem;
-    padding-bottom: 0.8rem;
-  }
-}
 </style>
 </head>
 <body>
@@ -542,15 +473,6 @@ h3.section-heading {
       <div class="profiling-block fade-in">
         <h3>【対比キャラクターとの比較表】</h3>
         <p style="color:var(--color-text-reading); line-height:1.9; margin-bottom:1.5rem;">トミーのシャドウを浮き彫りにするために、二人の鏡像的キャラクターと対比する。</p>
-        <div class="comparison-table">
-  <div class="comparison-grid">
-    <div class="comparison-grid__head">共通のMeta</div>
-    <div class="comparison-grid__head">出力の違い</div>
-    <div class="comparison-grid__cell"><strong>アーサー・シェルビー：</strong>同じ戦争、同じトンネル、同じ帰還兵</div>
-    <div class="comparison-grid__cell"><strong>アーサー・シェルビー：</strong>「戦略」という防衛を持たない。トラウマが制御不能な怒りと暴力として噴出し続ける。トミーが理性を失っていたらこうなっていた姿</div>
-    <div class="comparison-grid__cell"><strong>アルフィー・ソロモンズ：</strong>高い知性と冷酷さ</div>
-    <div class="comparison-grid__cell"><strong>アルフィー・ソロモンズ：</strong>自分が怪物であることを完全に受容し、楽しんですらいる。トミーの欺瞞を容赦なく剥ぎ取る鏡。自己認識が決定的に異なる</div>
-  </div>
 </div>
       </div>
 

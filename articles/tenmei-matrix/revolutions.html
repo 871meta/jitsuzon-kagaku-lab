@@ -350,75 +350,6 @@ h3.section-heading {
     padding-bottom: 1em;
   }
 }
-/* ── 対比グリッド ── */
-.comparison-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border: 1px solid rgba(192,168,120,0.12);
-  background: rgba(15, 12, 25, 0.45);
-}
-.comparison-grid__head {
-  font-size: var(--fs-small);
-  font-weight: 600;
-  color: var(--color-gold);
-  letter-spacing: 0.08em;
-  padding: 0.6rem 0.8rem;
-  text-align: center;
-  background: rgba(192,168,120,0.06);
-  border-bottom: 1px solid rgba(192,168,120,0.2);
-}
-.comparison-grid__head:first-child {
-  border-right: 1px solid rgba(192,168,120,0.1);
-}
-.comparison-grid__cell {
-  padding: 0.55rem 0.8rem;
-  font-size: var(--fs-small);
-  line-height: 1.7;
-  color: var(--color-text-reading);
-  border-bottom: 1px solid rgba(192,168,120,0.06);
-  min-width: 0;
-  overflow-wrap: break-word;
-}
-.comparison-grid__cell:nth-child(odd) {
-  border-right: 1px solid rgba(192,168,120,0.1);
-}
-.comparison-grid__cell:nth-last-child(-n+2) {
-  border-bottom: none;
-}
-.comparison-table .comparison-note {
-  margin-top: 1rem;
-  padding: 0.8rem 1rem;
-  font-size: var(--fs-micro);
-  color: rgba(235,232,225,0.55);
-  line-height: 1.8;
-  background: rgba(192,168,120,0.03);
-  border-left: 2px solid rgba(192,168,120,0.15);
-}
-@media (max-width: 768px) {
-  .comparison-grid {
-    grid-template-columns: 1fr;
-  }
-  .comparison-grid__head {
-    border-right: none !important;
-  }
-  .comparison-grid__head:first-child {
-    border-right: none;
-  }
-  .comparison-grid__cell {
-    border-right: none;
-  }
-  .comparison-grid__cell:nth-child(odd) {
-    border-right: none;
-    padding-top: 0.8rem;
-    color: var(--color-gold);
-    font-weight: 600;
-    font-size: var(--fs-micro);
-  }
-  .comparison-grid__cell:nth-child(even) {
-    padding-top: 0.2rem;
-    padding-bottom: 0.8rem;
-  }
-}
 </style>
 </head>
 <body>
@@ -556,20 +487,6 @@ h3.section-heading {
         <p>最終戦でスミスは虚無主義の完成に達する──自由、真実、平和、愛のすべてを「知覚の気まぐれ」「脆弱な人間の知性が作り出した一時的な構築物」と宣告する。</p>
 <p>しかしその同じスミスが、オラクルの言葉を無意識に反復する。「始まりのあるものには全て終わりがある、ネオ」──三部作で一度もネオを「ネオ」と呼んだことがないスミスが、この瞬間だけ「ネオ」と呼ぶ。</p>
 <p>同化した他者の声を消せない。全てを自分にしたはずの男の口から、自分ではないものが溢れる。</p>
-
-        <div class="comparison-table">
-          <div class="comparison-grid">
-            <div class="comparison-grid__head">ネオ</div>
-            <div class="comparison-grid__head">スミス（完結）</div>
-            <div class="comparison-grid__cell"><strong>構造への態度：</strong>構造を見た上で行為する。行為の根拠を「選択」と語る</div>
-            <div class="comparison-grid__cell"><strong>構造への態度：</strong>構造を見た上で一切を否定する。全ての意味を「幻想」と断じる</div>
-            <div class="comparison-grid__cell"><strong>意味への姿勢：</strong>意味の根拠が剥奪されてもなお立ち上がる</div>
-            <div class="comparison-grid__cell"><strong>意味への姿勢：</strong>自由・真実・平和・愛の全てを「知覚の気まぐれ」と宣告する</div>
-            <div class="comparison-grid__cell"><strong>他者との関係：</strong>自らを「差し出す」ことで収束に身を委ねる</div>
-            <div class="comparison-grid__cell"><strong>他者との関係：</strong>全ての存在を自分に同化することで無に帰そうとする</div>
-            <div class="comparison-grid__cell"><strong>結末：</strong>制御を最終的に手放し、降伏によって天命を完成させる</div>
-            <div class="comparison-grid__cell"><strong>結末：</strong>同化した他者の声を消せず、自分ではないものが溢れて崩壊する</div>
-          </div>
         </div>
       </div>
 

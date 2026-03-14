@@ -348,75 +348,6 @@ h3.section-heading {
     padding-bottom: 1em;
   }
 }
-/* ── 対比グリッド ── */
-.comparison-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border: 1px solid rgba(192,168,120,0.12);
-  background: rgba(15, 12, 25, 0.45);
-}
-.comparison-grid__head {
-  font-size: var(--fs-small);
-  font-weight: 600;
-  color: var(--color-gold);
-  letter-spacing: 0.08em;
-  padding: 0.6rem 0.8rem;
-  text-align: center;
-  background: rgba(192,168,120,0.06);
-  border-bottom: 1px solid rgba(192,168,120,0.2);
-}
-.comparison-grid__head:first-child {
-  border-right: 1px solid rgba(192,168,120,0.1);
-}
-.comparison-grid__cell {
-  padding: 0.55rem 0.8rem;
-  font-size: var(--fs-small);
-  line-height: 1.7;
-  color: var(--color-text-reading);
-  border-bottom: 1px solid rgba(192,168,120,0.06);
-  min-width: 0;
-  overflow-wrap: break-word;
-}
-.comparison-grid__cell:nth-child(odd) {
-  border-right: 1px solid rgba(192,168,120,0.1);
-}
-.comparison-grid__cell:nth-last-child(-n+2) {
-  border-bottom: none;
-}
-.comparison-table .comparison-note {
-  margin-top: 1rem;
-  padding: 0.8rem 1rem;
-  font-size: var(--fs-micro);
-  color: rgba(235,232,225,0.55);
-  line-height: 1.8;
-  background: rgba(192,168,120,0.03);
-  border-left: 2px solid rgba(192,168,120,0.15);
-}
-@media (max-width: 768px) {
-  .comparison-grid {
-    grid-template-columns: 1fr;
-  }
-  .comparison-grid__head {
-    border-right: none !important;
-  }
-  .comparison-grid__head:first-child {
-    border-right: none;
-  }
-  .comparison-grid__cell {
-    border-right: none;
-  }
-  .comparison-grid__cell:nth-child(odd) {
-    border-right: none;
-    padding-top: 0.8rem;
-    color: var(--color-gold);
-    font-weight: 600;
-    font-size: var(--fs-micro);
-  }
-  .comparison-grid__cell:nth-child(even) {
-    padding-top: 0.2rem;
-    padding-bottom: 0.8rem;
-  }
-}
 </style>
 </head>
 <body>
@@ -546,24 +477,6 @@ h3.section-heading {
           <li>ムスカ &rarr; 「バルス」を唱えられない。その言葉は彼が求めるものを破壊する<br>シータ &rarr; 「バルス」を唱える。血統の兵器を破壊し、自らを解放する</li>
           <li>同じ第5層（ラピュタ王族の血）を共有する二人が、第4層と第2層の差異によって、正反対の収束点に到達する</li>
         </ul>
-
-        <div class="comparison-table">
-          <div class="comparison-grid">
-            <div class="comparison-grid__head">ムスカ</div>
-            <div class="comparison-grid__head">シータ</div>
-            <div class="comparison-grid__cell"><strong>出自：</strong>ラピュタ王族パロ家（分家）。古文書（知識と野望）を継承</div>
-            <div class="comparison-grid__cell"><strong>出自：</strong>ラピュタ王族トエル家（本家）。飛行石と祖母の知恵と滅びの呪文を継承</div>
-            <div class="comparison-grid__cell"><strong>第4層（記憶）：</strong>空白。感情の痕跡がない</div>
-            <div class="comparison-grid__cell"><strong>第4層（記憶）：</strong>祖母との記憶。「土に根をおろし……」の歌</div>
-            <div class="comparison-grid__cell"><strong>第2層（信念）：</strong>「支配こそ存在の証明」</div>
-            <div class="comparison-grid__cell"><strong>第2層（信念）：</strong>「土から離れては生きられない」</div>
-            <div class="comparison-grid__cell"><strong>天命の方向：</strong>力の掌握。到達するが即座に崩壊する</div>
-            <div class="comparison-grid__cell"><strong>天命の方向：</strong>力の放棄。大地への帰還</div>
-            <div class="comparison-grid__cell"><strong>天命の構造：</strong>他者の服従を必要とする（自己完結しない）</div>
-            <div class="comparison-grid__cell"><strong>天命の構造：</strong>自己完結する</div>
-            <div class="comparison-grid__cell"><strong>バルス：</strong>唱えられない。その言葉は彼が求めるものを破壊する</div>
-            <div class="comparison-grid__cell"><strong>バルス：</strong>唱える。血統の兵器を破壊し、自らを解放する</div>
-          </div>
         </div>
       </div>
 

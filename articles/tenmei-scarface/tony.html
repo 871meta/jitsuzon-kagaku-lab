@@ -351,75 +351,6 @@ h3.section-heading {
     padding-bottom: 1em;
   }
 }
-/* ── 対比グリッド ── */
-.comparison-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border: 1px solid rgba(192,168,120,0.12);
-  background: rgba(15, 12, 25, 0.45);
-}
-.comparison-grid__head {
-  font-size: var(--fs-small);
-  font-weight: 600;
-  color: var(--color-gold);
-  letter-spacing: 0.08em;
-  padding: 0.6rem 0.8rem;
-  text-align: center;
-  background: rgba(192,168,120,0.06);
-  border-bottom: 1px solid rgba(192,168,120,0.2);
-}
-.comparison-grid__head:first-child {
-  border-right: 1px solid rgba(192,168,120,0.1);
-}
-.comparison-grid__cell {
-  padding: 0.55rem 0.8rem;
-  font-size: var(--fs-small);
-  line-height: 1.7;
-  color: var(--color-text-reading);
-  border-bottom: 1px solid rgba(192,168,120,0.06);
-  min-width: 0;
-  overflow-wrap: break-word;
-}
-.comparison-grid__cell:nth-child(odd) {
-  border-right: 1px solid rgba(192,168,120,0.1);
-}
-.comparison-grid__cell:nth-last-child(-n+2) {
-  border-bottom: none;
-}
-.comparison-table .comparison-note {
-  margin-top: 1rem;
-  padding: 0.8rem 1rem;
-  font-size: var(--fs-micro);
-  color: rgba(235,232,225,0.55);
-  line-height: 1.8;
-  background: rgba(192,168,120,0.03);
-  border-left: 2px solid rgba(192,168,120,0.15);
-}
-@media (max-width: 768px) {
-  .comparison-grid {
-    grid-template-columns: 1fr;
-  }
-  .comparison-grid__head {
-    border-right: none !important;
-  }
-  .comparison-grid__head:first-child {
-    border-right: none;
-  }
-  .comparison-grid__cell {
-    border-right: none;
-  }
-  .comparison-grid__cell:nth-child(odd) {
-    border-right: none;
-    padding-top: 0.8rem;
-    color: var(--color-gold);
-    font-weight: 600;
-    font-size: var(--fs-micro);
-  }
-  .comparison-grid__cell:nth-child(even) {
-    padding-top: 0.2rem;
-    padding-bottom: 0.8rem;
-  }
-}
 </style>
 </head>
 <body>
@@ -552,17 +483,6 @@ h3.section-heading {
       <div class="profiling-block fade-in">
         <h3>【対比：トニー・モンタナとフランク・ロペス】</h3>
         <p style="color:var(--color-text-reading); line-height:1.9; margin-bottom:1.5rem;">比較軸：同じマイアミの麻薬ビジネスという生態系において、「前任者」と「後継者」の構造がどう異なるか。</p>
-        <div class="comparison-table">
-  <div class="comparison-grid">
-    <div class="comparison-grid__head">トニー</div>
-    <div class="comparison-grid__head">フランク</div>
-    <div class="comparison-grid__cell"><strong>出自：</strong>キューバ難民。無一文からの出発。失うものが何もないがゆえの爆発的な暴力性と上昇志向</div>
-    <div class="comparison-grid__cell"><strong>出自：</strong>既存の権力に安住した前任者。かつてはトニーと同じ飢餓を持っていたはずだが、富によって鈍化</div>
-    <div class="comparison-grid__cell"><strong>駆動原理：</strong>「弱さは死」という信念が行動を駆動する。最後まで止まれない</div>
-    <div class="comparison-grid__cell"><strong>駆動原理：</strong>自ら手を下すハングリー精神を失い、下からの突き上げに対して「穏便な取引」で対処しようとする</div>
-    <div class="comparison-grid__cell"><strong>帰結：</strong>蓄積が一定量を超えても飢餓が沈静化しないため、自己破壊に向かう</div>
-    <div class="comparison-grid__cell"><strong>帰結：</strong>トニーに寝首をかかれ、排除される</div>
-  </div>
 </div>
         <p style="color:var(--color-text-reading); line-height:1.9; margin-top:1.5rem; font-style:italic;">構造的示唆：フランクは「トニーの未来」でもある。蓄積が一定量を超えると、前進の燃料だった飢餓が沈静化し、守りに入る。しかしシステムの外側には、かつての自分と同じ飢餓を持った次の挑戦者が必ず現れる。</p>
 <p style="color:var(--color-text-reading); line-height:1.9; margin-top:1.5rem; font-style:italic;">トニーがフランクを倒したのと同じ構造で、ソーサのシステムがトニーを処理した。</p>

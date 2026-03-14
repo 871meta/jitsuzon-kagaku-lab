@@ -343,75 +343,6 @@ h3.section-heading {
     padding-bottom: 1em;
   }
 }
-/* ── 対比グリッド ── */
-.comparison-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border: 1px solid rgba(192,168,120,0.12);
-  background: rgba(15, 12, 25, 0.45);
-}
-.comparison-grid__head {
-  font-size: var(--fs-small);
-  font-weight: 600;
-  color: var(--color-gold);
-  letter-spacing: 0.08em;
-  padding: 0.6rem 0.8rem;
-  text-align: center;
-  background: rgba(192,168,120,0.06);
-  border-bottom: 1px solid rgba(192,168,120,0.2);
-}
-.comparison-grid__head:first-child {
-  border-right: 1px solid rgba(192,168,120,0.1);
-}
-.comparison-grid__cell {
-  padding: 0.55rem 0.8rem;
-  font-size: var(--fs-small);
-  line-height: 1.7;
-  color: var(--color-text-reading);
-  border-bottom: 1px solid rgba(192,168,120,0.06);
-  min-width: 0;
-  overflow-wrap: break-word;
-}
-.comparison-grid__cell:nth-child(odd) {
-  border-right: 1px solid rgba(192,168,120,0.1);
-}
-.comparison-grid__cell:nth-last-child(-n+2) {
-  border-bottom: none;
-}
-.comparison-table .comparison-note {
-  margin-top: 1rem;
-  padding: 0.8rem 1rem;
-  font-size: var(--fs-micro);
-  color: rgba(235,232,225,0.55);
-  line-height: 1.8;
-  background: rgba(192,168,120,0.03);
-  border-left: 2px solid rgba(192,168,120,0.15);
-}
-@media (max-width: 768px) {
-  .comparison-grid {
-    grid-template-columns: 1fr;
-  }
-  .comparison-grid__head {
-    border-right: none !important;
-  }
-  .comparison-grid__head:first-child {
-    border-right: none;
-  }
-  .comparison-grid__cell {
-    border-right: none;
-  }
-  .comparison-grid__cell:nth-child(odd) {
-    border-right: none;
-    padding-top: 0.8rem;
-    color: var(--color-gold);
-    font-weight: 600;
-    font-size: var(--fs-micro);
-  }
-  .comparison-grid__cell:nth-child(even) {
-    padding-top: 0.2rem;
-    padding-bottom: 0.8rem;
-  }
-}
 </style>
 </head>
 <body>
@@ -541,22 +472,6 @@ h3.section-heading {
           <li><strong>決定的な違い：</strong>アシタカが自分の帰属を知っていること。彼は人間であることを受け入れた上で森に手を伸ばしている。サンは自分が人間であることを否認したまま、人間の側に手を伸ばすことができない。映画の終結時点で、アシタカは「曇りなき眼で見定める」と宣言して橋を架け始めているが、サンの側の橋はまだ架かっていない</li>
           <li>同じMetaを共有しながら、初期条件── 帰属か遺棄か── が天命への距離を決定的に分けている</li>
         </ul>
-
-        <div class="comparison-table">
-          <div class="comparison-grid">
-            <div class="comparison-grid__head">サン</div>
-            <div class="comparison-grid__head">アシタカ</div>
-            <div class="comparison-grid__cell"><strong>出発点：</strong>人間の共同体から遺棄され、「森の側から」出発した</div>
-            <div class="comparison-grid__cell"><strong>出発点：</strong>人間の共同体（エミシの村）に完全に帰属していた。「人間の側から」森の側に近づいた</div>
-            <div class="comparison-grid__cell"><strong>人間性への態度：</strong>人間であることを全面的に否認している</div>
-            <div class="comparison-grid__cell"><strong>人間性への態度：</strong>人間としてのアイデンティティを一度も否認していない</div>
-            <div class="comparison-grid__cell"><strong>天命の架橋：</strong>森の側から橋のもう半分を架ける</div>
-            <div class="comparison-grid__cell"><strong>天命の架橋：</strong>タタラ場の側から橋の半分を架ける</div>
-            <div class="comparison-grid__cell"><strong>帰属の認識：</strong>自分が人間であることを否認したまま、人間の側に手を伸ばすことができない</div>
-            <div class="comparison-grid__cell"><strong>帰属の認識：</strong>人間であることを受け入れた上で森に手を伸ばしている</div>
-            <div class="comparison-grid__cell"><strong>天命の到達：</strong>未到達。橋はまだ架かっていない</div>
-            <div class="comparison-grid__cell"><strong>天命の到達：</strong>「曇りなき眼で見定める」と宣言して橋を架け始めている</div>
-          </div>
         </div>
       </div>
 
