@@ -348,6 +348,54 @@ h3.section-heading {
     padding-bottom: 1em;
   }
 }
+/* ── 対比グリッド ── */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid rgba(192,168,120,0.12);
+  background: rgba(15, 12, 25, 0.45);
+}
+.comparison-grid__head {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-gold);
+  letter-spacing: 0.08em;
+  padding: 0.6rem 0.8rem;
+  text-align: center;
+  background: rgba(192,168,120,0.06);
+  border-bottom: 1px solid rgba(192,168,120,0.2);
+}
+.comparison-grid__head:first-child {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell {
+  padding: 0.55rem 0.8rem;
+  font-size: var(--fs-small);
+  line-height: 1.7;
+  color: var(--color-text-reading);
+  border-bottom: 1px solid rgba(192,168,120,0.06);
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+.comparison-grid__cell:nth-child(odd) {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+@media (max-width: 768px) {
+  .comparison-grid { grid-template-columns: 1fr; }
+  .comparison-grid__head { border-right: none !important; }
+  .comparison-grid__head:first-child { border-right: none; }
+  .comparison-grid__cell { border-right: none; }
+  .comparison-grid__cell:nth-child(odd) {
+    border-right: none; padding-top: 0.8rem;
+    color: var(--color-gold); font-weight: 600; font-size: var(--fs-micro);
+  }
+  .comparison-grid__cell:nth-child(even) {
+    padding-top: 0.2rem; padding-bottom: 0.8rem;
+  }
+}
 </style>
 </head>
 <body>
@@ -451,11 +499,20 @@ h3.section-heading {
       <!-- 対比構造：シータとムスカ -->
       <div class="profiling-block fade-in">
         <h3>対比構造──シータとムスカ</h3>
-        <ul>
-          <li>シータ &rarr; 飛行石と呪文とおばあさんの知恵を継承した（本家筋）<br>ムスカ &rarr; 歴史の知識と権利意識を継承した（分家筋）</li>
-          <li>シータ &rarr; 「土から離れては生きられない」──Meta出力＝放棄<br>ムスカ &rarr; 「ラピュタの力こそ人類の夢」──Meta出力＝支配</li>
-          <li>同じラピュタ王族の血統。異なるLayer 4以降。同じ「バルス」を知っている──しかしその意味が完全に異なる</li>
-        </ul>
+        <div class="comparison-table">
+          <div class="comparison-grid">
+            <div class="comparison-grid__head">シータ</div>
+            <div class="comparison-grid__head">ムスカ</div>
+            <div class="comparison-grid__cell"><strong>継承：</strong>飛行石と呪文とおばあさんの知恵を継承した（本家筋）</div>
+            <div class="comparison-grid__cell"><strong>継承：</strong>歴史の知識と権利意識を継承した（分家筋）</div>
+            <div class="comparison-grid__cell"><strong>Meta出力：</strong>「土から離れては生きられない」──放棄</div>
+            <div class="comparison-grid__cell"><strong>Meta出力：</strong>「ラピュタの力こそ人類の夢」──支配</div>
+            <div class="comparison-grid__cell"><strong>力への態度：</strong>力を恐れ、使うことを拒否する</div>
+            <div class="comparison-grid__cell"><strong>力への態度：</strong>力を求め、行使することに躊躇がない</div>
+            <div class="comparison-grid__cell"><strong>「バルス」の意味：</strong>破壊によって力を手放す──解放の呪文</div>
+            <div class="comparison-grid__cell"><strong>「バルス」の意味：</strong>知っているが使わない──支配の道具にならないから</div>
+          </div>
+        </div>
       </div>
 
       <!-- 天命への転換点 -->

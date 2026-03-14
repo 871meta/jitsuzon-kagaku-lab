@@ -351,6 +351,54 @@ h3.section-heading {
     padding-bottom: 1em;
   }
 }
+/* ── 対比グリッド ── */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid rgba(192,168,120,0.12);
+  background: rgba(15, 12, 25, 0.45);
+}
+.comparison-grid__head {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-gold);
+  letter-spacing: 0.08em;
+  padding: 0.6rem 0.8rem;
+  text-align: center;
+  background: rgba(192,168,120,0.06);
+  border-bottom: 1px solid rgba(192,168,120,0.2);
+}
+.comparison-grid__head:first-child {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell {
+  padding: 0.55rem 0.8rem;
+  font-size: var(--fs-small);
+  line-height: 1.7;
+  color: var(--color-text-reading);
+  border-bottom: 1px solid rgba(192,168,120,0.06);
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+.comparison-grid__cell:nth-child(odd) {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+@media (max-width: 768px) {
+  .comparison-grid { grid-template-columns: 1fr; }
+  .comparison-grid__head { border-right: none !important; }
+  .comparison-grid__head:first-child { border-right: none; }
+  .comparison-grid__cell { border-right: none; }
+  .comparison-grid__cell:nth-child(odd) {
+    border-right: none; padding-top: 0.8rem;
+    color: var(--color-gold); font-weight: 600; font-size: var(--fs-micro);
+  }
+  .comparison-grid__cell:nth-child(even) {
+    padding-top: 0.2rem; padding-bottom: 0.8rem;
+  }
+}
 </style>
 </head>
 <body>
@@ -483,11 +531,20 @@ h3.section-heading {
       <!-- 対比：彼とマーラ -->
       <div class="profiling-block fade-in">
         <h3>対比：彼とマーラ</h3>
-        <ul>
-          <li>彼 &rarr; 虚無を否認し、カタログで塗り潰した。名前すらない&emsp;／&emsp;マーラ &rarr; 虚無を直視し、サポートグループに通いながら「死にたい」と堂々と言った。名前がある</li>
-          <li>彼 &rarr; 嘘の悲劇で泣く（他人の癌に寄生する）。泣いているときだけ眠れた&emsp;／&emsp;マーラ &rarr; 自分が嘘つきであることを隠さなかった</li>
-          <li>彼 &rarr; マーラを嫌悪した。なぜなら彼女が「鏡」だったから。同じサポートグループに通う彼女の存在が、自分の寄生を暴いた&emsp;／&emsp;マーラ &rarr; 彼を見捨てなかった。最後に手を握った</li>
-        </ul>
+        <div class="comparison-table">
+          <div class="comparison-grid">
+            <div class="comparison-grid__head">彼（ナレーター）</div>
+            <div class="comparison-grid__head">マーラ・シンガー</div>
+            <div class="comparison-grid__cell"><strong>虚無への態度：</strong>否認し、カタログで塗り潰した。名前すらない</div>
+            <div class="comparison-grid__cell"><strong>虚無への態度：</strong>直視し、サポートグループに通いながら「死にたい」と堂々と言った。名前がある</div>
+            <div class="comparison-grid__cell"><strong>嘘との関係：</strong>嘘の悲劇で泣く（他人の癌に寄生する）。泣いているときだけ眠れた</div>
+            <div class="comparison-grid__cell"><strong>嘘との関係：</strong>自分が嘘つきであることを隠さなかった</div>
+            <div class="comparison-grid__cell"><strong>相手への態度：</strong>マーラを嫌悪した。彼女が「鏡」だったから。同じサポートグループに通う彼女の存在が、自分の寄生を暴いた</div>
+            <div class="comparison-grid__cell"><strong>相手への態度：</strong>彼を見捨てなかった。最後に手を握った</div>
+            <div class="comparison-grid__cell"><strong>シャドウとの関係：</strong>シャドウを外部委託し、タイラーという人格に全てを代行させた</div>
+            <div class="comparison-grid__cell"><strong>シャドウとの関係：</strong>シャドウではなく、シャドウの反対──直視された虚無そのもの</div>
+          </div>
+        </div>
         <p>構造的意味：マーラは彼が最も拒絶した存在でありながら、天命の到達点で手を握る存在でもあった。彼女はシャドウではなく、シャドウの反対──直視された虚無である。</p>
 <p>タイラーが虚無からの逃走だったのに対し、マーラは虚無の中に留まり続けた唯一の人間だった。</p>
       </div>

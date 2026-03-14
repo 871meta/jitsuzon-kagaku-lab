@@ -367,6 +367,54 @@ h3.section-heading {
     padding-bottom: 1em;
   }
 }
+/* ── 対比グリッド ── */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid rgba(192,168,120,0.12);
+  background: rgba(15, 12, 25, 0.45);
+}
+.comparison-grid__head {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-gold);
+  letter-spacing: 0.08em;
+  padding: 0.6rem 0.8rem;
+  text-align: center;
+  background: rgba(192,168,120,0.06);
+  border-bottom: 1px solid rgba(192,168,120,0.2);
+}
+.comparison-grid__head:first-child {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell {
+  padding: 0.55rem 0.8rem;
+  font-size: var(--fs-small);
+  line-height: 1.7;
+  color: var(--color-text-reading);
+  border-bottom: 1px solid rgba(192,168,120,0.06);
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+.comparison-grid__cell:nth-child(odd) {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+@media (max-width: 768px) {
+  .comparison-grid { grid-template-columns: 1fr; }
+  .comparison-grid__head { border-right: none !important; }
+  .comparison-grid__head:first-child { border-right: none; }
+  .comparison-grid__cell { border-right: none; }
+  .comparison-grid__cell:nth-child(odd) {
+    border-right: none; padding-top: 0.8rem;
+    color: var(--color-gold); font-weight: 600; font-size: var(--fs-micro);
+  }
+  .comparison-grid__cell:nth-child(even) {
+    padding-top: 0.2rem; padding-bottom: 0.8rem;
+  }
+}
 </style>
 </head>
 <body>
@@ -475,15 +523,21 @@ h3.section-heading {
       <div class="profiling-block fade-in">
         <h3>【スタイルズとの対比】</h3>
         <p style="font-size:0.85rem; color:#c0bbb4; margin-bottom:1.5rem; line-height:1.8;">同じように信者の絶対的献身を引き出しながら、正反対の構造を持つ二人。</p>
-        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-bottom:0.8rem;">マカリスター ── 光の中で活動できない。影の中でしか機能しない<br>
-        スタイルズ ── 世間の厳しい監視の下で、光の中で活動している</p>
-        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-bottom:0.8rem;">マカリスター ── 信者は恐怖と取引で服従している<br>
-        スタイルズ ── 信者は精神的な啓蒙を求めて献身している</p>
-        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-bottom:0.8rem;">マカリスター ── 死に際して命乞いし、這いつくばる<br>
-        スタイルズ ── 死に際して哲学的受容と威厳をもって立ち向かう</p>
-        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-bottom:1.5rem;">マカリスター ── カリスマ性が人工的。ブレイク結社に依存している<br>
-        スタイルズ ── カリスマ性が本物。組織なしでも人を惹きつける</p>
-        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-bottom:0.8rem;">マカリスターの光は「偽物」であり、 スタイルズの光は「本物」である。 しかし根底にある問いは同じだ。</p>
+        <div class="comparison-table">
+          <div class="comparison-grid">
+            <div class="comparison-grid__head">マカリスター</div>
+            <div class="comparison-grid__head">スタイルズ</div>
+            <div class="comparison-grid__cell"><strong>活動領域：</strong>光の中で活動できない。影の中でしか機能しない</div>
+            <div class="comparison-grid__cell"><strong>活動領域：</strong>世間の厳しい監視の下で、光の中で活動している</div>
+            <div class="comparison-grid__cell"><strong>信者の動機：</strong>恐怖と取引で服従している</div>
+            <div class="comparison-grid__cell"><strong>信者の動機：</strong>精神的な啓蒙を求めて献身している</div>
+            <div class="comparison-grid__cell"><strong>死に際して：</strong>命乞いし、這いつくばる</div>
+            <div class="comparison-grid__cell"><strong>死に際して：</strong>哲学的受容と威厳をもって立ち向かう</div>
+            <div class="comparison-grid__cell"><strong>カリスマ性：</strong>人工的。ブレイク結社に依存している</div>
+            <div class="comparison-grid__cell"><strong>カリスマ性：</strong>本物。組織なしでも人を惹きつける</div>
+          </div>
+        </div>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-top:1.5rem; margin-bottom:0.8rem;">マカリスターの光は「偽物」であり、 スタイルズの光は「本物」である。 しかし根底にある問いは同じだ。</p>
         <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2;">──光を纏う者が、その光に値する存在なのかどうかは、 その光が剥がされた瞬間にしかわからない。</p>
       </div>
 
@@ -782,8 +836,18 @@ h3.section-heading {
       <div class="highlight-block fade-in">
         <p>本物の光と偽りの光の見分け方は一つしかない。</p>
         <p>光を剥がしたとき、何が残るか。</p>
-        <p>スタイルズからカルトを剥がしても、 知的な威厳と哲学的受容が残った。</p>
-        <p>マカリスターからブレイク結社を剥がしたら、 ハトに怯える一人の老人が残った。</p>
+        <div class="comparison-table">
+          <div class="comparison-grid">
+            <div class="comparison-grid__head">スタイルズ</div>
+            <div class="comparison-grid__head">マカリスター</div>
+            <div class="comparison-grid__cell"><strong>光の源泉：</strong>内部に光がある。操作的であっても「本物」</div>
+            <div class="comparison-grid__cell"><strong>光の源泉：</strong>内部に光がない。ブレイク結社という外部装置に依存</div>
+            <div class="comparison-grid__cell"><strong>光を剥がすと：</strong>知的な威厳と哲学的受容が残った</div>
+            <div class="comparison-grid__cell"><strong>光を剥がすと：</strong>ハトに怯える一人の老人が残った</div>
+            <div class="comparison-grid__cell"><strong>シャドウ構造：</strong>ゴールデンシャドウ（本物の光を持つ者の影）</div>
+            <div class="comparison-grid__cell"><strong>シャドウ構造：</strong>闇のシャドウが肥大化し、光の仮装を纏っている</div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -846,12 +910,19 @@ h3.section-heading {
         <p>ここに、ジェーンとマカリスターの最終的な対比がある。</p>
         <p>二人は同じ能力を持っていた。 観察力、知性、他者の感情的脆弱性を読む力。</p>
         <p>しかしMetaの出力が異なった。</p>
-        <p>ジェーンは観察を真実の解体に使った。 マカリスターは観察を支配に使った。</p>
-        <p>ジェーンは罪悪感に駆動されていた。 マカリスターは凡庸への恐怖に駆動されていた。</p>
-        <p>そして最後の瞬間。</p>
-        <p>ジェーンは、何も語らなかった。 マカリスターは、語ろうとして語れなかった。</p>
-        <p>沈黙と命乞い。</p>
-        <p>どちらがMetaの出力として本物だったかは、明白だ。</p>
+        <div class="comparison-table">
+          <div class="comparison-grid">
+            <div class="comparison-grid__head">ジェーン</div>
+            <div class="comparison-grid__head">マカリスター</div>
+            <div class="comparison-grid__cell"><strong>観察力の使途：</strong>真実の解体に使った</div>
+            <div class="comparison-grid__cell"><strong>観察力の使途：</strong>支配に使った</div>
+            <div class="comparison-grid__cell"><strong>駆動力：</strong>罪悪感に駆動されていた</div>
+            <div class="comparison-grid__cell"><strong>駆動力：</strong>凡庸への恐怖に駆動されていた</div>
+            <div class="comparison-grid__cell"><strong>最後の瞬間：</strong>何も語らなかった──沈黙</div>
+            <div class="comparison-grid__cell"><strong>最後の瞬間：</strong>語ろうとして語れなかった──命乞い</div>
+          </div>
+        </div>
+        <p style="margin-top:1.5rem;">どちらがMetaの出力として本物だったかは、明白だ。</p>
       </div>
     </section>
 
