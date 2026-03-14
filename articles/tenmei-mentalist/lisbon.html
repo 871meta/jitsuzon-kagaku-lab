@@ -367,6 +367,54 @@ h3.section-heading {
     padding-bottom: 1em;
   }
 }
+/* ── 対比グリッド ── */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid rgba(192,168,120,0.12);
+  background: rgba(15, 12, 25, 0.45);
+}
+.comparison-grid__head {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-gold);
+  letter-spacing: 0.08em;
+  padding: 0.6rem 0.8rem;
+  text-align: center;
+  background: rgba(192,168,120,0.06);
+  border-bottom: 1px solid rgba(192,168,120,0.2);
+}
+.comparison-grid__head:first-child {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell {
+  padding: 0.55rem 0.8rem;
+  font-size: var(--fs-small);
+  line-height: 1.7;
+  color: var(--color-text-reading);
+  border-bottom: 1px solid rgba(192,168,120,0.06);
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+.comparison-grid__cell:nth-child(odd) {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+@media (max-width: 768px) {
+  .comparison-grid { grid-template-columns: 1fr; }
+  .comparison-grid__head { border-right: none !important; }
+  .comparison-grid__head:first-child { border-right: none; }
+  .comparison-grid__cell { border-right: none; }
+  .comparison-grid__cell:nth-child(odd) {
+    border-right: none; padding-top: 0.8rem;
+    color: var(--color-gold); font-weight: 600; font-size: var(--fs-micro);
+  }
+  .comparison-grid__cell:nth-child(even) {
+    padding-top: 0.2rem; padding-bottom: 0.8rem;
+  }
+}
 </style>
 </head>
 <body>
@@ -479,13 +527,19 @@ h3.section-heading {
       <div class="profiling-block fade-in">
         <h3>【ジェーンとの対比】</h3>
         <p style="font-size:0.85rem; color:#c0bbb4; margin-bottom:1.5rem; line-height:1.8;">管理者と混沌──正反対の構造を持つ二人。</p>
-        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-bottom:0.8rem;">リズボン ── 混沌を「管理する」ことで世界を保とうとする<br>
-        ジェーン ── 混沌を「引き起こす」ことで真実に到達しようとする</p>
-        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-bottom:0.8rem;">リズボン ── 鎧を脱ぐことを恐れている<br>
-        ジェーン ── 自分の鎧を先に降ろすことで、リズボンの鎧を認識させた</p>
-        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-bottom:1.5rem;">リズボン ── 父のパターン（壊れた男性の管理）を反復している<br>
-        ジェーン ── 父と構造が似ている（愛する人を失って壊れた男）が、リズボンの鎧の内側を見る能力を持つ</p>
-        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-bottom:0.8rem;">二人の関係は「管理者と混沌」から「対等なパートナー」への構造変容だ。リズボンが変容できたのは、ジェーンが彼女のMetaの構造を「見た」からだ。その構造を、本稿で解き明かす。</p>
+        <div class="comparison-table">
+          <div class="comparison-grid">
+            <div class="comparison-grid__head">リズボン</div>
+            <div class="comparison-grid__head">ジェーン</div>
+            <div class="comparison-grid__cell"><strong>混沌への態度：</strong>混沌を「管理する」ことで世界を保とうとする</div>
+            <div class="comparison-grid__cell"><strong>混沌への態度：</strong>混沌を「引き起こす」ことで真実に到達しようとする</div>
+            <div class="comparison-grid__cell"><strong>鎧の構造：</strong>鎧を脱ぐことを恐れている</div>
+            <div class="comparison-grid__cell"><strong>鎧の構造：</strong>自分の鎧を先に降ろすことで、リズボンの鎧を認識させた</div>
+            <div class="comparison-grid__cell"><strong>父との関係：</strong>父のパターン（壊れた男性の管理）を反復している</div>
+            <div class="comparison-grid__cell"><strong>父との関係：</strong>父と構造が似ている（愛する人を失って壊れた男）が、リズボンの鎧の内側を見る能力を持つ</div>
+          </div>
+        </div>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-top:1.5rem; margin-bottom:0.8rem;">二人の関係は「管理者と混沌」から「対等なパートナー」への構造変容だ。リズボンが変容できたのは、ジェーンが彼女のMetaの構造を「見た」からだ。その構造を、本稿で解き明かす。</p>
       </div>
 
       <div class="profiling-block fade-in">
@@ -706,10 +760,18 @@ h3.section-heading {
 
       <div class="profiling-block fade-in">
         <h3>【パイクとジェーンの対比】</h3>
-        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-bottom:0.8rem;">パイク ── 安定的、率直、安全。リズボンの鎧の存在に気づいていない。彼女を「完璧な妻」という役割に当てはめようとする<br>
-        ジェーン ── 不安定、予測不可能、危険。リズボンの鎧を正確に認識している。鎧の下の12歳の少女を知っている</p>
-        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-bottom:0.8rem;">パイク ── 転居を急かし、結婚を急かす。「計画」を持っている<br>
-        ジェーン ── 急かさない。「計画」を持たない。ただ、彼女の傍にいることを望んでいる</p>
+        <div class="comparison-table">
+          <div class="comparison-grid">
+            <div class="comparison-grid__head">パイク</div>
+            <div class="comparison-grid__head">ジェーン</div>
+            <div class="comparison-grid__cell"><strong>性質：</strong>安定的、率直、安全</div>
+            <div class="comparison-grid__cell"><strong>性質：</strong>不安定、予測不可能、危険</div>
+            <div class="comparison-grid__cell"><strong>鎧への認識：</strong>リズボンの鎧の存在に気づいていない。彼女を「完璧な妻」という役割に当てはめようとする</div>
+            <div class="comparison-grid__cell"><strong>鎧への認識：</strong>リズボンの鎧を正確に認識している。鎧の下の12歳の少女を知っている</div>
+            <div class="comparison-grid__cell"><strong>関係の進め方：</strong>転居を急かし、結婚を急かす。「計画」を持っている</div>
+            <div class="comparison-grid__cell"><strong>関係の進め方：</strong>急かさない。「計画」を持たない。ただ、彼女の傍にいることを望んでいる</div>
+          </div>
+        </div>
       </div>
 
       <div class="text-panel fade-in">
