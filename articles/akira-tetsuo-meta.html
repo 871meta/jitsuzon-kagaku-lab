@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.min.css?v=24">
+  <link rel="stylesheet" href="../css/style.min.css?v=25">
 
 <style>
 /* =============================================
@@ -273,40 +273,6 @@ h3.section-heading {
   font-size: 0.75em;
 }
 
-/* === CTA Block === */
-.cta-block {
-  background: rgba(192,168,120,0.06);
-  border: 1px solid rgba(192,168,120,0.2);
-  padding: 2.5rem 2rem;
-  margin: 3rem 0;
-  text-align: center;
-}
-.cta-block h3 {
-  font-size: var(--fs-h3);
-  color: var(--color-text-body);
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-.cta-block p {
-  font-size: var(--fs-body);
-  color: var(--color-text-reading);
-  line-height: 2.2;
-  margin-bottom: 1.2rem;
-}
-.cta-block .cta-btn {
-  display: inline-block;
-  padding: 0.8rem 2.5rem;
-  background: var(--color-gold);
-  color: #080610;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: var(--fs-body);
-  letter-spacing: 0.1em;
-  transition: opacity 0.2s;
-  border-bottom: none;
-}
-.cta-block .cta-btn:hover { opacity: 0.8; }
-
 /* === Author Block === */
 .author-block {
   margin-top: 3rem;
@@ -361,7 +327,6 @@ h3.section-heading {
   .session-dialogue .line-character { margin-left: 0.8rem; }
   .session-dialogue .stage-direction { margin-left: 0.8rem; }
   .profiling-block { padding: 1.5rem 1.2rem; }
-  .cta-block { padding: 2rem 1.2rem; }
   .highlight-block { padding: 1.5rem 1.2rem 1.5rem 1.4rem; }
   .text-panel { padding: 2rem 1.5rem; }
 }
@@ -438,7 +403,7 @@ h3.section-heading {
         </ol>
       </nav>
       <p class="page-hero__sub">AKIRA &times; Existential Science</p>
-      <h1>鉄雄のMeta<br>── 自由意志なき世界の天命論</h1>
+      <h1 class="hero-title--shimmer">鉄雄のMeta<br>── 自由意志なき世界の天命論</h1>
       <p class="page-hero__lead">箭内宏紀｜実存科学研究所</p>
     </div>
   </section>
@@ -819,13 +784,6 @@ h3.section-heading {
       </div>
     </section>
 
-    <!-- ========== CTA ========== -->
-    <div class="cta-block fade-in">
-      <h3>天命の言語化セッション™</h3>
-      <p>2時間で天命が言語化できる場所。</p>
-      <a href="../trial.html" class="cta-btn">▶ 無料トライアルに申し込む</a>
-    </div>
-
     <hr>
 
     <!-- ========== 本文への導入 ========== -->
@@ -948,11 +906,18 @@ h3.section-heading {
     </section>
 
     <!-- ========== 最終CTA ========== -->
-    <div class="cta-block fade-in">
-      <h3>天命の言語化セッション™</h3>
-      <p>2時間で天命が言語化できる場所。</p>
-      <a href="../trial.html" class="cta-btn">▶ 無料トライアルに申し込む</a>
-    </div>
+    <section class="cta-block fade-in">
+      <div class="container">
+        <h2 class="cta-block__title">天命の言語化セッション™</h2>
+        <p class="cta-block__desc">2時間で天命が言語化できる場所。</p>
+        <div class="cta-block__features">
+          <span class="cta-block__feature">Zoom完結</span>
+          <span class="cta-block__feature">事前学習不要</span>
+          <span class="cta-block__feature">対話のみ</span>
+        </div>
+        <a href="../trial.html" class="btn">無料トライアルに申し込む &rarr;</a>
+      </div>
+    </section>
 
     <!-- ========== 著者ブロック ========== -->
     <div class="author-block fade-in">
