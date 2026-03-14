@@ -117,93 +117,6 @@
       color: var(--color-gold);
     }
 
-    /* ── Specials: カテゴリアコーディオン ── */
-    .sp-category {
-      margin-bottom: 2rem;
-    }
-    .sp-category__trigger {
-      width: 100%;
-      background: linear-gradient(160deg, rgba(15,12,25,0.6) 0%, rgba(8,6,16,0.8) 100%);
-      border: 1px solid var(--color-gold-a15);
-      border-radius: 4px;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.4rem 2rem;
-      text-align: left;
-      position: relative;
-      overflow: hidden;
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    }
-    .sp-category__trigger::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, var(--color-gold-a50), var(--color-gold-a20), transparent 70%);
-    }
-    .sp-category__trigger:hover {
-      border-color: var(--color-gold-a25);
-      box-shadow: 0 2px 20px var(--color-gold-a06);
-    }
-    .sp-category__en {
-      font-family: var(--font-serif-en);
-      font-size: var(--fs-small);
-      font-weight: 400;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
-      background-size: 200% 100%;
-      -webkit-background-clip: text; background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: sp-gold-shimmer 4s ease-in-out infinite;
-      filter: drop-shadow(0 0 12px rgba(192,168,120,0.25));
-    }
-    .sp-category__ja {
-      font-family: var(--font-serif-short);
-      font-size: var(--fs-xs);
-      color: var(--color-text-dim);
-      margin-left: 0.8rem;
-      letter-spacing: 0.1em;
-    }
-    .sp-category__right {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-    }
-    .sp-category__count {
-      font-family: var(--font-serif-en);
-      font-size: var(--fs-xs);
-      color: var(--color-text-ghost);
-      letter-spacing: 0.1em;
-      border: 1px solid var(--color-gold-a15);
-      border-radius: 24px;
-      padding: 0.2rem 0.8rem;
-    }
-    .sp-category__icon {
-      font-family: var(--font-serif-en);
-      font-size: var(--fs-h3);
-      color: var(--color-gold);
-      transition: transform 0.3s ease;
-      min-width: 20px;
-      text-align: center;
-    }
-    .sp-category.is-open .sp-category__icon {
-      transform: rotate(45deg);
-    }
-    .sp-category__body {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.5s ease;
-    }
-    .sp-category.is-open .sp-category__body {
-      max-height: 8000px;
-    }
-    .sp-category__inner {
-      padding-top: 1.5rem;
-    }
-
     /* ── Specials: 作品カード ── */
     .sp-card {
       background: linear-gradient(160deg, rgba(15,12,25,0.75) 0%, rgba(8,6,16,0.92) 100%);
@@ -268,8 +181,6 @@
     /* ── Mobile ── */
     @media (max-width: 768px) {
       .sp-intro, .sp-index, .sp-card { padding: 2rem 1.5rem; }
-      .sp-category__trigger { padding: 1.2rem 1.5rem; }
-      .sp-category__ja { display: none; }
       .sp-card__title { font-size: var(--fs-body); }
     }
   </style>
@@ -390,20 +301,6 @@
         </ul>
       </div>
 
-      <!-- ============================================ -->
-      <!--  CATEGORY 1: 宮崎駿作品                      -->
-      <!-- ============================================ -->
-      <div class="sp-category is-open fade-in" id="cat-miyazaki">
-        <button class="sp-category__trigger" aria-expanded="true">
-          <span><span class="sp-category__en">Hayao Miyazaki</span><span class="sp-category__ja">宮崎駿作品</span></span>
-          <span class="sp-category__right">
-            <span class="sp-category__count">6 works</span>
-            <span class="sp-category__icon">+</span>
-          </span>
-        </button>
-        <div class="sp-category__body">
-          <div class="sp-category__inner">
-
       <div class="sp-card fade-in" id="nausicaa">
         <h2 class="sp-card__title"><span class="sp-card__work">風の谷のナウシカ</span> ── 光と闇を同時に通す者だけが、橋になれる</h2>
         <p>宮崎駿監督・原作・脚本『風の谷のナウシカ』のナウシカ──すべての生命を敬う少女が父を殺した兵士を殺した瞬間、光と闇が同じ身体から来ていることが露呈する──を、実存科学の視点で読み解く。</p>
@@ -457,24 +354,6 @@
           <li><a href="articles/tenmei-howl/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
         </ul>
       </div>
-
-          </div>
-        </div>
-      </div>
-
-      <!-- ============================================ -->
-      <!--  CATEGORY 2: 映画                            -->
-      <!-- ============================================ -->
-      <div class="sp-category is-open fade-in" id="cat-films">
-        <button class="sp-category__trigger" aria-expanded="true">
-          <span><span class="sp-category__en">Films</span><span class="sp-category__ja">映画</span></span>
-          <span class="sp-category__right">
-            <span class="sp-category__count">14 works</span>
-            <span class="sp-category__icon">+</span>
-          </span>
-        </button>
-        <div class="sp-category__body">
-          <div class="sp-category__inner">
 
       <div class="sp-card fade-in" id="godfather">
         <h2 class="sp-card__title"><span class="sp-card__work">ゴッドファーザー</span> ── 天命に到達しなかった男が、天命を最も鮮烈に照らす</h2>
@@ -604,24 +483,6 @@
         </ul>
       </div>
 
-          </div>
-        </div>
-      </div>
-
-      <!-- ============================================ -->
-      <!--  CATEGORY 3: 漫画・ドラマ                     -->
-      <!-- ============================================ -->
-      <div class="sp-category is-open fade-in" id="cat-mangadrama">
-        <button class="sp-category__trigger" aria-expanded="true">
-          <span><span class="sp-category__en">Manga &amp; Drama</span><span class="sp-category__ja">漫画・ドラマ</span></span>
-          <span class="sp-category__right">
-            <span class="sp-category__count">7 works</span>
-            <span class="sp-category__icon">+</span>
-          </span>
-        </button>
-        <div class="sp-category__body">
-          <div class="sp-category__inner">
-
       <div class="sp-card fade-in" id="akira">
         <h2 class="sp-card__title"><span class="sp-card__work">AKIRA</span> ── 保護者の盾と力の檻のあいだで、天命が立つ</h2>
         <p>大友克洋『AKIRA』の金田正太郎──孤児院で泣いている少年の手を取った瞬間から、保護者という役割に自我を癒着させた男が、その善意で親友を破滅させ、すべてを喪った瓦礫の中で「前を走る」から「隣に立つ」への天命に到達する──を、実存科学の視点で読み解く。</p>
@@ -692,10 +553,6 @@
         <ul class="link-list">
           <li><a href="articles/tenmei-suits/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
         </ul>
-      </div>
-
-          </div>
-        </div>
       </div>
 
       <!-- 今後の作品をここに追加 -->
@@ -771,21 +628,6 @@
 </footer>
 
   <script src="js/main.min.js?v=9"></script>
-  <script>
-    document.querySelectorAll('.sp-category__trigger').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        var cat = this.closest('.sp-category');
-        var isOpen = cat.classList.contains('is-open');
-        if (isOpen) {
-          cat.classList.remove('is-open');
-          this.setAttribute('aria-expanded', 'false');
-        } else {
-          cat.classList.add('is-open');
-          this.setAttribute('aria-expanded', 'true');
-        }
-      });
-    });
-  </script>
   <!-- Search Modal -->
   <div class="search-overlay">
     <div class="search-modal"><button class="search-close" aria-label="閉じる">&times;</button>
