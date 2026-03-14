@@ -89,15 +89,14 @@
       text-decoration: underline;
     }
 
-    /* ── flow-card (What → Why → How) ── */
+    /* ── flow-card (What → Why → How) accordion ── */
     .flow-cards {
       display: flex;
       flex-direction: column;
-      gap: 1.2rem;
+      gap: 0.6rem;
     }
     .flow-card {
       position: relative;
-      padding: 2.5rem 2.5rem;
       background: rgba(15, 12, 25, 0.8);
       border: 1px solid var(--color-gold-a12);
       box-shadow: 0 2px 24px var(--color-gold-a05);
@@ -123,9 +122,8 @@
     .flow-card--what::before {
       background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.5), transparent);
     }
-    .flow-card--what .flow-card__label {
-      color: rgba(192, 168, 120, 0.55);
-    }
+    .flow-card--what .flow-card__label { color: rgba(192, 168, 120, 0.55); }
+    .flow-card--what.is-open { border-left-color: rgba(192, 168, 120, 0.8); }
     /* WHY = Rose */
     .flow-card--why {
       border-left: 2px solid rgba(200, 120, 120, 0.45);
@@ -134,9 +132,8 @@
     .flow-card--why::before {
       background: linear-gradient(90deg, transparent, rgba(200, 120, 120, 0.4), transparent);
     }
-    .flow-card--why .flow-card__label {
-      color: rgba(200, 120, 120, 0.55);
-    }
+    .flow-card--why .flow-card__label { color: rgba(200, 120, 120, 0.55); }
+    .flow-card--why.is-open { border-left-color: rgba(200, 120, 120, 0.8); }
     /* HOW = Purple */
     .flow-card--how {
       border-left: 2px solid rgba(160, 120, 200, 0.45);
@@ -145,45 +142,107 @@
     .flow-card--how::before {
       background: linear-gradient(90deg, transparent, rgba(160, 120, 200, 0.4), transparent);
     }
-    .flow-card--how .flow-card__label {
-      color: rgba(160, 120, 200, 0.55);
+    .flow-card--how .flow-card__label { color: rgba(160, 120, 200, 0.55); }
+    .flow-card--how.is-open { border-left-color: rgba(160, 120, 200, 0.8); }
+    /* Header (clickable) */
+    .flow-card__header {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      padding: 1.4rem 2rem;
+      cursor: pointer;
+      user-select: none;
+      -webkit-user-select: none;
     }
-    /* Sub-elements */
     .flow-card__label {
       font-family: var(--font-serif-en);
       font-size: var(--fs-xs);
       letter-spacing: 0.3em;
       text-transform: uppercase;
-      margin-bottom: 1rem;
+      flex-shrink: 0;
+      margin: 0;
     }
     .flow-card__title {
       font-family: var(--font-serif-short);
-      font-size: var(--fs-h3);
-      font-weight: 600;
+      font-size: var(--fs-body);
+      font-weight: 500;
       color: var(--color-text-primary);
       letter-spacing: 0.06em;
-      line-height: 2;
-      margin-bottom: 1rem;
+      line-height: 1.8;
+      margin: 0;
+      flex-grow: 1;
     }
-    .flow-card__body p {
+    .flow-card__icon {
+      width: 11px;
+      height: 11px;
+      position: relative;
+      flex-shrink: 0;
+    }
+    .flow-card__icon::before,
+    .flow-card__icon::after {
+      content: "";
+      position: absolute;
+      background: rgba(192, 168, 120, 0.45);
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+    .flow-card__icon::before {
+      top: 50%; left: 0; right: 0; height: 1px;
+      transform: translateY(-50%);
+    }
+    .flow-card__icon::after {
+      left: 50%; top: 0; bottom: 0; width: 1px;
+      transform: translateX(-50%);
+    }
+    .flow-card.is-open .flow-card__icon::after {
+      transform: translateX(-50%) rotate(90deg);
+      opacity: 0;
+    }
+    /* Body (collapsible) */
+    .flow-card__body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .flow-card__content {
+      padding: 0 2rem 1.8rem;
+      position: relative;
+    }
+    .flow-card__content::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 2rem; right: 2rem;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--color-gold-a15), transparent);
+    }
+    .flow-card__content p {
       font-size: var(--fs-body);
       line-height: 2.2;
       color: var(--color-text-body);
     }
-    .flow-card__body p:last-child {
+    .flow-card__content p:last-child {
       margin-bottom: 0;
     }
-    .flow-card__body strong {
+    .flow-card__content strong {
       color: var(--color-text-primary);
     }
+    .flow-card.is-open .flow-card__content {
+      box-shadow: inset 0 0 80px rgba(192, 168, 120, 0.015);
+    }
     @media (max-width: 480px) {
-      .flow-card {
-        padding: 2rem 1.5rem;
+      .flow-card__header {
+        padding: 1.2rem 1.4rem;
+        gap: 0.8rem;
       }
       .flow-card__title {
-        font-size: var(--fs-lead);
+        font-size: var(--fs-small);
       }
-      .flow-card__body p {
+      .flow-card__content {
+        padding: 0 1.4rem 1.4rem;
+      }
+      .flow-card__content::before {
+        left: 1.4rem; right: 1.4rem;
+      }
+      .flow-card__content p {
         font-size: var(--fs-small);
       }
     }
@@ -267,63 +326,78 @@
     </div>
   </section>
 
-  <!-- 何→なぜ→どうやって cognitive flow -->
+  <!-- 何→なぜ→どうやって cognitive flow (accordion) -->
   <section class="section" style="padding-bottom: 0;">
     <div class="container">
       <div class="flow-cards fade-in">
 
-        <!-- WHAT: 現場から浮かび上がった12の収束点 -->
+        <!-- WHAT -->
         <div class="flow-card flow-card--what">
-          <p class="flow-card__label">What ── 何</p>
-          <h3 class="flow-card__title">現場から浮かび上がった12の収束点</h3>
+          <div class="flow-card__header" role="button" tabindex="0" aria-expanded="false">
+            <p class="flow-card__label">What</p>
+            <h3 class="flow-card__title">この12の対話は、どこから来たのか</h3>
+            <span class="flow-card__icon"></span>
+          </div>
           <div class="flow-card__body">
-            <p>
-              ある人は天命を語り、<br class="sp-only">ある人は家族を語った。<br>
-              ある人は恐怖を語り、<br class="sp-only">ある人は死を語った。
-            </p>
-            <p>
-              テーマは違っても、<br class="sp-only">対話が深まると必ず、<br>
-              <strong>人生の同じ構造に触れる瞬間</strong>が訪れた。
-            </p>
-            <p>
-              この12の領域は、<br class="sp-only">そうした対話の現場から<br class="sp-only">自然に浮かび上がったものである。
-            </p>
+            <div class="flow-card__content">
+              <p>
+                ある人は天命を語り、<br class="sp-only">ある人は家族を語った。<br>
+                ある人は恐怖を語り、<br class="sp-only">ある人は死を語った。
+              </p>
+              <p>
+                テーマは違っても、<br class="sp-only">対話が深まると必ず、<br>
+                <strong>人生の同じ構造に触れる瞬間</strong>が訪れた。
+              </p>
+              <p>
+                この12の領域は、<br class="sp-only">そうした対話の現場から<br class="sp-only">自然に浮かび上がったものである。
+              </p>
+            </div>
           </div>
         </div>
 
-        <!-- WHY: 既存の対人支援が届かない場所へ -->
+        <!-- WHY -->
         <div class="flow-card flow-card--why">
-          <p class="flow-card__label">Why ── なぜ</p>
-          <h3 class="flow-card__title">既存の対人支援が届かない場所へ</h3>
+          <div class="flow-card__header" role="button" tabindex="0" aria-expanded="false">
+            <p class="flow-card__label">Why</p>
+            <h3 class="flow-card__title">なぜカウンセリングでは届かないのか</h3>
+            <span class="flow-card__icon"></span>
+          </div>
           <div class="flow-card__body">
-            <p>
-              性欲、宿命、死後の遺産──<br>
-              これらは、カウンセリングでも<br class="sp-only">コーチングでも扱えない。<br>
-              <strong>「相談」の枠組みでは、<br class="sp-only">到達できない場所</strong>にある。
-            </p>
-            <p>
-              実存科学の対話は、<br class="sp-only">助言も診断もしない。<br>
-              ただ、<strong>問いの構造を共有する</strong>。<br>
-              それだけで、<br class="sp-only">人は自分の人生を<br class="sp-only">自分の言葉で語り始める。
-            </p>
+            <div class="flow-card__content">
+              <p>
+                性欲、宿命、死後の遺産──<br>
+                これらは、カウンセリングでも<br class="sp-only">コーチングでも扱えない。<br>
+                <strong>「相談」の枠組みでは、<br class="sp-only">到達できない場所</strong>にある。
+              </p>
+              <p>
+                実存科学の対話は、<br class="sp-only">助言も診断もしない。<br>
+                ただ、<strong>問いの構造を共有する</strong>。<br>
+                それだけで、<br class="sp-only">人は自分の人生を<br class="sp-only">自分の言葉で語り始める。
+              </p>
+            </div>
           </div>
         </div>
 
-        <!-- HOW: 悩みではなく、構造が終わる -->
+        <!-- HOW -->
         <div class="flow-card flow-card--how">
-          <p class="flow-card__label">How ── どうやって</p>
-          <h3 class="flow-card__title">悩みではなく、構造が終わる</h3>
+          <div class="flow-card__header" role="button" tabindex="0" aria-expanded="false">
+            <p class="flow-card__label">How</p>
+            <h3 class="flow-card__title">悩みが「終わる」とはどういうことか</h3>
+            <span class="flow-card__icon"></span>
+          </div>
           <div class="flow-card__body">
-            <p>
-              ここにある12の対話は、<br class="sp-only">悩みを解決するものではない。
-            </p>
-            <p>
-              <strong>悩みを生み出していた構造</strong>そのものが、<br class="sp-only">対話を通じて終わる。
-            </p>
-            <p>
-              それは「気づき」ではなく、<br class="sp-only">「構造の転換」である。<br>
-              一度終わったものは、二度と戻らない。
-            </p>
+            <div class="flow-card__content">
+              <p>
+                ここにある12の対話は、<br class="sp-only">悩みを解決するものではない。
+              </p>
+              <p>
+                <strong>悩みを生み出していた構造</strong>そのものが、<br class="sp-only">対話を通じて終わる。
+              </p>
+              <p>
+                それは「気づき」ではなく、<br class="sp-only">「構造の転換」である。<br>
+                一度終わったものは、二度と戻らない。
+              </p>
+            </div>
           </div>
         </div>
 
@@ -578,6 +652,32 @@
     </div>
   </div>
 
+  <script>
+  (function() {
+    document.querySelectorAll('.flow-card__header').forEach(function(header) {
+      header.addEventListener('click', function() {
+        var card = this.parentElement;
+        var body = card.querySelector('.flow-card__body');
+        var content = body.querySelector('.flow-card__content');
+        var isOpen = card.classList.contains('is-open');
+        this.setAttribute('aria-expanded', !isOpen);
+        if (isOpen) {
+          body.style.maxHeight = '0';
+          card.classList.remove('is-open');
+        } else {
+          body.style.maxHeight = content.scrollHeight + 'px';
+          card.classList.add('is-open');
+        }
+      });
+      header.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          this.click();
+        }
+      });
+    });
+  })();
+  </script>
 </body>
 
 </html>
