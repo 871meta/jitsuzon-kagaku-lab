@@ -30,6 +30,20 @@
   <link rel="stylesheet" href="../../css/style.min.css?v=24">
 
 <style>
+/* === 0. ヒーロータイトル ゴールドシマー === */
+.hero-title--shimmer {
+  background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gold-shimmer 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 16px rgba(192,168,120,0.3)) drop-shadow(0 0 40px rgba(192,168,120,0.12));
+}
+@keyframes gold-shimmer {
+  0%, 100% { background-position: 100% 50%; }
+  50% { background-position: 0% 50%; }
+}
+
 /* =============================================
    視認性・読みやすさ強化CSS
    ============================================= */
@@ -131,7 +145,7 @@ hr::after {
   line-height: 2.2;
 }
 .session-dialogue .speaker-yanai { color: var(--color-gold); font-weight: 600; font-size: var(--fs-body); }
-.session-dialogue .speaker-emu { color: var(--color-text-body); font-weight: 600; font-size: var(--fs-body); }
+.session-dialogue .speaker-emu { color: #b8a0d8; font-weight: 600; font-size: var(--fs-body); }
 
 /* 箭内の発言：金色の左ボーダー */
 .session-dialogue .line-yanai {
@@ -432,7 +446,7 @@ h3.section-heading {
         </ol>
       </nav>
       <p class="page-hero__sub">Baki Series × Existential Science</p>
-      <h1>朱沢江珠のMeta ── 自由意志なき世界の天命論</h1>
+      <h1 class="hero-title--shimmer">朱沢江珠のMeta ── 自由意志なき世界の天命論</h1>
       <p class="page-hero__lead">箭内宏紀｜実存科学研究所</p>
     </div>
   </section>
@@ -495,7 +509,7 @@ h3.section-heading {
 
       <div class="profiling-block fade-in">
         <h3>【対比キャラクターとの比較表（vs ジャック・ハンマーの母・ダイアン・ニール）】</h3>
-        <p style="font-size:0.85rem; color:#c0bbb4; margin-bottom:1rem; line-height:1.8;">両者とも「勇次郎の女」という同じMetaの原点を持ちながら、出力が完全に真逆である。江珠さんは勇次郎を愛したがゆえに息子を道具にし、ダイアンさんは勇次郎を憎んだがゆえに息子を守った。しかし皮肉なことに、江珠さんもダイアンさんも、最後には「母」としての天命に収束する。Metaの初期条件がどれほど異なっても、天命が向かう先は同じだったのだ。</p>
+        <p style="font-size:0.85rem; color:#c0bbb4; margin-bottom:1rem; line-height:1.8;">両者とも「勇次郎の女」という同じMetaの原点を持ちながら、出力が完全に真逆である。江珠は勇次郎を愛したがゆえに息子を道具にし、ダイアンは勇次郎を憎んだがゆえに息子を守った。しかし皮肉なことに、江珠もダイアンも、最後には「母」としての天命に収束する。Metaの初期条件がどれほど異なっても、天命が向かう先は同じだったのだ。</p>
         <table class="comparison-table">
           <tr>
             <th>比較軸</th>
@@ -540,7 +554,7 @@ h3.section-heading {
       </div>
 
       <div class="text-panel fade-in">
-        <p>もし朱沢江珠さんが私の前に座ったら、どんな対話が生まれるか。<br>
+        <p>もし朱沢江珠が私の前に座ったら、どんな対話が生まれるか。<br>
         彼女は、最も愛した男の世界で生き延びるために、最も愛したかった息子を道具にした女だ。</p>
         <p>──物語の描写と深層心理の構造分析に基づいて、セッションを再現してみる。</p>
       </div>
@@ -550,7 +564,7 @@ h3.section-heading {
 
     <!-- ========== セッション対話 ========== -->
     <section class="fade-in">
-      <h2 class="chapter-heading">「天命の言語化セッション™」での対話</h2>
+      <h2 class="chapter-heading">天命の言語化セッション™︎</h2>
 
       <div class="session-dialogue fade-in">
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span> 江珠さん、セッションに来てくださってありがとうございます。早速ですが、一つ聞かせてください。あなたはあなたに何をプレゼントしてあげたいですか？</p>
@@ -645,26 +659,34 @@ h3.section-heading {
 
       <div class="highlight-block fade-in">
         <p>今回のセッションは、「勇次郎の女」というMetaに駆動され、母性を抑圧し続けた女が、その抑圧の構造に自分で気づくプロセスである。<br>
-        私は一度も、江珠さんに答えを与えていない。</p>
+        私は一度も、江珠に答えを与えていない。</p>
       </div>
 
       <div class="text-panel fade-in">
         <p>「なぜ彼の傍にいたのか？」「何のために息子を鍛えたのか？」「抱きしめることがなぜ弱さなのか？」</p>
-        <p>──問いだけを投げ続けた結果、江珠さんは自分自身の言葉で「彼の基準と自分の基準の区別がつかない」ことに気づき、抑圧していた母性の核心に到達した。</p>
-        <p>そして最後に、「殺す抱擁を、愛する抱擁に変えて渡した」という天命の構造を、江珠さん自身の口で語った。</p>
-        <p>紳士的な「私」の鎧を脱いだオリバさんと同じように、「勇次郎の女」の鎧を脱いだ江珠さんの口から出た言葉は、驚くほどシンプルだった。</p>
-        <p>答えを出したのは、江珠さん自身だ。</p>
+        <p>──問いだけを投げ続けた結果、江珠は自分自身の言葉で「彼の基準と自分の基準の区別がつかない」ことに気づき、抑圧していた母性の核心に到達した。</p>
+        <p>そして最後に、「殺す抱擁を、愛する抱擁に変えて渡した」という天命の構造を、江珠自身の口で語った。</p>
+        <p>紳士的な「私」の鎧を脱いだオリバと同じように、「勇次郎の女」の鎧を脱いだ江珠の口から出た言葉は、驚くほどシンプルだった。</p>
+        <p>答えを出したのは、江珠自身だ。</p>
       </div>
 
-      <div class="cta-block fade-in">
-      <h3>天命の言語化セッション™</h3>
-      <p>2時間で天命が言語化できる場所。</p>
-      <a href="../../trial.html" class="cta-btn">▶ 無料トライアルに申し込む</a>
+      <section class="cta-block fade-in">
+  <div class="container">
+    <h2 class="cta-block__title">天命の言語化セッション&trade;</h2>
+    <p class="cta-block__desc">2時間で天命が言語化できる場所。</p>
+    <div class="cta-block__features">
+      <span class="cta-block__feature">Zoom完結</span>
+      <span class="cta-block__feature">事前学習不要</span>
+      <span class="cta-block__feature">対話のみ</span>
     </div>
+    <a href="../../trial.html" class="btn">無料トライアルに申し込む &rarr;</a>
+  </div>
+</section>
 
       <div class="text-panel fade-in">
-        <p>ここからは、上のプロファイリングとセッションの根拠を、物語に沿って詳しく読み解いていく。<br>
-        江珠さんのMetaがいかにして形成され、シャドウが蓄積し、天命へと収束していったか──その全過程を辿る。</p>
+        <p>ここからは、上のプロファイリングとセッションの根拠を、物語に沿って詳しく読み解いていく。</p>
+<p><br>
+        江珠のMetaがいかにして形成され、シャドウが蓄積し、天命へと収束していったか──その全過程を辿る。</p>
       </div>
     </section>
 
@@ -714,7 +736,8 @@ h3.section-heading {
 
       <div class="text-panel fade-in">
         <p>最大トーナメントで天内悠が「闘いとは愛である」と口にした瞬間、勇次郎は乱入して天内を叩き潰した。愛を語る者は、彼の世界では生きていけないのだ。</p>
-        <p>江珠はこの構造を本能的に理解していた。だから息子を「道具」として扱った。一流のコーチ、最高の設備、命がけの対戦相手──朱沢グループの全資産を投じて刃牙を鍛え上げたのは、「勇次郎に差し出す貢物」としてだった。</p>
+        <p>江珠はこの構造を本能的に理解していた。だから息子を「道具」として扱った。</p>
+<p>一流のコーチ、最高の設備、命がけの対戦相手──朱沢グループの全資産を投じて刃牙を鍛え上げたのは、「勇次郎に差し出す貢物」としてだった。</p>
       </div>
 
       <div class="text-panel fade-in">
@@ -727,7 +750,9 @@ h3.section-heading {
       </div>
 
       <div class="text-panel fade-in">
-        <p>刃牙が傷だらけで帰ってくるたびに、泣いているのが聞こえるたびに、江珠の中の何かが砕けていた。抱きしめたい。薬を塗ってやりたい。「痛かったね」と言ってやりたい。しかしそれをすれば「勇次郎の女」は終わる。彼の世界から追放される。</p>
+        <p>刃牙が傷だらけで帰ってくるたびに、泣いているのが聞こえるたびに、江珠の中の何かが砕けていた。</p>
+<p>抱きしめたい。薬を塗ってやりたい。「痛かったね」と言ってやりたい。</p>
+<p>しかしそれをすれば「勇次郎の女」は終わる。彼の世界から追放される。</p>
         <p>刃牙の世話役だった栗谷川等は、江珠の矛盾に気づいていた。息子のことより夫の愛しか考えない江珠に疑問を呈し、怒りをぶつけることもあった。</p>
         <p>だが栗谷川が見ていたのは表面の代償行動にすぎない。その奥にある、構造的に出口のない母性の抑圧を、栗谷川は知らなかった。</p>
       </div>
@@ -754,7 +779,9 @@ h3.section-heading {
       </div>
 
       <div class="text-panel fade-in">
-        <p>「勇次郎の女」であることも、「刃牙を道具として差し出す」ことも、すべてが意味を失った。なぜなら、刃牙が死ねば、「貢物」もろとも勇次郎との繋がりが消えるからだ。しかしそんな計算すら、江珠の頭の中にはなかった。</p>
+        <p>「勇次郎の女」であることも、「刃牙を道具として差し出す」ことも、すべてが意味を失った。</p>
+<p>なぜなら、刃牙が死ねば、「貢物」もろとも勇次郎との繋がりが消えるからだ。</p>
+<p>しかしそんな計算すら、江珠の頭の中にはなかった。</p>
         <p>身体が勝手に動いた。</p>
         <p>勇次郎の前に立ちはだかり、平手打ちをくらわせ、噛みつき──絶対に勝てない暴力の化身に、生身の身体で挑んだ。</p>
       </div>
@@ -791,8 +818,8 @@ h3.section-heading {
       </div>
 
       <div class="text-panel fade-in">
-        <p>ジャック・ハンマーさんは「噛み砕き」、花山さんは「握り」、愚地独歩さんは「空になり」、烈海王さんは「活かし」、ビスケット・オリバさんは「包み込んだ」。<br>
-        朱沢江珠さんの天命は「抱きしめる」ことだ。</p>
+        <p>ジャック・ハンマーさんは「噛み砕き」、花山は「握り」、愚地独歩は「空になり」、烈海王は「活かし」、ビスケット・オリバは「包み込んだ」。<br>
+        朱沢江珠の天命は「抱きしめる」ことだ。</p>
       </div>
 
       <div class="def-box fade-in">
@@ -813,14 +840,15 @@ h3.section-heading {
       <h2 class="chapter-heading">結び：抱きしめられなかったすべての夜の先に</h2>
 
       <div class="text-panel fade-in">
-        <p>江珠さんの軌跡が、現代を生きる私たちに突きつけるものは何か。</p>
+        <p>江珠の軌跡が、現代を生きる私たちに突きつけるものは何か。</p>
         <p>私たちの中にも、「愛したい相手がいるのに、愛し方がわからない」人がいるのではないか。</p>
         <p>仕事のために子どもとの時間を犠牲にし、「これは家族のためだ」と自分に言い聞かせている人。<br>
         本当は抱きしめたいのに、役割が許さないと信じている人。</p>
       </div>
 
       <div class="text-panel fade-in">
-        <p>江珠さんは、「勇次郎の女」という役割が「母」であることを許さないと信じ、息子を道具にし、自分の母性を殺し続けた。<br>
+        <p>江珠は、「勇次郎の女」という役割が「母」であることを許さないと信じ、息子を道具にし、自分の母性を殺し続けた。</p>
+<p><br>
         そして最後の瞬間、すべての役割が崩壊した先に、「ただ、あの子を抱きしめたかった」という天命が露呈した。</p>
         <p>しかし、それは死の瞬間だった。</p>
       </div>
@@ -839,23 +867,34 @@ h3.section-heading {
     <hr>
 
     <!-- ========== 最終CTA ========== -->
-    <div class="cta-block fade-in">
-      <h3>天命の言語化セッション™</h3>
-      <p>2時間で天命が言語化できる場所。</p>
-      <a href="../../trial.html" class="cta-btn">▶ 無料トライアルに申し込む</a>
+    <section class="cta-block fade-in">
+  <div class="container">
+    <h2 class="cta-block__title">天命の言語化セッション&trade;</h2>
+    <p class="cta-block__desc">2時間で天命が言語化できる場所。</p>
+    <div class="cta-block__features">
+      <span class="cta-block__feature">Zoom完結</span>
+      <span class="cta-block__feature">事前学習不要</span>
+      <span class="cta-block__feature">対話のみ</span>
     </div>
+    <a href="../../trial.html" class="btn">無料トライアルに申し込む &rarr;</a>
+  </div>
+</section>
 
     <!-- ========== シリーズノート ========== -->
     <div class="series-note fade-in">
-      <p>本コラムは「キャラクターのMeta ── 自由意志なき世界の天命論」シリーズです。<br>
-      漫画・映画・物語の登場人物を、実存科学の視点──Meta、自由意志、シャドウ、天命──で読み解きます。<br>
+      <p>本コラムは「キャラクターのMeta ── 自由意志なき世界の天命論」シリーズです。</p>
+<p><br>
+      漫画・映画・物語の登場人物を、実存科学の視点──Meta、自由意志、シャドウ、天命──で読み解きます。</p>
+<p><br>
       <a href="index.html">シリーズ一覧はこちら &rarr;</a></p>
     </div>
 
     <!-- ========== 著者ブロック ========== -->
     <div class="author-block fade-in">
       <p><strong>箭内宏紀（やないひろき）</strong><br>
-      実存科学研究所 代表。「天命の言語化セッション™」を提供。「Metaがある限り自由意志は存在しない」（M ⇒ ¬F）を第一公理とする実存科学を提唱。著書に『Metaがある限り──自由意志・自分・他人は存在しない』『自由意志なき世界の歩き方』ほか。<br>
+      実存科学研究所 代表。「天命の言語化セッション™」を提供。</p>
+<p>「Metaがある限り自由意志は存在しない」（M ⇒ ¬F）を第一公理とする実存科学を提唱。</p>
+<p>著書に『Metaがある限り──自由意志・自分・他人は存在しない』『自由意志なき世界の歩き方』ほか。<br>
       <a href="../../index.html">公式サイトはこちら</a>。</p>
     </div>
 
