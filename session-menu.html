@@ -89,6 +89,40 @@
       text-decoration: underline;
     }
 
+    /* ── flow-intro ── */
+    .flow-intro {
+      position: relative;
+      background: linear-gradient(90deg, var(--color-gold-a06), transparent 40%), rgba(15, 12, 25, 0.85);
+      border: 1px solid var(--color-gold-a12);
+      border-left: 2px solid rgba(192, 168, 120, 0.35);
+      box-shadow: 0 2px 24px var(--color-gold-a05);
+      backdrop-filter: blur(8px);
+      padding: 1.6rem 2rem;
+      margin-bottom: 0.6rem;
+    }
+    .flow-intro::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.35), transparent);
+    }
+    .flow-intro p {
+      font-size: var(--fs-body);
+      line-height: 2.2;
+      color: var(--color-text-body);
+      margin-bottom: 0.8rem;
+    }
+    .flow-intro p:last-child { margin-bottom: 0; }
+    @media (max-width: 480px) {
+      .flow-intro {
+        padding: 1.2rem 1.4rem;
+      }
+      .flow-intro p {
+        font-size: var(--fs-small);
+      }
+    }
+
     /* ── flow-card (What → Why → How) accordion ── */
     .flow-cards {
       display: flex;
@@ -310,25 +344,13 @@
     </div>
   </section>
 
-  <!-- Introduction -->
-  <section class="section" style="padding-bottom: 0;">
+  <!-- Introduction + 何→なぜ→どうやって cognitive flow (accordion) -->
+  <section class="section" style="padding-top: 0.8rem; padding-bottom: 0;">
     <div class="container">
-      <div class="content-block text-panel fade-in">
-        <p>
-          天命、宿命、家族、恐怖、性、死──<br>
-          ここに並ぶ12の対話は、<br class="sp-only">人生の根幹を揺さぶる問いである。
-        </p>
-        <p>
-          表面的なコーチングでは<br class="sp-only">決して踏み込めない領域に、<br>
-          実存科学の対話は、正面から入っていく。
-        </p>
+      <div class="flow-intro fade-in">
+        <p>天命、宿命、家族、恐怖、性、死──<br>ここに並ぶ12の対話は、<br class="sp-only">人生の根幹を揺さぶる問いである。</p>
+        <p>表面的なコーチングでは<br class="sp-only">決して踏み込めない領域に、<br class="sp-only">実存科学の対話は、<br class="sp-only">正面から入っていく。</p>
       </div>
-    </div>
-  </section>
-
-  <!-- 何→なぜ→どうやって cognitive flow (accordion) -->
-  <section class="section" style="padding-bottom: 0;">
-    <div class="container">
       <div class="flow-cards fade-in">
 
         <!-- WHAT -->
@@ -424,7 +446,7 @@
   -->
 
   <!-- Session Grid -->
-  <section class="section">
+  <section class="section" style="padding-top: 2.5rem;">
     <div class="container">
       <div class="session-grid">
 
