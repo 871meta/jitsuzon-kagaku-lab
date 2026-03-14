@@ -88,6 +88,141 @@
     .session-card__link:hover {
       text-decoration: underline;
     }
+
+    /* ── es-accordion ── */
+    .es-accordion {
+      margin: 1.5rem 0;
+    }
+    .es-accordion__item {
+      margin-bottom: 0.6rem;
+      border-left: 2px solid var(--color-gold-a12);
+      transition: border-color 0.5s ease;
+    }
+    .es-accordion__header {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      padding: 1.4rem 2rem;
+      cursor: pointer;
+      background: linear-gradient(180deg, rgba(15, 12, 25, 0.55) 0%, rgba(8, 6, 16, 0.45) 100%);
+      border: 1px solid var(--color-gold-a06);
+      border-left: none;
+      border-radius: 2px;
+      transition: background 0.4s ease, border-color 0.4s ease;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    .es-accordion__header:hover {
+      background: linear-gradient(180deg, var(--color-panel) 0%, var(--color-overlay-soft) 100%);
+      border-color: var(--color-gold-a12);
+    }
+    .es-accordion__num {
+      font-family: var(--font-serif-en);
+      font-size: var(--fs-small);
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      color: var(--color-gold-a35);
+      flex-shrink: 0;
+      min-width: 1.8em;
+    }
+    .es-accordion__title {
+      font-family: var(--font-serif-short);
+      font-size: var(--fs-body);
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      color: var(--color-text-body);
+      flex-grow: 1;
+      margin: 0;
+      padding: 0;
+      border: none;
+      line-height: 1.8;
+    }
+    .es-accordion__icon {
+      width: 11px;
+      height: 11px;
+      position: relative;
+      flex-shrink: 0;
+    }
+    .es-accordion__icon::before,
+    .es-accordion__icon::after {
+      content: "";
+      position: absolute;
+      background: rgba(192, 168, 120, 0.45);
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+    .es-accordion__icon::before {
+      top: 50%; left: 0; right: 0; height: 1px;
+      transform: translateY(-50%);
+    }
+    .es-accordion__icon::after {
+      left: 50%; top: 0; bottom: 0; width: 1px;
+      transform: translateX(-50%);
+    }
+    .es-accordion__item.is-open .es-accordion__icon::after {
+      transform: translateX(-50%) rotate(90deg);
+      opacity: 0;
+    }
+    .es-accordion__body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .es-accordion__content {
+      padding: 1.8rem 2rem 2.2rem;
+      background: linear-gradient(180deg, rgba(15, 12, 25, 0.65) 0%, rgba(8, 6, 16, 0.45) 100%);
+      border: 1px solid var(--color-gold-a06);
+      border-top: none;
+      border-left: none;
+      border-radius: 0 0 2px 0;
+      position: relative;
+    }
+    .es-accordion__content::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 2rem; right: 2rem;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--color-gold-a15), transparent);
+    }
+    .es-accordion__content p {
+      font-size: var(--fs-body);
+      line-height: 2.2;
+    }
+    .es-accordion__content p:last-child {
+      margin-bottom: 0;
+    }
+    .es-accordion__item.is-open {
+      border-left-color: var(--color-gold);
+    }
+    .es-accordion__item.is-open .es-accordion__header {
+      border-color: var(--color-gold-a12);
+      border-bottom-color: transparent;
+      border-radius: 2px 2px 0 0;
+    }
+    .es-accordion__item.is-open .es-accordion__num {
+      color: var(--color-gold-a60);
+    }
+    .es-accordion__item.is-open .es-accordion__content {
+      box-shadow: inset 0 0 80px rgba(192, 168, 120, 0.025);
+    }
+
+    @media (max-width: 480px) {
+      .es-accordion__header {
+        padding: 1.2rem 1.4rem;
+        gap: 0.8rem;
+      }
+      .es-accordion__title {
+        font-size: var(--fs-small);
+      }
+      .es-accordion__content {
+        padding: 1.4rem 1.4rem 1.8rem;
+      }
+      .es-accordion__content::before {
+        left: 1.4rem; right: 1.4rem;
+      }
+      .es-accordion__content p {
+        font-size: var(--fs-small);
+      }
+    }
   </style>
 <script type="application/ld+json">
 {
@@ -168,62 +303,82 @@
     </div>
   </section>
 
-  <!-- Explanation Block 1: 現場から浮かび上がった12の収束点 -->
+  <!-- 3つの説明アコーディオン -->
   <section class="section" style="padding-bottom: 0;">
     <div class="container">
-      <div class="content-block highlight-block fade-in">
-        <p>
-          ある人は天命を語り、<br class="sp-only">ある人は家族を語った。<br>
-          ある人は恐怖を語り、<br class="sp-only">ある人は死を語った。
-        </p>
-        <p>
-          テーマは違っても、<br class="sp-only">対話が深まると必ず、<br>
-          <strong>人生の同じ構造に触れる瞬間</strong>が訪れた。
-        </p>
-        <p>
-          この12の領域は、<br class="sp-only">そうした対話の現場から<br class="sp-only">自然に浮かび上がったものである。
-        </p>
-      </div>
-    </div>
-  </section>
+      <div class="es-accordion fade-in">
 
-  <hr class="separator">
+        <!-- 01: 現場から浮かび上がった12の収束点 -->
+        <div class="es-accordion__item">
+          <div class="es-accordion__header" role="button" tabindex="0" aria-expanded="false">
+            <span class="es-accordion__num">01</span>
+            <h3 class="es-accordion__title">現場から浮かび上がった12の収束点</h3>
+            <span class="es-accordion__icon"></span>
+          </div>
+          <div class="es-accordion__body">
+            <div class="es-accordion__content">
+              <p>
+                ある人は天命を語り、<br class="sp-only">ある人は家族を語った。<br>
+                ある人は恐怖を語り、<br class="sp-only">ある人は死を語った。
+              </p>
+              <p>
+                テーマは違っても、<br class="sp-only">対話が深まると必ず、<br>
+                <strong>人生の同じ構造に触れる瞬間</strong>が訪れた。
+              </p>
+              <p>
+                この12の領域は、<br class="sp-only">そうした対話の現場から<br class="sp-only">自然に浮かび上がったものである。
+              </p>
+            </div>
+          </div>
+        </div>
 
-  <!-- Explanation Block 2: 既存の対人支援が届かない場所へ -->
-  <section class="section" style="padding-bottom: 0;">
-    <div class="container">
-      <div class="content-block text-panel fade-in">
-        <p>
-          性欲、宿命、死後の遺産──<br>
-          これらは、カウンセリングでも<br class="sp-only">コーチングでも扱えない。<br>
-          <strong>「相談」の枠組みでは、<br class="sp-only">到達できない場所</strong>にある。
-        </p>
-        <p>
-          実存科学の対話は、<br class="sp-only">助言も診断もしない。<br>
-          ただ、<strong>問いの構造を共有する</strong>。<br>
-          それだけで、<br class="sp-only">人は自分の人生を<br class="sp-only">自分の言葉で語り始める。
-        </p>
-      </div>
-    </div>
-  </section>
+        <!-- 02: 既存の対人支援が届かない場所へ -->
+        <div class="es-accordion__item">
+          <div class="es-accordion__header" role="button" tabindex="0" aria-expanded="false">
+            <span class="es-accordion__num">02</span>
+            <h3 class="es-accordion__title">既存の対人支援が届かない場所へ</h3>
+            <span class="es-accordion__icon"></span>
+          </div>
+          <div class="es-accordion__body">
+            <div class="es-accordion__content">
+              <p>
+                性欲、宿命、死後の遺産──<br>
+                これらは、カウンセリングでも<br class="sp-only">コーチングでも扱えない。<br>
+                <strong>「相談」の枠組みでは、<br class="sp-only">到達できない場所</strong>にある。
+              </p>
+              <p>
+                実存科学の対話は、<br class="sp-only">助言も診断もしない。<br>
+                ただ、<strong>問いの構造を共有する</strong>。<br>
+                それだけで、<br class="sp-only">人は自分の人生を<br class="sp-only">自分の言葉で語り始める。
+              </p>
+            </div>
+          </div>
+        </div>
 
-  <hr class="separator">
+        <!-- 03: 悩みではなく、悩みを生み出す構造が終わる -->
+        <div class="es-accordion__item">
+          <div class="es-accordion__header" role="button" tabindex="0" aria-expanded="false">
+            <span class="es-accordion__num">03</span>
+            <h3 class="es-accordion__title">悩みではなく、構造が終わる</h3>
+            <span class="es-accordion__icon"></span>
+          </div>
+          <div class="es-accordion__body">
+            <div class="es-accordion__content">
+              <p>
+                ここにある12の対話は、<br class="sp-only">悩みを解決するものではない。
+              </p>
+              <p>
+                <strong>悩みを生み出していた構造</strong>そのものが、<br class="sp-only">対話を通じて終わる。
+              </p>
+              <p>
+                それは「気づき」ではなく、<br class="sp-only">「構造の転換」である。<br>
+                一度終わったものは、二度と戻らない。
+              </p>
+            </div>
+          </div>
+        </div>
 
-  <!-- Explanation Block 3: 悩みではなく、悩みを生み出す構造が終わる -->
-  <section class="section" style="padding-bottom: 0;">
-    <div class="container">
-      <div class="content-block highlight-block fade-in">
-        <p>
-          ここにある12の対話は、<br class="sp-only">悩みを解決するものではない。
-        </p>
-        <p>
-          <strong>悩みを生み出していた構造</strong>そのものが、<br class="sp-only">対話を通じて終わる。
-        </p>
-        <p>
-          それは「気づき」ではなく、<br class="sp-only">「構造の転換」である。<br>
-          一度終わったものは、二度と戻らない。
-        </p>
-      </div>
+      </div><!-- /.es-accordion -->
     </div>
   </section>
 
@@ -473,6 +628,34 @@
       <div class="search-hint"><span class="search-hint__desktop">ESC to close · ⌘K to toggle</span><span class="search-hint__mobile">背景タップまたは ✕ で閉じる</span></div>
     </div>
   </div>
+
+  <!-- Accordion Script -->
+  <script>
+  (function() {
+    document.querySelectorAll('.es-accordion__header').forEach(function(header) {
+      header.addEventListener('click', function() {
+        var item = this.parentElement;
+        var body = item.querySelector('.es-accordion__body');
+        var content = body.querySelector('.es-accordion__content');
+        var isOpen = item.classList.contains('is-open');
+        this.setAttribute('aria-expanded', !isOpen);
+        if (isOpen) {
+          body.style.maxHeight = '0';
+          item.classList.remove('is-open');
+        } else {
+          body.style.maxHeight = content.scrollHeight + 'px';
+          item.classList.add('is-open');
+        }
+      });
+      header.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          this.click();
+        }
+      });
+    });
+  })();
+  </script>
 </body>
 
 </html>
