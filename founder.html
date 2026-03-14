@@ -777,12 +777,24 @@
     .founder-act--light .founder-act__label { color: var(--color-gold-a40); }
     .founder-act--light .founder-act__title { color: #c0a878; }
 
-    /* 第三幕: 天命 — gold dense accent */
+    /* 第三幕: 天命 — deep green accent + shimmer */
     .founder-act--tenmei {
-      border-left: 3px solid rgba(192, 168, 120, 0.5);
+      border-left: 3px solid rgba(80, 160, 120, 0.45);
     }
-    .founder-act--tenmei .founder-act__label { color: var(--color-gold-a50); }
-    .founder-act--tenmei .founder-act__title { color: #c0a878; }
+    .founder-act--tenmei .founder-act__label { color: rgba(100, 180, 140, 0.6); }
+    .founder-act--tenmei .founder-act__title {
+      background: linear-gradient(90deg, #6ab89a 0%, #6ab89a 40%, #a8e8c8 50%, #6ab89a 60%, #6ab89a 100%);
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: green-shimmer 5s ease-in-out infinite;
+      filter: drop-shadow(0 0 14px rgba(80, 160, 120, 0.3)) drop-shadow(0 0 36px rgba(80, 160, 120, 0.12));
+    }
+    @keyframes green-shimmer {
+      0%, 100% { background-position: 100% 50%; }
+      50% { background-position: 0% 50%; }
+    }
 
     /* --- サブアコーディオン --- */
     .founder-sub-accordion {
@@ -835,12 +847,12 @@
       border-left-color: rgba(192, 168, 120, 0.4);
     }
 
-    /* 天命の章サブトリガー */
+    /* 天命の章サブトリガー — deep green */
     .founder-act--tenmei .founder-sub-accordion__trigger {
-      border-left: 2px solid rgba(192, 168, 120, 0.25);
+      border-left: 2px solid rgba(80, 160, 120, 0.25);
     }
     .founder-act--tenmei .founder-sub-accordion__trigger:hover {
-      border-left-color: rgba(192, 168, 120, 0.5);
+      border-left-color: rgba(80, 160, 120, 0.5);
     }
 
     .founder-sub-accordion__content {
