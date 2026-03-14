@@ -130,35 +130,6 @@
       color: var(--text);
     }
 
-    /* CTA */
-    .cta-block {
-      margin-top: 3rem;
-      padding: 2rem;
-      background: var(--highlight);
-      border-left: 4px solid var(--accent);
-      text-align: center;
-    }
-
-    .cta-block p {
-      margin-bottom: 0.5rem;
-      text-align: center;
-    }
-
-    .cta-block .cta-link {
-      display: inline-block;
-      margin-top: 1rem;
-      font-weight: 700;
-      color: var(--accent);
-      text-decoration: none;
-      border-bottom: 2px solid var(--accent);
-      padding-bottom: 2px;
-      font-size: var(--fs-lead);
-    }
-
-    .cta-block .cta-link:hover {
-      opacity: 0.7;
-    }
-
     hr {
       border: none;
       border-top: 1px solid var(--border);
@@ -208,7 +179,7 @@ input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); 
 <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
   <meta property="og:url" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/10reasons-part1.html">
 <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="../css/style.min.css?v=24">
+  <link rel="stylesheet" href="../css/style.min.css?v=25">
 </head>
 
 <body>
@@ -252,7 +223,7 @@ input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); 
         </ol>
       </nav>
       <p class="label">EXISTENTIAL SCIENCE RESEARCH INSTITUTE</p>
-      <h1>【第1部】を読むべき10の理由</h1>
+      <h1 class="hero-title--shimmer">【第1部】を読むべき10の理由</h1>
       <p class="subtitle">『Metaがある限り自由意志は存在しない』<br>──3000年の認識論を終わらせ、世界のOSを書き換える実存科学</p>
     </header>
   <div class="reading-progress"></div>
@@ -360,11 +331,18 @@ input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); 
     <div class="highlight-block fade-in"><p>主語の消滅は"真理に従って生きる構造"への移行に過ぎない──これは自由意志否定論では絶対に触れられなかった"救済の構造"であり、第2部への必然的導線を形成する。</p></div>
 
     <!-- CTA -->
-    <div class="cta-block fade-in">
-      <p><strong>第1部を読む</strong></p>
-      <p>『Metaがある限り自由意志は存在しない』──3000年の認識論を終わらせ、世界のOSを書き換える実存科学</p>
-      <a class="cta-link" href="part1.html">→ 第1部へ進む</a>
-    </div>
+    <section class="cta-block fade-in">
+      <div class="container">
+        <h2 class="cta-block__title">天命の言語化セッション™</h2>
+        <p class="cta-block__desc">2時間で天命が言語化できる場所。</p>
+        <div class="cta-block__features">
+          <span class="cta-block__feature">Zoom完結</span>
+          <span class="cta-block__feature">事前学習不要</span>
+          <span class="cta-block__feature">対話のみ</span>
+        </div>
+        <a href="../trial.html" class="btn">無料トライアルに申し込む &rarr;</a>
+      </div>
+    </section>
 
     <div style="text-align: center; padding: 2rem 0;">
       <a href="../index.html" style="font-size: 0.85rem; color: var(--text-secondary);">← トップに戻る</a>
