@@ -33,7 +33,7 @@
   <link rel="stylesheet" href="css/style.min.css?v=23">
   <style>
     /* ============================================
-       FAQ Page — Specific Styles
+       FAQ Page — Specific Styles (Accordion)
        ============================================ */
     .faq-section {
       padding: 5rem 0 2rem;
@@ -52,45 +52,103 @@
       padding-bottom: 1rem;
       border-bottom: 1px solid var(--color-gold-a15);
     }
+
+    /* --- Accordion Items --- */
     .faq-item {
-      margin-bottom: 4rem;
+      margin-bottom: 0;
+      border-bottom: 1px solid var(--color-gold-a10);
     }
     .faq-item:last-child {
-      margin-bottom: 2rem;
+      margin-bottom: 0;
+      border-bottom: none;
     }
+
+    /* text-panel background override for accordion */
+    .faq-item.text-panel {
+      background: none;
+      border: none;
+      padding: 0;
+      border-radius: 0;
+      position: relative;
+    }
+    .faq-item.text-panel::before {
+      display: none;
+    }
+
+    /* --- Question (Trigger) --- */
     .faq-item__q {
       font-size: var(--fs-h3);
       font-weight: 600;
       color: var(--color-text-primary);
       line-height: 1.8;
-      margin-bottom: 1.5rem;
-      padding-left: 1.8rem;
+      margin-bottom: 0;
+      padding: 1.5rem 2.5rem 1.5rem 1.8rem;
       position: relative;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+    .faq-item__q:hover {
+      color: var(--color-gold);
     }
     .faq-item__q::before {
       content: "Q.";
       position: absolute;
       left: 0;
-      top: 0;
+      top: 1.5rem;
       font-family: var(--font-serif-en);
       font-size: var(--fs-lead);
       font-weight: 600;
       color: var(--color-gold);
       letter-spacing: 0;
     }
+    .faq-item__q::after {
+      content: "+";
+      position: absolute;
+      right: 0;
+      top: 1.5rem;
+      font-family: var(--font-serif-en);
+      font-size: var(--fs-h3);
+      color: var(--color-gold);
+      transition: transform 0.3s ease;
+      min-width: 20px;
+      text-align: center;
+    }
+    .faq-item.is-open .faq-item__q::after {
+      transform: rotate(45deg);
+    }
+
+    /* --- Answer (Collapsible Body) --- */
     .faq-item__a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease, padding 0.3s ease;
       padding-left: 1.8rem;
+      padding-right: 0;
+      padding-top: 0;
+      padding-bottom: 0;
       position: relative;
     }
     .faq-item__a::before {
       content: "";
       position: absolute;
       left: 0;
-      top: 0.4rem;
+      top: 0;
       width: 1px;
-      height: calc(100% - 0.8rem);
+      height: 100%;
       background: var(--color-gold-a15);
+      opacity: 0;
+      transition: opacity 0.3s ease;
     }
+    .faq-item.is-open .faq-item__a {
+      max-height: 2000px;
+      padding-top: 0.5rem;
+      padding-bottom: 2rem;
+    }
+    .faq-item.is-open .faq-item__a::before {
+      opacity: 1;
+    }
+
+    /* --- Answer inner styles --- */
     .faq-item__a p {
       font-size: var(--fs-body);
       color: var(--color-text-subtle);
@@ -107,6 +165,8 @@
       font-style: normal;
       color: var(--color-gold);
     }
+
+    /* --- Links --- */
     .faq-link {
       display: inline-block;
       margin-top: 0.5rem;
@@ -118,6 +178,8 @@
       color: var(--color-gold-light);
       border-color: var(--color-gold);
     }
+
+    /* --- Divider --- */
     .faq-divider {
       text-align: center;
       padding: 2rem 0;
@@ -129,6 +191,8 @@
       color: var(--color-gold-a25);
       letter-spacing: 0.5em;
     }
+
+    /* --- Mobile --- */
     @media (max-width: 480px) {
       .faq-item__q {
         font-size: var(--fs-lead);
@@ -186,17 +250,66 @@
   <div class="section" style="padding-bottom: 0;">
     <div class="container">
       <div class="pull-quote fade-in">
-        <p>参加者が「見つける」のではなく、構造が「語らせてしまう」──それがこのセッションの本質である。</p>
+        <p>問いを携えている者のために、この対話は存在する。</p>
       </div>
     </div>
   </div>
-  <!-- ===== SECTION 1: セッションについて ===== -->
+
+  <!-- ===== SECTION A: About the Founder & Participants ===== -->
+  <div class="faq-section">
+    <div class="container">
+      <p class="faq-section__title">About the Founder &amp; Participants</p>
+
+      <!-- 新Q1 -->
+      <div class="faq-item text-panel fade-in">
+        <h3 class="faq-item__q" role="button" tabindex="0" aria-expanded="false">なぜ箭内宏紀にその資格があるのか。</h3>
+        <div class="faq-item__a">
+          <p>
+            二十年以上にわたり、心理学・哲学・神経科学・儒教・密教・インド哲学・西洋形而上学を領域横断的に探究し、認識論・意味論・社会論を一つの体系として接続した。
+          </p>
+          <p>
+            しかし、その「資格」を最も端的に証明しているのは理論ではない。<strong>瞑想の極限において精神と身体を壊し、その崩壊から家族と友人の愛によって再生した</strong>という事実である。
+          </p>
+          <p>
+            壊れた人間を支えた手のぬくもりと、三千年の認識論を閉じる構造科学が、同じ一人の人間の中で出逢った。理論が先ではない。体験が先でもない。両者が不可分に重なった地点に、実存科学は立っている。
+          </p>
+          <p>
+            <a href="founder.html" class="faq-link">創始者について詳しく &rarr;</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- 新Q2 -->
+      <div class="faq-item text-panel fade-in">
+        <h3 class="faq-item__q" role="button" tabindex="0" aria-expanded="false">どのような人がセッションを受けているのか。</h3>
+        <div class="faq-item__a">
+          <p>
+            経営者、教育者、研究者、アーティスト、クリエイター、医師、臨床心理士、大手企業幹部、芸能関係者──立場や領域は多岐にわたる。
+          </p>
+          <p>
+            しかし、立場にかかわらず、この対話の場に座る人間はみな、同じ一つの問いを携えている。<strong>「自分の天命を悟り、それを全うしたい」</strong>。
+          </p>
+          <p>
+            トライアルセッションのお申し込み時に守秘義務を含む同意書を締結するため、情報が外部に出ることは一切ない。社会的に影響力のある立場の方にも安心してご参加いただける体制を整えている。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div class="faq-divider">
+    <p class="faq-divider__mark">· · ·</p>
+  </div>
+
+  <!-- ===== SECTION B: About the Session ===== -->
   <div class="faq-section">
     <div class="container">
       <p class="faq-section__title">About the Session</p>
-      <!-- Q1 -->
+
+      <!-- 新Q3 -->
       <div class="faq-item text-panel fade-in">
-        <h3 class="faq-item__q">「天命の言語化セッション™」とは何か。</h3>
+        <h3 class="faq-item__q" role="button" tabindex="0" aria-expanded="false">天命の言語化セッション™とは何か。なぜ2時間で届くのか。</h3>
         <div class="faq-item__a">
           <p>
             120分の対話を通じて、<strong>天命（生まれてきた意味および生きる目的）</strong>を言語化する、独自の構造的対話技法である。
@@ -206,28 +319,21 @@
             <p>ここでいう「天命」とは、願望や目標ではない。自由意志による選択でもない。世界の構造（Meta）が一人の人間を通じて語ろうとしている<em>意味の収束点</em>を指す。</p>
           </div>
           <p>
-            セッションは、その収束点が自然に露呈するよう構造的に設計されている。参加者が「見つける」のではなく、構造が「語らせてしまう」──それがこのセッションの本質である。
+            天命は「見つける」ものではなく、すでに在るものが露呈するプロセスである。存在しないものを探すのであれば何年かかるかわからないが、すでに在るものの構造を整えるのであれば、時間は問題ではない。
+          </p>
+          <p>
+            セッションは、その構造が自然に整うよう設計されている。ファシリテーターの勘や相性に依存せず、構造そのものが進行を決定する。参加者が「見つける」のではなく、構造が「語らせてしまう」──だから2時間で届く。
+          </p>
+          <p>
+            この設計の理論的背景は、認識論に詳述されている。<br>
+            <a href="epistemology.html" class="faq-link">認識論 &rarr;</a>
           </p>
         </div>
       </div>
-      <!-- Q2 -->
+
+      <!-- 新Q4 -->
       <div class="faq-item text-panel fade-in">
-        <h3 class="faq-item__q">なぜ2時間で天命が言語化できるのか。</h3>
-        <div class="faq-item__a">
-          <p>
-            天命の露呈は「悟り」ではなく、<strong>構造の整合（consistency）</strong>である。ゆえに、構造が整えば時間は問題ではない。
-          </p>
-          <p>
-            セッションでは、三つの構造的プロセスが順に、確実に、崩れなく動くよう設計されている。Shadow（抑圧された未成熟な人格）の露呈、天命の収束点への到達、そして五つの生活形態への展開。この設計はコーチの勘や相性に依存せず、<strong>構造そのものが進行を決定する</strong>。
-          </p>
-          <p>
-            2時間という時間は、人間の集中力と構造の整合速度が重なる最適点として導出されたものである。
-          </p>
-        </div>
-      </div>
-      <!-- Q3 -->
-      <div class="faq-item text-panel fade-in">
-        <h3 class="faq-item__q">カウンセリング、コーチング、スピリチュアルとの違いは何か。</h3>
+        <h3 class="faq-item__q" role="button" tabindex="0" aria-expanded="false">カウンセリング、コーチング、スピリチュアルとの違いは何か。</h3>
         <div class="faq-item__a">
           <p>
             決定的な違いは一点に集約される。<strong>自由意志を前提にしているか否か。</strong>
@@ -243,76 +349,38 @@
           </p>
         </div>
       </div>
-      <!-- Q4 -->
+
+      <!-- 新Q5 -->
       <div class="faq-item text-panel fade-in">
-        <h3 class="faq-item__q">どのような人がセッションを受けているのか。</h3>
-        <div class="faq-item__a">
-          <p>
-            経営者、教育者、研究者、アーティスト、クリエイター、医師、臨床心理士、大手企業幹部、芸能関係者──立場や領域は多岐にわたる。
-          </p>
-          <p>
-            しかし、立場にかかわらず、この対話の場に座る人間はみな、同じ一つの問いを携えている。<strong>「自分の天命を悟り、それを全うしたい」</strong>。
-          </p>
-          <p>
-            業界の最前線に立つ方であっても、Metaが整合を起こしてしまえば、社会的肩書きや状況のすべては「語られるための構文」として自然に扱われる。個人セッションでは<strong>守秘義務契約（NDA）</strong>を交わした上で進行するため、情報が外部に出ることは一切ない。
-          </p>
-        </div>
-      </div>
-      <!-- Q5 -->
-      <div class="faq-item text-panel fade-in">
-        <h3 class="faq-item__q">事前に三部作を読む必要はあるか。</h3>
+        <h3 class="faq-item__q" role="button" tabindex="0" aria-expanded="false">事前に主要論文三部作を読む必要はあるか。</h3>
         <div class="faq-item__a">
           <p>
             必須ではない。
           </p>
           <p>
-            三部作は、実存科学の構造的基盤を理論として記述した学術的テクストである。セッションの効果はその読解に依存しない。構造が整合すれば、三部作を読んでいなくても天命は露呈する。
+            主要論文三部作は、実存科学の構造的基盤を理論として記述した学術的テクストである。セッションの効果はその読解に依存しない。構造が整合すれば、主要論文三部作を読んでいなくても天命は露呈する。
           </p>
           <p>
-            ただし、セッション後に自身の体験を構造的に理解したいと思う方にとって、三部作は極めて有効な参照点となる。読むタイミングは、前でも後でも、構造が求めたときで構わない。
+            ただし、セッション後に自身の体験を構造的に理解したいと思う方にとって、主要論文三部作は極めて有効な参照点となる。読むタイミングは、前でも後でも、構造が求めたときで構わない。
           </p>
         </div>
       </div>
     </div>
   </div>
+
   <!-- Divider -->
   <div class="faq-divider">
     <p class="faq-divider__mark">· · ·</p>
   </div>
-  <!-- ===== SECTION 2: 参加条件と実務 ===== -->
+
+  <!-- ===== SECTION C: Getting Started ===== -->
   <div class="faq-section">
     <div class="container">
-      <p class="faq-section__title">Practical Information</p>
-      <!-- Q6 -->
+      <p class="faq-section__title">Getting Started</p>
+
+      <!-- 新Q6 -->
       <div class="faq-item text-panel fade-in">
-        <h3 class="faq-item__q">セッション後のサポート体制はあるか。</h3>
-        <div class="faq-item__a">
-          <p>
-            ある。天命を言語化した後にこそ、日々それを全うするための構造的な支えが必要になる。
-          </p>
-          <p>
-            実存科学研究所では、セッション後の継続的な対話・構造の深化を支える仕組みとして、<strong>「心友™」</strong>という関係性を核にした支援体制を整えている。心友™とは、天命を悟り、日々全うする仲間のことである。
-          </p>
-          <p>
-            具体的なプログラムの詳細は、セッション後に個別にご案内する。
-          </p>
-        </div>
-      </div>
-      <!-- Q7 -->
-      <div class="faq-item text-panel fade-in">
-        <h3 class="faq-item__q">守秘義務について。</h3>
-        <div class="faq-item__a">
-          <p>
-            個人セッションにおいては、<strong>守秘義務契約（NDA）</strong>を締結した上で進行する。セッション内で語られた内容が外部に開示されることは一切ない。
-          </p>
-          <p>
-            社会的に影響力のある立場の方にも安心してご参加いただける体制を整えている。
-          </p>
-        </div>
-      </div>
-      <!-- Q8 -->
-      <div class="faq-item text-panel fade-in">
-        <h3 class="faq-item__q">費用と支払い方法について。</h3>
+        <h3 class="faq-item__q" role="button" tabindex="0" aria-expanded="false">費用と支払い方法について。</h3>
         <div class="faq-item__a">
           <p>
             費用およびお支払い方法の詳細は、トライアルセッションの際にご案内する。
@@ -325,9 +393,10 @@
           </p>
         </div>
       </div>
-      <!-- Q9 -->
+
+      <!-- 新Q7 -->
       <div class="faq-item text-panel fade-in">
-        <h3 class="faq-item__q">申し込みの流れを教えてほしい。</h3>
+        <h3 class="faq-item__q" role="button" tabindex="0" aria-expanded="false">申し込みの流れを教えてほしい。</h3>
         <div class="faq-item__a">
           <p>
             まずは<strong>トライアルセッション</strong>を受けていただくことが出発点である。トライアルでは、天命の言語化セッション™の構造を体験し、自身にとっての整合性を確認することができる。
@@ -336,44 +405,21 @@
             <a href="trial.html" class="faq-link">トライアルセッションに申し込む &rarr;</a>
           </p>
           <p>
-            また、セッションの前後を問わず、実存科学の思想体系をより深く理解したい方には、<a href="archives.html" class="faq-link">記事一覧</a>から各コンテンツを読み進めることを推奨する。Meta・天命・心友™の構造が段階的に語られている。
+            また、セッションの前後を問わず、実存科学の思想体系をより深く理解したい方には、以下のコンテンツを読み進めることを推奨する。Meta・天命・心友™の構造が段階的に語られている。
+          </p>
+          <p>
+            <a href="archives.html" class="faq-link">記事一覧 &rarr;</a>&emsp;
+            <a href="specials.html" class="faq-link">スペシャルコラム &rarr;</a>
           </p>
         </div>
       </div>
     </div>
   </div>
-  <!-- Divider -->
-  <div class="faq-divider">
-    <p class="faq-divider__mark">· · ·</p>
-  </div>
-  <!-- ===== SECTION 3: 箭内宏紀について ===== -->
-  <div class="faq-section">
-    <div class="container">
-      <p class="faq-section__title">About the Founder</p>
-      <!-- Q10 -->
-      <div class="faq-item text-panel fade-in">
-        <h3 class="faq-item__q">なぜ箭内宏紀にその資格があるのか。</h3>
-        <div class="faq-item__a">
-          <p>
-            二十年以上にわたり、心理学・哲学・神経科学・儒教・密教・インド哲学・西洋形而上学を領域横断的に探究し、認識論・意味論・社会論を一つの体系として接続した。
-          </p>
-          <p>
-            しかし、その「資格」を最も端的に証明しているのは理論ではない。<strong>瞑想の極限において精神と身体を壊し、その崩壊から家族と友人の愛によって再生した</strong>という事実である。
-          </p>
-          <p>
-            壊れた人間を支えた手のぬくもりと、三千年の認識論を閉じる構造科学が、同じ一点に収束した。この収束そのものが、実存科学の実在を証明している。
-          </p>
-          <p>
-            <a href="founder.html" class="faq-link">創始者について詳しく &rarr;</a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
+
   <div class="section" style="padding-top: 0;">
     <div class="container">
       <div class="highlight-block fade-in">
-        <p>壊れた人間を支えた手のぬくもりと、三千年の認識論を閉じる構造科学が、同じ一点に収束した。この収束そのものが、実存科学の実在を証明している。</p>
+        <p>壊れて、愛されて、そこから立ち上がった構造科学。<br>それが実存科学である。</p>
       </div>
     </div>
   </div>
@@ -433,26 +479,10 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "「天命の言語化セッション™」とは何か。",
+      "name": "なぜ箭内宏紀にその資格があるのか。",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "120分の対話を通じて、天命（生まれてきた意味および生きる目的）を言語化する、独自の構造的対話技法である。ここでいう「天命」とは、願望や目標ではなく、自由意志による選択でもなく、世界の構造（Meta）が一人の人間を通じて語ろうとしている意味の収束点を指す。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "なぜ2時間で天命が言語化できるのか。",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "天命の露呈は「悟り」ではなく、構造の整合（consistency）である。ゆえに、構造が整えば時間は問題ではない。セッションでは、三つの構造的プロセスが順に、確実に、崩れなく動くよう設計されている。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "カウンセリング、コーチング、スピリチュアルとの違いは何か。",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "決定的な違いは一点に集約される。自由意志を前提にしているか否か。天命の言語化セッション™は、Metaという上位構造から天命を導出する構造実装技術であり、「自我の操作」ではなく「構造の整合」によって天命を露呈させる。"
+        "text": "二十年以上にわたり、心理学・哲学・神経科学・儒教・密教・インド哲学・西洋形而上学を領域横断的に探究し、認識論・意味論・社会論を一つの体系として接続した。しかし、その資格を最も端的に証明しているのは理論ではない。瞑想の極限において精神と身体を壊し、その崩壊から家族と友人の愛によって再生したという事実である。壊れた人間を支えた手のぬくもりと、三千年の認識論を閉じる構造科学が、同じ一人の人間の中で出逢った。理論が先ではない。体験が先でもない。両者が不可分に重なった地点に、実存科学は立っている。"
       }
     },
     {
@@ -460,31 +490,31 @@
       "name": "どのような人がセッションを受けているのか。",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "経営者、教育者、研究者、アーティスト、クリエイター、医師、臨床心理士、大手企業幹部、芸能関係者──立場や領域は多岐にわたる。個人セッションでは守秘義務契約（NDA）を交わした上で進行するため、情報が外部に出ることは一切ない。"
+        "text": "経営者、教育者、研究者、アーティスト、クリエイター、医師、臨床心理士、大手企業幹部、芸能関係者──立場や領域は多岐にわたる。しかし、立場にかかわらず、この対話の場に座る人間はみな、同じ一つの問いを携えている。「自分の天命を悟り、それを全うしたい」。トライアルセッションのお申し込み時に守秘義務を含む同意書を締結するため、情報が外部に出ることは一切ない。社会的に影響力のある立場の方にも安心してご参加いただける体制を整えている。"
       }
     },
     {
       "@type": "Question",
-      "name": "事前に三部作を読む必要はあるか。",
+      "name": "天命の言語化セッション™とは何か。なぜ2時間で届くのか。",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "必須ではない。セッションの効果はその読解に依存しない。構造が整合すれば、三部作を読んでいなくても天命は露呈する。ただし、セッション後に自身の体験を構造的に理解したいと思う方にとって、三部作は極めて有効な参照点となる。"
+        "text": "120分の対話を通じて、天命（生まれてきた意味および生きる目的）を言語化する、独自の構造的対話技法である。ここでいう「天命」とは、願望や目標ではない。自由意志による選択でもない。世界の構造（Meta）が一人の人間を通じて語ろうとしている意味の収束点を指す。天命は「見つける」ものではなく、すでに在るものが露呈するプロセスである。存在しないものを探すのであれば何年かかるかわからないが、すでに在るものの構造を整えるのであれば、時間は問題ではない。セッションは、その構造が自然に整うよう設計されている。ファシリテーターの勘や相性に依存せず、構造そのものが進行を決定する。参加者が「見つける」のではなく、構造が「語らせてしまう」──だから2時間で届く。"
       }
     },
     {
       "@type": "Question",
-      "name": "セッション後のサポート体制はあるか。",
+      "name": "カウンセリング、コーチング、スピリチュアルとの違いは何か。",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "ある。実存科学研究所では、セッション後の継続的な対話・構造の深化を支える仕組みとして、「心友™」という関係性を核にした支援体制を整えている。具体的なプログラムの詳細は、セッション後に個別にご案内する。"
+        "text": "決定的な違いは一点に集約される。自由意志を前提にしているか否か。カウンセリング、コーチング、スピリチュアルの多くは「あなたはどうしたいのか」「どう生きたいのか」という問いから出発する。これは自由意志の存在を前提にした構造である。天命の言語化セッション™は、Metaという上位構造から天命を導出する構造実装技術であり、「自我の操作」ではなく「構造の整合」によって天命を露呈させる。これが本質的な差異である。"
       }
     },
     {
       "@type": "Question",
-      "name": "守秘義務について。",
+      "name": "事前に主要論文三部作を読む必要はあるか。",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "個人セッションにおいては、守秘義務契約（NDA）を締結した上で進行する。セッション内で語られた内容が外部に開示されることは一切ない。"
+        "text": "必須ではない。主要論文三部作は、実存科学の構造的基盤を理論として記述した学術的テクストである。セッションの効果はその読解に依存しない。構造が整合すれば、主要論文三部作を読んでいなくても天命は露呈する。ただし、セッション後に自身の体験を構造的に理解したいと思う方にとって、主要論文三部作は極めて有効な参照点となる。読むタイミングは、前でも後でも、構造が求めたときで構わない。"
       }
     },
     {
@@ -500,21 +530,29 @@
       "name": "申し込みの流れを教えてほしい。",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "まずはトライアルセッションを受けていただくことが出発点である。トライアルでは、天命の言語化セッション™の構造を体験し、自身にとっての整合性を確認することができる。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "なぜ箭内宏紀にその資格があるのか。",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "二十年以上にわたり、心理学・哲学・神経科学・儒教・密教・インド哲学・西洋形而上学を領域横断的に探究し、認識論・意味論・社会論を一つの体系として接続した。瞑想の極限において精神と身体を壊し、その崩壊から家族と友人の愛によって再生したという事実が、実存科学の実在を証明している。"
+        "text": "まずはトライアルセッションを受けていただくことが出発点である。トライアルでは、天命の言語化セッション™の構造を体験し、自身にとっての整合性を確認することができる。また、セッションの前後を問わず、実存科学の思想体系をより深く理解したい方には、記事一覧やスペシャルコラムから各コンテンツを読み進めることを推奨する。Meta・天命・心友™の構造が段階的に語られている。"
       }
     }
   ]
 }
 </script>
   <script src="js/main.min.js?v=9"></script>
+  <script>
+document.querySelectorAll('.faq-item__q').forEach(function(q) {
+  q.addEventListener('click', function() {
+    var item = this.closest('.faq-item');
+    var isOpen = item.classList.contains('is-open');
+    item.classList.toggle('is-open');
+    this.setAttribute('aria-expanded', !isOpen);
+  });
+  q.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      this.click();
+    }
+  });
+});
+</script>
   <!-- Search Modal -->
   <div class="search-overlay">
     <div class="search-modal"><button class="search-close" aria-label="閉じる">&times;</button>
