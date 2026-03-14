@@ -2356,6 +2356,11 @@ a.site-logo:not(.btn):not(.session-card__link):hover {
   }
 }
 
+/* Hide mobile-only line breaks on desktop */
+@media (min-width: 481px) {
+  .sp-only { display: none; }
+}
+
 @media (max-width: 480px) {
   html {
     font-size: 16.5px;
