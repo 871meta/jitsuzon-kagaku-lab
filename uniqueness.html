@@ -154,6 +154,78 @@ hr {
 .table-scroll-hint {
   color: var(--color-gold-a60);
 }
+
+/* ── モバイル: テーブル → カードレイアウト ── */
+@media (max-width: 600px) {
+  .comparison-table thead {
+    display: none;
+  }
+  .table-wrapper {
+    overflow-x: visible;
+  }
+  .table-wrapper::after {
+    display: none;
+  }
+  .table-scroll-hint {
+    display: none !important;
+  }
+  .comparison-table,
+  .comparison-table tbody {
+    display: block;
+  }
+  .comparison-table tr {
+    display: block;
+    margin-bottom: 1.2rem;
+    padding: 1.2rem 1rem;
+    background: rgba(15, 12, 25, 0.88);
+    border: 1px solid var(--color-gold-a12);
+    border-radius: 6px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.25), inset 0 1px 0 var(--color-gold-a06);
+  }
+  .comparison-table .row-highlight {
+    border-color: var(--color-gold-a35);
+    background: rgba(192, 168, 120, 0.06);
+    box-shadow: 0 2px 20px rgba(192,168,120,0.08), inset 0 1px 0 var(--color-gold-a10);
+  }
+  .comparison-table td {
+    display: block;
+    padding: 0.3rem 0;
+    border: none;
+    border-right: none;
+    min-width: 0;
+  }
+  .comparison-table td:first-child {
+    white-space: normal;
+    min-width: 0;
+    border-right: none;
+    font-size: 1.05rem;
+    padding-bottom: 0.6rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-gold-a10);
+  }
+  .comparison-table .row-highlight td {
+    border-left: none;
+    box-shadow: none;
+    background: transparent;
+  }
+  .comparison-table .row-highlight td:first-child {
+    font-size: 1.1rem;
+  }
+  .comparison-table td::before {
+    content: attr(data-label);
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-gold-a60);
+    margin-bottom: 0.15rem;
+    font-family: var(--font-serif-en);
+  }
+  .comparison-table td:first-child::before {
+    display: none;
+  }
+}
 </style>
 <script type="application/ld+json">
 {
@@ -879,6 +951,14 @@ hr {
       <div class="search-hint"><span class="search-hint__desktop">ESC to close · ⌘K to toggle</span><span class="search-hint__mobile">背景タップまたは ✕ で閉じる</span></div>
     </div>
   </div>
+<script>
+document.querySelectorAll('.comparison-table').forEach(function(t){
+  var h=[].map.call(t.querySelectorAll('th'),function(th){return th.textContent});
+  t.querySelectorAll('tbody tr').forEach(function(tr){
+    [].forEach.call(tr.querySelectorAll('td'),function(td,i){td.setAttribute('data-label',h[i]||'')});
+  });
+});
+</script>
 </body>
 
 </html>
