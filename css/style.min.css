@@ -462,8 +462,12 @@ a.site-logo:not(.btn):not(.session-card__link):hover {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 0.65rem;
+  min-width: 44px;
+  min-height: 44px;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 6px;
 }
 
@@ -2813,7 +2817,9 @@ hr {
   border: none;
   color: var(--color-text-dim);
   cursor: pointer;
-  padding: 0.4rem;
+  padding: 0.7rem;
+  min-width: 44px;
+  min-height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3017,7 +3023,7 @@ hr {
   list-style: none;
   padding: 0;
   margin: 0;
-  font-size: var(--fs-micro);
+  font-size: var(--fs-xs);
   letter-spacing: 0.04em;
 }
 .breadcrumb__item {
@@ -3029,7 +3035,7 @@ hr {
 .breadcrumb__item::after {
   content: ">";
   color: var(--color-gold-a30);
-  font-size: 0.7rem;
+  font-size: 0.65rem;
 }
 .breadcrumb__item:last-child::after {
   display: none;
@@ -3038,6 +3044,10 @@ hr {
   color: var(--color-text-dim);
   text-decoration: none;
   transition: color 0.3s;
+  padding: 0.3rem 0;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
 }
 .breadcrumb__link:hover {
   color: var(--color-gold);
