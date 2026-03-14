@@ -31,6 +31,207 @@
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/style.min.css?v=23">
+<style>
+/* ── Archives: 高級ガラスカード ── */
+.arc-card {
+  background: linear-gradient(160deg, rgba(15,12,25,0.75) 0%, rgba(8,6,16,0.92) 100%);
+  border: 1px solid rgba(192,168,120,0.10);
+  border-radius: 6px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 2px 32px rgba(192,168,120,0.04), inset 0 1px 0 rgba(192,168,120,0.08);
+  padding: 2.8rem 2.5rem;
+  margin-bottom: 1.8rem;
+  position: relative;
+  overflow: hidden;
+}
+.arc-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(192,168,120,0.5), rgba(192,168,120,0.2), transparent 70%);
+}
+.arc-card .section__title {
+  background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: arc-gold-shimmer 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 16px rgba(192,168,120,0.3)) drop-shadow(0 0 40px rgba(192,168,120,0.12));
+}
+@keyframes arc-gold-shimmer {
+  0%, 100% { background-position: 100% 50%; }
+  50% { background-position: 0% 50%; }
+}
+
+/* ── Archives: pull-quote パープルシマー ── */
+.arc-pullquote p {
+  background: linear-gradient(90deg, #b8a0d8 0%, #b8a0d8 40%, #e0d0f0 50%, #b8a0d8 60%, #b8a0d8 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: arc-purple-shimmer 5s ease-in-out infinite;
+  filter: drop-shadow(0 0 12px rgba(160,130,210,0.25)) drop-shadow(0 0 30px rgba(160,130,210,0.1));
+}
+@keyframes arc-purple-shimmer {
+  0%, 100% { background-position: 100% 50%; }
+  50% { background-position: 0% 50%; }
+}
+
+/* ── Archives: セクション区切りヘッダー ── */
+.arc-section-header {
+  text-align: center;
+  padding: 3rem 0 2rem;
+  position: relative;
+}
+.arc-section-header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(192,168,120,0.3), transparent);
+}
+.arc-section-header h2 {
+  background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: arc-gold-shimmer 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 16px rgba(192,168,120,0.3)) drop-shadow(0 0 40px rgba(192,168,120,0.12));
+  font-size: 1.5rem;
+  letter-spacing: 0.08em;
+}
+
+/* ── Archives: アコーディオンカテゴリカード ── */
+.arc-category {
+  background: linear-gradient(160deg, rgba(15,12,25,0.68) 0%, rgba(8,6,16,0.88) 100%);
+  border: 1px solid rgba(192,168,120,0.08);
+  border-radius: 6px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 2px 24px rgba(192,168,120,0.03), inset 0 1px 0 rgba(192,168,120,0.06);
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.arc-category:hover {
+  border-color: rgba(192,168,120,0.15);
+  box-shadow: 0 2px 32px rgba(192,168,120,0.06), inset 0 1px 0 rgba(192,168,120,0.08);
+}
+.arc-category::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(192,168,120,0.35), rgba(192,168,120,0.1), transparent 60%);
+}
+
+/* 色分け: ゴールド系（奇数） */
+.arc-category--gold { border-left: 2px solid rgba(192,168,120,0.35); }
+/* 色分け: パープル系（偶数） */
+.arc-category--purple { border-left: 2px solid rgba(184,160,216,0.35); }
+.arc-category--purple::before {
+  background: linear-gradient(90deg, rgba(184,160,216,0.35), rgba(184,160,216,0.1), transparent 60%);
+}
+/* 色分け: ローズ系 */
+.arc-category--rose { border-left: 2px solid rgba(200,120,120,0.35); }
+.arc-category--rose::before {
+  background: linear-gradient(90deg, rgba(200,120,120,0.35), rgba(200,120,120,0.1), transparent 60%);
+}
+
+/* トリガー */
+.arc-category__trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.6rem 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-serif-short);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #c0a878;
+  letter-spacing: 0.04em;
+  line-height: 1.6;
+  text-align: left;
+  transition: color 0.3s ease;
+}
+.arc-category__trigger:hover { color: #f0e6c8; }
+.arc-category__icon {
+  font-family: var(--font-serif-en);
+  font-size: 1.2rem;
+  color: rgba(192,168,120,0.5);
+  transition: transform 0.3s ease;
+  min-width: 20px;
+  text-align: center;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+.arc-category.is-open .arc-category__icon {
+  transform: rotate(45deg);
+}
+
+/* ボディ */
+.arc-category__body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.4s ease;
+  padding: 0 2rem;
+}
+.arc-category.is-open .arc-category__body {
+  max-height: 2000px;
+  padding: 0 2rem 1.8rem;
+}
+.arc-category__body p {
+  font-size: var(--fs-body);
+  color: rgba(230,225,215,0.7);
+  line-height: 2;
+  margin-bottom: 1rem;
+}
+.arc-category__body .link-list {
+  margin-top: 0.5rem;
+}
+
+/* 記事数バッジ */
+.arc-count {
+  display: inline-block;
+  font-size: 0.7rem;
+  color: rgba(192,168,120,0.5);
+  background: rgba(192,168,120,0.06);
+  padding: 0.15rem 0.6rem;
+  border-radius: 12px;
+  margin-left: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  vertical-align: middle;
+}
+
+/* リンクリスト強化 */
+.arc-category__body .link-list li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid rgba(192,168,120,0.04);
+}
+.arc-category__body .link-list li:last-child {
+  border-bottom: none;
+}
+
+/* ── モバイル調整 ── */
+@media (max-width: 768px) {
+  .arc-card { padding: 2rem 1.5rem; }
+  .arc-category__trigger { padding: 1.3rem 1.5rem; font-size: 0.95rem; }
+  .arc-category__body { padding: 0 1.5rem; }
+  .arc-category.is-open .arc-category__body { padding: 0 1.5rem 1.5rem; }
+}
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -97,11 +298,13 @@
   <section class="section">
     <div class="container">
 
+      <!-- Pull Quote -->
+      <div class="pull-quote arc-pullquote fade-in">
+        <p>実存科学の歩みを、ここに記録する。</p>
+      </div>
+
       <!-- 映像 -->
-      <div class="content-block text-panel fade-in">
-        <div class="pull-quote">
-          <p>実存科学の歩みを、ここに記録する。</p>
-        </div>
+      <div class="arc-card fade-in">
         <h2 class="section__title section__title--left">映像</h2>
         <p>
           天命の言語化セッション™︎の世界観を映像として記録したプロモーション作品群。<br>
@@ -112,10 +315,8 @@
         </ul>
       </div>
 
-      <hr class="separator">
-
       <!-- 書籍 -->
-      <div class="content-block text-panel fade-in">
+      <div class="arc-card fade-in">
         <h2 class="section__title section__title--left">書籍</h2>
         <p>
           意味論・認識論・心理療法（能力開発）に関する著書9冊、論文8本。<br>
@@ -126,10 +327,8 @@
         </ul>
       </div>
 
-      <hr class="separator">
-
       <!-- 推薦の声 -->
-      <div class="content-block text-panel fade-in">
+      <div class="arc-card fade-in">
         <h2 class="section__title section__title--left">推薦の声</h2>
         <p>
           天命の言語化セッション&trade;を体験した方々の推薦文と、受講者インタビュー動画を掲載しています。
@@ -139,10 +338,8 @@
         </ul>
       </div>
 
-      <hr class="separator">
-
       <!-- 軌跡 -->
-      <div class="content-block text-panel fade-in">
+      <div class="arc-card fade-in">
         <h2 class="section__title section__title--left">軌跡</h2>
         <p>
           実存科学研究所が設立される以前の活動記録。<br>
@@ -155,187 +352,227 @@
       </div>
 
       <!-- ===== サイト内コンテンツ ===== -->
-      <hr class="separator">
-
-      <div class="content-block text-panel fade-in">
-        <h2 class="section__title section__title--left">サイト内コンテンツ</h2>
-        <p>実存科学研究所が公開する論考・コラム・書籍の全記事を、カテゴリ別に整理している。</p>
+      <div class="arc-section-header fade-in">
+        <h2>サイト内コンテンツ</h2>
+        <p style="color: rgba(230,225,215,0.5); font-size: 0.9rem; margin-top: 0.8rem;">実存科学研究所が公開する論考・コラム・書籍の全記事を、カテゴリ別に整理している。</p>
       </div>
 
       <!-- カテゴリ1：三部作 -->
-      <div class="content-block text-panel fade-in">
-        <h3 style="color: #c0a878; font-size: 1.1rem; margin-bottom: 1rem;">三部作（実存科学の三部作）</h3>
-        <ul class="link-list">
-          <li><a href="articles/part1.html">【第1部】Metaがある限り自由意志は存在しない──3000年の認識論を終わらせ、世界のOSを書き換える実存科学 &rarr;</a></li>
-          <li><a href="articles/part2.html">【第2部】天命を悟り、日々全うする──自由意志なき世界の歩き方 &rarr;</a></li>
-          <li><a href="articles/part3.html">【第3部】生きる意味を語れる社会へ──心友™という絆が文明を最適化する &rarr;</a></li>
-          <li><a href="trilogy-guide.html">この三部作を読むためのガイドライン──MetaOSへの案内 &rarr;</a></li>
-        </ul>
+      <div class="arc-category arc-category--gold fade-in">
+        <button class="arc-category__trigger" aria-expanded="false">
+          三部作（実存科学の三部作）<span class="arc-count">4本</span>
+          <span class="arc-category__icon">+</span>
+        </button>
+        <div class="arc-category__body">
+          <ul class="link-list">
+            <li><a href="articles/part1.html">【第1部】Metaがある限り自由意志は存在しない──3000年の認識論を終わらせ、世界のOSを書き換える実存科学 &rarr;</a></li>
+            <li><a href="articles/part2.html">【第2部】天命を悟り、日々全うする──自由意志なき世界の歩き方 &rarr;</a></li>
+            <li><a href="articles/part3.html">【第3部】生きる意味を語れる社会へ──心友™という絆が文明を最適化する &rarr;</a></li>
+            <li><a href="trilogy-guide.html">この三部作を読むためのガイドライン──MetaOSへの案内 &rarr;</a></li>
+          </ul>
+        </div>
       </div>
-
-      <hr class="separator">
 
       <!-- カテゴリ2：三部作を読むべき10の理由 -->
-      <div class="content-block text-panel fade-in">
-        <h3 style="color: #c0a878; font-size: 1.1rem; margin-bottom: 1rem;">三部作を読むべき10の理由</h3>
-        <ul class="link-list">
-          <li><a href="articles/10reasons-part1.html">【第1部】を読むべき10の理由 &rarr;</a></li>
-          <li><a href="articles/10reasons-part2.html">【第2部】を読むべき10の理由 &rarr;</a></li>
-          <li><a href="articles/10reasons-part3.html">【第3部】を読むべき10の理由 &rarr;</a></li>
-        </ul>
+      <div class="arc-category arc-category--purple fade-in">
+        <button class="arc-category__trigger" aria-expanded="false">
+          三部作を読むべき10の理由<span class="arc-count">3本</span>
+          <span class="arc-category__icon">+</span>
+        </button>
+        <div class="arc-category__body">
+          <ul class="link-list">
+            <li><a href="articles/10reasons-part1.html">【第1部】を読むべき10の理由 &rarr;</a></li>
+            <li><a href="articles/10reasons-part2.html">【第2部】を読むべき10の理由 &rarr;</a></li>
+            <li><a href="articles/10reasons-part3.html">【第3部】を読むべき10の理由 &rarr;</a></li>
+          </ul>
+        </div>
       </div>
-
-      <hr class="separator">
 
       <!-- カテゴリ3：認識論タイムマシン -->
-      <div class="content-block text-panel fade-in">
-        <h3 style="color: #c0a878; font-size: 1.1rem; margin-bottom: 1rem;">認識論タイムマシン（書籍）</h3>
-        <img src="images/menu-12-timemachine.png" alt="認識論的タイムマシン™"
-          style="width: 100%; max-width: 560px; border-radius: 8px; margin-bottom: 2rem; display: block;" class="fade-in" loading="lazy">
-        <ul class="link-list">
-          <li><a href="articles/book-epistemological-timemachine-00.html">人生をやり直す方法──認識論的タイムマシンという真理の構造 &rarr;</a></li>
-          <li><a href="articles/book-epistemological-timemachine-01.html">第1章｜「人生をやり直したい」という痛みとその構造 &rarr;</a></li>
-          <li><a href="articles/book-epistemological-timemachine-02.html">第2章｜なぜ我々はそう願ってしまうのか &rarr;</a></li>
-          <li><a href="articles/book-epistemological-timemachine-03.html">第3章｜時間構造を超える──Metaという認識論（真理） &rarr;</a></li>
-          <li><a href="articles/book-epistemological-timemachine-04.html">第4章｜天命という意味論──意味は"構造"である &rarr;</a></li>
-          <li><a href="articles/book-epistemological-timemachine-05.html">第5章｜生きる意味を語れる世界へ──天命で社会を創る &rarr;</a></li>
-          <li><a href="articles/book-epistemological-timemachine-06.html">第6章｜方法：天命の言語化セッション™とは何か &rarr;</a></li>
-          <li><a href="articles/book-epistemological-timemachine-07.html">第7章｜「愛」という完全構造の効果効能 &rarr;</a></li>
-        </ul>
+      <div class="arc-category arc-category--gold fade-in">
+        <button class="arc-category__trigger" aria-expanded="false">
+          認識論タイムマシン（書籍）<span class="arc-count">8本</span>
+          <span class="arc-category__icon">+</span>
+        </button>
+        <div class="arc-category__body">
+          <img src="images/menu-12-timemachine.png" alt="認識論的タイムマシン™"
+            style="width: 100%; max-width: 560px; border-radius: 8px; margin-bottom: 2rem; display: block;" loading="lazy">
+          <ul class="link-list">
+            <li><a href="articles/book-epistemological-timemachine-00.html">人生をやり直す方法──認識論的タイムマシンという真理の構造 &rarr;</a></li>
+            <li><a href="articles/book-epistemological-timemachine-01.html">第1章｜「人生をやり直したい」という痛みとその構造 &rarr;</a></li>
+            <li><a href="articles/book-epistemological-timemachine-02.html">第2章｜なぜ我々はそう願ってしまうのか &rarr;</a></li>
+            <li><a href="articles/book-epistemological-timemachine-03.html">第3章｜時間構造を超える──Metaという認識論（真理） &rarr;</a></li>
+            <li><a href="articles/book-epistemological-timemachine-04.html">第4章｜天命という意味論──意味は"構造"である &rarr;</a></li>
+            <li><a href="articles/book-epistemological-timemachine-05.html">第5章｜生きる意味を語れる世界へ──天命で社会を創る &rarr;</a></li>
+            <li><a href="articles/book-epistemological-timemachine-06.html">第6章｜方法：天命の言語化セッション™とは何か &rarr;</a></li>
+            <li><a href="articles/book-epistemological-timemachine-07.html">第7章｜「愛」という完全構造の効果効能 &rarr;</a></li>
+          </ul>
+        </div>
       </div>
-
-      <hr class="separator">
 
       <!-- カテゴリ4：その他の書籍 -->
-      <div class="content-block text-panel fade-in">
-        <h3 style="color: #c0a878; font-size: 1.1rem; margin-bottom: 1rem;">その他の書籍</h3>
-        <ul class="link-list">
-          <li><a href="articles/book-love-as-structure.html">自由意志なき世界で「愛する」ということ &rarr;</a></li>
-          <li><a href="articles/book-tenmei-marketing.html">【特典】天命のマーケティング &rarr;</a></li>
-          <li><a href="articles/book-distorted-support-00.html">いびつな支援──対人支援者が陥る7つの構造 &rarr;</a></li>
-        </ul>
+      <div class="arc-category arc-category--purple fade-in">
+        <button class="arc-category__trigger" aria-expanded="false">
+          その他の書籍<span class="arc-count">3本</span>
+          <span class="arc-category__icon">+</span>
+        </button>
+        <div class="arc-category__body">
+          <ul class="link-list">
+            <li><a href="articles/book-love-as-structure.html">自由意志なき世界で「愛する」ということ &rarr;</a></li>
+            <li><a href="articles/book-tenmei-marketing.html">【特典】天命のマーケティング &rarr;</a></li>
+            <li><a href="articles/book-distorted-support-00.html">いびつな支援──対人支援者が陥る7つの構造 &rarr;</a></li>
+          </ul>
+        </div>
       </div>
 
-      <hr class="separator">
-
-      <!-- カテゴリ5：コラム -->
-      <div class="content-block text-panel fade-in">
-        <h3 style="color: #c0a878; font-size: 1.1rem; margin-bottom: 1rem;">コラム──理論の全体像</h3>
-        <ul class="link-list">
-          <li><a href="articles/column-meta7.html">Meta 7（メタセブン）全体像｜自由意志崩壊から天命開示までの構造図 &rarr;</a></li>
-          <li><a href="articles/column-shadow-7types.html">7つの痛み──シャドウの構造類型 &rarr;</a></li>
-          <li><a href="articles/column-golden-shadow-castle.html">城の中の迷子──ゴールデンシャドウ位相2の臨床的観測 &rarr;</a></li>
-          <li><a href="articles/column-13stages.html">『わかるまでの13段階』──構文的変容プロセス地図 &rarr;</a></li>
-          <li><a href="articles/column-observation-basics.html">観測の基本（定義・極意・事例） &rarr;</a></li>
-        </ul>
+      <!-- カテゴリ5：コラム──理論の全体像 -->
+      <div class="arc-category arc-category--gold fade-in">
+        <button class="arc-category__trigger" aria-expanded="false">
+          コラム──理論の全体像<span class="arc-count">5本</span>
+          <span class="arc-category__icon">+</span>
+        </button>
+        <div class="arc-category__body">
+          <ul class="link-list">
+            <li><a href="articles/column-meta7.html">Meta 7（メタセブン）全体像｜自由意志崩壊から天命開示までの構造図 &rarr;</a></li>
+            <li><a href="articles/column-shadow-7types.html">7つの痛み──シャドウの構造類型 &rarr;</a></li>
+            <li><a href="articles/column-golden-shadow-castle.html">城の中の迷子──ゴールデンシャドウ位相2の臨床的観測 &rarr;</a></li>
+            <li><a href="articles/column-13stages.html">『わかるまでの13段階』──構文的変容プロセス地図 &rarr;</a></li>
+            <li><a href="articles/column-observation-basics.html">観測の基本（定義・極意・事例） &rarr;</a></li>
+          </ul>
+        </div>
       </div>
 
-      <hr class="separator">
-
-      <div class="content-block text-panel fade-in">
-        <h3 style="color: #c0a878; font-size: 1.1rem; margin-bottom: 1rem;">コラム──天命と実存</h3>
-        <ul class="link-list">
-          <li><a href="articles/column-silence-of-will.html">やりたい／やりたくないが消えたとき、人生は静かに動き出す &rarr;</a></li>
-          <li><a href="articles/column-tenmei-pain.html">天命痛──天命に生きると、なぜ痛みが生まれるのか &rarr;</a></li>
-          <li><a href="articles/column-ryoushintsuu.html">人間にとって、最も辛い精神的苦痛とは何か？〜「良心痛」という"終わらない痛み"について〜 &rarr;</a></li>
-          <li><a href="articles/column-meta7-misalignment.html">「天命で稼ぐ」という誤配列に気づいた話｜Meta7で見抜いた深層構造の罠 &rarr;</a></li>
-          <li><a href="articles/column-why-cant-speak-truth.html">なぜ本音が言えないのか──自分を語れない人に共通する"構造的な理由" &rarr;</a></li>
-          <li><a href="articles/column-detour-structure.html">人生で遠回りする人の構造──本質が見えた瞬間に"別の道"へ逸れてしまう理由 &rarr;</a></li>
-        </ul>
+      <!-- コラム──天命と実存 -->
+      <div class="arc-category arc-category--purple fade-in">
+        <button class="arc-category__trigger" aria-expanded="false">
+          コラム──天命と実存<span class="arc-count">6本</span>
+          <span class="arc-category__icon">+</span>
+        </button>
+        <div class="arc-category__body">
+          <ul class="link-list">
+            <li><a href="articles/column-silence-of-will.html">やりたい／やりたくないが消えたとき、人生は静かに動き出す &rarr;</a></li>
+            <li><a href="articles/column-tenmei-pain.html">天命痛──天命に生きると、なぜ痛みが生まれるのか &rarr;</a></li>
+            <li><a href="articles/column-ryoushintsuu.html">人間にとって、最も辛い精神的苦痛とは何か？〜「良心痛」という"終わらない痛み"について〜 &rarr;</a></li>
+            <li><a href="articles/column-meta7-misalignment.html">「天命で稼ぐ」という誤配列に気づいた話｜Meta7で見抜いた深層構造の罠 &rarr;</a></li>
+            <li><a href="articles/column-why-cant-speak-truth.html">なぜ本音が言えないのか──自分を語れない人に共通する"構造的な理由" &rarr;</a></li>
+            <li><a href="articles/column-detour-structure.html">人生で遠回りする人の構造──本質が見えた瞬間に"別の道"へ逸れてしまう理由 &rarr;</a></li>
+          </ul>
+        </div>
       </div>
 
-      <hr class="separator">
-
-      <div class="content-block text-panel fade-in">
-        <h3 style="color: #c0a878; font-size: 1.1rem; margin-bottom: 1rem;">コラム──対話とセッション</h3>
-        <ul class="link-list">
-          <li><a href="articles/column-sorede.html">「それで？」──人生を先に進めてしまう究極の問い &rarr;</a></li>
-          <li><a href="articles/column-sorede-meta-coaching.html">「それで？」の使い方 ── Meta coachingの極意（4MAT実践ガイド） &rarr;</a></li>
-          <li><a href="articles/column-four-questions.html">天命の言語化セッション™︎の操作性──四つの問いの使い分け &rarr;</a></li>
-          <li><a href="articles/column-meta-rapport-deep-time.html">深い対話の創り方──Meta-Rapport と Deep Time という呼吸 &rarr;</a></li>
-        </ul>
+      <!-- コラム──対話とセッション -->
+      <div class="arc-category arc-category--rose fade-in">
+        <button class="arc-category__trigger" aria-expanded="false">
+          コラム──対話とセッション<span class="arc-count">4本</span>
+          <span class="arc-category__icon">+</span>
+        </button>
+        <div class="arc-category__body">
+          <ul class="link-list">
+            <li><a href="articles/column-sorede.html">「それで？」──人生を先に進めてしまう究極の問い &rarr;</a></li>
+            <li><a href="articles/column-sorede-meta-coaching.html">「それで？」の使い方 ── Meta coachingの極意（4MAT実践ガイド） &rarr;</a></li>
+            <li><a href="articles/column-four-questions.html">天命の言語化セッション™︎の操作性──四つの問いの使い分け &rarr;</a></li>
+            <li><a href="articles/column-meta-rapport-deep-time.html">深い対話の創り方──Meta-Rapport と Deep Time という呼吸 &rarr;</a></li>
+          </ul>
+        </div>
       </div>
 
-      <hr class="separator">
-
-      <div class="content-block text-panel fade-in">
-        <h3 style="color: #c0a878; font-size: 1.1rem; margin-bottom: 1rem;">コラム──対人支援の構造</h3>
-        <ul class="link-list">
-          <li><a href="articles/column-self-mythologization-profiling.html">支援業界における"自己神話化構造"のプロファイリング &rarr;</a></li>
-          <li><a href="articles/column-mediator-type-profiling.html">支援業界における"調停者構造（Mediator Type）"のプロファイリング &rarr;</a></li>
-          <li><a href="articles/column-self-collapse-prompt.html">「自己論破プロンプト™︎」完全版｜説明ゼロで矛盾を可視化する護身技法 &rarr;</a></li>
-        </ul>
+      <!-- コラム──対人支援の構造 -->
+      <div class="arc-category arc-category--gold fade-in">
+        <button class="arc-category__trigger" aria-expanded="false">
+          コラム──対人支援の構造<span class="arc-count">3本</span>
+          <span class="arc-category__icon">+</span>
+        </button>
+        <div class="arc-category__body">
+          <ul class="link-list">
+            <li><a href="articles/column-self-mythologization-profiling.html">支援業界における"自己神話化構造"のプロファイリング &rarr;</a></li>
+            <li><a href="articles/column-mediator-type-profiling.html">支援業界における"調停者構造（Mediator Type）"のプロファイリング &rarr;</a></li>
+            <li><a href="articles/column-self-collapse-prompt.html">「自己論破プロンプト™︎」完全版｜説明ゼロで矛盾を可視化する護身技法 &rarr;</a></li>
+          </ul>
+        </div>
       </div>
 
-      <hr class="separator">
-
-      <div class="content-block text-panel fade-in">
-        <h3 style="color: #c0a878; font-size: 1.1rem; margin-bottom: 1rem;">コラム──仕事とマーケティング</h3>
-        <ul class="link-list">
-          <li><a href="articles/column-meta-kaizen.html">仕事論の究極｜Meta改善の習得方法 &rarr;</a></li>
-          <li><a href="articles/column-meta-kaizen-protocol.html">【実践編】Meta改善の脳内プロトコル &rarr;</a></li>
-          <li><a href="articles/column-meta-marketing.html">Metaマーケティング完全フレームワーク &rarr;</a></li>
-          <li><a href="articles/column-probability-strategy-01.html">【特典】確率思考の戦略論（1/3） &rarr;</a></li>
-          <li><a href="articles/column-probability-strategy-02.html">【特典】確率思考の戦略論（2/3） &rarr;</a></li>
-          <li><a href="articles/column-probability-strategy-03.html">【特典】確率思考の戦略論（3/3） &rarr;</a></li>
-        </ul>
+      <!-- コラム──仕事とマーケティング -->
+      <div class="arc-category arc-category--purple fade-in">
+        <button class="arc-category__trigger" aria-expanded="false">
+          コラム──仕事とマーケティング<span class="arc-count">6本</span>
+          <span class="arc-category__icon">+</span>
+        </button>
+        <div class="arc-category__body">
+          <ul class="link-list">
+            <li><a href="articles/column-meta-kaizen.html">仕事論の究極｜Meta改善の習得方法 &rarr;</a></li>
+            <li><a href="articles/column-meta-kaizen-protocol.html">【実践編】Meta改善の脳内プロトコル &rarr;</a></li>
+            <li><a href="articles/column-meta-marketing.html">Metaマーケティング完全フレームワーク &rarr;</a></li>
+            <li><a href="articles/column-probability-strategy-01.html">【特典】確率思考の戦略論（1/3） &rarr;</a></li>
+            <li><a href="articles/column-probability-strategy-02.html">【特典】確率思考の戦略論（2/3） &rarr;</a></li>
+            <li><a href="articles/column-probability-strategy-03.html">【特典】確率思考の戦略論（3/3） &rarr;</a></li>
+          </ul>
+        </div>
       </div>
 
-      <hr class="separator">
-
-      <div class="content-block text-panel fade-in">
-        <h3 style="color: #c0a878; font-size: 1.1rem; margin-bottom: 1rem;">コラム──心友™と日常</h3>
-        <ul class="link-list">
-          <li><a href="articles/column-shinyuu-guideline.html">私たちが心友™と歩むための指針｜「違和感の共有」と「天命の覚醒」 &rarr;</a></li>
-          <li><a href="articles/column-ultimate-meal.html">究極のご馳走とは何か？〜天命を全うするための食事の作り方〜 &rarr;</a></li>
-          <li><a href="articles/column-oni-jukkun.html">大野耐一の鬼十訓 &rarr;</a></li>
-        </ul>
+      <!-- コラム──心友™と日常 -->
+      <div class="arc-category arc-category--rose fade-in">
+        <button class="arc-category__trigger" aria-expanded="false">
+          コラム──心友™と日常<span class="arc-count">3本</span>
+          <span class="arc-category__icon">+</span>
+        </button>
+        <div class="arc-category__body">
+          <ul class="link-list">
+            <li><a href="articles/column-shinyuu-guideline.html">私たちが心友™と歩むための指針｜「違和感の共有」と「天命の覚醒」 &rarr;</a></li>
+            <li><a href="articles/column-ultimate-meal.html">究極のご馳走とは何か？〜天命を全うするための食事の作り方〜 &rarr;</a></li>
+            <li><a href="articles/column-oni-jukkun.html">大野耐一の鬼十訓 &rarr;</a></li>
+          </ul>
+        </div>
       </div>
 
-      <hr class="separator">
-
-      <!-- カテゴリ6：レター・特別コンテンツ -->
-      <div class="content-block text-panel fade-in">
-        <h3 style="color: #c0a878; font-size: 1.1rem; margin-bottom: 1rem;">レター・特別コンテンツ</h3>
-        <ul class="link-list">
-          <li><a href="articles/letter-hierarchical-separation.html">階層分離現象について（完全版） &rarr;</a></li>
-        </ul>
+      <!-- レター・特別コンテンツ -->
+      <div class="arc-category arc-category--gold fade-in">
+        <button class="arc-category__trigger" aria-expanded="false">
+          レター・特別コンテンツ<span class="arc-count">1本</span>
+          <span class="arc-category__icon">+</span>
+        </button>
+        <div class="arc-category__body">
+          <ul class="link-list">
+            <li><a href="articles/letter-hierarchical-separation.html">階層分離現象について（完全版） &rarr;</a></li>
+          </ul>
+        </div>
       </div>
 
-      <hr class="separator">
-
-      <!-- カテゴリ7：特別シリーズ -->
-      <div class="content-block text-panel fade-in">
-        <h3 style="color: #c0a878; font-size: 1.1rem; margin-bottom: 1rem;">特別シリーズ</h3>
-        <p>
-          漫画・映画・物語の登場人物を、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解くシリーズ。
-        </p>
-        <ul class="link-list">
-          <li><a href="specials.html">特別シリーズ一覧 &rarr;</a></li>
-
-          <li><a href="articles/tenmei-mentalist/index.html">キャラクターのMeta ── メンタリスト篇 &rarr;</a></li>
-          <li><a href="articles/tenmei-godfather/index.html">マイケル・コルレオーネのMeta ── ゴッドファーザー篇 &rarr;</a></li>
-          <li><a href="articles/tenmei-leon/index.html">レオンのMeta ── レオン篇 &rarr;</a></li>
-          <li><a href="articles/tenmei-howl/index.html">ハウルのMeta ── ハウルの動く城篇 &rarr;</a></li>
-          <li><a href="articles/tenmei-chihiro/index.html">千尋のMeta ── 千と千尋の神隠し篇 &rarr;</a></li>
-          <li><a href="articles/tenmei-mononoke/index.html">アシタカ・サン・エボシのMeta ── もののけ姫篇 &rarr;</a></li>
-          <li><a href="articles/tenmei-laputa/index.html">パズー・シータ・ムスカのMeta ── 天空の城ラピュタ篇 &rarr;</a></li>
-          <li><a href="articles/tenmei-shawshank/index.html">アンディ・デュフレーンのMeta ── ショーシャンクの空に篇 &rarr;</a></li>
-          <li><a href="articles/tenmei-nausicaa/index.html">ナウシカのMeta ── 風の谷のナウシカ篇 &rarr;</a></li>
-          <li><a href="articles/tenmei-porco/index.html">ポルコ・ロッソのMeta ── 紅の豚篇 &rarr;</a></li>
-          <li><a href="articles/tenmei-joker/index.html">ジョーカーのMeta ── ジョーカー篇 &rarr;</a></li>
-          <li><a href="articles/tenmei-inception/index.html">ドミニク・コブのMeta ── インセプション篇 &rarr;</a></li>
-          <li><a href="articles/tenmei-fightclub/index.html">語り手とタイラー・ダーデンのMeta ── ファイト・クラブ篇 &rarr;</a></li>
-          <li><a href="articles/tenmei-matrix/index.html">ネオのMeta ── マトリックス篇 &rarr;</a></li>
-          <li><a href="articles/tenmei-goodwillhunting/index.html">ショーン＆ウィルのMeta ── グッド・ウィル・ハンティング篇 &rarr;</a></li>
-          <li><a href="articles/truman-burbank-meta.html">トゥルーマン・バーバンクのMeta ── トゥルーマン・ショー篇 &rarr;</a></li>
-          <li><a href="articles/hoc-frank-underwood-meta.html">フランク・アンダーウッドのMeta ── ハウス・オブ・カーズ篇 &rarr;</a></li>
-          <li><a href="articles/akira-kaneda-meta.html">金田正太郎のMeta ── AKIRA篇 &rarr;</a></li>
-          <li><a href="articles/akira-tetsuo-meta.html">鉄雄のMeta ── AKIRA篇 &rarr;</a></li>
-          <li><a href="articles/tenmei-baki/index.html">キャラクターのMeta ── 刃牙シリーズ篇 &rarr;</a></li>
-          <li><a href="articles/tenmei-cagliostro/index.html">ルパン三世のMeta ── カリオストロの城篇 &rarr;</a></li>
-          <li><a href="articles/tenmei-training-day/index.html">アロンゾ・ハリスのMeta ── トレーニング デイ篇 &rarr;</a></li>
-        </ul>
+      <!-- 特別シリーズ -->
+      <div class="arc-category arc-category--purple fade-in">
+        <button class="arc-category__trigger" aria-expanded="false">
+          特別シリーズ<span class="arc-count">22本</span>
+          <span class="arc-category__icon">+</span>
+        </button>
+        <div class="arc-category__body">
+          <p>
+            漫画・映画・物語の登場人物を、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解くシリーズ。
+          </p>
+          <ul class="link-list">
+            <li><a href="specials.html">特別シリーズ一覧 &rarr;</a></li>
+            <li><a href="articles/tenmei-mentalist/index.html">キャラクターのMeta ── メンタリスト篇 &rarr;</a></li>
+            <li><a href="articles/tenmei-godfather/index.html">マイケル・コルレオーネのMeta ── ゴッドファーザー篇 &rarr;</a></li>
+            <li><a href="articles/tenmei-leon/index.html">レオンのMeta ── レオン篇 &rarr;</a></li>
+            <li><a href="articles/tenmei-howl/index.html">ハウルのMeta ── ハウルの動く城篇 &rarr;</a></li>
+            <li><a href="articles/tenmei-chihiro/index.html">千尋のMeta ── 千と千尋の神隠し篇 &rarr;</a></li>
+            <li><a href="articles/tenmei-mononoke/index.html">アシタカ・サン・エボシのMeta ── もののけ姫篇 &rarr;</a></li>
+            <li><a href="articles/tenmei-laputa/index.html">パズー・シータ・ムスカのMeta ── 天空の城ラピュタ篇 &rarr;</a></li>
+            <li><a href="articles/tenmei-shawshank/index.html">アンディ・デュフレーンのMeta ── ショーシャンクの空に篇 &rarr;</a></li>
+            <li><a href="articles/tenmei-nausicaa/index.html">ナウシカのMeta ── 風の谷のナウシカ篇 &rarr;</a></li>
+            <li><a href="articles/tenmei-porco/index.html">ポルコ・ロッソのMeta ── 紅の豚篇 &rarr;</a></li>
+            <li><a href="articles/tenmei-joker/index.html">ジョーカーのMeta ── ジョーカー篇 &rarr;</a></li>
+            <li><a href="articles/tenmei-inception/index.html">ドミニク・コブのMeta ── インセプション篇 &rarr;</a></li>
+            <li><a href="articles/tenmei-fightclub/index.html">語り手とタイラー・ダーデンのMeta ── ファイト・クラブ篇 &rarr;</a></li>
+            <li><a href="articles/tenmei-matrix/index.html">ネオのMeta ── マトリックス篇 &rarr;</a></li>
+            <li><a href="articles/tenmei-goodwillhunting/index.html">ショーン＆ウィルのMeta ── グッド・ウィル・ハンティング篇 &rarr;</a></li>
+            <li><a href="articles/truman-burbank-meta.html">トゥルーマン・バーバンクのMeta ── トゥルーマン・ショー篇 &rarr;</a></li>
+            <li><a href="articles/hoc-frank-underwood-meta.html">フランク・アンダーウッドのMeta ── ハウス・オブ・カーズ篇 &rarr;</a></li>
+            <li><a href="articles/akira-kaneda-meta.html">金田正太郎のMeta ── AKIRA篇 &rarr;</a></li>
+            <li><a href="articles/akira-tetsuo-meta.html">鉄雄のMeta ── AKIRA篇 &rarr;</a></li>
+            <li><a href="articles/tenmei-baki/index.html">キャラクターのMeta ── 刃牙シリーズ篇 &rarr;</a></li>
+            <li><a href="articles/tenmei-cagliostro/index.html">ルパン三世のMeta ── カリオストロの城篇 &rarr;</a></li>
+            <li><a href="articles/tenmei-training-day/index.html">アロンゾ・ハリスのMeta ── トレーニング デイ篇 &rarr;</a></li>
+          </ul>
+        </div>
       </div>
 
     </div>
@@ -393,6 +630,18 @@
 </footer>
 
   <script src="js/main.min.js?v=9"></script>
+  <script>
+  // Archives accordion
+  document.querySelectorAll('.arc-category__trigger').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var card = this.closest('.arc-category');
+      var isOpen = card.classList.contains('is-open');
+      card.classList.toggle('is-open');
+      this.setAttribute('aria-expanded', String(!isOpen));
+      this.querySelector('.arc-category__icon').textContent = isOpen ? '+' : '−';
+    });
+  });
+  </script>
   <!-- Search Modal -->
   <div class="search-overlay">
     <div class="search-modal"><button class="search-close" aria-label="閉じる">&times;</button>
