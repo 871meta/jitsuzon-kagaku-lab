@@ -142,52 +142,22 @@
 }
 
 /* === CTA Block === */
-.cta-block {
-  background: rgba(192,168,120,0.06);
-  border: 1px solid rgba(192,168,120,0.2);
-  padding: 2.5rem 2rem;
-  margin: 3rem 0;
-  text-align: center;
-}
-.cta-block h3 {
-  font-size: var(--fs-h3);
-  color: var(--color-text-body);
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-.cta-block p {
-  font-size: var(--fs-body);
-  color: var(--color-text-reading);
-  line-height: 2.2;
-  margin-bottom: 1.2rem;
-}
-.cta-block .cta-btn {
-  display: inline-block;
-  padding: 0.8rem 2.5rem;
-  background: var(--color-gold);
-  color: #080610;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: var(--fs-body);
-  letter-spacing: 0.1em;
-  transition: opacity 0.2s;
-  border-bottom: none;
-}
-.cta-block .cta-btn:hover { opacity: 0.8; }
-
 /* === Mobile === */
 @media (max-width: 600px) {
   .article-card { padding: 1.5rem 1.2rem; }
   .article-card h3 { font-size: var(--fs-lead); }
   .article-card .card-hook { padding: 1rem 1.2rem; }
-  .cta-block { padding: 2rem 1.2rem; }
-}
+  }
 @media (max-width: 480px) {
   .text-panel p br,
   .pull-quote p br,
   .highlight-block p br,
   .def-box p br { display: none; }
 }
+
+/* === Pull-quote: left-align for readability === */
+.pull-quote { text-align: left; }
+.pull-quote p { font-size: var(--fs-lead); font-weight: 500; }
 </style>
 </head>
 <body>
@@ -287,11 +257,18 @@
     <hr class="separator">
 
     <!-- ========== CTA ========== -->
-    <div class="cta-block fade-in">
-      <h3>天命の言語化セッション&trade;</h3>
-      <p>2時間で天命が言語化できる場所。</p>
-      <a href="../../trial.html" class="cta-btn">&#9654; 無料トライアルに申し込む</a>
+    <section class="cta-block fade-in">
+      <div class="container">
+    <h2 class="cta-block__title">天命の言語化セッション&trade;</h2>
+    <p class="cta-block__desc">2時間で天命が言語化できる場所。</p>
+    <div class="cta-block__features">
+      <span class="cta-block__feature">Zoom完結</span>
+      <span class="cta-block__feature">事前学習不要</span>
+      <span class="cta-block__feature">対話のみ</span>
     </div>
+    <a href="../../trial.html" class="btn">無料トライアルに申し込む &rarr;</a>
+      </div>
+    </section>
 
     <!-- ========== シリーズノート ========== -->
     <div class="series-note fade-in">

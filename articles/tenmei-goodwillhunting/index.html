@@ -142,52 +142,22 @@
 }
 
 /* === CTA Block === */
-.cta-block {
-  background: rgba(192,168,120,0.06);
-  border: 1px solid rgba(192,168,120,0.2);
-  padding: 2.5rem 2rem;
-  margin: 3rem 0;
-  text-align: center;
-}
-.cta-block h3 {
-  font-size: var(--fs-h3);
-  color: var(--color-text-body);
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-.cta-block p {
-  font-size: var(--fs-body);
-  color: var(--color-text-reading);
-  line-height: 2.2;
-  margin-bottom: 1.2rem;
-}
-.cta-block .cta-btn {
-  display: inline-block;
-  padding: 0.8rem 2.5rem;
-  background: var(--color-gold);
-  color: #080610;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: var(--fs-body);
-  letter-spacing: 0.1em;
-  transition: opacity 0.2s;
-  border-bottom: none;
-}
-.cta-block .cta-btn:hover { opacity: 0.8; }
-
 /* === Mobile === */
 @media (max-width: 600px) {
   .article-card { padding: 1.5rem 1.2rem; }
   .article-card h3 { font-size: var(--fs-lead); }
   .article-card .card-hook { padding: 1rem 1.2rem; }
-  .cta-block { padding: 2rem 1.2rem; }
-}
+  }
 @media (max-width: 480px) {
   .text-panel p br,
   .pull-quote p br,
   .highlight-block p br,
   .def-box p br { display: none; }
 }
+
+/* === Pull-quote: left-align for readability === */
+.pull-quote { text-align: left; }
+.pull-quote p { font-size: var(--fs-lead); font-weight: 500; }
 </style>
 </head>
 <body>
@@ -263,7 +233,7 @@
         <ul>
           <li>Meta：サウスボストン出身。父の暴力から母と弟を守るため自ら殴られ役を引き受けた。MIT卒の心理学者。妻ナンシーと18年間の結婚、癌で死別。死後2年間、すべてが止まっている</li>
           <li>シャドウ：「動くことはナンシーへの裏切りになる」──非合理的だと知りながら、他者の人生を動かすことで自分が動かなくて済む構造を維持。「助ける」ことが「動かない」ことの最高の正当化</li>
-          <li>天命の起動：ウィルさんとの出会いが触媒。「君のせいじゃない」を繰り返したとき、自分自身がその言葉を聞いた。「テーブルに金を戻して、どんなカードが来るか見てみる」──天命は見つけたのではない、構造が彼を動かし始めた</li>
+          <li>天命の起動：ウィルとの出会いが触媒。「君のせいじゃない」を繰り返したとき、自分自身がその言葉を聞いた。「テーブルに金を戻して、どんなカードが来るか見てみる」──天命は見つけたのではない、構造が彼を動かし始めた</li>
         </ul>
         <div class="card-hook">手放すんじゃない。置いていくんじゃない。──連れて行くんだ。&hellip;&hellip;そういう歩き方が、あるはずだ。&hellip;&hellip;少なくとも、私のクライアントには『ある』と言ってきた。&hellip;&hellip;今度は、自分に言う番だ。</div>
         <p class="card-target">「助ける側」にいながら自分だけが止まっている人へ。大切な人を失い、動くことが裏切りに感じられる人へ。「わかっている」のに「動けない」溝を抱えている人へ。</p>
@@ -276,7 +246,7 @@
         <ul>
           <li>Meta：実親に遺棄された孤児。三軒の里親家庭で持続的な身体的虐待を受けた。サウスボストンで育ち、忠誠＝道徳、去ること＝裏切りという文化コードの中で成人。多領域にわたる一世代に一人の知的能力。すべて独学</li>
           <li>シャドウ：「ありのままの自分は、必ず去られる。必ず傷つけられる」──知性そのものが防衛機制として機能し、「知性を下ろす」ことは「防壁を失う」ことと同義。最悪の選択肢を自分で選ぶことで、コントロールの一片を取り戻す──レンチの構造</li>
-          <li>天命の萌芽：安全よりも脆弱性を選ぶ。知的選択ではなく、感情的決断。天命は能力の「使い方」ではなく、能力の「下ろし方」にあった。友人がくれた車を南に走らせ、スカイラーさんのもとへ向かう</li>
+          <li>天命の萌芽：安全よりも脆弱性を選ぶ。知的選択ではなく、感情的決断。天命は能力の「使い方」ではなく、能力の「下ろし方」にあった。友人がくれた車を南に走らせ、スカイラーのもとへ向かう</li>
         </ul>
         <div class="card-hook">レンチを置いた手で、誰かの手を握る──そういう自分をプレゼントしてやりたい。&hellip;&hellip;ただ──これも頭で作った答えかもしれない。&hellip;&hellip;自分で確かめるしかないんだ。</div>
         <p class="card-target">最悪の選択肢を自分で選ぶことで「自分が決めた」と思い込んでいる人へ。去られる前に自分で終わらせることで、傷つかずに済んでいると信じている人へ。知性という鎧を脱げない人へ。</p>
@@ -288,11 +258,18 @@
     <hr class="separator">
 
     <!-- ========== CTA ========== -->
-    <div class="cta-block fade-in">
-      <h3>天命の言語化セッション™</h3>
-      <p>2時間で天命が言語化できる場所。</p>
-      <a href="../../trial.html" class="cta-btn">▶ 無料トライアルに申し込む</a>
+    <section class="cta-block fade-in">
+      <div class="container">
+    <h2 class="cta-block__title">天命の言語化セッション&trade;</h2>
+    <p class="cta-block__desc">2時間で天命が言語化できる場所。</p>
+    <div class="cta-block__features">
+      <span class="cta-block__feature">Zoom完結</span>
+      <span class="cta-block__feature">事前学習不要</span>
+      <span class="cta-block__feature">対話のみ</span>
     </div>
+    <a href="../../trial.html" class="btn">無料トライアルに申し込む &rarr;</a>
+      </div>
+    </section>
 
     <!-- ========== シリーズノート ========== -->
     <div class="series-note fade-in">

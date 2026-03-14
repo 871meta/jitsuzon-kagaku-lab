@@ -142,52 +142,22 @@
 }
 
 /* === CTA Block === */
-.cta-block {
-  background: rgba(192,168,120,0.06);
-  border: 1px solid rgba(192,168,120,0.2);
-  padding: 2.5rem 2rem;
-  margin: 3rem 0;
-  text-align: center;
-}
-.cta-block h3 {
-  font-size: var(--fs-h3);
-  color: var(--color-text-body);
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-.cta-block p {
-  font-size: var(--fs-body);
-  color: var(--color-text-reading);
-  line-height: 2.2;
-  margin-bottom: 1.2rem;
-}
-.cta-block .cta-btn {
-  display: inline-block;
-  padding: 0.8rem 2.5rem;
-  background: var(--color-gold);
-  color: #080610;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: var(--fs-body);
-  letter-spacing: 0.1em;
-  transition: opacity 0.2s;
-  border-bottom: none;
-}
-.cta-block .cta-btn:hover { opacity: 0.8; }
-
 /* === Mobile === */
 @media (max-width: 600px) {
   .article-card { padding: 1.5rem 1.2rem; }
   .article-card h3 { font-size: var(--fs-lead); }
   .article-card .card-hook { padding: 1rem 1.2rem; }
-  .cta-block { padding: 2rem 1.2rem; }
-}
+  }
 @media (max-width: 480px) {
   .text-panel p br,
   .pull-quote p br,
   .highlight-block p br,
   .def-box p br { display: none; }
 }
+
+/* === Pull-quote: left-align for readability === */
+.pull-quote { text-align: left; }
+.pull-quote p { font-size: var(--fs-lead); font-weight: 500; }
 </style>
 </head>
 <body>
@@ -247,7 +217,7 @@
       </div>
 
       <div class="pull-quote fade-in">
-        <p>変えられないものを抱えたまま、それでも見続ける先に──天命がある。<br>パズーさんは父の遺産を超え、「守ること」に到達した。<br>シータさんは力を知った上で土に帰り、おばあさんが始めた物語の最後の一行を書いた。<br>ムスカさんは700年の悲願を背負って玉座に座り──そして3分で崩壊した。</p>
+        <p>変えられないものを抱えたまま、それでも見続ける先に──天命がある。<br>パズーは父の遺産を超え、「守ること」に到達した。<br>シータは力を知った上で土に帰り、おばあさんが始めた物語の最後の一行を書いた。<br>ムスカは700年の悲願を背負って玉座に座り──そして3分で崩壊した。</p>
       </div>
 
     </section>
@@ -261,11 +231,11 @@
         <span class="article-card__number">PAZU &mdash; Inherited Meta</span>
         <h3>パズーのMeta ── 自由意志なき世界の天命論</h3>
         <ul>
-          <li>Meta：十三歳の見習い機械工。天涯孤独。父は冒険飛行家としてラピュタを発見したが詐欺師扱いされたまま死亡。「父は嘘つきではなかった」がパズーさんの全存在を支える非交渉的命題</li>
+          <li>Meta：十三歳の見習い機械工。天涯孤独。父は冒険飛行家としてラピュタを発見したが詐欺師扱いされたまま死亡。「父は嘘つきではなかった」がパズーの全存在を支える非交渉的命題</li>
           <li>シャドウ：「父の夢と自分の夢を一度も分離したことがない」──光の中に溶けたシャドウ。透明な言葉、止まらない前進、それらすべてが「父が間違っていたらどうする？」という問いを浮上させないための構造的機能</li>
           <li>天命：「守ること。証明するのではなく、守ること」──ラピュタを見つけた瞬間にその力を手放し、兵器を壊し、樹木を残した。継承されたMetaの超越を通じて天命に到達</li>
         </ul>
-        <div class="card-hook">父の夢という美しい物語が、パズーさん自身の夢を見えなくしていた──しかし天命は構造の必然として露呈する。シータが空から降りてきた瞬間、パズーさんの第一反応は「守る」だった。最初から。</div>
+        <div class="card-hook">父の夢という美しい物語が、パズー自身の夢を見えなくしていた──しかし天命は構造の必然として露呈する。シータが空から降りてきた瞬間、パズーの第一反応は「守る」だった。最初から。</div>
         <p class="card-target">誰かの物語を生きているのではないかという疑念が、どこかで鳴り続けている人へ。</p>
         <a href="pazu.html" class="card-link">パズーのMetaを読む &rarr;</a>
       </div>
@@ -278,7 +248,7 @@
           <li>シャドウ：「この力は私のものではない──しかし私の中にある」。ムスカと同じ血を持つ自分を否認し続け、「力＝悪」という非合理的信念が刻まれている</li>
           <li>天命：「放棄による到達」──Metaが与えた力を、より深いMetaの要請に従って積極的に閉じること。ラピュタの血を持ったまま大地に帰れる自分──おばあさんが何世代もかけて伝えてきた知恵の、最終的な体現</li>
         </ul>
-        <div class="card-hook">力を持つことは罪ではない。力を使わないことは弱さではない。力を知った上で土に根をおろすことは──シータさんが自分で発見したように──愛である。</div>
+        <div class="card-hook">力を持つことは罪ではない。力を使わないことは弱さではない。力を知った上で土に根をおろすことは──シータが自分で発見したように──愛である。</div>
         <p class="card-target">使い方がわからないまま封印している力がある人へ。</p>
         <a href="sheeta.html" class="card-link">シータのMetaを読む &rarr;</a>
       </div>
@@ -291,7 +261,7 @@
           <li>シャドウ：Null Shadow（不在のシャドウ）──シャドウが抑圧されているのではなく、構造的に存在しない。否認を統合の代わりに用いることで、影が生成される余地そのものが消去されている第16類型</li>
           <li>天命：「空から世界を支配する」──到達された天命。玉座に座り、インドラの矢を放ち、世界に宣言した。しかし否認の上に建てた天命は構造的に脆弱であり、3分で崩壊した──到達と崩壊が同時に起きた唯一の事例</li>
         </ul>
-        <div class="card-hook">ムスカさんは天命に到達「してしまった」。しかし否認の上に建てた建築は、玉座に座った瞬間に崩壊を始めた──天命は到達すればよいのではない。どの基盤の上に建てるかが、すべてを決める。</div>
+        <div class="card-hook">ムスカは天命に到達「してしまった」。しかし否認の上に建てた建築は、玉座に座った瞬間に崩壊を始めた──天命は到達すればよいのではない。どの基盤の上に建てるかが、すべてを決める。</div>
         <p class="card-target">到達したはずの場所で、なぜか足元が崩れていく感覚を知っている人へ。</p>
         <a href="muska.html" class="card-link">ムスカのMetaを読む &rarr;</a>
       </div>
@@ -301,11 +271,18 @@
     <hr class="separator">
 
     <!-- ========== CTA ========== -->
-    <div class="cta-block fade-in">
-      <h3>天命の言語化セッション™</h3>
-      <p>2時間で天命が言語化できる場所。</p>
-      <a href="../../trial.html" class="cta-btn">▶ 無料トライアルに申し込む</a>
+    <section class="cta-block fade-in">
+      <div class="container">
+    <h2 class="cta-block__title">天命の言語化セッション&trade;</h2>
+    <p class="cta-block__desc">2時間で天命が言語化できる場所。</p>
+    <div class="cta-block__features">
+      <span class="cta-block__feature">Zoom完結</span>
+      <span class="cta-block__feature">事前学習不要</span>
+      <span class="cta-block__feature">対話のみ</span>
     </div>
+    <a href="../../trial.html" class="btn">無料トライアルに申し込む &rarr;</a>
+      </div>
+    </section>
 
     <!-- ========== シリーズノート ========== -->
     <div class="series-note fade-in">
