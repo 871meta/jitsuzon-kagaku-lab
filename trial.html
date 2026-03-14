@@ -610,10 +610,16 @@
     .price-block p.price-block__amount {
       font-size: clamp(2.8rem, 10vw, 4.2rem);
       font-weight: 700;
-      color: var(--color-text-primary);
       letter-spacing: 0.08em;
       margin-bottom: 0.3rem;
       line-height: 1.2;
+      background: linear-gradient(90deg, #b8a0d8 0%, #b8a0d8 40%, #e0d0f0 50%, #b8a0d8 60%, #b8a0d8 100%);
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: trial-purple-shimmer 5s ease-in-out infinite;
+      filter: drop-shadow(0 0 12px rgba(160,130,210,0.25)) drop-shadow(0 0 30px rgba(160,130,210,0.1));
     }
 
     .price-block p.price-block__tax {
