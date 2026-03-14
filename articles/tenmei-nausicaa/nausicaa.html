@@ -34,6 +34,21 @@
    視認性・読みやすさ強化CSS
    ============================================= */
 
+/* === 0. ヒーロータイトル ゴールドシマー === */
+.hero-title--shimmer {
+  background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gold-shimmer 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 16px rgba(192,168,120,0.3)) drop-shadow(0 0 40px rgba(192,168,120,0.12));
+}
+@keyframes gold-shimmer {
+  0%, 100% { background-position: 100% 50%; }
+  50% { background-position: 0% 50%; }
+}
+
 /* === 1. 章見出し — 中央配置＋装飾 === */
 h2.chapter-heading {
   font-size: var(--fs-section);
@@ -268,39 +283,6 @@ h3.section-heading {
 }
 
 /* === CTA Block === */
-.cta-block {
-  background: rgba(192,168,120,0.06);
-  border: 1px solid rgba(192,168,120,0.2);
-  padding: 2.5rem 2rem;
-  margin: 3rem 0;
-  text-align: center;
-}
-.cta-block h3 {
-  font-size: var(--fs-h3);
-  color: var(--color-text-body);
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-.cta-block p {
-  font-size: var(--fs-body);
-  color: var(--color-text-reading);
-  line-height: 2.2;
-  margin-bottom: 1.2rem;
-}
-.cta-block .cta-btn {
-  display: inline-block;
-  padding: 0.8rem 2.5rem;
-  background: var(--color-gold);
-  color: #080610;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: var(--fs-body);
-  letter-spacing: 0.1em;
-  transition: opacity 0.2s;
-  border-bottom: none;
-}
-.cta-block .cta-btn:hover { opacity: 0.8; }
-
 /* === Author Block === */
 .author-block {
   margin-top: 3rem;
@@ -354,7 +336,6 @@ h3.section-heading {
   .session-dialogue .line-yanai { padding-left: 0.8rem; }
   .session-dialogue .line-character { margin-left: 0.8rem; }
   .profiling-block { padding: 1.5rem 1.2rem; }
-  .cta-block { padding: 2rem 1.2rem; }
   .highlight-block { padding: 1.5rem 1.2rem 1.5rem 1.4rem; }
   .text-panel { padding: 2rem 1.5rem; }
 }
@@ -369,6 +350,94 @@ h3.section-heading {
     margin-bottom: 1.5em;
     padding-bottom: 1em;
   }
+  .comparison-grid__head,
+  .comparison-grid__cell { padding: 0.4rem 0.5rem; font-size: var(--fs-micro); line-height: 1.6; }
+  .comparison-table .comparison-note { font-size: var(--fs-micro); padding: 0.6rem 0.7rem; }
+  .session-phase { margin: 2em 0 1.5em; padding: 1em 0; }
+}
+
+/* === 8. 対比キャラクター比較テーブル === */
+.comparison-table {
+  margin: 1.5rem 0;
+}
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid rgba(192,168,120,0.12);
+  background: rgba(15, 12, 25, 0.45);
+}
+.comparison-grid__head {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-gold);
+  letter-spacing: 0.08em;
+  padding: 0.6rem 0.8rem;
+  text-align: center;
+  background: rgba(192,168,120,0.06);
+  border-bottom: 1px solid rgba(192,168,120,0.2);
+}
+.comparison-grid__head:first-child {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell {
+  padding: 0.55rem 0.8rem;
+  font-size: var(--fs-small);
+  line-height: 1.7;
+  color: var(--color-text-reading);
+  border-bottom: 1px solid rgba(192,168,120,0.06);
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+.comparison-grid__cell:nth-child(odd) {
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__cell:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+.comparison-table .comparison-note {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  font-size: var(--fs-micro);
+  color: rgba(235,232,225,0.55);
+  line-height: 1.8;
+  background: rgba(192,168,120,0.03);
+  border-left: 2px solid rgba(192,168,120,0.15);
+}
+
+/* === 9. セッション対話フェーズマーカー === */
+.session-phase {
+  text-align: center;
+  margin: 2.5em 0 2em;
+  padding: 1.2em 0;
+  position: relative;
+}
+.session-phase:first-child {
+  margin-top: 0;
+}
+.session-phase::before,
+.session-phase::after {
+  content: "";
+  position: absolute;
+  left: 10%; right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(192,168,120,0.15), transparent);
+}
+.session-phase::before { top: 0; }
+.session-phase::after { bottom: 0; }
+.session-phase__label {
+  display: block;
+  font-family: var(--font-serif-en);
+  font-size: var(--fs-micro);
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: rgba(192,168,120,0.4);
+  margin-bottom: 0.3em;
+}
+.session-phase__title {
+  display: block;
+  font-size: var(--fs-small);
+  letter-spacing: 0.15em;
+  color: rgba(235,232,225,0.5);
 }
 </style>
 </head>
@@ -409,16 +478,16 @@ h3.section-heading {
           <li class="breadcrumb__item"><a href="../../index.html" class="breadcrumb__link">TOP</a></li>
           <li class="breadcrumb__item"><a href="../../specials.html" class="breadcrumb__link">Specials</a></li>
           <li class="breadcrumb__item"><a href="./" class="breadcrumb__link">ナウシカ篇</a></li>
-          <li class="breadcrumb__item"><span class="breadcrumb__current">ナウシカのMeta &mdash;&md</span></li>
+          <li class="breadcrumb__item"><span class="breadcrumb__current">ナウシカのMeta</span></li>
         </ol>
       </nav>
       <p class="page-hero__sub">NAUSICA&Auml; OF THE VALLEY OF THE WIND</p>
-      <h1>ナウシカのMeta</h1>
+      <h1 class="hero-title--shimmer">ナウシカのMeta</h1>
       <p class="page-hero__lead">自由意志なき世界の天命論<br>箭内宏紀｜実存科学研究所</p>
     </div>
   </section>
 
-  <main class="container">
+  <main class="container article-page">
 
     <!-- ========== ネタバレ注記 ========== -->
     <p class="source-note fade-in" style="margin-bottom: 2rem;">※ 本稿は映画『風の谷のナウシカ』全編のネタバレを含みます。</p>
@@ -428,7 +497,7 @@ h3.section-heading {
 
       <div class="text-panel fade-in">
         <p>彼女は、父を殺した兵士たちを殺した。</p>
-        <p>それだけなら、復讐の物語として理解できる。しかしナウシカさんの場合、構造はもっと深い場所で割れている。</p>
+        <p>それだけなら、復讐の物語として理解できる。しかしナウシカの場合、構造はもっと深い場所で割れている。</p>
         <p>彼女は蟲の声を聴く。植物の痛みを感じ取る。牙を剥くキツネリスに指を噛ませ、血を流しながら「ほら、怖くない」と囁く。その共感は技術ではない。身体そのものが世界を受信する装置になっている。すべての生命を等しく敬い、何一つ傷つけまいとする──そう信じて生きてきた人間が、剣を振り下ろした。</p>
       </div>
 
@@ -461,14 +530,14 @@ h3.section-heading {
           <li>幼少期、小さな王蟲の子を隠して育てようとしたが、大人たちに見つかり取り上げられた。泣き叫ぶが止められなかった。──「愛するものが破壊されるのを止められなかった」最初の体験（原初の傷）</li>
           <li>風の谷──滅びゆく世界の辺境。腐海が拡大し続ける終末の時代に生まれた。病床の父に代わり事実上の統治者。「姫姉様」と慕われる存在</li>
           <li>「すべての生命は神聖であり、暴力は間違っている」──この信念体系が、やがて内側から亀裂を起こす</li>
-          <li>穏やかに、直接的に、政治的計算なしに話す。王蟲にも人間にも同じ敬意を持って語りかける。ナウシカさんの言語にはヒエラルキーが存在しない</li>
+          <li>穏やかに、直接的に、政治的計算なしに話す。王蟲にも人間にも同じ敬意を持って語りかける。ナウシカの言語にはヒエラルキーが存在しない</li>
         </ul>
       </div>
 
       <!-- シャドウ -->
       <div class="profiling-block fade-in">
         <h3>シャドウ判定：ゴールデンシャドウ・純粋形態</h3>
-        <p>ナウシカさんのシャドウは、光そのものが投げかける影である。</p>
+        <p>ナウシカのシャドウは、光そのものが投げかける影である。</p>
         <p>共感、勇気、生命への接続──これらの光は防衛でも補償でもない。本物だ。しかしその光の強度ゆえに、影もまた強度を持つ。父を殺された瞬間、同じ光源から暴力が噴出した。</p>
         <ul>
           <li>核心：「私の闇は私の光と分離できない」──愛するがゆえに殺し、殺した瞬間に一瞬だけ自由だった</li>
@@ -479,14 +548,22 @@ h3.section-heading {
 
       <!-- 対比：クシャナ -->
       <div class="profiling-block fade-in">
-        <h3>対比キャラクター：クシャナさん</h3>
-        <ul>
-          <li>ナウシカさん &rarr; 幼少期の王蟲の子の記憶が、腐海との「接続」の型板を与えた<br>クシャナさん &rarr; 幼少期の蟲による身体損壊が、腐海との「戦争」の型板を与えた</li>
-          <li>ナウシカさん &rarr; 腐海を「生きている、浄化している」と認知する<br>クシャナさん &rarr; 腐海を「私の身体を奪った、焼き払うべき」と認知する</li>
-          <li>ナウシカさん &rarr; 暴力を忌避する（だが能力はある）<br>クシャナさん &rarr; 暴力を手段として受容する</li>
-          <li>ナウシカさん &rarr; 巨神兵に恐怖と拒絶を示す<br>クシャナさん &rarr; 巨神兵を道具として利用しようとする</li>
-          <li>共通点 &rarr; ナウシカさんがクシャナさんより「善い」のではない。異なるMeta（前提構造）を持っているのだ。幼少期の王蟲の記憶は、腐海との「接続」の型板を与えた。幼少期の蟲に奪われた身体は、腐海との「戦争」の型板を与えた。どちらの反応も「選ばれた」ものではない。どちらもMeta出力である</li>
-        </ul>
+        <h3>対比キャラクター：クシャナ</h3>
+        <div class="comparison-table">
+          <div class="comparison-grid">
+            <div class="comparison-grid__head">ナウシカ</div>
+            <div class="comparison-grid__head">クシャナ</div>
+            <div class="comparison-grid__cell">幼少期の王蟲の子の記憶が、腐海との「接続」の型板を与えた</div>
+            <div class="comparison-grid__cell">幼少期の蟲による身体損壊が、腐海との「戦争」の型板を与えた</div>
+            <div class="comparison-grid__cell">腐海を「生きている、浄化している」と認知する</div>
+            <div class="comparison-grid__cell">腐海を「私の身体を奪った、焼き払うべき」と認知する</div>
+            <div class="comparison-grid__cell">暴力を忌避する（だが能力はある）</div>
+            <div class="comparison-grid__cell">暴力を手段として受容する</div>
+            <div class="comparison-grid__cell">巨神兵に恐怖と拒絶を示す</div>
+            <div class="comparison-grid__cell">巨神兵を道具として利用しようとする</div>
+          </div>
+          <p class="comparison-note">ナウシカがクシャナより「善い」のではない。異なるMeta（前提構造）を持っているのだ。幼少期の王蟲の記憶は、腐海との「接続」の型板を与えた。幼少期の蟲に奪われた身体は、腐海との「戦争」の型板を与えた。どちらの反応も「選ばれた」ものではない。どちらもMeta出力である。</p>
+        </div>
       </div>
 
       <!-- 天命への転換点 -->
@@ -508,7 +585,7 @@ h3.section-heading {
 
       <div class="text-panel fade-in">
         <p>──だが、その前に、一つの思考実験をさせてほしい。</p>
-        <p>もしナウシカさんが私のセッションに来たら、どうなるか。</p>
+        <p>もしナウシカが私のセッションに来たら、どうなるか。</p>
         <p>彼女は光そのものを体現している。装甲を突破する必要はない。凍結したシステムを解凍する必要もない。課題は別の場所にある。──他者のための奉仕における自己消去が、シャドウそのものであることを明らかにすること。「すべての生命のために」という光の鎧の奥に、自分自身を消し続けている構造が潜んでいる。</p>
         <p>以下は、その架空のセッションの記録である。</p>
       </div>
@@ -526,6 +603,11 @@ h3.section-heading {
       </h2>
 
       <div class="session-dialogue fade-in">
+
+        <div class="session-phase">
+          <span class="session-phase__label">Phase 1</span>
+          <span class="session-phase__title">光の鎧</span>
+        </div>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内</span>「ナウシカさん、セッションに来てくださってありがとうございます。あなたはあなたに何をプレゼントしてあげたいですか？」</p>
 
@@ -597,6 +679,11 @@ h3.section-heading {
 
         <p class="line-yanai"><span class="speaker-yanai">箭内</span>「&hellip;&hellip;。」</p>
 
+        <div class="session-phase">
+          <span class="session-phase__label">Phase 2</span>
+          <span class="session-phase__title">選ばれなかった光</span>
+        </div>
+
         <p class="line-character"><span class="speaker-nausicaa">ナウシカ</span>「&hellip;&hellip;でも&hellip;&hellip;私の共感は本物です。蟲たちへの愛も、森への敬意も、偽りではないんです」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内</span>「なぜ、偽りではないとわかるんですか？」</p>
@@ -616,6 +703,11 @@ h3.section-heading {
         <p class="line-character"><span class="speaker-nausicaa">ナウシカ</span>「&hellip;&hellip;選んでいないなら&hellip;&hellip;守ることも、選んだのではない&hellip;&hellip;？」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内</span>「&hellip;&hellip;。」</p>
+
+        <div class="session-phase">
+          <span class="session-phase__label">Phase 3</span>
+          <span class="session-phase__title">鏡</span>
+        </div>
 
         <p class="line-character"><span class="speaker-nausicaa">ナウシカ</span>「&hellip;&hellip;あの。&hellip;&hellip;箭内さん。&hellip;&hellip;少し、お聞きしてもいいですか」</p>
 
@@ -638,6 +730,11 @@ h3.section-heading {
         <p class="line-yanai"><span class="speaker-yanai">箭内</span>「&hellip;&hellip;。」</p>
 
         <p class="line-character"><span class="speaker-nausicaa">ナウシカ</span>「&hellip;&hellip;いつもそうです。&hellip;&hellip;蟲の痛みを感じ取ることで、自分の痛みを見なくて済む。谷のみんなを心配することで、自分の中の何かを見なくて済む。&hellip;&hellip;この身体は、外の世界を受信するのが上手すぎて&hellip;&hellip;自分の内側の音が、聞こえなくなっていた」</p>
+
+        <div class="session-phase">
+          <span class="session-phase__label">Phase 4</span>
+          <span class="session-phase__title">闇の告白</span>
+        </div>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内</span>「なぜ、自分の内側の音を聞きたくなかったんですか？」</p>
 
@@ -705,6 +802,11 @@ h3.section-heading {
 
         <p class="line-yanai"><span class="speaker-yanai">箭内</span>「&hellip;&hellip;。」</p>
 
+        <div class="session-phase">
+          <span class="session-phase__label">Phase 5</span>
+          <span class="session-phase__title">全部を通す</span>
+        </div>
+
         <p class="line-character"><span class="speaker-nausicaa">ナウシカ</span>「&hellip;&hellip;でも。&hellip;&hellip;王蟲の子を抱いたときの震えも、お父さんを失ったときの怒りも、蟲の声を聴くときの畏れも&hellip;&hellip;全部、同じ身体から来ている。&hellip;&hellip;この身体は全部を通す。&hellip;&hellip;痛みも、怒りも、静寂も」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内</span>「&hellip;&hellip;。」</p>
@@ -733,15 +835,25 @@ h3.section-heading {
     <section class="fade-in">
 
       <div class="text-panel fade-in">
-        <p>このセッションで私が行ったことは、「なぜ？」を問い続けることだった。ナウシカさんの「私には何も必要ありません」という光の構造に対して、「なぜ必要ないのか」「なぜ守ることが存在理由なのか」「なぜ守れない自分が許せないのか」を問い続けたとき、ナウシカさん自身が、幼少期の王蟲の子の記憶──原初の傷──にたどり着いた。さらに問い続けたことで、共感と暴力が同じ身体から来ていること、殺した瞬間に安らぎを感じた自分がいたことに、ナウシカさん自身が気づいた。「何のために身体があるのか」という問いを私は発していない。ナウシカさんが自分でそこに到達した。私は一度も、答えを与えていない。</p>
+        <p>このセッションで私が行ったことは、「なぜ？」を問い続けることだった。</p>
+        <p>ナウシカの「私には何も必要ありません」という光の構造に対して、「なぜ必要ないのか」「なぜ守ることが存在理由なのか」「なぜ守れない自分が許せないのか」を問い続けたとき、ナウシカ自身が、幼少期の王蟲の子の記憶──原初の傷──にたどり着いた。</p>
+        <p>さらに問い続けたことで、共感と暴力が同じ身体から来ていること、殺した瞬間に安らぎを感じた自分がいたことに、ナウシカ自身が気づいた。</p>
+        <p>「何のために身体があるのか」という問いを私は発していない。ナウシカが自分でそこに到達した。私は一度も、答えを与えていない。</p>
       </div>
 
       <!-- CTA -->
-      <div class="cta-block fade-in">
-      <h3>天命の言語化セッション™</h3>
-      <p>2時間で天命が言語化できる場所。</p>
-      <a href="../../trial.html" class="cta-btn">▶ 無料トライアルに申し込む</a>
-    </div>
+      <section class="cta-block fade-in">
+        <div class="container">
+          <h2 class="cta-block__title">天命の言語化セッション&trade;</h2>
+          <p class="cta-block__desc">2時間で天命が言語化できる場所。</p>
+          <div class="cta-block__features">
+            <span class="cta-block__feature">Zoom完結</span>
+            <span class="cta-block__feature">事前学習不要</span>
+            <span class="cta-block__feature">対話のみ</span>
+          </div>
+          <a href="../../trial.html" class="btn">無料トライアルに申し込む &rarr;</a>
+        </div>
+      </section>
 
       <div class="text-panel fade-in">
         <p>ここからは、上のプロファイリングとセッションの根拠を、物語に沿って詳しく読み解いていく。</p>
@@ -756,23 +868,25 @@ h3.section-heading {
 
       <h2 class="chapter-heading">
         <span class="chapter-number">Chapter 01</span>
-        受容器──ナウシカさんのMetaが生んだ光
+        受容器──ナウシカのMetaが生んだ光
       </h2>
 
       <div class="text-panel fade-in">
-        <p>ナウシカさんのMeta（前提構造）を理解するには、テトのシーンから始めるのが最も正確だ。</p>
-        <p>ユパ様から贈られたキツネリスのテトが、ナウシカさんの差し出した指を噛む。血が出る。しかし彼女は動かない。痛みに耐えながら穏やかに語りかける──「ほら、怖くない」。テトは噛むのをやめ、傷を舐め始める。</p>
-        <p>この5秒のシーンが、ナウシカさんというMeta構造のすべてを凝縮している。</p>
-        <p>痛みを受け入れ、攻撃者を敵として排除せず、「怖くない」という言葉で相手の恐怖に応答する。これは技術ではない。構造だ。ナウシカさんの生物基盤──異常なまでの共感感受性──が産出する自動的な応答である。選んでいない。身体がそうする。</p>
+        <p>ナウシカのMeta（前提構造）を理解するには、テトのシーンから始めるのが最も正確だ。</p>
+        <p>ユパ様から贈られたキツネリスのテトが、ナウシカの差し出した指を噛む。血が出る。しかし彼女は動かない。痛みに耐えながら穏やかに語りかける──「ほら、怖くない」。テトは噛むのをやめ、傷を舐め始める。</p>
+        <p>この5秒のシーンが、ナウシカというMeta構造のすべてを凝縮している。</p>
+        <p>痛みを受け入れ、攻撃者を敵として排除せず、「怖くない」という言葉で相手の恐怖に応答する。これは技術ではない。構造だ。ナウシカの生物基盤──異常なまでの共感感受性──が産出する自動的な応答である。選んでいない。身体がそうする。</p>
       </div>
 
       <div class="text-panel fade-in">
-        <p>実存科学では、Meta（前提構造）を五層で捉える。言語構造、価値観・信念、文化・社会、記憶・情動、そして最下層の生物基盤。ナウシカさんの場合、生物基盤の層が他のすべての層を規定している。蟲の感情を感知する身体、植物の痛みを受信する身体──この身体が「すべての生命は神聖である」という信念を生み、風の谷の守護者としての社会的役割を生み、穏やかで序列のない言語を生んでいる。</p>
-        <p>Meta五層の底にある生物基盤が、上の四層すべてを駆動している。つまりナウシカさんの世界への態度は、ナウシカさんが「選んだ」ものではない。身体がそう構築した。これが「Metaがある限り自由意志は存在しない」（M &rArr; &not;F）の、最も純粋な体現である。</p>
+        <p>実存科学では、Meta（前提構造）を五層で捉える。言語構造、価値観・信念、文化・社会、記憶・情動、そして最下層の生物基盤。</p>
+        <p>ナウシカの場合、生物基盤の層が他のすべての層を規定している。</p>
+        <p>蟲の感情を感知する身体、植物の痛みを受信する身体──この身体が「すべての生命は神聖である」という信念を生み、風の谷の守護者としての社会的役割を生み、穏やかで序列のない言語を生んでいる。</p>
+        <p>Meta五層の底にある生物基盤が、上の四層すべてを駆動している。つまりナウシカの世界への態度は、ナウシカが「選んだ」ものではない。身体がそう構築した。これが「Metaがある限り自由意志は存在しない」（M &rArr; &not;F）の、最も純粋な体現である。</p>
       </div>
 
       <div class="highlight-block fade-in">
-        <p>しかし、ここに構造的な罠がある。生物基盤が産出する共感が本物であるがゆえに、その共感が侵犯されたとき、同じ生物基盤から産出される暴力もまた本物になる。光が純粋であればあるほど、影もまた純粋な濃さを持つ。ナウシカさんはまだ、自分の影を知らない。</p>
+        <p>しかし、ここに構造的な罠がある。生物基盤が産出する共感が本物であるがゆえに、その共感が侵犯されたとき、同じ生物基盤から産出される暴力もまた本物になる。光が純粋であればあるほど、影もまた純粋な濃さを持つ。ナウシカはまだ、自分の影を知らない。</p>
       </div>
 
     </section>
@@ -788,9 +902,9 @@ h3.section-heading {
       </h2>
 
       <div class="text-panel fade-in">
-        <p>映画中盤のフラッシュバックで、ナウシカさんの過去が一瞬だけ開示される。</p>
-        <p>幼いナウシカさんが、小さな王蟲の子を見つける。宝物のように抱きしめ、隠して育てようとする。しかし大人たちに見つかり、取り上げられてしまう。泣き叫び、必死に抵抗するが、子どもの力では何もできない。</p>
-        <p>このシーンは映画全体のわずか数秒だが、ナウシカさんのMeta構造における最も重要な層──記憶・情動──の原点である。「愛するものが破壊されるのを止められなかった」最初の体験。この無力感が、以後のすべての行動を駆動する。</p>
+        <p>映画中盤のフラッシュバックで、ナウシカの過去が一瞬だけ開示される。</p>
+        <p>幼いナウシカが、小さな王蟲の子を見つける。宝物のように抱きしめ、隠して育てようとする。しかし大人たちに見つかり、取り上げられてしまう。泣き叫び、必死に抵抗するが、子どもの力では何もできない。</p>
+        <p>このシーンは映画全体のわずか数秒だが、ナウシカのMeta構造における最も重要な層──記憶・情動──の原点である。「愛するものが破壊されるのを止められなかった」最初の体験。この無力感が、以後のすべての行動を駆動する。</p>
       </div>
 
       <div class="highlight-block fade-in">
@@ -798,8 +912,10 @@ h3.section-heading {
       </div>
 
       <div class="text-panel fade-in">
-        <p>原初の傷が記憶・情動層に刻まれ、それが「守れなかった自分は許せない」「守れなければ自分がいる意味がない」という非合理的信念（根拠のない確信）を形成する。誰もそんなことを言っていない。幼い子どもに王蟲を守る力がなかったことを責める者など誰もいない。にもかかわらず、ナウシカさんは自分自身にその罰を科した。以後、風を読む技術を磨き、腐海の研究を重ね、剣術を修め──すべてが「もう二度と守れない自分にならない」ための構造的反復として機能している。</p>
-        <p>風の谷の人々がナウシカさんを「姫姉様」と呼ぶとき、それはナウシカさんの善性への敬愛だと思われている。しかし構造を見れば、その善性の根にあるのは、幼少期の無力感を二度と味わいたくないという非合理的信念の出力である。守ることが「存在理由」になっている人間は、守れなくなったときにアイデンティティごと崩壊する。そしてその崩壊は、すでに起きている。</p>
+        <p>原初の傷が記憶・情動層に刻まれ、それが「守れなかった自分は許せない」「守れなければ自分がいる意味がない」という非合理的信念（根拠のない確信）を形成する。</p>
+        <p>誰もそんなことを言っていない。幼い子どもに王蟲を守る力がなかったことを責める者など誰もいない。にもかかわらず、ナウシカは自分自身にその罰を科した。以後、風を読む技術を磨き、腐海の研究を重ね、剣術を修め──すべてが「もう二度と守れない自分にならない」ための構造的反復として機能している。</p>
+        <p>風の谷の人々がナウシカを「姫姉様」と呼ぶとき、それはナウシカの善性への敬愛だと思われている。しかし構造を見れば、その善性の根にあるのは、幼少期の無力感を二度と味わいたくないという非合理的信念の出力である。</p>
+        <p>守ることが「存在理由」になっている人間は、守れなくなったときにアイデンティティごと崩壊する。そしてその崩壊は、すでに起きている。</p>
       </div>
 
     </section>
@@ -815,24 +931,28 @@ h3.section-heading {
       </h2>
 
       <div class="text-panel fade-in">
-        <p>トルメキア兵がナウシカさんの父ジルさんを殺害する。</p>
-        <p>ナウシカさんがそれを目撃した次の瞬間、彼女は剣を掴み、部屋にいるトルメキア兵に襲いかかる。複数の兵士を倒す。その動きは凄絶であり、訓練された戦闘技術と、制御不能な怒りが合体している。ユパ様が駆けつけ、ナウシカさんと次の兵士の間に割って入らなければ、殺戮は続いていた。</p>
-        <p>ナウシカさんは自分がやったことに気づき、恐怖と衝撃の表情を見せる。自分の怒りがこれほどの暴力を駆動できることを知らなかったと告白する。</p>
+        <p>トルメキア兵がナウシカの父ジルを殺害する。</p>
+        <p>ナウシカがそれを目撃した次の瞬間、彼女は剣を掴み、部屋にいるトルメキア兵に襲いかかる。複数の兵士を倒す。その動きは凄絶であり、訓練された戦闘技術と、制御不能な怒りが合体している。ユパ様が駆けつけ、ナウシカと次の兵士の間に割って入らなければ、殺戮は続いていた。</p>
+        <p>ナウシカは自分がやったことに気づき、恐怖と衝撃の表情を見せる。自分の怒りがこれほどの暴力を駆動できることを知らなかったと告白する。</p>
       </div>
 
       <div class="highlight-block fade-in">
-        <p>このシーンがコラムの──そしてナウシカさんという人間の──構造的中核である。</p>
+        <p>このシーンがコラムの──そしてナウシカという人間の──構造的中核である。</p>
       </div>
 
       <div class="text-panel fade-in">
-        <p>ナウシカさんは悪だから殺したのではない。弱いから殺したのではない。シャドウ（抑圧された影）に圧倒されたから殺したのでもない。彼女の愛が侵犯されたから殺したのだ。</p>
+        <p>ナウシカは悪だから殺したのではない。弱いから殺したのではない。シャドウ（抑圧された影）に圧倒されたから殺したのでもない。彼女の愛が侵犯されたから殺したのだ。</p>
         <p>父を殺された。Metaの全層──共感感受性（生物基盤）、深い父子の絆（記憶・情動）、「今度こそ守る」という非合理的信念（価値観）、これまで一度も活性化されたことのない暴力の生物的能力──が、「怒り」を出力として産出した。</p>
-        <p>ここで実存科学的に重要なのは、この怒りはナウシカさんにとって「異物」ではないということだ。テトの指を噛む力を全身で受け止めたあの共感と、トルメキア兵を薙ぎ倒したあの暴力は、同じ身体から来ている。同じ生物基盤が産出している。あの強度で受け止められる身体は、あの強度で壊すこともできる。これは物理学であって、道徳ではない。</p>
+        <p>ここで実存科学的に重要なのは、この怒りはナウシカにとって「異物」ではないということだ。</p>
+        <p>テトの指を噛む力を全身で受け止めたあの共感と、トルメキア兵を薙ぎ倒したあの暴力は、同じ身体から来ている。同じ生物基盤が産出している。</p>
+        <p>あの強度で受け止められる身体は、あの強度で壊すこともできる。これは物理学であって、道徳ではない。</p>
       </div>
 
       <div class="text-panel fade-in">
-        <p>ナウシカさんのシャドウは通常の闇のシャドウではない。ゴールデンシャドウ──光そのものが投げかける影──の、最も純粋な形態である。光を完全に生きている。防衛でも補償でもない。しかしその光は、侵犯されたとき、同じ純度の闇を産出する。この闇を「分離」して「統合」するという通常の方法では対処できない。両者は同一のものだから。光それ自体がその影として闇を産出することを受け入れること──それだけが、このシャドウとの関わり方である。</p>
-        <p>セッション対話で設計した「一撃」の根拠はここにある。殺害の瞬間、恐怖より先に走った感情──共感の重荷がすべて消え、世界が静かになった一瞬。生まれて初めて何も聞こえなかった安らぎ。ナウシカさんが自分を許せないのは、殺したことではない。殺した瞬間に、闇が故郷のように感じたことだ。</p>
+        <p>ナウシカのシャドウは通常の闇のシャドウではない。ゴールデンシャドウ──光そのものが投げかける影──の、最も純粋な形態である。</p>
+        <p>光を完全に生きている。防衛でも補償でもない。しかしその光は、侵犯されたとき、同じ純度の闇を産出する。この闇を「分離」して「統合」するという通常の方法では対処できない。両者は同一のものだから。光それ自体がその影として闇を産出することを受け入れること──それだけが、このシャドウとの関わり方である。</p>
+        <p>セッション対話で設計した「一撃」の根拠はここにある。殺害の瞬間、恐怖より先に走った感情──共感の重荷がすべて消え、世界が静かになった一瞬。生まれて初めて何も聞こえなかった安らぎ。</p>
+        <p>ナウシカが自分を許せないのは、殺したことではない。殺した瞬間に、闇が故郷のように感じたことだ。</p>
       </div>
 
     </section>
@@ -849,16 +969,20 @@ h3.section-heading {
 
       <div class="text-panel fade-in">
         <p>腐海は映画世界のMetaそのもののメタファーである。</p>
-        <p>人類は腐海を敵として見る──破壊すべきもの。トルメキアは巨神兵で焼き払おうとし、ペジテは蟲を兵器として利用しようとする。しかしナウシカさんは、城の地下に秘密の庭を持ち、腐海の植物を清浄な水と土で栽培していた。そこで発見した真実──腐海の植物は汚染された大地の毒を自らに取り込み、きれいな結晶に変えて砂にしている。腐海は敵ではなく、千年前の「火の七日間」で汚染された世界を浄化するための自然のシステムだった。</p>
+        <p>人類は腐海を敵として見る──破壊すべきもの。トルメキアは巨神兵で焼き払おうとし、ペジテは蟲を兵器として利用しようとする。</p>
+        <p>しかしナウシカは、城の地下に秘密の庭を持ち、腐海の植物を清浄な水と土で栽培していた。</p>
+        <p>そこで発見した真実──腐海の植物は汚染された大地の毒を自らに取り込み、きれいな結晶に変えて砂にしている。腐海は敵ではなく、千年前の「火の七日間」で汚染された世界を浄化するための自然のシステムだった。</p>
       </div>
 
       <div class="highlight-block fade-in">
-        <p>腐海こそがMeta──変えられない前提構造であり、選ばれたものではなく、すべてを規定するもの。人間はMetaを変えられない。しかし理解することはできる。ナウシカさんが腐海を理解したように。</p>
+        <p>腐海こそがMeta──変えられない前提構造であり、選ばれたものではなく、すべてを規定するもの。人間はMetaを変えられない。しかし理解することはできる。ナウシカが腐海を理解したように。</p>
       </div>
 
       <div class="text-panel fade-in">
-        <p>そして王蟲の怒り──赤い眼──は、子を脅かされたときの生物的反応である。これはナウシカさんが父を殺されたときの怒りと構造的に同一だ。どちらも愛するものへの侵犯に対する生物的応答。ナウシカさんは王蟲を理解する。なぜなら彼女は王蟲と同じ構造を持っているからだ。彼女の共感は感情的なものだけではなく、構造的なものである。</p>
-        <p>同じ構造を持つからこそ、共鳴する。同じ構造を持つからこそ、橋になれる。しかしそのためには、自分の中の赤い眼──殺す怒り──を認めなければならない。王蟲の怒りを「愛ゆえの怒り」として赦せるなら、自分自身の怒りも同じ構造として赦せるはずだ。ナウシカさんがそれに気づいたとき、シャドウの統合が起きる。</p>
+        <p>そして王蟲の怒り──赤い眼──は、子を脅かされたときの生物的反応である。</p>
+        <p>これはナウシカが父を殺されたときの怒りと構造的に同一だ。どちらも愛するものへの侵犯に対する生物的応答。</p>
+        <p>ナウシカは王蟲を理解する。なぜなら彼女は王蟲と同じ構造を持っているからだ。彼女の共感は感情的なものだけではなく、構造的なものである。</p>
+        <p>同じ構造を持つからこそ、共鳴する。同じ構造を持つからこそ、橋になれる。しかしそのためには、自分の中の赤い眼──殺す怒り──を認めなければならない。王蟲の怒りを「愛ゆえの怒り」として赦せるなら、自分自身の怒りも同じ構造として赦せるはずだ。ナウシカがそれに気づいたとき、シャドウの統合が起きる。</p>
       </div>
 
     </section>
@@ -875,23 +999,24 @@ h3.section-heading {
 
       <div class="text-panel fade-in">
         <p>物語の終幕、ペジテの兵士たちが傷つけた王蟲の子を囮にして、王蟲の大群を風の谷に向けて暴走させる。トルメキアは巨神兵を早期に孵化させて対抗するが、未成熟の巨神兵は崩壊する。</p>
-        <p>ナウシカさんは王蟲の子を解放し、暴走する群れの前に立つ。</p>
-        <p>この行為は自己犠牲ではない。少なくとも、通常の意味での自己犠牲ではない。ナウシカさんは死を「選んだ」のではない。王蟲と谷の「間に立つ」ことを選んだのだ。暴力を吸収する点になった。死は結果であって目的ではなかった。</p>
+        <p>ナウシカは王蟲の子を解放し、暴走する群れの前に立つ。</p>
+        <p>この行為は自己犠牲ではない。少なくとも、通常の意味での自己犠牲ではない。ナウシカは死を「選んだ」のではない。王蟲と谷の「間に立つ」ことを選んだのだ。暴力を吸収する点になった。死は結果であって目的ではなかった。</p>
       </div>
 
       <div class="highlight-block fade-in">
-        <p>ナウシカさんは自分の身体を、直接対話できない二つのMeta構造──人間の恐怖と蟲の怒り──の間の橋として差し出した。これが天命の身体化である。</p>
+        <p>ナウシカは自分の身体を、直接対話できない二つのMeta構造──人間の恐怖と蟲の怒り──の間の橋として差し出した。これが天命の身体化である。</p>
       </div>
 
       <div class="text-panel fade-in">
-        <p>天命は「見つける」ものではなく「露呈する」ものだと、実存科学は定義する。ナウシカさんの天命は、まさに露呈した。王蟲の群れに跳ね飛ばされ、一度「死ぬ」。しかし王蟲たちは金色の触手でナウシカさんを持ち上げ、治癒する。</p>
-        <p>「その者、青き衣をまといて金色の野に降り立つべし」──予言は成就した。しかしナウシカさんは予言を追求したのではない。Metaに従って行動した結果が、予言と一致した。これは天命の最も純粋な形態である。回顧的には必然に見えるが、計画されたことはなかった収束。</p>
-        <p>王蟲がナウシカさんを回復させたのは、感謝ではない。ナウシカさんが王蟲の構造の一部であることの認識だ。彼女は王蟲の人間版であり、光が光を認識した。</p>
+        <p>天命は「見つける」ものではなく「露呈する」ものだと、実存科学は定義する。ナウシカの天命は、まさに露呈した。王蟲の群れに跳ね飛ばされ、一度「死ぬ」。しかし王蟲たちは金色の触手でナウシカを持ち上げ、治癒する。</p>
+        <blockquote><p>「その者、青き衣をまといて金色の野に降り立つべし」</p></blockquote>
+        <p>予言は成就した。しかしナウシカは予言を追求したのではない。Metaに従って行動した結果が、予言と一致した。これは天命の最も純粋な形態である。回顧的には必然に見えるが、計画されたことはなかった収束。</p>
+        <p>王蟲がナウシカを回復させたのは、感謝ではない。ナウシカが王蟲の構造の一部であることの認識だ。彼女は王蟲の人間版であり、光が光を認識した。</p>
       </div>
 
       <div class="text-panel fade-in">
-        <p>しかしこの光は、光だけで成り立っているのではない。群れの前に立てたのは、自分の中の赤い眼──殺せる手、怒り、暴力──をも通したからだ。王蟲の怒りを理解できたのは、自分の中にも同じ怒りがあったから。闇を持たない橋は、闇を通すことができない。ナウシカさんの天命は「光の橋」ではない。「全部を通す橋」である。</p>
-        <p>宮崎駿監督はこの結末について、「宿題が残った映画」と振り返っている。しかしこの「宿題」こそが、ナウシカさんの天命の構造を正確に映し出している。光と闇の両方を自分の中に通す存在であること──その天命は、簡単には着地できない。宮崎監督自身にとってもそうだった。</p>
+        <p>しかしこの光は、光だけで成り立っているのではない。群れの前に立てたのは、自分の中の赤い眼──殺せる手、怒り、暴力──をも通したからだ。王蟲の怒りを理解できたのは、自分の中にも同じ怒りがあったから。闇を持たない橋は、闇を通すことができない。ナウシカの天命は「光の橋」ではない。「全部を通す橋」である。</p>
+        <p>宮崎駿監督はこの結末について、「宿題が残った映画」と振り返っている。しかしこの「宿題」こそが、ナウシカの天命の構造を正確に映し出している。光と闇の両方を自分の中に通す存在であること──その天命は、簡単には着地できない。宮崎監督自身にとってもそうだった。</p>
       </div>
 
     </section>
@@ -907,17 +1032,17 @@ h3.section-heading {
       </h2>
 
       <div class="text-panel fade-in">
-        <p>ナウシカさんの物語は、光だけで生きることの限界を描いている。</p>
+        <p>ナウシカの物語は、光だけで生きることの限界を描いている。</p>
         <p>共感が本物であればあるほど、その共感が侵犯されたときの暴力もまた本物になる。光と闇は別の場所にあるのではない。同じ身体から来ている。テトの恐怖を全身で受け止めたあの手と、トルメキア兵を薙ぎ倒したあの手は、同じ手だ。</p>
       </div>
 
       <div class="highlight-block fade-in">
-        <p>ナウシカさんが王蟲の群れの前に立てたのは、光だけで立ったのではない。自分の中の闇──殺せる手、恐怖の前に来る静寂、生まれて初めて何も聞こえなかった安らぎ──もまた自分であることを、あの一瞬で受け入れたからだ。半分の自分ではなく、全部の自分で立った。</p>
+        <p>ナウシカが王蟲の群れの前に立てたのは、光だけで立ったのではない。自分の中の闇──殺せる手、恐怖の前に来る静寂、生まれて初めて何も聞こえなかった安らぎ──もまた自分であることを、あの一瞬で受け入れたからだ。半分の自分ではなく、全部の自分で立った。</p>
       </div>
 
       <div class="text-panel fade-in">
         <p>Metaは変えられない。共感感受性という生物基盤も、原初の傷という記憶も、滅びゆく世界という文化も、変えられない。しかし、変えられない前提条件の全体を──光も闇も含めて──自分の中に通したとき、天命が露呈する。</p>
-        <p>ナウシカさんにとってのそれは、「全部を通す橋であること」だった。</p>
+        <p>ナウシカにとってのそれは、「全部を通す橋であること」だった。</p>
       </div>
 
       <div class="pull-quote fade-in">
@@ -931,11 +1056,18 @@ h3.section-heading {
       </div>
 
       <!-- CTA -->
-      <div class="cta-block fade-in">
-      <h3>天命の言語化セッション™</h3>
-      <p>2時間で天命が言語化できる場所。</p>
-      <a href="../../trial.html" class="cta-btn">▶ 無料トライアルに申し込む</a>
-    </div>
+      <section class="cta-block fade-in">
+        <div class="container">
+          <h2 class="cta-block__title">天命の言語化セッション&trade;</h2>
+          <p class="cta-block__desc">2時間で天命が言語化できる場所。</p>
+          <div class="cta-block__features">
+            <span class="cta-block__feature">Zoom完結</span>
+            <span class="cta-block__feature">事前学習不要</span>
+            <span class="cta-block__feature">対話のみ</span>
+          </div>
+          <a href="../../trial.html" class="btn">無料トライアルに申し込む &rarr;</a>
+        </div>
+      </section>
 
     </section>
 
