@@ -649,6 +649,7 @@ a.site-logo:not(.btn):not(.session-card__link):hover {
   text-align: center;
   border-bottom: none;
   position: relative;
+  overflow: hidden;
 }
 
 .page-hero::after {
