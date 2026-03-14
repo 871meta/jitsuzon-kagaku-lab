@@ -1204,6 +1204,9 @@ a.site-logo:not(.btn):not(.session-card__link):hover {
   display: none;
 }
 
+.cta-block p,
+.article-page .cta-block.cta-block p { text-align: center; }
+
 .cta-block .btn {
   border-color: var(--color-gold-a40);
   transition: all 0.4s ease;
