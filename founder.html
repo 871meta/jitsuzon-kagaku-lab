@@ -44,17 +44,12 @@
     }
 
     .founder-hero__inner {
-      max-width: 1100px;
+      max-width: 760px;
       margin: 0 auto;
       padding: 0 2.5rem;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: end;
-    }
-
-    .founder-hero__text {
-      padding-bottom: 5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
     }
 
     .founder-hero__sub {
@@ -142,10 +137,11 @@
     .founder-hero__photo-wrap {
       position: relative;
       overflow: hidden;
-      width: 364px;
-      height: 364px;
-      margin: 2rem auto;
+      width: 300px;
+      height: 300px;
+      margin: 2rem auto 2.5rem;
       border-radius: 50%;
+      align-self: center;
     }
 
     .founder-hero__photo {
@@ -912,27 +908,13 @@
 
     /* --- Responsive 900px --- */
     @media (max-width: 900px) {
-      .founder-hero__inner {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-
-      .founder-hero__text {
-        padding-bottom: 2rem;
-        text-align: left;
-      }
-
-      .founder-hero__intro {
-        max-width: 100%;
-      }
-
       .founder-hero__name {
         font-size: 2.2rem;
       }
 
       .founder-hero__photo-wrap {
-        width: 340px;
-        height: 340px;
+        width: 280px;
+        height: 280px;
       }
 
       .founder-pullquote__text {
@@ -1172,38 +1154,28 @@
   <!-- ===== FOUNDER HERO WITH PHOTO ===== -->
   <section class="founder-hero" id="main">
     <div class="founder-hero__inner">
-      <div class="founder-hero__text fade-in">
       <!-- Breadcrumb -->
-      <nav class="breadcrumb" aria-label="パンくずリスト">
+      <nav class="breadcrumb fade-in" aria-label="パンくずリスト">
         <ol class="breadcrumb__list">
           <li class="breadcrumb__item"><a href="index.html" class="breadcrumb__link">TOP</a></li>
           <li class="breadcrumb__item"><span class="breadcrumb__current">創始者</span></li>
         </ol>
       </nav>
-        <p class="founder-hero__sub">Founder</p>
-        <h1 class="founder-hero__name">箭内宏紀</h1>
-        <span class="founder-hero__ruby">やないひろき</span>
-        <div class="founder-hero__intro">
-          <div class="founder-hero__role-tags">
-            <span class="founder-hero__role-tag">実存科学研究所 代表</span>
-            <span class="founder-hero__role-tag">天命の言語化セッション™ ファシリテーター</span>
-          </div>
-          <p class="founder-hero__statement">壊れた人間を支えた手のぬくもり。<br>その手を、今度は、あなたに差し出す。</p>
-          <!-- 旧テキスト保全: <p class="founder-hero__statement">認識論3000年に終止符を打ち、世界のOSを書き換える。</p> -->
-        </div>
-        <!-- 旧テキスト保全
-          <p class="intro-role">実存科学者。「天命の言語化セッション™︎」ファシリテーター。</p>
-          <p>「Metaがある限り、自由意志は存在しない」という命題から認識論3000年に終止符を打ち、世界のOSを書き換える。</p>
-          <p>「深く考えるに値する問い」を通じて、あなたの「天命（生まれた理由・生きる目的）」を一文に結晶させる対話を提供する。</p>
-          <p>「生きる意味」を語れる社会を創るために「実存科学」という学問体系を拓く。</p>
-        -->
-      </div>
+      <p class="founder-hero__sub fade-in">Founder</p>
       <div class="founder-hero__photo-wrap fade-in">
         <picture>
           <source srcset="images/profile@2x.webp" type="image/webp">
           <img src="images/profile@2x.jpg" alt="箭内宏紀" class="founder-hero__photo" id="founderPhoto" loading="lazy">
         </picture>
       </div>
+      <h1 class="founder-hero__name fade-in">箭内宏紀</h1>
+      <span class="founder-hero__ruby fade-in">やないひろき</span>
+      <div class="founder-hero__role-tags fade-in">
+        <span class="founder-hero__role-tag">実存科学研究所 代表</span>
+        <span class="founder-hero__role-tag">天命の言語化セッション™ ファシリテーター</span>
+      </div>
+      <!-- 旧テキスト保全: <p class="founder-hero__statement">壊れた人間を支えた手のぬくもり。その手を、今度は、あなたに差し出す。</p> -->
+      <!-- 旧テキスト保全: <p class="founder-hero__statement">認識論3000年に終止符を打ち、世界のOSを書き換える。</p> -->
     </div>
     <div class="founder-hero__divider"></div>
   </section>
