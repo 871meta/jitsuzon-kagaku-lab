@@ -810,6 +810,16 @@
         box-sizing: border-box;
         text-align: center;
       }
+
+      /* trial.html: 明示的な改行はモバイルでも維持 */
+      .price-block__payment br,
+      .notation br,
+      .shinyu-emphasis br,
+      .shinyu-accordion__content br,
+      .section--bordered .text-panel br,
+      .section--bordered .def-box br {
+        display: inline !important;
+      }
     }
   </style>
 <script type="application/ld+json">
