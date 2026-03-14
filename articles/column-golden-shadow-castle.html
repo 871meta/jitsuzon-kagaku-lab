@@ -78,13 +78,6 @@
     .author-block p { font-size: var(--fs-body); line-height: 2; color: var(--text-secondary); margin-bottom: 0.4rem; }
     .author-block p:first-child { font-weight: 700; color: var(--text); font-size: var(--fs-body); }
 
-    /* CTA */
-    .cta-block { margin-top: 2rem; padding: 2rem; background: var(--definition-bg); border-left: 2px solid; border-image: linear-gradient(180deg, var(--color-gold) 0%, var(--color-gold-a20) 100%) 1; }
-    .cta-block p { font-size: var(--fs-body); line-height: 2; margin-bottom: 0.5rem; }
-    .cta-block p:last-child { margin-bottom: 0; }
-    .cta-block a { color: var(--accent); font-weight: 700; }
-    .cta-block a:hover { color: var(--color-gold-light); }
-
     /* Back nav */
     .back-nav { margin-top: 4rem; padding: 1.5rem 2rem; background: var(--highlight); border: 1px solid var(--border); text-align: center; }
     .back-nav a { color: var(--accent); text-decoration: none; font-weight: 700; }
@@ -157,7 +150,7 @@
       </nav>
     <p class="label">EXISTENTIAL SCIENCE RESEARCH INSTITUTE</p>
     <span class="category-tag">コラム</span>
-    <h1>城の中の迷子 ── ゴールデンシャドウ位相2の臨床的観測</h1>
+    <h1 class="hero-title--shimmer">城の中の迷子 ── ゴールデンシャドウ位相2の臨床的観測</h1>
     <p class="subtitle">箭内宏紀｜実存科学研究所</p>
   </header>
   <div class="reading-progress"></div>
@@ -407,10 +400,18 @@
     </div>
 
     <!-- ── CTA ── -->
-    <div class="cta-block fade-in">
-      <p>天命の言語化セッション™ ── 2時間で天命が言語化できる場所。</p>
-      <p><a href="../trial.html">▶ 無料トライアルに申し込む</a></p>
-    </div>
+    <section class="cta-block fade-in">
+      <div class="container">
+        <h2 class="cta-block__title">天命の言語化セッション™</h2>
+        <p class="cta-block__desc">2時間で天命が言語化できる場所。</p>
+        <div class="cta-block__features">
+          <span class="cta-block__feature">Zoom完結</span>
+          <span class="cta-block__feature">事前学習不要</span>
+          <span class="cta-block__feature">対話のみ</span>
+        </div>
+        <a href="../trial.html" class="btn">無料トライアルに申し込む &rarr;</a>
+      </div>
+    </section>
 
     <!-- ── ナビゲーション ── -->
     <div class="back-nav fade-in">
