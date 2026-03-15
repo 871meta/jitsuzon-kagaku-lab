@@ -313,8 +313,32 @@
     }
 
     /* Expandable section (Uniqueness etc.) */
+    /* Expandable luxury card */
     .kd-expand {
       position: relative;
+      background: linear-gradient(160deg, rgba(15,12,25,0.75) 0%, rgba(8,6,16,0.92) 100%);
+      border: 1px solid var(--color-gold-a10);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 2px 32px var(--color-gold-a04), inset 0 1px 0 var(--color-gold-a08);
+      padding: 2.5rem;
+      overflow: hidden;
+      transition: border-color 0.5s ease, box-shadow 0.5s ease;
+      cursor: pointer;
+    }
+
+    .kd-expand::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, var(--color-gold-a50), var(--color-gold-a20), transparent 70%);
+    }
+
+    .kd-expand:hover {
+      border-color: var(--color-gold-a25);
+      box-shadow: 0 4px 48px var(--color-gold-a10), inset 0 1px 0 var(--color-gold-a08);
     }
 
     .kd-expand__title {
@@ -332,6 +356,115 @@
 
     .kd-expand.is-open .kd-card__toggle {
       transform: translateY(-50%) rotate(45deg);
+      color: var(--color-gold);
+    }
+
+    /* FAQ accordion */
+    .kd-faq {
+      position: relative;
+      padding: 1.8rem 2.5rem;
+      background: linear-gradient(160deg, rgba(15,12,25,0.75) 0%, rgba(8,6,16,0.92) 100%);
+      border: 1px solid var(--color-gold-a08);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 2px 24px var(--color-gold-a04);
+      overflow: hidden;
+      cursor: pointer;
+      transition: border-color 0.5s ease, box-shadow 0.5s ease;
+      margin-bottom: 0.8rem;
+    }
+
+    .kd-faq::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--color-gold-a30), transparent);
+    }
+
+    .kd-faq:hover {
+      border-color: var(--color-gold-a20);
+      box-shadow: 0 4px 40px var(--color-gold-a08);
+    }
+
+    /* FAQ color accents */
+    .kd-faq:nth-child(1) { border-left: 2px solid var(--color-gold-a50); }
+    .kd-faq:nth-child(2) { border-left: 2px solid rgba(160,120,200,0.5); }
+    .kd-faq:nth-child(3) { border-left: 2px solid rgba(120,155,200,0.5); }
+    .kd-faq:nth-child(4) { border-left: 2px solid rgba(200,120,120,0.5); }
+
+    .kd-faq__label {
+      font-family: var(--font-serif-en);
+      font-size: var(--fs-xs);
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+
+    .kd-faq:nth-child(1) .kd-faq__label { color: var(--color-gold); }
+    .kd-faq:nth-child(2) .kd-faq__label { color: #a078c8; }
+    .kd-faq:nth-child(3) .kd-faq__label { color: #789bc8; }
+    .kd-faq:nth-child(4) .kd-faq__label { color: #c87878; }
+
+    .kd-faq__question {
+      color: #f0ece6;
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.8;
+      padding-right: 2rem;
+    }
+
+    .kd-faq__answer {
+      display: none;
+      margin-top: 1.2rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--color-gold-a08);
+      font-size: var(--fs-body);
+      color: var(--color-text-reading);
+      line-height: 2.2;
+      letter-spacing: 0.03em;
+    }
+
+    .kd-faq.is-open .kd-faq__answer {
+      display: block;
+    }
+
+    .kd-faq .kd-card__toggle {
+      top: 1.8rem;
+      right: 1.5rem;
+    }
+
+    .kd-faq.is-open .kd-card__toggle {
+      transform: rotate(45deg);
+      color: var(--color-gold);
+    }
+
+    /* Facilitator expandable bio */
+    .kd-facilitator__bio-expand {
+      display: none;
+    }
+
+    .kd-bio-wrap.is-open .kd-facilitator__bio-expand {
+      display: block;
+    }
+
+    .kd-facilitator__lead {
+      cursor: pointer;
+      transition: border-color 0.4s ease;
+    }
+
+    .kd-facilitator__lead:hover {
+      border-color: var(--color-gold-a40);
+    }
+
+    .kd-facilitator__lead .kd-card__toggle {
+      top: 1.5rem;
+      right: 1.2rem;
+    }
+
+    .kd-bio-wrap.is-open .kd-facilitator__lead .kd-card__toggle {
+      transform: rotate(45deg);
       color: var(--color-gold);
     }
 
@@ -1199,7 +1332,7 @@
 
             <div class="kd-body">
               <p>
-                自分を変えるのではなく、すでにある構造を読み解く。<br>
+                自分を変えるのではなく、すでにある構造を読み解く。<br class="sp-only">
                 それが<strong>「天命の言語化」</strong>です。
               </p>
             </div>
@@ -1241,7 +1374,7 @@
           <a href="dark-side/diagnosis.html" class="btn--kandou">無料でMetaを診断する &rarr;</a>
         </p>
         <p class="kd-cta__note">
-          15問 / 約3分 / 完全無料 / 登録不要 / 営業なし
+          15問 / 約3分 / 完全無料
         </p>
       </div>
     </div>
@@ -1661,7 +1794,7 @@
           <a href="dark-side/diagnosis.html" class="btn--kandou">無料でMetaを診断する &rarr;</a>
         </p>
         <p class="kd-cta__note">
-          15問 / 約3分 / 完全無料 / 登録不要 / 営業なし
+          15問 / 約3分 / 完全無料
         </p>
       </div>
     </div>
@@ -1684,20 +1817,22 @@
             <p class="kd-facilitator__role">実存科学研究所 代表<br>「天命の言語化セッション™︎」<br>開発者/ファシリテーター</p>
           </div>
         </div>
-        <div class="kd-body">
-          <p class="kd-facilitator__lead">
-            <strong>「Metaがある限り、自由意志は存在しない」</strong><br>この一行に、すべてが集約されている。
+        <div class="kd-body kd-bio-wrap">
+          <p class="kd-facilitator__lead" style="position: relative;">
+            <span class="kd-card__toggle" style="top: 1.5rem; right: 1.2rem;">+</span>
+            <strong>「Metaがある限り、自由意志は存在しない」</strong><br>
+            この一行に、すべてが集約されている。
           </p>
-          <p>
+          <p class="kd-facilitator__bio-expand">
             1989年、福島県生まれ。大学在学中からコーチとして活動を始め、卒業後は不登校支援のカウンセラーとして全国トップの業績を記録。しかし売上優先の組織体質に違和感を覚え、自らの道を選ぶ。
           </p>
-          <p>
+          <p class="kd-facilitator__bio-expand">
             「Nimbus Creation」を創業し、約10年にわたりインターネットカウンセラー養成講座を運営。1300人以上に心理学とビジネスの技術を届けた。しかし本当の探究はそこから始まった。神経科学、分析哲学、仏教、密教、ヴェーダーンタ──あらゆる領域を横断しながら瞑想を深める中で、精神の根底が一度、完全に崩れ落ちた経験を持つ。
           </p>
-          <p>
+          <p class="kd-facilitator__bio-expand">
             家族と友人に支えられ、そこから立ち上がったとき、手の中に残っていたのはたった一つの認識＜Meta＞だった。その認識が「天命の言語化セッション™」の原点となり、現在は実存科学研究所を主宰。
           </p>
-          <p>
+          <p class="kd-facilitator__bio-expand">
             天命を悟り、日々全うする人が増えること。<br>
             天命を語り合える<strong>「心友」</strong>が社会に満ちること。<br>
             ──それが、次の文明の夜明けとなる。
@@ -1813,44 +1948,40 @@
         <p class="kd-hero__sub" style="margin-bottom: 1.5rem;">FAQ</p>
         <h2 class="section__title">よくある質問</h2>
 
-        <div class="kd-case fade-in" style="margin-bottom: 1.5rem; padding: 2rem 2.5rem;">
-          <p class="kd-case__label" style="margin-bottom: 0.8rem;">Q1</p>
-          <p style="color: #f0ece6; font-size: 1rem; font-weight: 600; margin-bottom: 1rem;">
-            自己啓発やコーチングと何が違うのですか？
-          </p>
-          <p class="kd-body" style="margin-bottom: 0;">
+        <div class="kd-faq fade-in">
+          <p class="kd-faq__label">Q1</p>
+          <span class="kd-card__toggle">+</span>
+          <p class="kd-faq__question">自己啓発やコーチングと何が違うのですか？</p>
+          <div class="kd-faq__answer">
             自己啓発やコーチングは「自分を変える」ことを前提としています。天命の言語化セッション™は「自分を知る」ことが前提です。自由意志を仮定せず、あなたの初期条件（Meta）が必然的に向かう収束点を読み解きます。変化ではなく、発見です。
-          </p>
+          </div>
         </div>
 
-        <div class="kd-case fade-in" style="margin-bottom: 1.5rem; padding: 2rem 2.5rem;">
-          <p class="kd-case__label" style="margin-bottom: 0.8rem;">Q2</p>
-          <p style="color: #f0ece6; font-size: 1rem; font-weight: 600; margin-bottom: 1rem;">
-            診断結果だけで何かが変わるのですか？
-          </p>
-          <p class="kd-body" style="margin-bottom: 0;">
+        <div class="kd-faq fade-in">
+          <p class="kd-faq__label">Q2</p>
+          <span class="kd-card__toggle">+</span>
+          <p class="kd-faq__question">診断結果だけで何かが変わるのですか？</p>
+          <div class="kd-faq__answer">
             診断は「現在地の可視化」です。変わるかどうかは、可視化された構造にどう向き合うかで決まります。ただし、多くの方が診断結果を読んだだけで「何が引っかかっていたのか」に気づき始めます。認識が動けば、構造は動きます。
-          </p>
+          </div>
         </div>
 
-        <div class="kd-case fade-in" style="margin-bottom: 1.5rem; padding: 2rem 2.5rem;">
-          <p class="kd-case__label" style="margin-bottom: 0.8rem;">Q3</p>
-          <p style="color: #f0ece6; font-size: 1rem; font-weight: 600; margin-bottom: 1rem;">
-            セッションを受けなくても意味がありますか？
-          </p>
-          <p class="kd-body" style="margin-bottom: 0;">
+        <div class="kd-faq fade-in">
+          <p class="kd-faq__label">Q3</p>
+          <span class="kd-card__toggle">+</span>
+          <p class="kd-faq__question">セッションを受けなくても意味がありますか？</p>
+          <div class="kd-faq__answer">
             はい。診断だけでも自己理解は深まります。ただし、天命の言語化は対話の中でしか完了しません。診断は構造を「見る」段階、セッションは天命を「言葉にする」段階です。
-          </p>
+          </div>
         </div>
 
-        <div class="kd-case fade-in" style="padding: 2rem 2.5rem;">
-          <p class="kd-case__label" style="margin-bottom: 0.8rem;">Q4</p>
-          <p style="color: #f0ece6; font-size: 1rem; font-weight: 600; margin-bottom: 1rem;">
-            本当に無料ですか？
-          </p>
-          <p class="kd-body" style="margin-bottom: 0;">
-            ダークサイド診断は完全無料です。登録も不要です。診断後、天命の言語化ワークシートと問いを受け取りたい方のみ、メールアドレスの入力をお願いしています。
-          </p>
+        <div class="kd-faq fade-in">
+          <p class="kd-faq__label">Q4</p>
+          <span class="kd-card__toggle">+</span>
+          <p class="kd-faq__question">本当に無料ですか？</p>
+          <div class="kd-faq__answer">
+            ダークサイド診断は完全無料です。診断後、天命の言語化ワークシートと問いを受け取りたい方のみ、メールアドレスの入力をお願いしています。
+          </div>
         </div>
       </div>
     </div>
@@ -1867,12 +1998,11 @@
           あなたの構造を、<br>3分で可視化する。
         </h2>
         <p class="kd-cta__desc">
-          15の問いに答えるだけで、あなたのMeta構造が見える。<br>
-          登録不要。完全無料。営業・勧誘は一切ありません。
+          15の問いに答えるだけで、<br class="sp-only">あなたのMeta構造が見える。
         </p>
         <a href="dark-side/diagnosis.html" class="btn--kandou">無料でMetaを診断する &rarr;</a>
         <p class="kd-cta__note">
-          ※ 15問 / 約3分 / 完全無料 / 登録不要
+          ※ 15問 / 約3分 / 完全無料
         </p>
       </div>
     </div>
@@ -1924,6 +2054,26 @@
         if (toggle) toggle.textContent = isOpen ? '−' : '+';
       });
     });
+
+    /* FAQ accordion */
+    document.querySelectorAll('.kd-faq').forEach(function(faq) {
+      faq.addEventListener('click', function() {
+        var isOpen = faq.classList.toggle('is-open');
+        var toggle = faq.querySelector('.kd-card__toggle');
+        if (toggle) toggle.textContent = isOpen ? '−' : '+';
+      });
+    });
+
+    /* Facilitator bio expand */
+    var bioLead = document.querySelector('.kd-facilitator__lead');
+    if (bioLead) {
+      bioLead.addEventListener('click', function() {
+        var wrap = bioLead.closest('.kd-bio-wrap');
+        var isOpen = wrap.classList.toggle('is-open');
+        var toggle = bioLead.querySelector('.kd-card__toggle');
+        if (toggle) toggle.textContent = isOpen ? '−' : '+';
+      });
+    }
   </script>
 </body>
 
