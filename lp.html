@@ -1372,10 +1372,12 @@
       <div class="content-block fade-in">
         <p class="kd-hero__sub" style="margin-bottom: 2rem;">Uniqueness</p>
         <div class="kd-expand" id="kd-uniqueness">
-          <h2 class="kd-expand__title section__title section__title--left" style="cursor:pointer; margin-bottom:0;">
-            なぜ、天命は<br class="sp-only">「言語化」できるのか？
-          </h2>
-          <p style="text-align:center; margin-top:0.8rem; font-size:0.8rem; color:rgba(192,168,120,0.5); letter-spacing:0.06em; cursor:pointer;">詳細はこちら →</p>
+          <div class="kd-expand__title-wrap" style="cursor:pointer;">
+            <h2 class="kd-expand__title section__title section__title--left" style="margin-bottom:0;">
+              なぜ、天命は<br class="sp-only">「言語化」できるのか？
+            </h2>
+            <p style="text-align:center; margin-top:0.8rem; font-size:0.8rem; color:rgba(192,168,120,0.5); letter-spacing:0.06em;">詳細はこちら →</p>
+          </div>
           <div class="kd-expand__body">
             <div class="kd-body" style="margin-top: 2rem;">
               <p>
@@ -2145,11 +2147,12 @@
     });
 
     /* KD-Expand sections (Uniqueness etc.) */
-    document.querySelectorAll('.kd-expand__title').forEach(function(title) {
-      title.addEventListener('click', function() {
-        var expand = title.closest('.kd-expand');
+    document.querySelectorAll('.kd-expand__title-wrap, .kd-expand__title').forEach(function(el) {
+      el.addEventListener('click', function(e) {
+        if (e.target.closest('.kd-expand__title-wrap') && el.classList.contains('kd-expand__title')) return;
+        var expand = el.closest('.kd-expand');
         var isOpen = expand.classList.toggle('is-open');
-        var toggle = title.querySelector('.kd-card__toggle');
+        var toggle = expand.querySelector('.kd-card__toggle');
         if (toggle) toggle.textContent = isOpen ? '−' : '+';
       });
     });
