@@ -282,6 +282,35 @@
       letter-spacing: 0.03em;
     }
 
+    /* Expandable card text */
+    .kd-card {
+      cursor: pointer;
+    }
+
+    .kd-card__rest {
+      display: none;
+    }
+
+    .kd-card.is-open .kd-card__rest {
+      display: inline;
+    }
+
+    .kd-card__toggle {
+      position: absolute;
+      top: 1.4rem;
+      right: 1.5rem;
+      font-family: var(--font-serif-en);
+      font-size: 1rem;
+      color: var(--color-gold-a50);
+      transition: transform 0.3s ease, color 0.3s ease;
+      pointer-events: none;
+    }
+
+    .kd-card.is-open .kd-card__toggle {
+      transform: rotate(45deg);
+      color: var(--color-gold);
+    }
+
     .kd-check-note {
       text-align: center;
       margin-top: 2.5rem;
@@ -1058,23 +1087,28 @@
       <div class="kd-cards fade-in">
         <div class="kd-card">
           <span class="kd-card__label">Body</span>
-          <p class="kd-card__text">以前のように頑張れない。気力が続かない。健康診断が近づくたびに憂鬱になる</p>
+          <span class="kd-card__toggle">+</span>
+          <p class="kd-card__text"><span class="kd-card__first">以前のように頑張れない。</span><span class="kd-card__rest">気力が続かない。健康診断が近づくたびに憂鬱になる</span></p>
         </div>
         <div class="kd-card">
           <span class="kd-card__label">Mind</span>
-          <p class="kd-card__text">限界まで考え抜いて選択してきた。それでも「この人生は正しかった」とは、まだ言い切れない</p>
+          <span class="kd-card__toggle">+</span>
+          <p class="kd-card__text"><span class="kd-card__first">限界まで考え抜いて選択してきた。</span><span class="kd-card__rest">それでも「この人生は正しかった」とは、まだ言い切れない</span></p>
         </div>
         <div class="kd-card">
           <span class="kd-card__label">Spirit</span>
-          <p class="kd-card__text">人生とは結局何だったのか。これから何のために生きるのか。その問いの答えが、まだ見つかっていない</p>
+          <span class="kd-card__toggle">+</span>
+          <p class="kd-card__text"><span class="kd-card__first">人生とは結局何だったのか。</span><span class="kd-card__rest">これから何のために生きるのか。その問いの答えが、まだ見つかっていない</span></p>
         </div>
         <div class="kd-card">
           <span class="kd-card__label">Shadow</span>
-          <p class="kd-card__text">周囲からは順調に見える。しかし──内側では「生きていけるが、面白くはない」が続いている</p>
+          <span class="kd-card__toggle">+</span>
+          <p class="kd-card__text"><span class="kd-card__first">周囲からは順調に見える。</span><span class="kd-card__rest">しかし──内側では「生きていけるが、面白くはない」が続いている</span></p>
         </div>
         <div class="kd-card">
           <span class="kd-card__label">Action</span>
-          <p class="kd-card__text">自己啓発、能力開発、古今東西の哲学、認知科学、瞑想、コーチング、心理療法──すべて一巡した。どれも最終回答にはならなかった</p>
+          <span class="kd-card__toggle">+</span>
+          <p class="kd-card__text"><span class="kd-card__first">自己啓発、能力開発、古今東西の哲学、認知科学、瞑想、コーチング、心理療法──すべて一巡した。</span><span class="kd-card__rest">どれも最終回答にはならなかった</span></p>
         </div>
       </div>
 
@@ -1840,6 +1874,16 @@
       <div class="search-hint"><span class="search-hint__desktop">ESC to close · ⌘K to toggle</span><span class="search-hint__mobile">背景タップまたは ✕ で閉じる</span></div>
     </div>
   </div>
+  <script>
+    /* KD-Card expand/collapse */
+    document.querySelectorAll('.kd-card').forEach(function(card) {
+      card.addEventListener('click', function() {
+        var isOpen = card.classList.toggle('is-open');
+        var toggle = card.querySelector('.kd-card__toggle');
+        if (toggle) toggle.textContent = isOpen ? '−' : '+';
+      });
+    });
+  </script>
 </body>
 
 </html>
