@@ -44,6 +44,10 @@ body {
     "Hiragino Mincho ProN", serif;
   background-color: var(--bg);
   background-image: url("../images/haikei2.jpg");
+  background-image: image-set(
+    url("../images/haikei2.webp") type("image/webp"),
+    url("../images/haikei2.jpg") type("image/jpeg")
+  );
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
