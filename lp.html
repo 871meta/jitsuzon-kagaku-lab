@@ -820,6 +820,11 @@
     }
 
     @media (max-width: 480px) {
+      /* Preserve intentional <br> in section titles (override global content-block rule) */
+      .content-block .section__title br {
+        display: inline !important;
+      }
+
       .kd-hero {
         padding: 8rem 0 2.5rem;
       }
