@@ -2301,7 +2301,7 @@ a.site-logo:not(.btn):not(.session-card__link):hover {
     position: fixed;
     top: 72px;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: calc(100vh - 72px);
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
