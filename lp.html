@@ -312,6 +312,29 @@
       color: var(--color-gold);
     }
 
+    /* Expandable section (Uniqueness etc.) */
+    .kd-expand {
+      position: relative;
+    }
+
+    .kd-expand__title {
+      position: relative;
+      padding-right: 2.5rem;
+    }
+
+    .kd-expand__body {
+      display: none;
+    }
+
+    .kd-expand.is-open .kd-expand__body {
+      display: block;
+    }
+
+    .kd-expand.is-open .kd-card__toggle {
+      transform: translateY(-50%) rotate(45deg);
+      color: var(--color-gold);
+    }
+
     .kd-check-note {
       text-align: center;
       margin-top: 2.5rem;
@@ -1125,55 +1148,62 @@
     <div class="container">
       <div class="content-block fade-in">
         <p class="kd-hero__sub" style="margin-bottom: 2rem;">Uniqueness</p>
-        <h2 class="section__title section__title--left">なぜ、天命は<br class="sp-only">「言語化」できるのか</h2>
-        <div class="kd-body">
-          <p>
-            あなたの人生には、<strong>初期条件</strong>がある。<br>
-            言語、文化、価値観、記憶、身体──<br>
-            これら五つの構造が、あなたの人生をたった一つの方向へ、最初から導いていた。
-          </p>
-          <p>
-            その<em>収束点</em>を、「天命」と呼ぶ。
-          </p>
-        </div>
+        <div class="kd-expand" id="kd-uniqueness">
+          <h2 class="kd-expand__title section__title section__title--left" style="cursor:pointer; margin-bottom:0;">
+            なぜ、天命は<br class="sp-only">「言語化」できるのか
+            <span class="kd-card__toggle" style="top: 50%; transform: translateY(-50%);">+</span>
+          </h2>
+          <div class="kd-expand__body">
+            <div class="kd-body" style="margin-top: 2rem;">
+              <p>
+                あなたの人生には、<strong>初期条件</strong>がある。<br>
+                言語、文化、価値観、記憶、身体──<br>
+                これら五つの構造が、あなたの人生をたった一つの方向へ、最初から導いていた。
+              </p>
+              <p>
+                その<em>収束点</em>を、「天命」と呼ぶ。
+              </p>
+            </div>
 
-        <table class="kd-compare">
-          <thead>
-            <tr>
-              <th></th>
-              <th>既存のアプローチ</th>
-              <th>天命の言語化セッション™</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>前提</td>
-              <td>自由意志がある</td>
-              <td>自由意志はない</td>
-            </tr>
-            <tr>
-              <td>方向</td>
-              <td>自分を変える</td>
-              <td>自分を知る</td>
-            </tr>
-            <tr>
-              <td>対象</td>
-              <td>行動・思考・感情</td>
-              <td>人生の必然性そのもの</td>
-            </tr>
-            <tr>
-              <td>結果</td>
-              <td>一時的な改善</td>
-              <td>二度と戻らない認識の転換</td>
-            </tr>
-          </tbody>
-        </table>
+            <table class="kd-compare">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>既存のアプローチ</th>
+                  <th>天命の言語化セッション™</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>前提</td>
+                  <td>自由意志がある</td>
+                  <td>自由意志はない</td>
+                </tr>
+                <tr>
+                  <td>方向</td>
+                  <td>自分を変える</td>
+                  <td>自分を知る</td>
+                </tr>
+                <tr>
+                  <td>対象</td>
+                  <td>行動・思考・感情</td>
+                  <td>人生の必然性そのもの</td>
+                </tr>
+                <tr>
+                  <td>結果</td>
+                  <td>一時的な改善</td>
+                  <td>二度と戻らない認識の転換</td>
+                </tr>
+              </tbody>
+            </table>
 
-        <div class="kd-body">
-          <p>
-            自分を変えるのではなく、すでにある構造を読み解く。<br>
-            それが<strong>「天命の言語化」</strong>です。
-          </p>
+            <div class="kd-body">
+              <p>
+                自分を変えるのではなく、すでにある構造を読み解く。<br>
+                それが<strong>「天命の言語化」</strong>です。
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1881,6 +1911,16 @@
       card.addEventListener('click', function() {
         var isOpen = card.classList.toggle('is-open');
         var toggle = card.querySelector('.kd-card__toggle');
+        if (toggle) toggle.textContent = isOpen ? '−' : '+';
+      });
+    });
+
+    /* KD-Expand sections (Uniqueness etc.) */
+    document.querySelectorAll('.kd-expand__title').forEach(function(title) {
+      title.addEventListener('click', function() {
+        var expand = title.closest('.kd-expand');
+        var isOpen = expand.classList.toggle('is-open');
+        var toggle = title.querySelector('.kd-card__toggle');
         if (toggle) toggle.textContent = isOpen ? '−' : '+';
       });
     });
