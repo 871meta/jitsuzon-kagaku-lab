@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-rurounikenshin/kenshin.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>緋村剣心のMeta ── 自由意志なき世界の天命論 | 実存科学研究所</title>
+  <meta name="description" content="『るろうに剣心 -明治剣客浪漫譚-』の緋村剣心を、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。十字傷がなぜ消えないのか。幸福を受け取る手だけが凍っている男の構造。">
+  <meta property="og:title" content="緋村剣心のMeta ── 自由意志なき世界の天命論 | 実存科学研究所">
+  <meta property="og:description" content="『るろうに剣心 -明治剣客浪漫譚-』の緋村剣心を、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。十字傷がなぜ消えないのか。幸福を受け取る手だけが凍っている男の構造。">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="実存科学研究所">
+  <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+  <meta property="og:url" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-rurounikenshin/kenshin.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"></noscript>
+  <link rel="stylesheet" href="../../css/style.min.css?v=27">
+
+<style>
+/* =============================================
+   視認性・読みやすさ強化CSS
+   ============================================= */
+
+/* === h1 ゴールドシマー === */
+.hero-title--shimmer {
+  background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gold-shimmer 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 16px rgba(192,168,120,0.3)) drop-shadow(0 0 40px rgba(192,168,120,0.12));
+}
+@keyframes gold-shimmer {
+  0%, 100% { background-position: 100% 50%; }
+  50% { background-position: 0% 50%; }
+}
+
+/* === 1. 章見出し — 中央配置＋装飾 === */
+h2.chapter-heading {
+  font-size: var(--fs-section);
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  color: var(--color-text-primary);
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  position: relative;
+  padding-top: 2rem;
+}
+h2.chapter-heading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 1px;
+  background: var(--color-gold);
+}
+h2.chapter-heading::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(192,168,120,0.5), transparent);
+  margin: 1.2rem auto 0;
+}
+.chapter-number {
+  display: block;
+  font-family: var(--font-serif-en);
+  font-size: var(--fs-caption);
+  font-weight: 400;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 0.6rem;
+}
+
+/* === 2. 区切り線 — 装飾付き === */
+hr {
+  border: none;
+  height: auto;
+  background: none;
+  margin: 4.5rem 0;
+  text-align: center;
+  overflow: visible;
+}
+hr::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(192,168,120,0.08) 15%, rgba(192,168,120,0.2) 50%, rgba(192,168,120,0.08) 85%, transparent 100%);
+}
+hr::after {
+  content: "\25C6";
+  display: block;
+  font-size: 0.5rem;
+  color: rgba(192,168,120,0.3);
+  margin-top: -0.35em;
+  letter-spacing: 1em;
+  line-height: 1;
+}
+
+/* === 3. セッション対話 — 読みやすさ向上 === */
+.session-dialogue {
+  max-width: 680px;
+  margin: 2.5rem auto;
+  padding: 2.5rem 2rem;
+  background: rgba(10, 8, 18, 0.35);
+  border: 1px solid rgba(192,168,120,0.06);
+  border-radius: 2px;
+  position: relative;
+}
+.session-dialogue::before {
+  content: "SESSION";
+  position: absolute;
+  top: -0.6em;
+  left: 2rem;
+  font-family: var(--font-serif-en);
+  font-size: var(--fs-micro);
+  letter-spacing: 0.3em;
+  color: rgba(192,168,120,0.4);
+  background: var(--color-bg-deep);
+  padding: 0 0.8rem;
+}
+.session-dialogue p {
+  margin-bottom: 1.1em;
+  line-height: 2.2;
+}
+.session-dialogue .speaker-yanai { color: var(--color-gold); font-weight: 600; font-size: var(--fs-body); }
+.session-dialogue .speaker-kenshin { color: #b8a0d8; font-weight: 600; font-size: var(--fs-body); }
+
+/* 箭内の発言：金色の左ボーダー */
+.session-dialogue .line-yanai {
+  border-left: 2px solid rgba(192,168,120,0.15);
+  padding-left: 1.2rem;
+}
+/* キャラの発言：少しインデント */
+.session-dialogue .line-character {
+  margin-left: 1.4rem;
+}
+/* 沈黙マーカー：中央揃え＋装飾線 */
+.session-dialogue .silence {
+  color: rgba(235,232,225,0.3);
+  font-style: italic;
+  text-align: center;
+  margin: 2em 0;
+  font-size: var(--fs-small);
+  letter-spacing: 0.15em;
+}
+.session-dialogue .silence::before,
+.session-dialogue .silence::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: rgba(192,168,120,0.15);
+  vertical-align: middle;
+  margin: 0 1em;
+}
+/* 10発言ごとの視覚リズム */
+.session-dialogue p:nth-child(10n) {
+  margin-bottom: 2em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid rgba(192,168,120,0.06);
+}
+
+/* === 4. text-panel の単調さ解消 === */
+section > .text-panel:nth-of-type(even) {
+  background: rgba(8, 6, 16, 0.45);
+  border-color: transparent;
+}
+section > .text-panel:nth-of-type(even)::before {
+  display: none;
+}
+
+/* === 5. highlight-block の存在感微増 === */
+.highlight-block {
+  background: rgba(192,168,120,0.06);
+  border-left: 2px solid;
+  border-image: linear-gradient(180deg, var(--color-gold) 0%, rgba(192,168,120,0.15) 100%) 1;
+  padding: 2rem 2rem 2rem 2.2rem;
+  margin: 2.5rem 0;
+}
+.highlight-block p {
+  font-size: var(--fs-lead);
+  font-weight: 500;
+  line-height: 2.2;
+  color: var(--color-text-primary);
+}
+
+/* === 6. セクション見出し（h3） === */
+h3.section-heading {
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  color: var(--color-text-body);
+  letter-spacing: 0.08em;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1.2rem;
+  border-left: 2px solid rgba(192,168,120,0.4);
+  line-height: 1.6;
+}
+
+/* === Profiling Block === */
+.profiling-block {
+  background: rgba(15,12,25,0.5);
+  border: 1px solid rgba(192,168,120,0.1);
+  padding: 2.5rem 2rem;
+  margin: 2rem 0;
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+.profiling-block::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(192,168,120,0.4), transparent);
+}
+.profiling-block h3 {
+  font-size: var(--fs-body);
+  color: var(--color-gold);
+  letter-spacing: 0.15em;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(192,168,120,0.1);
+}
+.profiling-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+.profiling-block ul li {
+  margin-bottom: 1rem;
+  color: var(--color-text-reading);
+  font-size: var(--fs-body);
+  line-height: 1.9;
+  padding-left: 1.6em;
+  position: relative;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(192,168,120,0.04);
+}
+.profiling-block ul li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.profiling-block ul li::before {
+  content: "\2500\2500";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgba(192,168,120,0.35);
+  font-size: 0.75em;
+}
+
+/* === Author Block === */
+.author-block {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(192,168,120,0.15);
+}
+.author-block p { font-size: var(--fs-body); color: var(--color-text-reading); line-height: 2; }
+.author-block strong { color: var(--color-text-body); }
+
+/* === Source Note === */
+.source-note {
+  margin-top: 2rem;
+  font-size: var(--fs-small);
+  color: rgba(235,232,225,0.35);
+}
+
+/* === Series Note === */
+.series-note {
+  margin-top: 2rem;
+  padding: 1.5rem 2rem;
+  background: rgba(192,168,120,0.04);
+  border: 1px solid rgba(192,168,120,0.1);
+  font-size: var(--fs-body);
+  color: var(--color-text-reading);
+  line-height: 2;
+}
+
+/* === 7. モバイル対応 === */
+@media (max-width: 600px) {
+  h2.chapter-heading {
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    padding-top: 1.5rem;
+  }
+  .chapter-number {
+    font-size: var(--fs-micro);
+    letter-spacing: 0.25em;
+    margin-bottom: 0.4rem;
+  }
+  h3.section-heading {
+    font-size: var(--fs-lead);
+    margin-top: 2rem;
+    padding-left: 1rem;
+  }
+  hr { margin: 3rem 0; }
+  .session-dialogue {
+    padding: 1.5rem 1.2rem;
+    margin: 2rem auto;
+  }
+  .session-dialogue .line-yanai { padding-left: 0.8rem; }
+  .session-dialogue .line-character { margin-left: 0.8rem; }
+  .profiling-block { padding: 1.5rem 1.2rem; }
+  .highlight-block { padding: 1.5rem 1.2rem 1.5rem 1.4rem; }
+  .text-panel { padding: 2rem 1.5rem; }
+}
+@media (max-width: 480px) {
+  .text-panel p br,
+  .pull-quote p br,
+  .highlight-block p br,
+  .def-box p br,
+  .session-dialogue p br { display: none; }
+  h2.chapter-heading { font-size: var(--fs-h3); }
+  .session-dialogue p:nth-child(10n) {
+    margin-bottom: 1.5em;
+    padding-bottom: 1em;
+  }
+}
+
+/* === Pull-quote: left-align for readability === */
+.pull-quote { text-align: left; }
+.pull-quote p { font-size: var(--fs-lead); font-weight: 500; }
+</style>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="../../index.html" class="site-logo">実存科学研究所</a>
+      <button class="search-toggle" aria-label="検索"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+            <nav class="global-nav">
+        <a href="../../index.html">Top</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">The Meta</button>
+          <div class="nav-dropdown__menu">
+            <a href="../../beginner.html">はじめての方へ</a>
+            <a href="../../lp.html">ダークサイド診断</a>
+            <a href="../../omoidasu/">身体的知性診断</a>
+          </div>
+        </div>
+        <a href="../../session.html">Session</a>
+        <a href="../../founder.html">Founder</a>
+        <a href="../../specials.html">Specials</a>
+      </nav>
+    </div>
+  </header>
+  <div class="reading-progress"></div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="パンくずリスト">
+        <ol class="breadcrumb__list">
+          <li class="breadcrumb__item"><a href="../../index.html" class="breadcrumb__link">TOP</a></li>
+          <li class="breadcrumb__item"><a href="../../specials.html" class="breadcrumb__link">Specials</a></li>
+          <li class="breadcrumb__item"><a href="./" class="breadcrumb__link">るろうに剣心篇</a></li>
+          <li class="breadcrumb__item"><span class="breadcrumb__current">緋村剣心のMeta</span></li>
+        </ol>
+      </nav>
+      <p class="page-hero__sub">Rurouni Kenshin &times; Existential Science</p>
+      <h1 class="hero-title--shimmer">緋村剣心のMeta<br>── 自由意志なき世界の天命論</h1>
+      <p class="page-hero__lead">箭内宏紀｜実存科学研究所</p>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <!-- ========== ネタバレ注意 ========== -->
+    <div class="text-panel fade-in">
+      <p style="font-size:0.85rem; color:rgba(235,232,225,0.5); text-align:center;">※本稿は『るろうに剣心 -明治剣客浪漫譚-』全28巻およびOVA『追憶編』の重大なネタバレを含みます。未読の方はご注意ください。</p>
+    </div>
+
+    <!-- ========== 導入 ========== -->
+    <section class="fade-in">
+
+      <div class="text-panel fade-in">
+        <p>彼は14歳だった。</p>
+        <p>京の裏路地。月のない夜。師が禁じた「人を斬る剣」を、初めて人に向けた。相手の名前は知らない。顔も見なかった。刃が肉を裂く感触が手のひらに伝わり、生暖かいものが頬に散った。</p>
+        <p>血。自分のではない。──人の血は、鉄の味がする。それを舌で知ったのは、返り血が唇に触れたからだ。</p>
+        <p>14歳の少年は、その夜から「人斬り抜刀斎」になった。</p>
+        <p>以降の日々は、血の味で塗り潰された。酒を飲んでも血の味がした。水を飲んでも血の味がした。白い飯を噛んでも、舌の上にあの鉄の味がこびりついて消えなかった。</p>
+        <p>何人斬ったか。数えることをやめたのは、数えることに意味がなくなったからではない。数えることが怖くなったからだ。</p>
+        <p>そして彼は、一人の女に出会った。</p>
+        <p>雪村巴。剣心が殺した男の婚約者。復讐のために近づいた女。白梅香の匂いがした。微かな、甘い匂い。血と泥と鉄の世界で、初めて嗅いだ人間の匂いだった。</p>
+        <p>大津の山あいで、二人は夫婦として暮らした。薬売りを装い、畑を耕し、飯を炊き、隣り合って眠った。何を飲んでも──うまかった。血の味が、消えた。</p>
+        <p>あの日々は、彼の人生で唯一の、ただの人間だった時間だ。</p>
+        <p>闇乃武の襲撃。森の中。毒で視力を奪われ、聴力を奪われた剣心は、最後の一太刀を振り抜いた。刃は敵の身体を断ち──その向こう側にいた巴を、同時に断った。</p>
+        <p>白梅香の匂いがした。それで分かった。自分が斬ったのが誰なのか。</p>
+        <p>巴の指が動いた。剣心の頬に、短刀の先が触れた。清里がつけた縦の傷に交差する横の一閃。十字。それは復讐の完成ではなかった。巴は──微笑んでいた。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>十字傷が完成した瞬間、彼の中のすべてが変わった。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>以降の10年を、彼は流浪に費やした。逆刃刀を携え、「不殺」を誓い、「拙者は流浪人でござる」と名乗り、「おろ？」と首を傾げ、穏やかに笑った。</p>
+        <p>赤い髪に十字傷──どこに行っても「人斬り抜刀斎」として見つかる体を引きずりながら、誰にも留まらず、どこにも根を下ろさず。</p>
+      </div>
+
+      <div class="pull-quote fade-in">
+        <p>なぜ、この男の十字傷は消えないのか。<br>なぜ、刀を握る手は震えないのに、幸福を受け取る手だけが凍っているのか。<br>なぜ、「薫殿」と呼び続けるのか──かつて「巴」と呼び捨てにした女を、自分の手で殺した男が。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>その問いの先に、天命がある。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== シャドウ・プロファイリング ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Shadow Profiling</span>シャドウ・プロファイリング</h2>
+
+      <div class="profiling-block fade-in">
+        <h3>【Meta（変えられない前提条件）】</h3>
+        <ul>
+          <li>身長158cm・体重48kg。飛天御剣流の前提である「恵まれた体躯」を持たない構造的不適合。天性の神速で補うが、4〜5年以内に技の大半が使えなくなる肉体の期限</li>
+          <li>幼少期に両親を病で亡くし、人買いに売られる。守ろうとした3人の少女──霞、茜、桜──を守れなかった原初の記憶</li>
+          <li>14歳で比古清十郎と喧嘩別れし、長州藩の人斬りとなる。幕末京都で多数の暗殺を遂行</li>
+          <li>自分が殺した男の婚約者・雪村巴を愛し、夫婦となり、自分の手で斬殺。十字傷の完成</li>
+          <li>赤い髪と十字傷──匿名性を永久に奪われた身体。どこに流浪しても「人斬り抜刀斎」として特定される</li>
+        </ul>
+      </div>
+
+      <div class="profiling-block fade-in">
+        <h3>【シャドウ（抑圧された本音）】</h3>
+        <ul>
+          <li>核心：「自分が愛した者を自分の手で殺した」。すべてのシャドウの発生源。不殺の誓い、逆刃刀、「でござる」人格、流浪の10年、薫への距離感──すべてがこの一点から派生する</li>
+          <li>深層の欲求：「守れる自分でありたい」ではなく、最深部には「誰かに赦されたい」がある。赦されることなく償い続けるしかないという構造的絶望</li>
+          <li>表層の代償行動：①「でござる」人格による偽装（穏やかな表層で抜刀斎を封印する精緻な言語装置）②不殺の遂行（殺した罪を「殺さないこと」で相殺しようとする反復）③流浪（幸福を定着させない＝巴パターンの反復回避）④自己犠牲的守護（他者を守ることで自分の存在価値を確認する）⑤薫への「殿」（親密さを完全に受け入れることへの無意識の抵抗）</li>
+          <li>止まれない理由：幸福を受け取った瞬間にそれを自分の手で破壊した記憶が、受け取ることそのものを凍結している</li>
+        </ul>
+      </div>
+
+      <div class="profiling-block fade-in">
+        <h3>【志々雄真実との対比】</h3>
+        <p style="font-size:0.85rem; color:#c0bbb4; margin-bottom:1.5rem; line-height:1.8;">剣心と志々雄真実──同根異花の構造。同じ「幕末の人斬り」というMetaから、片方は不殺を、片方は弱肉強食を選んだ。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-bottom:0.8rem;">出発点は共通している。剣心は幕末の「表」の人斬り、志々雄は「影」の人斬り──剣心の後任として維新に利用された男だ。分岐は「裏切りの体験の有無」と「罪悪感の強度」にある。剣心は維新後に自ら離脱したが、志々雄は政府に口封じとして焼かれ、文字通り「捨てられた」。罪への応答も対照的だ。剣心は殺めた者への罪悪感から「不殺」を誓い、「正しかったはずなのに痛い」という矛盾と共に生きる。志々雄は裏切られた経験から「弱肉強食」を選び、「何の迷いもなく黒をとる」──悪であることへの迷いがない。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2;">最期もまた対照的だ。剣心は答えを出しきれないまま、それでも歩き続けることを選ぶ。志々雄は自らの構造（体温上昇限界）が自らを滅ぼし、勝ち逃げする。どちらが正しいかには、永遠に答えが出ない──作者自身がそう設計している。</p>
+      </div>
+
+      <div class="profiling-block fade-in">
+        <h3>【天命への転換点】</h3>
+        <ul>
+          <li>第一の剥奪（巴の死）：幸福・愛する者・人斬りとしてのアイデンティティ・罪なき自己認識──すべてを同時に喪失。十字傷の完成。「不殺」の流浪人が生まれる</li>
+          <li>第二の剥奪（薫の「死」）：巴の死のパターンが反復。精神の完全崩壊。廃人化。悪夢の中で志々雄と同じ地獄にいることを認識</li>
+          <li>剥奪後に残ったもの：落人村で全てを剥がされた後、弥彦の窮地に「助けて」という声が届いた瞬間──応えずにいられない自分に気づく。全ての役割・信念・代償行動を剥がされた後に残った裸の自己。「剣と心を賭してこの闘いの人生を完遂する」</li>
+        </ul>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>──ここまでが、緋村剣心の構造の地図だ。</p>
+        <p>しかし、地図は地図でしかない。十字傷がなぜ消えないのか。「でござる」の裏側に何が凍っているのか。その構造が本人の口から、本人の声で露呈する瞬間を、見届けてほしい。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== 以降のセクション（第2パート以降で追加） ========== -->
+
+    <!-- ========== CTA ========== -->
+    <section class="cta-block fade-in">
+      <div class="container">
+    <h2 class="cta-block__title">天命の言語化セッション&trade;</h2>
+    <p class="cta-block__desc">2時間で天命が言語化できる場所。</p>
+    <div class="cta-block__features">
+      <span class="cta-block__feature">Zoom完結</span>
+      <span class="cta-block__feature">事前学習不要</span>
+      <span class="cta-block__feature">対話のみ</span>
+    </div>
+    <a href="../../trial.html" class="btn">無料トライアルに申し込む &rarr;</a>
+      </div>
+    </section>
+
+    <!-- ========== 著者ブロック ========== -->
+    <div class="author-block fade-in">
+      <p><strong>箭内宏紀（やないひろき）</strong><br>
+      実存科学研究所 代表。「天命の言語化セッション&trade;」を提供。「Metaがある限り自由意志は存在しない」（M &rArr; &not;F）を第一公理とする実存科学を提唱。著書に『Metaがある限り──自由意志・自分・他人は存在しない』『自由意志なき世界の歩き方』ほか。<br>
+      <a href="../../index.html">公式サイトはこちら</a>。</p>
+    </div>
+
+    <!-- ========== 出典表記 ========== -->
+    <p class="source-note fade-in">&ast; &nbsp;本稿で扱う作品：和月伸宏『るろうに剣心 -明治剣客浪漫譚-』（集英社、1994-1999年、全28巻）。OVA『るろうに剣心 -明治剣客浪漫譚- 追憶編』（スタジオディーン、1999年）。作品の著作権は原著者・制作会社に帰属します。</p>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+  <div class="container--wide">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <p class="footer-col__title">The Meta</p>
+        <a href="../../about-existential-science.html">実存科学とは</a>
+        <a href="../../epistemology.html">認識論</a>
+        <a href="../../semantics.html">意味論</a>
+        <a href="../../society.html">社会論</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Contents</p>
+        <a href="../../specials.html">特別シリーズ</a>
+        <a href="../../archives.html">記事一覧</a>
+        <a href="../../video-list.html">動画一覧</a>
+        <a href="../../glossary.html">用語集</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Session</p>
+        <a href="../../session.html">天命の言語化セッション™</a>
+        <a href="../../session-flow.html">セッションの流れ</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Institute</p>
+        <a href="../../founder.html">創始者</a>
+        <a href="../../contact.html">お問い合わせ</a>
+        <a href="../../legal/legal-tokushoho.html">特定商取引法</a>
+        <a href="../../legal/legal-privacy-policy.html">プライバシーポリシー</a>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; 実存科学研究所 — Existential Science Institute</p>
+  </div>
+</footer>
+
+  <script src="../../js/main.min.js?v=9"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "緋村剣心のMeta ── 自由意志なき世界の天命論",
+  "description": "『るろうに剣心 -明治剣客浪漫譚-』の緋村剣心を、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。十字傷がなぜ消えないのか。幸福を受け取る手だけが凍っている男の構造。",
+  "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-rurounikenshin/kenshin.html",
+  "author": {
+    "@type": "Person",
+    "name": "箭内宏紀",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/founder.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  },
+  "inLanguage": "ja",
+  "datePublished": "2026-03-16"
+}
+</script>
+  <!-- Search Modal -->
+  <div class="search-overlay">
+    <div class="search-modal"><button class="search-close" aria-label="閉じる">&times;</button>
+      <div class="search-input-wrap">
+        <span class="search-input-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+        <input type="text" class="search-input" placeholder="キーワードで検索..." autocomplete="off">
+      </div>
+      <div class="search-results"></div>
+      <div class="search-hint"><span class="search-hint__desktop">ESC to close · ⌘K to toggle</span><span class="search-hint__mobile">背景タップまたは ✕ で閉じる</span></div>
+    </div>
+  </div>
+</body>
+</html>
