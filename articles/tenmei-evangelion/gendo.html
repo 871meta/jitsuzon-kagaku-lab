@@ -275,50 +275,6 @@ h3.section-heading {
   font-size: 0.75em;
 }
 
-/* ── 対比グリッド ── */
-.comparison-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border: 1px solid rgba(192,168,120,0.12);
-  background: rgba(15, 12, 25, 0.45);
-}
-.comparison-grid__head {
-  font-size: var(--fs-small);
-  font-weight: 600;
-  color: var(--color-gold);
-  letter-spacing: 0.08em;
-  padding: 0.6rem 0.8rem;
-  text-align: center;
-  background: rgba(192,168,120,0.06);
-  border-bottom: 1px solid rgba(192,168,120,0.2);
-}
-.comparison-grid__head:first-child {
-  border-right: 1px solid rgba(192,168,120,0.1);
-}
-.comparison-grid__cell {
-  padding: 0.55rem 0.8rem;
-  font-size: var(--fs-small);
-  line-height: 1.7;
-  color: var(--color-text-reading);
-  border-bottom: 1px solid rgba(192,168,120,0.06);
-  min-width: 0;
-  overflow-wrap: break-word;
-}
-.comparison-grid__cell:nth-child(odd) {
-  border-right: 1px solid rgba(192,168,120,0.1);
-}
-.comparison-grid__cell:nth-last-child(-n+2) {
-  border-bottom: none;
-}
-.comparison-table .comparison-note {
-  margin-top: 1rem;
-  padding: 0.8rem 1rem;
-  font-size: var(--fs-micro);
-  color: rgba(235,232,225,0.55);
-  line-height: 1.8;
-  background: rgba(192,168,120,0.03);
-  border-left: 2px solid rgba(192,168,120,0.15);
-}
 
 /* === Author Block === */
 .author-block {
@@ -349,29 +305,7 @@ h3.section-heading {
 
 /* === 7. モバイル対応 === */
 @media (max-width: 768px) {
-  .comparison-grid {
-    grid-template-columns: 1fr;
-  }
-  .comparison-grid__head {
-    border-right: none !important;
-  }
-  .comparison-grid__head:first-child {
-    border-right: none;
-  }
-  .comparison-grid__cell {
-    border-right: none;
-  }
-  .comparison-grid__cell:nth-child(odd) {
-    border-right: none;
-    padding-top: 0.8rem;
-    color: var(--color-gold);
-    font-weight: 600;
-    font-size: var(--fs-micro);
-  }
-  .comparison-grid__cell:nth-child(even) {
-    padding-top: 0.2rem;
-    padding-bottom: 0.8rem;
-  }
+
 }
 @media (max-width: 600px) {
   h2.chapter-heading {
@@ -526,22 +460,12 @@ h3.section-heading {
         </ul>
       </div>
 
-      <!-- 対比キャラクター比較表 -->
-      <h3 class="section-heading">対比キャラクター：碇シンジ</h3>
-      <div class="comparison-table fade-in">
-        <div class="comparison-grid">
-          <div class="comparison-grid__head">碇ゲンドウ</div>
-          <div class="comparison-grid__head">碇シンジ</div>
-          <div class="comparison-grid__cell">ユイの喪失に能動的に執着──世界を作り替えてでも取り戻す</div>
-          <div class="comparison-grid__cell">ユイの不在に受動的に逃避──他者を恐れながらも関わり続ける</div>
-          <div class="comparison-grid__cell">ATフィールドの完全消滅を望む（補完計画）</div>
-          <div class="comparison-grid__cell">最終的に境界の存在を受け入れる</div>
-          <div class="comparison-grid__cell">他者を全員道具化する</div>
-          <div class="comparison-grid__cell">怯えながらも他者との関係を求める</div>
-          <div class="comparison-grid__cell">レイに拒絶されて死ぬ</div>
-          <div class="comparison-grid__cell">他者の存在を受け入れて生きる</div>
-        </div>
-        <p class="comparison-note">冬月コウゾウは第三の対比軸として機能する。同じユイの喪失を経験しながら、記憶として自己の中に留め、境界を認めつつ傍らに立ち続けた──「受容」という選択肢がゲンドウにも存在したことを証明する存在である。</p>
+      <div class="profiling-block fade-in">
+        <h3>【碇シンジとの対比】</h3>
+        <p style="font-size:0.85rem; color:#c0bbb4; margin-bottom:1.5rem; line-height:1.8;">同じユイの喪失を起点としながら、父と息子は正反対の構造を生んだ。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-bottom:0.8rem;">ゲンドウはユイの喪失に能動的に執着し、世界を作り替えてでも取り戻そうとした。シンジはユイの不在に受動的に逃避し、他者を恐れながらも関わり続けた。ゲンドウはATフィールドの完全消滅を望み（補完計画）、シンジは最終的に境界の存在を受け入れた。ゲンドウは他者を全員道具化し、シンジは怯えながらも他者との関係を求めた。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-bottom:0.8rem;">帰結もまた対照的だ。ゲンドウはレイに拒絶されて死に、シンジは他者の存在を受け入れて生きることを選んだ。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2;">冬月コウゾウは第三の対比軸として機能する。同じユイの喪失を経験しながら、記憶として自己の中に留め、境界を認めつつ傍らに立ち続けた──「受容」という選択肢がゲンドウにも存在したことを証明する存在である。</p>
       </div>
 
       <div class="profiling-block fade-in">
