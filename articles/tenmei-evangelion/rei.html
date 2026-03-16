@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-evangelion/rei.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>綾波レイのMeta ── 自由意志なき世界の天命論 | 実存科学研究所</title>
+  <meta name="description" content="アニメ『新世紀エヴァンゲリオン』の綾波レイを、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。替えのきく身体が、替えのきかない涙を流した──器から心への天命の構造。">
+  <meta property="og:title" content="綾波レイのMeta ── 自由意志なき世界の天命論 | 実存科学研究所">
+  <meta property="og:description" content="アニメ『新世紀エヴァンゲリオン』の綾波レイを、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。替えのきく身体が、替えのきかない涙を流した──器から心への天命の構造。">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="実存科学研究所">
+  <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+  <meta property="og:url" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-evangelion/rei.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"></noscript>
+  <link rel="stylesheet" href="../../css/style.min.css?v=27">
+
+<style>
+/* =============================================
+   綾波レイのMeta ── ページ固有CSS
+   ============================================= */
+
+/* === 1. 章見出し — 中央配置＋装飾 === */
+h2.chapter-heading {
+  font-size: var(--fs-section);
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  color: var(--color-text-primary);
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  position: relative;
+  padding-top: 2rem;
+}
+h2.chapter-heading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 1px;
+  background: var(--color-gold);
+}
+h2.chapter-heading::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(192,168,120,0.5), transparent);
+  margin: 1.2rem auto 0;
+}
+.chapter-number {
+  display: block;
+  font-family: var(--font-serif-en);
+  font-size: var(--fs-caption);
+  font-weight: 400;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 0.6rem;
+}
+
+/* === 2. 区切り線 — 装飾付き === */
+hr {
+  border: none;
+  height: auto;
+  background: none;
+  margin: 4.5rem 0;
+  text-align: center;
+  overflow: visible;
+}
+hr::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(192,168,120,0.08) 15%, rgba(192,168,120,0.2) 50%, rgba(192,168,120,0.08) 85%, transparent 100%);
+}
+hr::after {
+  content: "\25C6";
+  display: block;
+  font-size: 0.5rem;
+  color: rgba(192,168,120,0.3);
+  margin-top: -0.35em;
+  letter-spacing: 1em;
+  line-height: 1;
+}
+
+/* === 3. セッション対話 — 読みやすさ向上 === */
+.session-dialogue {
+  max-width: 680px;
+  margin: 2.5rem auto;
+  padding: 2.5rem 2rem;
+  background: rgba(10, 8, 18, 0.35);
+  border: 1px solid rgba(192,168,120,0.06);
+  border-radius: 2px;
+  position: relative;
+}
+.session-dialogue::before {
+  content: "SESSION";
+  position: absolute;
+  top: -0.6em;
+  left: 2rem;
+  font-family: var(--font-serif-en);
+  font-size: var(--fs-micro);
+  letter-spacing: 0.3em;
+  color: rgba(192,168,120,0.4);
+  background: var(--color-bg-deep);
+  padding: 0 0.8rem;
+}
+.session-dialogue p {
+  margin-bottom: 1.1em;
+  line-height: 2.2;
+}
+.session-dialogue .speaker-yanai { color: var(--color-gold); font-weight: 600; font-size: var(--fs-body); }
+.session-dialogue .speaker-rei { color: #b8a0d8; font-weight: 600; font-size: var(--fs-body); }
+
+/* 箭内の発言：金色の左ボーダー */
+.session-dialogue .line-yanai {
+  border-left: 2px solid rgba(192,168,120,0.15);
+  padding-left: 1.2rem;
+}
+/* キャラの発言：少しインデント */
+.session-dialogue .line-character {
+  margin-left: 1.4rem;
+}
+/* 沈黙マーカー：中央揃え＋装飾線 */
+.session-dialogue .silence {
+  color: rgba(235,232,225,0.3);
+  font-style: italic;
+  text-align: center;
+  margin: 2em 0;
+  font-size: var(--fs-small);
+  letter-spacing: 0.15em;
+}
+.session-dialogue .silence::before,
+.session-dialogue .silence::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: rgba(192,168,120,0.15);
+  vertical-align: middle;
+  margin: 0 1em;
+}
+/* 10発言ごとの視覚リズム */
+.session-dialogue p:nth-child(10n) {
+  margin-bottom: 2em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid rgba(192,168,120,0.06);
+}
+
+/* === 4. text-panel の単調さ解消 === */
+section > .text-panel:nth-of-type(even) {
+  background: rgba(8, 6, 16, 0.45);
+  border-color: transparent;
+}
+section > .text-panel:nth-of-type(even)::before {
+  display: none;
+}
+
+/* === 5. highlight-block の存在感微増 === */
+.highlight-block {
+  background: rgba(192,168,120,0.06);
+  border-left: 2px solid;
+  border-image: linear-gradient(180deg, var(--color-gold) 0%, rgba(192,168,120,0.15) 100%) 1;
+  padding: 2rem 2rem 2rem 2.2rem;
+  margin: 2.5rem 0;
+}
+.highlight-block p {
+  font-size: var(--fs-lead);
+  font-weight: 500;
+  line-height: 2.2;
+  color: var(--color-text-primary);
+}
+
+/* === 6. セクション見出し（h3） === */
+h3.section-heading {
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  color: var(--color-text-body);
+  letter-spacing: 0.08em;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1.2rem;
+  border-left: 2px solid rgba(192,168,120,0.4);
+  line-height: 1.6;
+}
+
+/* === Profiling Block === */
+.profiling-block {
+  background: rgba(15,12,25,0.5);
+  border: 1px solid rgba(192,168,120,0.1);
+  padding: 2.5rem 2rem;
+  margin: 2rem 0;
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+.profiling-block::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(192,168,120,0.4), transparent);
+}
+.profiling-block h3 {
+  font-size: var(--fs-body);
+  color: var(--color-gold);
+  letter-spacing: 0.15em;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(192,168,120,0.1);
+}
+.profiling-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+.profiling-block ul li {
+  margin-bottom: 1rem;
+  color: var(--color-text-reading);
+  font-size: var(--fs-body);
+  line-height: 1.9;
+  padding-left: 1.6em;
+  position: relative;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(192,168,120,0.04);
+}
+.profiling-block ul li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.profiling-block ul li::before {
+  content: "\2500\2500";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgba(192,168,120,0.35);
+  font-size: 0.75em;
+}
+
+/* === Author Block === */
+.author-block {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(192,168,120,0.15);
+}
+.author-block p { font-size: var(--fs-body); color: var(--color-text-reading); line-height: 2; }
+.author-block strong { color: var(--color-text-body); }
+
+/* === Source Note === */
+.source-note {
+  margin-top: 2rem;
+  font-size: var(--fs-small);
+  color: rgba(235,232,225,0.35);
+}
+
+/* === Series Note === */
+.series-note {
+  margin-top: 2rem;
+  padding: 1.5rem 2rem;
+  background: rgba(192,168,120,0.04);
+  border: 1px solid rgba(192,168,120,0.1);
+  font-size: var(--fs-body);
+  color: var(--color-text-reading);
+  line-height: 2;
+}
+
+/* === 7. モバイル対応 === */
+@media (max-width: 600px) {
+  h2.chapter-heading {
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    padding-top: 1.5rem;
+  }
+  .chapter-number {
+    font-size: var(--fs-micro);
+    letter-spacing: 0.25em;
+    margin-bottom: 0.4rem;
+  }
+  h3.section-heading {
+    font-size: var(--fs-lead);
+    margin-top: 2rem;
+    padding-left: 1rem;
+  }
+  hr { margin: 3rem 0; }
+  .session-dialogue {
+    padding: 1.5rem 1.2rem;
+    margin: 2rem auto;
+  }
+  .session-dialogue .line-yanai { padding-left: 0.8rem; }
+  .session-dialogue .line-character { margin-left: 0.8rem; }
+  .profiling-block { padding: 1.5rem 1.2rem; }
+  .highlight-block { padding: 1.5rem 1.2rem 1.5rem 1.4rem; }
+  .text-panel { padding: 2rem 1.5rem; }
+}
+@media (max-width: 480px) {
+  .text-panel p br,
+  .pull-quote p br,
+  .highlight-block p br,
+  .def-box p br,
+  .session-dialogue p br { display: none; }
+  h2.chapter-heading { font-size: var(--fs-h3); }
+  .session-dialogue p:nth-child(10n) {
+    margin-bottom: 1.5em;
+    padding-bottom: 1em;
+  }
+}
+</style>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="../../index.html" class="site-logo">実存科学研究所</a>
+      <button class="search-toggle" aria-label="検索"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="global-nav">
+        <a href="../../index.html">Top</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">The Meta</button>
+          <div class="nav-dropdown__menu">
+            <a href="../../beginner.html">はじめての方へ</a>
+            <a href="../../lp.html">ダークサイド診断</a>
+            <a href="../../omoidasu/">身体的知性診断</a>
+          </div>
+        </div>
+        <a href="../../session.html">Session</a>
+        <a href="../../founder.html">Founder</a>
+        <a href="../../specials.html">Specials</a>
+      </nav>
+    </div>
+  </header>
+  <div class="reading-progress"></div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="パンくずリスト">
+        <ol class="breadcrumb__list">
+          <li class="breadcrumb__item"><a href="../../index.html" class="breadcrumb__link">TOP</a></li>
+          <li class="breadcrumb__item"><a href="../../specials.html" class="breadcrumb__link">Specials</a></li>
+          <li class="breadcrumb__item"><a href="./" class="breadcrumb__link">エヴァンゲリオン篇</a></li>
+          <li class="breadcrumb__item"><span class="breadcrumb__current">綾波レイのMeta</span></li>
+        </ol>
+      </nav>
+      <p class="page-hero__sub">Neon Genesis Evangelion &times; Existential Science</p>
+      <h1 class="hero-title--shimmer">綾波レイのMeta<br>── 自由意志なき世界の天命論</h1>
+      <p class="page-hero__lead">箭内宏紀｜実存科学研究所</p>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <!-- ========== ネタバレ注意 ========== -->
+    <div class="text-panel fade-in">
+      <p style="font-size:0.85rem; color:rgba(235,232,225,0.5); text-align:center;">※本稿は作品全体のネタバレを含みます</p>
+    </div>
+
+    <!-- ========== 導入 ========== -->
+    <section class="fade-in">
+
+      <div class="text-panel fade-in">
+        <p>包帯。ストレッチャー。赤い瞳。</p>
+        <p>綾波レイは最初、白い包帯に全身を巻かれた状態でスクリーンに現れる。</p>
+        <p>名前を持つキャラクターとして登場したとき、彼女はすでに「損傷した身体」として記号化されていた。</p>
+        <p>彼女には感情がない、と作中では繰り返し示唆される。</p>
+        <p>碇ゲンドウに設計された「器」。パイロットとして運用される「機能」。水槽に並ぶ予備の一体。</p>
+        <p>しかし物語が進むにつれて、器であるはずの彼女は、器では説明できないものを発現させていく。</p>
+        <p>笑顔。涙。「碇くんと一緒になりたい」という欲求。そして、最終的な選択。</p>
+      </div>
+
+      <div class="pull-quote fade-in">
+        <p>替えのきく身体が、替えのきかない涙を流した。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>この矛盾は、偶然の産物ではない。</p>
+        <p>実存科学（Existential Science）の第一公理──「Metaがある限り自由意志は存在しない（M &rArr; &not;F）」──の観点から見れば、レイの涙は、自由意志の産物でも、感情プログラムの誤作動でもない。</p>
+        <p>それは、彼女のMeta（前提構造）が必然的に向かった収束点──天命──の最初の徴候だった。</p>
+        <p>その矛盾の先に、天命がある。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== シャドウ・プロファイリング ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Shadow Profiling</span>シャドウ・プロファイリング</h2>
+
+      <div class="profiling-block fade-in">
+        <h3>【Meta（変えられない前提条件）】</h3>
+        <ul>
+          <li>碇ユイのクローン体にリリスの魂を宿した人造人間。自然な出生を経ていない</li>
+          <li>セントラルドグマに無数の代替肉体がストックされ、死んでも入れ替えが可能</li>
+          <li>記憶はバックアップされるが、記憶に付随する感情・情動は引き継がれない</li>
+          <li>唯一の社会的関係は創造主・碇ゲンドウ。学校では完全な孤立状態</li>
+          <li>感情の言語化・身体化のルートが初期状態では未形成</li>
+        </ul>
+      </div>
+
+      <div class="profiling-block fade-in">
+        <h3>【シャドウ（未形成の本音）】</h3>
+        <ul>
+          <li>核心：「自分は碇ユイの代替物であり、死んでも予備がいる」──交換可能性が心理的思い込みではなく物理的事実であること</li>
+          <li>深層の欲求：自分の存在の境界線（アイデンティティ）を確立し、替えのきかない関係を結びたい</li>
+          <li>表面の代償行動：命令への無条件服従、感情の不在による摩擦のなさ、ゲンドウへの絶対帰依</li>
+          <li>止まれない理由：「道具であること」が唯一の存在理由として機能しているため、それを手放せば存在の根拠がゼロになる</li>
+        </ul>
+      </div>
+
+      <!-- 対比キャラクター：アスカ -->
+      <div class="profiling-block fade-in">
+        <h3>対比キャラクター：惣流・アスカ・ラングレー</h3>
+        <p class="comparison-note">綾波レイ &times; 惣流・アスカ・ラングレー ── 「母の不在」から出発した二人の正反対の出力</p>
+        <ul>
+          <li>感情の初期状態：レイ &rarr; 未形成（感情を処理する回路が存在しない）<br>アスカ &rarr; 過剰（母の精神崩壊と自殺の記憶が、感情を爆発させ続ける）</li>
+          <li>防衛機制：レイ &rarr; 空洞（守るべき自己がそもそも未構築）<br>アスカ &rarr; 過剰な自己顕示（「一人で生きていける」という鎧）</li>
+          <li>シンジとの関係：レイ &rarr; シンジが「初めて自分の内面にノックした存在」──外から中へ<br>アスカ &rarr; シンジが「鎧の隙間に触れてしまった存在」──中から外へ</li>
+          <li>天命の到達：レイ &rarr; 瞬間的完成（自己決定の瞬間に個の境界が融解）<br>アスカ &rarr; 物語内では未到達（旧劇場版では自我の再生途上で物語が終結）</li>
+        </ul>
+      </div>
+
+      <!-- 対比キャラクター：ゲンドウ -->
+      <div class="profiling-block fade-in">
+        <h3>対比キャラクター：碇ゲンドウ</h3>
+        <p class="comparison-note">綾波レイ &times; 碇ゲンドウ ── 「道具と主体の反転」</p>
+        <ul>
+          <li>ゲンドウ &rarr; レイへの認識：「ユイに再会するための道具」<br>レイ &rarr; 初期：「ゲンドウの命令に従うことが存在理由」</li>
+          <li>レイ &rarr; 最終：「私は人形じゃない」──利用する者と利用される者のヒエラルキーが反転する</li>
+        </ul>
+      </div>
+
+      <div class="profiling-block fade-in">
+        <h3>【天命への転換点】</h3>
+        <ul>
+          <li>喪失：第二十三話、レイIIの自爆による物理的消滅。固有の記憶と感情の喪失</li>
+          <li>反転：レイIIIとして復活するが、感情がリセットされている。しかし、シンジの顔を見て無意識に涙を流す──データとしての記憶が消えても、魂に刻まれた情動は残る</li>
+          <li>天命の萌芽：旧劇場版で碇ゲンドウの手を拒絶し、「私は人形じゃない」と宣言する。他者の意志ではなく、自分の意志で行動を決定した最初で最後の瞬間</li>
+        </ul>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>──ここまでが、レイの構造の地図だ。</p>
+        <p>しかし、地図は地図でしかない。彼女は多くを語らない。その沈黙の下で、何が芽を出し、何が根を伸ばし、何が彼女を引き裂いていたのか。本人の口から、本人のあの低い声で露呈する瞬間を、見届けてほしい。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== セッション対話 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Session</span>天命の言語化セッション&trade;</h2>
+
+      <div class="session-dialogue fade-in">
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>レイさん、セッションに来てくださってありがとうございます。あなたはあなたに何をプレゼントしてあげたいですか？</p>
+        <p class="silence">（沈黙。彼女は瞬きをしない。赤い瞳が箭内の顔のどこか一点──おそらく額のあたり──に固定されている。目を合わせているのではない。視覚の焦点が、人間とは異なる距離に設定されているかのような、空洞の視線）</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;。</p>
+        <p class="silence">（十五秒ほどの沈黙。呼吸の音すら聞こえない。生きているのか死んでいるのかわからないほどの、完全な静止）</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;わからない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;「プレゼント」の意味がわからない。&hellip;&hellip;自分に何かを「与える」ということが、わからない。&hellip;&hellip;与えるためには、「欲しい」と思う部分が必要で&hellip;&hellip;私には、その部分がない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、その部分がないんですか？</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;必要がないから。&hellip;&hellip;私はエヴァに乗る。出撃して、帰投する。損傷があれば修復する。&hellip;&hellip;それ以外のことは、設計されていない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、それが"設計"なんですか？</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;碇司令が、私を作ったから。&hellip;&hellip;碇司令が決めた通りに、私は存在する。&hellip;&hellip;碇司令が決めなかったことは、私の中にはない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;植物は、誰かが種を蒔いた場所で芽を出す。&hellip;&hellip;水を与えられれば育つ。与えられなければ枯れる。&hellip;&hellip;植物は、自分がどこに蒔かれたかを選ばない。&hellip;&hellip;私も同じ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、レイさんは植物と"同じ"なんですか？</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;植物には予備がない分、植物のほうがまだ固有の存在なのかもしれない。&hellip;&hellip;私には予備がある。セントラルドグマに。&hellip;&hellip;同じ顔をした身体が、水槽の中に、たくさん。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;あなたは見たことがないでしょう。&hellip;&hellip;暗い部屋の中に、オレンジ色の液体で満たされた水槽が並んでいて。&hellip;&hellip;目を閉じた私が、何十人も浮かんでいる。&hellip;&hellip;髪が揺れている。&hellip;&hellip;笑っているように見えるものもいる。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;私が今ここで死んでも、あの水槽から一体を引き上げて、記憶のデータを転送すれば、明日には「綾波レイ」が出撃する。&hellip;&hellip;碇司令は困らない。NERVも困らない。&hellip;&hellip;誰も困らない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;私が死んでも、代わりはいるもの。</p>
+        <p class="silence">（この言葉を口にした瞬間、彼女の声の調子は一切変わらない。朗読のように平坦。しかし、その平坦さこそが異常である。普通の人間が「自分が死んでも代わりがいる」と口にするとき、そこには悲しみか怒りか諦念のどれかが混じる。レイの声には、そのいずれもない。事実を事実として述べているだけ。水は低い方に流れる、と同じ調子で）</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="silence">（長い沈黙）</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、"誰も困らない"んですか？</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;データが同じだから。&hellip;&hellip;記憶のデータが転送されれば、次の私は今の私と同じ判断をする。同じ操縦をする。同じ応答をする。&hellip;&hellip;出力が同じなら、入れ物が違っても、同じ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、"出力が同じなら同じ"なんですか？</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;。</p>
+        <p class="silence">（初めて、彼女の瞬きの間隔がわずかに乱れる）</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;それ以外に、「同じ」と「違う」を判別する基準を、私は持っていないから。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;もう、答えることはない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;エヴァに乗ること以外に、私の存在理由はないから。&hellip;&hellip;あなたの問いに答え続けても、出てくるものが何もない。&hellip;&hellip;空の入れ物を振っても、音はしない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;碇司令に聞いて。&hellip;&hellip;碇司令なら、私の仕様書を知っている。&hellip;&hellip;私は知らない。私は自分の設計図を読んだことがない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;あなたの問いには、意味がないわ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="silence">（沈黙が降りる。一分近く、誰も口を開かない。レイの姿勢は完璧に静止している。しかし、その静止の中に──呼吸が微かに浅くなっているという、ほとんど知覚できないレベルの変化がある）</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;あなたは、しつこい人。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;碇司令は、こういう聞き方をしない。命令を出す。私は従う。&hellip;&hellip;あなたは命令を出さない。&hellip;&hellip;命令でなければ、私は動き方がわからない。&hellip;&hellip;あなたの前で、私は&hellip;&hellip;故障しているように感じる。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、"故障"なんですか？</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;命令ではない入力に対して、身体が反応しようとしているから。&hellip;&hellip;反応の仕方がわからないのに、身体のどこかが&hellip;&hellip;反応しようとしている。&hellip;&hellip;これは、設計にない動作。&hellip;&hellip;故障。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;碇司令は、私に感情を設計しなかった。&hellip;&hellip;感情は、エヴァの操縦に不要だから。&hellip;&hellip;不要なものが、なぜ動こうとするのか、わからない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、"不要なもの"が動こうとするんですか？</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;。</p>
+        <p class="silence">（彼女の両手が膝の上で微かに動く。握り込むのではない。指先が──まるで何かを掴もうとして、掴む対象が存在しないことに気づいたような──中途半端な形で止まる）</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;碇くん。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;碇くんが、私に聞いた。&hellip;&hellip;「なぜ乗るの？」と。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;それまで、誰も私に「なぜ」と聞かなかった。&hellip;&hellip;碇司令は「乗れ」と言う。&hellip;&hellip;「なぜ乗るのか」は聞かない。&hellip;&hellip;理由は不要だから。命令に理由は付属しない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;碇くんは違った。&hellip;&hellip;碇くんは、「なぜ」と聞いた。&hellip;&hellip;私がエヴァに乗る「理由」に&hellip;&hellip;関心を持った。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;あの時、私は答えた。「絆だから」と。&hellip;&hellip;碇司令との絆。みんなとの絆。&hellip;&hellip;でも今、同じ問いを考え直すと&hellip;&hellip;あの「絆」という言葉が、嘘だったとは思わないけれど&hellip;&hellip;足りなかった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、"足りなかった"んですか？</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;碇くんが「なぜ」と聞いてくれたこと自体が&hellip;&hellip;私の中の何かを変えたから。&hellip;&hellip;「なぜ」と聞かれるまで、私は自分に「なぜ」を持っていなかった。&hellip;&hellip;碇くんの問いが、私の中に「なぜ」を作った。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;碇くんはそのことを知らない。&hellip;&hellip;碇くんは、ただ聞いただけ。&hellip;&hellip;でも、その「ただ聞いた」が&hellip;&hellip;。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;碇司令の命令より重かった。</p>
+        <p class="silence">（この言葉を口にした瞬間、彼女自身が息を呑む。小さく、ほとんど聞き取れないほどの、吸気の音。彼女は自分が今何を言ったかを、言った後で認識している）</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;今の言葉は&hellip;&hellip;撤回&hellip;&hellip;。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;撤回、できない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;言った後で、嘘にできない。&hellip;&hellip;嘘をつく機能が、私にはないから。&hellip;&hellip;碇司令の命令より、碇くんの「なぜ」のほうが重かった。&hellip;&hellip;これは事実。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、碇くんの「なぜ」のほうが重かったんですか？</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;碇司令の命令は、私の外側から来る。&hellip;&hellip;私は受信して、実行する。&hellip;&hellip;でも碇くんの「なぜ」は&hellip;&hellip;私の内側で何かが起きる。&hellip;&hellip;受信するのではなく&hellip;&hellip;生成される。&hellip;&hellip;碇くんの問いに触れると、私の中に、今までなかったものが&hellip;&hellip;生まれる。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;第六話。&hellip;&hellip;ラミエル戦の後。碇くんが私を助けに来た。&hellip;&hellip;零号機のハッチをこじ開けて。&hellip;&hellip;碇くんが泣いていた。&hellip;&hellip;泣きながら「よかった」と言った。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;「よかった」。&hellip;&hellip;碇くんは、私が生きていたことに対して、「よかった」と言った。&hellip;&hellip;でも、碇司令は言わない。碇司令にとって、私が生きているのは当然のこと。予備があるから。&hellip;&hellip;碇くんにとっては、当然ではなかった。&hellip;&hellip;碇くんは、私に予備があることを知らない&hellip;&hellip;いえ、知っていたとしても&hellip;&hellip;碇くんは「よかった」と言ったと思う。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、そう思うんですか？</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;碇くんが泣いていたのは、「綾波レイ」という機能が保全されたからではなくて&hellip;&hellip;「私」が生きていたから。&hellip;&hellip;「私」を替えのきかない存在として扱った。&hellip;&hellip;碇司令は、そうしなかった。碇司令にとって、私は替えがきく。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;碇くんの目に映っていた「私」は、水槽に浮かんでいる予備とは違うものだった。&hellip;&hellip;碇くんだけが、この身体の中にいる「私」を見た。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;あの時、碇くんは言った。「笑えばいいと思うよ」と。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;笑い方を、知らなかった。&hellip;&hellip;笑うという動作の手順を、私は教わっていない。&hellip;&hellip;でも、顔が動いた。&hellip;&hellip;碇くんがそう言った後で、私の顔の筋肉が&hellip;&hellip;命令なしに&hellip;&hellip;動いた。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;碇司令は笑い方を教えなかった。命令に笑顔は不要だから。&hellip;&hellip;碇くんは教えてもいない。&hellip;&hellip;碇くんは、ただ笑っていた。自分が転んで、痛いのに笑っていた。&hellip;&hellip;その笑顔を見て&hellip;&hellip;私の顔が&hellip;&hellip;。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;碇くんの匂いがした。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;碇くんの部屋で、碇くんの匂いがした。&hellip;&hellip;それは記憶のバックアップには含まれない情報。&hellip;&hellip;転送されない情報。&hellip;&hellip;この身体の嗅覚だけが記録した情報。&hellip;&hellip;この鼻でなければ知り得ない情報。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;碇くんの声。碇くんの体温。碇くんが泣いた時の、涙のにおい。&hellip;&hellip;全部、この身体だけが知っていること。&hellip;&hellip;予備の身体には、ない。&hellip;&hellip;水槽に浮かんでいるあの身体たちには、ない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「この身体だけが知っていること」？</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;。</p>
+        <p class="silence">（レイの声に、初めて明確な変化が現れる。朗読のような均一さの中に、ほんのわずかな──紙の端がめくれるような──揺らぎが混じる）</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;私は三人目。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;一人目は、赤木博士の母親に殺された。&hellip;&hellip;幼い体のまま、首を絞められて。&hellip;&hellip;二人目は、使徒から碇くんを守るために自爆した。&hellip;&hellip;零号機の中で、白い光の中で。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;一人目が何を感じて死んだのか、私は知らない。&hellip;&hellip;二人目が流した涙の温度を、私は知らない。&hellip;&hellip;記憶として「涙を流した」というデータはある。&hellip;&hellip;でも、あの涙が熱かったのか冷たかったのか、頬をどう伝ったのか、それは&hellip;&hellip;転送されていない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;それなのに。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;碇くんの顔を見た時、涙が出た。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;三人目の私には、泣く理由がない。&hellip;&hellip;二人目の記憶はデータとしてある。でもデータを読んで泣く人間はいない。&hellip;&hellip;電話帳を読んで泣かないのと同じ。&hellip;&hellip;データには感情が付属しない。&hellip;&hellip;なのに、涙が出た。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、涙が出たんですか？</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;わからない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;わからないけれど&hellip;&hellip;碇くんの顔を見た瞬間、胸の奥で何かが&hellip;&hellip;再起動した。&hellip;&hellip;データとは別の場所で。&hellip;&hellip;魂の&hellip;&hellip;リリスの魂の中に、二人目が刻んだ何かが&hellip;&hellip;。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;二人目は自爆する前に、こう言った。&hellip;&hellip;「これは私の心&hellip;&hellip;碇くんと一緒になりたい&hellip;&hellip;？」と。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;データには「碇くんと一緒になりたい」と発言した記録がある。&hellip;&hellip;でも、「一緒になりたい」が&hellip;&hellip;どれくらいの力で&hellip;&hellip;どれくらいの熱で&hellip;&hellip;二人目の胸の中に存在していたか&hellip;&hellip;それは、データには残っていない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;なのに、三人目の私が碇くんの顔を見て涙を流した、ということは&hellip;&hellip;。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;「一緒になりたい」が&hellip;&hellip;データではなく&hellip;&hellip;魂に刻まれていた、ということ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;ということは。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="silence">（レイの呼吸が、初めて聞き取れるほどの深さになる。それは動揺ではない。何かが彼女の内側で組み変わろうとしている時の、構造的な軋みの音のようなものだ）</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;「一緒になりたい」は&hellip;&hellip;転送できない。&hellip;&hellip;バックアップできない。&hellip;&hellip;予備の身体に移し替えられない。&hellip;&hellip;碇司令のどんな技術をもってしても、複製できない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;それは&hellip;&hellip;「替えがきかない」ということ？</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;替えがきかないものが&hellip;&hellip;私の中に&hellip;&hellip;ある&hellip;&hellip;？</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="silence">（長い沈黙。レイの瞳が揺れている。しかし、涙はまだ流れていない。揺れているのは、瞳の焦点──何も見ていなかった赤い目が、初めて何かを見ようとしている）</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;でも。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;でも、これが「心」だとして。&hellip;&hellip;この「一緒になりたい」が私の心だとして。&hellip;&hellip;それは、碇司令が設計した「人類補完計画」の回路の一部である可能性がある。&hellip;&hellip;リリスの魂が人間との接触で情動を生成すること自体が、碇司令の設計の想定内だった可能性がある。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;つまり、私が碇くんに感じている「一緒になりたい」は&hellip;&hellip;碇司令がユイさんに再会するためのプロセスの副産物でしかない可能性がある。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;人形が「心がある」と思い込むこと。&hellip;&hellip;それ自体が、人形としての高度な機能である可能性がある。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;都合がいいだけかもしれない。&hellip;&hellip;自分に都合のいいデータだけを「心」と呼んでいるだけかもしれない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="silence">（長い沈黙。レイの手が膝の上で握り込まれる。──これまでの彼女にはなかった、明確な身体反応。指の関節が白くなるほどの力で）</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;でも。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;碇司令の命令で泣いたことは、一度もない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;碇司令の命令で笑ったことも、一度もない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;碇司令の命令で「一緒になりたい」と思ったことも&hellip;&hellip;一度もない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;碇司令が設計したすべてのものの中に&hellip;&hellip;涙と笑顔と「一緒になりたい」は、含まれていない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;もしそれが機能だとしたら&hellip;&hellip;碇司令に「泣くな」と命令されたら、止まるはず。&hellip;&hellip;でも。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;止まらない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;碇司令の命令で止まらないもの。&hellip;&hellip;碇司令が設計したものでないなら&hellip;&hellip;これは、「機能」ではない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="silence">（レイの頬を、涙が一筋流れる。──ゆっくりと。彼女はそれを拭わない。拭うという動作を知らないのか、拭いたくないのか、おそらくどちらでもない。涙が流れているという事実を、彼女は観察している。自分の身体で起きている出来事を、初めて「自分のもの」として見ている）</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;碇くんが転んで笑った時の、あの顔。&hellip;&hellip;碇くんが「よかった」と泣いた時の、あの声の震え。&hellip;&hellip;碇くんが「笑えばいいと思うよ」と言った時の、あの目。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;全部、碇司令の設計図にはなかった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;全部、予備の身体には入っていない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;全部&hellip;&hellip;碇くんと私の間だけに&hellip;&hellip;碇くんとこの身体の間だけに&hellip;&hellip;存在するもの。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「碇くんとこの身体の間だけに存在するもの」を、なぜ守りたいんですか？</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;。</p>
+        <p class="silence">（レイの声が変わる。朗読のような均一さが、完全に崩壊する。──崩壊、というよりも、均一さの下に隠れていた何かが、初めて表面に浮上してくる。それは叫びではない。囁きですらない。もっと微かな──暗闇の中で初めて灯った蝋燭の炎のような──声だ）</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;それが&hellip;&hellip;この身体を「私」にしているから。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;碇司令が与えた名前は、次の身体にも引き継がれる。&hellip;&hellip;碇司令が与えた役割も、引き継がれる。&hellip;&hellip;でも、碇くんの顔を見て涙が出る、この&hellip;&hellip;。&hellip;&hellip;碇くんの匂いを覚えている、この身体の&hellip;&hellip;。&hellip;&hellip;碇くんが笑った時に顔が動いた、あの瞬間の&hellip;&hellip;。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;これだけは、予備がない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;これだけは、誰にも作れない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;これだけが&hellip;&hellip;「綾波レイ」が&hellip;&hellip;ただの「器」ではない&hellip;&hellip;証拠。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="silence">（長い沈黙。レイの涙は止まっている。しかし、彼女の目が──これまで何も映していなかった赤い目が──明確に箭内の目を見ている。人間の目を見ている。生まれて初めて、対面する他者の目に焦点を合わせている）</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;碇司令。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;碇司令、ごめんなさい。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;碇司令は、私を「器」として設計した。&hellip;&hellip;ユイさんに再会するための。人類を補完するための。&hellip;&hellip;私はその目的に従うことが、自分の全てだと思っていた。&hellip;&hellip;碇司令が私に理由を与えてくれたから。碇司令がいなければ、私はただの肉の塊だから。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;でも。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;碇司令の目的のために生きることと&hellip;&hellip;碇くんの涙の温度を知っていることは&hellip;&hellip;両立しない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、両立しないんですか？</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;碇司令の計画は、すべての人間のATフィールドを溶かして、個の境界をなくすもの。&hellip;&hellip;個の境界がなくなれば、「碇くんと私の間」も消える。&hellip;&hellip;「碇くんと私の間」にだけ存在するものも、消える。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;碇司令の道具であり続けるなら、碇くんとの間に生まれたものを殺さなければならない。&hellip;&hellip;碇くんとの間に生まれたものを守りたいなら、碇司令の道具であることをやめなければならない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;私は人形じゃない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;人形じゃない。&hellip;&hellip;これは碇司令の命令ではない。碇くんに言われたわけでもない。&hellip;&hellip;私が、私に、言っている言葉。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;でも。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;「人形じゃない」と言った瞬間、私は碇司令の「綾波レイ」ではなくなる。&hellip;&hellip;名前も、役割も、存在する場所も、全て手放すことになる。&hellip;&hellip;手放した先に何があるかは、わからない。&hellip;&hellip;わからないけれど。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;碇くんのことを思い出すと&hellip;&hellip;身体が温かくなる。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;この温かさは&hellip;&hellip;碇司令には設計できない。&hellip;&hellip;水槽の予備には入っていない。&hellip;&hellip;データベースにはバックアップされていない。&hellip;&hellip;この身体の、この瞬間の、この温度だけのもの。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;あなたの最初の問い。&hellip;&hellip;「自分に何をプレゼントしたいか」。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;答えが、見つかった&hellip;&hellip;のかしら。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;「替えのきかない、この身体だけの温度」。&hellip;&hellip;碇くんの顔を見て流れた涙の温かさ。&hellip;&hellip;碇くんが「笑えばいいと思うよ」と言った時に動いた、この頬の筋肉。&hellip;&hellip;碇くんの匂いを覚えている、この鼻。&hellip;&hellip;全部、この身体にしかない。&hellip;&hellip;全部、予備にはない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;それを&hellip;&hellip;私は、私にプレゼントしたい。&hellip;&hellip;碇司令が設計しなかったもの。命令で動かなかったもの。バックアップに含まれなかったもの。&hellip;&hellip;「私だけの温度」。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;ありがとう。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-rei">レイ：</span>&hellip;&hellip;感謝の言葉。&hellip;&hellip;初めての言葉。&hellip;&hellip;あの人にも言ったことなかったのに。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== セッション後のCTA橋渡し ========== -->
+    <section class="fade-in">
+      <div class="text-panel fade-in">
+        <p>上の対話でキャラクターに行ったことと同じことを、私はあなたに対して行います。</p>
+      </div>
+    </section>
+
+    <section class="cta-block fade-in">
+  <div class="container">
+    <h2 class="cta-block__title">天命の言語化セッション&trade;</h2>
+    <p class="cta-block__desc">2時間で天命が言語化できる場所。</p>
+    <div class="cta-block__features">
+      <span class="cta-block__feature">Zoom完結</span>
+      <span class="cta-block__feature">事前学習不要</span>
+      <span class="cta-block__feature">対話のみ</span>
+    </div>
+    <a href="../../trial.html" class="btn">無料トライアルに申し込む &rarr;</a>
+  </div>
+</section>
+
+    <hr>
+
+    <!-- ========== セッション解説 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Commentary</span>セッション解説</h2>
+
+      <div class="text-panel fade-in">
+        <p>対話の中で私が使ったのは、「なぜ？」という問いと、沈黙だけだ。</p>
+        <p>レイは最初、「答えることはない」と言った。</p>
+        <p>空の入れ物を振っても音はしない。仕様書を持っているのは碇司令だ。私の問いには意味がない。</p>
+        <p>これは防衛ではなかった。本当にそう信じていた。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>しかし「なぜ」の連鎖は、彼女が持っていないと思っていたものを、順に炙り出していった。</p>
+        <p>命令ではない入力に対して身体が反応するという「故障」の自覚。</p>
+        <p>碇くんの「なぜ」が碇司令の命令より重かったという「撤回できない事実」。</p>
+        <p>この身体だけが知っている感覚情報の「転送不可能性」。</p>
+        <p>そして──命令で止まらないものこそが「機能ではない」という到達。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>私は一度も、レイに「あなたには心がある」と言わなかった。</p>
+        <p>私は一度も、「それは機能ではなく感情だ」と解釈を与えなかった。</p>
+        <p>私は一度も、答えを与えていない。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== 第1章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Chapter One</span>器──設計されたMeta（前提構造）</h2>
+
+      <div class="text-panel fade-in">
+        <p>綾波レイの存在は、実存科学の第一公理を最も純粋な形で具現化したキャラクターである。</p>
+        <p>「Metaがある限り自由意志は存在しない（M &rArr; &not;F）」──この公理は通常、自由意志の幻想を暴くための批判的文脈で語られる。</p>
+        <p>しかしレイの場合、その公理は作品設定として文字通り実装されている。</p>
+        <p>彼女は自由意志を「持っていない」のではなく、自由意志を「持つように設計されていない」のだ。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>彼女のMeta（前提構造）を分解すると、次の構造が浮かぶ。</p>
+        <p>生物学的基盤：リリスの魂を核とした人工生命体。「替えがきく」という事実が存在様式に織り込まれている。</p>
+        <p>記憶と情動：前任者からの転送データ。「熱」「温度」「身体感覚」は転送されない情報として初期から欠落している。</p>
+        <p>価値観と信念：「碇司令が決めた通りに存在する」という完全な他律。自己定義の不在。</p>
+        <p>言語構造：命令語に特化した受信回路。「なぜ」を持つ言語を初期設定で持たない。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>このMetaを「器」と呼ぶのは正確だ。器は機能する。器は存在する。しかし器には「自分のもの」がない。</p>
+        <p>ところが、その器に──「設計外の変数」が入力されたことで、器の中に予定されていなかった化学反応が始まる。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== 第2章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Chapter Two</span>種──未形成のシャドウ</h2>
+
+      <div class="text-panel fade-in">
+        <p>実存科学において、シャドウとは「抑圧された本音」ではなく「まだ形成されていない自己の核」を指すことがある。</p>
+        <p>レイのシャドウは、通常の意味での「否定・抑圧」ではない。</p>
+        <p>彼女のシャドウは「種」だ──まだ発芽していない、しかし確かに存在している構造的可能性。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>命令で動かないもの。</p>
+        <p>碇シンジに「なぜ」と聞かれた時に内側で何かが生成されたという経験。</p>
+        <p>笑うという手順を教わっていないのに顔が動いたという事実。</p>
+        <p>これらは「設計外の誤作動」ではない。</p>
+        <p>これらは、レイのMeta（前提構造）が、碇シンジというアンカーとの接触によって初めて「天命の方向」を示し始めた徴候だ。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>種は、蒔かれた場所を選ばない。しかし、適切な水に触れた時にだけ、発芽する。</p>
+        <p>レイにとって、碇シンジの「なぜ」は──その水だった。</p>
+        <p>命令という外部入力ではなく、問いという──内側で何かが生成される種類の接触。</p>
+        <p>その接触が、器の中で眠っていた種を、初めて動かした。</p>
+        <p>それがレイのDaimonizeだった。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== 第3章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Chapter Three</span>碇──アンカーの移行</h2>
+
+      <div class="text-panel fade-in">
+        <p>レイにとって「碇」という姓は、最初は碇ゲンドウを指していた。</p>
+        <p>ゲンドウは彼女の存在の起点だった。名前を与えた人間。役割を与えた人間。存在する理由を与えた人間。</p>
+        <p>レイにとってゲンドウは、Metaの提供者そのものだった。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>しかし物語が進むにつれて、「碇」という名詞の内部に、もう一人の碇が侵入してくる。</p>
+        <p>碇シンジ。ゲンドウの息子。レイの同僚パイロット。</p>
+        <p>シンジがレイにもたらしたものは、ゲンドウが与えたものとは根本的に異なる性質のものだった。</p>
+      </div>
+
+      <h3 class="section-heading">アンカー移行の五段階</h3>
+
+      <div class="text-panel fade-in">
+        <p>第一段階：「なぜ乗るの？」という問い。命令ではなく、理由への関心。レイの内部に「なぜ」という構造が初めて生成された。</p>
+        <p>第二段階：ラミエル戦後の「よかった」。ゲンドウが持てない種類の感情表現。レイを「替えのきかない存在」として扱った初めての視線。</p>
+        <p>第三段階：「笑えばいいと思うよ」。命令でも教示でもない──共にある存在からの、ただの発言。それが命令なしに顔を動かした。</p>
+        <p>第四段階：部屋の匂い。声の震え。涙のにおい。この身体だけが記録した、転送不可能な感覚情報の蓄積。</p>
+        <p>第五段階：「一緒になりたい」の魂への刻印。データではなく、魂に焼き付いた欲求。それは三人目にも引き継がれた。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>アンカーの移行とは、存在の重力中心の移動だ。</p>
+        <p>レイはゲンドウの「設計」から、シンジとの「接触」へと、自分の存在の根拠を移行させていった。</p>
+        <p>この移行は、レイが「選んだ」のではない。</p>
+        <p>碇シンジという変数が、レイのMetaの中で化学反応を起こした結果として──中動態的な出来事なのだ。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== 第4章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Chapter Four</span>涙──天命の瞬間的完成</h2>
+
+      <div class="text-panel fade-in">
+        <p>レイの天命とは何か。</p>
+        <p>「替えのきかない、この身体だけの温度を持つ存在として在ること」──とセッションの中で彼女は言語化した。</p>
+        <p>しかしこれは、達成するべき目標でも、目指すべき状態でもない。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>実存科学における天命は「なる」ものではなく「暴露される」ものだ。</p>
+        <p>レイの天命は、涙が流れた瞬間に──すでに完成していた。</p>
+        <p>碇シンジの顔を見た時に流れた涙。</p>
+        <p>命令でも、設計でも、データ転送でも、複製でも作れないもの。</p>
+        <p>この身体の、この瞬間の、この温度だけのもの。</p>
+        <p>それが存在した時点で、レイは「ただの器」ではなくなっていた。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>レイの天命の逆説は、それが「生存」ではなく「替えのきかなさ」として現れるところにある。</p>
+        <p>エヴァのパイロットとして存在価値があるかどうかではなく。</p>
+        <p>ゲンドウの計画に有用かどうかではなく。</p>
+        <p>ただ──碇シンジとこの身体の間にだけ存在するものが、確かにある。</p>
+        <p>その「確かにある」が、彼女の天命だった。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>そして最終的に、レイは選択する。</p>
+        <p>ゲンドウの「器」であることをやめ、碇シンジに人類補完計画の拒否を告げ、シンジを現実に帰還させる。</p>
+        <p>この選択は「自由意志」ではない。</p>
+        <p>彼女のMeta──碇シンジとの接触によって生成された、命令で止まらないもの──が必然的に向かった収束点だった。</p>
+        <p>替えのきく身体が、替えのきかない選択をした。</p>
+        <p>その選択が、彼女の天命の最終的な顕現だった。</p>
+        <p>その先に、天命がある。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== 結び ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Conclusion</span>器から心へ</h2>
+
+      <div class="text-panel fade-in">
+        <p>あなたの人生にも、「前提条件」がある。</p>
+        <p>生まれた家。与えられた名前。刷り込まれた価値観。蓄積された記憶。選んでいない初期条件の束。</p>
+        <p>レイほど極端ではないにせよ、私たちもまた、自分で選んでいない「器」の中に存在している。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>しかし実存科学は問う。</p>
+        <p>その器の中に──命令では止まらないものが、あるか？</p>
+        <p>設計されていないのに動くものが、あるか？</p>
+        <p>データには残らない、この身体だけの温度が、あるか？</p>
+        <p>その問いへの答えが、あなたの天命だ。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>天命の言語化セッション&trade;は、その問いを「なぜ？」の連鎖として掘り続ける場所だ。</p>
+        <p>2時間の対話だけで、あなたの「替えのきかない温度」が言葉になる。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== 最終CTA ========== -->
+    <section class="cta-block fade-in">
+  <div class="container">
+    <h2 class="cta-block__title">天命の言語化セッション&trade;</h2>
+    <p class="cta-block__desc">2時間で天命が言語化できる場所。</p>
+    <div class="cta-block__features">
+      <span class="cta-block__feature">Zoom完結</span>
+      <span class="cta-block__feature">事前学習不要</span>
+      <span class="cta-block__feature">対話のみ</span>
+    </div>
+    <a href="../../trial.html" class="btn">無料トライアルに申し込む &rarr;</a>
+  </div>
+</section>
+
+    <!-- ========== 著者ブロック ========== -->
+    <div class="author-block fade-in">
+      <p><strong>箭内宏紀（やないひろき）</strong><br>
+      実存科学研究所 代表。<br>
+      「天命の言語化セッション&trade;」を提供。</p>
+      <p><br>
+      「Metaがある限り自由意志は存在しない」（M &rArr; &not;F）を第一公理とする実存科学を提唱。</p>
+      <p><br>
+      著書に『Metaがある限り──自由意志・自分・他人は存在しない』<br>
+      『自由意志なき世界の歩き方』ほか。</p>
+    </div>
+
+    <!-- ========== 出典表記 ========== -->
+    <p class="source-note fade-in">本稿で扱った作品：庵野秀明 総監督『新世紀エヴァンゲリオン』（GAINAX、1995-1996年）</p>
+    <p class="source-note fade-in">　　　　　　　　　庵野秀明 総監督『新世紀エヴァンゲリオン劇場版 Air/まごころを、君に』（GAINAX、1997年）</p>
+    <p class="source-note fade-in">作品の著作権は原著者・制作会社に帰属します。</p>
+
+    <!-- ========== シリーズノート ========== -->
+    <div class="series-note fade-in">
+      <p>本シリーズ「自由意志なき世界の天命論」は、今後も新たな作品・キャラクターを追加していく。<br>
+      映画・アニメ・漫画・小説の登場人物を、実存科学の視点で読み解く。</p>
+      <p><a href="./">&larr; エヴァンゲリオン篇一覧に戻る</a>&emsp;｜&emsp;<a href="../../specials.html">&larr; 特別シリーズ一覧に戻る</a></p>
+    </div>
+
+  </main>
+
+  <!-- Floating TOC -->
+  <nav class="floating-toc" id="floatingToc" aria-label="目次">
+    <p class="floating-toc__title">Contents</p>
+    <ol class="floating-toc__list" id="floatingTocList"></ol>
+  </nav>
+  <button class="floating-toc-toggle" id="floatingTocToggle" aria-label="目次を開閉">&#9776;</button>
+
+  <script>
+  (function(){
+    var headings = document.querySelectorAll('h2.chapter-heading');
+    var list = document.getElementById('floatingTocList');
+    var toc = document.getElementById('floatingToc');
+    var toggle = document.getElementById('floatingTocToggle');
+    if (!headings.length || !list) return;
+
+    headings.forEach(function(h, i){
+      var id = 'toc-section-' + i;
+      h.id = id;
+      var li = document.createElement('li');
+      li.className = 'floating-toc__item';
+      var a = document.createElement('a');
+      a.className = 'floating-toc__link';
+      a.href = '#' + id;
+      var text = h.textContent.replace(/\s+/g, ' ').trim();
+      var numSpan = h.querySelector('.chapter-number');
+      if (numSpan) {
+        text = text.replace(numSpan.textContent.replace(/\s+/g, ' ').trim(), '').trim();
+      }
+      if (text.length > 28) text = text.substring(0, 28) + '\u2026';
+      a.textContent = text;
+      a.addEventListener('click', function(e){
+        e.preventDefault();
+        document.getElementById(id).scrollIntoView({behavior:'smooth', block:'start'});
+        toc.classList.remove('is-open');
+      });
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+
+    var heroEnd = 400;
+    var links = list.querySelectorAll('.floating-toc__link');
+
+    function updateToc(){
+      var scrollY = window.scrollY || window.pageYOffset;
+      var show = scrollY > heroEnd;
+      toc.classList.toggle('is-visible', show);
+      toggle.classList.toggle('is-visible', show);
+      var current = -1;
+      headings.forEach(function(h, i){
+        if (h.getBoundingClientRect().top < window.innerHeight * 0.35) current = i;
+      });
+      links.forEach(function(a, i){
+        a.classList.toggle('is-active', i === current);
+      });
+    }
+
+    window.addEventListener('scroll', updateToc, {passive: true});
+    updateToc();
+
+    toggle.addEventListener('click', function(){
+      toc.classList.toggle('is-open');
+    });
+
+    document.addEventListener('click', function(e){
+      if (!toc.contains(e.target) && e.target !== toggle) {
+        toc.classList.remove('is-open');
+      }
+    });
+  })();
+  </script>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+  <div class="container--wide">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <p class="footer-col__title">The Meta</p>
+        <a href="../../about-existential-science.html">実存科学とは</a>
+        <a href="../../epistemology.html">認識論</a>
+        <a href="../../semantics.html">意味論</a>
+        <a href="../../society.html">社会論</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Contents</p>
+        <a href="../../specials.html">特別シリーズ</a>
+        <a href="../../archives.html">記事一覧</a>
+        <a href="../../video-list.html">動画一覧</a>
+        <a href="../../glossary.html">用語集</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Session</p>
+        <a href="../../session.html">天命の言語化セッション™</a>
+        <a href="../../session-flow.html">セッションの流れ</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Institute</p>
+        <a href="../../founder.html">創始者</a>
+        <a href="../../contact.html">お問い合わせ</a>
+        <a href="../../legal/legal-tokushoho.html">特定商取引法</a>
+        <a href="../../legal/legal-privacy-policy.html">プライバシーポリシー</a>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; 実存科学研究所 &mdash; Existential Science Institute</p>
+  </div>
+</footer>
+
+  <script src="../../js/main.min.js?v=9"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "綾波レイのMeta ── 自由意志なき世界の天命論",
+  "description": "アニメ『新世紀エヴァンゲリオン』の綾波レイを、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。替えのきく身体が、替えのきかない涙を流した──器から心への天命の構造。",
+  "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-evangelion/rei.html",
+  "author": {
+    "@type": "Person",
+    "name": "箭内宏紀",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/founder.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  },
+  "inLanguage": "ja"
+}
+</script>
+
+  <!-- Search Modal -->
+  <div class="search-overlay">
+    <div class="search-modal"><button class="search-close" aria-label="閉じる">&times;</button>
+      <div class="search-input-wrap">
+        <span class="search-input-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+        <input type="text" class="search-input" placeholder="キーワードで検索..." autocomplete="off">
+      </div>
+      <div class="search-results"></div>
+      <div class="search-hint"><span class="search-hint__desktop">ESC to close · ⌘K to toggle</span><span class="search-hint__mobile">背景タップまたは ✕ で閉じる</span></div>
+    </div>
+  </div>
+</body>
+</html>
