@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-shingeki/levi.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>リヴァイ・アッカーマンのMeta ── 自由意志なき世界の天命論 | 実存科学研究所</title>
+  <meta name="description" content="漫画『進撃の巨人』のリヴァイ・アッカーマンを、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。人類最強の兵士はなぜ拭くことに取り憑かれたのか。すべてを失った後に紅茶一杯で「十分だ」と言えた男の構造。">
+  <meta property="og:title" content="リヴァイ・アッカーマンのMeta ── 自由意志なき世界の天命論 | 実存科学研究所">
+  <meta property="og:description" content="漫画『進撃の巨人』のリヴァイ・アッカーマンを、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。人類最強の兵士はなぜ拭くことに取り憑かれたのか。すべてを失った後に紅茶一杯で「十分だ」と言えた男の構造。">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="実存科学研究所">
+  <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+  <meta property="og:url" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-shingeki/levi.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"></noscript>
+  <link rel="stylesheet" href="../../css/style.min.css?v=27">
+
+<style>
+/* =============================================
+   リヴァイ・アッカーマン 記事固有CSS
+   ============================================= */
+.hero-title--shimmer {
+  background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gold-shimmer 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 16px rgba(192,168,120,0.3)) drop-shadow(0 0 40px rgba(192,168,120,0.12));
+}
+@keyframes gold-shimmer {
+  0%, 100% { background-position: 100% 50%; }
+  50% { background-position: 0% 50%; }
+}
+
+/* === 1. 章見出し — 中央配置＋装飾 === */
+h2.chapter-heading {
+  font-size: var(--fs-section);
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  color: var(--color-text-primary);
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  position: relative;
+  padding-top: 2rem;
+}
+h2.chapter-heading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 1px;
+  background: var(--color-gold);
+}
+h2.chapter-heading::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(192,168,120,0.5), transparent);
+  margin: 1.2rem auto 0;
+}
+.chapter-number {
+  display: block;
+  font-family: var(--font-serif-en);
+  font-size: var(--fs-caption);
+  font-weight: 400;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 0.6rem;
+}
+
+/* === 2. 区切り線 — 装飾付き === */
+hr {
+  border: none;
+  height: auto;
+  background: none;
+  margin: 4.5rem 0;
+  text-align: center;
+  overflow: visible;
+}
+hr::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(192,168,120,0.08) 15%, rgba(192,168,120,0.2) 50%, rgba(192,168,120,0.08) 85%, transparent 100%);
+}
+hr::after {
+  content: "\25C6";
+  display: block;
+  font-size: 0.5rem;
+  color: rgba(192,168,120,0.3);
+  margin-top: -0.35em;
+  letter-spacing: 1em;
+  line-height: 1;
+}
+
+/* === 3. セッション対話 — 読みやすさ向上 === */
+.session-dialogue {
+  max-width: 680px;
+  margin: 2.5rem auto;
+  padding: 2.5rem 2rem;
+  background: rgba(10, 8, 18, 0.35);
+  border: 1px solid rgba(192,168,120,0.06);
+  border-radius: 2px;
+  position: relative;
+}
+.session-dialogue::before {
+  content: "SESSION";
+  position: absolute;
+  top: -0.6em;
+  left: 2rem;
+  font-family: var(--font-serif-en);
+  font-size: var(--fs-micro);
+  letter-spacing: 0.3em;
+  color: rgba(192,168,120,0.4);
+  background: var(--color-bg-deep);
+  padding: 0 0.8rem;
+}
+.session-dialogue p {
+  margin-bottom: 1.1em;
+  line-height: 2.2;
+}
+.session-dialogue .speaker-yanai { color: var(--color-gold); font-weight: 600; font-size: var(--fs-body); }
+.session-dialogue .speaker-levi { color: #b8a0d8; font-weight: 600; font-size: var(--fs-body); }
+
+/* 箭内の発言：金色の左ボーダー */
+.session-dialogue .line-yanai {
+  border-left: 2px solid rgba(192,168,120,0.15);
+  padding-left: 1.2rem;
+}
+/* キャラの発言：少しインデント */
+.session-dialogue .line-character {
+  margin-left: 1.4rem;
+}
+/* 沈黙マーカー：中央揃え＋装飾線 */
+.session-dialogue .silence {
+  color: rgba(235,232,225,0.3);
+  font-style: italic;
+  text-align: center;
+  margin: 2em 0;
+  font-size: var(--fs-small);
+  letter-spacing: 0.15em;
+}
+.session-dialogue .silence::before,
+.session-dialogue .silence::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: rgba(192,168,120,0.15);
+  vertical-align: middle;
+  margin: 0 1em;
+}
+/* 10発言ごとの視覚リズム */
+.session-dialogue p:nth-child(10n) {
+  margin-bottom: 2em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid rgba(192,168,120,0.06);
+}
+
+/* === 4. text-panel の単調さ解消 === */
+section > .text-panel:nth-of-type(even) {
+  background: rgba(8, 6, 16, 0.45);
+  border-color: transparent;
+}
+section > .text-panel:nth-of-type(even)::before {
+  display: none;
+}
+
+/* === 5. highlight-block の存在感微増 === */
+.highlight-block {
+  background: rgba(192,168,120,0.06);
+  border-left: 2px solid;
+  border-image: linear-gradient(180deg, var(--color-gold) 0%, rgba(192,168,120,0.15) 100%) 1;
+  padding: 2rem 2rem 2rem 2.2rem;
+  margin: 2.5rem 0;
+}
+.highlight-block p {
+  font-size: var(--fs-lead);
+  font-weight: 500;
+  line-height: 2.2;
+  color: var(--color-text-primary);
+}
+
+/* === 6. セクション見出し（h3） === */
+h3.section-heading {
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  color: var(--color-text-body);
+  letter-spacing: 0.08em;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1.2rem;
+  border-left: 2px solid rgba(192,168,120,0.4);
+  line-height: 1.6;
+}
+
+/* === Profiling Block === */
+.profiling-block {
+  background: rgba(15,12,25,0.5);
+  border: 1px solid rgba(192,168,120,0.1);
+  padding: 2.5rem 2rem;
+  margin: 2rem 0;
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+.profiling-block::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(192,168,120,0.4), transparent);
+}
+.profiling-block h3 {
+  font-size: var(--fs-body);
+  color: var(--color-gold);
+  letter-spacing: 0.15em;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(192,168,120,0.1);
+}
+.profiling-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+.profiling-block ul li {
+  margin-bottom: 1rem;
+  color: var(--color-text-reading);
+  font-size: var(--fs-body);
+  line-height: 1.9;
+  padding-left: 1.6em;
+  position: relative;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(192,168,120,0.04);
+}
+.profiling-block ul li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.profiling-block ul li::before {
+  content: "\2500\2500";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgba(192,168,120,0.35);
+  font-size: 0.75em;
+}
+
+/* === Author Block === */
+.author-block {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(192,168,120,0.15);
+}
+.author-block p { font-size: var(--fs-body); color: var(--color-text-reading); line-height: 2; }
+.author-block strong { color: var(--color-text-body); }
+
+/* === Source Note === */
+.source-note {
+  margin-top: 2rem;
+  font-size: var(--fs-small);
+  color: rgba(235,232,225,0.35);
+}
+
+/* === Series Note === */
+.series-note {
+  margin-top: 2rem;
+  padding: 1.5rem 2rem;
+  background: rgba(192,168,120,0.04);
+  border: 1px solid rgba(192,168,120,0.1);
+  font-size: var(--fs-body);
+  color: var(--color-text-reading);
+  line-height: 2;
+}
+
+/* === 7. モバイル対応 === */
+@media (max-width: 600px) {
+  h2.chapter-heading {
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    padding-top: 1.5rem;
+  }
+  .chapter-number {
+    font-size: var(--fs-micro);
+    letter-spacing: 0.25em;
+    margin-bottom: 0.4rem;
+  }
+  h3.section-heading {
+    font-size: var(--fs-lead);
+    margin-top: 2rem;
+    padding-left: 1rem;
+  }
+  hr { margin: 3rem 0; }
+  .session-dialogue {
+    padding: 1.5rem 1.2rem;
+    margin: 2rem auto;
+  }
+  .session-dialogue .line-yanai { padding-left: 0.8rem; }
+  .session-dialogue .line-character { margin-left: 0.8rem; }
+  .profiling-block { padding: 1.5rem 1.2rem; }
+  .highlight-block { padding: 1.5rem 1.2rem 1.5rem 1.4rem; }
+  .text-panel { padding: 2rem 1.5rem; }
+}
+@media (max-width: 480px) {
+  .text-panel p br,
+  .pull-quote p br,
+  .highlight-block p br,
+  .def-box p br,
+  .session-dialogue p br { display: none; }
+  h2.chapter-heading { font-size: var(--fs-h3); }
+  .session-dialogue p:nth-child(10n) {
+    margin-bottom: 1.5em;
+    padding-bottom: 1em;
+  }
+}
+</style>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="../../index.html" class="site-logo">実存科学研究所</a>
+      <button class="search-toggle" aria-label="検索"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+            <nav class="global-nav">
+        <a href="../../index.html">Top</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">The Meta</button>
+          <div class="nav-dropdown__menu">
+            <a href="../../beginner.html">はじめての方へ</a>
+            <a href="../../lp.html">ダークサイド診断</a>
+            <a href="../../omoidasu/">身体的知性診断</a>
+          </div>
+        </div>
+        <a href="../../session.html">Session</a>
+        <a href="../../founder.html">Founder</a>
+        <a href="../../specials.html">Specials</a>
+      </nav>
+    </div>
+  </header>
+  <div class="reading-progress"></div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="パンくずリスト">
+        <ol class="breadcrumb__list">
+          <li class="breadcrumb__item"><a href="../../index.html" class="breadcrumb__link">TOP</a></li>
+          <li class="breadcrumb__item"><a href="../../specials.html" class="breadcrumb__link">Specials</a></li>
+          <li class="breadcrumb__item"><a href="./" class="breadcrumb__link">進撃の巨人篇</a></li>
+          <li class="breadcrumb__item"><span class="breadcrumb__current">リヴァイ・アッカーマンのMeta</span></li>
+        </ol>
+      </nav>
+      <p class="page-hero__sub">Attack on Titan &times; Existential Science</p>
+      <h1 class="hero-title--shimmer">リヴァイ・アッカーマンのMeta<br>── 自由意志なき世界の天命論</h1>
+      <p class="page-hero__lead">箭内宏紀｜実存科学研究所</p>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <!-- ========== ネタバレ注意 ========== -->
+    <div class="text-panel fade-in">
+      <p style="font-size:0.85rem; color:rgba(235,232,225,0.5); text-align:center;">※本稿は『進撃の巨人』全体のネタバレを含みます。</p>
+    </div>
+
+    <!-- ========== 冒頭フック ========== -->
+    <section class="fade-in">
+
+      <div class="text-panel fade-in">
+        <p>彼は、ペトラの遺体を荷台から投げ捨てた。</p>
+        <p>女型の巨人の追撃。樹林帯からの撤退。荷台に載せた四人分の遺体を運ぶ馬車の速度が落ちていた。追いつかれる。後ろの兵士が叫んだ──「重量を軽くしなければ全員死にます」。</p>
+        <p>リヴァイは振り向いた。</p>
+        <p>荷台の上には、数時間前まで自分の班だった四人が横たわっていた。ペトラ・ラル。オルオ・ボザド。エルド・ジン。グンタ・シュルツ。自らが選抜し、自らが鍛え、初めて「守りたい」と思えた部下たち。</p>
+        <p>彼は自分の手で、ペトラの遺体を荷台の縁まで押した。布に包まれた体が地面に落ちたとき、何の音もしなかった──聞こえなかっただけかもしれない。風が強かったから。</p>
+        <p>次にオルオ。次にエルド。次にグンタ。</p>
+        <p>四つの遺体を投げ捨てた荷台は速度を上げ、残った生者を運んで走り去った。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>駐屯地に戻ると、ペトラの父が待っていた。笑っていた。「うちの娘がお世話になっています」「兵長にはいつも感謝しております」「娘からの手紙にいつも兵長のことが書いてありまして」──さらに、まだ結婚は早いと伝えてある、と。</p>
+        <p>嬉しそうに。娘はもう地面の上のどこかで布が解けて、人間の形をしていないかもしれないのに。</p>
+        <p>リヴァイは何も言わなかった。何も。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>彼は人類最強の兵士だった。身長160cm、体重65kg──成人男性としては極端に小柄な体に、一個旅団並みの戦闘力が圧縮されていた。アッカーマン一族の末裔。巨人科学の副産物として生まれた特異体質。</p>
+        <p>十五メートル級の巨人を単独で仕留め、獣の巨人の頸を抉り、誰もが不可能と言った壁外の脅威を、たった一人で排除し続けた。</p>
+        <p>そして、いつも生き残った。</p>
+        <p>調査兵団の仲間が次々と死んでいく中で、彼だけが最後まで立っていた。リヴァイ班の四人。エルヴィン・スミス。ハンジ・ゾエ。獣の巨人の投石で全滅した新兵たち。名前を覚えている者も、覚えていない者も。全員を見送って、彼だけが息をしていた。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>最強だから。<br>最強は、一番最後に死ぬ。一番最後まで、他の全員が死んでいくのを見続ける。それが「人類最強」の意味だった。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>そして彼は、部屋を拭いていた。</p>
+        <p>廊下を拭いていた。窓を磨いていた。刃に付いた血を一滴残らず落としていた。誰もいない夜の兵舎で、床に這いつくばって、布を絞って、拭いていた。</p>
+        <p>なぜ、人類最強の兵士は、拭くことに取り憑かれたのか。なぜ、最も強い者が、最も多くの死を見送らなければならなかったのか。なぜ、彼はすべてを失った後に、紅茶一杯で「十分だ」と言えたのか。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>その問いの先に、天命がある。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== シャドウ・プロファイリング ========== -->
+    <h2 class="chapter-heading fade-in"><span class="chapter-number">Shadow Profiling</span>シャドウ・プロファイリング</h2>
+
+    <section class="fade-in">
+
+      <!-- Meta -->
+      <div class="profiling-block fade-in">
+        <h3>【Meta（変えられない前提条件）】</h3>
+        <ul>
+          <li>アッカーマン一族の末裔。巨人の力を人間のサイズで発現させる特異体質。身長160cm・体重65kg──極めて小柄な体に一個旅団並みの暴力が圧縮されている</li>
+          <li>「主」を認識した瞬間に能力が覚醒し、主への本能的執着が発動するアッカーマン固有の遺伝的プログラム──忠誠が自分の意志なのか血のプログラムなのか、本人にも判別がつかない</li>
+          <li>王都地下街の娼婦の子として出生。母クシェルの病死──腐乱する遺体の傍で餓死を待つ幼少期</li>
+          <li>叔父ケニー・アッカーマンに暴力と生存術を叩き込まれた後、「俺には親にはなれねぇ」と捨てられる</li>
+          <li>調査兵団兵士長。「人類最強の兵士」としてエルヴィン・スミスを「主」とし、その夢に自己の存在を預ける</li>
+        </ul>
+      </div>
+
+      <!-- シャドウ -->
+      <div class="profiling-block fade-in">
+        <h3>【シャドウ（抑圧された本音）】</h3>
+        <ul>
+          <li>覆い方の類型： 「継承の鎧」（ケニーから受け継いだ暴力と生存術）と「ゴールデンシャドウ」（人類最強という光の鎧）の複合型</li>
+          <li>S2「この役割を脱いだら空っぽだ」： 刃を置いた瞬間、仲間の「心臓を捧げた意味」が消滅する──だから降りられない</li>
+          <li>S3「手に入れたのに満たされない」： 頂点で生き残り続けること自体が、死者の山の上の特等席でしかない</li>
+          <li>S5「これは本当に自分の道なのか」： エルヴィンの夢を借りて生きている──自分自身の欲望が完全に停止している</li>
+          <li>核心： 「自分は最も大切な者から順に失い、最後には常に一人で取り残される」──地下街の原初体験から反復される根源的恐怖</li>
+          <li>非合理的信念： 「『最強』として生まれた以上、仲間を見送って一人で生き残るという罰を受け入れ、死者の心臓に意味を与え続ける『記憶の器』でなければならない」</li>
+          <li>深層の欲求： ただ仲間と共に、綺麗に淹れた紅茶を飲みながら、死の匂いがしない何気ない日常を生きたい</li>
+          <li>代償行動： 異常な潔癖症──母の遺体と過ごした不衛生な環境、仲間の血を浴び続けた記憶への無意識の贖罪儀式</li>
+        </ul>
+      </div>
+
+      <!-- 対比：ケニー -->
+      <div class="profiling-block fade-in">
+        <h3>【ケニー・アッカーマンとの対比】</h3>
+        <p style="font-size:0.85rem; color:#c0bbb4; margin-bottom:1.5rem; line-height:1.8;">地下街、アッカーマンの血統、暴力が支配する環境──同じMetaから、正反対の「力の使い道」が出力された。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-bottom:0.8rem;">リヴァイは他者の夢のために力を振るい、ケニーは自らの欠落を埋めるため他者を恐怖で支配した。リヴァイが「酔っていた」のは他者への自己犠牲であり、ケニーが酔っていたのは権力と頂点の景色だった。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2;">ケニーの遺言「みんな何かに酔っ払ってねえと、やってらんなかったんだな」はニヒリズムの極致であると同時に、リヴァイへの問いかけでもあった──「お前もまた酔っているだけではないのか」。ゴールデンシャドウの看破である。</p>
+      </div>
+
+      <!-- 対比：ミカサ -->
+      <div class="profiling-block fade-in">
+        <h3>【ミカサ・アッカーマンとの対比】</h3>
+        <p style="font-size:0.85rem; color:#c0bbb4; margin-bottom:1.5rem; line-height:1.8;">アッカーマンの血統と「主」への本能的執着──同じ遺伝的Metaが、「主の死」との向き合い方で決定的に分岐した。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-bottom:0.8rem;">リヴァイの「主」はエルヴィンのビジョンと判断であり、ミカサの「主」はエレンという個人の生存そのものだった。リヴァイは主の尊厳を守るため、自律的にMetaを解除して主を死の淵に見送った。ミカサは世界を救うため、強制的にMetaから離脱して主を殺害した。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2;">Metaからの離脱の性質が異なる。リヴァイのそれは自律的であり、ミカサのそれは強制的だった──アッカーマンの生物的プログラムに対して、どのように逆らったかが、二人の天命の性質を分ける。</p>
+      </div>
+
+      <!-- 対比：エルヴィン -->
+      <div class="profiling-block fade-in">
+        <h3>【エルヴィン・スミスとの対比】</h3>
+        <p style="font-size:0.85rem; color:#c0bbb4; margin-bottom:1.5rem; line-height:1.8;">「進み続ける」強迫構造と調査兵団の社会的Meta──同じ場所に立ちながら、渇望の対象が決定的に異なった。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-bottom:0.8rem;">リヴァイが渇望したのは仲間の死に「意味」を与えること。エルヴィンが渇望したのは世界の真実を知ること──その深層には「父に会いたい」というただ一つの欲求があった。リヴァイは自分の夢を持つことを恐れ、エルヴィンの夢を借りて生きた。エルヴィンは夢そのものが呪いとなり、自分では降りられなくなった。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2;">帰結──リヴァイはエルヴィンを「夢の呪い」から解放し、自らの天命に到達した。エルヴィンはリヴァイに引導を渡され、夢を手放して天命に到達した。二人の天命は、互いが互いの転換点だった。</p>
+      </div>
+
+      <!-- 対比：エレン -->
+      <div class="profiling-block fade-in">
+        <h3>【エレン・イェーガーとの対比】</h3>
+        <p style="font-size:0.85rem; color:#c0bbb4; margin-bottom:1.5rem; line-height:1.8;">Metaによる「自由意志の剥奪」──同じ構造が、まったく異なる形で二人を縛った。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-bottom:0.8rem;">リヴァイにおける剥奪はアッカーマンの血である──感情が自分のものか血のプログラムか判別不能。エレンにおける剥奪は進撃の巨人の未来記憶である──選択が存在しない円環。リヴァイの「強さの呪い」は強すぎるがゆえに誰にも救われないこと。エレンの「強さの呪い」は強すぎるがゆえに世界を踏み潰す装置になること。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2;">天命の到達もまた対照的だ。リヴァイはすべてを失った後に到達した──車椅子の静寂。エレンはすべてを壊した後に到達した──「なぜかわからないがやりたかった」。残されたものも異なる。リヴァイには紅茶一杯の平穏が残り、エレンにはアルミンとミカサの記憶が残った。</p>
+      </div>
+
+      <!-- 天命への転換点 -->
+      <div class="profiling-block fade-in">
+        <h3>【天命への転換点】</h3>
+        <ul>
+          <li>喪失： シガンシナ区決戦。エルヴィンとアルミン、どちらに巨人化の注射を使うかの究極の二択。アッカーマンの生物的プログラムが「主を生かせ」と絶叫する中、ケニーの遺言がフラッシュバックした</li>
+          <li>反転： 「主を守る」の意味が「命を守る」から「魂を守る」に書き換わった。エルヴィンを「夢という呪い」から解放するため、自らの意志で主を死の淵に見送った──アッカーマン一族の絶対的生物的Metaに初めて逆らった瞬間</li>
+          <li>天命の方向： 「人類最強」という呪いを最後まで引き受け、先に逝った仲間たちの「心臓」が何であったかを見届け、それを証明する「記憶の器」となること。天命は到達（完全な露呈）と判定</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== ブリッジ ========== -->
+    <section class="fade-in">
+      <div class="highlight-block fade-in">
+        <p>──ここまでが、リヴァイの構造の地図だ。しかし、地図は地図でしかない。この構造が本人の口から、本人の声で露呈する瞬間を、見届けてほしい。</p>
+      </div>
+    </section>
+
+    <!-- ========== 以降のセクションは第2弾以降で追加 ========== -->
+
+    <hr>
+
+    <!-- ========== CTA ========== -->
+    <section class="cta-block fade-in">
+      <div class="container">
+    <h2 class="cta-block__title">天命の言語化セッション&trade;</h2>
+    <p class="cta-block__desc">2時間で天命が言語化できる場所。</p>
+    <div class="cta-block__features">
+      <span class="cta-block__feature">Zoom完結</span>
+      <span class="cta-block__feature">事前学習不要</span>
+      <span class="cta-block__feature">対話のみ</span>
+    </div>
+    <a href="../../trial.html" class="btn">無料トライアルに申し込む &rarr;</a>
+      </div>
+    </section>
+
+    <!-- ========== シリーズノート ========== -->
+    <div class="series-note fade-in">
+      <p>本シリーズ「自由意志なき世界の天命論」は、今後も新たな作品・キャラクターを追加していく。<br>
+      漫画のみならず、映画・小説・物語の登場人物を、実存科学の視点で読み解く。</p>
+      <p><a href="./">&larr; 進撃の巨人篇 一覧に戻る</a>&emsp;｜&emsp;<a href="../../specials.html">&larr; 特別シリーズ一覧に戻る</a></p>
+    </div>
+
+    <!-- ========== 著者ブロック ========== -->
+    <div class="author-block fade-in">
+      <p><strong>箭内宏紀（やないひろき）</strong><br>
+      実存科学研究所 代表。「天命の言語化セッション&trade;」を提供。「Metaがある限り自由意志は存在しない」（M &rArr; &not;F）を第一公理とする実存科学を提唱。著書に『Metaがある限り──自由意志・自分・他人は存在しない』『自由意志なき世界の歩き方』ほか。<br>
+      <a href="../../index.html">公式サイトはこちら</a>。</p>
+    </div>
+
+    <!-- ========== 出典表記 ========== -->
+    <p class="source-note fade-in">&ast; &nbsp;本稿で扱う作品：諫山創『進撃の巨人』（講談社『別冊少年マガジン』、2009年〜2021年、全34巻）。アニメーション制作：WIT STUDIO（Season 1〜3）、MAPPA（The Final Season）（2013年〜2023年）。作品の著作権は原著者・制作会社に帰属します。</p>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+  <div class="container--wide">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <p class="footer-col__title">The Meta</p>
+        <a href="../../about-existential-science.html">実存科学とは</a>
+        <a href="../../epistemology.html">認識論</a>
+        <a href="../../semantics.html">意味論</a>
+        <a href="../../society.html">社会論</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Contents</p>
+        <a href="../../specials.html">特別シリーズ</a>
+        <a href="../../archives.html">記事一覧</a>
+        <a href="../../video-list.html">動画一覧</a>
+        <a href="../../glossary.html">用語集</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Session</p>
+        <a href="../../session.html">天命の言語化セッション™</a>
+        <a href="../../session-flow.html">セッションの流れ</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Institute</p>
+        <a href="../../founder.html">創始者</a>
+        <a href="../../contact.html">お問い合わせ</a>
+        <a href="../../legal/legal-tokushoho.html">特定商取引法</a>
+        <a href="../../legal/legal-privacy-policy.html">プライバシーポリシー</a>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; 実存科学研究所 — Existential Science Institute</p>
+  </div>
+</footer>
+
+  <script src="../../js/main.min.js?v=9"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "リヴァイ・アッカーマンのMeta ── 自由意志なき世界の天命論",
+  "description": "漫画『進撃の巨人』のリヴァイ・アッカーマンを、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。人類最強の兵士はなぜ拭くことに取り憑かれたのか。すべてを失った後に紅茶一杯で「十分だ」と言えた男の構造。",
+  "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-shingeki/levi.html",
+  "author": {
+    "@type": "Person",
+    "name": "箭内宏紀",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/founder.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  },
+  "inLanguage": "ja",
+  "isPartOf": {
+    "@type": "CollectionPage",
+    "name": "自由意志なき世界の天命論 ── 進撃の巨人篇",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-shingeki/"
+  }
+}
+</script>
+  <!-- Search Modal -->
+  <div class="search-overlay">
+    <div class="search-modal"><button class="search-close" aria-label="閉じる">&times;</button>
+      <div class="search-input-wrap">
+        <span class="search-input-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+        <input type="text" class="search-input" placeholder="キーワードで検索..." autocomplete="off">
+      </div>
+      <div class="search-results"></div>
+      <div class="search-hint"><span class="search-hint__desktop">ESC to close · ⌘K to toggle</span><span class="search-hint__mobile">背景タップまたは ✕ で閉じる</span></div>
+    </div>
+  </div>
+</body>
+</html>
