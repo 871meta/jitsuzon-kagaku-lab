@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-evangelion/gendo.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>碇ゲンドウのMeta ── 自由意志なき世界の天命論 | 実存科学研究所</title>
+  <meta name="description" content="アニメ『新世紀エヴァンゲリオン』の碇ゲンドウを、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。切り捨てたものの中に天命がある──空洞から走り続けた男の構造。">
+  <meta property="og:title" content="碇ゲンドウのMeta ── 自由意志なき世界の天命論 | 実存科学研究所">
+  <meta property="og:description" content="アニメ『新世紀エヴァンゲリオン』の碇ゲンドウを、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。切り捨てたものの中に天命がある──空洞から走り続けた男の構造。">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="実存科学研究所">
+  <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+  <meta property="og:url" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-evangelion/gendo.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"></noscript>
+  <link rel="stylesheet" href="../../css/style.min.css?v=27">
+
+<style>
+/* =============================================
+   視認性・読みやすさ強化CSS
+   ============================================= */
+
+/* === h1 Gold Shimmer === */
+.hero-title--shimmer {
+  background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gold-shimmer 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 16px rgba(192,168,120,0.3)) drop-shadow(0 0 40px rgba(192,168,120,0.12));
+}
+@keyframes gold-shimmer {
+  0%, 100% { background-position: 100% 50%; }
+  50% { background-position: 0% 50%; }
+}
+
+/* === 1. 章見出し — 中央配置＋装飾 === */
+h2.chapter-heading {
+  font-size: var(--fs-section);
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  color: var(--color-text-primary);
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  position: relative;
+  padding-top: 2rem;
+}
+h2.chapter-heading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 1px;
+  background: var(--color-gold);
+}
+h2.chapter-heading::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(192,168,120,0.5), transparent);
+  margin: 1.2rem auto 0;
+}
+.chapter-number {
+  display: block;
+  font-family: var(--font-serif-en);
+  font-size: var(--fs-caption);
+  font-weight: 400;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 0.6rem;
+}
+
+/* === 2. 区切り線 — 装飾付き === */
+hr {
+  border: none;
+  height: auto;
+  background: none;
+  margin: 4.5rem 0;
+  text-align: center;
+  overflow: visible;
+}
+hr::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(192,168,120,0.08) 15%, rgba(192,168,120,0.2) 50%, rgba(192,168,120,0.08) 85%, transparent 100%);
+}
+hr::after {
+  content: "\25C6";
+  display: block;
+  font-size: 0.5rem;
+  color: rgba(192,168,120,0.3);
+  margin-top: -0.35em;
+  letter-spacing: 1em;
+  line-height: 1;
+}
+
+/* === 3. セッション対話 — 読みやすさ向上 === */
+.session-dialogue {
+  max-width: 680px;
+  margin: 2.5rem auto;
+  padding: 2.5rem 2rem;
+  background: rgba(10, 8, 18, 0.35);
+  border: 1px solid rgba(192,168,120,0.06);
+  border-radius: 2px;
+  position: relative;
+}
+.session-dialogue::before {
+  content: "SESSION";
+  position: absolute;
+  top: -0.6em;
+  left: 2rem;
+  font-family: var(--font-serif-en);
+  font-size: var(--fs-micro);
+  letter-spacing: 0.3em;
+  color: rgba(192,168,120,0.4);
+  background: var(--color-bg-deep);
+  padding: 0 0.8rem;
+}
+.session-dialogue p {
+  margin-bottom: 1.1em;
+  line-height: 2.2;
+}
+.session-dialogue .speaker-yanai { color: var(--color-gold); font-weight: 600; font-size: var(--fs-body); }
+.session-dialogue .speaker-gendo { color: #b8a0d8; font-weight: 600; font-size: var(--fs-body); }
+
+/* 箭内の発言：金色の左ボーダー */
+.session-dialogue .line-yanai {
+  border-left: 2px solid rgba(192,168,120,0.15);
+  padding-left: 1.2rem;
+}
+/* キャラの発言：少しインデント */
+.session-dialogue .line-character {
+  margin-left: 1.4rem;
+}
+/* 沈黙マーカー：中央揃え＋装飾線 */
+.session-dialogue .silence {
+  color: rgba(235,232,225,0.3);
+  font-style: italic;
+  text-align: center;
+  margin: 2em 0;
+  font-size: var(--fs-small);
+  letter-spacing: 0.15em;
+}
+.session-dialogue .silence::before,
+.session-dialogue .silence::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: rgba(192,168,120,0.15);
+  vertical-align: middle;
+  margin: 0 1em;
+}
+/* 10発言ごとの視覚リズム */
+.session-dialogue p:nth-child(10n) {
+  margin-bottom: 2em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid rgba(192,168,120,0.06);
+}
+
+/* === 4. text-panel の単調さ解消 === */
+section > .text-panel:nth-of-type(even) {
+  background: rgba(8, 6, 16, 0.45);
+  border-color: transparent;
+}
+section > .text-panel:nth-of-type(even)::before {
+  display: none;
+}
+
+/* === 5. highlight-block の存在感微増 === */
+.highlight-block {
+  background: rgba(192,168,120,0.06);
+  border-left: 2px solid;
+  border-image: linear-gradient(180deg, var(--color-gold) 0%, rgba(192,168,120,0.15) 100%) 1;
+  padding: 2rem 2rem 2rem 2.2rem;
+  margin: 2.5rem 0;
+}
+.highlight-block p {
+  font-size: var(--fs-lead);
+  font-weight: 500;
+  line-height: 2.2;
+  color: var(--color-text-primary);
+}
+
+/* === 6. セクション見出し（h3） === */
+h3.section-heading {
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  color: var(--color-text-body);
+  letter-spacing: 0.08em;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1.2rem;
+  border-left: 2px solid rgba(192,168,120,0.4);
+  line-height: 1.6;
+}
+
+/* === Profiling Block === */
+.profiling-block {
+  background: rgba(15,12,25,0.5);
+  border: 1px solid rgba(192,168,120,0.1);
+  padding: 2.5rem 2rem;
+  margin: 2rem 0;
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+.profiling-block::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(192,168,120,0.4), transparent);
+}
+.profiling-block h3 {
+  font-size: var(--fs-body);
+  color: var(--color-gold);
+  letter-spacing: 0.15em;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(192,168,120,0.1);
+}
+.profiling-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+.profiling-block ul li {
+  margin-bottom: 1rem;
+  color: var(--color-text-reading);
+  font-size: var(--fs-body);
+  line-height: 1.9;
+  padding-left: 1.6em;
+  position: relative;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(192,168,120,0.04);
+}
+.profiling-block ul li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.profiling-block ul li::before {
+  content: "\2500\2500";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgba(192,168,120,0.35);
+  font-size: 0.75em;
+}
+
+/* === Comparison Grid === */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  border: 1px solid rgba(192,168,120,0.12);
+  background: rgba(15, 12, 25, 0.45);
+}
+.comparison-grid__head {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-gold);
+  letter-spacing: 0.08em;
+  padding: 0.6rem 0.8rem;
+  text-align: center;
+  background: rgba(192,168,120,0.06);
+  border-bottom: 1px solid rgba(192,168,120,0.2);
+  border-right: 1px solid rgba(192,168,120,0.1);
+}
+.comparison-grid__head:last-child {
+  border-right: none;
+}
+.comparison-grid__cell {
+  padding: 0.55rem 0.8rem;
+  font-size: var(--fs-small);
+  line-height: 1.7;
+  color: var(--color-text-reading);
+  border-bottom: 1px solid rgba(192,168,120,0.06);
+  border-right: 1px solid rgba(192,168,120,0.1);
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+.comparison-grid__cell:nth-child(4n) {
+  border-right: none;
+}
+.comparison-grid__cell:nth-last-child(-n+4) {
+  border-bottom: none;
+}
+.comparison-table .comparison-note {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  font-size: var(--fs-micro);
+  color: rgba(235,232,225,0.55);
+  line-height: 1.8;
+  background: rgba(192,168,120,0.03);
+  border-left: 2px solid rgba(192,168,120,0.15);
+}
+
+/* === Author Block === */
+.author-block {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(192,168,120,0.15);
+}
+.author-block p { font-size: var(--fs-body); color: var(--color-text-reading); line-height: 2; }
+.author-block strong { color: var(--color-text-body); }
+
+/* === Source Note === */
+.source-note {
+  margin-top: 2rem;
+  font-size: var(--fs-small);
+  color: rgba(235,232,225,0.35);
+}
+
+/* === Series Note === */
+.series-note {
+  margin-top: 2rem;
+  padding: 1.5rem 2rem;
+  background: rgba(192,168,120,0.04);
+  border: 1px solid rgba(192,168,120,0.1);
+  font-size: var(--fs-body);
+  color: var(--color-text-reading);
+  line-height: 2;
+}
+
+/* === 7. モバイル対応 === */
+@media (max-width: 768px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+  .comparison-grid__head {
+    border-right: none !important;
+  }
+  .comparison-grid__cell {
+    border-right: none;
+  }
+  .comparison-grid__cell:nth-child(odd) {
+    padding-top: 0.8rem;
+    color: var(--color-gold);
+    font-weight: 600;
+    font-size: var(--fs-micro);
+  }
+  .comparison-grid__cell:nth-child(even) {
+    padding-top: 0.2rem;
+    padding-bottom: 0.8rem;
+  }
+}
+@media (max-width: 600px) {
+  h2.chapter-heading {
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    padding-top: 1.5rem;
+  }
+  .chapter-number {
+    font-size: var(--fs-micro);
+    letter-spacing: 0.25em;
+    margin-bottom: 0.4rem;
+  }
+  h3.section-heading {
+    font-size: var(--fs-lead);
+    margin-top: 2rem;
+    padding-left: 1rem;
+  }
+  hr { margin: 3rem 0; }
+  .session-dialogue {
+    padding: 1.5rem 1.2rem;
+    margin: 2rem auto;
+  }
+  .session-dialogue .line-yanai { padding-left: 0.8rem; }
+  .session-dialogue .line-character { margin-left: 0.8rem; }
+  .profiling-block { padding: 1.5rem 1.2rem; }
+  .highlight-block { padding: 1.5rem 1.2rem 1.5rem 1.4rem; }
+  .text-panel { padding: 2rem 1.5rem; }
+}
+@media (max-width: 480px) {
+  .text-panel p br,
+  .pull-quote p br,
+  .highlight-block p br,
+  .def-box p br,
+  .session-dialogue p br { display: none; }
+  h2.chapter-heading { font-size: var(--fs-h3); }
+  .session-dialogue p:nth-child(10n) {
+    margin-bottom: 1.5em;
+    padding-bottom: 1em;
+  }
+}
+</style>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="../../index.html" class="site-logo">実存科学研究所</a>
+      <button class="search-toggle" aria-label="検索"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+            <nav class="global-nav">
+        <a href="../../index.html">Top</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">The Meta</button>
+          <div class="nav-dropdown__menu">
+            <a href="../../beginner.html">はじめての方へ</a>
+            <a href="../../lp.html">ダークサイド診断</a>
+            <a href="../../omoidasu/">身体的知性診断</a>
+          </div>
+        </div>
+        <a href="../../session.html">Session</a>
+        <a href="../../founder.html">Founder</a>
+        <a href="../../specials.html">Specials</a>
+      </nav>
+    </div>
+  </header>
+  <div class="reading-progress"></div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="パンくずリスト">
+        <ol class="breadcrumb__list">
+          <li class="breadcrumb__item"><a href="../../index.html" class="breadcrumb__link">TOP</a></li>
+          <li class="breadcrumb__item"><a href="../../specials.html" class="breadcrumb__link">Specials</a></li>
+          <li class="breadcrumb__item"><a href="./" class="breadcrumb__link">エヴァンゲリオン篇</a></li>
+          <li class="breadcrumb__item"><span class="breadcrumb__current">碇ゲンドウのMeta</span></li>
+        </ol>
+      </nav>
+      <p class="page-hero__sub">Evangelion &times; Existential Science</p>
+      <h1 class="hero-title--shimmer">碇ゲンドウのMeta<br>── 自由意志なき世界の天命論</h1>
+      <p class="page-hero__lead">箭内宏紀｜実存科学研究所</p>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <!-- ========== ネタバレ注意 ========== -->
+    <div class="text-panel fade-in">
+      <p style="font-size:0.85rem; color:rgba(235,232,225,0.5); text-align:center;">※本稿は作品全体のネタバレを含みます。</p>
+    </div>
+
+    <!-- ========== 導入 ========== -->
+    <section class="fade-in">
+      <div class="text-panel fade-in">
+        <p>彼は、超高温のエントリープラグのハッチに素手を押しつけた。</p>
+        <p>金属が皮膚に食い込み、肉が焼ける音がした。脂肪の弾ける甘い腐臭が鼻腔を満たし、手のひらの神経がすべて同時に叫びを上げた。激痛で視界が白く飛ぶ。それでも彼は手を離さなかった。</p>
+        <p>指の腱が軋む音を聞きながら、残った力のすべてでハッチをこじ開け、意識を失いかけている少女を引きずり出した。綾波レイ。ユイの面影を宿す、彼にとってのユイへの唯一の回路。</p>
+        <p>その手は二度と元には戻らなかった。焼け爛れた掌に白い手袋を被せ、彼はそれ以降、素手で何かに触れることをやめた。</p>
+        <p>──彼の実の息子が使徒に精神を侵食され、エントリープラグの中で絶叫していたとき、彼はモニター越しにそれを見ていた。立ち上がらなかった。指一本動かさなかった。</p>
+        <p>綾波レイのためには肉を焼いた。碇シンジのためには、椅子から立ち上がることすらしなかった。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>彼は、ユイが消えた実験室で三十分間、立ち尽くしていた。LCLの匂いが充満する空間で、つい先ほどまでユイが立っていた場所を見つめたまま、一言も発さなかった。</p>
+        <p>泣かなかった。叫ばなかった。膝から崩れ落ちることすらしなかった。ただ、立っていた。</p>
+        <p>そして三十分後、背筋を伸ばし、研究室を出て、最初の命令を下した。「計画を続行する」。</p>
+        <p>その日から十四年間、碇ゲンドウは一度も止まらなかった。</p>
+        <p>赤木ナオコの知性を利用し、その娘リツコのベッドに入り、冬月の未練を共犯の糸で縛り、ゼーレの老人たちを出し抜き、自らの右手に胎児状のアダムを埋め込んだ。</p>
+        <p>世界中の諜報機関が束になっても追えないほどの暗謀を重ね、数十億の人間の運命を私的な喪失の穴埋めに従属させた。</p>
+        <p>──すべては、もう一度ユイに会うためだ。</p>
+        <p>そう言い切れれば、まだ救いがある。だがセッション対話の果てに露呈した構造は、それよりもっと深い場所にあった。</p>
+        <p>ユイに会いたかったのではない。ユイのいない自分──誰にも錨を下ろしてもらえなかった、空洞だけで構成された六分儀ゲンドウ──に戻ることが、死ぬより恐ろしかったのだ。</p>
+        <p>彼は十四年間、恐怖から走っていた。走るために世界を巻き込んだ。走り続けるために息子の心を砕き続けた。</p>
+        <p>そして最後、完全な道具だったはずの綾波レイが「私はあなたの人形じゃない」と言い、彼を置いて去った。走る先が消えた。鎧が消えた。十四年間走り続けた男の足が、初めて止まった。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>その問いの先に、天命がある。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== シャドウ・プロファイリング ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Shadow Profiling</span>シャドウ・プロファイリング</h2>
+
+      <div class="profiling-block fade-in">
+        <h3>【Meta（変えられない前提条件）】</h3>
+        <ul>
+          <li>旧姓「六分儀」──天体との距離を測る航海計器の名を持つ。他者との距離をただ計測し、決して近づくことのない漂流者として生まれた</li>
+          <li>ユイとの出会いで「碇（アンカー）」へと改姓。唯一の係留点を得たが、それはユイ以外に錨を下ろせない構造を刻んだ</li>
+          <li>2004年、初号機接触実験でユイが消失。自己を再定義した唯一の存在を失い、実存的崩壊に直面</li>
+          <li>特務機関NERVの最高司令官。絶対的な権力を持つが、それは人類補完計画（ユイとの再会）のための道具にすぎない</li>
+          <li>右手にアダムを移植。自らの肉体を「神に到達するための物理的装置」に作り替えた異形の生物基盤</li>
+        </ul>
+      </div>
+
+      <div class="profiling-block fade-in">
+        <h3>【シャドウ（抑圧された本音）】</h3>
+        <ul>
+          <li>核心：「自分はユイがいなければ、誰にも愛される資格のない空っぽの『六分儀ゲンドウ』のままだ」──底知れぬ実存的無価値感</li>
+          <li>深層の欲求：自他の境界が存在しない原初の単一状態への退行。喪失も拒絶も存在しない場所への帰還</li>
+          <li>表層の代償行動：人類補完計画の推進（私的な恐怖を人類進化の大義にすり替える）、権力の道具的掌握、レイへの執着（ユイの代替物への安全な感情転移）、リツコとの性的関係（愛情の空洞を物理的支配で代償）</li>
+          <li>止まれない理由：止まった瞬間、ユイを失った痛みと「六分儀ゲンドウの空洞」に呑まれる。走り続ける以外に自分を保つ方法がない</li>
+        </ul>
+      </div>
+
+      <!-- 対比キャラクター比較表 -->
+      <h3 class="section-heading">対比キャラクターとの比較表</h3>
+      <div class="comparison-table fade-in">
+        <div class="comparison-grid">
+          <div class="comparison-grid__head">比較軸</div>
+          <div class="comparison-grid__head">碇ゲンドウ</div>
+          <div class="comparison-grid__head">碇シンジ</div>
+          <div class="comparison-grid__head">冬月コウゾウ</div>
+          <div class="comparison-grid__cell">ユイの喪失への反応</div>
+          <div class="comparison-grid__cell">能動的執着──世界を作り替えてでも取り戻す</div>
+          <div class="comparison-grid__cell">受動的逃避──他者を恐れながらも関わり続ける</div>
+          <div class="comparison-grid__cell">受容──記憶として自己の中に留める</div>
+          <div class="comparison-grid__cell">ATフィールドへの態度</div>
+          <div class="comparison-grid__cell">完全消滅を望む（補完計画）</div>
+          <div class="comparison-grid__cell">最終的に境界の存在を受け入れる</div>
+          <div class="comparison-grid__cell">境界を認めつつ傍らに留まる</div>
+          <div class="comparison-grid__cell">他者との関係</div>
+          <div class="comparison-grid__cell">全員を道具化する</div>
+          <div class="comparison-grid__cell">怯えながらも関係を求める</div>
+          <div class="comparison-grid__cell">見届ける者として関わる</div>
+          <div class="comparison-grid__cell">帰結</div>
+          <div class="comparison-grid__cell">拒絶されて死ぬ</div>
+          <div class="comparison-grid__cell">他者の存在を受け入れる</div>
+          <div class="comparison-grid__cell">最後まで傍らに立つ</div>
+        </div>
+      </div>
+
+      <div class="profiling-block fade-in">
+        <h3>【天命への転換点】</h3>
+        <ul>
+          <li>喪失：ユイの消失──自己の全存在を規定する特異点</li>
+          <li>反転：レイの拒絶──すべてをコントロールしようとした男の計画が、「他者」の自己決定によって粉砕される</li>
+          <li>天命の萌芽：死の瞬間の「すまなかったな、シンジ」──あらゆる鎧と論理を剥ぎ取られた、裸の父親としての受容</li>
+        </ul>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>──ここまでが、碇ゲンドウの構造の地図だ。しかし、地図は地図でしかない。この構造が本人の口から、本人の声で露呈する瞬間を、見届けてほしい。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== セッション対話 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Session</span>天命の言語化セッション&trade;</h2>
+
+      <div class="session-dialogue fade-in">
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>碇さん、セッションに来てくださってありがとうございます。あなたはあなたに何をプレゼントしてあげたいですか？</p>
+
+        <p class="silence">（沈黙）</p>
+
+        <p class="silence">（碇ゲンドウは動かない。両手を口元で深く組み、色つきの眼鏡の奥から箭内を見据えている──正確には、値踏みしている。この男は十四年間、目の前に座る人間を三秒で査定してきた。利用価値。危険度。操作可能性。その三軸で人間を分類し、分類に応じた対応を瞬時に選択する──それが碇ゲンドウという機械の基本動作だ。冬月は「共犯者」。リツコは「技術資源」。シンジは「部品」。三秒で分類し、分類が済めば──二度と見直さない）</p>
+
+        <p class="silence">（箭内を査定している。ゼーレの工作員ではない。諜報機関の人間でもない。医師でもカウンセラーでもない。──何者かわからない。碇ゲンドウの分類体系に該当しない人間が目の前にいる。それ自体が、微かな不快感を生んでいる）</p>
+
+        <p class="silence">（十秒。二十秒。三十秒。沈黙が続く。碇ゲンドウにとって沈黙は呼吸と同じだ。沈黙は武器であり、城壁であり、査定の時間でもある。通常、三十秒の沈黙に耐えられる人間はいない。ミサトは苛立ち、リツコは怯え、シンジは俯く。人間は沈黙に耐えられない。碇ゲンドウはそれを知り尽くしている。だから黙る。相手が先に口を開いた瞬間、力関係が確定する）</p>
+
+        <p class="silence">（四十秒。五十秒。一分）</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+
+        <p class="silence">（箭内は動かない。表情を変えない。居心地の悪さを見せない。沈黙を返している──だがそれは「耐えている」のではない。箭内にとって沈黙は攻撃でも防御でもなく、ただの──空間だ。碇ゲンドウの沈黙が部屋を支配しようとしているのに対し、箭内の沈黙はそれを受け流している。支配と受容がぶつかり、部屋の空気が軋む）</p>
+
+        <p class="silence">（二分。三分。碇ゲンドウの眉がわずかに動く。──この男は折れない。沈黙に耐えているのではなく、沈黙の中に住んでいる。碇ゲンドウはそれを感じ取っている。NERV総司令官として十四年間、あらゆる人間の弱点を瞬時に見抜いてきた男の観察眼が──箭内の中に弱点を探し──見つけられないでいる）</p>
+
+        <p class="silence">（五分。碇ゲンドウの中で、ある判断が下される。この人間は沈黙では動かない。権威でも動かない。脅しても動かないだろう。──では、この時間はどうすれば終わるのか。答えは一つしかない。何かを話すしかない。この人間が求めているもの──何であれ──を渡さない限り、この時間は永遠に終わらない。碇ゲンドウは計算高い男だ。無意味に体力を消耗することを嫌う。最小のコストで状況を打開する──それが彼のやり方だ）</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;無意味な問いだ。</p>
+
+        <p class="silence">（碇ゲンドウが先に口を開いた。それ自体が──異例だ。だが碇ゲンドウはそれを「敗北」とは認識していない。「最小コストの対処」として処理している。まだ、この男のプライドは完全に機能している）</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>私が求めるものは、すでに失われている。あらゆるものを切り捨ててきた。私に与えられるべきものがあるとすれば&hellip;&hellip;約束の時だけだ。それ以外のすべては、取るに足らん些事だ。</p>
+
+        <p class="silence">（「取るに足らん些事だ」──この一言で、碇ゲンドウは箭内の問い全体を「些事」として格下げしようとしている。答えながら答えの価値を否定する。碇ゲンドウの言語戦略の典型だ）</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、「約束の時」なんですか？</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;。</p>
+
+        <p class="silence">（沈黙。碇ゲンドウは答えない。箭内は「約束の時とは何ですか」と聞くものだと想定していた。それなら「ユイに会うためだ」で終わる。だが「なぜ」は違う。「なぜ」は構造を掘ろうとしている。──掘らせたくない）</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+
+        <p class="silence">（沈黙が続く。二度目の沈黙。碇ゲンドウは箭内を再査定している。この「なぜ」の投げ方──威圧でも懇願でもなく、ただ問いだけを置く──この手法は碇ゲンドウの経験の中にない。ゼーレの老人たちは教条で迫った。ミサトは感情で迫った。リツコは論理で迫った。この男は──何も使わない。ただ問いを置く。碇ゲンドウの分類体系が、三度目の不一致を検出している）</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;ユイに、もう一度会うためだ。それ以外にあり得ん。</p>
+
+        <p class="silence">（五分間の沈黙を経た回答だ。即答に見えるが、その五分間で碇ゲンドウが行ったのは──「最小限のコストで状況を打開するための回答」の選定だ。「ユイに会うため」。真実であると同時に、これ以上掘られないための蓋でもある）</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、ユイさんに会いたいんですか？</p>
+
+        <p class="silence">（碇ゲンドウの顎が、かすかに引き締まる。蓋が効かなかった。通常、「ユイに会うため」で十分だ。誰もがそこで頷く。同情する。──この男はしない。ただ「なぜ」と返してくる）</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;貴様に説明する必要はない。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、「説明する必要がない」んですか？</p>
+
+        <p class="silence">（碇ゲンドウの眉が動く。拒絶を拒絶として受け取らず、拒絶そのものを問いに変換してきた。この手法は碇ゲンドウの経験の中にない。ゼーレの老人たちは教条で迫った。ミサトは感情で迫った。リツコは論理で迫った。この男は──拒絶を素材にして、次の問いを作る）</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;くだらん。心理学の真似事か。人の心などという曖昧で不確かなものに価値はない。重要なのは結果だ。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;私に指図する気か。分を弁えろ。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>お前は何者だ。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+
+        <p class="silence">（碇ゲンドウは四段階の防御を連射した。知性化→権威→査問。箭内はすべてを沈黙で受け流した。碇ゲンドウは──十四年間で初めて──自分の武器庫が空になる感覚を味わっている。沈黙は効かない。権威は効かない。知性化は効かない。──何も効かない）</p>
+
+        <p class="silence">（長い沈黙の後、碇ゲンドウの組んだ手の力が──ようやく──わずかに緩む。これは降伏ではない。碇ゲンドウは降伏しない。だが──戦略の転換が起きている。「この人間には通常の手段が通じない。最小限の情報を開示し、出方を見る」。碇ゲンドウはまだ──会話を「査定」として扱っている）</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>個人の感情など、人類の進化の前では誤差にすぎん。死からの解放。絶望からの救済。それが計画だった。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、個人の感情が「誤差」なんですか？</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>感情は非合理だからだ。感情に従えば、人間は損耗する。傷つき&hellip;&hellip;取り返しのつかない過ちを犯す。感情を超越した構造──それが補完だ。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、感情に従うと「取り返しがつかない」んですか？</p>
+
+        <p class="silence">（碇ゲンドウの指が震える。「取り返しのつかない」──彼自身が選んだ言葉だ。その底に具体的な記憶が沈んでいる。箭内はそれを指摘しない。ただ返しただけだ。──だが返された瞬間、碇ゲンドウは自分の言葉の中に記憶が漏れていることに気づく）</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;それは──</p>
+
+        <p class="silence">（立ち上がろうとする。足が動かない。行く場所がない。ゆっくりと再び腰を下ろす。両手は──もう組まれていない）</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;取り返しがつかなかった。実際に。ユイがいなくなった日に。壊れた。私が。修復不能なまでに。</p>
+
+        <p class="silence">（──碇ゲンドウは、自分が今「壊れた」と言ったことに気づいている。計画の論理ではない言葉が漏れた。「損耗」でも「劣化」でもなく、「壊れた」。個人的な記憶が──制御を外れて──口から出た。NERVの司令室でなら、この失言は致命的だ。弱みを見せた瞬間、ゼーレは駒を進める。冬月は沈黙するが、内心で距離を測り直す。リツコは不安の目で見る。──弱みを見せた人間は、利用される。碇ゲンドウは十四年間、その原則の上に立ってきた）</p>
+
+        <p class="silence">（だが──箭内は何もしなかった。「壊れた」という言葉を聞いて、攻撃しなかった。同情もしなかった。利用しなかった。分析してみせることもしなかった。ただ──次の問いを置いた。碇ゲンドウが漏らした弱みに対して、この男は──何もしなかった。何もしないまま、ただ問いを返しただけだ）</p>
+
+        <p class="silence">（碇ゲンドウの中で、ある計算が走っている。この男は弱みを利用しない。危険ではない。──だがそれは「信頼」ではない。碇ゲンドウは誰も信頼しない。ユイ以外の人間を信頼したことは一度もない。これは信頼ではなく──安全性の確認だ。この人間に情報を渡しても、それが武器に変わることはない。その査定結果が、今、出た）</p>
+
+        <p class="silence">（しかし──査定結果が出たからといって、碇ゲンドウが自ら口を開くわけではない。安全だとわかっても、話す理由がない。NERVの司令室で安全な人間は冬月だけだったが、冬月にすら碇ゲンドウは自分の内面を語らなかった。安全であることと、話す必要があることは、別の問題だ）</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、「壊れた」んですか？</p>
+
+        <p class="silence">（また「なぜ」だ。碇ゲンドウは──ここで初めて──ある種の諦めに近いものを感じている。諦めとは弱さではない。碇ゲンドウにとっては──計算の帰結だ。この問いに答えなければ、次の問いが来る。その問いにも答えなければ、また次が来る。沈黙しても終わらない。防御しても終わらない。逃げても終わらない。──この時間を終わらせる方法は、一つしかない。話すことだ。碇ゲンドウは効率の男だ。出口が一つしかないなら、その出口を使う。──だが同時に、彼の中の別の部分が気づいている。自分が「話す理由」を「効率」で正当化していることに。本当は──漏れた言葉が、もう一つ漏れたがっている。「壊れた」と言った瞬間に、堰が──わずかに──緩んだ）</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;ユイがいなければ、私は&hellip;&hellip;。</p>
+
+        <p class="silence">（碇ゲンドウが言い淀む。NERVの全職員が十四年間、一度も見たことのない光景だ。「出撃」「問題ない」「計画通りだ」──常に即答してきた男が、喉に詰まった骨のように言葉を吐き出せないでいる。──だが彼は吐き出そうとしている。効率のためか、堰が緩んだからか、自分でも区別がつかない。区別がつかないまま──口が動く）</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>六分儀。&hellip;&hellip;それが私の旧姓だ。天体との距離を測る計器だ。距離を測るだけで、どこにも辿り着かない。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「辿り着かない」？</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;私は誰とも関われなかった。関わろうとしなかったのではない。&hellip;&hellip;関われなかった。&hellip;&hellip;ユイだけが──あの女だけが──計器を壊してくれた。六分儀を碇に変えてくれた。碇とは、船を世界に繋ぎ止める重しだ。あの女が、私の錨だった。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、ユイさんだけだったんですか？</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;わからん。なぜあの女が、私のような人間に手を差し伸べたのか。暴力にしか親しみを持てない人間だった。共感の回路が最初から欠落している。そんな男に──あの女は&hellip;&hellip;微笑んだ。理由もなく。条件もなく。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、その微笑みを「受け取れた」んですか？</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>受け取ったのではない。&hellip;&hellip;撃ち抜かれたのだ。こちらの防御を一切無視して、直接、胸を。</p>
+
+        <p class="silence">（白い手袋の手が無意識に胸元に触れる）</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;だからあの女が消えた日に壊れた。碇が引き抜かれた。六分儀に戻った。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;話したことのないことをお前に話す。</p>
+
+        <p class="silence">（ここで碇ゲンドウの態度が──もう一段──変わる。変わったことに碇ゲンドウ自身が気づいていない。先ほどの「安全性の確認」とは質が違う。あれは「この人間に情報を渡しても武器にされない」という消極的な判定だった。今起きているのは──「この人間に話す」という、碇ゲンドウ自身の能動的な選択だ。「お前に話す」。この言葉が出たこと自体が──箭内を「話す相手」として無意識に分類し直していることを意味している。冬月を除けば──これは前例のないことだ）</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>あの実験室で三十分、立っていた。ユイが消えた後だ。LCLの匂いが充満していた。血と鉄を薄めたような匂い。それがユイの最後の痕跡だった。匂いが消えたら何もなくなる。だから動けなかった。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;泣けなかった。泣く回路がなかった。六分儀ゲンドウには──泣くための神経が接続されていなかった。ユイが接続してくれたのかもしれない。だがユイが消えた瞬間に、その回路も一緒に消えた。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>三十分後に計画の続行を命じた。それ以外にできることがなかった。止まったら──空洞に呑まれる。走るしかなかった。十四年間。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、「走るしかなかった」んですか？</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>止まれなかったからだ。止まったら六分儀に戻る。あの空洞に──。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、「空洞」が怖いんですか？</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;あの空洞には何もない。才能があると言われた。頭脳があると。だが中身は空だった。誰にも愛される資格のない──空っぽの場所だ。ユイだけがその空洞を埋めた。いなくなれば──またあの場所に戻る。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、「愛される資格がない」んですか？</p>
+
+        <p class="silence">（碇ゲンドウの呼吸が止まる。再開する）</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;共感の回路が接続されていない人間を──誰が愛する。ユイは例外だった。例外は、二度は起きない。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、「二度は起きない」んですか？</p>
+
+        <p class="silence">（長い沈黙。碇ゲンドウの論理が──行き詰まる。根拠がない。恐怖が事実の皮を被っているだけだ。碇ゲンドウは今、それに気づきかけている）</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;それは──</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;シンジは──</p>
+
+        <p class="silence">（文脈にない名前が出る。「例外が二度起きない」の下に「シンジ」が埋まっていた。ユイが例外なら、ユイの子供は──もう一つの例外であり得た。その可能性を碇ゲンドウ自身が切断した）</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;あの子は関係ない。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、「関係ない」んですか？</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>シンジを見ると&hellip;&hellip;ユイに似ていた。目が。声が。笑い方が。あの子を見るたびに、切断したはずの回路が&hellip;&hellip;鳴る。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「鳴る」？</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>痛みだ。あの実験室の三十分が再生される。何度も。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、「終わらない」んですか？</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>あの子がそこにいるからだ。&hellip;&hellip;だから遠ざけた。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、「遠ざけた」んですか？</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>シンジに近づけば──見えない絆が──</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、「見えない絆」が怖いんですか？</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>怖いのではない。不要なのだ。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、「不要」なんですか？</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;絆は&hellip;&hellip;切れるからだ。</p>
+
+        <p class="silence">（碇ゲンドウ自身が驚いている。「不要」の理由が「計画のため」ではなかった。口実の下にあった原始的な恐怖が剥き出しになった）</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>ユイとの絆は切れた。目の前で。何の予告もなく。&hellip;&hellip;もう一度あれを経験するくらいなら──最初から繋がらないほうがいい。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;だからシンジを遠ざけた。あの子のためではない。私のためだ。</p>
+
+        <p class="silence">（白い手袋を外し始める。火傷の痕が露わになる）</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;だが遠ざけておきながら──呼び戻した。「乗るなら早くしろ、でなければ帰れ」。父親が息子にかける最初の言葉が、あれだ。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>使徒との戦闘で、シンジは何度も死にかけた。十四歳の子供が、大人が背負うべき重荷の下で潰されていった。私がそうさせた。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>「傷つけないために遠ざけた」──誰よりもあの子を傷つけたのは私だ。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>レイのためには──この手を焼いた。シンジのためには──一度も。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、「一度も」なんですか？</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>レイは安全だったからだ。他者ではなかった。私の延長でしかなかった。&hellip;&hellip;あれは勇気でも愛情でもない。安全な自己愛の延長だ。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;待ってくれ。</p>
+
+        <p class="silence">（碇ゲンドウの裸の手が額を押さえる。自分の言葉の中で矛盾に気づいている）</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;「傷つけないために遠ざけた」と言った。だがエヴァに乗せた。「絆は不要だ」と言った。だが最初から繋がろうとしなかった。「例外は二度起きない」と言った。だが──例外が目の前にいたのに──自分から切り捨てた。&hellip;&hellip;すべて──矛盾している。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;すべて──口実だった。</p>
+
+        <p class="silence">（碇ゲンドウの中で何かが静かに崩壊している。音のない崩壊だ。十四年間の論理体系が──問いの連鎖によって内側から溶解している）</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;リツコを抱いている間だけ、空洞の音が小さくなった。数時間だけ。朝になれば戻る。だからまた抱く。愛情はない。空洞を塞ぐための充填行為だ。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>冬月のユイへの未練を──共犯関係の接着剤にした。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>人類補完計画は──</p>
+
+        <p class="silence">（告白の声だけが残る）</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;あの空洞を消すためだった。ユイに会えるかどうかさえ&hellip;&hellip;実は、二次的だったのかもしれない。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>私は&hellip;&hellip;空洞が怖かった。だから世界を壊そうとした。走るために──あらゆるものを踏みつけた。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>計画が終わった。レイは言った。「私はあなたの人形じゃない」と。走る先が消えた。残ったのは──裸の六分儀ゲンドウだけだ。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「裸の六分儀ゲンドウ」。&hellip;&hellip;なぜ、それが「残った」んですか？</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;シンジが見える。あの子は──ずっとそこにいた。逃げて、戻って、また逃げて──それでも──いた。</p>
+
+        <p class="silence">（碇ゲンドウの声が壊れる。空洞の底から這い上がってくるような声）</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>逃げていたのは私だ。あの子から。二十年間。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、逃げたんですか？</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>あの子を愛してしまったら──また失うからだ。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;だが。もう失っている。逃げた時点で。</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;「取り返しのつかない過ち」──さっき口にした言葉だ。あれは人間一般の話ではなかった。私自身の話だった。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「取り返しのつかない過ち」。&hellip;&hellip;それは何のためだったんですか？</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;失うことを恐れて──自分から手放した。ユイがくれた碇を。ユイが残してくれた──もうひとつの碇を。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「もうひとつの碇」。</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;シンジだ。あの子が碇だった。あの子の目の中に、声の中に──ずっとあった。</p>
+
+        <p class="silence">（火傷の痕の残る右手を見つめる）</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>この手はレイのためには焼けた。シンジのためには──一度も。立ち上がったらあの子に近づいてしまうから。近づいたら──</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;すまなかったな、シンジ。</p>
+
+        <p class="silence">（すべてが消えた声。過ちを犯した父親の声だ。初めて嘘のない声だ）</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;だが。&hellip;&hellip;こんな言葉があの子に届くとは思えない。二十年間、何もしなかった男の謝罪が何を変えられる。&hellip;&hellip;都合がよすぎる。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>エヴァに乗せたのは私だ。あの子の精神を壊したのは私だ。少年時代を奪ったのは私だ。「すまない」で──何が贖える。何も贖えはしない。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;もしかすると──この「すまない」すら──口実なのかもしれない。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+
+        <p class="silence">（碇ゲンドウの目が虚ろになる。「すまない」と言うことで自分が楽になりたいだけではないのか。シンジのための言葉なのか。自分のための──もう一つの口実ではないのか）</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;わからん。この言葉が──本当にあの子のためなのか──私が楽になりたいだけなのか──もう──区別がつかない。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+
+        <p class="silence">（長い沈黙。碇ゲンドウの裸の両手がテーブルの上で開かれている。何も掴んでいない。何も隠していない。──何もわからないまま）</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;それでも。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;この一言を飲み込んだら──私は永遠に六分儀のまま消える。何にも辿り着かないまま。&hellip;&hellip;それだけは──</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;嫌だ。</p>
+
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;プレゼントしたいものが──あった。</p>
+
+        <p class="silence">（碇ゲンドウの声が限りなく小さくなる。ほとんど吐息だ。だがその吐息の中に二十年分の重量が圧縮されている。──しかしこの言葉が「あの子のため」なのか「自分のため」なのか、碇ゲンドウ自身にもわからない。わからないまま──それでも──口にする）</p>
+
+        <p class="line-character"><span class="speaker-gendo">ゲンドウ：</span>&hellip;&hellip;あの子に「父さん」と呼ばれても──逃げない自分を。</p>
+
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== セッション解説 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Session Analysis</span>セッション解説</h2>
+
+      <div class="text-panel fade-in">
+        <p>碇ゲンドウとのセッション対話において、私は一つの問いから始めた。「あなたはあなたに何をプレゼントしてあげたいですか？」。</p>
+        <p>碇ゲンドウは五分間の沈黙で私を査定し、「約束の時だけだ」と最小コストの回答を返した。</p>
+        <p>「なぜ？」の連鎖は、この回答の下に埋まっている構造を一枚ずつ剥がす作業だった。</p>
+        <p>「なぜ説明する必要がないのか」「なぜ感情が誤差なのか」「なぜ壊れたのか」「なぜ空洞が怖いのか」「なぜ愛される資格がないのか」「なぜ例外は二度起きないのか」。</p>
+        <p>問いが深まるごとに、碇ゲンドウは自分の非合理的信念に自分で行き着いた。「例外は二度起きない」──根拠のない恐怖が事実の皮を被っていただけだった。</p>
+        <p>「傷つけないために遠ざけた」「絆は不要だ」「計画のために」──すべて口実だった。</p>
+        <p>その口実の構造が、問いの連鎖によって内側から崩壊した瞬間に、人類補完計画の本質が「六分儀ゲンドウの空洞に戻ることへの恐怖からの逃避」であったことを、碇ゲンドウ自身が発見した。</p>
+        <p>「何のためだったのか」──この最後の問いが、すべての口実が崩壊した先にあるものを浮上させた。切り捨てたはずの息子が「もうひとつの碇」だったという、取り返しのつかない気づき。</p>
+        <p>私は一度も、答えを与えていない。</p>
+      </div>
+    </section>
+
+    <!-- ========== 中間CTA ========== -->
+    <section class="cta-block fade-in">
+      <div class="container">
+        <p class="cta-block__above">上の対話でキャラクターに行ったことと、同じことを、あなたに対して行います。</p>
+        <h2 class="cta-block__title">天命の言語化セッション&trade;</h2>
+        <p class="cta-block__desc">2時間で天命が言語化できる場所。</p>
+        <div class="cta-block__features">
+          <span class="cta-block__feature">Zoom完結</span>
+          <span class="cta-block__feature">事前学習不要</span>
+          <span class="cta-block__feature">対話のみ</span>
+        </div>
+        <a href="../../trial.html" class="btn">無料トライアルに申し込む &rarr;</a>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== 本文 ========== -->
+    <section class="fade-in">
+      <div class="highlight-block fade-in">
+        <p>以下は、碇ゲンドウという存在の構造を、物語の時系列に沿って実存科学の概念で辿り直す試みである。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== 第1章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Chapter One</span>六分儀──漂流者の初期条件</h2>
+
+      <div class="text-panel fade-in">
+        <p>碇ゲンドウの構造を読み解くには、「碇」になる以前の「六分儀」から始めなければならない。</p>
+        <p>六分儀とは、天体と水平線の角度を測る航海計器だ。位置を知るための道具であり、どこかに辿り着くための道具ではない。測るだけ。距離を、角度を、差異を。</p>
+        <p>六分儀ゲンドウという名は、他者や世界との距離をただ計測し、決して近づくことのない漂流者の実存そのものを象徴していた。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>第21話「ネルフ、誕生」で断片的に描かれる若き六分儀ゲンドウは、才能に溢れながら社会から遊離し、暴力に塗れた空虚な人間として存在している。</p>
+        <p>他者との関係構築に深い困難を抱え、感情を送受信する回路そのものが未発達のまま成人した人間。共感の神経が最初から接続されていなかった。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>これが彼のMeta（前提構造）──語りに先立つ変えられない条件──の土台だ。</p>
+        <p>生物基盤としてのディスコミュニケーションの病理。記憶と情動の層における愛情の欠如。文化と社会の層における所属の不在。</p>
+        <p>価値観と信念の層における「他者と関われば壊れる」という根深い歪み。言語構造の層における感情語の完全な排除と命令形への偏向。</p>
+        <p>五層すべてにおいて、他者と繋がるための回路が閉じられた状態。彼は「抑圧」していたのではない。抑圧するためには、まず何かを持っていなければならない。</p>
+        <p>彼には──抑圧すべき豊かさそのものがなかった。空洞。測るだけで、辿り着かない。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>Metaがある限り自由意志は存在しない──実存科学の第一公理（M &rArr; &not;F）に照らせば、彼が他者と関われないのは「選択」ではない。</p>
+        <p>Metaがそう規定した。六分儀ゲンドウの空洞は、欠陥ではなく初期条件である。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>この空洞こそが、後にユイとの出会いで「碇」へと変容し、ユイの喪失で「切断されたMeta」へと暴走する、すべての起点になる。</p>
+        <p>庵野秀明総監督はインタビューで、ゲンドウのキャラクター造形が自身の「不在の父親」の影であると同時に、監督自身のシャドウの投影であったと語っている。</p>
+        <p>ゲンドウという「語らない男」の空白は、日本社会における「感情的に切り離された仕事人間としての父親」の社会的トロンプでもある。</p>
+        <p>彼の内面が作中で最も描かれないのは、シンジの視座において父親が「理解不能な抑圧者」でなければ物語の推進力が瓦解するからであり、同時にゲンドウ自身が自分の内面を他者に「描かせない」ための完璧な要塞を築いているからだ。</p>
+        <p>この二重構造が──碇ゲンドウという存在の、最も深い悲劇を形成している。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== 第2章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Chapter Two</span>碇──ユイという唯一の錨</h2>
+
+      <div class="text-panel fade-in">
+        <p>ユイとの出会いが、六分儀ゲンドウの存在を根本から書き換えた。</p>
+        <p>「碇」とは船を世界に繋ぎ止める重し。六分儀（距離を測るだけの計器）が碇（世界に錨を下ろす装置）へと変わった。この改姓は婚姻手続きではない。自己定義の根源的な書き換えだった。</p>
+        <p>ユイは、碇ゲンドウの防御を一切無視して、直接、空洞に入ってきた。理由もなく。条件もなく。</p>
+        <p>セッション対話で碇ゲンドウ自身が「受け取ったのではない。撃ち抜かれたのだ」と語ったように、それは彼の選択や能力によるものではなかった。ユイという存在そのものが、閉じられていた回路を強制的に起動させた。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>ここに実存科学の概念「触媒としての他者」の構造が現れる。天命の言語化セッション&trade;における「問い」の本質は言語ではなく「構造的刺激」だ。</p>
+        <p>適切な入力があれば、凍結されたシステムも再起動し得る──ユイは、碇ゲンドウにとっての「生きた問い」だった。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>言葉で質問を投げかけたのではない。その存在そのものが、凍結された回路を再起動させた。</p>
+        <p>だがここに、後の悲劇を決定づける構造的欠陥があった。碇ゲンドウにとって、ユイは「唯一の」錨だった。世界に繋がる線が一本しかなかった。</p>
+        <p>2004年、初号機接触実験でユイが消失する。</p>
+        <p>セッション対話で碇ゲンドウが語った「あの実験室の三十分」──LCLの匂いが充満する空間で、ユイがいた場所を見つめ続けた三十分。泣けなかった。泣く回路が接続されていなかった。</p>
+        <p>叫べなかった。身体がその方法を知らなかった。三十分後に「計画を続行する」と命じた。──それ以外にできることがなかったから。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>このとき起きたのは、単に妻を失った出来事ではない。「自分を再定義してくれた唯一の存在の喪失」であり、「世界との唯一の接続線の断絶」であり、六分儀ゲンドウの空洞へと放り戻される実存的崩壊だった。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== 第3章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Chapter Three</span>切断されたMeta──能動的離断の構造</h2>
+
+      <div class="text-panel fade-in">
+        <p>碇ゲンドウのシャドウ（Shadow──抑圧された未成熟な人格側面）は、典型的な「闇の抑圧」や「凍結」では説明できない特異な構造を持つ。</p>
+        <p>凍結されたシャドウとは、トラウマによって感情機能が受動的に停止した状態だ。だが碇ゲンドウの場合、感情は受動的に萎縮したのではなかった。</p>
+        <p>生き延びて「ユイとの再会」という目的を果たすために、自己の情動や他者への共感能力を「能動的に切り離した」。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>これを「切断されたMeta（Severed Meta）」と定義する。痛みを感じる神経回路そのものを自らの意志で外科手術的に切断し、残された「目的実行回路」だけで駆動している状態。</p>
+        <p>凍結が「受動的な停止」なら、切断は「能動的な離断」だ。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>この切断のコストを、碇ゲンドウは身体で払い続けた。白い手袋、色つきの眼鏡、口元を隠すポーズ──これらは単なるキャラクターデザインではない。切断されたMetaの物質的表現だ。</p>
+        <p>手袋はレイを助けた火傷を隠すと同時に、素手で何かに──誰かに──触れることを封じる装置。</p>
+        <p>眼鏡は他者との視線の交わりを遮断し、自分は見るが相手には見せないという非対称を強要する装置。口元を隠すポーズは、表情の微細な動揺を隠蔽する最後の砦。</p>
+        <p>この三重の装甲を維持するためにどれほどの精神的エネルギーが消費されていたか──碇ゲンドウ自身は、もう感じることすらできなかっただろう。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>シンジの遺棄は、この切断の最も残酷な帰結だった。幼い息子を他人の元へ送り出した行為は、「愛していないから」ではなかった。</p>
+        <p>セッション対話で碇ゲンドウ自身が告白したように、「あの子を見るとユイを思い出す。切断したはずの回路が鳴る」。</p>
+        <p>息子の目にユイの面影を見るたびに、あの実験室の三十分が再生される。止められない。だから遠ざけた。</p>
+        <p>──愛着という情動回路を残しておけば、システムが崩壊することを本能的に悟ったからだ。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>ここに非合理的信念が三つ浮上する。</p>
+        <p>「ユイとの再会以外に世界に価値はない」──世界の多様な価値を否定する一元論。</p>
+        <p>「他者との接近は痛みしか生まない」──シンジの遺棄を正当化するヤマアラシのジレンマの自己適用。</p>
+        <p>「人間関係はすべて手段」──全人類を機能として扱うための認知の歪み。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>第12話「奇跡の価値は」でのユイの墓参りにおいて、碇ゲンドウは一瞬だけシンジと対等な対話を交わす。</p>
+        <p>「人は思い出を忘れることで生きていける。だが、決して忘れてはならないこともある」。──しかしその直後、「帰るぞ」と打ち切る。</p>
+        <p>一瞬の開きがもたらす共感の発生を、切断されたMetaを揺るがすノイズとして、極端に恐れたのだ。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== 第4章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Chapter Four</span>補完という逃避──空洞を消すための壮大な代償行動</h2>
+
+      <div class="text-panel fade-in">
+        <p>人類補完計画は、「ユイとの再会のための計画」として理解される。碇ゲンドウ自身もそう信じていた。だがセッション対話が暴いた構造は、それより深い場所にあった。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>碇ゲンドウ自身の言葉──「人類補完計画は、あの空洞を消すためだった。ユイに会えるかどうかさえ、実は二次的だったのかもしれない」。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>この告白が射抜いているのは、計画の本質が「六分儀ゲンドウの空洞に永遠に戻らされることへの恐怖からの逃避」だったということだ。</p>
+        <p>これは代償行動の究極形──私的でミクロな恐怖を、マクロで壮大なイデオロギーにすり替え、全人類を巻き込む構造だ。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>碇ゲンドウの信念体系にある決定的な矛盾。</p>
+        <p>「個人の感情は人類補完という大義の前では無意味」と自己正当化しながら、その大義そのものが「ユイを失った痛みに耐えられない」「六分儀ゲンドウに戻りたくない」という極めて個人的な感情に立脚している。</p>
+        <p>NERVの最高司令官としての権力もまた、同じ構造の中にある。ゼーレを利用し、裏切りを画策し、赤木母娘を道具化し、冬月の未練を共犯の接着剤にする。</p>
+        <p>セッション対話で碇ゲンドウが語った「リツコを抱いている間だけ、空洞の音が小さくなった」──この一言が、彼の人間関係のすべてを構造的に要約している。愛情ではない。空洞を一時的に塞ぐための充填行為だ。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>唯一の例外がレイへの態度だった。第5話でレイにだけ見せた微笑み。しかしこの例外もまた代償の一形態にすぎない。</p>
+        <p>レイはユイの複製であり、かつ自己主張を行わず、裏切ることもない。レイとの関係には「予測不可能な他者」と関わるリスクが存在しなかった。</p>
+        <p>セッション対話で碇ゲンドウが自ら言い当てたように──「あれは勇気でも愛情でもない。安全な自己愛の延長だ」。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>だからこそ、レイの最期の言葉が致命傷となった。「私はあなたの人形じゃない」。</p>
+        <p>道具だったはずの存在が自己決定権を行使し、碇ゲンドウを拒絶した。自他境界の消滅を望んだ男の企ては、「他者」の屹立によって粉砕された。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>碇ゲンドウは──すべてを切り捨てた男が、最後にすべてに切り捨てられる──明確な「不到達」を迎えた。</p>
+        <p>碇シンジが最終的に他者との境界（ATフィールド）の存在を受け入れ補完を拒否したのに対し、父は境界の完全消滅を望み、失敗した。</p>
+        <p>冬月コウゾウがユイの喪失を「記憶」として自己の中に留め、現実を受容できたのに対し、碇ゲンドウはその受容を拒絶し、世界を書き換えようとした。</p>
+        <p>碇ゲンドウは、シンジが他者への恐れから権力への執着に転じた場合の「未来のカリカチュア」──もう一つのあり得た帰結だったのだ。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== 第5章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Chapter Five</span>「すまなかったな」──瞬間的完成、あるいは中動態の一言</h2>
+
+      <div class="text-panel fade-in">
+        <p>しかし、碇ゲンドウの物語は、ただの不到達では終わらない。</p>
+        <p>計画が頓挫し、レイに拒絶された絶望の中で、初号機──ユイのメタファー──にその身を喰いちぎられる最期の瞬間。</p>
+        <p>碇ゲンドウは「やはりだめだったか&hellip;&hellip;」と漏らす。世界を支配しようとした男の言葉ではない。一人の無力な男の諦念だ。</p>
+        <p>そして幻影の中で、二十年間避け続けてきた事実を受容する。見えない絆を恐れ、自分の殻に逃げ込んでいた。</p>
+        <p>シンジに近づくことを恐れたのは、シンジを傷つけるからではなく、自分自身が再び何かを愛し失うことに耐えられなかったからだ。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>「すまなかったな、シンジ」。</p>
+        <p>この言葉は、NERV総司令官の口からは出ない。人類補完計画の推進者の口からも出ない。あらゆる鎧と論理を剥ぎ取られた、裸の「六分儀ゲンドウ」の口から──二十年ぶりに──出た言葉だ。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>中動態（Middle Voice）の概念で読み解く。中動態とは、「する／される」の二項対立を超え、出来事が「私を通して起きる」という語りの態だ。</p>
+        <p>天命に生きる者の行為は、意志によるものでも強制によるものでもなく、構造によって起きる。</p>
+        <p>「すまなかったな」は、碇ゲンドウが「意志」で発した言葉ではない。</p>
+        <p>計画が潰え、鎧が消え、走り続ける先が消滅した瞬間──Metaのすべてが剥奪された刹那に──構造が彼を通して吐き出した言葉だ。意志でもなく、強制でもなく。ただ──出た。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>天命は「探す」ものではなく「露呈する」もの──実存科学のこの命題を、碇ゲンドウはその死の瞬間に証明した。</p>
+        <p>二十年間の切断と代償と逃避が、天命に「到達した」とは言わせない。しかし死の瞬間にのみ露呈した「すまなかったな」という天命の萌芽──この「瞬間的完成」を、無意味とすることもできない。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>庵野秀明総監督が年齢を重ねるにつれ、シンジからゲンドウへと自己投影の対象が移り、「子供に近づくことへの恐怖」を深く理解できるようになったと述懐している。</p>
+        <p>「すまなかったな、シンジ」は、制作者自身の内面的成熟が追いついたことによる、必然的で痛切な実存的吐露でもあった。</p>
+        <p>碇ゲンドウは天命を生きることはなかった。しかし天命に触れた。一瞬だけ。死の、その一瞬だけ。</p>
+        <p>その一瞬は、二十年間かけて切断してきたすべてのもの──息子への愛、喪失の痛み、自分自身の脆弱さ──を、取り返しのつかない形で、取り戻した瞬間だった。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== 結び ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Conclusion</span>切り捨てたものの中に、天命がある</h2>
+
+      <div class="text-panel fade-in">
+        <p>碇ゲンドウという存在が教えるのは、「切り捨てたものの中に、天命がある」ということだ。</p>
+        <p>計画のために切り捨てた感情。効率のために排除した脆弱さ。目的のために道具にした人間関係。──私たちもまた、何かを切り捨てて生きている。仕事のため。大義のため。傷つかないため。</p>
+        <p>だが、切り捨てたものの中にこそ──見ないようにしているもの、触れないようにしているものの中にこそ──あなたのMetaが自然に収束する一点がある。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>変えられない前提条件を受け入れたその先に、天命がある。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>あなたのMetaは何ですか。</p>
+        <p>あなたが切り捨てたものの中に、何がありますか。</p>
+        <p>「なぜ、それを切り捨てたのですか？」──この問いの先に、あなたの天命がある。</p>
+        <p>天命の言語化セッション&trade;では、120分の対話を通じて、あなた自身のMeta、シャドウ、そして天命に触れます。</p>
+        <p>私は答えを与えません。問いを渡すだけです。碇ゲンドウに行ったことと同じことを、あなたに対して行います。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== 最終CTA ========== -->
+    <section class="cta-block fade-in">
+  <div class="container">
+    <h2 class="cta-block__title">天命の言語化セッション&trade;</h2>
+    <p class="cta-block__desc">2時間で天命が言語化できる場所。</p>
+    <div class="cta-block__features">
+      <span class="cta-block__feature">Zoom完結</span>
+      <span class="cta-block__feature">事前学習不要</span>
+      <span class="cta-block__feature">対話のみ</span>
+    </div>
+    <a href="../../trial.html" class="btn">無料トライアルに申し込む &rarr;</a>
+  </div>
+</section>
+
+    <!-- ========== 著者ブロック ========== -->
+    <div class="author-block fade-in">
+      <p><strong>箭内宏紀（やないひろき）</strong><br>
+      実存科学研究所 代表。<br>
+      「天命の言語化セッション&trade;」を提供。</p>
+<p><br>
+      「Metaがある限り自由意志は存在しない」（M &rArr; &not;F）を第一公理とする実存科学を提唱。</p>
+<p><br>
+      著書に『Metaがある限り──自由意志・自分・他人は存在しない』<br>
+      『自由意志なき世界の歩き方』ほか。</p>
+    </div>
+
+    <!-- ========== 出典表記 ========== -->
+    <p class="source-note fade-in">※ 本稿で扱った作品：庵野秀明 総監督『新世紀エヴァンゲリオン』（GAINAX、1995-1996年）</p>
+<p class="source-note fade-in">　　　　　　　　 庵野秀明 総監督『新世紀エヴァンゲリオン劇場版 Air/まごころを、君に』（GAINAX、1997年）</p>
+<p class="source-note fade-in">作品の著作権は原著者・制作会社に帰属します。</p>
+
+    <!-- ========== シリーズノート ========== -->
+    <div class="series-note fade-in">
+      <p>本シリーズ「自由意志なき世界の天命論」は、今後も新たな作品・キャラクターを追加していく。<br>
+      漫画のみならず、映画・小説・物語の登場人物を、実存科学の視点で読み解く。</p>
+      <p><a href="./">&larr; エヴァンゲリオン篇一覧に戻る</a>&emsp;｜&emsp;<a href="../../specials.html">&larr; 特別シリーズ一覧に戻る</a></p>
+    </div>
+
+  </main>
+
+  <!-- Floating TOC -->
+  <nav class="floating-toc" id="floatingToc" aria-label="目次">
+    <p class="floating-toc__title">Contents</p>
+    <ol class="floating-toc__list" id="floatingTocList"></ol>
+  </nav>
+  <button class="floating-toc-toggle" id="floatingTocToggle" aria-label="目次を開閉">&#9776;</button>
+
+  <script>
+  (function(){
+    var headings = document.querySelectorAll('h2.chapter-heading');
+    var list = document.getElementById('floatingTocList');
+    var toc = document.getElementById('floatingToc');
+    var toggle = document.getElementById('floatingTocToggle');
+    if (!headings.length || !list) return;
+
+    headings.forEach(function(h, i){
+      var id = 'toc-section-' + i;
+      h.id = id;
+      var li = document.createElement('li');
+      li.className = 'floating-toc__item';
+      var a = document.createElement('a');
+      a.className = 'floating-toc__link';
+      a.href = '#' + id;
+      var text = h.textContent.replace(/\s+/g, ' ').trim();
+      var numSpan = h.querySelector('.chapter-number');
+      if (numSpan) {
+        text = text.replace(numSpan.textContent.replace(/\s+/g, ' ').trim(), '').trim();
+      }
+      if (text.length > 28) text = text.substring(0, 28) + '\u2026';
+      a.textContent = text;
+      a.addEventListener('click', function(e){
+        e.preventDefault();
+        document.getElementById(id).scrollIntoView({behavior:'smooth', block:'start'});
+        toc.classList.remove('is-open');
+      });
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+
+    var heroEnd = 400;
+    var links = list.querySelectorAll('.floating-toc__link');
+
+    function updateToc(){
+      var scrollY = window.scrollY || window.pageYOffset;
+      var show = scrollY > heroEnd;
+      toc.classList.toggle('is-visible', show);
+      toggle.classList.toggle('is-visible', show);
+      var current = -1;
+      headings.forEach(function(h, i){
+        if (h.getBoundingClientRect().top < window.innerHeight * 0.35) current = i;
+      });
+      links.forEach(function(a, i){
+        a.classList.toggle('is-active', i === current);
+      });
+    }
+
+    window.addEventListener('scroll', updateToc, {passive: true});
+    updateToc();
+
+    toggle.addEventListener('click', function(){
+      toc.classList.toggle('is-open');
+    });
+
+    document.addEventListener('click', function(e){
+      if (!toc.contains(e.target) && e.target !== toggle) {
+        toc.classList.remove('is-open');
+      }
+    });
+  })();
+  </script>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+  <div class="container--wide">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <p class="footer-col__title">The Meta</p>
+        <a href="../../about-existential-science.html">実存科学とは</a>
+        <a href="../../epistemology.html">認識論</a>
+        <a href="../../semantics.html">意味論</a>
+        <a href="../../society.html">社会論</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Contents</p>
+        <a href="../../specials.html">特別シリーズ</a>
+        <a href="../../archives.html">記事一覧</a>
+        <a href="../../video-list.html">動画一覧</a>
+        <a href="../../glossary.html">用語集</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Session</p>
+        <a href="../../session.html">天命の言語化セッション™</a>
+        <a href="../../session-flow.html">セッションの流れ</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Institute</p>
+        <a href="../../founder.html">創始者</a>
+        <a href="../../contact.html">お問い合わせ</a>
+        <a href="../../legal/legal-tokushoho.html">特定商取引法</a>
+        <a href="../../legal/legal-privacy-policy.html">プライバシーポリシー</a>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; 実存科学研究所 — Existential Science Institute</p>
+  </div>
+</footer>
+
+  <script src="../../js/main.min.js?v=9"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "碇ゲンドウのMeta ── 自由意志なき世界の天命論",
+  "description": "アニメ『新世紀エヴァンゲリオン』の碇ゲンドウを、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。切り捨てたものの中に天命がある──空洞から走り続けた男の構造。",
+  "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-evangelion/gendo.html",
+  "author": {
+    "@type": "Person",
+    "name": "箭内宏紀",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/founder.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  },
+  "inLanguage": "ja"
+}
+</script>
+  <!-- Search Modal -->
+  <div class="search-overlay">
+    <div class="search-modal"><button class="search-close" aria-label="閉じる">&times;</button>
+      <div class="search-input-wrap">
+        <span class="search-input-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+        <input type="text" class="search-input" placeholder="キーワードで検索..." autocomplete="off">
+      </div>
+      <div class="search-results"></div>
+      <div class="search-hint"><span class="search-hint__desktop">ESC to close · ⌘K to toggle</span><span class="search-hint__mobile">背景タップまたは ✕ で閉じる</span></div>
+    </div>
+  </div>
+</body>
+</html>
