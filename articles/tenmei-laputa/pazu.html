@@ -33,8 +33,7 @@
 <style>
 /* =============================================
    視認性・読みやすさ強化CSS
-   ============================================= */  50% { background-position: 0% 50%; }
-}
+   ============================================= */
 
 /* === 1. 章見出し — 中央配置＋装飾 === */
 h2.chapter-heading {
@@ -50,7 +49,6 @@ h2.chapter-heading {
   text-align: center;
   position: relative;
   padding-top: 2rem;
-}
 h2.chapter-heading::before {
   content: "";
   position: absolute;
@@ -60,7 +58,6 @@ h2.chapter-heading::before {
   width: 40px;
   height: 1px;
   background: var(--color-gold);
-}
 h2.chapter-heading::after {
   content: "";
   display: block;
@@ -68,7 +65,6 @@ h2.chapter-heading::after {
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(192,168,120,0.5), transparent);
   margin: 1.2rem auto 0;
-}
 .chapter-number {
   display: block;
   font-family: var(--font-serif-en);
@@ -78,7 +74,6 @@ h2.chapter-heading::after {
   text-transform: uppercase;
   color: var(--color-gold);
   margin-bottom: 0.6rem;
-}
 
 /* === 2. 区切り線 — 装飾付き === */
 hr {
@@ -88,14 +83,12 @@ hr {
   margin: 4.5rem 0;
   text-align: center;
   overflow: visible;
-}
 hr::before {
   content: "";
   display: block;
   width: 100%;
   height: 1px;
   background: linear-gradient(90deg, transparent 0%, rgba(192,168,120,0.08) 15%, rgba(192,168,120,0.2) 50%, rgba(192,168,120,0.08) 85%, transparent 100%);
-}
 hr::after {
   content: "\25C6";
   display: block;
@@ -104,7 +97,6 @@ hr::after {
   margin-top: -0.35em;
   letter-spacing: 1em;
   line-height: 1;
-}
 
 /* === 3. セッション対話 — 読みやすさ向上 === */
 .session-dialogue {
@@ -115,7 +107,6 @@ hr::after {
   border: 1px solid rgba(192,168,120,0.06);
   border-radius: 2px;
   position: relative;
-}
 .session-dialogue::before {
   content: "SESSION";
   position: absolute;
@@ -127,11 +118,9 @@ hr::after {
   color: rgba(192,168,120,0.4);
   background: var(--color-bg-deep);
   padding: 0 0.8rem;
-}
 .session-dialogue p {
   margin-bottom: 1.1em;
   line-height: 2.2;
-}
 .session-dialogue .speaker-yanai { color: var(--color-gold); font-weight: 600; font-size: var(--fs-body); }
 .session-dialogue .speaker-pazu { color: #b8a0d8; font-weight: 600; font-size: var(--fs-body); }
 
@@ -139,11 +128,9 @@ hr::after {
 .session-dialogue .line-yanai {
   border-left: 2px solid rgba(192,168,120,0.15);
   padding-left: 1.2rem;
-}
 /* キャラの発言：少しインデント */
 .session-dialogue .line-character {
   margin-left: 1.4rem;
-}
 /* 沈黙マーカー：中央揃え＋装飾線 */
 .session-dialogue .silence {
   color: rgba(235,232,225,0.3);
@@ -152,7 +139,6 @@ hr::after {
   margin: 2em 0;
   font-size: var(--fs-small);
   letter-spacing: 0.15em;
-}
 .session-dialogue .silence::before,
 .session-dialogue .silence::after {
   content: "";
@@ -162,22 +148,18 @@ hr::after {
   background: rgba(192,168,120,0.15);
   vertical-align: middle;
   margin: 0 1em;
-}
 /* 10発言ごとの視覚リズム */
 .session-dialogue p:nth-child(10n) {
   margin-bottom: 2em;
   padding-bottom: 1.5em;
   border-bottom: 1px solid rgba(192,168,120,0.06);
-}
 
 /* === 4. text-panel の単調さ解消 === */
 section > .text-panel:nth-of-type(even) {
   background: rgba(8, 6, 16, 0.45);
   border-color: transparent;
-}
 section > .text-panel:nth-of-type(even)::before {
   display: none;
-}
 
 /* === 5. highlight-block の存在感微増 === */
 .highlight-block {
@@ -186,13 +168,11 @@ section > .text-panel:nth-of-type(even)::before {
   border-image: linear-gradient(180deg, var(--color-gold) 0%, rgba(192,168,120,0.15) 100%) 1;
   padding: 2rem 2rem 2rem 2.2rem;
   margin: 2.5rem 0;
-}
 .highlight-block p {
   font-size: var(--fs-lead);
   font-weight: 500;
   line-height: 2.2;
   color: var(--color-text-primary);
-}
 
 /* === 6. セクション見出し（h3） === */
 h3.section-heading {
@@ -205,7 +185,6 @@ h3.section-heading {
   padding-left: 1.2rem;
   border-left: 2px solid rgba(192,168,120,0.4);
   line-height: 1.6;
-}
 
 /* === Profiling Block === */
 .profiling-block {
@@ -216,14 +195,12 @@ h3.section-heading {
   backdrop-filter: blur(8px);
   position: relative;
   overflow: hidden;
-}
 .profiling-block::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(192,168,120,0.4), transparent);
-}
 .profiling-block h3 {
   font-size: var(--fs-body);
   color: var(--color-gold);
@@ -232,12 +209,10 @@ h3.section-heading {
   font-weight: 600;
   padding-bottom: 0.8rem;
   border-bottom: 1px solid rgba(192,168,120,0.1);
-}
 .profiling-block ul {
   list-style: none;
   padding: 0;
   margin: 0 0 1.5rem 0;
-}
 .profiling-block ul li {
   margin-bottom: 1rem;
   color: var(--color-text-reading);
@@ -247,12 +222,10 @@ h3.section-heading {
   position: relative;
   padding-bottom: 0.8rem;
   border-bottom: 1px solid rgba(192,168,120,0.04);
-}
 .profiling-block ul li:last-child {
   border-bottom: none;
   margin-bottom: 0;
   padding-bottom: 0;
-}
 .profiling-block ul li::before {
   content: "\2500\2500";
   position: absolute;
@@ -260,7 +233,6 @@ h3.section-heading {
   top: 0;
   color: rgba(192,168,120,0.35);
   font-size: 0.75em;
-}
 
 /* === CTA Block === */
 /* === Author Block === */
@@ -268,7 +240,6 @@ h3.section-heading {
   margin-top: 3rem;
   padding-top: 2rem;
   border-top: 1px solid rgba(192,168,120,0.15);
-}
 .author-block p { font-size: var(--fs-body); color: var(--color-text-reading); line-height: 2; }
 .author-block strong { color: var(--color-text-body); }
 
@@ -277,7 +248,6 @@ h3.section-heading {
   margin-top: 2rem;
   font-size: var(--fs-small);
   color: rgba(235,232,225,0.35);
-}
 
 /* === Series Note === */
 .series-note {
@@ -288,7 +258,6 @@ h3.section-heading {
   font-size: var(--fs-body);
   color: var(--color-text-reading);
   line-height: 2;
-}
 
 /* === 7. モバイル対応 === */
 @media (max-width: 600px) {
@@ -297,28 +266,23 @@ h3.section-heading {
     margin-top: 0.5rem;
     margin-bottom: 2rem;
     padding-top: 1.5rem;
-  }
   .chapter-number {
     font-size: var(--fs-micro);
     letter-spacing: 0.25em;
     margin-bottom: 0.4rem;
-  }
   h3.section-heading {
     font-size: var(--fs-lead);
     margin-top: 2rem;
     padding-left: 1rem;
-  }
   hr { margin: 3rem 0; }
   .session-dialogue {
     padding: 1.5rem 1.2rem;
     margin: 2rem auto;
-  }
   .session-dialogue .line-yanai { padding-left: 0.8rem; }
   .session-dialogue .line-character { margin-left: 0.8rem; }
   .profiling-block { padding: 1.5rem 1.2rem; }
   .highlight-block { padding: 1.5rem 1.2rem 1.5rem 1.4rem; }
   .text-panel { padding: 2rem 1.5rem; }
-}
 @media (max-width: 480px) {
   .text-panel p br,
   .pull-quote p br,
@@ -329,7 +293,6 @@ h3.section-heading {
   .session-dialogue p:nth-child(10n) {
     margin-bottom: 1.5em;
     padding-bottom: 1em;
-  }
 }
 </style>
 </head>
@@ -490,147 +453,147 @@ h3.section-heading {
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「パズーさん、セッションに来てくださってありがとうございます。あなたはあなたに何をプレゼントしてあげたいですか？」</p>
 
-        <p class="line-character"><span class="speaker-pazu">パズー</span>「父さんが正しかったことを、みんなに知ってもらいたいです。父さんはラピュタを見たんです。写真もある。でも誰も信じなかった。詐欺師だって言われたまま死んだ。&hellip;&hellip;だから僕は、ラピュタを見つけて、父さんが嘘つきじゃなかったって証明したい。それを、自分にプレゼントしたいです」</p>
+        <p class="line-character"><span class="speaker-pazu">パズー：</span>「父さんが正しかったことを、みんなに知ってもらいたいです。父さんはラピュタを見たんです。写真もある。でも誰も信じなかった。詐欺師だって言われたまま死んだ。&hellip;&hellip;だから僕は、ラピュタを見つけて、父さんが嘘つきじゃなかったって証明したい。それを、自分にプレゼントしたいです」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「では、なぜそれをプレゼントできていないんですか？」</p>
 
-        <p class="line-character"><span class="speaker-pazu">パズー</span>「まだラピュタを見つけていないからです。でも、オーニソプターがもうすぐ完成します。完成したら竜の巣を超えて──」</p>
+        <p class="line-character"><span class="speaker-pazu">パズー：</span>「まだラピュタを見つけていないからです。でも、オーニソプターがもうすぐ完成します。完成したら竜の巣を超えて──」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「なぜ、ラピュタを見つけなければプレゼントできないのですか？」</p>
 
-        <p class="line-character"><span class="speaker-pazu">パズー</span>「だって、証拠がなければ誰も信じないじゃないですか。父さんの時もそうだった。写真があったのに信じてもらえなかった。同乗者だっていたのに、その人は何も言ってくれなかった。だから僕が自分の目で確かめて、ラピュタを見つけて──」</p>
+        <p class="line-character"><span class="speaker-pazu">パズー：</span>「だって、証拠がなければ誰も信じないじゃないですか。父さんの時もそうだった。写真があったのに信じてもらえなかった。同乗者だっていたのに、その人は何も言ってくれなかった。だから僕が自分の目で確かめて、ラピュタを見つけて──」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「なぜ、証拠が必要なのですか？」</p>
 
-        <p class="line-character"><span class="speaker-pazu">パズー</span>「え？　&hellip;&hellip;だって、証拠がなければ嘘つきのままでしょう。父さんが、ずっと」</p>
+        <p class="line-character"><span class="speaker-pazu">パズー：</span>「え？　&hellip;&hellip;だって、証拠がなければ嘘つきのままでしょう。父さんが、ずっと」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「なぜ、お父さんが嘘つきのままだと、あなたにとって問題なのですか？」</p>
 
-        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;そんなの、当たり前じゃないですか。父さんは嘘なんかついてない。本当にラピュタを見たんだ。僕はその息子で──」</p>
+        <p class="line-character"><span class="speaker-pazu">パズー：</span>「&hellip;&hellip;そんなの、当たり前じゃないですか。父さんは嘘なんかついてない。本当にラピュタを見たんだ。僕はその息子で──」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;その息子で&hellip;&hellip;。&hellip;&hellip;だから&hellip;&hellip;」</p>
+        <p class="line-character"><span class="speaker-pazu">パズー：</span>「&hellip;&hellip;その息子で&hellip;&hellip;。&hellip;&hellip;だから&hellip;&hellip;」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;なんで黙ってるんですか」</p>
+        <p class="line-character"><span class="speaker-pazu">パズー：</span>「&hellip;&hellip;なんで黙ってるんですか」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;僕は、父さんの息子だから。父さんが嘘つきだったら&hellip;&hellip;僕が毎日やってること&hellip;&hellip;オーニソプターを作って、朝にトランペットを吹いて、ラピュタの話をして&hellip;&hellip;全部、意味がなくなる」</p>
+        <p class="line-character"><span class="speaker-pazu">パズー：</span>「&hellip;&hellip;僕は、父さんの息子だから。父さんが嘘つきだったら&hellip;&hellip;僕が毎日やってること&hellip;&hellip;オーニソプターを作って、朝にトランペットを吹いて、ラピュタの話をして&hellip;&hellip;全部、意味がなくなる」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「なぜ、お父さんの正しさと、あなたの毎日の意味が繋がっているのですか？」</p>
 
-        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;え。&hellip;&hellip;そんなの&hellip;&hellip;」</p>
+        <p class="line-character"><span class="speaker-pazu">パズー：</span>「&hellip;&hellip;え。&hellip;&hellip;そんなの&hellip;&hellip;」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;繋がってるに決まって&hellip;&hellip;いや、ちょっと待ってください。なんで繋がってるんだろう。&hellip;&hellip;父さんがラピュタを見たかどうかと、僕がトランペットを吹くことと&hellip;&hellip;それは&hellip;&hellip;」</p>
+        <p class="line-character"><span class="speaker-pazu">パズー：</span>「&hellip;&hellip;繋がってるに決まって&hellip;&hellip;いや、ちょっと待ってください。なんで繋がってるんだろう。&hellip;&hellip;父さんがラピュタを見たかどうかと、僕がトランペットを吹くことと&hellip;&hellip;それは&hellip;&hellip;」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;別のことだ。&hellip;&hellip;本当は、別のことのはずだ。父さんが正しくても間違っていても、僕は僕のはずなのに&hellip;&hellip;。なんで僕は、父さんの正しさがなくなったら、自分が空っぽになると思ってるんだろう」</p>
+        <p class="line-character"><span class="speaker-pazu">パズー：</span>「&hellip;&hellip;別のことだ。&hellip;&hellip;本当は、別のことのはずだ。父さんが正しくても間違っていても、僕は僕のはずなのに&hellip;&hellip;。なんで僕は、父さんの正しさがなくなったら、自分が空っぽになると思ってるんだろう」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「なぜだと思いますか？」</p>
 
-        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;わからない。&hellip;&hellip;でも、父さんが死んだとき、僕はまだ小さかった。父さんが最後に話してくれたのは、ラピュタのことだった。『あの城は本当にあるんだ』って。&hellip;&hellip;僕はそれを、父さんとの約束みたいに&hellip;&hellip;」</p>
+        <p class="line-character"><span class="speaker-pazu">パズー：</span>「&hellip;&hellip;わからない。&hellip;&hellip;でも、父さんが死んだとき、僕はまだ小さかった。父さんが最後に話してくれたのは、ラピュタのことだった。『あの城は本当にあるんだ』って。&hellip;&hellip;僕はそれを、父さんとの約束みたいに&hellip;&hellip;」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;みたいに、というか&hellip;&hellip;それしかなかった。父さんが残してくれたのはあの写真と、この話だけだった。だから僕にとって、ラピュタを見つけることは&hellip;&hellip;父さんと繋がっている唯一の&hellip;&hellip;」</p>
+        <p class="line-character"><span class="speaker-pazu">パズー：</span>「&hellip;&hellip;みたいに、というか&hellip;&hellip;それしかなかった。父さんが残してくれたのはあの写真と、この話だけだった。だから僕にとって、ラピュタを見つけることは&hellip;&hellip;父さんと繋がっている唯一の&hellip;&hellip;」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「なぜ、それが唯一なのですか？」</p>
 
-        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;っ。&hellip;&hellip;だって、他には何もないから。父さんの顔も、もうぼんやりとしか覚えてない。母さんのことはもっと覚えてない。残ってるのは写真と、ラピュタの話と&hellip;&hellip;飛行機の設計図だけだ。&hellip;&hellip;それが全部なくなったら、僕は父さんの息子じゃなくなる」</p>
+        <p class="line-character"><span class="speaker-pazu">パズー：</span>「&hellip;&hellip;っ。&hellip;&hellip;だって、他には何もないから。父さんの顔も、もうぼんやりとしか覚えてない。母さんのことはもっと覚えてない。残ってるのは写真と、ラピュタの話と&hellip;&hellip;飛行機の設計図だけだ。&hellip;&hellip;それが全部なくなったら、僕は父さんの息子じゃなくなる」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「お父さんの息子じゃなくなると、何が起きますか？」</p>
 
-        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;僕が、誰でもなくなる」</p>
+        <p class="line-character"><span class="speaker-pazu">パズー：</span>「&hellip;&hellip;僕が、誰でもなくなる」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;ただの、鉱山で働く孤児になる。誰も覚えてない父さんの、誰も覚えてない息子になる。&hellip;&hellip;それが&hellip;&hellip;怖い。&hellip;&hellip;あ。&hellip;&hellip;僕、怖いって思ったことなかった。今まで一度も。ラピュタを見つけるって決めてたから、怖いなんて考える暇がなかった」</p>
+        <p class="line-character"><span class="speaker-pazu">パズー：</span>「&hellip;&hellip;ただの、鉱山で働く孤児になる。誰も覚えてない父さんの、誰も覚えてない息子になる。&hellip;&hellip;それが&hellip;&hellip;怖い。&hellip;&hellip;あ。&hellip;&hellip;僕、怖いって思ったことなかった。今まで一度も。ラピュタを見つけるって決めてたから、怖いなんて考える暇がなかった」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「なぜ、考える暇がなかったのですか？」</p>
 
-        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;止まらなかったから。朝起きたらトランペット吹いて、仕事して、夜はオーニソプターを作って。毎日やることがあった。&hellip;&hellip;止まったら&hellip;&hellip;」</p>
+        <p class="line-character"><span class="speaker-pazu">パズー：</span>「&hellip;&hellip;止まらなかったから。朝起きたらトランペット吹いて、仕事して、夜はオーニソプターを作って。毎日やることがあった。&hellip;&hellip;止まったら&hellip;&hellip;」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;止まったら、考えちゃう。父さんは本当にラピュタを見たのか。あの写真は本物なのか。&hellip;&hellip;もし違ったら、僕の人生はなんだったのか。&hellip;&hellip;止まるのが怖かったんだ。ずっと」</p>
+        <p class="line-character"><span class="speaker-pazu">パズー：</span>「&hellip;&hellip;止まったら、考えちゃう。父さんは本当にラピュタを見たのか。あの写真は本物なのか。&hellip;&hellip;もし違ったら、僕の人生はなんだったのか。&hellip;&hellip;止まるのが怖かったんだ。ずっと」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;あの。&hellip;&hellip;ありがとうございました。僕、そろそろ帰らなきゃ。オーニソプターの翼桁がまだ途中で──やることがたくさんあるんで」</p>
+        <p class="line-character"><span class="speaker-pazu">パズー：</span>「&hellip;&hellip;あの。&hellip;&hellip;ありがとうございました。僕、そろそろ帰らなきゃ。オーニソプターの翼桁がまだ途中で──やることがたくさんあるんで」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;。&hellip;&hellip;あれ。&hellip;&hellip;なんで立てないんだろう。&hellip;&hellip;帰ろうとしてるのに。&hellip;&hellip;オーニソプターを作らなきゃ。&hellip;&hellip;作らなきゃいけないのに&hellip;&hellip;。&hellip;&hellip;それは&hellip;&hellip;父さんの夢なのか、僕の夢なのか&hellip;&hellip;」</p>
+        <p class="line-character"><span class="speaker-pazu">パズー：</span>「&hellip;&hellip;。&hellip;&hellip;あれ。&hellip;&hellip;なんで立てないんだろう。&hellip;&hellip;帰ろうとしてるのに。&hellip;&hellip;オーニソプターを作らなきゃ。&hellip;&hellip;作らなきゃいけないのに&hellip;&hellip;。&hellip;&hellip;それは&hellip;&hellip;父さんの夢なのか、僕の夢なのか&hellip;&hellip;」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;この人、何も言わない。&hellip;&hellip;怒らない。引き留めない。何も求めてこない。&hellip;&hellip;。&hellip;&hellip;なんで、何も求めてこないんだろう。みんな、僕にラピュタの話をさせたがるか、馬鹿にするかのどっちかだったのに」</p>
+        <p class="line-character"><span class="speaker-pazu">パズー：</span>「&hellip;&hellip;この人、何も言わない。&hellip;&hellip;怒らない。引き留めない。何も求めてこない。&hellip;&hellip;。&hellip;&hellip;なんで、何も求めてこないんだろう。みんな、僕にラピュタの話をさせたがるか、馬鹿にするかのどっちかだったのに」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;。&hellip;&hellip;何も求めてこない人って&hellip;&hellip;。&hellip;&hellip;あ。&hellip;&hellip;一人だけいた。&hellip;&hellip;シータだ。シータも、僕にラピュタの話をさせたがらなかった。父さんの夢がどうとか、そういうことじゃなくて&hellip;&hellip;ただ、そばにいた。&hellip;&hellip;でもシータが空から降りてきたとき、僕は──」</p>
+        <p class="line-character"><span class="speaker-pazu">パズー：</span>「&hellip;&hellip;。&hellip;&hellip;何も求めてこない人って&hellip;&hellip;。&hellip;&hellip;あ。&hellip;&hellip;一人だけいた。&hellip;&hellip;シータだ。シータも、僕にラピュタの話をさせたがらなかった。父さんの夢がどうとか、そういうことじゃなくて&hellip;&hellip;ただ、そばにいた。&hellip;&hellip;でもシータが空から降りてきたとき、僕は──」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;僕はドキドキしたんだ。『きっと素敵なことが始まったんだ』って。あれは&hellip;&hellip;父さんの夢が本当だったって証拠を見つけた喜びだと思ってた。でも&hellip;&hellip;違うかもしれない。&hellip;&hellip;あの瞬間、僕が感じたのは&hellip;&hellip;『父さんが正しかった』じゃなくて&hellip;&hellip;『この子を守らなきゃ』だった。&hellip;&hellip;最初から。父さんのことは、後から思い出したんだ」</p>
+        <p class="line-character"><span class="speaker-pazu">パズー：</span>「&hellip;&hellip;僕はドキドキしたんだ。『きっと素敵なことが始まったんだ』って。あれは&hellip;&hellip;父さんの夢が本当だったって証拠を見つけた喜びだと思ってた。でも&hellip;&hellip;違うかもしれない。&hellip;&hellip;あの瞬間、僕が感じたのは&hellip;&hellip;『父さんが正しかった』じゃなくて&hellip;&hellip;『この子を守らなきゃ』だった。&hellip;&hellip;最初から。父さんのことは、後から思い出したんだ」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;僕は&hellip;&hellip;。&hellip;&hellip;ラピュタに行ったとき、父さんの写真と同じ景色を見た。父さんは正しかった。証明された。でも&hellip;&hellip;そのあと僕がやったことは、ラピュタを世界に見せることじゃなかった。バルスを唱えた。全部壊した。&hellip;&hellip;なんでだろう。父さんの夢が証明された瞬間に、僕はそれを手放した」</p>
+        <p class="line-character"><span class="speaker-pazu">パズー：</span>「&hellip;&hellip;僕は&hellip;&hellip;。&hellip;&hellip;ラピュタに行ったとき、父さんの写真と同じ景色を見た。父さんは正しかった。証明された。でも&hellip;&hellip;そのあと僕がやったことは、ラピュタを世界に見せることじゃなかった。バルスを唱えた。全部壊した。&hellip;&hellip;なんでだろう。父さんの夢が証明された瞬間に、僕はそれを手放した」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「なぜ、手放したのですか？」</p>
 
-        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;シータを守りたかったから。ラピュタの力がシータを殺す。だったら壊す。父さんの夢より、シータのほうが&hellip;&hellip;」</p>
+        <p class="line-character"><span class="speaker-pazu">パズー：</span>「&hellip;&hellip;シータを守りたかったから。ラピュタの力がシータを殺す。だったら壊す。父さんの夢より、シータのほうが&hellip;&hellip;」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;あ。&hellip;&hellip;僕はずっと&hellip;&hellip;何かを証明したかったんじゃない。&hellip;&hellip;誰かを&hellip;&hellip;守りたかっただけだ。父さんを証明したかったんじゃない。&hellip;&hellip;ただ、守りたかった」</p>
+        <p class="line-character"><span class="speaker-pazu">パズー：</span>「&hellip;&hellip;あ。&hellip;&hellip;僕はずっと&hellip;&hellip;何かを証明したかったんじゃない。&hellip;&hellip;誰かを&hellip;&hellip;守りたかっただけだ。父さんを証明したかったんじゃない。&hellip;&hellip;ただ、守りたかった」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;でも&hellip;&hellip;それって、父さんの夢から逃げてるだけかもしれない。父さんが死んでまで守りたかったものを、僕が&hellip;&hellip;諦めるなんて&hellip;&hellip;」</p>
+        <p class="line-character"><span class="speaker-pazu">パズー：</span>「&hellip;&hellip;でも&hellip;&hellip;それって、父さんの夢から逃げてるだけかもしれない。父さんが死んでまで守りたかったものを、僕が&hellip;&hellip;諦めるなんて&hellip;&hellip;」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;。&hellip;&hellip;でも&hellip;&hellip;帰ってきてから、ラピュタの話、誰にもしてないんだ。&hellip;&hellip;誰にも。&hellip;&hellip;証明する必要がなくなったから。&hellip;&hellip;僕が知ってる。それで&hellip;&hellip;十分だった」</p>
+        <p class="line-character"><span class="speaker-pazu">パズー：</span>「&hellip;&hellip;。&hellip;&hellip;でも&hellip;&hellip;帰ってきてから、ラピュタの話、誰にもしてないんだ。&hellip;&hellip;誰にも。&hellip;&hellip;証明する必要がなくなったから。&hellip;&hellip;僕が知ってる。それで&hellip;&hellip;十分だった」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「その『十分だった』は、何のためにあるのですか？」</p>
 
-        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;え。&hellip;&hellip;何のため&hellip;&hellip;」</p>
+        <p class="line-character"><span class="speaker-pazu">パズー：</span>「&hellip;&hellip;え。&hellip;&hellip;何のため&hellip;&hellip;」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;。&hellip;&hellip;証明が終わったから、じゃない。&hellip;&hellip;終わったのに、なんで十分だったんだろう。&hellip;&hellip;証明できたなら、みんなに見せればいいのに。&hellip;&hellip;僕はそうしなかった。&hellip;&hellip;しようとも思わなかった。&hellip;&hellip;父さんの名誉を回復するチャンスだったのに」</p>
+        <p class="line-character"><span class="speaker-pazu">パズー：</span>「&hellip;&hellip;。&hellip;&hellip;証明が終わったから、じゃない。&hellip;&hellip;終わったのに、なんで十分だったんだろう。&hellip;&hellip;証明できたなら、みんなに見せればいいのに。&hellip;&hellip;僕はそうしなかった。&hellip;&hellip;しようとも思わなかった。&hellip;&hellip;父さんの名誉を回復するチャンスだったのに」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「何のために、誰にも話さなかったのですか？」</p>
 
-        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;。&hellip;&hellip;わからない。&hellip;&hellip;いや&hellip;&hellip;。&hellip;&hellip;わかる。&hellip;&hellip;もう、それが目的じゃなかったから。ラピュタで僕が見たのは&hellip;&hellip;父さんの正しさじゃなくて&hellip;&hellip;。&hellip;&hellip;あのロボットが、墓に花を供えていた。誰もいない庭園を、ずっと一人で守り続けていた。&hellip;&hellip;何百年も。誰に認められるわけでもなく。&hellip;&hellip;あれを見たとき、僕は&hellip;&hellip;」</p>
+        <p class="line-character"><span class="speaker-pazu">パズー：</span>「&hellip;&hellip;。&hellip;&hellip;わからない。&hellip;&hellip;いや&hellip;&hellip;。&hellip;&hellip;わかる。&hellip;&hellip;もう、それが目的じゃなかったから。ラピュタで僕が見たのは&hellip;&hellip;父さんの正しさじゃなくて&hellip;&hellip;。&hellip;&hellip;あのロボットが、墓に花を供えていた。誰もいない庭園を、ずっと一人で守り続けていた。&hellip;&hellip;何百年も。誰に認められるわけでもなく。&hellip;&hellip;あれを見たとき、僕は&hellip;&hellip;」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;ああ、これだ、と思ったんだ。&hellip;&hellip;誰に認められなくても、守り続けること。&hellip;&hellip;それが&hellip;&hellip;。&hellip;&hellip;父さんも、そうだったのかもしれない。写真を撮ったのは、誰かに見せるためじゃなくて、自分が見たものを残すためだった。&hellip;&hellip;証明じゃなかった。&hellip;&hellip;記録だった」</p>
+        <p class="line-character"><span class="speaker-pazu">パズー：</span>「&hellip;&hellip;ああ、これだ、と思ったんだ。&hellip;&hellip;誰に認められなくても、守り続けること。&hellip;&hellip;それが&hellip;&hellip;。&hellip;&hellip;父さんも、そうだったのかもしれない。写真を撮ったのは、誰かに見せるためじゃなくて、自分が見たものを残すためだった。&hellip;&hellip;証明じゃなかった。&hellip;&hellip;記録だった」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「パズーさん。その『守り続けること』は、何のためにあるのですか？」</p>
 
-        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;。&hellip;&hellip;何のため&hellip;&hellip;。&hellip;&hellip;何のためでもない。&hellip;&hellip;いや、そうじゃない。何のためでもないんじゃなくて&hellip;&hellip;それそのものが&hellip;&hellip;目的だったんだ。守ること自体が。&hellip;&hellip;あのロボットは命令されて守ってたんじゃない。あれが&hellip;&hellip;あれだけが&hellip;&hellip;あのロボットの存在そのものだった」</p>
+        <p class="line-character"><span class="speaker-pazu">パズー：</span>「&hellip;&hellip;。&hellip;&hellip;何のため&hellip;&hellip;。&hellip;&hellip;何のためでもない。&hellip;&hellip;いや、そうじゃない。何のためでもないんじゃなくて&hellip;&hellip;それそのものが&hellip;&hellip;目的だったんだ。守ること自体が。&hellip;&hellip;あのロボットは命令されて守ってたんじゃない。あれが&hellip;&hellip;あれだけが&hellip;&hellip;あのロボットの存在そのものだった」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;僕も、そうだ。&hellip;&hellip;守りたい。&hellip;&hellip;ただ、守りたい。それだけだった。ずっと。父さんの夢とか、ラピュタの証明とか、全部&hellip;&hellip;その上にかぶさってただけで&hellip;&hellip;。&hellip;&hellip;下にあったのは、最初から&hellip;&hellip;『守りたい』だけだった」</p>
+        <p class="line-character"><span class="speaker-pazu">パズー：</span>「&hellip;&hellip;僕も、そうだ。&hellip;&hellip;守りたい。&hellip;&hellip;ただ、守りたい。それだけだった。ずっと。父さんの夢とか、ラピュタの証明とか、全部&hellip;&hellip;その上にかぶさってただけで&hellip;&hellip;。&hellip;&hellip;下にあったのは、最初から&hellip;&hellip;『守りたい』だけだった」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;でも&hellip;&hellip;これも都合が良すぎるかもしれない。父さんの夢が重すぎて、『守りたい』のほうが楽だから逃げてるだけかもしれない。&hellip;&hellip;僕にはわからない」</p>
+        <p class="line-character"><span class="speaker-pazu">パズー：</span>「&hellip;&hellip;でも&hellip;&hellip;これも都合が良すぎるかもしれない。父さんの夢が重すぎて、『守りたい』のほうが楽だから逃げてるだけかもしれない。&hellip;&hellip;僕にはわからない」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「パズーさん。もう一度聞きます。あなたはあなたに何をプレゼントしてあげたいですか？」</p>
 
-        <p class="line-character"><span class="speaker-pazu">パズー</span>「&hellip;&hellip;。&hellip;&hellip;守る力です。&hellip;&hellip;何かを証明する力じゃなくて。&hellip;&hellip;大切なものが何なのかを見分けて、それを&hellip;&hellip;守って、そして、残す力」</p>
+        <p class="line-character"><span class="speaker-pazu">パズー：</span>「&hellip;&hellip;。&hellip;&hellip;守る力です。&hellip;&hellip;何かを証明する力じゃなくて。&hellip;&hellip;大切なものが何なのかを見分けて、それを&hellip;&hellip;守って、そして、残す力」</p>
 
       </div>
 
@@ -955,7 +918,6 @@ h3.section-heading {
       var numSpan = h.querySelector('.chapter-number');
       if (numSpan) {
         text = text.replace(numSpan.textContent.replace(/\s+/g, ' ').trim(), '').trim();
-      }
       // Truncate long titles
       if (text.length > 28) text = text.substring(0, 28) + '\u2026';
       a.textContent = text;
@@ -987,7 +949,6 @@ h3.section-heading {
       links.forEach(function(a, i){
         a.classList.toggle('is-active', i === current);
       });
-    }
 
     window.addEventListener('scroll', updateToc, {passive: true});
     updateToc();
@@ -1001,7 +962,6 @@ h3.section-heading {
     document.addEventListener('click', function(e){
       if (!toc.contains(e.target) && e.target !== toggle) {
         toc.classList.remove('is-open');
-      }
     });
   })();
   </script>
@@ -1061,7 +1021,6 @@ h3.section-heading {
   },
   "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-laputa/pazu.html",
   "inLanguage": "ja"
-}
 </script>
   <!-- Search Modal -->
   <div class="search-overlay">

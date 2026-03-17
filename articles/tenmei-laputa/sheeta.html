@@ -33,8 +33,7 @@
 <style>
 /* =============================================
    視認性・読みやすさ強化CSS
-   ============================================= */  50% { background-position: 0% 50%; }
-}
+   ============================================= */
 
 /* === 1. 章見出し — 中央配置＋装飾 === */
 h2.chapter-heading {
@@ -50,7 +49,6 @@ h2.chapter-heading {
   text-align: center;
   position: relative;
   padding-top: 2rem;
-}
 h2.chapter-heading::before {
   content: "";
   position: absolute;
@@ -60,7 +58,6 @@ h2.chapter-heading::before {
   width: 40px;
   height: 1px;
   background: var(--color-gold);
-}
 h2.chapter-heading::after {
   content: "";
   display: block;
@@ -68,7 +65,6 @@ h2.chapter-heading::after {
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(192,168,120,0.5), transparent);
   margin: 1.2rem auto 0;
-}
 .chapter-number {
   display: block;
   font-family: var(--font-serif-en);
@@ -78,7 +74,6 @@ h2.chapter-heading::after {
   text-transform: uppercase;
   color: var(--color-gold);
   margin-bottom: 0.6rem;
-}
 
 /* === 2. 区切り線 — 装飾付き === */
 hr {
@@ -88,14 +83,12 @@ hr {
   margin: 4.5rem 0;
   text-align: center;
   overflow: visible;
-}
 hr::before {
   content: "";
   display: block;
   width: 100%;
   height: 1px;
   background: linear-gradient(90deg, transparent 0%, rgba(192,168,120,0.08) 15%, rgba(192,168,120,0.2) 50%, rgba(192,168,120,0.08) 85%, transparent 100%);
-}
 hr::after {
   content: "\25C6";
   display: block;
@@ -104,7 +97,6 @@ hr::after {
   margin-top: -0.35em;
   letter-spacing: 1em;
   line-height: 1;
-}
 
 /* === 3. セッション対話 — 読みやすさ向上 === */
 .session-dialogue {
@@ -115,7 +107,6 @@ hr::after {
   border: 1px solid rgba(192,168,120,0.06);
   border-radius: 2px;
   position: relative;
-}
 .session-dialogue::before {
   content: "SESSION";
   position: absolute;
@@ -127,11 +118,9 @@ hr::after {
   color: rgba(192,168,120,0.4);
   background: var(--color-bg-deep);
   padding: 0 0.8rem;
-}
 .session-dialogue p {
   margin-bottom: 1.1em;
   line-height: 2.2;
-}
 .session-dialogue .speaker-yanai { color: var(--color-gold); font-weight: 600; font-size: var(--fs-body); }
 .session-dialogue .speaker-sheeta { color: #b8a0d8; font-weight: 600; font-size: var(--fs-body); }
 
@@ -139,11 +128,9 @@ hr::after {
 .session-dialogue .line-yanai {
   border-left: 2px solid rgba(192,168,120,0.15);
   padding-left: 1.2rem;
-}
 /* キャラの発言：少しインデント */
 .session-dialogue .line-character {
   margin-left: 1.4rem;
-}
 /* 沈黙マーカー：中央揃え＋装飾線 */
 .session-dialogue .silence {
   color: rgba(235,232,225,0.3);
@@ -152,7 +139,6 @@ hr::after {
   margin: 2em 0;
   font-size: var(--fs-small);
   letter-spacing: 0.15em;
-}
 .session-dialogue .silence::before,
 .session-dialogue .silence::after {
   content: "";
@@ -162,22 +148,18 @@ hr::after {
   background: rgba(192,168,120,0.15);
   vertical-align: middle;
   margin: 0 1em;
-}
 /* 10発言ごとの視覚リズム */
 .session-dialogue p:nth-child(10n) {
   margin-bottom: 2em;
   padding-bottom: 1.5em;
   border-bottom: 1px solid rgba(192,168,120,0.06);
-}
 
 /* === 4. text-panel の単調さ解消 === */
 section > .text-panel:nth-of-type(even) {
   background: rgba(8, 6, 16, 0.45);
   border-color: transparent;
-}
 section > .text-panel:nth-of-type(even)::before {
   display: none;
-}
 
 /* === 5. highlight-block の存在感微増 === */
 .highlight-block {
@@ -186,13 +168,11 @@ section > .text-panel:nth-of-type(even)::before {
   border-image: linear-gradient(180deg, var(--color-gold) 0%, rgba(192,168,120,0.15) 100%) 1;
   padding: 2rem 2rem 2rem 2.2rem;
   margin: 2.5rem 0;
-}
 .highlight-block p {
   font-size: var(--fs-lead);
   font-weight: 500;
   line-height: 2.2;
   color: var(--color-text-primary);
-}
 
 /* === 6. セクション見出し（h3） === */
 h3.section-heading {
@@ -205,7 +185,6 @@ h3.section-heading {
   padding-left: 1.2rem;
   border-left: 2px solid rgba(192,168,120,0.4);
   line-height: 1.6;
-}
 
 /* === Profiling Block === */
 .profiling-block {
@@ -216,14 +195,12 @@ h3.section-heading {
   backdrop-filter: blur(8px);
   position: relative;
   overflow: hidden;
-}
 .profiling-block::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(192,168,120,0.4), transparent);
-}
 .profiling-block h3 {
   font-size: var(--fs-body);
   color: var(--color-gold);
@@ -232,17 +209,14 @@ h3.section-heading {
   font-weight: 600;
   padding-bottom: 0.8rem;
   border-bottom: 1px solid rgba(192,168,120,0.1);
-}
 .profiling-block p {
   color: var(--color-text-reading);
   font-size: var(--fs-body);
   line-height: 1.9;
-}
 .profiling-block ul {
   list-style: none;
   padding: 0;
   margin: 0 0 1.5rem 0;
-}
 .profiling-block ul li {
   margin-bottom: 1rem;
   color: var(--color-text-reading);
@@ -252,12 +226,10 @@ h3.section-heading {
   position: relative;
   padding-bottom: 0.8rem;
   border-bottom: 1px solid rgba(192,168,120,0.04);
-}
 .profiling-block ul li:last-child {
   border-bottom: none;
   margin-bottom: 0;
   padding-bottom: 0;
-}
 .profiling-block ul li::before {
   content: "\2500\2500";
   position: absolute;
@@ -265,7 +237,6 @@ h3.section-heading {
   top: 0;
   color: rgba(192,168,120,0.35);
   font-size: 0.75em;
-}
 
 /* === CTA Block === */
 /* === Author Block === */
@@ -273,7 +244,6 @@ h3.section-heading {
   margin-top: 3rem;
   padding-top: 2rem;
   border-top: 1px solid rgba(192,168,120,0.15);
-}
 .author-block p { font-size: var(--fs-body); color: var(--color-text-reading); line-height: 2; }
 .author-block strong { color: var(--color-text-body); }
 
@@ -282,7 +252,6 @@ h3.section-heading {
   margin-top: 2rem;
   font-size: var(--fs-small);
   color: rgba(235,232,225,0.35);
-}
 
 /* === Series Note === */
 .series-note {
@@ -293,7 +262,6 @@ h3.section-heading {
   font-size: var(--fs-body);
   color: var(--color-text-reading);
   line-height: 2;
-}
 
 /* === 7. モバイル対応 === */
 @media (max-width: 600px) {
@@ -302,28 +270,23 @@ h3.section-heading {
     margin-top: 0.5rem;
     margin-bottom: 2rem;
     padding-top: 1.5rem;
-  }
   .chapter-number {
     font-size: var(--fs-micro);
     letter-spacing: 0.25em;
     margin-bottom: 0.4rem;
-  }
   h3.section-heading {
     font-size: var(--fs-lead);
     margin-top: 2rem;
     padding-left: 1rem;
-  }
   hr { margin: 3rem 0; }
   .session-dialogue {
     padding: 1.5rem 1.2rem;
     margin: 2rem auto;
-  }
   .session-dialogue .line-yanai { padding-left: 0.8rem; }
   .session-dialogue .line-character { margin-left: 0.8rem; }
   .profiling-block { padding: 1.5rem 1.2rem; }
   .highlight-block { padding: 1.5rem 1.2rem 1.5rem 1.4rem; }
   .text-panel { padding: 2rem 1.5rem; }
-}
 @media (max-width: 480px) {
   .text-panel p br,
   .pull-quote p br,
@@ -334,7 +297,6 @@ h3.section-heading {
   .session-dialogue p:nth-child(10n) {
     margin-bottom: 1.5em;
     padding-bottom: 1em;
-  }
 }
 </style>
 </head>
@@ -474,95 +436,95 @@ h3.section-heading {
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「シータさん、セッションに来てくださってありがとうございます。あなたはあなたに何をプレゼントしてあげたいですか？」</p>
 
-        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;帰りたいです。ゴンドアの谷に。あの農場に、帰りたい」</p>
+        <p class="line-character"><span class="speaker-sheeta">シータ：</span>「&hellip;&hellip;帰りたいです。ゴンドアの谷に。あの農場に、帰りたい」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「なぜ、帰れていないのですか？」</p>
 
-        <p class="line-character"><span class="speaker-sheeta">シータ</span>「帰れないわけじゃないんです。&hellip;&hellip;でも、帰っても同じにはならない。あたしが何者か、もう知ってしまったから」</p>
+        <p class="line-character"><span class="speaker-sheeta">シータ：</span>「帰れないわけじゃないんです。&hellip;&hellip;でも、帰っても同じにはならない。あたしが何者か、もう知ってしまったから」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「何を知ったのですか？」</p>
 
-        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;力です。あたしが唱えた言葉で、ロボットが動いて、要塞が壊れた。おばあさんの優しいおまじないと、兵器を動かす言葉が、同じだった。&hellip;&hellip;あたしの中にある言葉が、優しさにも暴力にもなる。それが怖い」</p>
+        <p class="line-character"><span class="speaker-sheeta">シータ：</span>「&hellip;&hellip;力です。あたしが唱えた言葉で、ロボットが動いて、要塞が壊れた。おばあさんの優しいおまじないと、兵器を動かす言葉が、同じだった。&hellip;&hellip;あたしの中にある言葉が、優しさにも暴力にもなる。それが怖い」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;だから帰れないんです。石がなくても、血の中にあの力がある。あたしが口を開くだけで、何かが起きてしまうかもしれない」</p>
+        <p class="line-character"><span class="speaker-sheeta">シータ：</span>「&hellip;&hellip;だから帰れないんです。石がなくても、血の中にあの力がある。あたしが口を開くだけで、何かが起きてしまうかもしれない」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「その力は、あなたが選んだものですか？」</p>
 
-        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;いいえ。おばあさんから受け継いだ。おばあさんもそのおばあさんから。ずっとずっと前から」</p>
+        <p class="line-character"><span class="speaker-sheeta">シータ：</span>「&hellip;&hellip;いいえ。おばあさんから受け継いだ。おばあさんもそのおばあさんから。ずっとずっと前から」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「なぜ、おばあさんはあなたにそれを渡したのですか？」</p>
 
-        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;わかりません。捨ててしまえばよかったのに。石も、名前も、呪文も、全部」</p>
+        <p class="line-character"><span class="speaker-sheeta">シータ：</span>「&hellip;&hellip;わかりません。捨ててしまえばよかったのに。石も、名前も、呪文も、全部」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「なぜ、おばあさんは捨てなかったのですか？」</p>
 
-        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;捨てなかった。隠したんです。暖炉の穴に。結婚式にしかつけなかった。おかあさんも、おばあさんも。みんなそうしてきた」</p>
+        <p class="line-character"><span class="speaker-sheeta">シータ：</span>「&hellip;&hellip;捨てなかった。隠したんです。暖炉の穴に。結婚式にしかつけなかった。おかあさんも、おばあさんも。みんなそうしてきた」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「なぜ、結婚式にだけつけたのですか？」</p>
 
-        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;大事な日だったから？ &hellip;&hellip;いいえ、違う。捨てられないほど大事なものだったから、一番大事な日にだけ出したんだ」</p>
+        <p class="line-character"><span class="speaker-sheeta">シータ：</span>「&hellip;&hellip;大事な日だったから？ &hellip;&hellip;いいえ、違う。捨てられないほど大事なものだったから、一番大事な日にだけ出したんだ」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「なぜ持っていたのですか？」</p>
 
-        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;」</p>
+        <p class="line-character"><span class="speaker-sheeta">シータ：</span>「&hellip;&hellip;」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;あたしの話を聞いても、何にもなりませんよ。あたしはただの田舎の女の子です」</p>
+        <p class="line-character"><span class="speaker-sheeta">シータ：</span>「&hellip;&hellip;あたしの話を聞いても、何にもなりませんよ。あたしはただの田舎の女の子です」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;本当に。あなたの時間の無駄です」</p>
+        <p class="line-character"><span class="speaker-sheeta">シータ：</span>「&hellip;&hellip;本当に。あなたの時間の無駄です」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;なんで黙ってるんですか。&hellip;&hellip;あたしに残ったのは──」</p>
+        <p class="line-character"><span class="speaker-sheeta">シータ：</span>「&hellip;&hellip;なんで黙ってるんですか。&hellip;&hellip;あたしに残ったのは──」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;おばあさんの言葉だけ。あたしに残ったのは、おばあさんの言葉だけです。『土に根をおろし、風と共に生きよう』って。あの歌は、消えない」</p>
+        <p class="line-character"><span class="speaker-sheeta">シータ：</span>「&hellip;&hellip;おばあさんの言葉だけ。あたしに残ったのは、おばあさんの言葉だけです。『土に根をおろし、風と共に生きよう』って。あの歌は、消えない」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「その歌を作ったのは、誰ですか？」</p>
 
-        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;ゴンドアの谷の歌です。でも谷の人たちは、もともとラピュタから降りてきた人たちだった。&hellip;&hellip;逃げたんだと思ってました。でも&hellip;&hellip;逃げたなら、石を捨てたはず。呪文も忘れたはず。でもおばあさんは全部持っていた。&hellip;&hellip;『決して使うな』と言いながら」</p>
+        <p class="line-character"><span class="speaker-sheeta">シータ：</span>「&hellip;&hellip;ゴンドアの谷の歌です。でも谷の人たちは、もともとラピュタから降りてきた人たちだった。&hellip;&hellip;逃げたんだと思ってました。でも&hellip;&hellip;逃げたなら、石を捨てたはず。呪文も忘れたはず。でもおばあさんは全部持っていた。&hellip;&hellip;『決して使うな』と言いながら」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「なぜ、『使うな』と言いながら教えたのですか？」</p>
 
-        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;『いいまじないに力を与えるには、悪い言葉も知らなければいけない』って。おばあさんはそう言った」</p>
+        <p class="line-character"><span class="speaker-sheeta">シータ：</span>「&hellip;&hellip;『いいまじないに力を与えるには、悪い言葉も知らなければいけない』って。おばあさんはそう言った」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「それは何のためですか？」</p>
 
-        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;何のため。何のためにおばあさんは、あたしにバルスを教えたの」</p>
+        <p class="line-character"><span class="speaker-sheeta">シータ：</span>「&hellip;&hellip;何のため。何のためにおばあさんは、あたしにバルスを教えたの」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;おばあさんは逃げたんじゃない。&hellip;&hellip;知っていて降りたんだ。ラピュタの力を全部知っていて、その上で、谷を選んだ」</p>
+        <p class="line-character"><span class="speaker-sheeta">シータ：</span>「&hellip;&hellip;おばあさんは逃げたんじゃない。&hellip;&hellip;知っていて降りたんだ。ラピュタの力を全部知っていて、その上で、谷を選んだ」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sheeta">シータ</span>「おばあさんは&hellip;&hellip;知っていたんだ。空を去ることが&hellip;&hellip;愛だって」</p>
+        <p class="line-character"><span class="speaker-sheeta">シータ：</span>「おばあさんは&hellip;&hellip;知っていたんだ。空を去ることが&hellip;&hellip;愛だって」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;でも、都合がよすぎませんか。あたしだって、バルスを唱えたのは勇気じゃない。追い詰められて、パズーの手を握って──」</p>
+        <p class="line-character"><span class="speaker-sheeta">シータ：</span>「&hellip;&hellip;でも、都合がよすぎませんか。あたしだって、バルスを唱えたのは勇気じゃない。追い詰められて、パズーの手を握って──」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「なぜ、一人では唱えられなかったのですか？」</p>
 
-        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;怖かったから。でもパズーの手があったから。一人の力じゃなくなった」</p>
+        <p class="line-character"><span class="speaker-sheeta">シータ：</span>「&hellip;&hellip;怖かったから。でもパズーの手があったから。一人の力じゃなくなった」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「あなたはあなたに、何をプレゼントしてあげたいですか？」</p>
 
-        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;」</p>
+        <p class="line-character"><span class="speaker-sheeta">シータ：</span>「&hellip;&hellip;」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sheeta">シータ</span>「&hellip;&hellip;最初に聞かれたとき、帰りたいって言いました。&hellip;&hellip;でも今は、違う」</p>
+        <p class="line-character"><span class="speaker-sheeta">シータ：</span>「&hellip;&hellip;最初に聞かれたとき、帰りたいって言いました。&hellip;&hellip;でも今は、違う」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sheeta">シータ</span>「あたしがあたしにプレゼントしたいのは&hellip;&hellip;ラピュタの血を持ったまま、土に帰れるあたし、です。&hellip;&hellip;力を怖がるんじゃなくて、力があることを知った上で、畑を耕すあたし。&hellip;&hellip;おばあさんがそうしたように」</p>
+        <p class="line-character"><span class="speaker-sheeta">シータ：</span>「あたしがあたしにプレゼントしたいのは&hellip;&hellip;ラピュタの血を持ったまま、土に帰れるあたし、です。&hellip;&hellip;力を怖がるんじゃなくて、力があることを知った上で、畑を耕すあたし。&hellip;&hellip;おばあさんがそうしたように」</p>
 
       </div>
 
@@ -749,7 +711,6 @@ h3.section-heading {
       var numSpan = h.querySelector('.chapter-number');
       if (numSpan) {
         text = text.replace(numSpan.textContent.replace(/\s+/g, ' ').trim(), '').trim();
-      }
       // Truncate long titles
       if (text.length > 28) text = text.substring(0, 28) + '\u2026';
       a.textContent = text;
@@ -781,7 +742,6 @@ h3.section-heading {
       links.forEach(function(a, i){
         a.classList.toggle('is-active', i === current);
       });
-    }
 
     window.addEventListener('scroll', updateToc, {passive: true});
     updateToc();
@@ -795,7 +755,6 @@ h3.section-heading {
     document.addEventListener('click', function(e){
       if (!toc.contains(e.target) && e.target !== toggle) {
         toc.classList.remove('is-open');
-      }
     });
   })();
   </script>
@@ -855,7 +814,6 @@ h3.section-heading {
   },
   "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-laputa/sheeta.html",
   "inLanguage": "ja"
-}
 </script>
   <!-- Search Modal -->
   <div class="search-overlay">

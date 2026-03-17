@@ -30,8 +30,7 @@
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"></noscript>
   <link rel="stylesheet" href="../../css/style.min.css?v=27">
 
-<style>  50% { background-position: 0% 50%; }
-}
+<style>
 
 /* =============================================
    視認性・読みやすさ強化CSS
@@ -51,7 +50,6 @@ h2.chapter-heading {
   text-align: center;
   position: relative;
   padding-top: 2rem;
-}
 h2.chapter-heading::before {
   content: "";
   position: absolute;
@@ -61,7 +59,6 @@ h2.chapter-heading::before {
   width: 40px;
   height: 1px;
   background: var(--color-gold);
-}
 h2.chapter-heading::after {
   content: "";
   display: block;
@@ -69,7 +66,6 @@ h2.chapter-heading::after {
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(192,168,120,0.5), transparent);
   margin: 1.2rem auto 0;
-}
 .chapter-number {
   display: block;
   font-family: var(--font-serif-en);
@@ -79,7 +75,6 @@ h2.chapter-heading::after {
   text-transform: uppercase;
   color: var(--color-gold);
   margin-bottom: 0.6rem;
-}
 
 /* === 2. 区切り線 — 装飾付き === */
 hr {
@@ -89,14 +84,12 @@ hr {
   margin: 4.5rem 0;
   text-align: center;
   overflow: visible;
-}
 hr::before {
   content: "";
   display: block;
   width: 100%;
   height: 1px;
   background: linear-gradient(90deg, transparent 0%, rgba(192,168,120,0.08) 15%, rgba(192,168,120,0.2) 50%, rgba(192,168,120,0.08) 85%, transparent 100%);
-}
 hr::after {
   content: "\25C6";
   display: block;
@@ -105,7 +98,6 @@ hr::after {
   margin-top: -0.35em;
   letter-spacing: 1em;
   line-height: 1;
-}
 
 /* === 3. セッション対話 — 読みやすさ向上 === */
 .session-dialogue {
@@ -116,7 +108,6 @@ hr::after {
   border: 1px solid rgba(192,168,120,0.06);
   border-radius: 2px;
   position: relative;
-}
 .session-dialogue::before {
   content: "SESSION";
   position: absolute;
@@ -128,11 +119,9 @@ hr::after {
   color: rgba(192,168,120,0.4);
   background: var(--color-bg-deep);
   padding: 0 0.8rem;
-}
 .session-dialogue p {
   margin-bottom: 1.1em;
   line-height: 2.2;
-}
 .session-dialogue .speaker-yanai { color: var(--color-gold); font-weight: 600; font-size: var(--fs-body); }
 .session-dialogue .speaker-sophie { color: #b8a0d8; font-weight: 600; font-size: var(--fs-body); }
 
@@ -140,11 +129,9 @@ hr::after {
 .session-dialogue .line-yanai {
   border-left: 2px solid rgba(192,168,120,0.15);
   padding-left: 1.2rem;
-}
 /* キャラの発言：少しインデント */
 .session-dialogue .line-character {
   margin-left: 1.4rem;
-}
 /* 沈黙マーカー：中央揃え＋装飾線 */
 .session-dialogue .silence {
   color: rgba(235,232,225,0.3);
@@ -153,7 +140,6 @@ hr::after {
   margin: 2em 0;
   font-size: var(--fs-small);
   letter-spacing: 0.15em;
-}
 .session-dialogue .silence::before,
 .session-dialogue .silence::after {
   content: "";
@@ -163,22 +149,18 @@ hr::after {
   background: rgba(192,168,120,0.15);
   vertical-align: middle;
   margin: 0 1em;
-}
 /* 10発言ごとの視覚リズム */
 .session-dialogue p:nth-child(10n) {
   margin-bottom: 2em;
   padding-bottom: 1.5em;
   border-bottom: 1px solid rgba(192,168,120,0.06);
-}
 
 /* === 4. text-panel の単調さ解消 === */
 section > .text-panel:nth-of-type(even) {
   background: rgba(8, 6, 16, 0.45);
   border-color: transparent;
-}
 section > .text-panel:nth-of-type(even)::before {
   display: none;
-}
 
 /* === 5. highlight-block の存在感微増 === */
 .highlight-block {
@@ -187,13 +169,11 @@ section > .text-panel:nth-of-type(even)::before {
   border-image: linear-gradient(180deg, var(--color-gold) 0%, rgba(192,168,120,0.15) 100%) 1;
   padding: 2rem 2rem 2rem 2.2rem;
   margin: 2.5rem 0;
-}
 .highlight-block p {
   font-size: var(--fs-lead);
   font-weight: 500;
   line-height: 2.2;
   color: var(--color-text-primary);
-}
 
 /* === 6. セクション見出し（h3） === */
 h3.section-heading {
@@ -206,7 +186,6 @@ h3.section-heading {
   padding-left: 1.2rem;
   border-left: 2px solid rgba(192,168,120,0.4);
   line-height: 1.6;
-}
 
 /* === Profiling Block === */
 .profiling-block {
@@ -217,14 +196,12 @@ h3.section-heading {
   backdrop-filter: blur(8px);
   position: relative;
   overflow: hidden;
-}
 .profiling-block::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(192,168,120,0.4), transparent);
-}
 .profiling-block h3 {
   font-size: var(--fs-body);
   color: var(--color-gold);
@@ -233,12 +210,10 @@ h3.section-heading {
   font-weight: 600;
   padding-bottom: 0.8rem;
   border-bottom: 1px solid rgba(192,168,120,0.1);
-}
 .profiling-block ul {
   list-style: none;
   padding: 0;
   margin: 0 0 1.5rem 0;
-}
 .profiling-block ul li {
   margin-bottom: 1rem;
   color: var(--color-text-reading);
@@ -248,12 +223,10 @@ h3.section-heading {
   position: relative;
   padding-bottom: 0.8rem;
   border-bottom: 1px solid rgba(192,168,120,0.04);
-}
 .profiling-block ul li:last-child {
   border-bottom: none;
   margin-bottom: 0;
   padding-bottom: 0;
-}
 .profiling-block ul li::before {
   content: "\2500\2500";
   position: absolute;
@@ -261,7 +234,6 @@ h3.section-heading {
   top: 0;
   color: rgba(192,168,120,0.35);
   font-size: 0.75em;
-}
 
 /* === Comparison Table === */
 
@@ -271,7 +243,6 @@ h3.section-heading {
   margin-top: 3rem;
   padding-top: 2rem;
   border-top: 1px solid rgba(192,168,120,0.15);
-}
 .author-block p { font-size: var(--fs-body); color: var(--color-text-reading); line-height: 2; }
 .author-block strong { color: var(--color-text-body); }
 
@@ -280,7 +251,6 @@ h3.section-heading {
   margin-top: 2rem;
   font-size: var(--fs-small);
   color: rgba(235,232,225,0.35);
-}
 
 /* === Series Note === */
 .series-note {
@@ -291,7 +261,6 @@ h3.section-heading {
   font-size: var(--fs-body);
   color: var(--color-text-reading);
   line-height: 2;
-}
 
 /* === 7. モバイル対応 === */
 @media (max-width: 600px) {
@@ -300,22 +269,18 @@ h3.section-heading {
     margin-top: 0.5rem;
     margin-bottom: 2rem;
     padding-top: 1.5rem;
-  }
   .chapter-number {
     font-size: var(--fs-micro);
     letter-spacing: 0.25em;
     margin-bottom: 0.4rem;
-  }
   h3.section-heading {
     font-size: var(--fs-lead);
     margin-top: 2rem;
     padding-left: 1rem;
-  }
   hr { margin: 3rem 0; }
   .session-dialogue {
     padding: 1.5rem 1.2rem;
     margin: 2rem auto;
-  }
   .session-dialogue .line-yanai { padding-left: 0.8rem; }
   .session-dialogue .line-character { margin-left: 0.8rem; }
   .profiling-block { padding: 1.5rem 1.2rem; }
@@ -323,7 +288,6 @@ h3.section-heading {
   
   .highlight-block { padding: 1.5rem 1.2rem 1.5rem 1.4rem; }
   .text-panel { padding: 2rem 1.5rem; }
-}
 @media (max-width: 480px) {
   .text-panel p br,
   .pull-quote p br,
@@ -334,7 +298,6 @@ h3.section-heading {
   .session-dialogue p:nth-child(10n) {
     margin-bottom: 1.5em;
     padding-bottom: 1em;
-  }
 }
 </style>
 </head>
@@ -480,187 +443,187 @@ h3.section-heading {
       <div class="session-dialogue fade-in">
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「ソフィーさん、セッションに来てくださってありがとうございます。あなたはあなたに、何をプレゼントしてあげたいですか？」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「&hellip;&hellip;プレゼント、ですか」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「&hellip;&hellip;プレゼント、ですか」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「私に、ですか。&hellip;&hellip;考えたことがないです。私は帽子を作る人間で&hellip;&hellip;プレゼントをもらう側じゃなくて、作る側だったので。&hellip;&hellip;作る側にいるのが、自然だったから」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「私に、ですか。&hellip;&hellip;考えたことがないです。私は帽子を作る人間で&hellip;&hellip;プレゼントをもらう側じゃなくて、作る側だったので。&hellip;&hellip;作る側にいるのが、自然だったから」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「なぜ作る側にいるのが自然だったんですか？」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「それは&hellip;&hellip;長女だから。お父さんが遺したお店を誰かが継がなきゃいけなくて。妹のレティーは活発で、外に出る方が向いてたし&hellip;&hellip;私は、あのお店にいるのが自然だったんです」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「それは&hellip;&hellip;長女だから。お父さんが遺したお店を誰かが継がなきゃいけなくて。妹のレティーは活発で、外に出る方が向いてたし&hellip;&hellip;私は、あのお店にいるのが自然だったんです」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「なぜ長女だと、お店にいるのが自然なんですか？」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「なぜ、って&hellip;&hellip;。だって、長女はそういうものでしょう？ インガリーでは昔から、三人姉妹の長女は一番つまらない運命って決まってるんです。冒険は末っ子のもので、長女には特別なことなんか起こらない。それは&hellip;&hellip;みんな知ってることです」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「なぜ、って&hellip;&hellip;。だって、長女はそういうものでしょう？ インガリーでは昔から、三人姉妹の長女は一番つまらない運命って決まってるんです。冒険は末っ子のもので、長女には特別なことなんか起こらない。それは&hellip;&hellip;みんな知ってることです」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「なぜ、それが決まっているんですか？」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「&hellip;&hellip;誰、って&hellip;&hellip;。おとぎ話です。昔からそうだって&hellip;&hellip;」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「&hellip;&hellip;誰、って&hellip;&hellip;。おとぎ話です。昔からそうだって&hellip;&hellip;」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「なぜおとぎ話が、ソフィーさんの人生を決められるんですか？」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「&hellip;&hellip;いえ、おとぎ話が決めたわけじゃ&hellip;&hellip;。でも、私は実際に長女で、実際に帽子屋を継いで、実際に何も起こらなかった。だから&hellip;&hellip;合ってるんです。おとぎ話が正しかったんです」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「&hellip;&hellip;いえ、おとぎ話が決めたわけじゃ&hellip;&hellip;。でも、私は実際に長女で、実際に帽子屋を継いで、実際に何も起こらなかった。だから&hellip;&hellip;合ってるんです。おとぎ話が正しかったんです」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「なぜ何も起こらなかったんですか？」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「&hellip;&hellip;私が出なかったから。帽子屋から。外に」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「&hellip;&hellip;私が出なかったから。帽子屋から。外に」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「なぜ出なかったんですか？」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「&hellip;&hellip;出ても仕方がなかったから。私が出て行ったところで、何も&hellip;&hellip;」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「&hellip;&hellip;出ても仕方がなかったから。私が出て行ったところで、何も&hellip;&hellip;」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「何のために、出ても仕方がないと思ったんですか？」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「何のため&hellip;&hellip;。だって、私みたいな&hellip;&hellip;地味で、きれいでもない人間が外に出たって。レティーみたいに可愛くないし。特別な力もないし。ハウルだって、美人しか狙わないって言うし&hellip;&hellip;」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「何のため&hellip;&hellip;。だって、私みたいな&hellip;&hellip;地味で、きれいでもない人間が外に出たって。レティーみたいに可愛くないし。特別な力もないし。ハウルだって、美人しか狙わないって言うし&hellip;&hellip;」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「&hellip;&hellip;今、二つのことを言いました。『長女だから何も起こらない』と、『きれいじゃないから何も起こらない』。&hellip;&hellip;同じことだと思ってたけど&hellip;&hellip;」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「&hellip;&hellip;今、二つのことを言いました。『長女だから何も起こらない』と、『きれいじゃないから何も起こらない』。&hellip;&hellip;同じことだと思ってたけど&hellip;&hellip;」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「&hellip;&hellip;三女だったとしても、きれいじゃなかったら何も起こらない、って思う。じゃあ長女かどうかは関係ない&hellip;&hellip;？ でも&hellip;&hellip;でも、きれいじゃないのは事実です。レティーと並べば誰だって&hellip;&hellip;」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「&hellip;&hellip;三女だったとしても、きれいじゃなかったら何も起こらない、って思う。じゃあ長女かどうかは関係ない&hellip;&hellip;？ でも&hellip;&hellip;でも、きれいじゃないのは事実です。レティーと並べば誰だって&hellip;&hellip;」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「誰がソフィーさんに『きれいじゃない』と言ったんですか？」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「&hellip;&hellip;誰も言ってません」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「&hellip;&hellip;誰も言ってません」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「&hellip;&hellip;言ってません。ただ&hellip;&hellip;分かるんです。鏡を見れば分かる。レティーを見れば分かる。私は&hellip;&hellip;」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「&hellip;&hellip;言ってません。ただ&hellip;&hellip;分かるんです。鏡を見れば分かる。レティーを見れば分かる。私は&hellip;&hellip;」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「なぜ、それが分かるんですか？」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「レティーと比べて&hellip;&hellip;。カフェの店員たちと比べて&hellip;&hellip;。パレードに行く女の子たちと比べて&hellip;&hellip;」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「レティーと比べて&hellip;&hellip;。カフェの店員たちと比べて&hellip;&hellip;。パレードに行く女の子たちと比べて&hellip;&hellip;」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「何のために比べていたんですか？」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「何のため&hellip;&hellip;。&hellip;&hellip;分からない。&hellip;&hellip;ただ&hellip;&hellip;」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「何のため&hellip;&hellip;。&hellip;&hellip;分からない。&hellip;&hellip;ただ&hellip;&hellip;」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「&hellip;&hellip;帰宅途中に、兵士に声をかけられたことがあります。ナンパだけど&hellip;&hellip;。誰にでも声をかけるような人たちだって思ってたけど。&hellip;&hellip;本当にそうだったのかな。&hellip;&hellip;分からないです。でも&hellip;&hellip;。私、なんでこんなに自分のことを『きれいじゃない』って思い込んでたんだろう。誰にも言われてないのに。証拠もないのに」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「&hellip;&hellip;帰宅途中に、兵士に声をかけられたことがあります。ナンパだけど&hellip;&hellip;。誰にでも声をかけるような人たちだって思ってたけど。&hellip;&hellip;本当にそうだったのかな。&hellip;&hellip;分からないです。でも&hellip;&hellip;。私、なんでこんなに自分のことを『きれいじゃない』って思い込んでたんだろう。誰にも言われてないのに。証拠もないのに」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「なぜだと思いますか？」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「&hellip;&hellip;怖かったから、かもしれない」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「&hellip;&hellip;怖かったから、かもしれない」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「何が怖かったんですか？」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「&hellip;&hellip;きれいだと思って、違ったら。期待して、裏切られたら。外に出て、何も起こらなかったら。&hellip;&hellip;先に自分で『きれいじゃない』って決めておけば、傷つかなくて済む」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「&hellip;&hellip;きれいだと思って、違ったら。期待して、裏切られたら。外に出て、何も起こらなかったら。&hellip;&hellip;先に自分で『きれいじゃない』って決めておけば、傷つかなくて済む」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「&hellip;&hellip;そうだ。私、自分で決めたんだ。『きれいじゃない』って。『何も起こらない』って。長女だからじゃなくて。おとぎ話のせいじゃなくて。私が&hellip;&hellip;自分で&hellip;&hellip;」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「&hellip;&hellip;そうだ。私、自分で決めたんだ。『きれいじゃない』って。『何も起こらない』って。長女だからじゃなくて。おとぎ話のせいじゃなくて。私が&hellip;&hellip;自分で&hellip;&hellip;」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「&hellip;&hellip;こんな話をしても仕方ないでしょう。私の話なんか聞いても、あなたには何の得もないですよ」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「&hellip;&hellip;こんな話をしても仕方ないでしょう。私の話なんか聞いても、あなたには何の得もないですよ」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「&hellip;&hellip;返事、してくれないんですね」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「&hellip;&hellip;返事、してくれないんですね」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「&hellip;&hellip;追い出さないんですか。つまらない話だって、もういいって&hellip;&hellip;」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「&hellip;&hellip;追い出さないんですか。つまらない話だって、もういいって&hellip;&hellip;」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「&hellip;&hellip;なんで。なんで黙ってるのに、ここにいるんですか。私から何かを欲しがってるわけでもないのに&hellip;&hellip;」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「&hellip;&hellip;なんで。なんで黙ってるのに、ここにいるんですか。私から何かを欲しがってるわけでもないのに&hellip;&hellip;」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「&hellip;&hellip;&hellip;&hellip;。&hellip;&hellip;いつもこうだった。自分で自分を追い出してた。帽子屋でも。&hellip;&hellip;誰かが『ここにいていいよ』って言う前に、自分で『いなくていい理由』を作って&hellip;&hellip;」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「&hellip;&hellip;&hellip;&hellip;。&hellip;&hellip;いつもこうだった。自分で自分を追い出してた。帽子屋でも。&hellip;&hellip;誰かが『ここにいていいよ』って言う前に、自分で『いなくていい理由』を作って&hellip;&hellip;」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「なぜ、いなくていい理由を作っていたんですか？」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「&hellip;&hellip;いていいって言われて、後から『やっぱりいなくていい』って言われるのが怖かったから。&hellip;&hellip;最初から自分で出ておけば、追い出される痛みだけは味わわなくて済む」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「&hellip;&hellip;いていいって言われて、後から『やっぱりいなくていい』って言われるのが怖かったから。&hellip;&hellip;最初から自分で出ておけば、追い出される痛みだけは味わわなくて済む」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「&hellip;&hellip;ずっとそうだった。お父さんがいなくなって、お母さんが再婚して出ていって。&hellip;&hellip;残ったのは帽子屋だけで。帽子屋は私を追い出さないから。帽子は私を裏切らないから。&hellip;&hellip;だから、あそこにいた」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「&hellip;&hellip;ずっとそうだった。お父さんがいなくなって、お母さんが再婚して出ていって。&hellip;&hellip;残ったのは帽子屋だけで。帽子屋は私を追い出さないから。帽子は私を裏切らないから。&hellip;&hellip;だから、あそこにいた」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「&hellip;&hellip;でも。呪いをかけられたとき&hellip;&hellip;泣かなかったんです。90歳のおばあちゃんにされたのに。怖くなかった。むしろ&hellip;&hellip;ほっとした」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「&hellip;&hellip;でも。呪いをかけられたとき&hellip;&hellip;泣かなかったんです。90歳のおばあちゃんにされたのに。怖くなかった。むしろ&hellip;&hellip;ほっとした」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「なぜほっとしたんですか？」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「&hellip;&hellip;もう誰にも『きれいかどうか』で見られなくて済むから。おばあちゃんに美しさなんて誰も期待しない。期待されないなら、がっかりされることもない。&hellip;&hellip;ひどい話ですよね。呪いをかけられてほっとするなんて」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「&hellip;&hellip;もう誰にも『きれいかどうか』で見られなくて済むから。おばあちゃんに美しさなんて誰も期待しない。期待されないなら、がっかりされることもない。&hellip;&hellip;ひどい話ですよね。呪いをかけられてほっとするなんて」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「なぜ、おばあちゃんの姿のとき、すべてができるようになったんですか？」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「&hellip;&hellip;失うものがなかったから。若さも、見た目も、全部もう失ってたから。失うものがない人間は&hellip;&hellip;強い。翌朝には家を出てました。18年間出られなかったのに。山を歩いて、知らない城に上がり込んで、悪魔と取引して、王宮で啖呵を切って&hellip;&hellip;」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「&hellip;&hellip;失うものがなかったから。若さも、見た目も、全部もう失ってたから。失うものがない人間は&hellip;&hellip;強い。翌朝には家を出てました。18年間出られなかったのに。山を歩いて、知らない城に上がり込んで、悪魔と取引して、王宮で啖呵を切って&hellip;&hellip;」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「では、若い姿のとき、何を失うのが怖かったんですか？」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「&hellip;&hellip;。&hellip;&hellip;だって、もともと何も持ってなかったのに。きれいじゃないし、特別じゃないし。あれ。何も持ってなかったのに、何を失うのが怖かったんだろう&hellip;&hellip;」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「&hellip;&hellip;。&hellip;&hellip;だって、もともと何も持ってなかったのに。きれいじゃないし、特別じゃないし。あれ。何も持ってなかったのに、何を失うのが怖かったんだろう&hellip;&hellip;」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「&hellip;&hellip;可能性、かもしれない。もしかしたら、いつか、誰かに見てもらえるかもしれないっていう&hellip;&hellip;。もしかしたら、何かが起こるかもしれないっていう&hellip;&hellip;。その『もしかしたら』を、潰すのが怖くて。だから先に自分で『何も起こらない』って決めて。そうすれば『もしかしたら』を守れるから。&hellip;&hellip;帽子屋の中で。ずっと」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「&hellip;&hellip;可能性、かもしれない。もしかしたら、いつか、誰かに見てもらえるかもしれないっていう&hellip;&hellip;。もしかしたら、何かが起こるかもしれないっていう&hellip;&hellip;。その『もしかしたら』を、潰すのが怖くて。だから先に自分で『何も起こらない』って決めて。そうすれば『もしかしたら』を守れるから。&hellip;&hellip;帽子屋の中で。ずっと」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「&hellip;&hellip;おばあちゃんになったとき、その『もしかしたら』が完全に消えたんです。もう可能性なんかない。おばあちゃんだもの。だから&hellip;&hellip;怖くなくなった。守るものがなくなったから。そしたら&hellip;&hellip;全部できた。城に入れた。啖呵を切れた。ハウルを好きだと&hellip;&hellip;認められた」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「&hellip;&hellip;おばあちゃんになったとき、その『もしかしたら』が完全に消えたんです。もう可能性なんかない。おばあちゃんだもの。だから&hellip;&hellip;怖くなくなった。守るものがなくなったから。そしたら&hellip;&hellip;全部できた。城に入れた。啖呵を切れた。ハウルを好きだと&hellip;&hellip;認められた」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「&hellip;&hellip;あれ。おかしい。サリマンの前で啖呵を切ったとき、私&hellip;&hellip;若返ってた。おばあちゃんの姿から、どんどん若くなって。&hellip;&hellip;おばあちゃんじゃなくても、できてた。あのとき、自分を消してなかった。ハウルのことをまっすぐ言ってて、『私なんか』って思ってなかった。&hellip;&hellip;ああ」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「&hellip;&hellip;あれ。おかしい。サリマンの前で啖呵を切ったとき、私&hellip;&hellip;若返ってた。おばあちゃんの姿から、どんどん若くなって。&hellip;&hellip;おばあちゃんじゃなくても、できてた。あのとき、自分を消してなかった。ハウルのことをまっすぐ言ってて、『私なんか』って思ってなかった。&hellip;&hellip;ああ」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「&hellip;&hellip;&hellip;&hellip;呪いは&hellip;&hellip;荒地の魔女がかけた呪いは、90歳の老婆になる呪い。でも&hellip;&hellip;もっと前から&hellip;&hellip;私は自分で自分に呪いをかけてた。『きれいじゃない』。『何も起こらない』。『長女だから』。&hellip;&hellip;全部、自分で。荒地の魔女の呪いが&hellip;&hellip;それを壊したんだ。おばあちゃんになったら、もう自分の呪いが機能しなくなるから。若さを基準にした自己否定が、意味を失うから」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「&hellip;&hellip;&hellip;&hellip;呪いは&hellip;&hellip;荒地の魔女がかけた呪いは、90歳の老婆になる呪い。でも&hellip;&hellip;もっと前から&hellip;&hellip;私は自分で自分に呪いをかけてた。『きれいじゃない』。『何も起こらない』。『長女だから』。&hellip;&hellip;全部、自分で。荒地の魔女の呪いが&hellip;&hellip;それを壊したんだ。おばあちゃんになったら、もう自分の呪いが機能しなくなるから。若さを基準にした自己否定が、意味を失うから」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「&hellip;&hellip;呪いじゃなかった」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「&hellip;&hellip;呪いじゃなかった」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「あのおばあちゃんの私が&hellip;&hellip;呪いじゃなかった。あれが&hellip;&hellip;本当の私だった。勇敢で、口うるさくて、怖いもの知らずで、思ったことを全部言えて。&hellip;&hellip;18年間、帽子屋の中で自分が消してた私が&hellip;&hellip;おばあちゃんの姿で初めて、出てきた」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「あのおばあちゃんの私が&hellip;&hellip;呪いじゃなかった。あれが&hellip;&hellip;本当の私だった。勇敢で、口うるさくて、怖いもの知らずで、思ったことを全部言えて。&hellip;&hellip;18年間、帽子屋の中で自分が消してた私が&hellip;&hellip;おばあちゃんの姿で初めて、出てきた」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「&hellip;&hellip;でも待って。それって都合が良すぎません？ 呪いのおかげで自分が見つかったなんて。&hellip;&hellip;ただ帽子屋から逃げたかっただけで、呪いを口実にして&hellip;&hellip;」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「&hellip;&hellip;でも待って。それって都合が良すぎません？ 呪いのおかげで自分が見つかったなんて。&hellip;&hellip;ただ帽子屋から逃げたかっただけで、呪いを口実にして&hellip;&hellip;」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「なぜ、都合が良すぎると思うんですか？」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「&hellip;&hellip;だって。自分で自分に呪いをかけてた人間が、別の呪いで解放されるなんて。&hellip;&hellip;そんなこと、許されていいのかな」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「&hellip;&hellip;だって。自分で自分に呪いをかけてた人間が、別の呪いで解放されるなんて。&hellip;&hellip;そんなこと、許されていいのかな」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「なぜ許されないと思うんですか？」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「&hellip;&hellip;それも&hellip;&hellip;。それも、自分で決めてるだけ、なのかな。『許されない』って。&hellip;&hellip;また自分で呪いをかけてる。今度は『許されない』っていう呪いを」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「&hellip;&hellip;それも&hellip;&hellip;。それも、自分で決めてるだけ、なのかな。『許されない』って。&hellip;&hellip;また自分で呪いをかけてる。今度は『許されない』っていう呪いを」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「&hellip;&hellip;&hellip;&hellip;。&hellip;&hellip;何度でもかけちゃうんだ、私。自分に。解いても解いても、また新しい呪いを。&hellip;&hellip;でも。今、気づいてる。かけてるって、気づいてる。&hellip;&hellip;帽子屋にいたときは、気づいてなかった」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「&hellip;&hellip;&hellip;&hellip;。&hellip;&hellip;何度でもかけちゃうんだ、私。自分に。解いても解いても、また新しい呪いを。&hellip;&hellip;でも。今、気づいてる。かけてるって、気づいてる。&hellip;&hellip;帽子屋にいたときは、気づいてなかった」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「もう一度聞きます。ソフィーさんは、ソフィーさんに、何をプレゼントしてあげたいですか？」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「&hellip;&hellip;&hellip;&hellip;」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「&hellip;&hellip;&hellip;&hellip;」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「&hellip;&hellip;許可、です」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「&hellip;&hellip;許可、です」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「自分で自分に呪いをかけなくていいという&hellip;&hellip;許可。きれいじゃなくてもいい。特別じゃなくてもいい。でも、だからって自分を消さなくていいっていう。ここにいていいっていう」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「自分で自分に呪いをかけなくていいという&hellip;&hellip;許可。きれいじゃなくてもいい。特別じゃなくてもいい。でも、だからって自分を消さなくていいっていう。ここにいていいっていう」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「&hellip;&hellip;帽子屋にいたとき、一度も自分に渡せなかったもの。誰かにもらうものじゃない。&hellip;&hellip;私が、私に。&hellip;&hellip;ずっと自分でかけてた呪いだから。解くのも&hellip;&hellip;自分で」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「&hellip;&hellip;帽子屋にいたとき、一度も自分に渡せなかったもの。誰かにもらうものじゃない。&hellip;&hellip;私が、私に。&hellip;&hellip;ずっと自分でかけてた呪いだから。解くのも&hellip;&hellip;自分で」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「&hellip;&hellip;ハウルの心臓を戻したとき。あの瞬間、私の呪いも解けた。誰かの中で壊れたものを元に戻すとき&hellip;&hellip;私の中で凍ってたものも、動き出した。&hellip;&hellip;そういうことだったのかもしれない。私のプレゼントは、私の中にあるんじゃなくて。誰かの中にある壊れたものを見つけて、戻すことで&hellip;&hellip;私にも戻ってくる」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「&hellip;&hellip;ハウルの心臓を戻したとき。あの瞬間、私の呪いも解けた。誰かの中で壊れたものを元に戻すとき&hellip;&hellip;私の中で凍ってたものも、動き出した。&hellip;&hellip;そういうことだったのかもしれない。私のプレゼントは、私の中にあるんじゃなくて。誰かの中にある壊れたものを見つけて、戻すことで&hellip;&hellip;私にも戻ってくる」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sophie">ソフィー</span>「&hellip;&hellip;変ですよね。自分にプレゼントしたいものが、自分の中にないなんて。でも&hellip;&hellip;そうなんです。帽子を作ってたときも、城を掃除してたときも、ハウルの心臓を戻したときも。&hellip;&hellip;誰かのために手を動かしてるとき、私は、私を消してなかった」</p>
+        <p class="line-character"><span class="speaker-sophie">ソフィー：</span>「&hellip;&hellip;変ですよね。自分にプレゼントしたいものが、自分の中にないなんて。でも&hellip;&hellip;そうなんです。帽子を作ってたときも、城を掃除してたときも、ハウルの心臓を戻したときも。&hellip;&hellip;誰かのために手を動かしてるとき、私は、私を消してなかった」</p>
       </div>
 
     </section>
@@ -1100,7 +1063,6 @@ h3.section-heading {
       var numSpan = h.querySelector('.chapter-number');
       if (numSpan) {
         text = text.replace(numSpan.textContent.replace(/\s+/g, ' ').trim(), '').trim();
-      }
       // Truncate long titles
       if (text.length > 28) text = text.substring(0, 28) + '\u2026';
       a.textContent = text;
@@ -1132,7 +1094,6 @@ h3.section-heading {
       links.forEach(function(a, i){
         a.classList.toggle('is-active', i === current);
       });
-    }
 
     window.addEventListener('scroll', updateToc, {passive: true});
     updateToc();
@@ -1146,7 +1107,6 @@ h3.section-heading {
     document.addEventListener('click', function(e){
       if (!toc.contains(e.target) && e.target !== toggle) {
         toc.classList.remove('is-open');
-      }
     });
   })();
   </script>
@@ -1210,7 +1170,6 @@ h3.section-heading {
     "@type": "WebSite",
     "name": "実存科学研究所",
     "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
-  }
 }
 </script>
   <!-- Search Modal -->

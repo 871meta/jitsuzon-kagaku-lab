@@ -30,8 +30,7 @@
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"></noscript>
   <link rel="stylesheet" href="../../css/style.min.css?v=27">
 
-<style>  50% { background-position: 0% 50%; }
-}
+<style>
 
 /* =============================================
    視認性・読みやすさ強化CSS
@@ -51,7 +50,6 @@ h2.chapter-heading {
   text-align: center;
   position: relative;
   padding-top: 2rem;
-}
 h2.chapter-heading::before {
   content: "";
   position: absolute;
@@ -61,7 +59,6 @@ h2.chapter-heading::before {
   width: 40px;
   height: 1px;
   background: var(--color-gold);
-}
 h2.chapter-heading::after {
   content: "";
   display: block;
@@ -69,7 +66,6 @@ h2.chapter-heading::after {
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(192,168,120,0.5), transparent);
   margin: 1.2rem auto 0;
-}
 .chapter-number {
   display: block;
   font-family: var(--font-serif-en);
@@ -79,7 +75,6 @@ h2.chapter-heading::after {
   text-transform: uppercase;
   color: var(--color-gold);
   margin-bottom: 0.6rem;
-}
 
 /* === 2. 区切り線 — 装飾付き === */
 hr {
@@ -89,14 +84,12 @@ hr {
   margin: 4.5rem 0;
   text-align: center;
   overflow: visible;
-}
 hr::before {
   content: "";
   display: block;
   width: 100%;
   height: 1px;
   background: linear-gradient(90deg, transparent 0%, rgba(192,168,120,0.08) 15%, rgba(192,168,120,0.2) 50%, rgba(192,168,120,0.08) 85%, transparent 100%);
-}
 hr::after {
   content: "\25C6";
   display: block;
@@ -105,7 +98,6 @@ hr::after {
   margin-top: -0.35em;
   letter-spacing: 1em;
   line-height: 1;
-}
 
 /* === 3. セッション対話 — 読みやすさ向上 === */
 .session-dialogue {
@@ -116,7 +108,6 @@ hr::after {
   border: 1px solid rgba(192,168,120,0.06);
   border-radius: 2px;
   position: relative;
-}
 .session-dialogue::before {
   content: "SESSION";
   position: absolute;
@@ -128,11 +119,9 @@ hr::after {
   color: rgba(192,168,120,0.4);
   background: var(--color-bg-deep);
   padding: 0 0.8rem;
-}
 .session-dialogue p {
   margin-bottom: 1.1em;
   line-height: 2.2;
-}
 .session-dialogue .speaker-yanai { color: var(--color-gold); font-weight: 600; font-size: var(--fs-body); }
 .session-dialogue .speaker-sean { color: #b8a0d8; font-weight: 600; font-size: var(--fs-body); }
 
@@ -140,11 +129,9 @@ hr::after {
 .session-dialogue .line-yanai {
   border-left: 2px solid rgba(192,168,120,0.15);
   padding-left: 1.2rem;
-}
 /* キャラの発言：少しインデント */
 .session-dialogue .line-character {
   margin-left: 1.4rem;
-}
 /* 沈黙マーカー：中央揃え＋装飾線 */
 .session-dialogue .silence {
   color: rgba(235,232,225,0.3);
@@ -153,7 +140,6 @@ hr::after {
   margin: 2em 0;
   font-size: var(--fs-small);
   letter-spacing: 0.15em;
-}
 .session-dialogue .silence::before,
 .session-dialogue .silence::after {
   content: "";
@@ -163,22 +149,18 @@ hr::after {
   background: rgba(192,168,120,0.15);
   vertical-align: middle;
   margin: 0 1em;
-}
 /* 10発言ごとの視覚リズム */
 .session-dialogue p:nth-child(10n) {
   margin-bottom: 2em;
   padding-bottom: 1.5em;
   border-bottom: 1px solid rgba(192,168,120,0.06);
-}
 
 /* === 4. text-panel の単調さ解消 === */
 section > .text-panel:nth-of-type(even) {
   background: rgba(8, 6, 16, 0.45);
   border-color: transparent;
-}
 section > .text-panel:nth-of-type(even)::before {
   display: none;
-}
 
 /* === 5. highlight-block の存在感微増 === */
 .highlight-block {
@@ -187,13 +169,11 @@ section > .text-panel:nth-of-type(even)::before {
   border-image: linear-gradient(180deg, var(--color-gold) 0%, rgba(192,168,120,0.15) 100%) 1;
   padding: 2rem 2rem 2rem 2.2rem;
   margin: 2.5rem 0;
-}
 .highlight-block p {
   font-size: var(--fs-lead);
   font-weight: 500;
   line-height: 2.2;
   color: var(--color-text-primary);
-}
 
 /* === 6. セクション見出し（h3） === */
 h3.section-heading {
@@ -206,7 +186,6 @@ h3.section-heading {
   padding-left: 1.2rem;
   border-left: 2px solid rgba(192,168,120,0.4);
   line-height: 1.6;
-}
 
 /* === Profiling Block === */
 .profiling-block {
@@ -217,14 +196,12 @@ h3.section-heading {
   backdrop-filter: blur(8px);
   position: relative;
   overflow: hidden;
-}
 .profiling-block::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(192,168,120,0.4), transparent);
-}
 .profiling-block h3 {
   font-size: var(--fs-body);
   color: var(--color-gold);
@@ -233,19 +210,16 @@ h3.section-heading {
   font-weight: 600;
   padding-bottom: 0.8rem;
   border-bottom: 1px solid rgba(192,168,120,0.1);
-}
 .profiling-block p {
   color: var(--color-text-reading);
   font-size: var(--fs-body);
   line-height: 1.9;
   margin-bottom: 1rem;
-}
 .profiling-block p:last-child { margin-bottom: 0; }
 .profiling-block ul {
   list-style: none;
   padding: 0;
   margin: 0 0 1.5rem 0;
-}
 .profiling-block ul li {
   margin-bottom: 1rem;
   color: var(--color-text-reading);
@@ -255,12 +229,10 @@ h3.section-heading {
   position: relative;
   padding-bottom: 0.8rem;
   border-bottom: 1px solid rgba(192,168,120,0.04);
-}
 .profiling-block ul li:last-child {
   border-bottom: none;
   margin-bottom: 0;
   padding-bottom: 0;
-}
 .profiling-block ul li::before {
   content: "\2500\2500";
   position: absolute;
@@ -268,7 +240,6 @@ h3.section-heading {
   top: 0;
   color: rgba(192,168,120,0.35);
   font-size: 0.75em;
-}
 
 /* === CTA Block === */
 /* === Author Block === */
@@ -276,7 +247,6 @@ h3.section-heading {
   margin-top: 3rem;
   padding-top: 2rem;
   border-top: 1px solid rgba(192,168,120,0.15);
-}
 .author-block p { font-size: var(--fs-body); color: var(--color-text-reading); line-height: 2; }
 .author-block strong { color: var(--color-text-body); }
 
@@ -285,7 +255,6 @@ h3.section-heading {
   margin-top: 2rem;
   font-size: var(--fs-small);
   color: rgba(235,232,225,0.35);
-}
 
 /* === Series Note === */
 .series-note {
@@ -296,7 +265,6 @@ h3.section-heading {
   font-size: var(--fs-body);
   color: var(--color-text-reading);
   line-height: 2;
-}
 
 /* === 7. モバイル対応 === */
 @media (max-width: 600px) {
@@ -305,28 +273,23 @@ h3.section-heading {
     margin-top: 0.5rem;
     margin-bottom: 2rem;
     padding-top: 1.5rem;
-  }
   .chapter-number {
     font-size: var(--fs-micro);
     letter-spacing: 0.25em;
     margin-bottom: 0.4rem;
-  }
   h3.section-heading {
     font-size: var(--fs-lead);
     margin-top: 2rem;
     padding-left: 1rem;
-  }
   hr { margin: 3rem 0; }
   .session-dialogue {
     padding: 1.5rem 1.2rem;
     margin: 2rem auto;
-  }
   .session-dialogue .line-yanai { padding-left: 0.8rem; }
   .session-dialogue .line-character { margin-left: 0.8rem; }
   .profiling-block { padding: 1.5rem 1.2rem; }
   .highlight-block { padding: 1.5rem 1.2rem 1.5rem 1.4rem; }
   .text-panel { padding: 2rem 1.5rem; }
-}
 @media (max-width: 480px) {
   .text-panel p br,
   .pull-quote p br,
@@ -337,7 +300,6 @@ h3.section-heading {
   .session-dialogue p:nth-child(10n) {
     margin-bottom: 1.5em;
     padding-bottom: 1em;
-  }
 }
 </style>
 </head>
@@ -506,91 +468,91 @@ h3.section-heading {
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「ショーンさん、セッションに来てくださってありがとうございます。あなたはあなたに何をプレゼントしてあげたいですか？」</p>
 
-        <p class="line-character"><span class="speaker-sean">ショーン</span>「&hellip;&hellip;面白い入り方だな。普通は『何にお困りですか？』から入る。&hellip;&hellip;いや、いいんだ。答えるよ。──彼女のことを、もう少しだけ楽に思い出せる自分を、プレゼントしてあげたい」</p>
+        <p class="line-character"><span class="speaker-sean">ショーン：</span>「&hellip;&hellip;面白い入り方だな。普通は『何にお困りですか？』から入る。&hellip;&hellip;いや、いいんだ。答えるよ。──彼女のことを、もう少しだけ楽に思い出せる自分を、プレゼントしてあげたい」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;楽に思い出せる、というのは？」</p>
 
-        <p class="line-character"><span class="speaker-sean">ショーン</span>「&hellip;&hellip;今はな、思い出すたびに胸が潰れる。18年一緒にいた。最後の2ヶ月は病室の椅子で寝た。&hellip;&hellip;思い出は全部ある。全部覚えてる。でも、思い出すたびに&hellip;&hellip;（声が低くなる）&hellip;&hellip;呼吸が止まる感じがする」</p>
+        <p class="line-character"><span class="speaker-sean">ショーン：</span>「&hellip;&hellip;今はな、思い出すたびに胸が潰れる。18年一緒にいた。最後の2ヶ月は病室の椅子で寝た。&hellip;&hellip;思い出は全部ある。全部覚えてる。でも、思い出すたびに&hellip;&hellip;（声が低くなる）&hellip;&hellip;呼吸が止まる感じがする」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sean">ショーン</span>「&hellip;&hellip;心理学者がこんなこと言うのもおかしいだろ。自分のクライアントには『感情を避けるな、通り抜けろ』って言ってるのにな。&hellip;&hellip;（苦笑）&hellip;&hellip;自分には適用できない」</p>
+        <p class="line-character"><span class="speaker-sean">ショーン：</span>「&hellip;&hellip;心理学者がこんなこと言うのもおかしいだろ。自分のクライアントには『感情を避けるな、通り抜けろ』って言ってるのにな。&hellip;&hellip;（苦笑）&hellip;&hellip;自分には適用できない」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「なぜですか？」</p>
 
-        <p class="line-character"><span class="speaker-sean">ショーン</span>「&hellip;&hellip;（長い間）&hellip;&hellip;なぜか。&hellip;&hellip;いい質問だ。&hellip;&hellip;なぜだろうな」</p>
+        <p class="line-character"><span class="speaker-sean">ショーン：</span>「&hellip;&hellip;（長い間）&hellip;&hellip;なぜか。&hellip;&hellip;いい質問だ。&hellip;&hellip;なぜだろうな」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sean">ショーン</span>「&hellip;&hellip;通り抜けたら、その先にナンシーがいないからだ。&hellip;&hellip;通り抜けるということは、終わらせるということだ。&hellip;&hellip;終わらせたくない」</p>
+        <p class="line-character"><span class="speaker-sean">ショーン：</span>「&hellip;&hellip;通り抜けたら、その先にナンシーがいないからだ。&hellip;&hellip;通り抜けるということは、終わらせるということだ。&hellip;&hellip;終わらせたくない」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;終わらせたくない。」</p>
 
-        <p class="line-character"><span class="speaker-sean">ショーン</span>「&hellip;&hellip;（頷く）&hellip;&hellip;痛みがある限り、彼女はまだここにいる。痛みを手放したら&hellip;&hellip;本当にいなくなる。&hellip;&hellip;それが怖い」</p>
+        <p class="line-character"><span class="speaker-sean">ショーン：</span>「&hellip;&hellip;（頷く）&hellip;&hellip;痛みがある限り、彼女はまだここにいる。痛みを手放したら&hellip;&hellip;本当にいなくなる。&hellip;&hellip;それが怖い」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sean">ショーン</span>「&hellip;&hellip;（自分の言葉に驚いている）&hellip;&hellip;今のは&hellip;&hellip;自分で初めて言ったな。&hellip;&hellip;クライアントに言わせたことはある。自分では言ったことがなかった」</p>
+        <p class="line-character"><span class="speaker-sean">ショーン：</span>「&hellip;&hellip;（自分の言葉に驚いている）&hellip;&hellip;今のは&hellip;&hellip;自分で初めて言ったな。&hellip;&hellip;クライアントに言わせたことはある。自分では言ったことがなかった」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;ショーンさん。あなたは今、とても正確に自分の構造を言語化しました。痛みがナンシーとの接続を維持している。だから手放せない。」</p>
 
-        <p class="line-character"><span class="speaker-sean">ショーン</span>「&hellip;&hellip;ああ。&hellip;&hellip;分析としては完璧だ。&hellip;&hellip;（皮肉ではなく、静かに）&hellip;&hellip;分析は得意なんだ。分析だけは」</p>
+        <p class="line-character"><span class="speaker-sean">ショーン：</span>「&hellip;&hellip;ああ。&hellip;&hellip;分析としては完璧だ。&hellip;&hellip;（皮肉ではなく、静かに）&hellip;&hellip;分析は得意なんだ。分析だけは」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「分析と、動くことは、違いますか？」</p>
 
-        <p class="line-character"><span class="speaker-sean">ショーン</span>「&hellip;&hellip;（沈黙。長い）&hellip;&hellip;違う。&hellip;&hellip;全然違う。&hellip;&hellip;俺はウィルにそれを教えたはずなのにな」</p>
+        <p class="line-character"><span class="speaker-sean">ショーン：</span>「&hellip;&hellip;（沈黙。長い）&hellip;&hellip;違う。&hellip;&hellip;全然違う。&hellip;&hellip;俺はウィルにそれを教えたはずなのにな」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「ウィルさんに何を教えたんですか？」</p>
 
-        <p class="line-character"><span class="speaker-sean">ショーン</span>「&hellip;&hellip;『お前は本を読んで知識を得ているが、経験がない』と言った。&hellip;&hellip;ミケランジェロの話をしたな。システィーナ礼拝堂の匂いを知らないだろう、と。&hellip;&hellip;戦場で親友が死ぬのを見たことがないだろう、と。&hellip;&hellip;愛する人間の病室で、本当に怖い夜を過ごしたことがないだろう、と」</p>
+        <p class="line-character"><span class="speaker-sean">ショーン：</span>「&hellip;&hellip;『お前は本を読んで知識を得ているが、経験がない』と言った。&hellip;&hellip;ミケランジェロの話をしたな。システィーナ礼拝堂の匂いを知らないだろう、と。&hellip;&hellip;戦場で親友が死ぬのを見たことがないだろう、と。&hellip;&hellip;愛する人間の病室で、本当に怖い夜を過ごしたことがないだろう、と」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sean">ショーン</span>「&hellip;&hellip;俺にはそれがある。経験がある。&hellip;&hellip;でも、その経験が今、俺を閉じ込めている。&hellip;&hellip;（声が低くなる）&hellip;&hellip;皮肉だよな」</p>
+        <p class="line-character"><span class="speaker-sean">ショーン：</span>「&hellip;&hellip;俺にはそれがある。経験がある。&hellip;&hellip;でも、その経験が今、俺を閉じ込めている。&hellip;&hellip;（声が低くなる）&hellip;&hellip;皮肉だよな」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;ショーンさん。あなたはウィルさんに『知識と経験は違う』と教えた。では、あなた自身にとって──『分析と動くことは違う』という事実を、あなたはいつから知っていましたか？」</p>
 
         <p class="silence">&hellip;&hellip;。</p>
 
-        <p class="line-character"><span class="speaker-sean">ショーン</span>「&hellip;&hellip;（目を閉じる。長い沈黙）&hellip;&hellip;ナンシーが死んだ日からだ」</p>
+        <p class="line-character"><span class="speaker-sean">ショーン：</span>「&hellip;&hellip;（目を閉じる。長い沈黙）&hellip;&hellip;ナンシーが死んだ日からだ」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sean">ショーン</span>「&hellip;&hellip;あの日から、俺は自分の分析が完璧に正しいことを知りながら、一歩も動けなくなった。&hellip;&hellip;クライアントの人生は動かせる。構造が見えるから。&hellip;&hellip;でも自分の人生だけが&hellip;&hellip;見えているのに動けない」</p>
+        <p class="line-character"><span class="speaker-sean">ショーン：</span>「&hellip;&hellip;あの日から、俺は自分の分析が完璧に正しいことを知りながら、一歩も動けなくなった。&hellip;&hellip;クライアントの人生は動かせる。構造が見えるから。&hellip;&hellip;でも自分の人生だけが&hellip;&hellip;見えているのに動けない」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;なぜ動けないんですか？」</p>
 
-        <p class="line-character"><span class="speaker-sean">ショーン</span>「&hellip;&hellip;（長い間）&hellip;&hellip;動いたら、ナンシーのいない世界を認めることになるからだ。&hellip;&hellip;動かない限り、世界はまだ&hellip;&hellip;彼女がいた頃のまま止まっていられる」</p>
+        <p class="line-character"><span class="speaker-sean">ショーン：</span>「&hellip;&hellip;（長い間）&hellip;&hellip;動いたら、ナンシーのいない世界を認めることになるからだ。&hellip;&hellip;動かない限り、世界はまだ&hellip;&hellip;彼女がいた頃のまま止まっていられる」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sean">ショーン</span>「&hellip;&hellip;（自分の言葉を聞いている。心理学者として、自分の言葉の構造が見えている）&hellip;&hellip;これは&hellip;&hellip;悲嘆の凍結だ。&hellip;&hellip;教科書通りだ。&hellip;&hellip;（小さく笑う。しかし目は笑っていない）&hellip;&hellip;自分が教科書通りの症例だというのは、なかなか堪えるな」</p>
+        <p class="line-character"><span class="speaker-sean">ショーン：</span>「&hellip;&hellip;（自分の言葉を聞いている。心理学者として、自分の言葉の構造が見えている）&hellip;&hellip;これは&hellip;&hellip;悲嘆の凍結だ。&hellip;&hellip;教科書通りだ。&hellip;&hellip;（小さく笑う。しかし目は笑っていない）&hellip;&hellip;自分が教科書通りの症例だというのは、なかなか堪えるな」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「ショーンさん。今、あなたは自分の状態を『悲嘆の凍結』と名づけました。それは分析ですか？　それとも、感じていることですか？」</p>
 
-        <p class="line-character"><span class="speaker-sean">ショーン</span>「&hellip;&hellip;（間）&hellip;&hellip;分析だ」</p>
+        <p class="line-character"><span class="speaker-sean">ショーン：</span>「&hellip;&hellip;（間）&hellip;&hellip;分析だ」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;感じていることは、何ですか？」</p>
 
         <p class="silence">&hellip;&hellip;。</p>
 
-        <p class="line-character"><span class="speaker-sean">ショーン</span>「&hellip;&hellip;（声が変わる。心理学者の声ではなくなる）&hellip;&hellip;寂しい」</p>
+        <p class="line-character"><span class="speaker-sean">ショーン：</span>「&hellip;&hellip;（声が変わる。心理学者の声ではなくなる）&hellip;&hellip;寂しい」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sean">ショーン</span>「&hellip;&hellip;寂しいんだ。&hellip;&hellip;2年間、誰にも言わなかった。&hellip;&hellip;クライアントの前では『先生』だ。ランボーの前では『同期』だ。ウィルの前では『カウンセラー』だ。&hellip;&hellip;でも家に帰ると&hellip;&hellip;誰もいない。&hellip;&hellip;ナンシーの絵がある。彼女が描いた絵。&hellip;&hellip;（声が震える）&hellip;&hellip;それを見て寝る。毎晩」</p>
+        <p class="line-character"><span class="speaker-sean">ショーン：</span>「&hellip;&hellip;寂しいんだ。&hellip;&hellip;2年間、誰にも言わなかった。&hellip;&hellip;クライアントの前では『先生』だ。ランボーの前では『同期』だ。ウィルの前では『カウンセラー』だ。&hellip;&hellip;でも家に帰ると&hellip;&hellip;誰もいない。&hellip;&hellip;ナンシーの絵がある。彼女が描いた絵。&hellip;&hellip;（声が震える）&hellip;&hellip;それを見て寝る。毎晩」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sean">ショーン</span>「&hellip;&hellip;俺はウィルに言ったんだ。『完璧な人間なんかいない。問題は、お前にとって完璧な人間に出会えるかどうかだ』と。&hellip;&hellip;ナンシーは俺にとって完璧だった。&hellip;&hellip;あんな人間にもう一度出会えるわけがない。&hellip;&hellip;だから動く意味がない」</p>
+        <p class="line-character"><span class="speaker-sean">ショーン：</span>「&hellip;&hellip;俺はウィルに言ったんだ。『完璧な人間なんかいない。問題は、お前にとって完璧な人間に出会えるかどうかだ』と。&hellip;&hellip;ナンシーは俺にとって完璧だった。&hellip;&hellip;あんな人間にもう一度出会えるわけがない。&hellip;&hellip;だから動く意味がない」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;動く意味がない。」</p>
 
-        <p class="line-character"><span class="speaker-sean">ショーン</span>「&hellip;&hellip;ああ」</p>
+        <p class="line-character"><span class="speaker-sean">ショーン：</span>「&hellip;&hellip;ああ」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;ショーンさん。一つ聞いてもいいですか。」</p>
 
-        <p class="line-character"><span class="speaker-sean">ショーン</span>「&hellip;&hellip;聞いてくれ」</p>
+        <p class="line-character"><span class="speaker-sean">ショーン：</span>「&hellip;&hellip;聞いてくれ」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「ナンシーは、あなたが今の状態でいることを、望んでいますか？」</p>
 
@@ -598,51 +560,51 @@ h3.section-heading {
 
         <p class="silence">&hellip;&hellip;。</p>
 
-        <p class="line-character"><span class="speaker-sean">ショーン</span>「&hellip;&hellip;（目が赤くなる。声が出ない。長い沈黙の後、絞り出すように）&hellip;&hellip;いや」</p>
+        <p class="line-character"><span class="speaker-sean">ショーン：</span>「&hellip;&hellip;（目が赤くなる。声が出ない。長い沈黙の後、絞り出すように）&hellip;&hellip;いや」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sean">ショーン</span>「&hellip;&hellip;彼女は&hellip;&hellip;怒るだろうな。&hellip;&hellip;『何やってんの、ショーン。外に出なさいよ』って。&hellip;&hellip;（涙が一筋落ちる）&hellip;&hellip;彼女はそういう人だった。&hellip;&hellip;俺を閉じ込めておくような人じゃなかった」</p>
+        <p class="line-character"><span class="speaker-sean">ショーン：</span>「&hellip;&hellip;彼女は&hellip;&hellip;怒るだろうな。&hellip;&hellip;『何やってんの、ショーン。外に出なさいよ』って。&hellip;&hellip;（涙が一筋落ちる）&hellip;&hellip;彼女はそういう人だった。&hellip;&hellip;俺を閉じ込めておくような人じゃなかった」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sean">ショーン</span>「&hellip;&hellip;つまり&hellip;&hellip;俺がやっていることは&hellip;&hellip;ナンシーを守っているんじゃなくて&hellip;&hellip;ナンシーを裏切っているのか？&hellip;&hellip;（自分の言葉に衝撃を受けている）&hellip;&hellip;動かないことが&hellip;&hellip;彼女への裏切りなのか？」</p>
+        <p class="line-character"><span class="speaker-sean">ショーン：</span>「&hellip;&hellip;つまり&hellip;&hellip;俺がやっていることは&hellip;&hellip;ナンシーを守っているんじゃなくて&hellip;&hellip;ナンシーを裏切っているのか？&hellip;&hellip;（自分の言葉に衝撃を受けている）&hellip;&hellip;動かないことが&hellip;&hellip;彼女への裏切りなのか？」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sean">ショーン</span>「&hellip;&hellip;（両手で顔を覆う。しばらく動かない。心理学者としての鎧が外れている。ただの男がそこにいる）&hellip;&hellip;くそ。&hellip;&hellip;これは&hellip;&hellip;自分じゃ見えなかった」</p>
+        <p class="line-character"><span class="speaker-sean">ショーン：</span>「&hellip;&hellip;（両手で顔を覆う。しばらく動かない。心理学者としての鎧が外れている。ただの男がそこにいる）&hellip;&hellip;くそ。&hellip;&hellip;これは&hellip;&hellip;自分じゃ見えなかった」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;見えていたのでは？」</p>
 
-        <p class="line-character"><span class="speaker-sean">ショーン</span>「&hellip;&hellip;（顔を上げる。目が濡れている）&hellip;&hellip;見えてたよ。&hellip;&hellip;分析としては、とっくに見えてた。&hellip;&hellip;でも感じることを避けていた。&hellip;&hellip;分析で囲って、感じないようにしていた」</p>
+        <p class="line-character"><span class="speaker-sean">ショーン：</span>「&hellip;&hellip;（顔を上げる。目が濡れている）&hellip;&hellip;見えてたよ。&hellip;&hellip;分析としては、とっくに見えてた。&hellip;&hellip;でも感じることを避けていた。&hellip;&hellip;分析で囲って、感じないようにしていた」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;分析は、壁でしたか。」</p>
 
-        <p class="line-character"><span class="speaker-sean">ショーン</span>「&hellip;&hellip;最高の壁だ。&hellip;&hellip;心理学者にとって、分析は最高の防衛機制だ。&hellip;&hellip;全部説明できる。全部名前をつけられる。&hellip;&hellip;名前をつけた瞬間に、感じなくて済む。&hellip;&hellip;（小さく笑う）&hellip;&hellip;ウィルと同じだ。あいつは知識で壁を作った。俺は分析で壁を作った。&hellip;&hellip;同じ構造だ」</p>
+        <p class="line-character"><span class="speaker-sean">ショーン：</span>「&hellip;&hellip;最高の壁だ。&hellip;&hellip;心理学者にとって、分析は最高の防衛機制だ。&hellip;&hellip;全部説明できる。全部名前をつけられる。&hellip;&hellip;名前をつけた瞬間に、感じなくて済む。&hellip;&hellip;（小さく笑う）&hellip;&hellip;ウィルと同じだ。あいつは知識で壁を作った。俺は分析で壁を作った。&hellip;&hellip;同じ構造だ」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sean">ショーン</span>「&hellip;&hellip;（静かに）&hellip;&hellip;俺はウィルに言った。『君のせいじゃない』と。何度も何度も。&hellip;&hellip;あの言葉は、ウィルに言っていたのか、自分に言っていたのか&hellip;&hellip;今まで分からなかった」</p>
+        <p class="line-character"><span class="speaker-sean">ショーン：</span>「&hellip;&hellip;（静かに）&hellip;&hellip;俺はウィルに言った。『君のせいじゃない』と。何度も何度も。&hellip;&hellip;あの言葉は、ウィルに言っていたのか、自分に言っていたのか&hellip;&hellip;今まで分からなかった」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;今は？」</p>
 
-        <p class="line-character"><span class="speaker-sean">ショーン</span>「&hellip;&hellip;（長い沈黙）&hellip;&hellip;両方だ。&hellip;&hellip;ウィルに言いながら、自分に言っていた。&hellip;&hellip;ナンシーが死んだのは俺のせいじゃない。&hellip;&hellip;分かってる。分かってるんだ。&hellip;&hellip;でも、分かることと受け入れることは違う」</p>
+        <p class="line-character"><span class="speaker-sean">ショーン：</span>「&hellip;&hellip;（長い沈黙）&hellip;&hellip;両方だ。&hellip;&hellip;ウィルに言いながら、自分に言っていた。&hellip;&hellip;ナンシーが死んだのは俺のせいじゃない。&hellip;&hellip;分かってる。分かってるんだ。&hellip;&hellip;でも、分かることと受け入れることは違う」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sean">ショーン</span>「&hellip;&hellip;（声が落ち着いてくる。しかし深い場所から出ている声だ）&hellip;&hellip;箭内。最初の質問に戻っていいか」</p>
+        <p class="line-character"><span class="speaker-sean">ショーン：</span>「&hellip;&hellip;（声が落ち着いてくる。しかし深い場所から出ている声だ）&hellip;&hellip;箭内。最初の質問に戻っていいか」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「どうぞ。」</p>
 
-        <p class="line-character"><span class="speaker-sean">ショーン</span>「&hellip;&hellip;自分に何をプレゼントしてあげたいか。&hellip;&hellip;さっき俺は『楽に思い出せる自分』と言った。&hellip;&hellip;あれは嘘じゃないが、本当でもない」</p>
+        <p class="line-character"><span class="speaker-sean">ショーン：</span>「&hellip;&hellip;自分に何をプレゼントしてあげたいか。&hellip;&hellip;さっき俺は『楽に思い出せる自分』と言った。&hellip;&hellip;あれは嘘じゃないが、本当でもない」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-sean">ショーン</span>「&hellip;&hellip;本当は&hellip;&hellip;もう一度、テーブルに金を置きたい。&hellip;&hellip;どんなカードが来るか、見てみたい。&hellip;&hellip;ナンシーを置いていくんじゃない。&hellip;&hellip;連れていく。&hellip;&hellip;彼女がくれたものを持ったまま、次の場所に行く。&hellip;&hellip;そういう歩き方があるはずだ」</p>
+        <p class="line-character"><span class="speaker-sean">ショーン：</span>「&hellip;&hellip;本当は&hellip;&hellip;もう一度、テーブルに金を置きたい。&hellip;&hellip;どんなカードが来るか、見てみたい。&hellip;&hellip;ナンシーを置いていくんじゃない。&hellip;&hellip;連れていく。&hellip;&hellip;彼女がくれたものを持ったまま、次の場所に行く。&hellip;&hellip;そういう歩き方があるはずだ」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;あるはずだ？」</p>
 
-        <p class="line-character"><span class="speaker-sean">ショーン</span>「&hellip;&hellip;あるはずだ。&hellip;&hellip;少なくとも、私のクライアントには『ある』と言ってきた。&hellip;&hellip;今度は、自分に言う番だ」</p>
+        <p class="line-character"><span class="speaker-sean">ショーン：</span>「&hellip;&hellip;あるはずだ。&hellip;&hellip;少なくとも、私のクライアントには『ある』と言ってきた。&hellip;&hellip;今度は、自分に言う番だ」</p>
 
       </div>
 
@@ -1012,7 +974,6 @@ h3.section-heading {
       var numSpan = h.querySelector('.chapter-number');
       if (numSpan) {
         text = text.replace(numSpan.textContent.replace(/\s+/g, ' ').trim(), '').trim();
-      }
       // Truncate long titles
       if (text.length > 28) text = text.substring(0, 28) + '\u2026';
       a.textContent = text;
@@ -1044,7 +1005,6 @@ h3.section-heading {
       links.forEach(function(a, i){
         a.classList.toggle('is-active', i === current);
       });
-    }
 
     window.addEventListener('scroll', updateToc, {passive: true});
     updateToc();
@@ -1058,7 +1018,6 @@ h3.section-heading {
     document.addEventListener('click', function(e){
       if (!toc.contains(e.target) && e.target !== toggle) {
         toc.classList.remove('is-open');
-      }
     });
   })();
   </script>
@@ -1118,7 +1077,6 @@ h3.section-heading {
   },
   "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-goodwillhunting/sean.html",
   "inLanguage": "ja"
-}
 </script>
   <!-- Search Modal -->
   <div class="search-overlay">

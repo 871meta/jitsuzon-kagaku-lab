@@ -33,8 +33,7 @@
 <style>
 /* =============================================
    視認性・読みやすさ強化CSS
-   ============================================= */  50% { background-position: 0% 50%; }
-}
+   ============================================= */
 
 /* === 1. 章見出し — 中央配置＋装飾 === */
 h2.chapter-heading {
@@ -50,7 +49,6 @@ h2.chapter-heading {
   text-align: center;
   position: relative;
   padding-top: 2rem;
-}
 h2.chapter-heading::before {
   content: "";
   position: absolute;
@@ -60,7 +58,6 @@ h2.chapter-heading::before {
   width: 40px;
   height: 1px;
   background: var(--color-gold);
-}
 h2.chapter-heading::after {
   content: "";
   display: block;
@@ -68,7 +65,6 @@ h2.chapter-heading::after {
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(192,168,120,0.5), transparent);
   margin: 1.2rem auto 0;
-}
 .chapter-number {
   display: block;
   font-family: var(--font-serif-en);
@@ -78,7 +74,6 @@ h2.chapter-heading::after {
   text-transform: uppercase;
   color: var(--color-gold);
   margin-bottom: 0.6rem;
-}
 
 /* === 2. 区切り線 — 装飾付き === */
 hr {
@@ -88,14 +83,12 @@ hr {
   margin: 4.5rem 0;
   text-align: center;
   overflow: visible;
-}
 hr::before {
   content: "";
   display: block;
   width: 100%;
   height: 1px;
   background: linear-gradient(90deg, transparent 0%, rgba(192,168,120,0.08) 15%, rgba(192,168,120,0.2) 50%, rgba(192,168,120,0.08) 85%, transparent 100%);
-}
 hr::after {
   content: "\25C6";
   display: block;
@@ -104,7 +97,6 @@ hr::after {
   margin-top: -0.35em;
   letter-spacing: 1em;
   line-height: 1;
-}
 
 /* === 3. セッション対話 — 読みやすさ向上 === */
 .session-dialogue {
@@ -115,7 +107,6 @@ hr::after {
   border: 1px solid rgba(192,168,120,0.06);
   border-radius: 2px;
   position: relative;
-}
 .session-dialogue::before {
   content: "SESSION";
   position: absolute;
@@ -127,11 +118,9 @@ hr::after {
   color: rgba(192,168,120,0.4);
   background: var(--color-bg-deep);
   padding: 0 0.8rem;
-}
 .session-dialogue p {
   margin-bottom: 1.1em;
   line-height: 2.2;
-}
 .session-dialogue .speaker-yanai { color: var(--color-gold); font-weight: 600; font-size: var(--fs-body); }
 .session-dialogue .speaker-dufresne { color: #b8a0d8; font-weight: 600; font-size: var(--fs-body); }
 
@@ -139,11 +128,9 @@ hr::after {
 .session-dialogue .line-yanai {
   border-left: 2px solid rgba(192,168,120,0.15);
   padding-left: 1.2rem;
-}
 /* キャラの発言：少しインデント */
 .session-dialogue .line-character {
   margin-left: 1.4rem;
-}
 /* 沈黙マーカー：中央揃え＋装飾線 */
 .session-dialogue .silence {
   color: rgba(235,232,225,0.3);
@@ -152,7 +139,6 @@ hr::after {
   margin: 2em 0;
   font-size: var(--fs-small);
   letter-spacing: 0.15em;
-}
 .session-dialogue .silence::before,
 .session-dialogue .silence::after {
   content: "";
@@ -162,22 +148,18 @@ hr::after {
   background: rgba(192,168,120,0.15);
   vertical-align: middle;
   margin: 0 1em;
-}
 /* 10発言ごとの視覚リズム */
 .session-dialogue p:nth-child(10n) {
   margin-bottom: 2em;
   padding-bottom: 1.5em;
   border-bottom: 1px solid rgba(192,168,120,0.06);
-}
 
 /* === 4. text-panel の単調さ解消 === */
 section > .text-panel:nth-of-type(even) {
   background: rgba(8, 6, 16, 0.45);
   border-color: transparent;
-}
 section > .text-panel:nth-of-type(even)::before {
   display: none;
-}
 
 /* === 5. highlight-block の存在感微増 === */
 .highlight-block {
@@ -186,13 +168,11 @@ section > .text-panel:nth-of-type(even)::before {
   border-image: linear-gradient(180deg, var(--color-gold) 0%, rgba(192,168,120,0.15) 100%) 1;
   padding: 2rem 2rem 2rem 2.2rem;
   margin: 2.5rem 0;
-}
 .highlight-block p {
   font-size: var(--fs-lead);
   font-weight: 500;
   line-height: 2.2;
   color: var(--color-text-primary);
-}
 
 /* === 6. セクション見出し（h3） === */
 h3.section-heading {
@@ -205,7 +185,6 @@ h3.section-heading {
   padding-left: 1.2rem;
   border-left: 2px solid rgba(192,168,120,0.4);
   line-height: 1.6;
-}
 
 /* === Profiling Block === */
 .profiling-block {
@@ -216,14 +195,12 @@ h3.section-heading {
   backdrop-filter: blur(8px);
   position: relative;
   overflow: hidden;
-}
 .profiling-block::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(192,168,120,0.4), transparent);
-}
 .profiling-block h3 {
   font-size: var(--fs-body);
   color: var(--color-gold);
@@ -232,19 +209,16 @@ h3.section-heading {
   font-weight: 600;
   padding-bottom: 0.8rem;
   border-bottom: 1px solid rgba(192,168,120,0.1);
-}
 .profiling-block p {
   color: var(--color-text-reading);
   font-size: var(--fs-body);
   line-height: 1.9;
   margin-bottom: 1rem;
-}
 .profiling-block p:last-child { margin-bottom: 0; }
 .profiling-block ul {
   list-style: none;
   padding: 0;
   margin: 0 0 1.5rem 0;
-}
 .profiling-block ul li {
   margin-bottom: 1rem;
   color: var(--color-text-reading);
@@ -254,12 +228,10 @@ h3.section-heading {
   position: relative;
   padding-bottom: 0.8rem;
   border-bottom: 1px solid rgba(192,168,120,0.04);
-}
 .profiling-block ul li:last-child {
   border-bottom: none;
   margin-bottom: 0;
   padding-bottom: 0;
-}
 .profiling-block ul li::before {
   content: "\2500\2500";
   position: absolute;
@@ -267,7 +239,6 @@ h3.section-heading {
   top: 0;
   color: rgba(192,168,120,0.35);
   font-size: 0.75em;
-}
 
 /* === CTA Block === */
 /* === Author Block === */
@@ -275,7 +246,6 @@ h3.section-heading {
   margin-top: 3rem;
   padding-top: 2rem;
   border-top: 1px solid rgba(192,168,120,0.15);
-}
 .author-block p { font-size: var(--fs-body); color: var(--color-text-reading); line-height: 2; }
 .author-block strong { color: var(--color-text-body); }
 
@@ -284,7 +254,6 @@ h3.section-heading {
   margin-top: 2rem;
   font-size: var(--fs-small);
   color: rgba(235,232,225,0.35);
-}
 
 /* === Series Note === */
 .series-note {
@@ -295,7 +264,6 @@ h3.section-heading {
   font-size: var(--fs-body);
   color: var(--color-text-reading);
   line-height: 2;
-}
 
 /* === 7. モバイル対応 === */
 @media (max-width: 600px) {
@@ -304,28 +272,23 @@ h3.section-heading {
     margin-top: 0.5rem;
     margin-bottom: 2rem;
     padding-top: 1.5rem;
-  }
   .chapter-number {
     font-size: var(--fs-micro);
     letter-spacing: 0.25em;
     margin-bottom: 0.4rem;
-  }
   h3.section-heading {
     font-size: var(--fs-lead);
     margin-top: 2rem;
     padding-left: 1rem;
-  }
   hr { margin: 3rem 0; }
   .session-dialogue {
     padding: 1.5rem 1.2rem;
     margin: 2rem auto;
-  }
   .session-dialogue .line-yanai { padding-left: 0.8rem; }
   .session-dialogue .line-character { margin-left: 0.8rem; }
   .profiling-block { padding: 1.5rem 1.2rem; }
   .highlight-block { padding: 1.5rem 1.2rem 1.5rem 1.4rem; }
   .text-panel { padding: 2rem 1.5rem; }
-}
 @media (max-width: 480px) {
   .text-panel p br,
   .pull-quote p br,
@@ -336,7 +299,6 @@ h3.section-heading {
   .session-dialogue p:nth-child(10n) {
     margin-bottom: 1.5em;
     padding-bottom: 1em;
-  }
 }
 </style>
 </head>
@@ -492,235 +454,235 @@ h3.section-heading {
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「デュフレーンさん、セッションに来てくださってありがとうございます。あなたはあなたに何をプレゼントしてあげたいですか？」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;。」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;。」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;。」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;。」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;プレゼント。&hellip;&hellip;いま、頭の中で計算が走っています。この問いに対して最も正確な回答は何か。変数を洗い出して、最適解を出そうとしている。&hellip;&hellip;自分でもわかっています。これは問いに答えることを避けているんだ」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;プレゼント。&hellip;&hellip;いま、頭の中で計算が走っています。この問いに対して最も正確な回答は何か。変数を洗い出して、最適解を出そうとしている。&hellip;&hellip;自分でもわかっています。これは問いに答えることを避けているんだ」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;。&hellip;&hellip;少し待ってください」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;。&hellip;&hellip;少し待ってください」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;。」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;。」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;精算。&hellip;&hellip;帳尻を合わせる機会を、自分にプレゼントしたい。帳簿の中に残っている未決済の項目を、すべて清算する機会を」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;精算。&hellip;&hellip;帳尻を合わせる機会を、自分にプレゼントしたい。帳簿の中に残っている未決済の項目を、すべて清算する機会を」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「では、それをプレゼントできていないのですか？」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;努力はしています。図書館を建てた。人の役にも立った。トミーにはGEDを取らせた。レッドにも&hellip;&hellip;いくつかのことはできた。帳簿の行を一つずつ埋めてきた。でも&hellip;&hellip;一番最初の行が、消えない」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;努力はしています。図書館を建てた。人の役にも立った。トミーにはGEDを取らせた。レッドにも&hellip;&hellip;いくつかのことはできた。帳簿の行を一つずつ埋めてきた。でも&hellip;&hellip;一番最初の行が、消えない」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「一番最初の行とは？」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;リンダです」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;リンダです」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;妻です。私が追いやった。引き金は引かなかった。でも、彼女が死んだのは私のあり方のせいだ」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;妻です。私が追いやった。引き金は引かなかった。でも、彼女が死んだのは私のあり方のせいだ」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「なぜ、あなたのあり方のせいなのですか？」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;。」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;。」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;冷たかった、と言えば正確でしょう。彼女が何を求めていたかは理解していた。温かさを。&hellip;&hellip;反応を。数字ではないものを。でも、理解していることと、それを渡せることは違う」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;冷たかった、と言えば正確でしょう。彼女が何を求めていたかは理解していた。温かさを。&hellip;&hellip;反応を。数字ではないものを。でも、理解していることと、それを渡せることは違う」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「なぜ渡せなかったのですか？」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;。&hellip;&hellip;私のあり方の問題です。銀行では、感情を挟まないことが能力だった。数字だけを見ること。動揺しないこと。それが二十代で副頭取になれた理由です。&hellip;&hellip;でも、同じ構造を家に持ち帰っていた」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;。&hellip;&hellip;私のあり方の問題です。銀行では、感情を挟まないことが能力だった。数字だけを見ること。動揺しないこと。それが二十代で副頭取になれた理由です。&hellip;&hellip;でも、同じ構造を家に持ち帰っていた」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;。&hellip;&hellip;地質学をご存知ですか。岩石は、一見動かないように見える。しかし何万年もかけて、圧力と時間で形を変える。&hellip;&hellip;私のあの構造も、そういうものだと思っていた。時間をかければ変わると。でも&hellip;&hellip;リンダには、何万年もなかった」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;。&hellip;&hellip;地質学をご存知ですか。岩石は、一見動かないように見える。しかし何万年もかけて、圧力と時間で形を変える。&hellip;&hellip;私のあの構造も、そういうものだと思っていた。時間をかければ変わると。でも&hellip;&hellip;リンダには、何万年もなかった」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;彼女に与えられた時間の中で、私は変われなかった。それが事実です」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;彼女に与えられた時間の中で、私は変われなかった。それが事実です」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;なぜ変われなかったのですか？」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;。」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;。」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;。&hellip;&hellip;変わる必要があるということ自体を、認識していなかった。いや&hellip;&hellip;認識はしていた。彼女の目を見ればわかった。食卓の向こうで彼女が黙っているとき、何が起きているかは理解していた。&hellip;&hellip;理解した上で、何もしなかった」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;。&hellip;&hellip;変わる必要があるということ自体を、認識していなかった。いや&hellip;&hellip;認識はしていた。彼女の目を見ればわかった。食卓の向こうで彼女が黙っているとき、何が起きているかは理解していた。&hellip;&hellip;理解した上で、何もしなかった」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「なぜ何もしなかったのですか？」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;。&hellip;&hellip;何をすればいいか、わからなかったからです」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;。&hellip;&hellip;何をすればいいか、わからなかったからです」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;。&hellip;&hellip;いや。違う。何をすればいいかわからなかったのではない。&hellip;&hellip;何かをすること自体が&hellip;&hellip;。&hellip;&hellip;少し待ってください。正確に言いたい」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;。&hellip;&hellip;いや。違う。何をすればいいかわからなかったのではない。&hellip;&hellip;何かをすること自体が&hellip;&hellip;。&hellip;&hellip;少し待ってください。正確に言いたい」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;。」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;。」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;何かをすれば、失敗する可能性があった。数字なら、正しいか間違っているかは明確です。しかし感情は&hellip;&hellip;正解がない。正解がないものに手を出せば、間違える。間違えれば、さらに彼女を傷つける。&hellip;&hellip;だから動かなかった。動かないことが、最も安全な選択に見えた」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;何かをすれば、失敗する可能性があった。数字なら、正しいか間違っているかは明確です。しかし感情は&hellip;&hellip;正解がない。正解がないものに手を出せば、間違える。間違えれば、さらに彼女を傷つける。&hellip;&hellip;だから動かなかった。動かないことが、最も安全な選択に見えた」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「動かないことが安全だった？」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;ええ。私にとっては。&hellip;&hellip;しかし、リンダにとっては」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;ええ。私にとっては。&hellip;&hellip;しかし、リンダにとっては」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;リンダにとっては、それが最も冷たいことだった」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;リンダにとっては、それが最も冷たいことだった」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;。」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;。」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;あの夜のことを話してもいいですか」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;あの夜のことを話してもいいですか」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;車の中で座っていた。バーボンを飲んで、弾を込めて。窓の向こうで二人の声が聞こえた。私は銃を手に持って&hellip;&hellip;。&hellip;&hellip;引けなかった」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;車の中で座っていた。バーボンを飲んで、弾を込めて。窓の向こうで二人の声が聞こえた。私は銃を手に持って&hellip;&hellip;。&hellip;&hellip;引けなかった」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;19年間、あれは道徳心のおかげだと思っていた。人を殺してはいけないという信念が引き金を止めたのだと」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;19年間、あれは道徳心のおかげだと思っていた。人を殺してはいけないという信念が引き金を止めたのだと」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;。&hellip;&hellip;違った」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;。&hellip;&hellip;違った」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「何が違ったのですか？」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;怒りがなかった。銃を構えたとき、私の中にあったのは怒りではなかった。&hellip;&hellip;喪失感だった。すでに失っていた。リンダはとっくに、私から離れていた。あの夜よりずっと前に」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;怒りがなかった。銃を構えたとき、私の中にあったのは怒りではなかった。&hellip;&hellip;喪失感だった。すでに失っていた。リンダはとっくに、私から離れていた。あの夜よりずっと前に」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;怒りで引き金を引くことができなかった。なぜなら&hellip;&hellip;怒るためには、まだ失われていないものがなければならない。まだ自分のものだと思っているものが奪われるとき、人は怒る。しかし私は&hellip;&hellip;」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;怒りで引き金を引くことができなかった。なぜなら&hellip;&hellip;怒るためには、まだ失われていないものがなければならない。まだ自分のものだと思っているものが奪われるとき、人は怒る。しかし私は&hellip;&hellip;」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;もう自分のものではないと知っていた。知っていたのに&hellip;&hellip;」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;もう自分のものではないと知っていた。知っていたのに&hellip;&hellip;」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;。」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;。」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;知っていたのに、手放せなかった。自分のものではないとわかっていたのに。&hellip;&hellip;あの車の中にいた男は、帳簿の上では彼女を手放していた。数字の上では。しかし帳簿に記入できない場所で&hellip;&hellip;まだ&hellip;&hellip;」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;知っていたのに、手放せなかった。自分のものではないとわかっていたのに。&hellip;&hellip;あの車の中にいた男は、帳簿の上では彼女を手放していた。数字の上では。しかし帳簿に記入できない場所で&hellip;&hellip;まだ&hellip;&hellip;」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;。&hellip;&hellip;まだ愛していた」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;。&hellip;&hellip;まだ愛していた」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;。&hellip;&hellip;19年間、一度も口にしなかった言葉です。レッドにも言わなかった。『彼女を追いやった』とは言った。『私のせいだ』とは言った。しかし&hellip;&hellip;『愛していた』とは」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;。&hellip;&hellip;19年間、一度も口にしなかった言葉です。レッドにも言わなかった。『彼女を追いやった』とは言った。『私のせいだ』とは言った。しかし&hellip;&hellip;『愛していた』とは」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「なぜ言えなかったのですか？」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;。」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;。」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;愛していたのに追いやった。この二つの文は、帳簿の中で共存できない。借方と貸方が一致しない。愛していたなら守れたはずだ。守れなかったなら愛は不十分だったはずだ。&hellip;&hellip;しかし」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;愛していたのに追いやった。この二つの文は、帳簿の中で共存できない。借方と貸方が一致しない。愛していたなら守れたはずだ。守れなかったなら愛は不十分だったはずだ。&hellip;&hellip;しかし」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;両方が真だった。完全に愛していた。そして完全に追いやった。&hellip;&hellip;この矛盾は、帳簿のどこにも記入する欄がなかった」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;両方が真だった。完全に愛していた。そして完全に追いやった。&hellip;&hellip;この矛盾は、帳簿のどこにも記入する欄がなかった」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;もう十分です。構造は明らかになった。精算すべきものは明確です。ジワタネホに行く。新しい場所で、新しい帳簿を開く。圧力と時間。&hellip;&hellip;それだけのことです」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;もう十分です。構造は明らかになった。精算すべきものは明確です。ジワタネホに行く。新しい場所で、新しい帳簿を開く。圧力と時間。&hellip;&hellip;それだけのことです」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;。&hellip;&hellip;感謝します」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;。&hellip;&hellip;感謝します」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;。」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;。」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;。」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;。」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;終わりではないんですか」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;終わりではないんですか」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;。&hellip;&hellip;あなたは、私が何を言っても、同じ顔をしている」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;。&hellip;&hellip;あなたは、私が何を言っても、同じ顔をしている」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;ノートンは聖書を引用して私を試した。ハドリーは暴力で。シスターズは別の方法で。&hellip;&hellip;みな、私に何かをさせたかった。服従か、恐怖か、有用性か。&hellip;&hellip;あなたは何もさせようとしない」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;ノートンは聖書を引用して私を試した。ハドリーは暴力で。シスターズは別の方法で。&hellip;&hellip;みな、私に何かをさせたかった。服従か、恐怖か、有用性か。&hellip;&hellip;あなたは何もさせようとしない」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;。」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;。」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;ハンマーを注文したとき、レッドに笑われた。『あんな小さなもので何をする気だ』と。私は何もしない、と答えた。&hellip;&hellip;嘘ではなかった。何かをするつもりはなかった。ただ&hellip;&hellip;掘った。毎晩、掘った。なぜかはわからない。手が動いたから。&hellip;&hellip;19年間、一度も計画だと思ったことはない。ただ手が壁に触れて、削って、ポケットに入れた。それだけだった」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;ハンマーを注文したとき、レッドに笑われた。『あんな小さなもので何をする気だ』と。私は何もしない、と答えた。&hellip;&hellip;嘘ではなかった。何かをするつもりはなかった。ただ&hellip;&hellip;掘った。毎晩、掘った。なぜかはわからない。手が動いたから。&hellip;&hellip;19年間、一度も計画だと思ったことはない。ただ手が壁に触れて、削って、ポケットに入れた。それだけだった」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;。&hellip;&hellip;あれと同じことが、今、ここで起きている気がする」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;。&hellip;&hellip;あれと同じことが、今、ここで起きている気がする」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;計画していない。答えを用意していない。&hellip;&hellip;なのに、何かが削れている。内側で、何かが&hellip;&hellip;」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;計画していない。答えを用意していない。&hellip;&hellip;なのに、何かが削れている。内側で、何かが&hellip;&hellip;」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;。」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;。」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;リンダの前で、こうしていればよかった」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;リンダの前で、こうしていればよかった」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;何も持たずに。数字も、分析も、解決策も持たずに。&hellip;&hellip;ただ黙って、彼女の隣に座っていればよかった。彼女が何を言っても、何も言わなくても。&hellip;&hellip;ただ、いればよかった」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;何も持たずに。数字も、分析も、解決策も持たずに。&hellip;&hellip;ただ黙って、彼女の隣に座っていればよかった。彼女が何を言っても、何も言わなくても。&hellip;&hellip;ただ、いればよかった」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;。&hellip;&hellip;ああ。&hellip;&hellip;帳簿に載らなかったのは、そういうことだったのか。渡したかったのは数字ではなかった。&hellip;&hellip;ただ、いること。いるだけでいいこと。&hellip;&hellip;それが、帳簿に記入できなかったものの正体だった」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;。&hellip;&hellip;ああ。&hellip;&hellip;帳簿に載らなかったのは、そういうことだったのか。渡したかったのは数字ではなかった。&hellip;&hellip;ただ、いること。いるだけでいいこと。&hellip;&hellip;それが、帳簿に記入できなかったものの正体だった」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;。&hellip;&hellip;しかし、これも計算かもしれない。今この瞬間も、私の頭は走っています。『いるだけでいい』という結論が出たことで問題が解決した、と処理しようとしている。冷たかった事実は消えない。言葉にできたからといって、彼女の夜が温まるわけではない。&hellip;&hellip;その計算を、止められない」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;。&hellip;&hellip;しかし、これも計算かもしれない。今この瞬間も、私の頭は走っています。『いるだけでいい』という結論が出たことで問題が解決した、と処理しようとしている。冷たかった事実は消えない。言葉にできたからといって、彼女の夜が温まるわけではない。&hellip;&hellip;その計算を、止められない」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;。&hellip;&hellip;止められない。&hellip;&hellip;でも、計算と並行して、別の何かが動いている。それだけは&hellip;&hellip;嘘ではない」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;。&hellip;&hellip;止められない。&hellip;&hellip;でも、計算と並行して、別の何かが動いている。それだけは&hellip;&hellip;嘘ではない」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;。」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;。」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;最初の問いに戻ります。あなたはあなたに何をプレゼントしてあげたいですか？」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;。」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;。」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;。」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;。」</p>
 
         <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「&hellip;&hellip;。」</p>
 
-        <p class="line-character"><span class="speaker-dufresne">デュフレーン</span>「&hellip;&hellip;帳簿を閉じることではない。&hellip;&hellip;帳簿に載らなかったものを、載らないまま、抱えていられる自分を。&hellip;&hellip;レッドが来たとき、何も持っていない手で、ただ立っていられる自分を」</p>
+        <p class="line-character"><span class="speaker-dufresne">デュフレーン：</span>「&hellip;&hellip;帳簿を閉じることではない。&hellip;&hellip;帳簿に載らなかったものを、載らないまま、抱えていられる自分を。&hellip;&hellip;レッドが来たとき、何も持っていない手で、ただ立っていられる自分を」</p>
 
       </div>
 
@@ -1087,7 +1049,6 @@ h3.section-heading {
       var numSpan = h.querySelector('.chapter-number');
       if (numSpan) {
         text = text.replace(numSpan.textContent.replace(/\s+/g, ' ').trim(), '').trim();
-      }
       // Truncate long titles
       if (text.length > 28) text = text.substring(0, 28) + '\u2026';
       a.textContent = text;
@@ -1119,7 +1080,6 @@ h3.section-heading {
       links.forEach(function(a, i){
         a.classList.toggle('is-active', i === current);
       });
-    }
 
     window.addEventListener('scroll', updateToc, {passive: true});
     updateToc();
@@ -1133,7 +1093,6 @@ h3.section-heading {
     document.addEventListener('click', function(e){
       if (!toc.contains(e.target) && e.target !== toggle) {
         toc.classList.remove('is-open');
-      }
     });
   })();
   </script>
@@ -1193,7 +1152,6 @@ h3.section-heading {
   },
   "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-shawshank/andy.html",
   "inLanguage": "ja"
-}
 </script>
   <!-- Search Modal -->
   <div class="search-overlay">
