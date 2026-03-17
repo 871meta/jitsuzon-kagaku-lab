@@ -247,6 +247,15 @@ h3.section-heading {
   top: 0;
   color: rgba(192,168,120,0.35);
   font-size: 0.75em;
+.profiling-block p {
+  color: var(--color-text-reading);
+  font-size: var(--fs-body);
+  line-height: 1.9;
+  margin-bottom: 1rem;
+}
+.profiling-block p:last-child {
+  margin-bottom: 0;
+}
 
 /* === Comparison Table === */
 
@@ -748,8 +757,14 @@ h3.section-heading {
     <!-- ========== 中間CTA ========== -->
     <section class="cta-block fade-in">
       <div class="container">
-        <p class="cta-block__desc" style="margin-bottom:1rem;">上の対話でキャラクターに行ったことと、同じことを、あなたに対して行います。</p>
-        <a href="../../trial.html" class="btn">トライアルセッションを予約する &rarr;</a>
+        <h2 class="cta-block__title">天命の言語化セッション&trade;</h2>
+        <p class="cta-block__desc">2時間で天命が言語化できる場所。</p>
+        <div class="cta-block__features">
+          <span class="cta-block__feature">Zoom完結</span>
+          <span class="cta-block__feature">事前学習不要</span>
+          <span class="cta-block__feature">対話のみ</span>
+        </div>
+        <a href="../../trial.html" class="btn">無料トライアルに申し込む &rarr;</a>
       </div>
     </section>
 
