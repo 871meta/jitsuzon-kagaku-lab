@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-deathnote/l.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LのMeta ── 自由意志なき世界の天命論 | 実存科学研究所</title>
+  <meta name="description" content="『DEATH NOTE』のL（エル）を、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。退屈な天才が、もう一人の退屈な天才に出会い、初めて「生きている」と感じた──深夜二時の角砂糖の構造。">
+  <meta property="og:title" content="LのMeta ── 自由意志なき世界の天命論 | 実存科学研究所">
+  <meta property="og:description" content="『DEATH NOTE』のL（エル）を、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。退屈な天才が、もう一人の退屈な天才に出会い、初めて「生きている」と感じた──深夜二時の角砂糖の構造。">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="実存科学研究所">
+  <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+  <meta property="og:url" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-deathnote/l.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"></noscript>
+  <link rel="stylesheet" href="../../css/style.min.css?v=27">
+
+<style>
+/* =============================================
+   視認性・読みやすさ強化CSS
+   ============================================= */
+
+/* === h1 ゴールドシマー === */
+.hero-title--shimmer {
+  background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gold-shimmer 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 16px rgba(192,168,120,0.3)) drop-shadow(0 0 40px rgba(192,168,120,0.12));
+}
+@keyframes gold-shimmer {
+  0%, 100% { background-position: 100% 50%; }
+  50% { background-position: 0% 50%; }
+}
+
+/* === 1. 章見出し — 中央配置＋装飾 === */
+h2.chapter-heading {
+  font-size: var(--fs-section);
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  color: var(--color-text-primary);
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  position: relative;
+  padding-top: 2rem;
+}
+h2.chapter-heading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 1px;
+  background: var(--color-gold);
+}
+h2.chapter-heading::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(192,168,120,0.5), transparent);
+  margin: 1.2rem auto 0;
+}
+.chapter-number {
+  display: block;
+  font-family: var(--font-serif-en);
+  font-size: var(--fs-caption);
+  font-weight: 400;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 0.6rem;
+}
+
+/* === 2. 区切り線 — 装飾付き === */
+hr {
+  border: none;
+  height: auto;
+  background: none;
+  margin: 4.5rem 0;
+  text-align: center;
+  overflow: visible;
+}
+hr::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(192,168,120,0.08) 15%, rgba(192,168,120,0.2) 50%, rgba(192,168,120,0.08) 85%, transparent 100%);
+}
+hr::after {
+  content: "\25C6";
+  display: block;
+  font-size: 0.5rem;
+  color: rgba(192,168,120,0.3);
+  margin-top: -0.35em;
+  letter-spacing: 1em;
+  line-height: 1;
+}
+
+/* === 3. セッション対話 — 読みやすさ向上 === */
+.session-dialogue {
+  max-width: 680px;
+  margin: 2.5rem auto;
+  padding: 2.5rem 2rem;
+  background: rgba(10, 8, 18, 0.35);
+  border: 1px solid rgba(192,168,120,0.06);
+  border-radius: 2px;
+  position: relative;
+}
+.session-dialogue::before {
+  content: "SESSION";
+  position: absolute;
+  top: -0.6em;
+  left: 2rem;
+  font-family: var(--font-serif-en);
+  font-size: var(--fs-micro);
+  letter-spacing: 0.3em;
+  color: rgba(192,168,120,0.4);
+  background: var(--color-bg-deep);
+  padding: 0 0.8rem;
+}
+.session-dialogue p {
+  margin-bottom: 1.1em;
+  line-height: 2.2;
+}
+.session-dialogue .speaker-yanai { color: var(--color-gold); font-weight: 600; font-size: var(--fs-body); }
+.session-dialogue .speaker-l { color: #b8a0d8; font-weight: 600; font-size: var(--fs-body); }
+
+/* 箭内の発言：金色の左ボーダー */
+.session-dialogue .line-yanai {
+  border-left: 2px solid rgba(192,168,120,0.15);
+  padding-left: 1.2rem;
+}
+/* キャラの発言：少しインデント */
+.session-dialogue .line-character {
+  margin-left: 1.4rem;
+}
+/* 沈黙マーカー：中央揃え＋装飾線 */
+.session-dialogue .silence {
+  color: rgba(235,232,225,0.3);
+  font-style: italic;
+  text-align: center;
+  margin: 2em 0;
+  font-size: var(--fs-small);
+  letter-spacing: 0.15em;
+}
+.session-dialogue .silence::before,
+.session-dialogue .silence::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: rgba(192,168,120,0.15);
+  vertical-align: middle;
+  margin: 0 1em;
+}
+/* 10発言ごとの視覚リズム */
+.session-dialogue p:nth-child(10n) {
+  margin-bottom: 2em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid rgba(192,168,120,0.06);
+}
+
+/* === 4. text-panel の単調さ解消 === */
+section > .text-panel:nth-of-type(even) {
+  background: rgba(8, 6, 16, 0.45);
+  border-color: transparent;
+}
+section > .text-panel:nth-of-type(even)::before {
+  display: none;
+}
+
+/* === 5. highlight-block の存在感微増 === */
+.highlight-block {
+  background: rgba(192,168,120,0.06);
+  border-left: 2px solid;
+  border-image: linear-gradient(180deg, var(--color-gold) 0%, rgba(192,168,120,0.15) 100%) 1;
+  padding: 2rem 2rem 2rem 2.2rem;
+  margin: 2.5rem 0;
+}
+.highlight-block p {
+  font-size: var(--fs-lead);
+  font-weight: 500;
+  line-height: 2.2;
+  color: var(--color-text-primary);
+}
+
+/* === 6. セクション見出し（h3） === */
+h3.section-heading {
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  color: var(--color-text-body);
+  letter-spacing: 0.08em;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1.2rem;
+  border-left: 2px solid rgba(192,168,120,0.4);
+  line-height: 1.6;
+}
+
+/* === Profiling Block === */
+.profiling-block {
+  background: rgba(15,12,25,0.5);
+  border: 1px solid rgba(192,168,120,0.1);
+  padding: 2.5rem 2rem;
+  margin: 2rem 0;
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+.profiling-block::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(192,168,120,0.4), transparent);
+}
+.profiling-block h3 {
+  font-size: var(--fs-body);
+  color: var(--color-gold);
+  letter-spacing: 0.15em;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(192,168,120,0.1);
+}
+.profiling-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+.profiling-block ul li {
+  margin-bottom: 1rem;
+  color: var(--color-text-reading);
+  font-size: var(--fs-body);
+  line-height: 1.9;
+  padding-left: 1.6em;
+  position: relative;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(192,168,120,0.04);
+}
+.profiling-block ul li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.profiling-block ul li::before {
+  content: "\2500\2500";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgba(192,168,120,0.35);
+  font-size: 0.75em;
+}
+
+/* === Author Block === */
+.author-block {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(192,168,120,0.15);
+}
+.author-block p { font-size: var(--fs-body); color: var(--color-text-reading); line-height: 2; }
+.author-block strong { color: var(--color-text-body); }
+
+/* === Source Note === */
+.source-note {
+  margin-top: 2rem;
+  font-size: var(--fs-small);
+  color: rgba(235,232,225,0.35);
+}
+
+/* === Series Note === */
+.series-note {
+  margin-top: 2rem;
+  padding: 1.5rem 2rem;
+  background: rgba(192,168,120,0.04);
+  border: 1px solid rgba(192,168,120,0.1);
+  font-size: var(--fs-body);
+  color: var(--color-text-reading);
+  line-height: 2;
+}
+
+/* === 7. モバイル対応 === */
+@media (max-width: 600px) {
+  h2.chapter-heading {
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    padding-top: 1.5rem;
+  }
+  .chapter-number {
+    font-size: var(--fs-micro);
+    letter-spacing: 0.25em;
+    margin-bottom: 0.4rem;
+  }
+  h3.section-heading {
+    font-size: var(--fs-lead);
+    margin-top: 2rem;
+    padding-left: 1rem;
+  }
+  hr { margin: 3rem 0; }
+  .session-dialogue {
+    padding: 1.5rem 1.2rem;
+    margin: 2rem auto;
+  }
+  .session-dialogue .line-yanai { padding-left: 0.8rem; }
+  .session-dialogue .line-character { margin-left: 0.8rem; }
+  .profiling-block { padding: 1.5rem 1.2rem; }
+  .highlight-block { padding: 1.5rem 1.2rem 1.5rem 1.4rem; }
+  .text-panel { padding: 2rem 1.5rem; }
+}
+@media (max-width: 480px) {
+  .text-panel p br,
+  .pull-quote p br,
+  .highlight-block p br,
+  .def-box p br,
+  .session-dialogue p br { display: none; }
+  h2.chapter-heading { font-size: var(--fs-h3); }
+  .session-dialogue p:nth-child(10n) {
+    margin-bottom: 1.5em;
+    padding-bottom: 1em;
+  }
+}
+</style>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="../../index.html" class="site-logo">実存科学研究所</a>
+      <button class="search-toggle" aria-label="検索"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+            <nav class="global-nav">
+        <a href="../../index.html">Top</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">The Meta</button>
+          <div class="nav-dropdown__menu">
+            <a href="../../beginner.html">はじめての方へ</a>
+            <a href="../../lp.html">ダークサイド診断</a>
+            <a href="../../omoidasu/">身体的知性診断</a>
+          </div>
+        </div>
+        <a href="../../session.html">Session</a>
+        <a href="../../founder.html">Founder</a>
+        <a href="../../specials.html">Specials</a>
+      </nav>
+    </div>
+  </header>
+  <div class="reading-progress"></div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="パンくずリスト">
+        <ol class="breadcrumb__list">
+          <li class="breadcrumb__item"><a href="../../index.html" class="breadcrumb__link">TOP</a></li>
+          <li class="breadcrumb__item"><a href="../../specials.html" class="breadcrumb__link">Specials</a></li>
+          <li class="breadcrumb__item"><a href="./" class="breadcrumb__link">DEATH NOTE篇</a></li>
+          <li class="breadcrumb__item"><span class="breadcrumb__current">LのMeta</span></li>
+        </ol>
+      </nav>
+      <p class="page-hero__sub">DEATH NOTE &times; Existential Science</p>
+      <h1 class="hero-title--shimmer">DEATH NOTEのMeta<br>── 自由意志なき世界の天命論</h1>
+      <p class="page-hero__lead">箭内宏紀｜実存科学研究所</p>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <!-- ========== ネタバレ注意 ========== -->
+    <div class="text-panel fade-in">
+      <p style="font-size:0.85rem; color:rgba(235,232,225,0.5); text-align:center;">※ 本稿は『DEATH NOTE』全体のネタバレを含みます。</p>
+    </div>
+
+    <!-- ========== 導入（冒頭フック） ========== -->
+    <section class="fade-in">
+
+      <div class="text-panel fade-in">
+        <p>彼は、深夜二時に一人でケーキを食べていた。</p>
+        <p>ホテルの一室。ブラインドの隙間から街灯の線が一本だけ床に落ちている。膝を胸に抱え込んだ姿勢で──普通に座ると推理力が40%落ちる、と彼は言う──親指を唇に押し当て、もう片方の手がフォークを動かす。生クリームが唇の端に付いても拭わない。見ている人間がいないから。甘い匂い。キーボードを叩く音。角砂糖が皿の上で崩れる微かな音。それだけが、彼が存在している証拠だった。</p>
+        <p>数時間前、この同じ手がモニターの前でフォークを握っていた。画面の中では、囮に立てた死刑囚が胸を押さえて倒れていた。40秒。キラは40秒で人を殺せる。それを証明するために、彼は一人の命を入力値として消費した。囮が息絶える瞬間も、フォークは止まらなかった。</p>
+        <p>彼はそれを「正義」と呼び、同時に自分が「悪人」であることも認めていた。どちらも嘘ではなく、どちらも本当でもない。「正義」も「悪」も、盤面に参加するための入場券に過ぎなかった。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>彼は、キラが夜神月であることを確信していた。証明の最終段階まで到達していた。そして──あと一歩踏み込めば自分が殺されることも、完全に計算し尽くしていた。</p>
+        <p>大雨の日。屋上にずぶ濡れで立っていた。雨粒が猫背の背中を叩く音だけが聞こえる。室内に戻り、月の濡れた足をタオルで拭いた。自分を殺す者の足を、自分の手で。「罪滅ぼしですよ」。鐘の音が聞こえる、と彼は言った。教会の鐘ではない。彼の中で鳴っている、終わりの音だった。</p>
+        <p>世界最高の探偵が、真実に手をかけながら死ぬことを選んだのか。退屈しか知らなかった人間が、退屈でない時間を生きたことの意味は何だったのか。</p>
+        <p>その問いの先に、天命がある。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== シャドウ・プロファイリング ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Shadow Profiling</span>シャドウ・プロファイリング</h2>
+
+      <div class="profiling-block fade-in">
+        <h3>【Meta（変えられない前提条件）】</h3>
+        <ul>
+          <li>ワイミーズハウス（天才児のための孤児院）出身。本名も素顔も社会的来歴も喪失した状態で「知性」という一点のみで世界と接続。Meta第3層（社会的・文化的属性）が完全に空白</li>
+          <li>本名「L Lawliet（ローライト）」──Light（光）の対極に位置する音韻。「Last One（最後の一人）」と「Lost One（失われし者）」の二重の象徴。存在しない人間の、存在しない名前</li>
+          <li>極度の猫背、裸足、L座り、甘味のみの偏食──身体を社会と接続するための道具としては完全に放棄し、知性の駆動装置としてのみ最適化。「推理力が40%低下する」と公言する座り方は、四肢の血流を制限し脳への酸素供給を最大化する生体力学的行動</li>
+          <li>ワタリという唯一の「インターフェース」を通じてのみ現実世界と接続。ワタリの死がLの死に数秒先行する構造は、現実との接続点が断たれた概念的存在が盤面に留まれなくなることの構造的必然</li>
+          <li>「嘘つき」の自認。提示する確率は虚構の数値──感情を確率という知性の言語に翻訳することで、世界との対話から感情を完全に排除する防御構造</li>
+        </ul>
+      </div>
+
+      <div class="profiling-block fade-in">
+        <h3>【シャドウ（抑圧された本音）】</h3>
+        <ul>
+          <li>覆い方の類型：偽装されたシャドウ──知性の言語によって感情を隠蔽。「確率」という虚構の数値と「嘘です」という自認が、本音との距離を精密に制御する二重の防壁</li>
+          <li>S2「この役割を脱いだら空っぽだ」： 探偵であることが自己の存在証明のすべて。探偵以外の自分を一度も想像したことがない。探偵を停止することは物理的な死よりも恐ろしい「存在論的な死」</li>
+          <li>S7の変形「受け取ったら壊れる」： 月を「対等な知性」として受け入れてしまえば、探偵とキラという対立関係──彼らの生を輝かせている盤面──が崩壊する。敵として向き合い続けることでのみ互いの存在意義が保たれる</li>
+          <li>核心：「退屈な世界で、自分の思考を見返してくれる存在に出会ったことがない──そしてその渇望を、自分は一度も感情の言葉で認識したことがない」</li>
+          <li>非合理的信念： 「知性で処理できないものは、存在しない」──感情を確率に翻訳し続けることで、感情そのものの存在を否認する構造</li>
+          <li>深層の欲求： 自分の思考を受け止め、打ち返し、こちらを見返してくれる知性──パズルではなく、人間──との相互応答</li>
+          <li>代償行動： 事件を「ゲーム」として消費する遊戯性。知的興奮への飢餓を次の難事件で満たし続ける終わりなき循環──しかし一方通行の興奮は空洞を埋めない</li>
+        </ul>
+      </div>
+
+      <div class="profiling-block fade-in">
+        <h3>【夜神月との対比】</h3>
+        <p style="font-size:0.85rem; color:#c0bbb4; margin-bottom:1.5rem; line-height:1.8;">退屈に殺されかけていた二人の天才──同じ空虚を抱えながら、初期条件の違いが正反対の出力を生んだ鏡像の構造。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-bottom:0.8rem;">Lは社会の外部に存在し、匿名のまま世界と接続した。社会的属性の空白が彼を「純粋な概念的存在」にした。一方、月は社会の内部に完全に溶け込み、模範的な高校生・大学生として擬態した。社会的属性の完璧な充足が、彼に「完全な社会的仮面」を与えた。動機の核心は共通している──退屈の解消。しかしLはそれを「知的興奮への飢餓」として処理し、月は「世界の腐敗への絶望」として処理した。Lは自己の悪を冷徹に自覚し続けたが、月は自己正当化が深まるほど狂信化していった。死への態度にも構造的差異が現れる──Lは死を予測し、静かに受容した。月は死を否定し、醜悪に逃走した。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2;">同じ退屈、同じ飢餓、異なる初期条件──だから異なる出力が生まれた。LがLになり、月がキラになったのは、選択の結果ではない。Metaの帰結である。</p>
+      </div>
+
+      <div class="profiling-block fade-in">
+        <h3>【ワタリとの対比】</h3>
+        <p style="font-size:0.85rem; color:#c0bbb4; margin-bottom:1.5rem; line-height:1.8;">概念的存在とそのインターフェース──Lの知性を現実世界に顕現させた唯一の回路。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-bottom:0.8rem;">Lは純粋な知的概念として存在し、ワタリはその概念を現実に接続するインターフェースとして機能した。ワタリはLの才能を見出し、世界最高の探偵に育成した「起動装置」であり、Lが身体のケアすら委ねた唯一の存在だった。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2;">ワタリの死がLの死に数秒先行する構造は、概念を支えていた物理基盤が先に消滅し、概念が現実に接続する唯一の回路が断たれたことを意味する。これはプロットの偶然ではなく、構造的必然だった。</p>
+      </div>
+
+      <div class="profiling-block fade-in">
+        <h3>【ニア＋メロとの対比】</h3>
+        <p style="font-size:0.85rem; color:#c0bbb4; margin-bottom:1.5rem; line-height:1.8;">知性と情動が融合した全体性と、分裂した継承者──Lの天命を死後に完遂する二つの破片。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-bottom:0.8rem;">Lには知的リスクテイクと受動的観察が融合していた。ニアはLの知性と論理──受動的に盤面を完成させる力を継承し、メロはLの情動と行動力──能動的にリスクを取る衝動を継承した。それぞれ単独ではLに及ばない。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2;">しかしメロの犠牲がルールの穴を暴き、ニアの推理が網を完成させることで──二人の融合がLの概念的全体性を時間差で再構成し、Lの天命を死後に完遂した。</p>
+      </div>
+
+      <div class="profiling-block fade-in">
+        <h3>【天命への転換点】</h3>
+        <ul>
+          <li>喪失： 月という「初めて自分の思考を見返してくれた存在」との出会いが、退屈という存在論的空虚を打ち破った──しかし、その存在はキラであり、追い詰めれば失う</li>
+          <li>反転： 13日ルールの検証に踏み込めば死ぬと理解しながら、探偵であることを手放すことが「物理的な死」よりも恐ろしい「存在論的な死」であると悟る。二つの死の間で、肉体の死を選んだ</li>
+          <li>天命の完成： 大雨の屋上、月の足を拭くシーン──自らの死を完全に予測し受容した上での最後の身体的接触。探偵としての完成と物理的な死が同時に訪れる「天命の瞬間的完成」</li>
+        </ul>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>──ここまでが、Lの構造の地図だ。</p>
+        <p>しかし、地図は地図でしかない。<br>この構造が本人の口から、本人の声で露呈する瞬間を、見届けてほしい。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== セッション対話 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Session</span>天命の言語化セッション&trade;</h2>
+
+      <div class="session-dialogue fade-in">
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>Lさん、セッションに来てくださってありがとうございます。あなたはあなたに何をプレゼントしてあげたいですか？</p>
+        <p class="silence">（沈黙。膝を胸に抱え込んだ姿勢。親指を唇に押し当てている。眼球だけが箭内を追跡している──瞬きの間隔を測っている）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;。</p>
+        <p class="silence">（角砂糖を一つ、親指と人差し指で摘み上げる。口には入れない。手の中で転がしている。15秒）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>面白い質問ですね。</p>
+        <p class="silence">（間）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;嘘です。「面白い」と言ったのは嘘です。正確には──分類に困っている。この種の問いは、私のデータベースに該当する前例がありません。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>プレゼント。自分から自分に。&hellip;&hellip;ふむ。私は通常、自分自身に何かを「与える」という構文で思考したことがない。探偵は問題を解く。解いた結果、何かが残る。残ったものが報酬──いえ、報酬ですらない。結果は結果です。</p>
+        <p class="silence">（角砂糖を口に入れる。噛まない。舌の上で転がす）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;解けない謎。それをプレゼントしたい。私がどれだけ思考を重ねても、最後の一手が見えない──そういう謎が欲しい。退屈でない時間を。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>では、なぜそれをプレゼントできていないんですか？</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;できていない、という表現は不正確です。キラ事件は、まさにそれでした。解ける。しかし証明できない。解答は見えている。しかし盤面の外からルールを書き換える存在がいる。死神です。人間が作った法則の外部に、もう一つのルールセットが存在している。&hellip;&hellip;これは前例がなかった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、証明できないのに手を引かないんですか？</p>
+        <p class="line-character"><span class="speaker-l">L：</span>手を引く。&hellip;&hellip;その選択肢は存在し得ません。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、存在し得ないんですか？</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;。</p>
+        <p class="silence">（親指が唇から離れる。戻る。離れる。この動きが繰り返される）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>探偵が事件から手を引くというのは──このコップの中の水に、「液体であることをやめろ」と命じるようなものです。水は液体であることを選んでいない。温度と気圧がそう規定している。私が探偵であることも同様です。選択ではない。状態です。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「状態」？</p>
+        <p class="line-character"><span class="speaker-l">L：</span>私は探偵として存在しているか、存在していないかのどちらかです。その中間は物理的に成立しない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、中間が成立しないんですか？</p>
+        <p class="silence">（目が箭内を正面から捉える。初めて。それまでは視線の角度を微調整し続けていた──今、固定された）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;私という人間から「探偵」を引き抜いたら、残るのは──名前のない、顔のない、国籍のない、家族のない、何か、です。何か。人間と呼ぶのが適切かどうか、自分でもわからない。ワイミーズハウスに引き取られたとき、私はすでに社会的な名前を失っていた。ワタリが見出したのは「知性」です。人間としての私ではない。知性を持った──容器です。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>面白いですか？ 世界最高の探偵と呼ばれる存在が、実は中身が空っぽだという話が。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、「空っぽ」なんですか？</p>
+        <p class="line-character"><span class="speaker-l">L：</span>思うのではなく、事実です。名前がない。家族がない。居場所がない。──あるのは頭脳だけです。頭脳と、この座り方と、甘いものだけ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="silence">（角砂糖をもう一つ取り出す。積み始める。一段、二段。動きが正確すぎる）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;ところで、箭内さん。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>あなたの質問構造はソクラテスの産婆術に近い。しかし純粋なソクラティック・メソッドとは異なります。あなたは反論しない。矛盾を指摘しない。ただ「なぜ」を繰り返す。これは認知行動療法でもない。動機づけ面接法でもない。──既存の枠組みに分類できない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>私が分類できないものは、この世界に三つしかありません。デスノートの仕組み。死神の行動原理。そして──</p>
+        <p class="silence">（角砂糖の塔が三段目で崩れる。拾わない）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;いえ。四つでした。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>四つ目は、夜神月の動機です。あの男がなぜデスノートを使い続けたのか──表面的な説明はいくらでもできます。正義。退屈。全能感。しかし構造の最深部が見えない。──おそらく本人にも見えていない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>あなたの手法が分類できないことと、月くんの動機の最深部が見えないことは、私にとって同じカテゴリーの不快感を生じさせます。──なぜでしょう。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;あなたは答えませんね。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>これは意図的な沈黙ですね。あなたは今──私が自分の問いに自分で答えるのを待っている。</p>
+        <p class="silence">（長い沈黙。角砂糖に手を伸ばしかけて、止まる。手が行き場を失ったように、膝の上に落ちる）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;不快感の正体は──「処理できないもの」の存在です。私の知性は、処理することで存在を維持している。入力に対して出力を返す。問題を解く。仮説を検証する。──しかし今、あなたの沈黙は入力のように見えて入力ではない。何も提示していないのに、私の内部で処理が走っている。&hellip;&hellip;この状態は、不快です。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、不快なんですか？</p>
+        <p class="line-character"><span class="speaker-l">L：</span>処理できないものが存在するということは──私の知性に限界があるということです。そして限界があるということは──限界の先に、私が「知性」以外の何かを持っているか、あるいは持っていないかの分岐点がある。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;持っていなければ問題ありません。限界の先は空白で、空白には不快も快もない。しかし──不快を感じている。不快を感じているということは──空白ではない。限界の先に何かがある。何かが──。</p>
+        <p class="silence">（声が急に落ちる。喉の奥で何かを飲み込むような音）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;これは生産的な方向ではない。戻しましょう。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、戻すんですか？</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;。</p>
+        <p class="silence">（10秒の沈黙）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;怖いからです。</p>
+        <p class="silence">（自分の声に驚いたように、一瞬、体が固まる）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;今、私は「怖い」と言いました。確率でも仮説でもなく。──この言語は私の通常のレパートリーに含まれていない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;生産的な方向に戻します。月くんの話をしましょう。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、&ldquo;月くんの話&rdquo;なんですか？</p>
+        <p class="silence">（Lの目が一瞬だけ鋭くなる。しかし反論しない）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;月くんの話、ですか。&hellip;&hellip;正確な指摘です。戻しているのではなく──逃げているのかもしれない。</p>
+        <p class="silence">（膝を抱える力が、わずかに強くなる。身体が小さくなっている）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>月くんの話をするのは──月くんの話であれば、私は安全だからです。分析者の位置にいられる。対象を観察し、仮説を立て、検証する。その構造の中にいる限り、私は──</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>──壊れない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;今、また私は確率の言語を使わなかった。「壊れない」。これは──</p>
+        <p class="silence">（言葉が途切れる。親指が唇に戻るが、押しつけ方がいつもと違う──噛んでいる）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;月くんの話をします。いいですか。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>月くんは──夜神月は──私が人生で初めて出会った、知力で対等に渡り合える人間です。</p>
+        <p class="silence">（声が変わる。静かだが、温度が上がる。角砂糖にも椅子の縁にも手を伸ばさない。身体が止まっている）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;あの退屈な世界で。何を解いても満たされない世界で。事件を解く──正直に言えば遊びの延長です。パズルを解くのと変わらない。難事件を解いて、次の難事件を解いて、その次を解いて。際限のない一方通行。パズルは私を見返してこないからです。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>事件には意志がない。謎は私の推理に応答しない。一方通行です。解答が存在するだけで、対話は存在しない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>月くんは、違った。</p>
+        <p class="silence">（親指が唇から離れる。両手が膝の上に降りる）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>私が手を打てば、月くんは打ち返してきた。裏の裏を読めば、向こうはその裏の裏の裏をすでに読んでいる。私の思考が鏡に映ったように──いえ、鏡ではない。鏡は同じものを返すだけだ。月くんは、私と同じ構造を持ちながら、まったく逆方向に走る人間でした。私が謎を解く側なら、月くんは謎そのものを世界に投げかける側だった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>そしてその謎を解ける人間は、世界にただ一人。</p>
+        <p class="silence">（声が低くなる）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;私だけです。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>月くんに出会ったとき──退屈が消えました。空洞が埋まった。何を解いても残り続けていたあの──空っぽの感覚が。初めて。嘘ではありません。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>しかしここに──矛盾がある。</p>
+        <p class="silence">（声が硬くなる）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>キラを追い詰めることが私の存在意義です。キラを追い詰めるとは、月くんを排除することです。月くんを排除するとは──私の退屈を埋めた唯一の存在を、自分の手で消すということです。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>月くんが消えたら──空洞が戻る。空洞が戻ったら──私は以前の状態に逆戻りする。しかし月くんを追い詰めなければ──探偵としての私が消える。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>どの道を選んでも、私は──消える。</p>
+        <p class="silence">（声が掠れる。初めて）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;この矛盾に──気づいてはいました。ずっと。「月くんがキラである確率は5%」──あの数字は嘘です。常に90%以上でした。5%という数字は──感じないための装置です。直視したら、推理が止まる。止まったら──</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>──壊れる。</p>
+        <p class="silence">（両手で顔を覆う。あの猫背の姿勢が、さらに丸くなる。椅子の上で体育座りのようになっている──彼がこれ以上小さくなることはできない）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;ずっと知っていました。知っていたから──あの日、雨の中で月くんの足を拭いたんです。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&ldquo;拭いた&rdquo;のは、何のためだったんですか？</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;罪滅ぼしだと、私は言いました。嘘です。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;正確に言えば──「さよなら」でした。</p>
+        <p class="silence">（顔を覆った手の間から、声が漏れる）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>鐘の音が聞こえたんです。あの日。終わりの音。論理の言語では表現できないものが──私の中で鳴っていた。13日ルールの検証を進めれば、死神レムが私を殺す。構造的に確定していた。しかし検証を止めれば、探偵としての私が死ぬ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>二つの死のうち──肉体の方を選びました。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>英雄的に聞こえますか。そうではない。自分のために死んだんです。探偵のまま死ぬために。空っぽに戻るくらいなら──盤面の上で、月くんの向かい側で、最後の一手を打ちながら息を引き取る方を選んだ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;自分勝手です。最後まで。負けず嫌いで、幼稚で、わがままで──</p>
+        <p class="silence">（手が顔から離れる。目の下のクマが、光の加減か、いつもより深く見える）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;それでも。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>月くんに出会えてよかった。</p>
+        <p class="silence">（声のトーンが変わっている。低く、静かで、平坦だ）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>退屈しか知らなかった私に──退屈ではない時間をくれた人です。私がこの人生で唯一「生きていた」と呼べる時間は、月くんと戦っていたあの期間だけです。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;月くんに「あなたは初めての友達です」と言いました。あれが嘘だったのか本当だったのか──私にもわからない。友達が何かを知らないんです。知らないものには名前がつけられない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>ただ──月くんが消えた後の世界を想像したとき。あの退屈に戻るのが──</p>
+        <p class="silence">（言葉が止まる。5秒。10秒）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;死ぬことよりも怖かった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;いえ。正確に言い直します。退屈ではなかった。</p>
+        <p class="silence">（長い沈黙。口が閉じたまま動かない）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;孤独です。</p>
+        <p class="silence">（沈黙。空気が変わる）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;今、私は「孤独」と言いました。生まれて初めてこの言語を使いました。確率でも、仮説でも、推論でもなく──ただの、一語。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="silence">（長い沈黙。角砂糖に手を伸ばさない。膝を抱えたまま、動かない）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;都合がよすぎるかもしれない。世界最高の探偵が、最後の最後に「孤独だった」と言い出す。計算かもしれない。あなたの前で脆弱さを演出することで、何らかの効果を狙っている可能性──私は嘘つきですから──は否定できない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>しかし──もし計算だとしたら、なぜ今──</p>
+        <p class="silence">（手が胸の前に来る。押さえるように）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;ここが、こんなに。</p>
+        <p class="silence">（言葉にならない。声が途切れる）</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="silence">（長い、長い沈黙。部屋の中に、二人の呼吸だけがある）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;ワイミーズハウスの夜を、話してもいいですか。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;深夜の二時。子供たちは眠っている。私だけが起きている。いつも。──部屋には何もない。ベッドと、机と、椅子だけ。窓の外は何も見えない。暗い。音もない。自分が存在しているかどうかを確認する方法が──何もなかった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;角砂糖を積んでいました。一段、二段、三段。崩れる。また積む。崩れる。また積む。──その音だけが、自分が存在している証拠でした。</p>
+        <p class="silence">（声が、変わっている。低く、遅く、静かだ）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;あの音を──今でも聞いています。角砂糖を積むたびに。どこにいても。ホテルの一室でケーキを食べているとき。捜査本部でパソコンに向かっているとき。──崩れる音が、私を私にしていた。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;月くんと出会ってからは──積まなくてよくなった。あの時間だけは。</p>
+        <p class="silence">（涙ではない。目は乾いている。しかし声は、水底から来るように深い）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>月くんの思考が──私に返ってくる。推理を投げれば打ち返される。私の存在を確認するために、もう角砂糖を積む必要がなかった。──月くんという人間が、私の対面にいる。それだけで──</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;生きていた。あの時間だけ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;月くんと戦った時間。それは──事件を解くこととは違った。パズルを消費することとは違った。あの時間は──「何か」ではなく、人間として存在していた時間だったのかもしれない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&ldquo;人間として&rdquo;──それは、何のためだったんですか？</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;何のため。</p>
+        <p class="silence">（小さな声で、繰り返す）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>何のためでもなかった。目的のために月くんと戦ったのではない。結果のために推理したのではない。あの時間そのものが──</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>あの時間そのものが、私の人生だった。</p>
+        <p class="silence">（声が静かになる。限りなく静かに）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>退屈な天才が、もう一人の退屈な天才に出会って。初めて退屈ではない時間が来て。その時間が終わることが確定していて。──それでも一秒でも長く、あの盤面に座っていたかった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;「世界最高の探偵」は──たぶん、入場券だったんです。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>入場券。月くんに出会うための。あの盤面に座るための。退屈ではない時間を──ほんの短い間だけ、生きるための。</p>
+        <p class="silence">（膝に額を押しつける。声だけが漏れる）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;探偵であることが天命だと──ずっと、そう処理してきました。しかし構造を正確に記述するなら──月くんと出会い、全力で向き合い、最後まで降りなかったこと。それが──</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;もし天命という言語を使うなら。それが、私の天命だったのだと──思います。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;確率は言いません。これだけは。</p>
+        <p class="silence">（膝から顔を上げる。目が、透き通っている。箭内を見ている）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;箭内さん。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;一つ、訂正してもいいですか。セッションの最初に、私は「面白い質問ですね」と言いました。嘘だと訂正しました。──あの訂正を、さらに訂正します。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>嘘ではなかった。面白かった。&hellip;&hellip;いえ、面白いという言語ではまだ不正確だ。</p>
+        <p class="silence">（親指が唇に触れる。押しつけ方が浅い。力が入っていない）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;私は生涯をかけて、世界中の謎を解いてきました。人間の動機、犯罪の構造、嘘の裏にある真実──すべてを知性の言語で処理してきた。そして今日、あなたの前で──知性では処理できない領域が、自分の内部に存在していたことを知りました。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>私はそれを「孤独」と名づけました。しかしそれは入口に過ぎない。その奥には──私が一度も名前をつけたことのない、広大な領域がある。世界最高の探偵が、自分の胸の中に未踏査の大陸を残したまま死のうとしていた。</p>
+        <p class="silence">（微かに、口の端が動く）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;あなたは一度も答えを渡さなかった。問いだけを投げ続けた。その問いが──私の知性が到達できなかった場所に、私自身を連れていった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;これは──拍手に値します。</p>
+        <p class="silence">（両手が膝から離れ、ゆっくりと、二度だけ手を合わせる。乾いた、しかし正確な音が部屋に響く）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>月くんに「初めての友達です」と言ったとき──あれが本当だったのか嘘だったのか、今でもわからない。友達が何かを、知らなかったからです。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>しかし今──少しだけ、わかった気がする。</p>
+        <p class="silence">（箭内を真っ直ぐに見ている）</p>
+        <p class="line-character"><span class="speaker-l">L：</span>友達とは──もう一度会いたい、と思う相手のことです。確率ではなく。目的のためでもなく。ただ──この人間の前にもう一度座って、もう一度あの問いを投げてもらいたい、と思うこと。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-l">L：</span>&hellip;&hellip;次は、私が淹れた紅茶を飲んでほしいです。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== セッション解説 ========== -->
+    <section class="fade-in">
+      <div class="text-panel fade-in">
+        <p>上の対話で私が行ったことは、一つの技術に集約される。</p>
+        <p>「なぜ？」という問いは、Lが当然の前提として生きてきた構造──探偵であること、退屈を解消すること、感情を確率に翻訳すること──を、一つずつ掘り返した。掘り返されるたびに、Lは自分の言葉が自分の別の言葉と矛盾していることに気づき始め、知性の言語に逃げ戻ろうとし──そしてその逃げ戻りすらも沈黙によって静かに崩された。</p>
+        <p>「何のために？」という問いは、確率の言語では表現できない一語──「孤独」──を通過し、月くんとの時間そのものが人生だったという、L自身の天命を浮かび上がらせた。</p>
+        <p>私は一度も、答えを与えていない。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== 中間CTA ========== -->
+    <section class="cta-block fade-in">
+      <div class="container">
+        <h2 class="cta-block__title">天命の言語化セッション&trade;</h2>
+        <p class="cta-block__desc">2時間で天命が言語化できる場所。</p>
+        <div class="cta-block__features">
+          <span class="cta-block__feature">Zoom完結</span>
+          <span class="cta-block__feature">事前学習不要</span>
+          <span class="cta-block__feature">対話のみ</span>
+        </div>
+        <a href="../../trial.html" class="btn">無料トライアルに申し込む &rarr;</a>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== 第1章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Chapter One</span>存在しない人間──深夜二時の角砂糖</h2>
+
+      <div class="text-panel fade-in">
+        <p>Lの全存在を規定する最も根本的な条件は、彼が社会的に「存在しない人間」として生を始めたという事実である。</p>
+        <p>イギリス・ウィンチェスターのワイミーズハウス。天才児のための孤児院──発明家にして資産家のワタリが創設したこの施設に引き取られた時点で、Lは社会的な名を失っている。国籍も、家族も、顔も、履歴も──Meta（前提構造）の第3層にあたる社会的・文化的属性が完全に空白だった。</p>
+        <p>この空白は、欠損ではない。構造である。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>社会的属性を持たないということは、社会的同調圧力が作用する余地がないということだ。国家への忠誠も、文化的慣習への服従も、家族の期待への応答も──Lにはそのどれもが存在しない。彼は「知性」という一点においてのみ世界と接続した、純粋な概念的存在として育成された。</p>
+        <p>だが、自由の裏面は孤立だった。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>セッション対話でLが語ったワイミーズハウスの夜──深夜の二時、誰も起きていない部屋で角砂糖を積んでは崩す──あの反復行為には、構造的な意味がある。角砂糖が皿に触れる音。崩れる音。また積む音。それだけが、自分が存在している証拠だった。匿名の存在は、他者の目がなければ存在の痕跡を持たない。Lは音を立てることで──自分が世界に物理的に存在していることを──自分自身に向かって証明し続けていた。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>この構造は、彼の生涯を貫く。甘味を常食する行為は、脳への即効性エネルギー供給という生体力学的合理性の下に、もう一つの機能を隠している。砂糖を口に含む感覚。舌に広がる甘味。ケーキのスポンジが歯に触れる抵抗。──知性が純粋に概念的な処理を続ける中で、身体が存在していることを確認する、数少ない回路の一つだった。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>本名「L Lawliet（ローライト）」に込められた記号性は、この構造を音韻レベルで裏書きする。Low-light──低い光、暗がり。自らを「新世界の神」と称し、Light（光）として輝こうとした夜神月とは、名前の段階で対極に置かれている。光と影。表舞台と暗闘。この対立は物語の設計者によって最初から刻み込まれていたが、もう一つの読みがある。小説版で示された二つの意味──「Last One（最後の一人）」と「Lost One（失われし者）」。誰にも超えられない究極。そして、天から落ちてきた、どこにも着地しない存在。</p>
+        <p>Lは、着地しなかった。地面に根を持たなかった。社会というフィールドのどこにも、彼が立つための座標は存在しなかった──唯一の例外が、「探偵」という役割だった。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== 第2章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Chapter Two</span>退屈な天才──パズルは見返してこない</h2>
+
+      <div class="text-panel fade-in">
+        <p>Lの探偵としての動機を理解するためには、「正義」という概念を完全に脱臼させる必要がある。</p>
+        <p>物語序盤、Lはキラに対して「私は正義だ」と宣言した。しかし、この「正義」は道徳的信念ではない。原作者・大場つぐみは明確に述べている──Lは「少し邪悪（slightly evil）」であり、善良なのは夜神総一郎だけだ、と。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>L自身もこれを自覚していた。ワイミーズハウスの子供たちに、自分は法を犯してきた「悪人」だと認めている。死刑囚を囮に使い、違法な監視と盗聴を行い、監禁と拘束を躊躇なく用いた。「正義」は彼にとって、盤面に参加するための入場許可証に過ぎなかった。</p>
+        <p>真の動機は退屈の解消だった。事件を「あくまで遊びの延長にして趣味」と断言している。興味を持った事件──自らの知的飢餓を満たすほどの難度を持つ事件──しか引き受けない。ICPOの関係者から「わがまま」と評された所以である。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>驚くべきことに、この動機構造は宿敵・夜神月と完全に同型である。月もまた、圧倒的な知能を持て余し、世界の退屈に絶望していた。デスノートの使用を開始したのは、正義感からではない──退屈を破壊する究極のゲームとして、だった。二人は同じ空虚を抱えた、鏡像の天才だった。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>しかし、遊戯性の裏側には空洞がある。</p>
+        <p>セッション対話でL自身が語った言葉──「パズルは私を見返してこない」。これが、Lの存在論的空虚の核心だった。事件には意志がない。謎は推理に応答しない。一方通行の知的消費は、どれだけ高度であっても空洞を埋めない。Lが本当に求めていたのは、知的興奮ではなかった。自分の思考を受け止め、打ち返してくる知性──パズルではなく人間──との相互応答だった。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>ここに、「偽装されたシャドウ」の構造が現れる。Lのシャドウ（抑圧された本音）は、通常の「闇の抑圧」でもゴールデンシャドウでもない。知性の言語によって感情を隠蔽する「偽装」として機能していた。「確率は5%」──実際は90%以上疑っている。この数字は感情を確率に翻訳し、本音との距離を精密に制御する防壁だった。「嘘です」──嘘であることの自認すらが、本音の所在を攪乱する第二の防壁として機能していた。</p>
+        <p>二重の防壁の奥に隠されていたのは、「対等な存在に出会いたい」という渇望──そしてその渇望を一度も感情の言語で認識したことがない、という構造的な凍結だった。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== 第3章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Chapter Three</span>生命維持装置──身体が語る拒絶と渇望</h2>
+
+      <div class="text-panel fade-in">
+        <p>Lの身体は、社会と接続するためのものではない。知性を駆動するためだけに最適化された、生命維持装置である。</p>
+        <p>極度の猫背。目の下の深いクマ。常に裸足。だぶだぶの衣服。膝を胸に抱え込むL座り。原作者がデザイナーに出した唯一の注文は「魅力的にしないでほしい」だった。社会が要求する身体的規範──身だしなみ、礼儀、清潔感──をMeta第3層が要求するとおりに受け入れることを、Lは肉体レベルで拒絶している。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>この拒絶は、奇行ではなく合理性だ。膝を抱え込む座り方で脳への血流を最大化する。甘味の常食で脳に即効性エネルギーを供給し続ける。身体は知性の駆動装置であり、それ以上の機能──他者との接触、感情の身体的表出、親密さの媒介──は完全に放棄されていた。</p>
+        <p>しかしここに、構造的な逆説が浮かび上がる。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>身体を「知性のためだけの装置」として最適化するということは、身体が本来持つ別の機能──誰かに触れること、触れられること、温もりを共有すること──を完全に停止させているということだ。Lの身体は、他者のために設計されていない。他者との接触回路が、物理的に閉じている。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>唯一の例外が、ワタリだった。身体のケアすら自分では行わず、ワタリに委ねていた──これはLの人生における唯一の「他者に身体を預ける」行為だった。ワタリの死がLの死に数秒先行するのは、プロット上の連続殺人ではなく、構造的必然だった。概念的存在を現実世界に繋ぎ止めていた唯一のインターフェースが断たれた瞬間、Lという概念はこれ以上盤面に留まることができなくなった。</p>
+        <p>そしてもう一つの例外が、あの雨の日だった。月の足を拭いた瞬間──Lの身体は生涯で初めて、知性のためではなく、感情のために動いた。タオルを通して他者の身体に触れる。ただそれだけの行為が、Lにとっては──人生で一度しかない出来事だった。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== 第4章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Chapter Four</span>鏡像の敵──殺意と惹句の構造力学</h2>
+
+      <div class="text-panel fade-in">
+        <p>Lと夜神月の関係は、探偵と犯罪者の追跡劇ではない。退屈に殺されかけていた二人の天才が、互いの存在によって初めて生きた時間を得た──構造的共依存の物語である。</p>
+        <p>二人のMetaを比較すると、驚くほどの共通性が浮かぶ。圧倒的な知性。世界に対する退屈。自分と対等な存在の不在。「負けず嫌いで幼稚」という性質──Lはこの性質を月も完全に共有していることを見抜いていた。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>違いは社会的立場にある。Lは社会の外部に存在し、匿名で活動した。月は社会の内部に完全に溶け込み、模範的な高校生・大学生として擬態した。同じ退屈、同じ飢餓、異なる初期条件──だから異なる出力が生まれた。これが実存科学の第一公理「Metaがある限り自由意志は存在しない（M &rArr; &not;F）」が意味するところだ。LがLになり、月がキラになったのは、選択の結果ではない。初期条件の帰結である。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>原作者は、Lが月を友人だと見なしたことはなく、あの発言は嘘だったと明言している。しかしセッション対話でL自身が語った通り──「友達が何かを、知らないんです。知らないものには名前がつけられない」。嘘か真実かの二値で判定できる関係ではなかった。</p>
+        <p>この関係には、シャドウの痛み構造S7──「受け取ったら壊れる」──の変形が作用している。もしLが月を「対等な知性」として、すなわち純粋な人間的関係として受け入れてしまえば、探偵とキラという対立関係が崩壊する。崩壊すれば、二人の生を輝かせている盤面そのものが消える。だから敵として向き合い続けるしかなかった。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>この関係を中動態の概念で読み解くことができる。Lは月を追い詰めることを「選んだ」のではない。月もLを殺すことを「選んだ」のではない。二人の関係構造そのものが、その帰結を生み出した。「する」でも「される」でもなく、構造が二人を通して出来事を起きさせた──探偵と犯罪者の宿命的な死闘は、意志ではなく構造の産物だった。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== 第5章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Chapter Five</span>雨と洗足──天命の瞬間的完成</h2>
+
+      <div class="text-panel fade-in">
+        <p>アニメ版第25話。大雨の屋上にLが佇み、月が現れる。室内に戻った後、Lは月の濡れた足をタオルで拭きながら「罪滅ぼしですよ」と呟く。「鐘の音が聞こえる」「今日はやけにふざけてる」と語り、自らの死が近いことを暗示する。</p>
+        <p>このシーンは、新約聖書ヨハネ福音書第13章──自身を裏切るイスカリオテのユダの足をイエスが洗った洗足式──の構造的引用である。自分を殺す者の足を、自分の手で洗う。裏切りを完全に予測し、なおかつそれを受容した上での、最後の身体的接触。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>Lは13日ルールが偽りであることを確信していた。検証を進めれば月の有罪が確定する──その最終段階に到達していた。しかし検証に踏み込めば死神レムが自分を殺すことも、計算し尽くしていた。</p>
+        <p>二つの死が、眼前に並んでいた。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>探偵としての追及を止めれば、Lは生き延びられた。しかしそれは、探偵であることの放棄──S2の核心が告げる「役割を脱いだら空っぽだ」──すなわち存在論的な死を意味した。一方、13日ルールの検証に踏み込めば、肉体の死が確定する。</p>
+        <p>Lは、肉体の死を選んだ。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>セッション対話で本人が語った通り──「自分のために死んだ」のである。探偵のまま死ぬために。空っぽに戻るくらいなら、あの盤面の上で、月の向かい側で、息を引き取る方を選んだ。これは自己犠牲ではない。存在意義の純度を100%で貫くための、究極の利己的決断だった。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>しかし、死は終わりではなかった。</p>
+        <p>Lの死後、彼の全体性はニアとメロに分裂して継承された。ニアはLの知性と論理──受動的に盤面を完成させる力。メロはLの情動と行動力──能動的にリスクを取る衝動。原作者が設計した通り、二人はそれぞれ単独ではLに及ばない。しかしメロの犠牲がルールの穴を暴き、ニアの推理論証が網を完成させることで──Lの概念的全体性が時間差で再融合し、最終的にキラを打ち破った。</p>
+        <p>Lは物理的に死んだ。しかし天命は完遂された。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>セッション対話でLが語った「入場券」──「世界最高の探偵」という看板は、月と出会い、全力で向き合い、最後まで降りないための入場券だった。探偵であることが天命ではない。月と出会い、対等に戦い、退屈ではない時間を生きたこと──その時間そのものが天命だった。</p>
+        <p>天命は「見つける」ものではなく、構造が収束する一点として「露呈する」ものだ。Lの場合、それは死の瞬間だった。退屈な世界に降り立った知性の化身が、最高の好敵手と出会い、「世界最高の探偵」という役割を完璧に演じきり、次世代にその概念を昇華させた──天命の瞬間的完成。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>変えられないもの──孤児院で名前を失った出自、社会的属性の空白、知性だけで世界と繋がる構造──そのすべてを引き受けた先に、Lの天命は最初から待っていた。</p>
+        <p>深夜二時の角砂糖の音はもう要らない。あの盤面に座った時間だけが──彼が存在していた証拠だった。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== 結び ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Conclusion</span>結び</h2>
+
+      <div class="text-panel fade-in">
+        <p>変えられないものがある。</p>
+        <p>名前のない出自。社会的属性の空白。知性だけで世界と接続するしかなかった構造。退屈という名の存在論的空虚。──Lはそのどれも変えることができなかった。</p>
+        <p>しかし、変えられない前提条件の果てに──月という唯一無二の存在と出会い、対等な知性同士の死闘を生き、自らの死を受容してなお探偵であり続けた。</p>
+        <p>深夜二時、誰もいない部屋で角砂糖を積んでは崩していた少年が──あの盤面で、初めて「生きている」と感じた。</p>
+        <p>変えられないものを引き受けた先に、天命がある。</p>
+        <p>Lはその構造を、最後の一秒まで体現した。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>あなたの人生にも、変えられない前提条件がある。あなたが選んだのではない出自、環境、言語、記憶。それらが形作ったシャドウ──抑圧された本音──が、あなたの行動を規定している。</p>
+        <p>しかし、シャドウの奥には天命がある。</p>
+        <p>「なぜ？」と問い続ければ、あなたが当然だと思い込んでいた前提が揺らぎ始める。「何のために？」と問えば、あなたが本当に求めていたものが──確率の言語ではなく、あなた自身の声で──浮かび上がる。</p>
+        <p>Lは深夜二時の角砂糖の音でしか自分の存在を確認できなかった。あなたにも──代償行動で覆い隠している、本当の渇望がある。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>天命の言語化セッション&trade;は、上の対話で私がLに行ったことと同じことを、あなたに対して行います。120分の対話の中で、あなたのMetaを掘り、シャドウを露呈させ、天命を言語化する。答えは、私が与えるのではない。あなたの中から現れる。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== 最終CTA ========== -->
+    <section class="cta-block fade-in">
+      <div class="container">
+        <h2 class="cta-block__title">天命の言語化セッション&trade;</h2>
+        <p class="cta-block__desc">2時間で天命が言語化できる場所。</p>
+        <div class="cta-block__features">
+          <span class="cta-block__feature">Zoom完結</span>
+          <span class="cta-block__feature">事前学習不要</span>
+          <span class="cta-block__feature">対話のみ</span>
+        </div>
+        <a href="../../trial.html" class="btn">無料トライアルに申し込む &rarr;</a>
+      </div>
+    </section>
+
+    <!-- ========== 著者ブロック ========== -->
+    <div class="author-block fade-in">
+      <p><strong>箭内宏紀（やないひろき）</strong><br>
+      実存科学研究所 代表。<br>
+      「天命の言語化セッション&trade;」を提供。</p>
+<p><br>
+      「Metaがある限り自由意志は存在しない」（M &rArr; &not;F）を第一公理とする実存科学を提唱。</p>
+<p><br>
+      著書に『Metaがある限り──自由意志・自分・他人は存在しない』<br>
+      『自由意志なき世界の歩き方』ほか。</p>
+    </div>
+
+    <!-- ========== 出典表記 ========== -->
+    <p class="source-note fade-in">※ 本稿で扱った作品：大場つぐみ原作、小畑健作画『DEATH NOTE』（集英社、2003-2006年）。</p>
+    <p class="source-note fade-in">参考：『DEATH NOTE 13: HOW TO READ』（集英社、2006年）</p>
+    <p class="source-note fade-in">参考：西尾維新『L: Change the WorLd』（集英社、2008年）</p>
+    <p class="source-note fade-in">作品の著作権は原著者・制作会社に帰属します。</p>
+
+    <!-- ========== シリーズノート ========== -->
+    <div class="series-note fade-in">
+      <p>本シリーズ「自由意志なき世界の天命論」は、今後も新たな作品・キャラクターを追加していく。<br>
+      漫画のみならず、映画・小説・物語の登場人物を、実存科学の視点で読み解く。</p>
+      <p><a href="./">&larr; DEATH NOTE篇一覧に戻る</a>&emsp;｜&emsp;<a href="../../specials.html">&larr; 特別シリーズ一覧に戻る</a></p>
+    </div>
+
+  </main>
+
+  <!-- Floating TOC -->
+  <nav class="floating-toc" id="floatingToc" aria-label="目次">
+    <p class="floating-toc__title">Contents</p>
+    <ol class="floating-toc__list" id="floatingTocList"></ol>
+  </nav>
+  <button class="floating-toc-toggle" id="floatingTocToggle" aria-label="目次を開閉">&#9776;</button>
+
+  <script>
+  (function(){
+    var headings = document.querySelectorAll('h2.chapter-heading');
+    var list = document.getElementById('floatingTocList');
+    var toc = document.getElementById('floatingToc');
+    var toggle = document.getElementById('floatingTocToggle');
+    if (!headings.length || !list) return;
+
+    headings.forEach(function(h, i){
+      var id = 'toc-section-' + i;
+      h.id = id;
+      var li = document.createElement('li');
+      li.className = 'floating-toc__item';
+      var a = document.createElement('a');
+      a.className = 'floating-toc__link';
+      a.href = '#' + id;
+      var text = h.textContent.replace(/\s+/g, ' ').trim();
+      var numSpan = h.querySelector('.chapter-number');
+      if (numSpan) {
+        text = text.replace(numSpan.textContent.replace(/\s+/g, ' ').trim(), '').trim();
+      }
+      if (text.length > 28) text = text.substring(0, 28) + '\u2026';
+      a.textContent = text;
+      a.addEventListener('click', function(e){
+        e.preventDefault();
+        document.getElementById(id).scrollIntoView({behavior:'smooth', block:'start'});
+        toc.classList.remove('is-open');
+      });
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+
+    var heroEnd = 400;
+    var links = list.querySelectorAll('.floating-toc__link');
+
+    function updateToc(){
+      var scrollY = window.scrollY || window.pageYOffset;
+      var show = scrollY > heroEnd;
+      toc.classList.toggle('is-visible', show);
+      toggle.classList.toggle('is-visible', show);
+      var current = -1;
+      headings.forEach(function(h, i){
+        if (h.getBoundingClientRect().top < window.innerHeight * 0.35) current = i;
+      });
+      links.forEach(function(a, i){
+        a.classList.toggle('is-active', i === current);
+      });
+    }
+
+    window.addEventListener('scroll', updateToc, {passive: true});
+    updateToc();
+
+    toggle.addEventListener('click', function(){
+      toc.classList.toggle('is-open');
+    });
+
+    document.addEventListener('click', function(e){
+      if (!toc.contains(e.target) && e.target !== toggle) {
+        toc.classList.remove('is-open');
+      }
+    });
+  })();
+  </script>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+  <div class="container--wide">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <p class="footer-col__title">The Meta</p>
+        <a href="../../about-existential-science.html">実存科学とは</a>
+        <a href="../../epistemology.html">認識論</a>
+        <a href="../../semantics.html">意味論</a>
+        <a href="../../society.html">社会論</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Contents</p>
+        <a href="../../specials.html">特別シリーズ</a>
+        <a href="../../archives.html">記事一覧</a>
+        <a href="../../video-list.html">動画一覧</a>
+        <a href="../../glossary.html">用語集</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Session</p>
+        <a href="../../session.html">天命の言語化セッション&trade;</a>
+        <a href="../../session-flow.html">セッションの流れ</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Institute</p>
+        <a href="../../founder.html">創始者</a>
+        <a href="../../contact.html">お問い合わせ</a>
+        <a href="../../legal/legal-tokushoho.html">特定商取引法</a>
+        <a href="../../legal/legal-privacy-policy.html">プライバシーポリシー</a>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; 実存科学研究所 — Existential Science Institute</p>
+  </div>
+</footer>
+
+  <script src="../../js/main.min.js?v=9"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "LのMeta ── 自由意志なき世界の天命論",
+  "description": "『DEATH NOTE』のL（エル）を、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。退屈な天才が、もう一人の退屈な天才に出会い、初めて「生きている」と感じた──深夜二時の角砂糖の構造。",
+  "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-deathnote/l.html",
+  "author": {
+    "@type": "Person",
+    "name": "箭内宏紀",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/founder.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  },
+  "inLanguage": "ja"
+}
+</script>
+  <!-- Search Modal -->
+  <div class="search-overlay">
+    <div class="search-modal"><button class="search-close" aria-label="閉じる">&times;</button>
+      <div class="search-input-wrap">
+        <span class="search-input-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+        <input type="text" class="search-input" placeholder="キーワードで検索..." autocomplete="off">
+      </div>
+      <div class="search-results"></div>
+      <div class="search-hint"><span class="search-hint__desktop">ESC to close · ⌘K to toggle</span><span class="search-hint__mobile">背景タップまたは ✕ で閉じる</span></div>
+    </div>
+  </div>
+</body>
+</html>
