@@ -290,6 +290,38 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   })();
 
+  // --- Inline TOC (auto-generate from h2.chapter-heading) ---
+  (function () {
+    var list = document.getElementById('inlineTocList');
+    if (!list) return;
+    var headings = document.querySelectorAll('h2.chapter-heading');
+    if (!headings.length) {
+      // Hide TOC if no headings
+      var tocNav = list.closest('.inline-toc');
+      if (tocNav) tocNav.style.display = 'none';
+      return;
+    }
+    headings.forEach(function (h, i) {
+      if (!h.id) h.id = 'toc-section-' + i;
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = '#' + h.id;
+      // Extract text, skip .chapter-number span
+      var text = h.textContent.replace(/\s+/g, ' ').trim();
+      var numSpan = h.querySelector('.chapter-number');
+      if (numSpan) {
+        text = text.replace(numSpan.textContent.replace(/\s+/g, ' ').trim(), '').trim();
+      }
+      a.textContent = text;
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.getElementById(h.id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+  })();
+
   // --- Sticky CTA: show after HERO ---
   (function () {
     var sticky = document.getElementById('stickyCta');
