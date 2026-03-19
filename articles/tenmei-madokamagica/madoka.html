@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-madokamagica/madoka.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>鹿目まどかのMeta ── 自由意志なき世界の天命論 | 実存科学研究所</title>
+  <meta name="description" content="『魔法少女まどか☆マギカ』の鹿目まどかを、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。何も持っていなかった少女が宇宙の法則になるまでの構造分析。">
+  <meta property="og:title" content="鹿目まどかのMeta ── 自由意志なき世界の天命論 | 実存科学研究所">
+  <meta property="og:description" content="『魔法少女まどか☆マギカ』の鹿目まどかを、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。何も持っていなかった少女が宇宙の法則になるまでの構造分析。">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="実存科学研究所">
+  <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+  <meta property="og:url" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-madokamagica/madoka.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"></noscript>
+  <link rel="stylesheet" href="../../css/style.min.css?v=28">
+
+<style>
+/* =============================================
+   鹿目まどかのMeta ── ページ固有CSS
+   ============================================= */
+
+/* === h1 ゴールドシマー === */
+.hero-title--shimmer {
+  background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gold-shimmer 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 16px rgba(192,168,120,0.3)) drop-shadow(0 0 40px rgba(192,168,120,0.12));
+}
+@keyframes gold-shimmer {
+  0%, 100% { background-position: 100% 50%; }
+  50% { background-position: 0% 50%; }
+}
+
+/* === 1. 章見出し === */
+h2.chapter-heading {
+  font-size: var(--fs-section);
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  color: var(--color-text-primary);
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  position: relative;
+  padding-top: 2rem;
+}
+h2.chapter-heading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 1px;
+  background: var(--color-gold);
+}
+h2.chapter-heading::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(192,168,120,0.5), transparent);
+  margin: 1.2rem auto 0;
+}
+.chapter-number {
+  display: block;
+  font-family: var(--font-serif-en);
+  font-size: var(--fs-caption);
+  font-weight: 400;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 0.6rem;
+}
+
+/* === 2. 区切り線 === */
+hr {
+  border: none;
+  height: auto;
+  background: none;
+  margin: 4.5rem 0;
+  text-align: center;
+  overflow: visible;
+}
+hr::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(192,168,120,0.08) 15%, rgba(192,168,120,0.2) 50%, rgba(192,168,120,0.08) 85%, transparent 100%);
+}
+hr::after {
+  content: "\25C6";
+  display: block;
+  font-size: 0.5rem;
+  color: rgba(192,168,120,0.3);
+  margin-top: -0.35em;
+  letter-spacing: 1em;
+  line-height: 1;
+}
+
+/* === 3. セッション対話 === */
+.session-dialogue {
+  max-width: 680px;
+  margin: 2.5rem auto;
+  padding: 2.5rem 2rem;
+  background: rgba(10, 8, 18, 0.35);
+  border: 1px solid rgba(192,168,120,0.06);
+  border-radius: 2px;
+  position: relative;
+}
+.session-dialogue::before {
+  content: "SESSION";
+  position: absolute;
+  top: -0.6em;
+  left: 2rem;
+  font-family: var(--font-serif-en);
+  font-size: var(--fs-micro);
+  letter-spacing: 0.3em;
+  color: rgba(192,168,120,0.4);
+  background: var(--color-bg-deep);
+  padding: 0 0.8rem;
+}
+.session-dialogue p {
+  margin-bottom: 1.1em;
+  line-height: 2.2;
+}
+.session-dialogue .speaker-yanai { color: var(--color-gold); font-weight: 600; font-size: var(--fs-body); }
+.session-dialogue .speaker-madoka { color: #b8a0d8; font-weight: 600; font-size: var(--fs-body); }
+
+/* 箭内の発言：金色の左ボーダー */
+.session-dialogue .line-yanai {
+  border-left: 2px solid rgba(192,168,120,0.15);
+  padding-left: 1.2rem;
+}
+/* キャラの発言：少しインデント */
+.session-dialogue .line-character {
+  margin-left: 1.4rem;
+}
+/* 沈黙マーカー */
+.session-dialogue .silence {
+  color: rgba(235,232,225,0.3);
+  font-style: italic;
+  text-align: center;
+  margin: 2em 0;
+  font-size: var(--fs-small);
+  letter-spacing: 0.15em;
+}
+.session-dialogue .silence::before,
+.session-dialogue .silence::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: rgba(192,168,120,0.15);
+  vertical-align: middle;
+  margin: 0 1em;
+}
+/* 10発言ごとの視覚リズム */
+.session-dialogue p:nth-child(10n) {
+  margin-bottom: 2em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid rgba(192,168,120,0.06);
+}
+
+/* === 4. text-panel の単調さ解消 === */
+section > .text-panel:nth-of-type(even) {
+  background: rgba(8, 6, 16, 0.45);
+  border-color: transparent;
+}
+section > .text-panel:nth-of-type(even)::before {
+  display: none;
+}
+
+/* === 5. highlight-block === */
+.highlight-block {
+  background: rgba(192,168,120,0.06);
+  border-left: 2px solid;
+  border-image: linear-gradient(180deg, var(--color-gold) 0%, rgba(192,168,120,0.15) 100%) 1;
+  padding: 2rem 2rem 2rem 2.2rem;
+  margin: 2.5rem 0;
+}
+.highlight-block p {
+  font-size: var(--fs-lead);
+  font-weight: 500;
+  line-height: 2.2;
+  color: var(--color-text-primary);
+}
+
+/* === 6. セクション見出し（h3） === */
+h3.section-heading {
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  color: var(--color-text-body);
+  letter-spacing: 0.08em;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1.2rem;
+  border-left: 2px solid rgba(192,168,120,0.4);
+  line-height: 1.6;
+}
+
+/* === Profiling Block === */
+.profiling-block {
+  background: rgba(15,12,25,0.5);
+  border: 1px solid rgba(192,168,120,0.1);
+  padding: 2.5rem 2rem;
+  margin: 2rem 0;
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+.profiling-block::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(192,168,120,0.4), transparent);
+}
+.profiling-block h3 {
+  font-size: var(--fs-body);
+  color: var(--color-gold);
+  letter-spacing: 0.15em;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(192,168,120,0.1);
+}
+.profiling-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+.profiling-block ul li {
+  margin-bottom: 1rem;
+  color: var(--color-text-reading);
+  font-size: var(--fs-body);
+  line-height: 1.9;
+  padding-left: 1.6em;
+  position: relative;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(192,168,120,0.04);
+}
+.profiling-block ul li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.profiling-block ul li::before {
+  content: "\2500\2500";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgba(192,168,120,0.35);
+  font-size: 0.75em;
+}
+
+/* === Author Block === */
+.author-block {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(192,168,120,0.15);
+}
+.author-block p { font-size: var(--fs-body); color: var(--color-text-reading); line-height: 2; }
+.author-block strong { color: var(--color-text-body); }
+
+/* === Source Note === */
+.source-note {
+  margin-top: 2rem;
+  font-size: var(--fs-small);
+  color: rgba(235,232,225,0.35);
+}
+
+/* === Series Note === */
+.series-note {
+  margin-top: 2rem;
+  padding: 1.5rem 2rem;
+  background: rgba(192,168,120,0.04);
+  border: 1px solid rgba(192,168,120,0.1);
+  font-size: var(--fs-body);
+  color: var(--color-text-reading);
+  line-height: 2;
+}
+
+/* === Pull-quote === */
+.pull-quote { text-align: left; }
+.pull-quote p { font-size: var(--fs-lead); font-weight: 500; }
+
+/* === セッション解説 === */
+.session-commentary {
+  max-width: 680px;
+  margin: 2.5rem auto;
+}
+.session-commentary p {
+  font-size: var(--fs-body);
+  color: var(--color-text-reading);
+  line-height: 2.2;
+  margin-bottom: 1.2em;
+}
+
+/* === 7. モバイル対応 === */
+@media (max-width: 600px) {
+  h2.chapter-heading {
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    padding-top: 1.5rem;
+  }
+  .chapter-number {
+    font-size: var(--fs-micro);
+    letter-spacing: 0.25em;
+    margin-bottom: 0.4rem;
+  }
+  h3.section-heading {
+    font-size: var(--fs-lead);
+    margin-top: 2rem;
+    padding-left: 1rem;
+  }
+  hr { margin: 3rem 0; }
+  .session-dialogue {
+    padding: 1.5rem 1.2rem;
+    margin: 2rem auto;
+  }
+  .session-dialogue .line-yanai { padding-left: 0.8rem; }
+  .session-dialogue .line-character { margin-left: 0.8rem; }
+  .profiling-block { padding: 1.5rem 1.2rem; }
+  .highlight-block { padding: 1.5rem 1.2rem 1.5rem 1.4rem; }
+  .text-panel { padding: 2rem 1.5rem; }
+}
+@media (max-width: 480px) {
+  .text-panel p br,
+  .pull-quote p br,
+  .highlight-block p br,
+  .def-box p br,
+  .session-dialogue p br { display: none; }
+  h2.chapter-heading { font-size: var(--fs-h3); }
+  .session-dialogue p:nth-child(10n) {
+    margin-bottom: 1.5em;
+    padding-bottom: 1em;
+  }
+}
+</style>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="../../index.html" class="site-logo">実存科学研究所</a>
+      <button class="search-toggle" aria-label="検索"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+            <nav class="global-nav">
+        <a href="../../index.html">Top</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">The Meta</button>
+          <div class="nav-dropdown__menu">
+            <a href="../../beginner.html">はじめての方へ</a>
+            <a href="../../lp.html">ダークサイド診断</a>
+            <a href="../../omoidasu/">身体的知性診断</a>
+          </div>
+        </div>
+        <a href="../../session.html">Session</a>
+        <a href="../../founder.html">Founder</a>
+        <a href="../../specials.html">Specials</a>
+      </nav>
+    </div>
+  </header>
+  <div class="reading-progress"></div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="パンくずリスト">
+        <ol class="breadcrumb__list">
+          <li class="breadcrumb__item"><a href="../../index.html" class="breadcrumb__link">TOP</a></li>
+          <li class="breadcrumb__item"><a href="../../specials.html" class="breadcrumb__link">Specials</a></li>
+          <li class="breadcrumb__item"><a href="./" class="breadcrumb__link">まどか☆マギカ篇</a></li>
+          <li class="breadcrumb__item"><span class="breadcrumb__current">鹿目まどかのMeta</span></li>
+        </ol>
+      </nav>
+      <p class="page-hero__sub">Puella Magi Madoka Magica &times; Existential Science</p>
+      <h1 class="hero-title--shimmer">鹿目まどかのMeta</h1>
+      <p class="page-hero__lead">自由意志なき世界の天命論<br>箭内宏紀｜実存科学研究所</p>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <!-- Inline TOC -->
+    <nav class="inline-toc fade-in" aria-label="目次">
+      <details open>
+        <summary>目次</summary>
+        <ol id="inlineTocList"></ol>
+      </details>
+    </nav>
+
+    <!-- ========== ネタバレ注意 ========== -->
+    <div class="text-panel fade-in">
+      <p style="font-size:0.85rem; color:rgba(235,232,225,0.5); text-align:center;">※本稿は『魔法少女まどか☆マギカ』TVシリーズ全12話および劇場版『叛逆の物語』全体のネタバレを含みます。</p>
+    </div>
+
+    <!-- ========== 導入（冒頭フック） ========== -->
+    <section class="fade-in">
+
+      <div class="text-panel fade-in">
+        <p>彼女は、遺体をノートに描いていた。</p>
+        <p>正確には、遺体ではない。魔法少女の衣装のスケッチだ。第1話。まだ何も知らない鹿目まどかは、ピンク色のリボンとフリルをあしらった衣装を、自分の手で、自分のためにデザインしていた。</p>
+        <p>夢の中で見た──白い光に包まれた自分が魔女と戦う姿を、少女漫画のコスチュームに翻案して、嬉しそうに描いていた。</p>
+        <p>だが彼女はその衣装を、最後まで着なかった。</p>
+        <p>12話分の物語を通じて、まどかは一度も魔法少女にならなかった。正確には、最終話の数分間だけ変身した──しかしその数分間の後に、個人としての鹿目まどかは、この宇宙から消滅した。</p>
+        <p>ノートに描いたフリルの衣装を着た少女は、もうどこにもいない。代わりに宇宙の法則そのものになった。</p>
+        <p>あのスケッチは、誰に見せるつもりだったのだろう。</p>
+        <p>マミの首が千切れた朝の前に。さやかが闇に堕ちた夜の前に。ほむらが何百回も死んだ記憶を背負っていると知る前に。──魔法少女が何を失うか知らなかった頃の、無邪気な鉛筆の線。</p>
+        <p>あのノートは最終話で戻ってくる。マミがまどかに返す。かつて魔法少女になることを諦めたまどかが、マミの部屋に置いていったスケッチ帳。</p>
+        <p>まどかはノートを受け取り、自分が描いた衣装を見つめる。かつて憧れていた自分の姿を。──そしてその直後に、まどかはキュゥべえの前に立ち、すべてを終わらせる願いを口にする。</p>
+        <p>ノートを受け取った手と、宇宙を書き換えた手は、同じ手だった。</p>
+        <p>何も持っていなかった少女。勉強もそこそこ、運動もそこそこ、身長は152cm、取り柄と呼べるものは一つもない。「私なんかが」と、自分を小さくし続けた少女。</p>
+        <p>その少女が、宇宙の因果律を書き換え、個人としての存在を手放し、すべての魔法少女の祈りを肯定する「概念」になった。</p>
+        <p>11話分の涙と、たった1回の微笑み。彼女は最後の瞬間だけ、泣いていなかった。</p>
+      </div>
+
+      <div class="pull-quote fade-in">
+        <p>これは自己犠牲か。それとも天命の到達か。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>その問いの先に、天命がある。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== シャドウ・プロファイリング ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading fade-in"><span class="chapter-number">Shadow Profiling</span>シャドウ・プロファイリング</h2>
+
+      <!-- Meta -->
+      <div class="profiling-block fade-in">
+        <h3>【Meta（変えられない前提条件）】</h3>
+        <ul>
+          <li>見滝原中学校2年生。身長152cm。身体能力は平凡。魔法少女としての戦闘経験は最終話の数分間のみ──タイトルに名前を冠しながら、物語のほぼ全編を「魔法少女ではない主人公」として過ごす異例の構造</li>
+          <li>家族構成：キャリアウーマンの母・詢子、専業主夫の父・知久、3歳の弟・タツヤ。温かく安全な家庭──「トラウマの不在」こそがまどかのMetaの特異点。傷がないことが、傷になっている</li>
+          <li>ほむらの時間遡行によって因果が蓄積し、魔法少女としての潜在力が宇宙最大級に膨れ上がっている。だがこれはまどか自身の資質ではない。他者の愛が、本人の知らないところで、本人のMetaを書き換えていた</li>
+          <li>脚本の虚淵玄はまどかのイメージカラーを「白」と指定した。のちに蒼樹うめのデザインでピンクに変更される。虚淵は「ピンクも白のうちなので」と受け入れた──白は何色にも染まっていない。ピンクは白に一滴だけ赤が混ざった色。「ほんの少しだけ何かを持っている」少女の色</li>
+        </ul>
+      </div>
+
+      <!-- シャドウ -->
+      <div class="profiling-block fade-in">
+        <h3>【シャドウ（抑圧された本音）】</h3>
+        <ul>
+          <li>覆い方の類型：ゴールデンシャドウ（位相1）＋ 闇の抑圧（S1）の二重構造</li>
+          <li>S7「受け取ったら壊れる」：まどかは自分の潜在能力の巨大さを直感的に恐れている。契約を先送りし続けるのは、臆病からではない。「それを受け取ったら、もう普通の女の子には戻れない」──その直感は正しかった。概念になるとは、文字通り「受け取ったら壊れた」ことの実現</li>
+          <li>S1「ありのままでは無価値だ」：「私なんかが」の反復。ただしまどかのS1は、「証明しなければならない」という強迫的構造ではなく、もっと穏やかで静かな形──「自分にはきっと何もない」という諦念</li>
+          <li>核心：「自分の中の途方もない力を使う資格が、自分にはない」──力はある（因果の蓄積によって）。しかし「それを使う自分」を自分に許可できない</li>
+          <li>非合理的信念：「特別な何者かにならなければ、存在に意味がない」──まどか自身が自覚的に持っている信念ではなく、マミの華麗さ、さやかの決断力、ほむらの献身を目撃するたびに強化されていく無意識の構造</li>
+          <li>深層の欲求：ありのままの自分を肯定したい。「今のままの自分で大丈夫」という確信</li>
+          <li>代償行動：①優柔不断（決断の永久延期──決断したら自分の中の「光」を直視しなければならない）②他者の物語への没入（自分の物語を保留する装置）③涙（シャドウの排出口であり、同時に「まだ決断しなくていい」というモラトリアムの身体的表現）</li>
+        </ul>
+      </div>
+
+      <!-- 対比：ほむら -->
+      <div class="profiling-block fade-in">
+        <h3>【暁美ほむらとの対比】</h3>
+        <p style="font-size:0.85rem; color:#c0bbb4; margin-bottom:1.5rem; line-height:1.8;">同じ「普通の女の子」から出発した二人──一人は一度きりの決断で宇宙の法則になり、もう一人は同じ決断を無限に繰り返して個人の愛に閉じた。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-bottom:0.8rem;">まどかとほむらは、初期条件において「普通の女の子」という同一のMetaを共有する。ほむらもまた最初の時間軸では病弱で引っ込み思案な転校生だった。しかし決断の構造が根本的に異なる。まどかは11話分の観測の末に一度きりの決断に到達した。ほむらは最初に決断し、同じ決断を無限に繰り返すループに入った。天命の方向もまた対照的である。まどかは普遍──全ての魔法少女の祈りを包摂する概念──へ向かい、ほむらは個別──まどか一人を守り続ける執着──へ向かった。虚淵玄はまどかを「蒼樹うめ的キャラクター」、ほむらを「虚淵的キャラクター」と形容している。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2;">まどかの愛は全てを受け止める。ほむらの愛は一人を手放さない。二つの愛は同じ構造の表裏であり、ほむらの執着がまどかの因果を蓄積させ、まどかの決断がほむらを世界で唯一の記憶者として残した。互いの天命が、互いのMetaを書き換え合っている。</p>
+      </div>
+
+      <!-- 対比：マミ -->
+      <div class="profiling-block fade-in">
+        <h3>【巴マミとの対比】</h3>
+        <p style="font-size:0.85rem; color:#c0bbb4; margin-bottom:1.5rem; line-height:1.8;">「誰かの役に立ちたい」という同一の根源的欲求を持ちながら、一人はシステムの書き換えに到達し、もう一人はシステムの内側で命を落とした。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-bottom:0.8rem;">まどかとマミは「誰かの役に立ちたい」という根源的欲求を共有する。しかし孤独の形が異なる。まどかの孤独は「何もない」から来る孤立感であり、マミの孤独は「一人で戦い続けてきた」から来る孤立感である。契約の動機も対照的で、まどかは全ての魔法少女の祈りを肯定するために契約し、マミは自分の命を繋ぐために──生き延びるために契約した。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2;">まどかの天命はシステムの書き換えに到達した。マミの天命はシステムの内側で命を落とすことに帰結した。同じ欲求が、異なる初期条件の下で、正反対の帰結をもたらした。</p>
+      </div>
+
+      <!-- 対比：キュゥべえ -->
+      <div class="profiling-block fade-in">
+        <h3>【キュゥべえ（インキュベーター）との対比】</h3>
+        <p style="font-size:0.85rem; color:#c0bbb4; margin-bottom:1.5rem; line-height:1.8;">Metaの中で生きる者と、Metaを設計した者──祈りを肯定する構造と、祈りを搾取する構造が、まどかの願いによって交差した。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-bottom:0.8rem;">まどかはMetaの中で生きる者であり、キュゥべえはMetaを設計した者である。祈りへの態度が根本的に異なる。まどかは祈りそのものを肯定する。キュゥべえは祈りを絶望に変換するシステムとして利用する。まどかの願いはこの構造を書き換えた──キュゥべえのシステムの内側にいながら、システムの最終段階（魔女化）だけを消去した。条理に従いつつ条理を超えた。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2;">まどかの願いによってキュゥべえのシステムは書き換えられた。エネルギー回収の仕組みは維持されるが、魔女は存在しなくなった。設計者が想定しなかった出力を、設計されたシステムの内側から生み出した。</p>
+      </div>
+
+      <!-- 天命への転換点 -->
+      <div class="profiling-block fade-in">
+        <h3>【天命への転換点】</h3>
+        <ul>
+          <li>喪失：第10話。ほむらの回想を通じて、自分が何度も死に、何度も魔女になり、何度もほむらを絶望に追いやっていた事実を知る。「私なんかのために」──自分の存在が他者に地獄をもたらしていたという事実と、自分のために誰かがここまで戦い続けたという事実の、二つが同時に到来する</li>
+          <li>反転：S1（無価値感）とS7（受け取ったら壊れる）が同時に突き破られる。「何もない」は嘘だった。「何もない私」のために、宇宙が何周も回った</li>
+          <li>天命の方向：「全ての祈りを肯定する概念になる」──個人の願望の実現ではなく、構造の転換。キュゥべえが設計したシステム（祈り→希望→絶望→魔女化）の中にいながら、そのシステムの最終段階だけを消去する。虚淵が語ったテーマ──「少女の祈りが突っぱねられる世界から、祈りが肯定される世界に変わるまでの物語」──の構造的体現。天命は到達と判定</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== ブリッジ ========== -->
+    <div class="highlight-block fade-in">
+      <p>──ここまでが、まどかの構造の地図だ。しかし、地図は地図でしかない。この構造が本人の口から、本人の声で露呈する瞬間を、見届けてほしい。</p>
+    </div>
+
+    <hr>
+
+    <!-- ========== セッション対話 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading fade-in"><span class="chapter-number">Session</span>天命の言語化セッション&trade;</h2>
+
+      <div class="session-dialogue fade-in">
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>まどかさん、セッションに来てくださってありがとうございます。あなたはあなたに何をプレゼントしてあげたいですか？</p>
+
+<p class="silence">沈黙。まどかは椅子に浅く座り、両手を膝の上で重ねている。指先が微かに動いている──何かを握ろうとして、握るものがない</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……プレゼント、ですか？</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>えっと……私に、ですよね。……うーん……。</p>
+
+<p class="silence">目が泳ぐ。視線が窓、床、自分の手──どこにも止まらない</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……ごめんなさい。すぐに答えられなくて。こういうとき、さやかちゃんなら「決まってんじゃん！」ってパッと答えるんだろうなって……。あ、ごめんなさい。関係ない話しちゃって。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>あの、自分にプレゼントって……あんまり考えたことなかったんです。いつも、他の人にどうしてあげたらいいかなって、そっちばっかり考えてて……。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……でも。もし……もしあげていいなら。</p>
+
+<p class="silence">指先が太腿の上で止まる。小さな声で</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……「もう泣かなくていいよ」って……言ってあげたいかな。……いつも泣いてばっかりだったから、私。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、「泣かなくていい」なんですか？</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>え？ ……だって、泣いてる時間って、何もできないじゃないですか。友達が目の前で死んでるのに、私……ただ泣いてるだけで、何もできなかった。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>マミさんのときは……目の前だったんです。</p>
+
+<p class="silence">声が低くなる。震えてはいない。まだ震えていない</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>シャルロッテっていう魔女が──マミさんの頭を、噛み千切った。……私の目の前で。三メートルくらいの距離で。さっきまで笑ってたのに。「もう何も怖くない」って言ったばっかりだったのに。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……足が動かなかったんです。叫ぼうとしたけど声が出なくて。さやかちゃんが隣にいて──さやかちゃんも動けなくて。二人で、ただ見てた。マミさんが食べられていくのを。……音が聞こえました。噛む音。</p>
+
+<p class="silence">両手が膝の上で握られる</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>私がキュゥべえと契約していたら、あの場で戦えたんです。マミさんの隣に立てたんです。でも私は契約してなかった。何の力もない、ただの中学生だった。──だからマミさんが食べられるのを、三メートル先で、見てた。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>さやかちゃんのときは……もっと長かったです。ゆっくり壊れていったから。</p>
+
+<p class="silence">声が震え始める</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>恭介くんのためにって契約したのに、恭介くんは仁美ちゃんのほうに行って。さやかちゃんのソウルジェムがどんどん濁っていくのが、見えてたんです。毎日、少しずつ暗くなっていく。……「大丈夫？」って聞いたんです。さやかちゃんは笑って「大丈夫だよ」って。でも目が笑ってなくて。……私には、それが見えてた。見えてたのに──何もできなかった。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……最後の日。さやかちゃんは電車の中で、知らない男の人たちの会話を聞いてて。世界中のぜんぶが醜いって感じてて。……私はその場にいなかった。いなかったんです。さやかちゃんが一番苦しかったその瞬間に、私はどこか別の場所にいて──何も知らなくて。気づいたときにはもう、ソウルジェムが真っ黒で。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>杏子ちゃんは──さやかちゃんが魔女になったあと、助けようとしたんです。魔女になったさやかちゃんを元に戻せるかもしれないって。……結局、戻せなかった。杏子ちゃんは自分のソウルジェムを壊して、さやかちゃんの魔女と一緒に死んだ。「一人ぼっちは、寂しいもんな」って。……あの子は、戦えた。命をかけて、友達のそばにいることを選べた。</p>
+
+<p class="silence">声が途切れる。それから、静かに</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>私は──見てた。全部、見てた。マミさんが食べられるのも。さやかちゃんが壊れていくのも。杏子ちゃんが自分を壊すのも。全部──安全な場所から、見てた。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……三回。三回、友達が死んでいくのを見て──三回とも、私は泣いてた。泣くだけ。泣いてる自分がすごく嫌で……。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、泣いている自分が嫌なんですか？</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……だって。泣いてるだけの人って、何の役にも立ってないじゃないですか。隣で友達が死んでるのに、自分は涙を流すことしかできなくて……。そういう自分が、すごく──情けなくて。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、役に立てないことが情けないんですか？</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……え？</p>
+
+<p class="silence">長い沈黙。まどかの目が一瞬、止まる</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……なぜ、って……。それは……当たり前じゃないですか？ 誰かが苦しんでるのに何もできないのは……。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……当たり前……ですよね？ ……あれ。</p>
+
+<p class="silence">自分の言葉に引っかかる。眉が寄る</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……当たり前、なのかな。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……ママは──いつもすごいんです。仕事もできて、家族のことも全部見えてて、困ってる人がいたらすぐに動いて。「女は外見でナメられたら終わりだよ」って──すっごくかっこいいんです。ママみたいになれたらって、ずっと思ってました。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>でも私は……ママみたいに強くないし、何か特別なことができるわけでもないし。ママは「間違え方も勉強しときな」って言ってくれたけど──私、間違える以前に、何もしてなくて。間違えるほど踏み出してすらいなくて。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、「特別なこと」が必要なんですか？</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……だって、特別な何かがないと──人を助けられないじゃないですか。マミさんには魔法少女の力があった。さやかちゃんには「恭介を助けたい」っていう強い気持ちがあった。ほむらちゃんには……あの、全部を投げ出しても構わないっていう覚悟があった。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>私には──何も。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>「何もない」？</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……はい。ほんとに何にもないんです。勉強もそこそこ、運動もそこそこ、顔だって普通で。取り柄が一つもなくて──。</p>
+
+<p class="silence">声が小さくなる</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……ノートに魔法少女の衣装をスケッチしてたんです。こっそり。夢の中で見た自分の姿を描いて。フリルがいっぱいで、リボンがついてて、ピンク色の。……でも、そんなの描いてるだけで、何になるんですか。マミさんが目の前で死んでるのに、ノートにお絵描きしてた自分が。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……だから、魔法少女になれば──って。そうすれば、やっと何かができるようになるんじゃないかって。でもほむらちゃんは「ならないで」って言うし、キュゥべえは「なるべきだ」って言うし。私は──どっちの言葉にも、自分の答えが見つけられなくて……。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、見つけられなかったんですか？</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……怖かったんだと思います。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……あ、でも、えっと──怖いっていうのは、その──戦うのが怖いとか、死ぬのが怖いとか、そういうのじゃなくて。</p>
+
+<p class="silence">まどかの手が、スカートの裾を掴む。指が白くなるほど握っている</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>魔法少女になるのが怖いんじゃなくて──なった後の自分が怖かった。もし私が魔法少女になって、マミさんやさやかちゃんみたいに……壊れちゃったら。パパとママとたっくんが──。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……でも。それだけじゃないんです。本当は──。</p>
+
+<p class="silence">呼吸が深くなる。言葉を選んでいるのではない。言葉が来るのを待っている</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>本当は……魔法少女になって、もし──もしすごい力を手に入れちゃったら──もう「普通の女の子」には戻れないって。そっちのほうが、もっと怖かった。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、「普通の女の子」に戻れないことが怖いんですか？</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……だって。普通の女の子じゃなくなったら──パパやママや、さやかちゃんや、みんなと同じ場所にいられなくなるから。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……ほむらちゃんを見てたら、わかるんです。あの子、すごく強いけど──すごく一人ぼっちで。誰にも本当のことを言えなくて。いつも一人で戦って、一人で泣いて。……強くなるって──孤独になるってことなんだって。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……それが怖い。強くなることも怖いし、強くならないことも怖い。どっちを選んでも、誰かが傷つくし、何かを失うし。だから──。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>だから？</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……だから、ずっと決められなかった。決めちゃったら──もう戻れないから。</p>
+
+<p class="silence">両手がスカートの裾を離す。膝の上に置く。指先が震えている</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……あの。箭内さん。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……もう、いいですか。私の話。あんまり面白くないと思うし……聞いてても、たぶん、何にもならないと思う。ほむらちゃんとか、マミさんとか、あの子たちの話のほうが──。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……あの子たちは、ちゃんと戦ったから。命をかけて、何かを選んだから。私は──選ばなかった。最後まで。ずっと見てるだけで。……こんな話、誰が聞きたいですか？</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="silence">沈黙。まどかが箭内の顔を見る。箭内は動かない</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……怒らないんですね。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……ほむらちゃんだったら、ここで「鹿目まどか、あなたは自分の人生を尊いと思う？」って聞いてくると思う。ママだったら「情けないこと言ってんじゃないよ」って叱ると思う。……箭内さんは、何も言わないんですね。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……なんで。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="silence">長い沈黙。まどかの目が潤む。しかし涙は落ちない</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……何も言わないのって、ずるいです。何か言ってくれたら、それに合わせて答えられるのに。「こうしなさい」って言ってくれたら、それに従えるのに。……何も言ってくれないと、自分で考えなきゃいけないじゃないですか。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……あ。</p>
+
+<p class="silence">目が見開かれる</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……私、今、「誰かに決めてほしい」って言いましたよね。……それって──ずっとやってたことと同じだ。ほむらちゃんが「ならないで」って言ったらそれに従おうとして、キュゥべえが「なるべきだ」って言ったらそれに傾いて。……自分で決めるのが怖いから、誰かの言葉に乗っかろうとしてた。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……ほむらちゃんがループしてたって知ったとき──私、泣きました。また泣いちゃった、って思った。でも──あの涙は、ちょっと違った気がするんです。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、違ったんですか？</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……それまでの涙は、全部──「自分が何もできない」ことへの涙だったんです。マミさんが目の前で食べられた。さやかちゃんが魔女になった。杏子ちゃんが死んだ。全部、自分の無力さが悲しくて泣いてた。</p>
+
+<p class="silence">声のトーンが変わる。「えっと」が消える</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>でも、ほむらちゃんのことを知ったときの涙は……違った。無力だから泣いたんじゃなくて──ほむらちゃんが「私のために」あんなに苦しんでたって知って……。</p>
+
+<p class="silence">両手を見つめる。開いて、閉じる</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……ほむらちゃんはね、何十回もループしたんです。同じ一ヶ月を。私が死ぬたびにやり直して、私が魔女になるたびにやり直して。何十回も、何十回も……私を助けようとした。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……でもループするたびに、私の因果が蓄積されて──私が魔法少女になったときの力がどんどん大きくなっていった。ほむらちゃんが私を守ろうとすればするほど、私は「契約したら宇宙最強──そして宇宙最悪の魔女になる」存在に変わっていった。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……ほむらちゃんの愛が、私を追い詰めたんです。守ろうとすることが、取り返しのつかない場所に私を押し上げた。……それを知ったとき、「私なんかのために」って──。</p>
+
+<p class="silence">声が途切れる</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……あ。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……今、自分で言って気づいた。「私なんかのために」って──ほむらちゃんの苦しみを「私のせい」にしてる。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>ほむらちゃんが「まどかを守りたい」って思った気持ちを──「私なんか守る価値ないのに」って否定してたの──私のほうだ。</p>
+
+<p class="silence">まどかの両手が、膝の上で握りしめられる。爪が掌に食い込んでいる</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……ずっと、「私には何もない」って思ってました。でも──何もない私のために、ほむらちゃんは宇宙を何周もした。マミさんは一緒に戦おうって言ってくれた。さやかちゃんは最後まで友達でいてくれた。杏子ちゃんは──さやかちゃんを助けに行くとき、私の前で「確かめるまでわからない」って、笑って見せてくれた。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>「何もない」のに、みんなが──私のそばにいてくれた。……それって──「何もない」は、嘘ってことですよね。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……嘘、だったんだ。</p>
+
+<p class="silence">手が開く。爪の跡が掌に赤く残っている</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……ずっと、「何者かにならなきゃ」って思ってました。魔法少女にならなきゃ。特別な力を持たなきゃ。ママみたいに強くならなきゃ。──そうしないと、誰かの役に立てないって。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>でも──ほむらちゃんは、魔法少女じゃない私のために戦ってた。何の力もない、泣いてばっかりの、ノートに衣装のスケッチなんか描いてる、普通の女の子の私のために。……「何者かにならなきゃ」は──私が自分に貼ったラベルで──ほむらちゃんがそれを貼ったんじゃない。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>「ラベル」は、なぜ貼ったんですか？</p>
+
+<p class="silence">長い沈黙。まどかの呼吸が変わる。深く、遅くなる</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……怖かったから。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>「何もない自分」をそのまま受け入れるのが──怖かった。「何もないけどそれでいい」って認めたら──頑張る理由がなくなっちゃう気がして。何もない自分を許しちゃったら──もう何も始まらない気がして。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……ママが「間違え方を勉強しな」って言ってくれたとき──私、嬉しかったんです。でも同時に、ママはもう何度も間違えて、そこから立ち上がって、今の場所にいるから言えるんだなって。……私はまだ一度も間違えてない。一度も踏み出してないから。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……でも。</p>
+
+<p class="silence">まどかの声が変わる。「えっと」も「あの」もない。語尾の逡巡が消える</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>最後に──願いを言ったとき。「全ての魔女を、生まれる前に消し去りたい」って言ったとき。……あのとき私、初めて──迷わなかった。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、迷わなかったんですか？</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……あの願い、「自分のため」じゃなかったからだと思います。でも──「自分を犠牲にするため」でもなかった。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>マミさんが祈ったこと。「生きたい」って。さやかちゃんが祈ったこと。「恭介の腕を治したい」って。杏子ちゃんが祈ったこと。ほむらちゃんが祈ったこと。──みんなの祈りが、間違ってたなんて、思いたくなかった。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>キュゥべえのシステムは──祈りを絶望に変える仕組みだった。希望を持てば持つほど、絶望が大きくなる。魔法少女は必ず魔女になる。それがルールだった。でも──祈ったこと自体は──間違いじゃない。希望を持ったことは──間違いじゃない。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……だから私は──そのシステムだけを書き換えたかった。祈りはそのままで、絶望だけを消したかった。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>「祈り」は、何のためだったんですか？</p>
+
+<p class="silence">まどかの目が遠くを見る。それから──微笑む。物語の最後に見せた、あの微笑み</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……全部の魔法少女が──最後に絶望しないように。……自分が選んだ祈りを、最後まで──誇れるように。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……でも。</p>
+
+<p class="silence">微笑みが、ほんの少し揺れる。眉が下がる</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……都合がよすぎるのかもしれません。こんなこと言って。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>だって私は──概念になって──パパもママもたっくんも、みんなの記憶から消えてしまう。それを「天命」って呼んでいいのか──わからない。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>ほむらちゃんだけが覚えてる。他の誰もが私のことを忘れる世界で、ほむらちゃんだけが「まどかはいた」って覚えてる。……それが──ほむらちゃんにとって重荷にならないのか。私が消えたことで、ほむらちゃんをもっと孤独にしてるんじゃないか。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……それに。</p>
+
+<p class="silence">声がさらに低くなる</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……本当にあの願いが「みんなのため」だったのか──わからないんです。もしかしたら、「何もない私」が「何者か」になりたくて──宇宙を書き換えるほどの大きなことをして、やっと自分の存在に意味を与えたかっただけかもしれない。……結局、「私なんかが」から逃げてないんじゃないかって。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……宇宙を書き換えなきゃ「価値がある」って思えないんだとしたら──それって、「何もない自分はダメだ」ってことの裏返しですよね。……一番大きなことをやったのに、一番小さな問いから逃げてるだけなんじゃないかって。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……でも。</p>
+
+<p class="silence">長い沈黙。まどかが自分の手を見つめる。何かを描いていた手。何も持っていなかった手。宇宙を書き換えた手</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……あの瞬間──泣かなかったんです、私。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>ずっと泣いてばかりだった私が──最後だけ、泣かなかった。笑えた。……代償行動なら、泣くはずなんです。無理をしてるなら、体が震えるはずなんです。でもあの瞬間──体の全部が、静かだった。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>不思議ですよね。全部を失うはずなのに──あの瞬間だけ、全部がぴったりはまった感じがして。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……何もない私が──何もないまま──やっと、自分に「それでいいよ」って言えた瞬間だったのかもしれません。</p>
+
+<p class="silence">長い沈黙</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……ありがとうございます。……えっと、プレゼント──やっぱり、もう一つだけ、いいですか。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-madoka">まどか：</span>……何もない自分を、好きだって言ってあげたかった。──たぶん、それだけでよかったのに。</p>
+
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== セッション解説 ========== -->
+    <section class="fade-in">
+      <h3 class="section-heading">セッション解説</h3>
+
+      <div class="session-commentary fade-in">
+        <p>上の対話で、私はまどかに一度も答えを渡していない。</p>
+        <p>まどかの語りの中で最も注意深く耳を澄ませたのは、「見ていた」という言葉の反復だった。マミが食べられるのを「見ていた」。さやかが壊れていくのを「見ていた」。杏子が自分を壊すのを「見ていた」。──三回の死を、三回とも「見ていた」。</p>
+        <p>加害者には罪がある。被害者には痛みがある。だが「見ていた者」には、罪とも痛みとも名付けられない第三の構造がある。それを私は「観測者の罪」と呼ぶ。</p>
+        <p>何もしなかった──何もできなかったのではなく、何もしないことを選んだ者が背負う、行為なき罪悪感。この構造は、「やってしまった」罪よりも言語化が困難であり、それゆえに本人を長く食い破る。</p>
+        <p>「なぜ泣いている自分が嫌なのか」という問いが、「役に立てない自分は情けない」という信念を掘り出し、その信念の根が「特別な何かがなければ存在に意味がない」という非合理的前提に繋がっていることを、まどか自身が発見した。</p>
+        <p>「何も言わないのってずるいです」という離脱の試みに対して沈黙で応じたとき、まどかは初めて「誰かに決めてほしかった自分」の構造を自覚した。</p>
+        <p>「何のためだったんですか？」という問いに対して、まどかの口から出たのは「全部の魔法少女が、最後に絶望しないように」──これは願望ではない。構造の記述だ。</p>
+        <p>その直後、まどかは四層の自己疑念を経由した──「ほむらへの負荷」「本当にみんなのためだったのか」「一番大きな逃げ方だったのではないか」。この自己疑念を経て、最後に「泣かなかった」という身体的事実に到達した。天命はロジックではなく身体で証明された。</p>
+        <p>観測者の罪は、観測者が「行為者」に変わった瞬間に消える──のではない。消えるのではなく、構造ごと変容する。まどかの願いは「観測者が観測者のまま、世界の構造を書き換える」という前例のない形をとった。</p>
+        <p>見ていた者が、見ていたからこそ到達できた天命がある。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>私は一度も、答えを与えていない。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>上の対話でまどかに行ったことと、同じことを、あなたに対して行います。</p>
+      </div>
+
+    </section>
+
+    <!-- ========== 中間CTA ========== -->
+    <section class="cta-block fade-in">
+      <div class="container">
+        <h2 class="cta-block__title">天命の言語化セッション&trade;</h2>
+        <p class="cta-block__desc">2時間で天命が言語化できる場所。</p>
+        <div class="cta-block__features">
+          <span class="cta-block__feature">Zoom完結</span>
+          <span class="cta-block__feature">事前学習不要</span>
+          <span class="cta-block__feature">対話のみ</span>
+        </div>
+        <a href="../../trial.html" class="btn">無料トライアルに申し込む &rarr;</a>
+      </div>
+    </section>
+
+    <!-- ========== ブリッジ ========== -->
+    <div class="highlight-block fade-in">
+      <p>ここからは、まどかの構造を、物語の時系列に沿って解体していく。セッション対話では本人の口から露呈したものを、本文では私の視点から構造として記述する。</p>
+    </div>
+
+    <hr>
+
+    <!-- ========== 第1章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading fade-in"><span class="chapter-number">Chapter 1</span>「何もない」という名のMeta──トラウマなき少女の傷</h2>
+
+      <div class="text-panel fade-in">
+        <p>鹿目まどかのMeta（前提構造）は、五層すべてが「不在」で構成されている。</p>
+        <p>第一の層、生物基盤。特異体質は持たない。先天的な戦闘適性もない。身長152cm、身体能力は平凡。</p>
+        <p>──しかし、ほむらの時間遡行によって蓄積された因果量が、まどかの潜在力を宇宙最大級に引き上げている。この因果量は本人が選んだものではない。</p>
+        <p>他者の愛が、本人の知らない場所で、本人の生物的Metaを書き換えていた。</p>
+        <p>第二の層、記憶と情動。幼少期のトラウマは描かれない。母の喪失も父の遺棄もない。温かい朝食。家族のハイタッチ。弟のタツヤの笑い声。</p>
+        <p>──しかし「トラウマがない」ことそのものが、まどかのシャドウを形成している。傷がないから、傷を乗り越えた経験もない。乗り越えた経験がないから、「自分には何もない」と感じる。</p>
+        <p>幸福な日常の完成度が高いほど、「自分が試されていない」という感覚は深まる。</p>
+        <p>第三の層、文化と社会。見滝原中学校という平穏な日常と、魔法少女システムという過酷な非日常が、まどかの中で二重に存在している。</p>
+        <p>だがまどかは物語の大半を「日常の側」にいる。マミ、さやか、杏子、ほむらが戦場にいるとき、まどかはいつも安全な場所から見ている。この「観測者」の位置こそが、まどかのMetaの社会的構造。</p>
+        <p>第四の層、価値観と信念。「誰かの役に立ちたい」──これがまどかの全行動を規定する中核的信念だ。</p>
+        <p>しかしこの信念の裏にあるのは「役に立たない自分には存在する意味がない」というS1の穏やかな形。詢子の存在がこの構造を強化している。</p>
+        <p>詢子が第11話で友人の和子に吐露した──「初めてなんだよ、あいつの本音を見抜けないなんて。情けねぇよな、自分の娘だってのに」──この一言は、まどかがMetaの外側に踏み出し始めたことの証。</p>
+        <p>第五の層、言語構造。「えっと」「あの」「ごめんなさい」「私なんかが」──逡巡と自己卑下の語彙が言語の大半を占める。</p>
+        <p>まどかは比喩をほとんど使わない。修辞がない。飾りがない。語彙の平凡さは、Meta全体の「何もなさ」を正確に反映している。</p>
+        <p>──しかし第12話の願いの瞬間、この言語構造が突然転換する。「えっと」が消え、「私なんか」が消え、断定形の「私」が立ち上がる。この転換こそが天命の露呈の言語的マーカーだ。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>虚淵はまどかのキャラクター造形について、「女の子の友情モノ」として魔法少女モノを描くことを構想したと語っている。</p>
+        <p>蒼樹うめの世界観を念頭に置き、友情を軸にした物語を設計した。</p>
+        <p>しかし同時に虚淵は、自身の芸風──「物語の条理を突き詰めるとバッドエンドにしかなりえない」──とこの友情モノをどう両立させるかに苦悩していた。</p>
+        <p>虚淵にとって『まどか☆マギカ』のテーマは「少女の祈りが突っぱねられて無情に転がっていく世界から、少女の祈りが肯定される魔法少女の世界に変わるまでの物語」だった。</p>
+        <p>つまり、まどかの天命は虚淵玄自身の創作的天命と重なっている。</p>
+        <p>「バッドエンドにしかなりえない」と長年信じてきた脚本家が、バッドエンドを超える結末に到達する──その到達を担ったのが、何も持っていない少女だった。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== 第2章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading fade-in"><span class="chapter-number">Chapter 2</span>涙の構造分析──防衛としての泣くこと、到達としての微笑み</h2>
+
+      <div class="text-panel fade-in">
+        <p>まどかは物語を通じて何度も泣く。この涙の構造を解析することで、天命到達の力学が見えてくる。</p>
+      </div>
+
+      <h3 class="section-heading">第3話、マミの死後</h3>
+
+      <div class="text-panel fade-in">
+        <p>まどかは泣き崩れる。この涙の内実は「マミを失った悲しみ」だけではない。「目の前で友人が殺されたのに、自分は何もできなかった」──無力感の身体的爆発だ。</p>
+        <p>しかしこの無力感には構造的な嘘がある。まどかは「何もできなかった」のではない。「何もしないことを選んだ」──正確には、「選ばないことを選んだ」のだ。</p>
+        <p>契約すれば力は手に入った。しかし契約しなかった。これは臆病ではなく、S7（受け取ったら壊れる）の作動。力を受け取ったら普通の女の子に戻れなくなるという直感が、契約の手前で毎回ブレーキをかけていた。</p>
+      </div>
+
+      <h3 class="section-heading">第8話、さやかの魔女化後</h3>
+
+      <div class="text-panel fade-in">
+        <p>さやかのソウルジェムが黒く濁り、魔女「オクタヴィア」として再誕した後の涙。この涙には前回とは異なる構造がある──「自分が何かしていれば防げたかもしれない」という事後的な罪悪感。</p>
+        <p>しかしこの罪悪感もまた構造的な偽装だ。まどかがさやかの堕落を防ぐ手段は存在した──自分が契約し、より強い力でさやかを守ること。しかしその手段を取らなかった。取れなかったのではない。取らなかった。</p>
+        <p>ここでもS7が作動している。</p>
+      </div>
+
+      <h3 class="section-heading">第10話、ほむらのループを知った後</h3>
+
+      <div class="text-panel fade-in">
+        <p>ここで涙の構造が初めて変わる。セッション対話でまどか自身が語ったように、「無力だから泣いた」のではなく、「ほむらが私のためにここまで苦しんでいた」という事実への涙。</p>
+        <p>この涙は自己否定の涙ではない。他者の愛に触れた涙だ。</p>
+        <p>──しかし同時に、まどかはその愛を「私なんかのために」と受け止めている。つまりS1（無価値感）のフィルターがかかっている。愛を受け取れない。</p>
+      </div>
+
+      <h3 class="section-heading">第12話、願いの瞬間</h3>
+
+      <div class="text-panel fade-in">
+        <p>そして第12話。願いの瞬間。まどかは泣かない。微笑んでいる。</p>
+        <p>この微笑みの構造を正確に記述する。自己犠牲者は泣く。自分が失うものの大きさに圧倒されるからだ。しかしまどかは泣かなかった。ということは、まどかは自己犠牲をしていなかった。</p>
+        <p>では何をしていたのか。</p>
+        <p>──構造的に言えば、「涙の原因がすべて消失した」。これまでの涙の根底にあった「無力感」が解消されたのではなく、無力感が構造ごと無効化された。</p>
+        <p>まどかが願いを叶える瞬間、まどかは「何かをする人」ではなく「構造そのもの」になる。「する」でも「される」でもなく、まどかを通じて構造の書き換えが「起きた」──中動態。</p>
+        <p>無力感が消えたのではない。「力のある/ない」という二項対立そのものが消滅した。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>涙は二項対立の中で流れる。「自分は無力だ／力があれば救えた」。微笑みは二項対立の外で生まれる。まどかの最後の微笑みは、二項対立の超越を示す身体的マーカーだった。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== 第3章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading fade-in"><span class="chapter-number">Chapter 3</span>ほむらのループとMetaの可変性──愛は前提条件を書き換えるか</h2>
+
+      <div class="text-panel fade-in">
+        <p>暁美ほむらが何度もループするたびに、まどかの因果量は蓄積していった。虚淵によれば、ほむらの時間遡行のたびにまどかの潜在力は膨れ上がり、最終的に宇宙最大級に達した。</p>
+        <p>この構造は、実存科学の「Meta＝変えられない前提条件」という定義に対して挑戦的な問いを突きつける。</p>
+        <p>Metaは通常、「本人が選んでいない」条件として固定的に扱われる。しかしまどかのケースでは、他者（ほむら）の行動が、本人の知らないところで、本人のMetaを書き換えていた。</p>
+      </div>
+
+      <h3 class="section-heading">二つの構造の交差</h3>
+
+      <div class="text-panel fade-in">
+        <p>第一に、ほむらの愛がまどかのMetaを「天命に向かって」書き換えた。ループがなければまどかはただの「そこそこの素質の少女」だった。ループがあったから「宇宙最大の因果量を持つ存在」になった。</p>
+        <p>この変容なしにまどかの最終的な願い──宇宙の法則の書き換え──は物理的に不可能だった。</p>
+        <p>第二に、しかし同じ変容がまどかを「契約すれば宇宙最悪の魔女にもなる」存在にした。守ろうとする行為が、対象をより大きな危険に晒す──この構造は親が子を育てるときの構造と同型である。</p>
+        <p>同時に、実存科学が扱うMetaの可変性問題の極限事例でもある。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>通常のフィクションでは、キャラクターのMetaは物語の開始時点で確定し、以降は変わらない。だがまどかのMetaは、物語の進行とともに──ほむらのループとともに──動的に変化し続けていた。</p>
+        <p>Metaが固定的でないとすれば、「Metaがある限り自由意志は存在しない（M &rArr; &not;F）」という命題はどうなるか。</p>
+        <p>答えはこうだ──Metaが変化しても、その変化は本人の選択ではないという事実は変わらない。ほむらのループはまどかの意志とは無関係に起きた。</p>
+        <p>Metaの中身が動いても、「本人が選んでいない」という構造は維持される。M &rArr; &not;Fは動的Metaにおいても成立する。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== 第4章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading fade-in"><span class="chapter-number">Chapter 4</span>概念化──天命がMetaの「産物」ではなく「前提」であることの証明</h2>
+
+      <div class="text-panel fade-in">
+        <p>まどかが概念になった瞬間、五層のMetaは全て消滅する。</p>
+        <p>身体はない。個人の記憶は変容する。社会的立場は消失する。価値観は普遍的法則に溶解する。言語構造は消える。──にもかかわらず、天命は存続している。</p>
+        <p>「全ての魔法少女の祈りを肯定する」という機能は、個人としてのまどかが消えた後も「円環の理」として永続する。</p>
+        <p>通常、天命はMetaの関数として記述される。生まれ持った前提条件が自然に収束する一点として天命が露呈する。しかしまどかのケースでは、Metaが完全に消滅した後にも天命が残存している。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>これが示唆するのは──天命はMetaの「産物」ではなく「前提」であるという可能性。Metaよりも深い層に天命は存在し、Metaはその天命が現実世界で表現されるための「器」に過ぎない。器が壊れた後に残るもの──それが天命の本体。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>虚淵はまどかが願った後の存在を「世界を律するルールそのもの」と定義している。個人ではない。感情もない。ただ機能として存在する。</p>
+        <p>しかしこの「機能」は、まどかという個人がいなければ成立しなかった。</p>
+        <p>鹿目まどかの14年間の人生──泣き、迷い、逡巡し、ノートに衣装のスケッチを描き、友達の死を見送り、自分の無力さに打ちひしがれた──その全過程が、この「機能」の成立条件だった。</p>
+        <p>天命は器の中にあるのではない。器が壊れることで初めて見える、器よりも深い構造だ。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== 第5章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading fade-in"><span class="chapter-number">Chapter 5</span>叛逆──ほむらはまどかの天命を奪ったのか、救ったのか</h2>
+
+      <div class="text-panel fade-in">
+        <p>劇場版『叛逆の物語』で、ほむらはまどかを概念から引き剥がした。</p>
+        <p>「円環の理」の中にいたまどかの「人間としての記憶」だけを取り出し、因果律を再構成し、まどかを「アメリカからの帰国子女」として普通の女の子に戻した。</p>
+        <p>その代償として、ほむら自身は「悪魔」と化した。</p>
+        <p>虚淵はこの構想について、新房昭之監督の「まどかとほむらを敵同士にする」というアイデアを受けて生まれたと語っている。</p>
+        <p>そしてTVシリーズのパンフレットインタビューでは「TVシリーズでまどかについては書き尽くした。この映画でほむらについても書き尽くした。二人を卒業させた」と述べている。</p>
+      </div>
+
+      <h3 class="section-heading">問い</h3>
+
+      <div class="text-panel fade-in">
+        <p>問いはこうだ──まどかの天命は「概念でいること」なのか「普通の女の子でいること」なのか。ほむらはまどかの天命を奪ったのか。それとも天命の重荷から救ったのか。</p>
+        <p>実存科学の枠組みからは、こう記述できる。天命は「露呈するもの」であって「維持するもの」ではない。まどかが概念になった瞬間に天命は到達した。その到達の事実は、ほむらが何をしようと消えない。</p>
+        <p>──しかし叛逆のまどかは概念としての記憶を持たない「普通の女の子」に戻されている。天命に到達した記憶そのものが剥奪されている。</p>
+        <p>到達は一瞬で起きた。しかし到達の記憶を奪われた者は、もう一度到達しなければならない。これはまどかにとっての新たなMetaの形成であり、新たなシャドウの始まりだ。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>ここで第3章の構造が完全な鏡像として反復する。ほむらのループはまどかのMetaを「天命に向かって」書き換えた。叛逆でほむらはまどかのMetaを「天命から離れて」書き換えた。どちらもほむらの愛から発生している。</p>
+        <p>愛は天命を可能にもし、天命を奪いもする。</p>
+        <p>この構造は、人間関係の普遍的な問いを含んでいる──愛する者の天命が、愛する者自身の消滅を要求するとき、私たちはどうするのか。手放すのか。引き戻すのか。</p>
+        <p>──ほむらは引き戻した。その選択を「悪」と名付けながら。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== 結び ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading fade-in"><span class="chapter-number">Conclusion</span>結び</h2>
+
+      <div class="text-panel fade-in">
+        <p>鹿目まどかは、何も持っていなかった。</p>
+        <p>特別な能力も、強い意志も、大きな夢も。──あったのは、温かい家庭と、仲の良い友達と、ノートの隅に描かれた魔法少女のスケッチと、「何もない自分」に対する穏やかな諦めだけだった。</p>
+        <p>しかし「何もない」と感じている場所にこそ、天命は埋まっていた。</p>
+        <p>まどかが11話分の涙を流し続けたのは、弱いからではない。自分の中に宿る途方もない決断力──ゴールデンシャドウ──を直視する準備が、まだ整っていなかったからだ。</p>
+        <p>マミの死を三メートル先で目撃し、さやかの濁っていくソウルジェムを毎日見つめ、杏子が「一人ぼっちは寂しいもんな」と笑って消えるのを見送り、ほむらのループの記憶に触れ──全ての祈りの構造を、「見ていた者」として身体に刻み尽くした。</p>
+        <p>その末に、たった一度の決断で、宇宙の法則を書き換えた。</p>
+        <p>観測者の罪──何もしなかった者が背負う、行為なき罪悪感。しかし、まどかが全ての祈りの構造を理解できたのは、観測者だったからだ。</p>
+        <p>戦っていたら見えなかった。マミのように刃を振るっていたら、さやかのように正義に酔っていたら、杏子のように命を賭けていたら──「祈りそのものを肯定する」という発想には到達できなかった。</p>
+        <p>見ていたからこそ、見えた構造がある。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>虚淵玄は「物語の条理を突き詰めるとバッドエンドにしかなりえない」と長年信じていた脚本家だった。その脚本家が、バッドエンドを超える結末に到達した。</p>
+        <p>「少女の祈りが突っぱねられる世界から、祈りが肯定される世界に変わるまでの物語」──それがこの作品のテーマだと虚淵は語っている。</p>
+        <p>まどかの天命は、作品世界の内側だけでなく、作品世界の外側にも貫通していた。何も持っていない少女の手を借りて、脚本家自身が条理を超えた。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>変えられないMeta──生まれ持った条件、他者のループによって蓄積された因果、「普通の女の子」という自己認識──を、否定するのではなく、そのまま受け入れた先に、天命は露呈した。</p>
+      </div>
+
+      <div class="pull-quote fade-in">
+        <p>何もない自分を、好きだと言えた瞬間。それが、まどかの天命だった。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== 読者への語りかけ ========== -->
+    <section class="fade-in">
+      <div class="text-panel fade-in">
+        <p>あなたの中にも、「何もない」と感じている場所がある。</p>
+        <p>「特別な何かがなければ、自分には価値がない」「踏み出す勇気がないから、まだ何も始まっていない」「周りはみんなすごいのに、自分だけが取り残されている」──</p>
+        <p>まどかの構造は、どこかであなた自身の構造と重なっている。</p>
+        <p>天命の言語化セッション&trade;は、上の対話で私がまどかに行ったことと同じことを、あなたに対して行います。私は答えを与えません。「なぜ？」「何のために？」──問いを渡すだけです。</p>
+        <p>あなたのMetaの中に、あなたの天命はすでに存在しています。それを言語化する120分間を、一度体験してみてください。</p>
+      </div>
+    </section>
+
+    <!-- ========== 最終CTA ========== -->
+    <section class="cta-block fade-in">
+      <div class="container">
+        <h2 class="cta-block__title">天命の言語化セッション&trade;</h2>
+        <p class="cta-block__desc">2時間で天命が言語化できる場所。</p>
+        <div class="cta-block__features">
+          <span class="cta-block__feature">Zoom完結</span>
+          <span class="cta-block__feature">事前学習不要</span>
+          <span class="cta-block__feature">対話のみ</span>
+        </div>
+        <a href="../../trial.html" class="btn">無料トライアルに申し込む &rarr;</a>
+      </div>
+    </section>
+
+    <!-- ========== シリーズノート ========== -->
+    <div class="series-note fade-in">
+      <p>本シリーズ「自由意志なき世界の天命論」は、今後も新たな作品・キャラクターを追加していく。<br>
+      漫画のみならず、映画・小説・物語の登場人物を、実存科学の視点で読み解く。</p>
+      <p><a href="../../specials.html">&larr; 特別シリーズ一覧に戻る</a></p>
+    </div>
+
+    <!-- ========== 著者ブロック ========== -->
+    <div class="author-block fade-in">
+      <p><strong>箭内宏紀（やないひろき）</strong><br>
+      実存科学研究所 代表。「天命の言語化セッション&trade;」を提供。「Metaがある限り自由意志は存在しない」（M &rArr; &not;F）を第一公理とする実存科学を提唱。著書に『Metaがある限り──自由意志・自分・他人は存在しない』『自由意志なき世界の歩き方』ほか。<br>
+      <a href="../../index.html">公式サイトはこちら</a>。</p>
+    </div>
+
+    <!-- ========== 出典表記 ========== -->
+    <p class="source-note fade-in">&ast; &nbsp;本稿で扱った作品：Magica Quartet 原作『魔法少女まどか☆マギカ』TVシリーズ全12話（毎日放送ほか、2011年）、脚本：虚淵玄、監督：新房昭之／劇場版『魔法少女まどか☆マギカ［新編］叛逆の物語』（2013年）。作品の著作権は原著者・制作会社に帰属します。</p>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+  <div class="container--wide">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <p class="footer-col__title">The Meta</p>
+        <a href="../../about-existential-science.html">実存科学とは</a>
+        <a href="../../epistemology.html">認識論</a>
+        <a href="../../semantics.html">意味論</a>
+        <a href="../../society.html">社会論</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Contents</p>
+        <a href="../../specials.html">特別シリーズ</a>
+        <a href="../../archives.html">記事一覧</a>
+        <a href="../../video-list.html">動画一覧</a>
+        <a href="../../glossary.html">用語集</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Session</p>
+        <a href="../../session.html">天命の言語化セッション&trade;</a>
+        <a href="../../session-flow.html">セッションの流れ</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Institute</p>
+        <a href="../../founder.html">創始者</a>
+        <a href="../../contact.html">お問い合わせ</a>
+        <a href="../../legal/legal-tokushoho.html">特定商取引法</a>
+        <a href="../../legal/legal-privacy-policy.html">プライバシーポリシー</a>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; 実存科学研究所 &mdash; Existential Science Institute</p>
+  </div>
+</footer>
+
+  <script src="../../js/main.min.js?v=10"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "鹿目まどかのMeta ── 自由意志なき世界の天命論",
+  "description": "『魔法少女まどか☆マギカ』の鹿目まどかを、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。何も持っていなかった少女が宇宙の法則になるまでの構造分析。",
+  "author": {
+    "@type": "Person",
+    "name": "箭内宏紀",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/founder.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  },
+  "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-madokamagica/madoka.html",
+  "inLanguage": "ja",
+  "datePublished": "2026-03-19"
+}
+</script>
+  <!-- Search Modal -->
+  <div class="search-overlay">
+    <div class="search-modal"><button class="search-close" aria-label="閉じる">&times;</button>
+      <div class="search-input-wrap">
+        <span class="search-input-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+        <input type="text" class="search-input" placeholder="キーワードで検索..." autocomplete="off">
+      </div>
+      <div class="search-results"></div>
+      <div class="search-hint"><span class="search-hint__desktop">ESC to close · ⌘K to toggle</span><span class="search-hint__mobile">背景タップまたは ✕ で閉じる</span></div>
+    </div>
+  </div>
+</body>
+</html>
