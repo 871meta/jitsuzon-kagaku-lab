@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-forrestgump/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>フォレスト・ガンプのMeta ── 自由意志なき世界の天命論 | 実存科学研究所</title>
+  <meta name="description" content="映画『フォレスト・ガンプ』のフォレスト・ガンプを、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。手が空いていたから受け取れた──概念的フィルターの不在が天命の形態になった男の構造。">
+  <meta property="og:title" content="フォレスト・ガンプのMeta ── 自由意志なき世界の天命論 | 実存科学研究所">
+  <meta property="og:description" content="映画『フォレスト・ガンプ』のフォレスト・ガンプを、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。手が空いていたから受け取れた──概念的フィルターの不在が天命の形態になった男の構造。">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="実存科学研究所">
+  <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+  <meta property="og:url" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-forrestgump/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"></noscript>
+  <link rel="stylesheet" href="../../css/style.min.css?v=28">
+
+<style>
+/* =============================================
+   視認性・読みやすさ強化CSS
+   ============================================= */
+
+/* === h1 ゴールドシマー === */
+.hero-title--shimmer {
+  background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gold-shimmer 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 16px rgba(192,168,120,0.3)) drop-shadow(0 0 40px rgba(192,168,120,0.12));
+}
+@keyframes gold-shimmer {
+  0%, 100% { background-position: 100% 50%; }
+  50% { background-position: 0% 50%; }
+}
+
+/* === 1. 章見出し — 中央配置＋装飾 === */
+h2.chapter-heading {
+  font-size: var(--fs-section);
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  color: var(--color-text-primary);
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  position: relative;
+  padding-top: 2rem;
+}
+h2.chapter-heading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 1px;
+  background: var(--color-gold);
+}
+h2.chapter-heading::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(192,168,120,0.5), transparent);
+  margin: 1.2rem auto 0;
+}
+.chapter-number {
+  display: block;
+  font-family: var(--font-serif-en);
+  font-size: var(--fs-caption);
+  font-weight: 400;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 0.6rem;
+}
+
+/* === 2. 区切り線 — 装飾付き === */
+hr {
+  border: none;
+  height: auto;
+  background: none;
+  margin: 4.5rem 0;
+  text-align: center;
+  overflow: visible;
+}
+hr::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(192,168,120,0.08) 15%, rgba(192,168,120,0.2) 50%, rgba(192,168,120,0.08) 85%, transparent 100%);
+}
+hr::after {
+  content: "\25C6";
+  display: block;
+  font-size: 0.5rem;
+  color: rgba(192,168,120,0.3);
+  margin-top: -0.35em;
+  letter-spacing: 1em;
+  line-height: 1;
+}
+
+/* === 3. セッション対話 — 読みやすさ向上 === */
+.session-dialogue {
+  max-width: 680px;
+  margin: 2.5rem auto;
+  padding: 2.5rem 2rem;
+  background: rgba(10, 8, 18, 0.35);
+  border: 1px solid rgba(192,168,120,0.06);
+  border-radius: 2px;
+  position: relative;
+}
+.session-dialogue::before {
+  content: "SESSION";
+  position: absolute;
+  top: -0.6em;
+  left: 2rem;
+  font-family: var(--font-serif-en);
+  font-size: var(--fs-micro);
+  letter-spacing: 0.3em;
+  color: rgba(192,168,120,0.4);
+  background: var(--color-bg-deep);
+  padding: 0 0.8rem;
+}
+.session-dialogue p {
+  margin-bottom: 1.1em;
+  line-height: 2.2;
+}
+.session-dialogue .speaker-yanai { color: var(--color-gold); font-weight: 600; font-size: var(--fs-body); }
+.session-dialogue .speaker-gump { color: #b8a0d8; font-weight: 600; font-size: var(--fs-body); }
+
+/* 箭内の発言：金色の左ボーダー */
+.session-dialogue .line-yanai {
+  border-left: 2px solid rgba(192,168,120,0.15);
+  padding-left: 1.2rem;
+}
+/* キャラの発言：少しインデント */
+.session-dialogue .line-character {
+  margin-left: 1.4rem;
+}
+/* 沈黙マーカー：中央揃え＋装飾線 */
+.session-dialogue .silence {
+  color: rgba(235,232,225,0.3);
+  font-style: italic;
+  text-align: center;
+  margin: 2em 0;
+  font-size: var(--fs-small);
+  letter-spacing: 0.15em;
+}
+.session-dialogue .silence::before,
+.session-dialogue .silence::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: rgba(192,168,120,0.15);
+  vertical-align: middle;
+  margin: 0 1em;
+}
+/* 10発言ごとの視覚リズム */
+.session-dialogue p:nth-child(10n) {
+  margin-bottom: 2em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid rgba(192,168,120,0.06);
+}
+
+/* === 4. text-panel の単調さ解消 === */
+section > .text-panel:nth-of-type(even) {
+  background: rgba(8, 6, 16, 0.45);
+  border-color: transparent;
+}
+section > .text-panel:nth-of-type(even)::before {
+  display: none;
+}
+
+/* === 5. highlight-block の存在感微増 === */
+.highlight-block {
+  background: rgba(192,168,120,0.06);
+  border-left: 2px solid;
+  border-image: linear-gradient(180deg, var(--color-gold) 0%, rgba(192,168,120,0.15) 100%) 1;
+  padding: 2rem 2rem 2rem 2.2rem;
+  margin: 2.5rem 0;
+}
+.highlight-block p {
+  font-size: var(--fs-lead);
+  font-weight: 500;
+  line-height: 2.2;
+  color: var(--color-text-primary);
+}
+
+/* === 6. セクション見出し（h3） === */
+h3.section-heading {
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  color: var(--color-text-body);
+  letter-spacing: 0.08em;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1.2rem;
+  border-left: 2px solid rgba(192,168,120,0.4);
+  line-height: 1.6;
+}
+
+/* === Profiling Block === */
+.profiling-block {
+  background: rgba(15,12,25,0.5);
+  border: 1px solid rgba(192,168,120,0.1);
+  padding: 2.5rem 2rem;
+  margin: 2rem 0;
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+.profiling-block::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(192,168,120,0.4), transparent);
+}
+.profiling-block h3 {
+  font-size: var(--fs-body);
+  color: var(--color-gold);
+  letter-spacing: 0.15em;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(192,168,120,0.1);
+}
+.profiling-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+.profiling-block ul li {
+  margin-bottom: 1rem;
+  color: var(--color-text-reading);
+  font-size: var(--fs-body);
+  line-height: 1.9;
+  padding-left: 1.6em;
+  position: relative;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(192,168,120,0.04);
+}
+.profiling-block ul li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.profiling-block ul li::before {
+  content: "\2500\2500";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgba(192,168,120,0.35);
+  font-size: 0.75em;
+}
+
+/* === Author Block === */
+.author-block {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(192,168,120,0.15);
+}
+.author-block p { font-size: var(--fs-body); color: var(--color-text-reading); line-height: 2; }
+.author-block strong { color: var(--color-text-body); }
+
+/* === Source Note === */
+.source-note {
+  margin-top: 2rem;
+  font-size: var(--fs-small);
+  color: rgba(235,232,225,0.35);
+}
+
+/* === Series Note === */
+.series-note {
+  margin-top: 2rem;
+  padding: 1.5rem 2rem;
+  background: rgba(192,168,120,0.04);
+  border: 1px solid rgba(192,168,120,0.1);
+  font-size: var(--fs-body);
+  color: var(--color-text-reading);
+  line-height: 2;
+}
+
+/* === Pull-quote: left-align for readability === */
+.pull-quote { text-align: left; }
+.pull-quote p { font-size: var(--fs-lead); font-weight: 500; }
+
+/* === 7. モバイル対応 === */
+@media (max-width: 600px) {
+  h2.chapter-heading {
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    padding-top: 1.5rem;
+  }
+  .chapter-number {
+    font-size: var(--fs-micro);
+    letter-spacing: 0.25em;
+    margin-bottom: 0.4rem;
+  }
+  h3.section-heading {
+    font-size: var(--fs-lead);
+    margin-top: 2rem;
+    padding-left: 1rem;
+  }
+  hr { margin: 3rem 0; }
+  .session-dialogue {
+    padding: 1.5rem 1.2rem;
+    margin: 2rem auto;
+  }
+  .session-dialogue .line-yanai { padding-left: 0.8rem; }
+  .session-dialogue .line-character { margin-left: 0.8rem; }
+  .profiling-block { padding: 1.5rem 1.2rem; }
+  .highlight-block { padding: 1.5rem 1.2rem 1.5rem 1.4rem; }
+  .text-panel { padding: 2rem 1.5rem; }
+}
+@media (max-width: 480px) {
+  .text-panel p br,
+  .pull-quote p br,
+  .highlight-block p br,
+  .def-box p br,
+  .session-dialogue p br { display: none; }
+  h2.chapter-heading { font-size: var(--fs-h3); }
+  .session-dialogue p:nth-child(10n) {
+    margin-bottom: 1.5em;
+    padding-bottom: 1em;
+  }
+}
+</style>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="../../index.html" class="site-logo">実存科学研究所</a>
+      <button class="search-toggle" aria-label="検索"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+            <nav class="global-nav">
+        <a href="../../index.html">Top</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">The Meta</button>
+          <div class="nav-dropdown__menu">
+            <a href="../../beginner.html">はじめての方へ</a>
+            <a href="../../lp.html">ダークサイド診断</a>
+            <a href="../../omoidasu/">身体的知性診断</a>
+          </div>
+        </div>
+        <a href="../../session.html">Session</a>
+        <a href="../../founder.html">Founder</a>
+        <a href="../../specials.html">Specials</a>
+      </nav>
+    </div>
+  </header>
+  <div class="reading-progress"></div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="パンくずリスト">
+        <ol class="breadcrumb__list">
+          <li class="breadcrumb__item"><a href="../../index.html" class="breadcrumb__link">TOP</a></li>
+          <li class="breadcrumb__item"><a href="../../specials.html" class="breadcrumb__link">Specials</a></li>
+          <li class="breadcrumb__item"><span class="breadcrumb__current">フォレスト・ガンプのMeta</span></li>
+        </ol>
+      </nav>
+      <p class="page-hero__sub">Forrest Gump &times; Existential Science</p>
+      <h1 class="hero-title--shimmer">フォレスト・ガンプのMeta</h1>
+      <p class="page-hero__lead">自由意志なき世界の天命論<br>箭内宏紀｜実存科学研究所</p>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <!-- Inline TOC -->
+    <nav class="inline-toc fade-in" aria-label="目次">
+      <details open>
+        <summary>目次</summary>
+        <ol id="inlineTocList"></ol>
+      </details>
+    </nav>
+
+    <!-- ========== ネタバレ注意 ========== -->
+    <div class="text-panel fade-in">
+      <p style="font-size:0.85rem; color:rgba(235,232,225,0.5); text-align:center;">※本稿は映画『フォレスト・ガンプ／一期一会』全編のネタバレを含みます。</p>
+    </div>
+
+    <!-- ========== 導入 ========== -->
+    <section class="fade-in">
+
+      <div class="text-panel fade-in">
+        <p>彼はベンチに座って、チョコレートの箱を差し出した。</p>
+        <p>隣に座った見ず知らずの女性に、頼まれてもいないのに。箱を開け、一粒取り、そして語り始めた。ベトナム戦争の話。エビ漁の話。大統領に三度会った話。アメリカを走って横断した話。</p>
+        <p>語りは静かで、声は少年のように上擦っていて、どの挿話にも「なぜそうなったのか」の説明がなかった。ただ、起きたことを起きた順に語った。</p>
+        <p>フォレスト・ガンプ。IQ75。アラバマ州グリーンボウ出身。</p>
+        <p>彼は自分の人生を「選んだ」のか。運命に「運ばれた」のか。走ったのは意志か、衝動か、それとも構造か。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>彼のそばに、もう一人の走者がいた。ジェニー・カラン。幼馴染にして生涯の愛。彼女もまた走り続けた。</p>
+        <p>しかし二人の走りは同じ力に押されながら正反対の方向へ飛ぶ二つの破片だった。一人は走ることで生き延び、一人は走ることで壊れた。</p>
+        <p>なぜか。</p>
+        <p>その問いの先に、天命がある。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== シャドウ・プロファイリング ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Shadow Profiling</span>シャドウ・プロファイリング</h2>
+
+      <div class="profiling-block fade-in">
+        <h3>【Meta（変えられない前提条件）】</h3>
+        <ul>
+          <li>IQ75。臨床的には「境界知能」に分類される認知的初期条件。自己懐疑の認知的枠組みを持たない</li>
+          <li>アラバマ州グリーンボウ。アメリカ南部の小さな町。人種分離が残る1950年代に育つ</li>
+          <li>父親不在。母ミセス・ガンプの単独養育。「あなたは誰とも変わらない」という無条件の尊厳教育</li>
+          <li>幼少期の脚ブレース。身体的制約からの出発。ブレースが砕けた瞬間の「走り」が人生の起点</li>
+          <li>「Stupid is as stupid does」── 知能を認知から行動へ再定義する母の哲学がMeta第四層を規定</li>
+        </ul>
+      </div>
+
+      <div class="profiling-block fade-in">
+        <h3>【シャドウ（抑圧された本音）】</h3>
+        <ul>
+          <li>覆い方の類型：不在のシャドウ（Absent Shadow）。抑圧でも凍結でも偽装でもない。概念的フィルターの欠如により、シャドウが形成される認知条件自体が存在しない。これは実存科学の既存類型（闇の抑圧/ゴールデンシャドウ/凍結/偽装/継承の鎧）のいずれにも該当しない、新しい構造類型である</li>
+          <li>S分類：S4「本当の自分」の逆位相。通常のS4は「本音を出したら居場所を失う」。ガンプは本音しか出せない。問題は「本音を出すこと」ではなく、「本音しか出せないことの意味を問われたとき、そこに何が現れるか」</li>
+          <li>核心：ガンプには「隠しているもの」がない。しかし「隠しているものがない」ことそのものが、彼を周囲から分離する透明な壁になっている</li>
+          <li>深層の欲求：ジェニーに「わかってもらう」こと。「僕は頭のいい人間じゃない。でも、愛が何かは知っている」── 彼の人生で最も知的な一文</li>
+          <li>代償行動：母の格言の反復。「ママはいつもこう言ってた」── 自分の言葉を持たないことへの無意識の代償</li>
+        </ul>
+      </div>
+
+      <div class="profiling-block fade-in">
+        <h3>【ジェニー・カランとの対比】</h3>
+        <p style="font-size:0.85rem; color:#c0bbb4; margin-bottom:1.5rem; line-height:1.8;">同じアラバマの土壌から出発した二人──一人は「何かに向かって」走り、一人は「何かから」走った。走りの方向が正反対の鏡。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-bottom:0.8rem;">ガンプの初期の愛着は無条件に愛する母であり、ジェニーの初期の愛着は性的虐待を行う父だった。痛みへの応答もまた対照的だ──ガンプは受容（考える前に応じる）、ジェニーは逃走（考えた上で逃げる）。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-bottom:0.8rem;">言語の機能すら反転する。ガンプは最小限の語彙で真実を語り、ジェニーは豊富な語彙で自分を偽る。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2;">帰結は残酷なまでに明確だ。走る理由を問わなかったガンプは生き延び、走る理由を知っていたジェニーは自壊した。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2;">しかしジェニーは最後にガンプのもとへ帰還した──息子を連れて。走りの終着点は、同じ場所だった。</p>
+      </div>
+
+      <div class="profiling-block fade-in">
+        <h3>【天命への転換点】</h3>
+        <ul>
+          <li>喪失：バッバの戦死、母の死、ジェニーの繰り返しの離去── 三つの喪失が順に積み重なる</li>
+          <li>反転：「ある日、なぜだかわからないが、走ることにした」── 言語化できない衝動の身体的表出。三年二ヶ月十四日十六時間</li>
+          <li>天命の萌芽：「たぶん両方だと思う。たぶん両方が同時に起きている」── 運命と偶然の二項対立を解除する、ガンプ唯一の自前の哲学的言語</li>
+        </ul>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>──ここまでが、ガンプの構造の地図だ。</p>
+        <p>しかし、地図は地図でしかない。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>Meta五層を並べ、シャドウの不在を記述し、天命への転換点を特定した。だが、この地図は「外から見た構造」に過ぎない。</p>
+        <p>ガンプの構造の本当の特異性は、外から見える場所にはない。彼には壁がない。鎧もない。防壁もない。ただそこにいる。</p>
+        <p>── そして「ただそこにいる」人間の内側に何があるのかは、本人の声でしか確かめようがない。</p>
+        <p>この構造が──彼自身の限られた言葉で、彼自身の文法で、静かに開く瞬間を、見届けてほしい。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== セッション対話 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Session</span>天命の言語化セッション&trade;</h2>
+
+      <div class="session-dialogue fade-in">
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>ガンプさん、セッションに来てくださってありがとうございます。あなたはあなたに何をプレゼントしてあげたいですか？</p>
+        <p class="silence">（彼はまっすぐに座っている。背筋は良い。軍隊で覚えたのか、母に教わったのか。手は膝の上に置かれ、指は組まれていない。開いている。目は箭内をまっすぐに見ている）</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>プレゼント。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>ママはいつもこう言ってた。人生はチョコレートの箱のようなもの。何が出てくるかわからない、って。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>だからプレゼントっていうのは、開けてみないとわからないものですよね。チョコレートと同じで。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>&hellip;&hellip;でも、聞かれてるのは、僕が僕に何をあげたいか、ってことですよね。</p>
+        <p class="silence">（少しの間。彼は視線を上に向ける。考えているのではない。何かを探している。言葉の引き出しが少なく、合うものを見つけるのに時間がかかっている）</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>僕はね、ジェニーに会いたいです。ジェニーにもう一度会いたい。それが、プレゼントです。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>では、なぜそれをプレゼントできていないんですか？</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>ジェニーは死んだからです。</p>
+        <p class="silence">（沈黙）</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>土曜日の朝だった。僕たちの家の、木の下にいて。目を開けなくなった。お医者さんが何か言ったけど、よくわからなかった。ウイルスがどうとか。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>でもね、僕は思うんですけど、ジェニーはあの前からずっと疲れてたんです。ずっとずっと走ってた。僕みたいに走ってた。でも僕と違って、ジェニーは止まれなかった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、ジェニーは&ldquo;止まれなかった&rdquo;んですか？</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>&hellip;&hellip;わからない。</p>
+        <p class="silence">（間。彼は膝の上の手を見る。しかし数秒で顔を上げる）</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>いや、わかるかもしれない。ジェニーのお父さんは、いい人じゃなかった。ジェニーは小さいとき、お祈りしてた。『神様、私を鳥にしてください。ここから遠くへ飛んでいけるように』って。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>子供のときはそれを聞いて、何のことかわからなかった。でも今はわかる。ジェニーはお父さんから逃げたかった。で、大人になっても、ずっと逃げてた。男の人たちから。音楽から。薬から。──自分から。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、ガンプさんは子供のときに&ldquo;わからなかった&rdquo;んですか？</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>僕はね、言葉が足りないんです。みんなが何の話をしてるのか、すぐにはわからない。ジェニーのお父さんが「愛情深い」ってみんなが言うとき、僕もそう思ってた。だってキスしたり触ったりしてたから。──あとで、あれは愛情じゃなかったって知った。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>でも、わからなくても大丈夫だったんです。ママがそう言ってた。「わからないことがあっても、あなたは誰とも変わらない」って。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、&ldquo;わからなくても大丈夫&rdquo;なんですか？</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>だって&hellip;&hellip;わかったって、変わらないこともあるでしょう？</p>
+        <p class="silence">（彼は少し首を傾げる。疑問ではなく、確認。彼にとってはこれが自明の事実なのだ）</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>ジェニーはたくさんのことをわかってた。僕よりずっと頭がよくて、世界のことを知ってた。大学のこととか、政治のこととか、音楽のこととか。でも、ジェニーは幸せじゃなかった。僕は何もわからないけど&hellip;&hellip;そんなに不幸じゃなかった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜですか？</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>バッバがいた。ダン中尉がいた。ママがいた。ジェニーがいた。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>僕はね、約束したら守るんです。バッバと約束した。エビ漁をやるって。だからやった。ダン中尉を助けた。だって仲間だから。ジェニーが帰ってきたら、待ってた。だって好きだから。──そういうのは全部、難しいことじゃないんです。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、&ldquo;約束したら守る&rdquo;んですか？</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>&hellip;&hellip;それが、やるべきことだからです。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、それが&ldquo;やるべきこと&rdquo;なんですか？</p>
+        <p class="silence">（沈黙。長い。彼の表情が初めて変わる。困惑ではない。探しているのだ。言葉を。いつもなら出てくる母の格言が、この問いには合わない）</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>&hellip;&hellip;わからない。ママはそういうこと、言わなかった。約束を守れとも、人を助けろとも言わなかった。ママが言ったのは「あなたは誰とも変わらない」ってことだけ。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>でも僕はそうした。誰にも言われてないのに。</p>
+        <p class="silence">（間。彼は自分の言葉に少し驚いている）</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>&hellip;&hellip;なんでだろう。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>あの、変なこと言ってもいいですか。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>僕は走ったことがあるんです。長い間。三年と二ヶ月と十四日と十六時間。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>ジェニーがいなくなった後でした。ママも死んだ後で。バッバもずっと前に死んでた。ある朝起きて──走ろうと思った。なぜかわからない。でも走った。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、&ldquo;走ろうと思った&rdquo;んですか？</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>わからないんです。本当にわからない。頭で考えたんじゃない。足が動いた。体が行きたがった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>みんなが後ろからついてきた。何十人も。彼らは僕が何かの理由で走ってると思ったんだ。『世界平和のためですか？』とか、『環境のためですか？』とか聞かれた。でも僕は、ただ走ってた。理由はなかった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、みんなは&ldquo;理由がある&rdquo;と思ったんですか？</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>&hellip;&hellip;人って、理由がないと走らないんですか？</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>普通は理由があるのかもしれない。仕事のためとか、お金のためとか、誰かに認められるためとか。みんなそういう理由で走ってる。</p>
+        <p class="silence">（声が静かになる。普段よりゆっくりになる）</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>ジェニーもそうだった。ジェニーは逃げるために走ってた。お父さんから。それから男の人たちから。それから自分から。でも逃げ切れなかった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、ジェニーは&ldquo;逃げ切れなかった&rdquo;んですか？</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>走っても走っても、自分からは逃げられないでしょう。</p>
+        <p class="silence">（沈黙）</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、ガンプさんは&ldquo;自分から逃げ&rdquo;なかったんですか？</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>&hellip;&hellip;逃げる、っていうのが、よくわからなかったから。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>&hellip;&hellip;待って。今、自分で言ったこと、おかしいかもしれない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>僕は「わからなかったから逃げなかった」って言った。でもジェニーは「わかっていたから逃げた」。&hellip;&hellip;じゃあ、わかることって、いいことなんですか？ 悪いことなんですか？</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>ジェニーは僕にこう言ったことがある。「あなたは愛が何かわかっていない」って。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>でも&hellip;&hellip;でも、僕は思うんです。僕はわかってた。わかってたから、ずっと待ってた。何年もジェニーを待ってた。帰ってきて、また行って、また帰ってきて。僕はいつも同じ場所にいた。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、&ldquo;同じ場所にいた&rdquo;んですか？</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>&hellip;&hellip;行く場所がなかったから？ いや、違う。行く場所はあった。エビの会社もあったし、お金もあった。どこにでも行けた。でも僕は&hellip;&hellip;。</p>
+        <p class="silence">（長い沈黙。彼の目が潤む。しかし涙は落ちない）</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>&hellip;&hellip;ジェニーが帰ってくる場所が、なくなったら困ると思ったんです。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>ママも、バッバも、ダン中尉も、みんなどこかに行った。死んだり、いなくなったり。でも僕が動かなければ、少なくとも一つ、帰ってくる場所はある。誰かが帰ってきたとき、僕がいる。──それだけは、できると思った。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>&hellip;&hellip;でも、これは僕が考えて決めたんじゃない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>誰かに「帰る場所になれ」って言われたわけじゃない。ママも言ってない。バッバも言ってない。でも僕は、そうしてた。走ったのも同じです。約束を守ったのも。ダン中尉を担いで走ったのも。全部、誰にも言われてないのに、体が動いた。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、&ldquo;体が動いた&rdquo;んですか？</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>&hellip;&hellip;。</p>
+        <p class="silence">（彼の目から涙が一筋落ちる。しかし声は変わらない。泣いていることに気づいていないようにも見える）</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>ママは言ってた。「運命は自分で作るものだ。神が与えたもので最善を尽くすしかない」って。ダン中尉は「お前が俺の運命を奪った」って怒ってた。二人とも運命のことを話してた。でも言ってることが違った。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>僕はジェニーのお墓の前でこう言った。「僕たちにはそれぞれ運命があるのか、それともただ風に吹かれて漂っているだけなのか、僕にはわからない。でも&hellip;&hellip;たぶん両方だと思う。たぶん両方が同時に起きている」って。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>あれは&hellip;&hellip;ママの言葉じゃなかった。</p>
+        <p class="silence">（長い沈黙）</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>初めて、自分の言葉で言ったんだと思う。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>羽根ってあるでしょう。白い羽根。風で飛んできて、僕の足元に落ちてくる。あれは、どこに行くかわからない。でも、落ちた場所に誰かがいれば、その人は拾える。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>僕の人生もそうだったのかもしれない。全部、羽根みたいに飛んできた。ジェニーも。バッバも。ダン中尉も。卓球も。エビも。全部、僕が探しに行ったんじゃない。飛んできた。でも、僕はそれを拾った。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、ガンプさんは&ldquo;拾えた&rdquo;んですか？</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>&hellip;&hellip;。</p>
+        <p class="silence">（長い沈黙。涙は止まっている。声が、ここで初めてかすれる。彼のいつもの少年のような声ではない。低く、静かで、ゆっくりした声。自分でも聞いたことがない声だ）</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>&hellip;&hellip;手が空いてたからです。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>ジェニーは両手がふさがってた。自分を守るために、ずっと両手を使ってた。握りしめてた。だから羽根が来ても、拾えなかった。</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>僕は&hellip;&hellip;何も持ってなかった。何も守ってなかった。怖がるものもなかった。手が空いてた。だから、来たものを、そのまま受け取れた。</p>
+        <p class="silence">（沈黙）</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>&hellip;&hellip;でも、これは都合がよすぎるかもしれない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>だって、「何も持ってなかったから受け取れた」って、つまり、僕が頭がよくなかったから、考えなかったから、怖がらなかったから、受け取れたってことでしょう？ それって&hellip;&hellip;それって、いいことなのかな。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>ジェニーみたいに賢くて、世界を知ってて、たくさんのことがわかる人が壊れて死んだ。僕みたいに何もわからない人間が生き残った。&hellip;&hellip;それは正しいことなのかな。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>僕にはわからない。</p>
+        <p class="silence">（長い沈黙。そして彼の声が変わる。自己疑念を超えた場所から出てくる声。静かで、揺れていない）</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>でも、ジェニーは最後に帰ってきてくれた。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>僕のところに。息子を連れて。「この子の名前はフォレストよ」って。──僕の名前をつけてくれてた。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>あの子をスクールバスに乗せた朝。バスが来て、運転手さんは同じ人だった。僕が子供のとき乗ったのと、同じバス。同じ運転手さん。僕はあの子に言った。「ジェニーはバスの一番いい席を知ってたよ」って。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>子供のとき、誰も僕の隣に座ってくれなかった。でもジェニーだけが座ってくれた。バッバもそうだった。軍のバスで、みんなが僕の隣を避けたのに、バッバが座ってくれた。「この席、空いてるか？」って。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、&ldquo;座ってくれた&rdquo;だけで、始まったんですか？</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>&hellip;&hellip;わからない。でも、始まった。それだけのこと。</p>
+        <p class="silence">（彼は穏やかに微笑む。涙の跡があるが、表情は晴れている）</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>僕は待ってるだけなんです。座ってくれる人を。走ってくるものを。飛んでくる羽根を。来たものを受け取る。──それしかできないんです。でも、それが&hellip;&hellip;。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>&hellip;&hellip;それが、僕のやり方なんだと思います。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&ldquo;やり方&rdquo;？</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>ママは運命は自分で作るものだって言った。ダン中尉は運命は決まっていると言った。僕は両方だと思う。風が羽根を飛ばす。それは僕には決められない。でも、手が空いてれば、勝手に拾ってる。考える前に。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&ldquo;勝手に拾ってる&rdquo;のは、何のためだったんですか？</p>
+        <p class="silence">（最後の沈黙。これまでで一番長い。彼は窓の外を見ている。何かを見ているのではなく、何かを聞いている。自分の内側の音を）</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>&hellip;&hellip;何のためでもなかった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>でも、何のためでもなかったから、走れた。理由があったら、理由がなくなったとき止まらなきゃいけない。僕には理由がなかった。だから三年走れた。そして、ある日「疲れたから帰ろう」と思ったとき、止まれた。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>帰る場所があったから。フォレスト・ジュニアが待ってた。ジェニーが遺してくれた。</p>
+        <p class="silence">（彼の声は静かだが、揺れていない。決着がついた人間の声だ）</p>
+        <p class="line-character"><span class="speaker-gump">ガンプ：</span>ジェニーは最後に帰ってきてくれた。それが、ジェニーのプレゼントだったのかもしれない。僕に。&hellip;&hellip;僕たちに。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== セッション解説 ========== -->
+    <section class="fade-in">
+
+      <div class="text-panel fade-in">
+        <p>上のセッション対話で行ったことを、確認していただきたい。私は一度も、ガンプに答えを与えていない。</p>
+        <p>「なぜ走ったのか」を教えたのではない。「なぜ壊れなかったのか」を指摘したのでもない。</p>
+        <p>「なぜ？」は、彼が当然だと思い込んでいた前提──「わからないけど大丈夫」「ママがそう言った」「やるべきことだから」──を一枚ずつ剥がしただけだ。</p>
+        <p>すべてが剥がれたとき、彼自身の口から出た言葉がある。「手が空いてたからです」。母の格言ではない。誰かの借り物でもない。彼の構造が、彼の文法で、初めて語った言葉だった。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>「何のために？」は、「勝手に拾っている」行為の目的を問い、「何のためでもなかった。だから走れた」── 目的の不在そのものが天命の形態であることを浮上させた。</p>
+        <p>私は一度も、答えを与えていない。</p>
+        <p>上の対話でガンプに行ったことと、同じことを、あなたに対して行います。</p>
+      </div>
+
+    </section>
+
+    <!-- ========== 中間CTA ========== -->
+    <section class="cta-block fade-in">
+      <div class="container">
+        <h2 class="cta-block__title">天命の言語化セッション&trade;</h2>
+        <p class="cta-block__desc">2時間で天命が言語化できる場所。</p>
+        <div class="cta-block__features">
+          <span class="cta-block__feature">Zoom完結</span>
+          <span class="cta-block__feature">事前学習不要</span>
+          <span class="cta-block__feature">対話のみ</span>
+        </div>
+        <a href="../../trial.html" class="btn">無料トライアルに申し込む &rarr;</a>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== 第1章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading fade-in"><span class="chapter-number">Chapter 1</span>IQ75というMeta──奪われたものと与えられたもの</h2>
+
+      <div class="text-panel fade-in">
+        <p>実存科学の第一公理は「Metaがある限り、自由意志は存在しない」（M &rArr; &not;F）である。</p>
+        <p>Meta（前提構造）とは、語りに先立つ変更不可能な前提条件だ。言語・文化・価値観・記憶・身体の五層から成り、人間のあらゆる認識・判断・行為を規定する。本人が選んだものではない。</p>
+        <p>ガンプの全行動は、このMetaの中に存在する。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>彼のMetaの最も特異な層は、生物基盤──IQ75という数値──にある。この数値は臨床的には「境界知能」に分類される。</p>
+        <p>映画は冒頭の入学審査でこの数値を提示し、以降二度と言及しない。監督のゼメキスはこの設定を「マクガフィンのようなもの。誰もがそれを追いかけるが、実際にはまったく意味を持たない」と呼んだ。</p>
+        <p>装置である。前提として設定され、しかし物語はその前提を繰り返し裏切る。ガンプはライフルの分解を誰よりも速くこなし、卓球で国際レベルに到達し、エビ漁事業を成功させた。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>では、IQ75はガンプから何を奪ったのか。</p>
+        <p>自己懐疑の能力である。</p>
+        <p>彼は自分が失敗するかもしれないという認知的枠組みを持たない。</p>
+        <p>哲学者テリ・マレーはサルトルの実存主義を援用してこう指摘した──ガンプに欠けているのは「狡猾な賢さ」だが、問題はそれを欠いていることで彼が本当に不利なのかどうかだ、と。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>逆に何を与えたか。概念的フィルターの不在による、世界の直接的受容である。</p>
+        <p>通常の人間はMetaの各層が相互に干渉し、矛盾し、その矛盾がシャドウ（抑圧された影）を生む。ガンプにはその干渉が起こりにくい。</p>
+        <p>彼のシステムは壊れにくいのではなく、壊れる構造を最初から持っていない。</p>
+        <p>これは「鈍感」ではない。ガンプはバッバの死に涙を流し、ジェニーの離去に耐え、母の死を看取った。感じていないのではない。</p>
+        <p>感じたものを概念で歪曲する回路が存在しないのだ。悲しみは悲しみのままそこにある。怒りに変換されない。自己憐憫に転化しない。だからこそ、悲しみが彼を壊さない。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>実存科学はここに新しい構造類型を見出す。「不在のシャドウ（Absent Shadow）」──シャドウが形成される認知条件自体が欠如した構造。</p>
+        <p>「凍結されたシャドウ」がトラウマによる感情機能の停止であるのに対し、ガンプの場合はフィルター自体が最初から存在しない。</p>
+        <p>これは既存の類型（闇の抑圧/ゴールデンシャドウ/凍結/偽装/継承の鎧）のいずれにも該当しない。</p>
+        <p>原作者のグルームは自作の本質を「人間の尊厳についての物語であり、尊厳を保つために賢くも裕福でもある必要はないという事実についての物語だ」と述べた。</p>
+        <p>IQ75というMetaは、尊厳の初期条件を示している。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== 第2章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading fade-in"><span class="chapter-number">Chapter 2</span>ミセス・ガンプの格言──Meta第四層の形成</h2>
+
+      <div class="text-panel fade-in">
+        <p>ガンプのMeta第四層（価値観・信念）は、ほぼ全面的に母親ミセス・ガンプの言葉によって形成された。</p>
+        <p>「人生はチョコレートの箱のようなもの。何が出てくるかわからない」。この台詞の物語上の機能は、格言としての美しさにはない。</p>
+        <p>この一文はガンプの認知構造そのものを規定している──人生に何が来るかは予測不能であり、予測不能であることは恐れる理由にならない、と。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>「Stupid is as stupid does」── 愚かかどうかは行動で決まる。この哲学は、知能を認知から行動へ再定義する。</p>
+        <p>IQ75を「欠落」ではなく「条件」として受け入れ、条件の中でどう動くかだけが問われる。</p>
+        <p>ガンプの入学審査で母が校長に見せた毅然とした態度は、「あなたは誰とも変わらない」という彼女のもう一つの格言と合わせて、ガンプのMetaに「自分は劣った存在ではない」という信念を植え付けた。</p>
+        <p>マレーはこの格言を精密に分析している。ミセス・ガンプが言っているのは「息子が他の人と同じ天賦を持つから同じだ」ということではない。「誰も平等ではない。しかし誰もが、与えられたもので自分の運命を作る可能性を持っている」ということだ。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>臨終の言葉「運命は自分で作るものだと私は思う。神が与えたもので最善を尽くすしかない」── これはガンプにとってMetaの最終層として機能する。</p>
+        <p>しかし注意すべきは、ガンプの実践はこの言葉の枠を超えている。ガンプは「最善を尽くす」のではない。考える前に応答する。</p>
+        <p>ミセス・ガンプの言葉は意志による選択を前提としているが、ガンプの行動様式は意志を経由しない。彼は中動態── 「する」でも「される」でもなく、出来事が彼を通して起きる── の中に生きている。</p>
+        <p>母の言葉はMeta第四層を形成した。しかしガンプの天命は、母の言葉の延長線上にはない。</p>
+        <p>延長線を超えた場所──ジェニーの墓前で「たぶん両方」と語った瞬間──に、初めて彼自身の言葉が生まれた。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== 第3章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading fade-in"><span class="chapter-number">Chapter 3</span>ジェニー──走りの方向が反転した鏡</h2>
+
+      <div class="text-panel fade-in">
+        <p>ジェニー・カランは、ガンプの天命を照射するために存在する鏡である。</p>
+        <p>二人は同じアラバマの土壌から出発した。しかし初期条件が一つだけ違った。ガンプには無条件に愛する母がいた。ジェニーには性的虐待を行う父がいた。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>ジェニーのシャドウは明確だ。幼少期の性的虐待によって、「愛されること」が「傷つくこと」と等号で結ばれた。</p>
+        <p>彼女がガンプを繰り返し拒絶する理由は、まさに彼を愛しているからだ。「あなたは愛が何かわかっていない」── この台詞はガンプへの否定ではない。自分自身の愛の回路が壊れていることの告白である。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>構造的に見れば、二人の関係は走りの方向によって定義される。ガンプは「何かに向かって」走る。ジェニーは「何かから」走る。</p>
+        <p>脚本家ロスはジェニーの姓Curranのラテン語語源currere──「走る」── に意味を込めた。二人とも走者だ。しかしベクトルが逆である。</p>
+        <p>なぜ逆なのか。ガンプは走る理由を問わない。だから走りは純粋な運動として機能し、彼を次の場所へ運ぶ。</p>
+        <p>ジェニーは走る理由を知っている──父から逃げている。理由が明確であるがゆえに、走りは逃走として固定される。そして自分から逃げることはできない。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>ここにMetaの構造的帰結がある。ジェニーのMeta第四層には、父の虐待が刻まれている。その記憶は「愛＝暴力」という等式を形成し、すべての関係を歪曲する。</p>
+        <p>ガンプのMeta第四層には、母の無条件の肯定が刻まれている。その記憶は「存在＝肯定」という等式を形成し、来たものをそのまま受け取る器を作った。</p>
+        <p>同じ痛みの世界に生まれた二人。一人は受容で応答し、一人は逃走で応答した。</p>
+        <p>しかしガンプが受容「できた」のは、彼の「選択」ではない。Metaが──母の愛という初期条件が──彼の応答様式を規定した。M &rArr; &not;F。ガンプの善良さすら、自由意志の産物ではない。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== 第4章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading fade-in"><span class="chapter-number">Chapter 4</span>バッバとダン中尉──死者の夢と三つの哲学</h2>
+
+      <div class="text-panel fade-in">
+        <p>ガンプの人生に現れた二人の男が、映画の哲学的構造を三角形にする。</p>
+        <p>バッバ・ブルー・ジョンソンは、エビ漁の夢を語り、ベトナムで死んだ。「家に帰りたい」が最期の言葉だった。</p>
+        <p>ガンプはバッバとの約束を果たし、バッバ・ガンプ・シュリンプ社を設立し、利益の半分をバッバの家族に渡した。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>これは約束の履行ではない。ガンプは死者の夢を代理実現する装置として機能している。</p>
+        <p>バッバの天命──エビ漁──は、バッバ自身では完遂できなかった。しかしガンプの「来たものを受け取る」という応答が、死者の天命を引き受け、代わりに完遂した。</p>
+        <p>天命の継承──一人の天命が、別の人間を通して実現される構造である。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>ダン・テイラー中尉は、映画の三つの哲学的立場の第二──決定論──を代表する。</p>
+        <p>家族の男性全員が戦死した軍人一族の末裔であり、自分の「運命」は戦場での名誉ある死だと信じていた。</p>
+        <p>ガンプが戦場から彼を引きずり出して救命したとき、ダンの世界観が崩壊した。「俺は部下と一緒にあそこで死ぬはずだった。お前が俺の運命を奪ったんだ」。</p>
+        <p>ダンの怒りは、運命を固定的なものと信じる人間がその軌道から逸脱させられたときの実存的危機だ。</p>
+        <p>嵐の中でエビ漁船のマストに登り、神に向かって叫ぶ場面──これは決定論者が自分の決定論を手放す瞬間である。ダンが和解に至るのは、「運命が定めたものを最善に活かす自由」を受け入れたときだった。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>三つの哲学的立場。ミセス・ガンプは自由意志を信じた。ダンは決定論を信じた。ガンプは「たぶん両方」と言った。</p>
+        <p>実存科学の第一公理──M &rArr; &not;F──から見れば、三つの立場はすべて部分的に正しく、すべて部分的に不完全だ。</p>
+        <p>ミセス・ガンプの「運命は自分で作る」はMetaの存在を無視している。ダンの「運命は決まっている」は応答の可能性を無視している。</p>
+        <p>ガンプの「たぶん両方」だけが、構造の真実に最も近い。偶然がMetaとして状況を提供し、応答が天命としてそれを受け取る。選択ではない。しかし受動でもない。中動態として起きる。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== 第5章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading fade-in"><span class="chapter-number">Chapter 5</span>走ることの構造──中動態としての天命</h2>
+
+      <div class="text-panel fade-in">
+        <p>走りは映画の中心構造である。脚ブレースが砕けて走り出す少年時代は「解放」、フットボールは「機会」、ベトナムは「生存」、アメリカ横断は「喪の処理」、そして停止は「到着」。</p>
+        <p>原作にこのモチーフは存在しない。走りはすべて映画のために発明された。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>ガンプは「ある日、なぜだかわからないが、少し走ることにした」と語る。</p>
+        <p>三つの喪失──ジェニーの離去、母の死、バッバの戦死──が積み重なった地点から彼は走り始めた。三年二ヶ月十四日十六時間。</p>
+        <p>追随者を集め、しかし彼らが投影する意味を一切受け入れなかった。そして「かなり疲れた。家に帰ろうと思う」と言って止まった。</p>
+        <p>この停止にエピファニーはない。悟りもない。走りはガンプにとって、言語化できない内的状態の身体的表出だった。</p>
+        <p>彼はなぜ走るのかを説明できない。説明できないことが走りの本質だ。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>ここに中動態（Middle Voice）が現れる。ガンプは「走ることを選んだ」のではない（能動）。「走らされた」のでもない（受動）。走りが、彼を通して起きた。</p>
+        <p>天命に生きる者の行為は、意志によるものでも強制によるものでもなく、構造によって起きる。</p>
+        <p>ガンプの走りは天命の中動態的表出であり、走りの停止は天命の到着を意味する。</p>
+        <p>「家に帰ろう」── その家にはフォレスト・ジュニアが待っていた。走りの果てに、ガンプは「帰る場所」と「帰ってくる人を待つ場所」の両方を手にした。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>白い羽根が風に乗り、ガンプの足元に落ちる。彼はそれを拾う。羽根がどこに落ちるかは決められない。しかし手が空いていれば、勝手に拾っている。考える前に。</p>
+        <p>偶然がMetaとして状況を提供し、応答が天命としてそれを受け取る。これがガンプの天命の構造だ。選ばなかった。運ばれなかった。応答した。それだけのことだ。そしてそれが、すべてなのだ。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== 結び ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading fade-in"><span class="chapter-number">Conclusion</span>結び</h2>
+
+      <div class="text-panel fade-in">
+        <p>フォレスト・ガンプは壊れなかった。</p>
+        <p>ジェニーは壊れた。ダンは一度壊れ、再建した。バッバは応答する前に死んだ。ガンプだけが壊れなかった。</p>
+        <p>その理由は、鈍感でも強靭でもない。</p>
+        <p>彼のMetaが──IQ75という認知条件と、母の無条件の愛という初期条件が──概念的フィルターの少ない受容器を形成し、来たものをそのまま受け取る構造を作ったからだ。</p>
+        <p>理解を経由せずに直接応答する回路。それが彼の天命の形態だった。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>変えられないものを変えようとしなかった。変えようとしなかったのではなく、「変えようとする」という回路自体が存在しなかった。</p>
+        <p>その不在が、彼を風の中に立たせ続けた。</p>
+        <p>羽根は落ちてくる。どこに落ちるかは誰にも選べない。しかし手が空いていれば、それを受け取ることができる。</p>
+        <p>変えられないMetaを受け入れた先に── 受け入れようとすらしなかった先に── 天命がある。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>ガンプは「手が空いていたから」受け取れた。しかしあなたの手は、何かを握りしめていないだろうか。</p>
+        <p>仕事、実績、正しさ、あるいは「わかっている」という自負。それは防壁かもしれない。あるいは、かつて誰かに傷つけられた記憶を二度と味わわないための、ジェニーと同じ構造の走りかもしれない。</p>
+        <p>ガンプに行った「なぜ？」を、今度はあなたに向けます。あなたが当然だと思い込んでいる前提──それは本当に、あなたが選んだものですか？</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>天命の言語化セッション&trade;は、120分の対話を通じて、あなたのMeta（前提構造）とシャドウ（抑圧された影）を構造化し、天命──あなたが生まれてきた意味──を言語化するセッションです。</p>
+        <p>私は答えを渡しません。問いを渡します。その問いの先に、あなたの天命があります。</p>
+      </div>
+
+    </section>
+
+    <!-- ========== 最終CTA ========== -->
+    <section class="cta-block fade-in">
+      <div class="container">
+        <h2 class="cta-block__title">天命の言語化セッション&trade;</h2>
+        <p class="cta-block__desc">2時間で天命が言語化できる場所。</p>
+        <div class="cta-block__features">
+          <span class="cta-block__feature">Zoom完結</span>
+          <span class="cta-block__feature">事前学習不要</span>
+          <span class="cta-block__feature">対話のみ</span>
+        </div>
+        <a href="../../trial.html" class="btn">無料トライアルに申し込む &rarr;</a>
+      </div>
+    </section>
+
+    <!-- ========== シリーズノート ========== -->
+    <div class="series-note fade-in">
+      <p>本シリーズ「自由意志なき世界の天命論」は、今後も新たな作品・キャラクターを追加していく。<br>
+      漫画のみならず、映画・小説・物語の登場人物を、実存科学の視点で読み解く。</p>
+      <p><a href="../../specials.html">&larr; 特別シリーズ一覧に戻る</a></p>
+    </div>
+
+    <!-- ========== 著者ブロック ========== -->
+    <div class="author-block fade-in">
+      <p><strong>箭内宏紀（やないひろき）</strong><br>
+      実存科学研究所 代表。「天命の言語化セッション&trade;」を提供。「Metaがある限り自由意志は存在しない」（M &rArr; &not;F）を第一公理とする実存科学を提唱。著書に『Metaがある限り──自由意志・自分・他人は存在しない』『自由意志なき世界の歩き方』ほか。<br>
+      <a href="../../index.html">公式サイトはこちら</a>。</p>
+    </div>
+
+    <!-- ========== 出典表記 ========== -->
+    <p class="source-note fade-in">&ast; &nbsp;本稿で扱った作品：ロバート・ゼメキス監督『フォレスト・ガンプ／一期一会』（パラマウント・ピクチャーズ、1994年）、ウィンストン・グルーム著『フォレスト・ガンプ』（Doubleday、1986年）。作品の著作権は原著者・制作会社に帰属します。</p>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+  <div class="container--wide">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <p class="footer-col__title">The Meta</p>
+        <a href="../../about-existential-science.html">実存科学とは</a>
+        <a href="../../epistemology.html">認識論</a>
+        <a href="../../semantics.html">意味論</a>
+        <a href="../../society.html">社会論</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Contents</p>
+        <a href="../../specials.html">特別シリーズ</a>
+        <a href="../../archives.html">記事一覧</a>
+        <a href="../../video-list.html">動画一覧</a>
+        <a href="../../glossary.html">用語集</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Session</p>
+        <a href="../../session.html">天命の言語化セッション&trade;</a>
+        <a href="../../session-flow.html">セッションの流れ</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Institute</p>
+        <a href="../../founder.html">創始者</a>
+        <a href="../../contact.html">お問い合わせ</a>
+        <a href="../../legal/legal-tokushoho.html">特定商取引法</a>
+        <a href="../../legal/legal-privacy-policy.html">プライバシーポリシー</a>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; 実存科学研究所 — Existential Science Institute</p>
+  </div>
+</footer>
+
+  <script src="../../js/main.min.js?v=10"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "フォレスト・ガンプのMeta ── 自由意志なき世界の天命論",
+  "description": "映画『フォレスト・ガンプ』のフォレスト・ガンプを、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。手が空いていたから受け取れた──概念的フィルターの不在が天命の形態になった男の構造。",
+  "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-forrestgump/",
+  "author": {
+    "@type": "Person",
+    "name": "箭内宏紀",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/founder.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  },
+  "datePublished": "2026-03-21",
+  "inLanguage": "ja"
+}
+</script>
+  <!-- Search Modal -->
+  <div class="search-overlay">
+    <div class="search-modal"><button class="search-close" aria-label="閉じる">&times;</button>
+      <div class="search-input-wrap">
+        <span class="search-input-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+        <input type="text" class="search-input" placeholder="キーワードで検索..." autocomplete="off">
+      </div>
+      <div class="search-results"></div>
+      <div class="search-hint"><span class="search-hint__desktop">ESC to close · ⌘K to toggle</span><span class="search-hint__mobile">背景タップまたは ✕ で閉じる</span></div>
+    </div>
+  </div>
+</body>
+</html>
