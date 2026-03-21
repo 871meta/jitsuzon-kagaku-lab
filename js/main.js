@@ -376,4 +376,26 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', toggleBtn, { passive: true });
   })();
 
+  // --- Shimmer Repaint on Font Load ---
+  // Fix: background-clip:text + filter compositing bug on initial paint.
+  // When web fonts arrive via display=swap, the GPU compositing layer
+  // for shimmer text doesn't re-composite properly. Force a repaint.
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(function () {
+      var shimmers = document.querySelectorAll(
+        '.hero h1, .hero__tagline, .hero-title--shimmer, ' +
+        '.cta-block__title, .cta-block__desc, ' +
+        '[class*="gold-shimmer"], [class*="purple-shimmer"]'
+      );
+      if (!shimmers.length) return;
+      shimmers.forEach(function (el) {
+        // Toggle animation to force GPU layer re-composite
+        var anim = el.style.animation;
+        el.style.animation = 'none';
+        void el.offsetHeight; // trigger reflow
+        el.style.animation = anim || '';
+      });
+    });
+  }
+
 });
