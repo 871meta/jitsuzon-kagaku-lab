@@ -1166,6 +1166,8 @@ a.site-logo:not(.btn):not(.session-card__link):hover {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: cta-gold-shimmer 4s ease-in-out infinite;
+  will-change: background-position;
+  backface-visibility: hidden;
   filter: drop-shadow(0 0 16px rgba(192,168,120,0.3)) drop-shadow(0 0 40px rgba(192,168,120,0.12));
 }
 @keyframes cta-gold-shimmer {
@@ -1184,6 +1186,8 @@ a.site-logo:not(.btn):not(.session-card__link):hover {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: cta-purple-shimmer 5s ease-in-out infinite;
+  will-change: background-position;
+  backface-visibility: hidden;
   filter: drop-shadow(0 0 12px rgba(160,130,210,0.25)) drop-shadow(0 0 30px rgba(160,130,210,0.1));
 }
 @keyframes cta-purple-shimmer {
@@ -1296,6 +1300,8 @@ a.site-logo:not(.btn):not(.session-card__link):hover {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gold-shimmer 4s ease-in-out infinite;
+  will-change: background-position;
+  backface-visibility: hidden;
   filter: drop-shadow(0 0 16px rgba(192,168,120,0.3)) drop-shadow(0 0 40px rgba(192,168,120,0.12));
 }
 @keyframes gold-shimmer {
@@ -3319,6 +3325,8 @@ hr {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: article-gold-shimmer 4s ease-in-out infinite;
+  will-change: background-position;
+  backface-visibility: hidden;
   filter: drop-shadow(0 0 16px rgba(192,168,120,0.3)) drop-shadow(0 0 40px rgba(192,168,120,0.12));
 }
 @keyframes article-gold-shimmer {
@@ -3335,6 +3343,8 @@ hr {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: article-purple-shimmer 5s ease-in-out infinite;
+  will-change: background-position;
+  backface-visibility: hidden;
   filter: drop-shadow(0 0 12px rgba(160,130,210,0.25)) drop-shadow(0 0 30px rgba(160,130,210,0.1));
 }
 @keyframes article-purple-shimmer {
@@ -3360,6 +3370,8 @@ hr {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: article-gold-shimmer 4s ease-in-out infinite;
+  will-change: background-position;
+  backface-visibility: hidden;
   filter: drop-shadow(0 0 8px rgba(192,168,120,0.2));
 }
 
