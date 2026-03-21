@@ -41,6 +41,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/about-existential-science.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
 
   <!-- ===== SESSION ===== -->
   <url>
@@ -59,6 +64,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/meta-install.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/uniqueness.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -67,6 +77,18 @@
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/testimonials.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/tenmei-worksheet.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- ===== LP ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/lp.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <!-- ===== SPECIALS ===== -->
@@ -85,17 +107,17 @@
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/archives.html</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/books.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/contents.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/video-list.html</loc>
@@ -243,6 +265,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-golden-shadow-castle.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-mediator-type-profiling.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -318,6 +345,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-shadow-7types.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-shinyuu-guideline.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -352,6 +384,8 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
+  <!-- ===== LETTERS ===== -->
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/letter-hierarchical-separation.html</loc>
     <changefreq>monthly</changefreq>
@@ -541,11 +575,11 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- ===== Series 04: LEON ===== -->
+  <!-- ===== Series: LEON ===== -->
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-leon/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-leon/leon.html</loc>
@@ -563,11 +597,11 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- ===== Series 05: ハウルの動く城 ===== -->
+  <!-- ===== Series: ハウルの動く城 ===== -->
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-howl/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-howl/howl.html</loc>
@@ -580,11 +614,11 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- ===== Series 06: 千と千尋の神隠し ===== -->
+  <!-- ===== Series: 千と千尋の神隠し ===== -->
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-chihiro/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-chihiro/chihiro.html</loc>
@@ -592,11 +626,11 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- ===== Series 07: もののけ姫 ===== -->
+  <!-- ===== Series: もののけ姫 ===== -->
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-mononoke/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-mononoke/ashitaka.html</loc>
@@ -614,11 +648,11 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- ===== Series 08: 天空の城ラピュタ ===== -->
+  <!-- ===== Series: 天空の城ラピュタ ===== -->
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-laputa/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-laputa/pazu.html</loc>
@@ -636,11 +670,11 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- ===== Series 09: ショーシャンクの空に ===== -->
+  <!-- ===== Series: ショーシャンクの空に ===== -->
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-shawshank/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-shawshank/andy.html</loc>
@@ -648,11 +682,11 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- ===== Series 10: 風の谷のナウシカ ===== -->
+  <!-- ===== Series: 風の谷のナウシカ ===== -->
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-nausicaa/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-nausicaa/nausicaa.html</loc>
@@ -660,11 +694,11 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- ===== Series 11: 紅の豚 ===== -->
+  <!-- ===== Series: 紅の豚 ===== -->
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-porco/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-porco/porco.html</loc>
@@ -672,11 +706,11 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- ===== Series 12: ジョーカー ===== -->
+  <!-- ===== Series: ジョーカー ===== -->
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-joker/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-joker/joker.html</loc>
@@ -684,11 +718,11 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- ===== Series 13: インセプション ===== -->
+  <!-- ===== Series: インセプション ===== -->
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-inception/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-inception/inception.html</loc>
@@ -696,11 +730,11 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- ===== Series 14: ファイト・クラブ ===== -->
+  <!-- ===== Series: ファイト・クラブ ===== -->
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-fightclub/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-fightclub/fightclub.html</loc>
@@ -708,11 +742,11 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- ===== Series 15: マトリックス ===== -->
+  <!-- ===== Series: マトリックス ===== -->
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-matrix/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-matrix/matrix.html</loc>
@@ -735,11 +769,11 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- ===== Series 17: ベルセルク ===== -->
+  <!-- ===== Series: ベルセルク ===== -->
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-berserk/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-berserk/guts.html</loc>
@@ -757,11 +791,11 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- ===== Series 16: グッド・ウィル・ハンティング ===== -->
+  <!-- ===== Series: グッド・ウィル・ハンティング ===== -->
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-goodwillhunting/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-goodwillhunting/sean.html</loc>
@@ -772,6 +806,432 @@
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-goodwillhunting/will.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+
+  <!-- ===== SPECIALS: AKIRA ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/akira-kaneda-meta.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/akira-tetsuo-meta.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===== SPECIALS: House of Cards ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/hoc-frank-underwood-meta.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/hoc-claire-underwood-meta.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/hoc-doug-stamper-meta.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===== SPECIALS: The Truman Show ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/truman-burbank-meta.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===== Series: Bohemian Rhapsody ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-bohemianrhapsody/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-bohemianrhapsody/freddie.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===== Series: カリオストロの城 ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-cagliostro/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-cagliostro/lupin.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-cagliostro/jigen.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-cagliostro/goemon.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===== Series: Peaky Blinders ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-peakyblinders/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-peakyblinders/tommy.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===== Series: Scarface ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-scarface/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-scarface/tony.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===== Series: SUITS ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-suits/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-suits/harvey.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-suits/mike.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-suits/donna.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===== Series: Training Day ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-trainingday/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-trainingday/jake.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-trainingday/alonzo.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===== Series: 8 Mile ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-8mile/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ===== Series: DEATH NOTE ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-deathnote/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-deathnote/light.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-deathnote/l.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-deathnote/ryuk.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===== Series: 新世紀エヴァンゲリオン ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-evangelion/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-evangelion/shinji.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-evangelion/rei.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-evangelion/asuka.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-evangelion/gendo.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===== Series: フォレスト・ガンプ ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-forrestgump/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ===== Series: 鋼の錬金術師 ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-fullmetalalchemist/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-fullmetalalchemist/edward.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-fullmetalalchemist/alphonse.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-fullmetalalchemist/hohenheim.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===== Series: まどか☆マギカ ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-madokamagica/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-madokamagica/madoka.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-madokamagica/homura.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===== Series: 約束のネバーランド ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-neverland/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-neverland/emma.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-neverland/norman.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-neverland/ray.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===== Series: ONE PIECE ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-onepiece/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-onepiece/luffy.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-onepiece/zoro.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-onepiece/nami.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-onepiece/usopp.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-onepiece/sanji.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-onepiece/chopper.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-onepiece/robin.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-onepiece/franky.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-onepiece/brook.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-onepiece/jinbe.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===== Series: パルプ・フィクション ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-pulpfiction/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-pulpfiction/jules.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-pulpfiction/vincent.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===== Series: るろうに剣心 ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-rurounikenshin/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-rurounikenshin/kenshin.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-rurounikenshin/shishio.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===== Series: 進撃の巨人 ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-shingeki/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-shingeki/eren.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-shingeki/mikasa.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-shingeki/armin.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-shingeki/levi.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-shingeki/erwin.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-shingeki/hange.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===== Series: SLAM DUNK ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-slamdunk/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-slamdunk/sakuragi.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-slamdunk/rukawa.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-slamdunk/akagi.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-slamdunk/mitsui.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===== Series: 闇金ウシジマくん ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-ushijimakun/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ===== Series: ウルフ・オブ・ウォールストリート ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-wolfofwallstreet/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <!-- ===== VIDEOS ===== -->
@@ -804,205 +1264,6 @@
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/videos/video-tenmei-no-honshitsu.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-
-
-  <!-- ===== NEW PAGES (2025-03-12) ===== -->
-  <url>
-    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/lp.html</loc>
-    <lastmod>2025-03-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- ===== SPECIALS: AKIRA ===== -->
-  <url>
-    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/akira-kaneda-meta.html</loc>
-    <lastmod>2025-03-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/akira-tetsuo-meta.html</loc>
-    <lastmod>2025-03-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- ===== COLUMNS (new) ===== -->
-  <url>
-    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-golden-shadow-castle.html</loc>
-    <lastmod>2025-03-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-shadow-7types.html</loc>
-    <lastmod>2025-03-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- ===== SPECIALS: House of Cards ===== -->
-  <url>
-    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/hoc-claire-underwood-meta.html</loc>
-    <lastmod>2025-03-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/hoc-doug-stamper-meta.html</loc>
-    <lastmod>2025-03-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/hoc-frank-underwood-meta.html</loc>
-    <lastmod>2025-03-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- ===== SPECIALS: The Truman Show ===== -->
-  <url>
-    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/truman-burbank-meta.html</loc>
-    <lastmod>2025-03-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- ===== NEW ROOT PAGES (2026-03-15) ===== -->
-  <url>
-    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/about-existential-science.html</loc>
-    <lastmod>2026-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/meta-install.html</loc>
-    <lastmod>2026-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/tenmei-worksheet.html</loc>
-    <lastmod>2026-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <!-- ===== Series: Bohemian Rhapsody (2026-03-15) ===== -->
-  <url>
-    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-bohemianrhapsody/index.html</loc>
-    <lastmod>2026-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-bohemianrhapsody/freddie.html</loc>
-    <lastmod>2026-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- ===== Series: カリオストロの城 (2026-03-15) ===== -->
-  <url>
-    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-cagliostro/index.html</loc>
-    <lastmod>2026-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-cagliostro/goemon.html</loc>
-    <lastmod>2026-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-cagliostro/jigen.html</loc>
-    <lastmod>2026-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-cagliostro/lupin.html</loc>
-    <lastmod>2026-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- ===== Series: Peaky Blinders (2026-03-15) ===== -->
-  <url>
-    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-peakyblinders/index.html</loc>
-    <lastmod>2026-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-peakyblinders/tommy.html</loc>
-    <lastmod>2026-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- ===== Series: Scarface (2026-03-15) ===== -->
-  <url>
-    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-scarface/index.html</loc>
-    <lastmod>2026-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-scarface/tony.html</loc>
-    <lastmod>2026-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- ===== Series: SUITS (2026-03-15) ===== -->
-  <url>
-    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-suits/index.html</loc>
-    <lastmod>2026-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-suits/donna.html</loc>
-    <lastmod>2026-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-suits/harvey.html</loc>
-    <lastmod>2026-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-suits/mike.html</loc>
-    <lastmod>2026-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- ===== Series: Training Day (2026-03-15) ===== -->
-  <url>
-    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-trainingday/index.html</loc>
-    <lastmod>2026-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-trainingday/jake.html</loc>
-    <lastmod>2026-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-trainingday/alonzo.html</loc>
-    <lastmod>2026-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
 
 </urlset>
