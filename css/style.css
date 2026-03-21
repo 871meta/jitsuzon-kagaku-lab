@@ -317,6 +317,10 @@ strong {
   border-bottom: none;
   white-space: nowrap;
   color: var(--color-text-primary);
+  padding: 0.5rem 0;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .site-logo:hover {
@@ -1451,7 +1455,7 @@ a.site-logo:not(.btn):not(.session-card__link):hover {
 .footer-col a {
   display: block;
   font-size: var(--fs-small);
-  color: var(--color-text-faint);
+  color: var(--color-text-dim);
   border-bottom: none;
   margin-bottom: 0.35rem;
   padding: 0.35rem 0;
@@ -1465,7 +1469,7 @@ a.site-logo:not(.btn):not(.session-card__link):hover {
 }
 /* Defensive: protect footer links from inline overrides (0,3,1 > 0,2,1) */
 .footer-col a:not(.btn):not(.session-card__link) {
-  color: var(--color-text-faint);
+  color: var(--color-text-dim);
   border-bottom: none;
 }
 .footer-col a:not(.btn):not(.session-card__link):hover {
@@ -1477,7 +1481,7 @@ a.site-logo:not(.btn):not(.session-card__link):hover {
   font-family: var(--font-serif-en);
   font-size: var(--fs-xs);
   letter-spacing: 0.18em;
-  color: var(--color-gold-a40);
+  color: var(--color-gold-a60);
   padding-top: 2.5rem;
   border-top: 1px solid var(--color-gold-a08);
 }
@@ -3536,5 +3540,43 @@ hr {
   }
   .article-page .page-header h1 {
     font-size: 1.1rem;
+  }
+}
+
+/* --- Back to Top Button --- */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(15, 12, 25, 0.85);
+  border: 1px solid var(--color-gold-a25);
+  color: var(--color-gold);
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, background 0.3s ease;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+.back-to-top:hover {
+  background: rgba(192, 168, 120, 0.15);
+  border-color: var(--color-gold-a40);
+}
+@media (max-width: 600px) {
+  .back-to-top {
+    bottom: 1.2rem;
+    right: 1.2rem;
   }
 }

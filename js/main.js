@@ -10,11 +10,17 @@ document.addEventListener('DOMContentLoaded', function () {
   const nav = document.querySelector('.global-nav');
 
   if (toggle && nav) {
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-controls', 'global-nav');
+    nav.id = nav.id || 'global-nav';
+
     toggle.addEventListener('click', function () {
-      toggle.classList.toggle('is-open');
+      var isOpen = toggle.classList.toggle('is-open');
       nav.classList.toggle('is-open');
       document.documentElement.classList.toggle('nav-is-open');
       document.body.classList.toggle('nav-is-open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      toggle.setAttribute('aria-label', isOpen ? 'メニューを閉じる' : 'メニューを開く');
     });
 
     // Close nav when a link is clicked
@@ -24,6 +30,8 @@ document.addEventListener('DOMContentLoaded', function () {
         nav.classList.remove('is-open');
         document.documentElement.classList.remove('nav-is-open');
         document.body.classList.remove('nav-is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'メニューを開く');
       });
     });
   }
@@ -186,8 +194,13 @@ document.addEventListener('DOMContentLoaded', function () {
     var basePath = '';
     for (var i = 0; i < depth; i++) basePath += '../';
 
+    searchOverlay.setAttribute('aria-hidden', 'true');
+    searchOverlay.setAttribute('role', 'dialog');
+    searchOverlay.setAttribute('aria-label', '検索');
+
     function openSearch() {
       searchOverlay.classList.add('is-open');
+      searchOverlay.setAttribute('aria-hidden', 'false');
       setTimeout(function () { searchInput.focus(); }, 100);
       // Lazy load index
       if (!searchIndex) {
@@ -200,6 +213,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function closeSearch() {
       searchOverlay.classList.remove('is-open');
+      searchOverlay.setAttribute('aria-hidden', 'true');
       searchInput.value = '';
       searchResults.innerHTML = '';
     }
@@ -335,6 +349,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.addEventListener('scroll', update, { passive: true });
     update();
+  })();
+
+  // --- Back to Top Button ---
+  (function () {
+    var btn = document.createElement('button');
+    btn.className = 'back-to-top';
+    btn.setAttribute('aria-label', 'ページの先頭に戻る');
+    btn.innerHTML = '&#9650;';
+    document.body.appendChild(btn);
+
+    var scrollThreshold = 800;
+
+    function toggleBtn() {
+      if (window.scrollY > scrollThreshold) {
+        btn.classList.add('is-visible');
+      } else {
+        btn.classList.remove('is-visible');
+      }
+    }
+
+    btn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    window.addEventListener('scroll', toggleBtn, { passive: true });
   })();
 
 });
