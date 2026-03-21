@@ -140,6 +140,7 @@ hr::after {
   margin: 2em 0;
   font-size: var(--fs-small);
   letter-spacing: 0.15em;
+}
 .session-dialogue .silence::before,
 .session-dialogue .silence::after {
   content: "";
@@ -223,10 +224,12 @@ h3.section-heading {
   position: relative;
   padding-bottom: 0.8rem;
   border-bottom: 1px solid rgba(192,168,120,0.04);
+}
 .profiling-block ul li:last-child {
   border-bottom: none;
   margin-bottom: 0;
   padding-bottom: 0;
+}
 .profiling-block ul li::before {
   content: "\2500\2500";
   position: absolute;
@@ -234,6 +237,16 @@ h3.section-heading {
   top: 0;
   color: rgba(192,168,120,0.35);
   font-size: 0.75em;
+}
+.profiling-block p {
+  color: var(--color-text-reading);
+  font-size: var(--fs-body);
+  line-height: 1.9;
+  margin-bottom: 1rem;
+}
+.profiling-block p:last-child {
+  margin-bottom: 0;
+}
 
 /* === Comparison Table === */
 
