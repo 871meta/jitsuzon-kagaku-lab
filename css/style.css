@@ -3745,7 +3745,7 @@ hr {
   max-width: 680px;
   margin: 2.5rem auto;
   padding: 2.5rem 2rem;
-  background: rgba(10, 8, 18, 0.35);
+  background: rgba(10, 8, 18, 0.85);
   border: 1px solid rgba(192, 168, 120, 0.08);
   border-radius: 2px;
   position: relative;
@@ -3783,7 +3783,7 @@ hr {
 }
 /* 沈黙マーカー */
 .session-dialogue .silence {
-  color: rgba(235, 232, 225, 0.3);
+  color: rgba(235, 232, 225, 0.45);
   font-style: italic;
   text-align: center;
   margin: 2em 0;
