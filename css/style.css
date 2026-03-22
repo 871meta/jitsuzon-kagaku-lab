@@ -716,7 +716,6 @@ a.site-logo:not(.btn):not(.session-card__link):hover {
   margin-bottom: 0.3rem;
   letter-spacing: 0.08em;
   color: var(--color-text-primary);
-  text-shadow: 0 0 40px var(--color-gold-a10), 0 0 80px var(--color-gold-a05);
 }
 
 .page-hero__sub {
@@ -1160,7 +1159,7 @@ a.site-logo:not(.btn):not(.session-card__link):hover {
   font-weight: 300;
   margin-bottom: 1.5rem;
   letter-spacing: 0.12em;
-  background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
+  background: linear-gradient(90deg, #d4b878 0%, #d4b878 35%, #fff4d8 50%, #d4b878 65%, #d4b878 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -1169,7 +1168,6 @@ a.site-logo:not(.btn):not(.session-card__link):hover {
   will-change: background-position;
   backface-visibility: hidden;
   transform: translateZ(0);
-  text-shadow: 0 0 40px rgba(192,168,120,0.25), 0 0 80px rgba(192,168,120,0.1);
 }
 @keyframes cta-gold-shimmer {
   0%, 100% { background-position: 100% 50%; }
@@ -1296,7 +1294,7 @@ a.site-logo:not(.btn):not(.session-card__link):hover {
 
 /* --- Hero Title Gold Shimmer --- */
 .hero-title--shimmer {
-  background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
+  background: linear-gradient(90deg, #d4b878 0%, #d4b878 35%, #fff4d8 50%, #d4b878 65%, #d4b878 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -1305,7 +1303,6 @@ a.site-logo:not(.btn):not(.session-card__link):hover {
   will-change: background-position;
   backface-visibility: hidden;
   transform: translateZ(0);
-  text-shadow: 0 0 40px rgba(192,168,120,0.25), 0 0 80px rgba(192,168,120,0.1);
 }
 @keyframes gold-shimmer {
   0%, 100% { background-position: 100% 50%; }
@@ -3322,7 +3319,7 @@ hr {
   line-height: 1.6;
   letter-spacing: 0.04em;
   margin-bottom: 0.3rem;
-  background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
+  background: linear-gradient(90deg, #d4b878 0%, #d4b878 35%, #fff4d8 50%, #d4b878 65%, #d4b878 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -3331,7 +3328,6 @@ hr {
   will-change: background-position;
   backface-visibility: hidden;
   transform: translateZ(0);
-  text-shadow: 0 0 40px rgba(192,168,120,0.25), 0 0 80px rgba(192,168,120,0.1);
 }
 @keyframes article-gold-shimmer {
   0%, 100% { background-position: 100% 50%; }
@@ -3369,7 +3365,7 @@ hr {
   padding-bottom: 0.6rem;
   line-height: 1.6;
   border-bottom: 2px solid var(--color-gold-a40);
-  background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
+  background: linear-gradient(90deg, #d4b878 0%, #d4b878 35%, #fff4d8 50%, #d4b878 65%, #d4b878 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -3378,7 +3374,6 @@ hr {
   will-change: background-position;
   backface-visibility: hidden;
   transform: translateZ(0);
-  text-shadow: 0 0 30px rgba(192,168,120,0.2), 0 0 60px rgba(192,168,120,0.08);
 }
 
 /* ── Body Text ── */
