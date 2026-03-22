@@ -1356,16 +1356,24 @@ a.site-logo:not(.btn):not(.session-card__link):hover {
 
 /* --- Hero Title Gold Shimmer --- */
 .hero-title--shimmer {
+  position: relative;
   background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gold-shimmer 4s ease-in-out infinite;
-  filter: drop-shadow(0 0 16px rgba(192,168,120,0.3)) drop-shadow(0 0 40px rgba(192,168,120,0.12));
   will-change: background-position;
   backface-visibility: hidden;
   transform: translateZ(0);
+}
+.hero-title--shimmer::after {
+  content: "";
+  position: absolute;
+  inset: -8px -16px;
+  background: radial-gradient(ellipse at center, rgba(192,168,120,0.18) 0%, transparent 70%);
+  z-index: -1;
+  pointer-events: none;
 }
 @keyframes gold-shimmer {
   0%, 100% { background-position: 100% 50%; }

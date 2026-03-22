@@ -28,7 +28,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"></noscript>
-  <link rel="stylesheet" href="css/style.min.css?v=38">
+  <link rel="stylesheet" href="css/style.min.css?v=39">
   <style>
     /* ── Specials: 導入カード ── */
     .sp-intro {
@@ -154,6 +154,7 @@
       letter-spacing: 0.03em;
     }
     .sp-card__title .sp-card__work {
+      position: relative;
       background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
       background-size: 200% 100%;
       -webkit-background-clip: text; background-clip: text;
@@ -161,7 +162,6 @@
       animation: sp-gold-shimmer 4s ease-in-out infinite;
       will-change: background-position;
       backface-visibility: hidden;
-      filter: drop-shadow(0 0 16px rgba(192,168,120,0.3)) drop-shadow(0 0 40px rgba(192,168,120,0.12));
     }
     .sp-card p {
       font-size: var(--fs-body);
