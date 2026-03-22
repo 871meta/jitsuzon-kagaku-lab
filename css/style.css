@@ -3886,13 +3886,8 @@ hr {
 /* ============================================
    Performance: content-visibility
    ============================================ */
-.text-panel,
-.def-box,
-.highlight-block,
-.profiling-block,
-.session-dialogue,
 .cta-block,
 .site-footer {
   content-visibility: auto;
-  contain-intrinsic-size: auto 500px;
+  contain-intrinsic-size: auto 300px;
 }

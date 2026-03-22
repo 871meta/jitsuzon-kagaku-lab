@@ -341,11 +341,10 @@ document.addEventListener('DOMContentLoaded', function () {
     if (tocLinks.length > 1) {
       var currentActive = null;
       window.addEventListener('scroll', function () {
-        var scrollPos = window.scrollY + 120;
         var active = null;
         for (var i = tocLinks.length - 1; i >= 0; i--) {
           var el = document.getElementById(tocLinks[i].id);
-          if (el && el.offsetTop <= scrollPos) {
+          if (el && el.getBoundingClientRect().top <= 130) {
             active = i;
             break;
           }
