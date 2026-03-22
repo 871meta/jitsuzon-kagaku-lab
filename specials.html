@@ -57,104 +57,47 @@
     }
     .sp-intro p:last-child { margin-bottom: 0; }
 
-    /* ── Specials: Quick Index（高級ガラスカード） ── */
-    .sp-index {
-      background: linear-gradient(160deg, rgba(15,12,25,0.78) 0%, rgba(8,6,16,0.92) 100%);
-      border: 1px solid var(--color-gold-a10);
-      border-radius: 4px;
-      padding: 2.5rem 2.5rem;
-      margin-bottom: 3rem;
-      position: relative;
-      overflow: hidden;
-      backdrop-filter: blur(12px);
-      box-shadow: 0 2px 32px var(--color-gold-a04), inset 0 1px 0 var(--color-gold-a08);
+    /* ── Specials: シリーズリスト ── */
+    .sp-list {
+      margin-top: 2.5rem;
     }
-    .sp-index::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, var(--color-gold-a50), var(--color-gold-a20), transparent 70%);
-    }
-    .sp-index__title {
-      font-family: var(--font-serif-en);
-      font-size: var(--fs-xs);
-      font-weight: 400;
-      letter-spacing: 0.35em;
-      text-transform: uppercase;
-      margin-bottom: 1.5rem;
-      background: linear-gradient(90deg, #b8a0d8 0%, #b8a0d8 40%, #e0d0f0 50%, #b8a0d8 60%, #b8a0d8 100%);
-      background-size: 200% 100%;
-      -webkit-background-clip: text; background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: sp-purple-shimmer 5s ease-in-out infinite;
-      will-change: background-position;
-      backface-visibility: hidden;
-      text-shadow: 0 0 30px rgba(160,130,210,0.2), 0 0 60px rgba(160,130,210,0.08);
-    }
-    .sp-index__category {
+    .sp-list__category {
       font-family: var(--font-serif-short);
       font-size: var(--fs-small);
       font-weight: 600;
       color: var(--color-gold);
-      margin: 1.4rem 0 0.5rem;
-      padding-left: 0;
+      letter-spacing: 0.08em;
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid rgba(192,168,120,0.15);
     }
-    .sp-index__category:first-of-type { margin-top: 0; }
-    .sp-index__list {
+    .sp-list__category:first-of-type { margin-top: 0; }
+    .sp-list__items {
       list-style: none;
       padding: 0;
-      margin: 0 0 0 0.5rem;
+      margin: 0;
     }
-    .sp-index__list li { margin-bottom: 0.4rem; }
-    .sp-index__list a {
-      font-family: var(--font-serif-short);
-      font-size: var(--fs-small);
-      color: var(--color-text-body);
-      text-decoration: none;
-      opacity: 0.8;
-      transition: opacity 0.2s, color 0.2s;
+    .sp-list__item {
+      border-bottom: 1px solid rgba(192,168,120,0.06);
     }
-    .sp-index__list a:hover {
-      opacity: 1;
-      color: var(--color-gold);
-    }
-
-    /* ── Specials: 作品カード ── */
-    .sp-card {
-      background: linear-gradient(160deg, rgba(15,12,25,0.75) 0%, rgba(8,6,16,0.92) 100%);
-      border: 1px solid var(--color-gold-a10);
-      border-radius: 4px;
-      padding: 2.5rem 2.5rem;
-      margin-bottom: 1.5rem;
-      position: relative;
-      overflow: hidden;
-      backdrop-filter: blur(12px);
-      box-shadow: 0 2px 32px var(--color-gold-a04), inset 0 1px 0 var(--color-gold-a08);
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    }
-    .sp-card::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, var(--color-gold-a50), var(--color-gold-a20), transparent 70%);
-    }
-    .sp-card:hover {
-      border-color: var(--color-gold-a20);
-      box-shadow: 0 4px 40px var(--color-gold-a06), inset 0 1px 0 var(--color-gold-a08);
-    }
-    .sp-card__title {
-      font-family: var(--font-serif-short);
-      font-weight: 600;
-      color: var(--color-text-primary);
-      line-height: 1.6;
-      margin-bottom: 1rem;
-      letter-spacing: 0.03em;
-    }
-    .sp-card__title .sp-card__work {
+    .sp-list__item:last-child { border-bottom: none; }
+    .sp-list__link {
       display: block;
-      font-size: var(--fs-h2);
+      padding: 1.2rem 0;
+      text-decoration: none;
+      transition: padding-left 0.3s ease, background 0.3s ease;
+      border-radius: 2px;
+    }
+    .sp-list__link:hover {
+      padding-left: 0.8rem;
+      background: rgba(192,168,120,0.04);
+    }
+    .sp-list__work {
+      display: block;
+      font-family: var(--font-serif-short);
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
       background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
       background-size: 200% 100%;
       -webkit-background-clip: text; background-clip: text;
@@ -163,14 +106,15 @@
       will-change: background-position;
       backface-visibility: hidden;
       transform: translateZ(0);
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.15rem;
     }
-    .sp-card__title .sp-card__sub {
+    .sp-list__sub {
       display: block;
-      font-size: 0.92rem;
+      font-family: var(--font-serif-short);
+      font-size: 0.85rem;
       font-weight: 500;
       letter-spacing: 0.02em;
-      line-height: 1.7;
+      line-height: 1.6;
       background: linear-gradient(90deg, #b8a0d8 0%, #b8a0d8 40%, #e0d0f0 50%, #b8a0d8 60%, #b8a0d8 100%);
       background-size: 200% 100%;
       -webkit-background-clip: text; background-clip: text;
@@ -180,15 +124,6 @@
       backface-visibility: hidden;
       transform: translateZ(0);
     }
-    .sp-card p {
-      font-size: var(--fs-body);
-      line-height: 2.2;
-      color: var(--color-text-reading);
-    }
-    .sp-card p:last-of-type { margin-bottom: 0; }
-    .sp-card .link-list { margin-bottom: 0; }
-    .sp-card .link-list li { margin-bottom: 0.5rem; }
-    .sp-card .link-list li:last-child { margin-bottom: 0; }
 
     /* ── Animations ── */
     @keyframes sp-gold-shimmer {
@@ -202,9 +137,10 @@
 
     /* ── Mobile ── */
     @media (max-width: 768px) {
-      .sp-intro, .sp-index, .sp-card { padding: 2rem 1.5rem; }
-      .sp-card__title .sp-card__work { font-size: var(--fs-body); }
-      .sp-card__title .sp-card__sub { font-size: 0.82rem; }
+      .sp-intro { padding: 2rem 1.5rem; }
+      .sp-list__work { font-size: 1.05rem; }
+      .sp-list__sub { font-size: 0.78rem; }
+      .sp-list__link { padding: 1rem 0; }
     }
   </style>
 <script type="application/ld+json">
@@ -280,483 +216,65 @@
         それが「特別シリーズ」である。</p>
       </div>
 
-      <!-- Quick Index -->
-      <div class="sp-index fade-in">
-        <p class="sp-index__title">Index</p>
+      <!-- Series List -->
+      <div class="sp-list fade-in">
 
-        <p class="sp-index__category">&#9670; アニメ映画</p>
-        <ul class="sp-index__list">
-          <li><a href="#cagliostro">ルパン三世 カリオストロの城（1979）</a></li>
-          <li><a href="#nausicaa">風の谷のナウシカ（1984）</a></li>
-          <li><a href="#laputa">天空の城ラピュタ（1986）</a></li>
-          <li><a href="#porco">紅の豚（1992）</a></li>
-          <li><a href="#evangelion">新世紀エヴァンゲリオン（1995）</a></li>
-          <li><a href="#mononoke">もののけ姫（1997）</a></li>
-          <li><a href="#chihiro">千と千尋の神隠し（2001）</a></li>
-          <li><a href="#howl">ハウルの動く城（2004）</a></li>
-          <li><a href="#madokamagica">魔法少女まどか☆マギカ（2011）</a></li>
+        <p class="sp-list__category">アニメ映画</p>
+        <ul class="sp-list__items">
+          <li class="sp-list__item"><a href="articles/tenmei-cagliostro/index.html" class="sp-list__link"><span class="sp-list__work">ルパン三世 カリオストロの城</span><span class="sp-list__sub">── 世界で最も自由な男が、世界で最も不自由な泥棒だった</span></a></li>
+          <li class="sp-list__item"><a href="articles/tenmei-nausicaa/index.html" class="sp-list__link"><span class="sp-list__work">風の谷のナウシカ</span><span class="sp-list__sub">── 光と闇を同時に通す者だけが、橋になれる</span></a></li>
+          <li class="sp-list__item"><a href="articles/tenmei-laputa/index.html" class="sp-list__link"><span class="sp-list__work">天空の城ラピュタ</span><span class="sp-list__sub">── 握り締めた天命は崩壊し、手放した天命は到達する</span></a></li>
+          <li class="sp-list__item"><a href="articles/tenmei-porco/index.html" class="sp-list__link"><span class="sp-list__work">紅の豚</span><span class="sp-list__sub">── 変わることと変わらないことの間を漂い続ける男</span></a></li>
+          <li class="sp-list__item"><a href="articles/tenmei-evangelion/index.html" class="sp-list__link"><span class="sp-list__work">新世紀エヴァンゲリオン</span><span class="sp-list__sub">── 切り捨てたものの中に、天命がある</span></a></li>
+          <li class="sp-list__item"><a href="articles/tenmei-mononoke/index.html" class="sp-list__link"><span class="sp-list__work">もののけ姫</span><span class="sp-list__sub">── 天命は善悪を問わない。収束するだけだ</span></a></li>
+          <li class="sp-list__item"><a href="articles/tenmei-chihiro/index.html" class="sp-list__link"><span class="sp-list__work">千と千尋の神隠し</span><span class="sp-list__sub">── 成長は記憶を必要としない</span></a></li>
+          <li class="sp-list__item"><a href="articles/tenmei-howl/index.html" class="sp-list__link"><span class="sp-list__work">ハウルの動く城</span><span class="sp-list__sub">── ある天命は、一人では到達できない</span></a></li>
+          <li class="sp-list__item"><a href="articles/tenmei-madokamagica/index.html" class="sp-list__link"><span class="sp-list__work">魔法少女まどか☆マギカ</span><span class="sp-list__sub">── 祈りと絶望の構造</span></a></li>
         </ul>
 
-        <p class="sp-index__category">&#9670; 実写映画</p>
-        <ul class="sp-index__list">
-          <li><a href="#godfather">ゴッドファーザー（1972）</a></li>
-          <li><a href="#scarface">スカーフェイス（1983）</a></li>
-          <li><a href="#leon">レオン（1994）</a></li>
-          <li><a href="#pulpfiction">パルプ・フィクション（1994）</a></li>
-          <li><a href="#forrestgump">フォレスト・ガンプ（1994）</a></li>
-          <li><a href="#shawshank">ショーシャンクの空に（1994）</a></li>
-          <li><a href="#gwh">グッド・ウィル・ハンティング（1997）</a></li>
-          <li><a href="#trumanshow">トゥルーマン・ショー（1998）</a></li>
-          <li><a href="#fightclub">ファイト・クラブ（1999）</a></li>
-          <li><a href="#matrix">マトリックス（1999）</a></li>
-          <li><a href="#trainingday">トレーニング デイ（2001）</a></li>
-          <li><a href="#wolfofwallstreet">ウルフ・オブ・ウォールストリート（2013）</a></li>
-          <li><a href="#8mile">8マイル（2002）</a></li>
-          <li><a href="#inception">インセプション（2010）</a></li>
-          <li><a href="#bohemianrhapsody">ボヘミアン・ラプソディ（2018）</a></li>
-          <li><a href="#joker">ジョーカー（2019）</a></li>
+        <p class="sp-list__category">実写映画</p>
+        <ul class="sp-list__items">
+          <li class="sp-list__item"><a href="articles/tenmei-godfather/index.html" class="sp-list__link"><span class="sp-list__work">ゴッドファーザー</span><span class="sp-list__sub">── 天命に到達しなかった男が、天命を最も鮮烈に照らす</span></a></li>
+          <li class="sp-list__item"><a href="articles/tenmei-scarface/index.html" class="sp-list__link"><span class="sp-list__work">スカーフェイス</span><span class="sp-list__sub">── 噴水に浮かぶ男が残した、たった一つの出力</span></a></li>
+          <li class="sp-list__item"><a href="articles/tenmei-leon/index.html" class="sp-list__link"><span class="sp-list__work">レオン</span><span class="sp-list__sub">── 凍結された男が、少女によって溶かされるとき</span></a></li>
+          <li class="sp-list__item"><a href="articles/tenmei-pulpfiction/index.html" class="sp-list__link"><span class="sp-list__work">パルプ・フィクション</span><span class="sp-list__sub">── 義人の鎧を脱いだ男は、裸のまま羊飼いになろうとした</span></a></li>
+          <li class="sp-list__item"><a href="articles/tenmei-forrestgump/index.html" class="sp-list__link"><span class="sp-list__work">フォレスト・ガンプ</span><span class="sp-list__sub">── 手が空いていたから、受け取れた</span></a></li>
+          <li class="sp-list__item"><a href="articles/tenmei-shawshank/index.html" class="sp-list__link"><span class="sp-list__work">ショーシャンクの空に</span><span class="sp-list__sub">── 希望とは選択ではなく、構造的必然である</span></a></li>
+          <li class="sp-list__item"><a href="articles/tenmei-goodwillhunting/index.html" class="sp-list__link"><span class="sp-list__work">グッド・ウィル・ハンティング</span><span class="sp-list__sub">── 知性という鎧を脱ぐ勇気</span></a></li>
+          <li class="sp-list__item"><a href="articles/truman-burbank-meta.html" class="sp-list__link"><span class="sp-list__work">トゥルーマン・ショー</span><span class="sp-list__sub">── 何もない場所に、自分の足で立つこと</span></a></li>
+          <li class="sp-list__item"><a href="articles/tenmei-fightclub/index.html" class="sp-list__link"><span class="sp-list__work">ファイト・クラブ</span><span class="sp-list__sub">── コピーではない人生の始まり</span></a></li>
+          <li class="sp-list__item"><a href="articles/tenmei-matrix/index.html" class="sp-list__link"><span class="sp-list__work">マトリックス</span><span class="sp-list__sub">── 心の棘だけが本物だった</span></a></li>
+          <li class="sp-list__item"><a href="articles/tenmei-trainingday/index.html" class="sp-list__link"><span class="sp-list__work">トレーニング デイ</span><span class="sp-list__sub">── 計算の外にあるものが、計算を壊す</span></a></li>
+          <li class="sp-list__item"><a href="articles/tenmei-8mile/index.html" class="sp-list__link"><span class="sp-list__work">8マイル</span><span class="sp-list__sub">── 恥を武器に変換した男</span></a></li>
+          <li class="sp-list__item"><a href="articles/tenmei-inception/index.html" class="sp-list__link"><span class="sp-list__work">インセプション</span><span class="sp-list__sub">── 確認をやめたとき、子供たちの顔がある</span></a></li>
+          <li class="sp-list__item"><a href="articles/tenmei-wolfofwallstreet/index.html" class="sp-list__link"><span class="sp-list__work">ウルフ・オブ・ウォールストリート</span><span class="sp-list__sub">── 売り続けた男は、透明になることを恐れていた</span></a></li>
+          <li class="sp-list__item"><a href="articles/tenmei-bohemianrhapsody/index.html" class="sp-list__link"><span class="sp-list__work">ボヘミアン・ラプソディ</span><span class="sp-list__sub">── 穴を隠さずに、穴ごと歌った</span></a></li>
+          <li class="sp-list__item"><a href="articles/tenmei-joker/index.html" class="sp-list__link"><span class="sp-list__work">ジョーカー</span><span class="sp-list__sub">── 天命の到達には、構造的条件がある</span></a></li>
         </ul>
 
-        <p class="sp-index__category">&#9670; 漫画</p>
-        <ul class="sp-index__list">
-          <li><a href="#akira">AKIRA（1982）</a></li>
-          <li><a href="#slamdunk">SLAM DUNK（1990）</a></li>
-          <li><a href="#baki">刃牙シリーズ（1991）</a></li>
-          <li><a href="#berserk">ベルセルク（1989）</a></li>
-          <li><a href="#shingeki">進撃の巨人（2009）</a></li>
-          <li><a href="#fullmetalalchemist">鋼の錬金術師（2001）</a></li>
-          <li><a href="#rurounikenshin">るろうに剣心（1994）</a></li>
-          <li><a href="#onepiece">ONE PIECE（1997）</a></li>
-          <li><a href="#deathnote">DEATH NOTE（2003）</a></li>
-          <li><a href="#neverland">約束のネバーランド（2016）</a></li>
-          <li><a href="#ushijimakun">闇金ウシジマくん（2004）</a></li>
+        <p class="sp-list__category">漫画</p>
+        <ul class="sp-list__items">
+          <li class="sp-list__item"><a href="articles/akira-kaneda-meta.html" class="sp-list__link"><span class="sp-list__work">AKIRA</span><span class="sp-list__sub">── 保護者の盾と力の檻のあいだで、天命が立つ</span></a></li>
+          <li class="sp-list__item"><a href="articles/tenmei-slamdunk/index.html" class="sp-list__link"><span class="sp-list__work">SLAM DUNK</span><span class="sp-list__sub">── 嘘じゃ2万本は打てない</span></a></li>
+          <li class="sp-list__item"><a href="articles/tenmei-baki/index.html" class="sp-list__link"><span class="sp-list__work">刃牙シリーズ</span><span class="sp-list__sub">── 選べなかった出生、抑圧されたシャドウ、収束する天命</span></a></li>
+          <li class="sp-list__item"><a href="articles/tenmei-berserk/index.html" class="sp-list__link"><span class="sp-list__work">ベルセルク</span><span class="sp-list__sub">── 痛みのただなかで手を伸ばし続けるプロセスが天命である</span></a></li>
+          <li class="sp-list__item"><a href="articles/tenmei-shingeki/index.html" class="sp-list__link"><span class="sp-list__work">進撃の巨人</span><span class="sp-list__sub">── 自由を求めた男が、自由意志を持たなかった</span></a></li>
+          <li class="sp-list__item"><a href="articles/tenmei-fullmetalalchemist/index.html" class="sp-list__link"><span class="sp-list__work">鋼の錬金術師</span><span class="sp-list__sub">── 等価交換の外側へ</span></a></li>
+          <li class="sp-list__item"><a href="articles/tenmei-rurounikenshin/index.html" class="sp-list__link"><span class="sp-list__work">るろうに剣心</span><span class="sp-list__sub">── 表の人斬りと影の人斬り</span></a></li>
+          <li class="sp-list__item"><a href="articles/tenmei-onepiece/index.html" class="sp-list__link"><span class="sp-list__work">ONE PIECE</span><span class="sp-list__sub">── 嘘は弱さではなかった</span></a></li>
+          <li class="sp-list__item"><a href="articles/tenmei-deathnote/index.html" class="sp-list__link"><span class="sp-list__work">DEATH NOTE</span><span class="sp-list__sub">── 退屈の反対は「面白い」ではなかった</span></a></li>
+          <li class="sp-list__item"><a href="articles/tenmei-ushijimakun/index.html" class="sp-list__link"><span class="sp-list__work">闇金ウシジマくん</span><span class="sp-list__sub">── 天命は最後まで綻び続けた。綻んだが、開かなかった</span></a></li>
+          <li class="sp-list__item"><a href="articles/tenmei-neverland/index.html" class="sp-list__link"><span class="sp-list__work">約束のネバーランド</span><span class="sp-list__sub">── 鎧を脱いでもなお残った笑顔</span></a></li>
         </ul>
 
-        <p class="sp-index__category">&#9670; 海外ドラマ</p>
-        <ul class="sp-index__list">
-          <li><a href="#mentalist">メンタリスト（2008）</a></li>
-          <li><a href="#hoc">ハウス・オブ・カーズ（2013）</a></li>
-          <li><a href="#peakyblinders">ピーキー・ブラインダーズ（2013）</a></li>
-          <li><a href="#suits">SUITS（2011）</a></li>
-        </ul>
-      </div>
-
-      <div class="sp-card fade-in" id="cagliostro">
-        <h2 class="sp-card__title"><span class="sp-card__work">ルパン三世 カリオストロの城</span><span class="sp-card__sub">── 世界で最も自由な男が、世界で最も不自由な泥棒だった</span></h2>
-        <p>宮崎駿監督『ルパン三世 カリオストロの城』のルパン三世──世界中のどんな金庫も開けられる男が、たった一つの扉だけは開けられない。「ここにいていい」という扉を──を、実存科学の視点で読み解く。</p>
-        <p>「自由」を演じることで、逆説的に自らを「泥棒」という孤独なアウトサイダーの牢獄に繋ぎ止め続けた男。他者の錠を壊し続けながら、自分の錠だけは壊せない──その解放者の天命と、永遠の振動の構造。</p>
-        <ul class="link-list">
-          <li><a href="articles/tenmei-cagliostro/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
+        <p class="sp-list__category">海外ドラマ</p>
+        <ul class="sp-list__items">
+          <li class="sp-list__item"><a href="articles/tenmei-mentalist/index.html" class="sp-list__link"><span class="sp-list__work">メンタリスト</span><span class="sp-list__sub">── 人の心を読む者が、自分の心だけ読めない</span></a></li>
+          <li class="sp-list__item"><a href="articles/hoc-frank-underwood-meta.html" class="sp-list__link"><span class="sp-list__work">ハウス・オブ・カーズ</span><span class="sp-list__sub">── 権力という鎧の下に抑圧された光のシャドウ</span></a></li>
+          <li class="sp-list__item"><a href="articles/tenmei-peakyblinders/index.html" class="sp-list__link"><span class="sp-list__work">ピーキー・ブラインダーズ</span><span class="sp-list__sub">── 穴を掘るのを止めても、埋められなかった</span></a></li>
+          <li class="sp-list__item"><a href="articles/tenmei-suits/index.html" class="sp-list__link"><span class="sp-list__work">SUITS</span><span class="sp-list__sub">── 能力は本物、存在は偽物</span></a></li>
         </ul>
       </div>
-
-      <div class="sp-card fade-in" id="nausicaa">
-        <h2 class="sp-card__title"><span class="sp-card__work">風の谷のナウシカ</span><span class="sp-card__sub">── 光と闇を同時に通す者だけが、橋になれる</span></h2>
-        <p>宮崎駿監督・原作・脚本『風の谷のナウシカ』のナウシカ──すべての生命を敬う少女が父を殺した兵士を殺した瞬間、光と闇が同じ身体から来ていることが露呈する──を、実存科学の視点で読み解く。</p>
-        <p>その構造が照らし出すのは、ゴールデンシャドウの純粋形態──光だけではなく闇をも通すからこそ、橋になれるという天命の姿だ。</p>
-        <ul class="link-list">
-          <li><a href="articles/tenmei-nausicaa/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
-        </ul>
-      </div>
-
-      <div class="sp-card fade-in" id="laputa">
-        <h2 class="sp-card__title"><span class="sp-card__work">天空の城ラピュタ</span><span class="sp-card__sub">── 握り締めた天命は崩壊し、手放した天命は到達する</span></h2>
-        <p>宮崎駿監督『天空の城ラピュタ』のパズー、シータ、ムスカ──継承されたMetaを超えて「守ること」に到達した少年、力を知った上で土に帰ることを選んだ少女、そして否認の上に建てた天命が到達の瞬間に崩壊した男──を、実存科学の視点で読み解く全3篇。</p>
-        <p>三つの構造が照らし出すのは、天命の到達と崩壊の分岐点だ。握り締めるのではなく、手放すことで到達する天命と、否認の上に建てたがゆえに崩壊する天命と。</p>
-        <ul class="link-list">
-          <li><a href="articles/tenmei-laputa/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
-        </ul>
-      </div>
-
-      <div class="sp-card fade-in" id="porco">
-        <h2 class="sp-card__title"><span class="sp-card__work">紅の豚</span><span class="sp-card__sub">── 変わることと変わらないことの間を漂い続ける男</span></h2>
-        <p>宮崎駿監督・脚本『紅の豚』のポルコ・ロッソ──仲間を失い、死にすら拒絶された男が自らに豚の顔という四重の鎧をかけた──を、実存科学の視点で読み解く。</p>
-        <p>その構造が照らし出すのは、本シリーズ唯一の「未解決の天命」──変わることと変わらないことの間を漂い続ける男の、進行中の天命だ。</p>
-        <ul class="link-list">
-          <li><a href="articles/tenmei-porco/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
-        </ul>
-      </div>
-
-      <div class="sp-card fade-in" id="mononoke">
-        <h2 class="sp-card__title"><span class="sp-card__work">もののけ姫</span><span class="sp-card__sub">── 天命は善悪を問わない。収束するだけだ</span></h2>
-        <p>宮崎駿監督『もののけ姫』のアシタカ、サン、エボシ御前──呪いを刻まれた皇子、人間であることを否認した少女、そして救済者にして神殺しの女──を、実存科学の視点で読み解く全3篇。</p>
-        <p>三つの構造が照らし出すのは、天命の道徳的中立性だ。天命は善悪を問わない。Metaの収束点は「良い」かどうかを確認しない。収束するだけだ。</p>
-        <ul class="link-list">
-          <li><a href="articles/tenmei-mononoke/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
-        </ul>
-      </div>
-
-      <div class="sp-card fade-in" id="chihiro">
-        <h2 class="sp-card__title"><span class="sp-card__work">千と千尋の神隠し</span><span class="sp-card__sub">── 成長は記憶を必要としない</span></h2>
-        <p>宮崎駿監督『千と千尋の神隠し』の千尋を、実存科学の視点で読み解く。</p>
-        <p>何も持たない10歳の少女の中に眠る「潜在的シャドウ」が、名前の剥奪と異界の試練によって溢れ出す。成長は記憶を必要としない──髪留めが光る限り、天命の大地は体の奥に残り続ける。</p>
-        <ul class="link-list">
-          <li><a href="articles/tenmei-chihiro/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
-        </ul>
-      </div>
-
-      <div class="sp-card fade-in" id="howl">
-        <h2 class="sp-card__title"><span class="sp-card__work">ハウルの動く城</span><span class="sp-card__sub">── ある天命は、一人では到達できない</span></h2>
-        <p>宮崎駿監督『ハウルの動く城』の二人──心臓を手放した魔法使いハウルと、老いの呪いをかけられた少女ソフィー──を、実存科学の視点で読み解く全2篇。</p>
-        <p>自ら心臓を取り出し暖炉の火に預けた魔法使いの空洞に、「重荷を背負いたい」という天命が露呈する。そしてある天命は──一人では到達できない。</p>
-        <ul class="link-list">
-          <li><a href="articles/tenmei-howl/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
-        </ul>
-      </div>
-
-      <div class="sp-card fade-in" id="godfather">
-        <h2 class="sp-card__title"><span class="sp-card__work">ゴッドファーザー</span><span class="sp-card__sub">── 天命に到達しなかった男が、天命を最も鮮烈に照らす</span></h2>
-        <p>フランシス・フォード・コッポラ『ゴッドファーザー』三部作の主人公マイケル・コルレオーネを、実存科学の視点で読み解く。</p>
-        <p>「入らない」と宣言した男がドンの椅子に座り、犠牲者の鎧で守るべきものを壊し、赦しに手を伸ばし、しかし届かなかった──その三十年の構造を、Meta、シャドウ、天命で解析する。</p>
-        <p>〈I〉Meta形成篇、〈II〉シャドウ崩壊篇、〈III〉天命不到達篇──天命に到達しなかった男の構造が、天命そのものを最も鮮烈に照らす。</p>
-        <p>彼の構造は、あなた自身の構造と重なる。</p>
-        <ul class="link-list">
-          <li><a href="articles/tenmei-godfather/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
-        </ul>
-      </div>
-
-      <!-- ルパン三世（シリーズ全体）は廃止。次元大介の記事はカリオストロの城篇に統合済み -->
-
-      <div class="sp-card fade-in" id="scarface">
-        <h2 class="sp-card__title"><span class="sp-card__work">スカーフェイス</span><span class="sp-card__sub">── 噴水に浮かぶ男が残した、たった一つの出力</span></h2>
-        <p>ブライアン・デ・パルマ監督『スカーフェイス』のトニー・モンタナ──「何者でもない」というMetaが一人の男の脳と肉体を完全にハックし、「すべてを支配しろ、さもなくば無に戻る」というコマンドを実行させ続けた──を、実存科学の視点で読み解く。</p>
-        <p>届かなかった天命。だが、あの車の中にいた子供たちは、あの夜、家に帰ることができた。その構造は、あなた自身の構造と重なる。</p>
-        <ul class="link-list">
-          <li><a href="articles/tenmei-scarface/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
-        </ul>
-      </div>
-
-      <div class="sp-card fade-in" id="leon">
-        <h2 class="sp-card__title"><span class="sp-card__work">レオン</span><span class="sp-card__sub">── 凍結された男が、少女によって溶かされるとき</span></h2>
-        <p>リュック・ベッソン『レオン』の三人──凍結された男レオン、すべてのルールを失った男スタンスフィールド、演じ続けた少女マチルダ──を、実存科学の視点で読み解く全3篇。</p>
-        <p>天命に到達した男、天命に到達できなかった男、そしてすべてを剥奪された先に根づいた少女。三つの構造が照らし出すのは、あなた自身のMetaの姿だ。</p>
-        <ul class="link-list">
-          <li><a href="articles/tenmei-leon/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
-        </ul>
-      </div>
-
-      <div class="sp-card fade-in" id="shawshank">
-        <h2 class="sp-card__title"><span class="sp-card__work">ショーシャンクの空に</span><span class="sp-card__sub">── 希望とは選択ではなく、構造的必然である</span></h2>
-        <p>フランク・ダラボン監督、スティーヴン・キング原作『ショーシャンクの空に』のアンディ・デュフレーン──感情の翻訳装置が封鎖された男が、19年間の圧力と時間で石の壁を通過し、完全な不自由から完全な解放を合成した──を、実存科学の視点で読み解く。</p>
-        <p>その構造が照らし出すのは、希望とは選択ではなく構造的必然であるという真実だ。</p>
-        <ul class="link-list">
-          <li><a href="articles/tenmei-shawshank/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
-        </ul>
-      </div>
-
-      <div class="sp-card fade-in" id="gwh">
-        <h2 class="sp-card__title"><span class="sp-card__work">グッド・ウィル・ハンティング</span><span class="sp-card__sub">── 知性という鎧を脱ぐ勇気</span></h2>
-        <p>ガス・ヴァン・サント監督『グッド・ウィル・ハンティング』のショーン・マグワイアとウィル・ハンティング──同じ傷、同じ街、同じ階級から、異なる天命が露呈する──を、実存科学の視点で読み解く。</p>
-        <p>施術者の逆説と天命の起動。天才知性の武器化とレンチを選んだ子供の天命。知っていることと動けることの溝、知性という鎧を脱ぐ勇気。</p>
-        <ul class="link-list">
-          <li><a href="articles/tenmei-goodwillhunting/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
-        </ul>
-      </div>
-
-      <div class="sp-card fade-in" id="trumanshow">
-        <h2 class="sp-card__title"><span class="sp-card__work">トゥルーマン・ショー</span><span class="sp-card__sub">── 何もない場所に、自分の足で立つこと</span></h2>
-        <p>ピーター・ウィアー監督、アンドリュー・ニコル脚本『トゥルーマン・ショー』のトゥルーマン・バーバンク──出生時から巨大ドーム内のリアリティ番組の被写体として育てられ、30年間「自分が何を望んでいるのか」を問うことすら許されなかった男──を、実存科学の視点で読み解く。</p>
-        <p>その構造が照らし出すのは、物理的Metaに閉じ込められた男が、すべてを剥がされた先に到達する天命──「絶対的な未知と無防備さの受容」だ。</p>
-        <ul class="link-list">
-          <li><a href="articles/truman-burbank-meta.html">トゥルーマン・バーバンクのMeta &rarr;</a></li>
-        </ul>
-      </div>
-
-      <div class="sp-card fade-in" id="fightclub">
-        <h2 class="sp-card__title"><span class="sp-card__work">ファイト・クラブ</span><span class="sp-card__sub">── コピーではない人生の始まり</span></h2>
-        <p>デヴィッド・フィンチャー監督『ファイト・クラブ』の語り手とタイラー・ダーデン──名前を持たない空虚な器が、名前のある影を生み出した──を、実存科学の視点で読み解く。</p>
-        <p>その銃声と、握った手の先にある天命。外部委託されたシャドウの統合と、コピーではない人生の始まり。</p>
-        <ul class="link-list">
-          <li><a href="articles/tenmei-fightclub/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
-        </ul>
-      </div>
-
-      <div class="sp-card fade-in" id="matrix">
-        <h2 class="sp-card__title"><span class="sp-card__work">マトリックス</span><span class="sp-card__sub">── 心の棘だけが本物だった</span></h2>
-        <p>ウォシャウスキー姉妹（＋ラナ単独）監督『マトリックス』四部作のネオ──全てが偽造されていたと知った人間は何を拠り所にして立つのか──を、実存科学の視点で読み解く。</p>
-        <p>心の棘だけが本物だった。見えないまま手を伸ばすこと。結果を手放して収束に身を委ねること。そして天命の物語を手放し、今ここで新しく生きること──しかも一人ではなく。</p>
-        <ul class="link-list">
-          <li><a href="articles/tenmei-matrix/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
-        </ul>
-      </div>
-
-      <div class="sp-card fade-in" id="trainingday">
-        <h2 class="sp-card__title"><span class="sp-card__work">トレーニング デイ</span><span class="sp-card__sub">── 計算の外にあるものが、計算を壊す</span></h2>
-        <p>アントワーン・フークア監督『トレーニング デイ』のアロンゾ・ハリスとジェイク・ホイト──同じ環境で正反対の出力を生んだ二人を、実存科学の視点（Meta・シャドウ・天命）で構造的に読み解く。</p>
-        <p>十三年かけて腐敗した男と、一日で十三年分の濃縮液を注がれても腐らなかった男。怒りの前に立ち続ける構造は、あなた自身の構造と重なる。</p>
-        <ul class="link-list">
-          <li><a href="articles/tenmei-trainingday/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
-        </ul>
-      </div>
-
-      <div class="sp-card fade-in" id="inception">
-        <h2 class="sp-card__title"><span class="sp-card__work">インセプション</span><span class="sp-card__sub">── 確認をやめたとき、子供たちの顔がある</span></h2>
-        <p>クリストファー・ノーラン監督『インセプション』のドミニク・コブ──他者の無意識を完璧に読みながら自分の無意識だけは読めなかった男が、回り続けるコマの前から歩き去ったとき──を、実存科学の視点で読み解く。</p>
-        <p>確認をやめることの天命。溶解によって影を手放した先に、子供たちの顔がある。</p>
-        <ul class="link-list">
-          <li><a href="articles/tenmei-inception/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
-        </ul>
-      </div>
-
-      <div class="sp-card fade-in" id="bohemianrhapsody">
-        <h2 class="sp-card__title"><span class="sp-card__work">ボヘミアン・ラプソディ</span><span class="sp-card__sub">── 穴を隠さずに、穴ごと歌った</span></h2>
-        <p>ブライアン・シンガー監督『ボヘミアン・ラプソディ』のフレディ・マーキュリー──三つの名前を持った男が、ファルーク・ブルサラを殺し、フレディ・マーキュリーを創造し、しかし鏡の中からザンジバルの少年は消えなかった──を、実存科学の視点で読み解く。</p>
-        <p>すべてを剥がされた先に残った声だけで七万二千人と交わった瞬間、天命が露呈した。穴を隠さずに、穴ごと歌った男の構造は、あなた自身の構造と重なる。</p>
-        <ul class="link-list">
-          <li><a href="articles/tenmei-bohemianrhapsody/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
-        </ul>
-      </div>
-
-      <div class="sp-card fade-in" id="joker">
-        <h2 class="sp-card__title"><span class="sp-card__work">ジョーカー</span><span class="sp-card__sub">── 天命の到達には、構造的条件がある</span></h2>
-        <p>トッド・フィリップス監督『ジョーカー』のアーサー・フレック──すべてのMeta層において閉じ込められた男が、「存在したい」という叫びの果てに構造的閉塞を迎えた──を、実存科学の視点で読み解く。</p>
-        <p>その構造が照らし出すのは、天命の到達には構造的条件があるという、実存科学の限界点そのものだ。</p>
-        <ul class="link-list">
-          <li><a href="articles/tenmei-joker/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
-        </ul>
-      </div>
-
-      <div class="sp-card fade-in" id="akira">
-        <h2 class="sp-card__title"><span class="sp-card__work">AKIRA（1982）</span><span class="sp-card__sub">── 保護者の盾と力の檻のあいだで、天命が立つ</span></h2>
-        <p>大友克洋『AKIRA』の金田正太郎──孤児院で泣いている少年の手を取った瞬間から、保護者という役割に自我を癒着させた男が、その善意で親友を破滅させ、すべてを喪った瓦礫の中で「前を走る」から「隣に立つ」への天命に到達する──を、実存科学の視点で読み解く。</p>
-        <p>そして島鉄雄──金田の手を取った瞬間から「金田の鉄雄」として生き、力で自己を証明しようとした少年が、すべてを破壊した先で「俺は……鉄雄だ」という最小限の存在宣言に到達する──もう一つの天命論。</p>
-        <ul class="link-list">
-          <li><a href="articles/akira-kaneda-meta.html">金田正太郎のMeta &rarr;</a></li>
-          <li><a href="articles/akira-tetsuo-meta.html">鉄雄のMeta &rarr;</a></li>
-        </ul>
-      </div>
-
-      <div class="sp-card fade-in" id="baki">
-        <h2 class="sp-card__title"><span class="sp-card__work">刃牙シリーズ（1991）</span><span class="sp-card__sub">── 選べなかった出生、抑圧されたシャドウ、収束する天命</span></h2>
-        <p>板垣恵介『グラップラー刃牙』シリーズの登場人物を、実存科学の視点で読み解く。</p>
-        <p>選べなかった出生。抑圧されたシャドウ。そして、Metaの果てに収束する天命。</p>
-        <p>ジャック・ハンマー、花山薫、烈海王、範馬刃牙、愚地独歩、ビスケット・オリバ、朱沢江珠、宮本武蔵、範馬勇次郎──彼らのMetaと天命を構造的にプロファイリングし、セッション形式で天命を言語化する。</p>
-        <p>彼らの構造は、あなた自身の構造と重なる。</p>
-        <ul class="link-list">
-          <li><a href="articles/tenmei-baki/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
-        </ul>
-      </div>
-
-      <div class="sp-card fade-in" id="berserk">
-        <h2 class="sp-card__title"><span class="sp-card__work">ベルセルク（1989）</span><span class="sp-card__sub">── 痛みのただなかで手を伸ばし続けるプロセスが天命である</span></h2>
-        <p>三浦建太郎『ベルセルク』のガッツ、キャスカ、グリフィス──死体から泥の中に生まれ落ち、蝕ですべてを奪われた男と、誰かの夢の剣であることでしか自分を許せなかった女と、仲間を生贄に捧げた男──を、実存科学の視点で読み解く。</p>
-        <p>なぜ、彼は剣を手放せないのか。なぜ、彼女は「そばにいたい」という声を生まれて初めて聞いたのか。そして、「夢」の正体は野心ではなく墓標だった。その構造は、あなた自身の構造と重なる。</p>
-        <ul class="link-list">
-          <li><a href="articles/tenmei-berserk/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
-        </ul>
-      </div>
-
-      <div class="sp-card fade-in" id="mentalist">
-        <h2 class="sp-card__title"><span class="sp-card__work">メンタリスト（2008）</span><span class="sp-card__sub">── 人の心を読む者が、自分の心だけ読めない</span></h2>
-        <p>ブルーノ・ヘラー制作『THE MENTALIST（メンタリスト）』の登場人物を、実存科学の視点で読み解く。</p>
-        <p>「人の心を読む者が自分の心だけ読めない」──そのパラドクスの構造を、Meta、シャドウ、天命で解析する。</p>
-        <p>ウェイン・リグスビー、パトリック・ジェーン、テレサ・リズボン、レッド・ジョン、キンブル・チョウ、グレース・ヴァンペルト、ブレット・スタイルズ──彼らのMetaと天命を構造的にプロファイリングし、セッション形式で天命を言語化する。</p>
-        <p>彼らの構造は、あなた自身の構造と重なる。</p>
-        <ul class="link-list">
-          <li><a href="articles/tenmei-mentalist/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
-        </ul>
-      </div>
-
-      <div class="sp-card fade-in" id="hoc">
-        <h2 class="sp-card__title"><span class="sp-card__work">ハウス・オブ・カーズ（2013）</span><span class="sp-card__sub">── 権力という鎧の下に抑圧された光のシャドウ</span></h2>
-        <p>ボー・ウィリモン制作『House of Cards（ハウス・オブ・カーズ）』の登場人物を、実存科学の視点で読み解く。</p>
-        <p>史上最も冷酷な手段で合衆国大統領の座を簒奪した男が、教会でキリスト像に唾を吐いた。あの唾は「無」への冷笑ではなく、見捨てられた子供の怒りだった──その構造を、Meta、ゴールデンシャドウ、天命で解析する。</p>
-        <p>フランク・アンダーウッド、クレア・アンダーウッド、ダグ・スタンパー──三人のMetaと天命を構造的にプロファイリングし、セッション形式で天命を言語化する。</p>
-        <p>彼らの構造は、あなた自身の構造と重なる。</p>
-        <ul class="link-list">
-          <li><a href="articles/hoc-frank-underwood-meta.html">フランク・アンダーウッドのMeta &rarr;</a></li>
-          <li><a href="articles/hoc-claire-underwood-meta.html">クレア・アンダーウッドのMeta &rarr;</a></li>
-          <li><a href="articles/hoc-doug-stamper-meta.html">ダグ・スタンパーのMeta &rarr;</a></li>
-        </ul>
-      </div>
-
-      <div class="sp-card fade-in" id="peakyblinders">
-        <h2 class="sp-card__title"><span class="sp-card__work">ピーキー・ブラインダーズ（2013）</span><span class="sp-card__sub">── 穴を掘るのを止めても、埋められなかった</span></h2>
-        <p>スティーブン・ナイト制作『ピーキー・ブラインダーズ』のトミー・シェルビー──フランスの地下で凍結された男が、土に埋められないために地上に帝国を築き、その帝国のすべてが防衛でしかなかったことを知り、防衛を手放したとき、初めて静寂の中に立てた──を、実存科学の視点で読み解く。</p>
-        <p>凍結された戦略家の鎧の下にうずくまる坑道兵。黒い馬から白い馬へ。その構造は、あなた自身の構造と重なる。</p>
-        <ul class="link-list">
-          <li><a href="articles/tenmei-peakyblinders/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
-        </ul>
-      </div>
-
-      <div class="sp-card fade-in" id="suits">
-        <h2 class="sp-card__title"><span class="sp-card__work">SUITS（2011）</span><span class="sp-card__sub">── 能力は本物、存在は偽物</span></h2>
-        <p>アーロン・コーシュ制作『Suits／スーツ』のマイク・ロス──映像記憶という途方もない能力を持ちながら、ハーバードに一日も通わず一流法律事務所に潜り込んだ男の9シーズンを、実存科学の視点（Meta・シャドウ・天命）で構造的に読み解く。</p>
-        <p>傷そのものが装甲として機能する構造。嘘の上に育った本物の関係。記憶は証拠ではなく地図だ──その構造は、あなた自身の構造と重なる。</p>
-        <ul class="link-list">
-          <li><a href="articles/tenmei-suits/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
-        </ul>
-      </div>
-
-      <hr class="separator">
-
-      <!-- 新世紀エヴァンゲリオン (1995-1996 / 1997) -->
-      <div class="sp-card fade-in" id="evangelion">
-        <h2 class="sp-card__title"><span class="sp-card__work">新世紀エヴァンゲリオン</span><span class="sp-card__sub">── 切り捨てたものの中に、天命がある</span></h2>
-        <p>庵野秀明 総監督『新世紀エヴァンゲリオン』の碇ゲンドウ、綾波レイ、惣流・アスカ・ラングレー──空洞から走り続けた父、設計された器が心を獲得した少女、人形に代替された少女を、実存科学の視点（Meta・シャドウ・天命）で構造的に読み解く。</p>
-        <p>切り捨てたものの中に天命がある。替えのきく身体が替えのきかない涙を流した。人形に代替された存在が「ただのあたし」に戻った。その構造は、あなた自身の構造と重なる。</p>
-        <ul class="link-list">
-          <li><a href="articles/tenmei-evangelion/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
-        </ul>
-      </div>
-
-      <hr class="separator">
-
-      <!-- 進撃の巨人 (2009-2021) -->
-      <div class="sp-card fade-in" id="shingeki">
-        <h2 class="sp-card__title"><span class="sp-card__work">進撃の巨人</span><span class="sp-card__sub">── 自由を求めた男が、自由意志を持たなかった</span></h2>
-        <p>諫山創『進撃の巨人』のエレン・イェーガー──五十メートルの壁の中で「自由」を叫び続けた少年が、誰よりも不自由だった。五層のMetaすべてが極限まで収束する一点として、天命は物理世界に露呈した──を、実存科学の視点（Meta・シャドウ・天命）で構造的に読み解く。</p>
-        <p>「なぜかわからないが、どうしてもやりたかった」──自由意志という幻から醒めた先に、天命がある。その構造は、あなた自身の構造と重なる。</p>
-        <ul class="link-list">
-          <li><a href="articles/tenmei-shingeki/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
-        </ul>
-      </div>
-
-      <hr class="separator">
-
-      <!-- 鋼の錬金術師 (2001-2010) -->
-      <div class="sp-card fade-in" id="fullmetalalchemist">
-        <h2 class="sp-card__title"><span class="sp-card__work">鋼の錬金術師</span><span class="sp-card__sub">── 等価交換の外側へ</span></h2>
-        <p>荒川弘『鋼の錬金術師』のホーエンハイム、エドワード、アルフォンス──不老不死の父と、同じ禁忌を犯した兄弟を、実存科学の視点（Meta・シャドウ・天命）で読み解く。</p>
-        <p>2,000年を生きた男が「人間として死ぬ」天命に到達する構造。力を手放した兄と、空洞の鎧の中から温度を受け取った弟。等価交換では手に入らないものがある。</p>
-        <ul class="link-list">
-          <li><a href="articles/tenmei-fullmetalalchemist/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
-        </ul>
-      </div>
-
-      <hr class="separator">
-
-      <!-- るろうに剣心 (1994-1999) -->
-      <div class="sp-card fade-in" id="rurounikenshin">
-        <h2 class="sp-card__title"><span class="sp-card__work">るろうに剣心</span><span class="sp-card__sub">── 表の人斬りと影の人斬り</span></h2>
-        <p>和月伸宏『るろうに剣心 ─明治剣客浪漫譚─』の緋村剣心と志々雄真実──同じ長州藩の人斬りから、正反対の構造的帰結に至った二人を、実存科学の視点（Meta・シャドウ・天命）で読み解く。</p>
-        <p>愛する者を自らの手で殺した男と、味方の手で焼かれた男。天命の到達と不到達を最も鮮烈に分ける構造が、ここにある。</p>
-        <ul class="link-list">
-          <li><a href="articles/tenmei-rurounikenshin/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
-        </ul>
-      </div>
-
-      <hr class="separator">
-
-      <!-- SLAM DUNK (1990-1996) -->
-      <div class="sp-card fade-in" id="slamdunk">
-        <h2 class="sp-card__title"><span class="sp-card__work">SLAM DUNK</span><span class="sp-card__sub">── 嘘じゃ2万本は打てない</span></h2>
-        <p>井上雄彦『SLAM DUNK』の桜木花道と三井寿──50回の拒絶が設計した「天才ですから」の鎧が実存的確信に変わるまでの4ヶ月間と、バスケットボールにタバコの火を押しつけた手が自分の肺を守っていた2年間を、実存科学の視点で読み解く。</p>
-        <p>嘘じゃ2万本は打てない。鎧じゃ背骨は折れない。身体は嘘をつけない。その構造は、あなた自身の構造と重なる。</p>
-        <ul class="link-list">
-          <li><a href="articles/tenmei-slamdunk/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
-        </ul>
-      </div>
-
-      <hr class="separator">
-
-      <!-- ONE PIECE (1997-) -->
-      <div class="sp-card fade-in" id="onepiece">
-        <h2 class="sp-card__title"><span class="sp-card__work">ONE PIECE</span><span class="sp-card__sub">── 嘘は弱さではなかった</span></h2>
-        <p>尾田栄一郎『ONE PIECE』のルフィ、ウソップ、サンジ、チョッパーを、実存科学の視点（Meta・シャドウ・天命）で読み解く。「海賊王に俺はなる」の裏側に隠された孤独と、太陽の神が笑う理由。嘘つきの嘘はなぜ本当になるのか。出来損ないの烙印が天命の不可欠な素材だった構造。善意が毒に変わった記憶が壊した承認の回路。</p>
-        <p>弱さも、臆病も、見栄も、欠陥も──否定するのではなく、その全てが天命の素材だったと認めた先に、天命はある。その構造は、あなた自身の構造と重なる。</p>
-        <ul class="link-list">
-          <li><a href="articles/tenmei-onepiece/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
-        </ul>
-      </div>
-
-      <hr class="separator">
-
-      <!-- DEATH NOTE (2003-2006) -->
-      <div class="sp-card fade-in" id="deathnote">
-        <h2 class="sp-card__title"><span class="sp-card__work">DEATH NOTE</span><span class="sp-card__sub">── 退屈の反対は「面白い」ではなかった</span></h2>
-        <p>大場つぐみ・小畑健『DEATH NOTE』のリュークを、実存科学の視点（Meta・シャドウ・天命）で読み解く。六年間、一人の人間の隣に座り続けた死神。助けなかった。裁かなかった。味方にもならなかった。ただ、見ていた。──その「見ていた」の裏側にある構造を記す。</p>
-        <p>死なない存在に天命は成立するか。ペンが一瞬止まった瞬間に、天命の入口は確かにあった。──その構造は、退屈の中にいるあなた自身の構造と重なる。</p>
-        <ul class="link-list">
-          <li><a href="articles/tenmei-deathnote/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
-        </ul>
-      </div>
-
-      <hr class="separator">
-
-      <!-- 魔法少女まどか☆マギカ (2011 / 2013) -->
-      <div class="sp-card fade-in" id="madokamagica">
-        <h2 class="sp-card__title"><span class="sp-card__work">魔法少女まどか☆マギカ</span><span class="sp-card__sub">── 祈りと絶望の構造</span></h2>
-        <p>Magica Quartet原作『魔法少女まどか☆マギカ』の鹿目まどかと暁美ほむら──何も持っていなかった少女が宇宙の法則になり、全てを捧げた少女が悪魔になった。祈りと絶望の構造を、実存科学の視点で読み解く。</p>
-        <p>「何もない自分」に価値を見出せないあなたの構造は、どこかでまどかの構造と重なっている。</p>
-        <ul class="link-list">
-          <li><a href="articles/tenmei-madokamagica/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
-        </ul>
-      </div>
-
-      <hr class="separator">
-
-      <!-- 8マイル (2002) -->
-      <div class="sp-card fade-in" id="8mile">
-        <h2 class="sp-card__title"><span class="sp-card__work">8マイル</span><span class="sp-card__sub">── 恥を武器に変換した男</span></h2>
-        <p>カーティス・ハンソン監督『8マイル』のB-Rabbit（ジミー・スミスJr.）──白人の身体でヒップホップのステージに立ち、どちら側にも帰属しない男を、実存科学の視点（Meta・シャドウ・天命）で構造的に読み解く。隠すものは自分を支配し、曝け出すものは自分が支配する──その構造転換の瞬間を記す。</p>
-        <p>勝利の直後に工場の夜勤に戻った男。自分の人生に自分でケツを持つ──その構造は、あなた自身の構造と重なる。</p>
-        <ul class="link-list">
-          <li><a href="articles/tenmei-8mile/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
-        </ul>
-      </div>
-
-      <hr class="separator">
-
-      <!-- 闇金ウシジマくん (2004-2019) -->
-      <div class="sp-card fade-in" id="ushijimakun">
-        <h2 class="sp-card__title"><span class="sp-card__work">闇金ウシジマくん</span><span class="sp-card__sub">── 天命は最後まで綻び続けた。綻んだが、開かなかった</span></h2>
-        <p>真鍋昌平『闇金ウシジマくん』の丑嶋馨──母の優しさと「優しさが人を殺す」という認識の間で15年間引き裂かれ続けた男が、最後まで闇金をやめられなかった構造を、実存科学の視点（Meta・シャドウ・天命）で読み解く。</p>
-        <p>「自分が受け入れられた感覚がない」というシャドウを抱えたまま、独りにならないための道具として金を握り続けた男。天命は最後まで彼の中にあった──しかし彼は、その統合の手前で道に倒れた。その構造は、あなた自身の構造と重なる。</p>
-        <ul class="link-list">
-          <li><a href="articles/tenmei-ushijimakun/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
-        </ul>
-      </div>
-
-      <hr class="separator">
-
-      <!-- 約束のネバーランド (2016) -->
-      <div class="sp-card fade-in" id="neverland">
-        <h2 class="sp-card__title"><span class="sp-card__work">約束のネバーランド</span><span class="sp-card__sub">── 鎧を脱いでもなお残った笑顔</span></h2>
-        <p>白井カイウ・出水ぽすか『約束のネバーランド』のエマ──「楽園」が「農場」だと知った翌日も笑い、全員を救うために記憶のすべてを差し出した少女を、実存科学の視点（Meta・シャドウ・天命）で構造的に読み解く。</p>
-        <p>「みんなのため」と信じてきた行動の裏側に、「一人になりたくない」という恐怖があった──その構造は、あなた自身の構造と重なる。</p>
-        <ul class="link-list">
-          <li><a href="articles/tenmei-neverland/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
-        </ul>
-      </div>
-
-      <hr class="separator">
-
-      <!-- パルプ・フィクション (1994) -->
-      <div class="sp-card fade-in" id="pulpfiction">
-        <h2 class="sp-card__title"><span class="sp-card__work">パルプ・フィクション</span><span class="sp-card__sub">── 義人の鎧を脱いだ男は、裸のまま羊飼いになろうとした</span></h2>
-        <p>クエンティン・タランティーノ監督『パルプ・フィクション』のジュールス・ウィンフィールド──聖書の言葉で殺しの震えを止めていた「死の執行人」が、六発の弾丸が全弾逸れた朝に自分が義人ではなく悪の専制であったと気づく──を、実存科学の視点で読み解く。</p>
-        <p>同じ奇跡を経験しながら「偶然」と片づけた男は便器の上で死に、「神の介入」と受け止めた男は朝の光の中へ歩き出した──その構造は、あなた自身の構造と重なる。</p>
-        <ul class="link-list">
-          <li><a href="articles/tenmei-pulpfiction/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
-        </ul>
-      </div>
-
-      <hr class="separator">
-
-      <!-- フォレスト・ガンプ (1994) -->
-      <div class="sp-card fade-in" id="forrestgump">
-        <h2 class="sp-card__title"><span class="sp-card__work">フォレスト・ガンプ</span><span class="sp-card__sub">── 手が空いていたから、受け取れた</span></h2>
-        <p>ロバート・ゼメキス監督『フォレスト・ガンプ／一期一会』のフォレスト・ガンプ──IQ75という認知的初期条件と母の無条件の愛が、概念的フィルターの不在による世界の直接的受容を形成し、来たものをそのまま受け取る構造を作った男──を、実存科学の視点で読み解く。</p>
-        <p>走る理由を問わなかった男は生き延び、走る理由を知っていた女は壊れた。目的の不在そのものが天命の形態だった──その構造は、あなた自身の構造と重なる。</p>
-        <ul class="link-list">
-          <li><a href="articles/tenmei-forrestgump/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
-        </ul>
-      </div>
-
-      <hr class="separator">
-
-      <!-- ウルフ・オブ・ウォールストリート (2013) -->
-      <div class="sp-card fade-in" id="wolfofwallstreet">
-        <h2 class="sp-card__title"><span class="sp-card__work">ウルフ・オブ・ウォールストリート</span><span class="sp-card__sub">── 売り続けた男は、透明になることを恐れていた</span></h2>
-        <p>マーティン・スコセッシ監督『ウルフ・オブ・ウォールストリート』のジョーダン・ベルフォート──電話一本で人間の心を動かす天才が、すべてを失い、なお同じことを繰り返す永劫回帰の構造──を、実存科学の視点で読み解く。</p>
-        <p>温度を捨て鏡を選んだ男は、一生をかけて実体のないもの（Fugazi）を売り続けた。自分がここにいることを、誰かに知らせるために──その構造は、あなた自身の構造と重なる。</p>
-        <ul class="link-list">
-          <li><a href="articles/tenmei-wolfofwallstreet/index.html">シリーズ詳細・全記事一覧へ &rarr;</a></li>
-        </ul>
-      </div>
-
-      <!-- 今後の作品をここに追加 -->
 
     </div>
   </section>
