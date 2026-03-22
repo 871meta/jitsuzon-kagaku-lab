@@ -3811,7 +3811,7 @@ hr {
     margin: 2rem auto;
   }
   .session-dialogue .line-yanai,
-  .session-dialogue .line-character { padding-left: 0.8rem; }
+  .session-dialogue .line-character { padding-left: 0; }
 }
 @media (max-width: 480px) {
   .session-dialogue p br:not(.sp-only) {
