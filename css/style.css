@@ -1221,7 +1221,7 @@ a.site-logo:not(.btn):not(.session-card__link):hover {
   font-weight: 300;
   margin-bottom: 1.5rem;
   letter-spacing: 0.12em;
-  background: linear-gradient(90deg, #d4b878 0%, #d4b878 35%, #fff4d8 50%, #d4b878 65%, #d4b878 100%);
+  background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -1356,7 +1356,6 @@ a.site-logo:not(.btn):not(.session-card__link):hover {
 
 /* --- Hero Title Gold Shimmer --- */
 .hero-title--shimmer {
-  position: relative;
   background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
@@ -1366,14 +1365,6 @@ a.site-logo:not(.btn):not(.session-card__link):hover {
   will-change: background-position;
   backface-visibility: hidden;
   transform: translateZ(0);
-}
-.hero-title--shimmer::after {
-  content: "";
-  position: absolute;
-  inset: -8px -16px;
-  background: radial-gradient(ellipse at center, rgba(192,168,120,0.18) 0%, transparent 70%);
-  z-index: -1;
-  pointer-events: none;
 }
 @keyframes gold-shimmer {
   0%, 100% { background-position: 100% 50%; }
@@ -3390,7 +3381,7 @@ hr {
   line-height: 1.6;
   letter-spacing: 0.04em;
   margin-bottom: 0.3rem;
-  background: linear-gradient(90deg, #d4b878 0%, #d4b878 35%, #fff4d8 50%, #d4b878 65%, #d4b878 100%);
+  background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -3436,7 +3427,7 @@ hr {
   padding-bottom: 0.6rem;
   line-height: 1.6;
   border-bottom: 2px solid var(--color-gold-a40);
-  background: linear-gradient(90deg, #d4b878 0%, #d4b878 35%, #fff4d8 50%, #d4b878 65%, #d4b878 100%);
+  background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
