@@ -1169,7 +1169,7 @@ a.site-logo:not(.btn):not(.session-card__link):hover {
   will-change: background-position;
   backface-visibility: hidden;
   transform: translateZ(0);
-  filter: drop-shadow(0 0 16px rgba(192,168,120,0.3)) drop-shadow(0 0 40px rgba(192,168,120,0.12));
+  text-shadow: 0 0 40px rgba(192,168,120,0.25), 0 0 80px rgba(192,168,120,0.1);
 }
 @keyframes cta-gold-shimmer {
   0%, 100% { background-position: 100% 50%; }
@@ -1190,7 +1190,7 @@ a.site-logo:not(.btn):not(.session-card__link):hover {
   will-change: background-position;
   backface-visibility: hidden;
   transform: translateZ(0);
-  filter: drop-shadow(0 0 12px rgba(160,130,210,0.25)) drop-shadow(0 0 30px rgba(160,130,210,0.1));
+  text-shadow: 0 0 30px rgba(160,130,210,0.2), 0 0 60px rgba(160,130,210,0.08);
 }
 @keyframes cta-purple-shimmer {
   0%, 100% { background-position: 100% 50%; }
@@ -1305,7 +1305,7 @@ a.site-logo:not(.btn):not(.session-card__link):hover {
   will-change: background-position;
   backface-visibility: hidden;
   transform: translateZ(0);
-  filter: drop-shadow(0 0 16px rgba(192,168,120,0.3)) drop-shadow(0 0 40px rgba(192,168,120,0.12));
+  text-shadow: 0 0 40px rgba(192,168,120,0.25), 0 0 80px rgba(192,168,120,0.1);
 }
 @keyframes gold-shimmer {
   0%, 100% { background-position: 100% 50%; }
@@ -3331,7 +3331,7 @@ hr {
   will-change: background-position;
   backface-visibility: hidden;
   transform: translateZ(0);
-  filter: drop-shadow(0 0 16px rgba(192,168,120,0.3)) drop-shadow(0 0 40px rgba(192,168,120,0.12));
+  text-shadow: 0 0 40px rgba(192,168,120,0.25), 0 0 80px rgba(192,168,120,0.1);
 }
 @keyframes article-gold-shimmer {
   0%, 100% { background-position: 100% 50%; }
@@ -3350,7 +3350,7 @@ hr {
   will-change: background-position;
   backface-visibility: hidden;
   transform: translateZ(0);
-  filter: drop-shadow(0 0 12px rgba(160,130,210,0.25)) drop-shadow(0 0 30px rgba(160,130,210,0.1));
+  text-shadow: 0 0 30px rgba(160,130,210,0.2), 0 0 60px rgba(160,130,210,0.08);
 }
 @keyframes article-purple-shimmer {
   0%, 100% { background-position: 100% 50%; }
@@ -3378,7 +3378,7 @@ hr {
   will-change: background-position;
   backface-visibility: hidden;
   transform: translateZ(0);
-  filter: drop-shadow(0 0 8px rgba(192,168,120,0.2));
+  text-shadow: 0 0 30px rgba(192,168,120,0.2), 0 0 60px rgba(192,168,120,0.08);
 }
 
 /* ── Body Text ── */
