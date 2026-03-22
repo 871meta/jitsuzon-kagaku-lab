@@ -25,7 +25,7 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-    }
+  }
 
     :root {
       --text: rgba(235, 232, 225, 0.92);
@@ -36,12 +36,12 @@
       --highlight: var(--color-gold-a06);
       --blockquote-border: var(--color-gold-a40);
       --max-width: 780px;
-    }
+  }
 
     html {
       font-size: 17px;
       scroll-behavior: smooth;
-    }
+  }
 
     body {
       font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
@@ -49,13 +49,13 @@
       background: var(--bg);
       line-height: 2;
       -webkit-font-smoothing: antialiased;
-    }
+  }
 
     .page-container {
       max-width: var(--max-width);
       margin: 0 auto;
       padding: 3rem 1.5rem 6rem;
-    }
+  }
 
     /* HEADER */
     .page-header {
@@ -63,7 +63,7 @@
       padding: 4rem 0 3rem;
       border-bottom: 2px solid var(--accent);
       margin-bottom: 3rem;
-    }
+  }
 
     .page-header .label {
       font-size: var(--fs-small);
@@ -72,40 +72,40 @@
       color: var(--text-secondary);
       margin-bottom: 1rem;
       font-family: var(--font-sans);
-    }
+  }
 
     .page-header h1 {
       font-size: var(--fs-section);
       font-weight: 700;
       line-height: 1.6;
       margin-bottom: 0.5rem;
-    }
+  }
 
     .page-header .subtitle {
       font-size: var(--fs-lead);
       color: var(--text-secondary);
       line-height: 1.8;
-    }
+  }
 
     /* INTRO */
     .intro {
       margin-bottom: 3rem;
-    }
+  }
 
     .intro p {
       text-align: justify;
-    }
+  }
 
     /* REASON CARD */
     .reason {
       margin-bottom: 2.5rem;
       padding: 0 0 2rem;
       border-bottom: 1px solid var(--border);
-    }
+  }
 
     .reason:last-of-type {
       border-bottom: none;
-    }
+  }
 
     .reason-number {
       display: inline-block;
@@ -115,44 +115,44 @@
       letter-spacing: 0.15em;
       color: var(--text-secondary);
       margin-bottom: 0.5rem;
-    }
+  }
 
     .reason h2 {
       font-size: var(--fs-h3);
       font-weight: 700;
       line-height: 1.7;
       margin-bottom: 0.8rem;
-    }
+  }
 
     .reason p {
       text-align: justify;
       margin-bottom: 0;
       color: var(--text);
-    }
+  }
 
     hr {
       border: none;
       border-top: 1px solid var(--border);
       margin: 3rem 0;
-    }
+  }
+}
 
     @media (max-width: 600px) {
       html {
         font-size: 15px;
-      }
+  }
 
       .page-container {
         padding: 2rem 1rem 4rem;
-      }
+  }
 
       .page-header {
         padding: 2rem 0;
-      }
+  }
 
       .page-header h1 {
         font-size: 1.25rem;
-      }
-    }
+  }
 
 /* === Dark Theme Override === */
 a:not(.btn):not(.session-card__link) { color: var(--color-gold); transition: color 0.2s; }
@@ -165,6 +165,7 @@ input, textarea, select { background: rgba(255,255,255,0.05); color: rgba(235,23
 input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); outline: none; }
 ::placeholder { color: rgba(235,232,225,0.3); }
 .submit-btn, button[type="submit"] { background: var(--color-gold); color: #080610; border: none; }
+}
 
 </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">

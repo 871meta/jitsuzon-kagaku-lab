@@ -44,8 +44,8 @@
   animation: gold-shimmer 4s ease-in-out infinite;
       will-change: background-position;
       backface-visibility: hidden;
-
 }
+
 @keyframes gold-shimmer {
   0%, 100% { background-position: 100% 50%; }
   50% { background-position: 0% 50%; }
@@ -349,9 +349,9 @@ h3.section-heading {
   .session-dialogue p:nth-child(10n) {
     margin-bottom: 1.5em;
     padding-bottom: 1em;
+
   }
-}
-</style>
+}</style>
 </head>
 <body>
 
@@ -976,15 +976,16 @@ h3.section-heading {
     opacity: 0; pointer-events: none; transition: opacity .3s;
   }
   .floating-toc__toggle.is-visible { opacity: 1; pointer-events: auto; }
+}
   @media (max-width: 900px) {
     .floating-toc { display: none; }
     .floating-toc.is-open {
       display: block; right: 0; left: 0; top: auto; bottom: 4rem;
       transform: none; max-height: 50vh; border-radius: 12px 12px 0 0;
       padding: 1.5rem 1.2rem;
-    }
+  
   }
-  </style>
+}</style>
   <script>
   (function(){
     var toc = document.querySelector('.floating-toc');
