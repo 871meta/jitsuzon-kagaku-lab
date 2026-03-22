@@ -154,7 +154,6 @@
       letter-spacing: 0.03em;
     }
     .sp-card__title .sp-card__work {
-      position: relative;
       background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
       background-size: 200% 100%;
       -webkit-background-clip: text; background-clip: text;
@@ -162,6 +161,7 @@
       animation: sp-gold-shimmer 4s ease-in-out infinite;
       will-change: background-position;
       backface-visibility: hidden;
+      transform: translateZ(0);
     }
     .sp-card p {
       font-size: var(--fs-body);
