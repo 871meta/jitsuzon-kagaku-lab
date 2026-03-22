@@ -32,36 +32,36 @@
   <style>
     /* ── Specials: 導入カード ── */
     .sp-intro {
-      background: linear-gradient(160deg, rgba(12,10,22,0.92) 0%, rgba(8,6,16,0.96) 100%);
-      border: 1px solid rgba(192,168,120,0.12);
-      border-left: 2px solid rgba(192,168,120,0.4);
+      background: linear-gradient(160deg, rgba(12,10,22,0.94) 0%, rgba(8,6,16,0.97) 100%);
+      border: 1px solid rgba(192,168,120,0.15);
+      border-left: 3px solid rgba(192,168,120,0.5);
       border-radius: 4px;
-      padding: 3rem 2.8rem;
+      padding: 3.5rem 3.2rem;
       margin-bottom: 2.5rem;
       position: relative;
       overflow: hidden;
       backdrop-filter: blur(16px);
-      box-shadow: 0 4px 40px rgba(0,0,0,0.4), inset 0 1px 0 rgba(192,168,120,0.1);
+      box-shadow: 0 4px 40px rgba(0,0,0,0.4), inset 0 1px 0 rgba(192,168,120,0.12);
     }
     .sp-intro::before {
       content: "";
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 1px;
-      background: linear-gradient(90deg, rgba(192,168,120,0.6), rgba(192,168,120,0.2), transparent 70%);
+      background: linear-gradient(90deg, rgba(192,168,120,0.7), rgba(192,168,120,0.25), transparent 70%);
     }
     .sp-intro::after {
       content: "";
       position: absolute;
       bottom: 0; left: 0; right: 0;
       height: 1px;
-      background: linear-gradient(90deg, rgba(192,168,120,0.3), transparent 60%);
+      background: linear-gradient(90deg, rgba(192,168,120,0.35), transparent 60%);
     }
     .sp-intro p {
-      font-size: 0.95rem;
-      line-height: 2.4;
-      color: rgba(235,232,225,0.88);
-      letter-spacing: 0.02em;
+      font-size: 1rem;
+      line-height: 2.5;
+      color: rgba(235,232,225,0.92);
+      letter-spacing: 0.03em;
     }
     .sp-intro__poetic {
       line-height: 2.8;
@@ -162,7 +162,7 @@
 
     /* ── Mobile ── */
     @media (max-width: 768px) {
-      .sp-intro { padding: 2.2rem 1.8rem; }
+      .sp-intro { padding: 2.5rem 2rem; }
       .sp-list__row { flex-wrap: wrap; }
       .sp-list__work { font-size: 1.05rem; }
       .sp-list__sub { font-size: 0.78rem; }
