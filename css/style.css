@@ -3765,14 +3765,10 @@ hr {
   margin-bottom: 1.4em;
   line-height: 2.1;
 }
-/* 両者左揃え・ボーダーで色分け */
-.session-dialogue .line-yanai {
-  border-left: 2px solid rgba(192, 168, 120, 0.3);
-  padding-left: 1.2rem;
-}
+/* 両者左揃え・スピーカー名の色で区別 */
+.session-dialogue .line-yanai,
 .session-dialogue .line-character {
-  border-left: 2px solid rgba(184, 160, 216, 0.2);
-  padding-left: 1.2rem;
+  padding-left: 0;
 }
 /* スピーカー名 */
 .session-dialogue .speaker-yanai,
