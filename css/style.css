@@ -1356,12 +1356,13 @@ a.site-logo:not(.btn):not(.session-card__link):hover {
 
 /* --- Hero Title Gold Shimmer --- */
 .hero-title--shimmer {
-  background: linear-gradient(90deg, #d4b878 0%, #d4b878 35%, #fff4d8 50%, #d4b878 65%, #d4b878 100%);
+  background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gold-shimmer 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 16px rgba(192,168,120,0.3)) drop-shadow(0 0 40px rgba(192,168,120,0.12));
   will-change: background-position;
   backface-visibility: hidden;
   transform: translateZ(0);
