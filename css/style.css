@@ -4,6 +4,50 @@
    Typography-first, precision-crafted
    ============================================ */
 
+/* --- Self-hosted Cormorant Garamond --- */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('../fonts/cormorant-garamond-300.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('../fonts/cormorant-garamond-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('../fonts/cormorant-garamond-500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('../fonts/cormorant-garamond-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('../fonts/cormorant-garamond-300-italic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('../fonts/cormorant-garamond-400-italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
 /* --- CSS Custom Properties --- */
 :root {
   /* ── Colors: Gold / Accent ── */
@@ -3673,4 +3717,182 @@ hr {
     justify-content: center;
     text-align: center;
   }
+}
+
+/* ============================================
+   Reading Time & TOC Active State
+   ============================================ */
+.reading-time {
+  display: block;
+  text-align: center;
+  font-family: var(--font-serif-en);
+  font-size: var(--fs-caption);
+  letter-spacing: 0.2em;
+  color: var(--color-text-ghost);
+  margin-bottom: 1.5rem;
+}
+.inline-toc ol li a.is-active {
+  color: var(--color-gold);
+  border-left: 2px solid var(--color-gold-a40);
+  padding-left: calc(1.8em - 2px);
+}
+
+/* ============================================
+   Session Dialogue: Enhanced Immersion
+   ============================================ */
+.session-dialogue {
+  max-width: 680px;
+  margin: 2.5rem auto;
+  padding: 3rem 2.5rem;
+  background: linear-gradient(180deg, rgba(10, 8, 18, 0.45) 0%, rgba(6, 4, 12, 0.55) 100%);
+  border: 1px solid rgba(192, 168, 120, 0.08);
+  border-radius: 2px;
+  position: relative;
+  box-shadow: inset 0 1px 0 rgba(192, 168, 120, 0.06),
+              inset 0 -1px 0 rgba(192, 168, 120, 0.04);
+}
+.session-dialogue::before {
+  content: "SESSION";
+  position: absolute;
+  top: -0.6em;
+  left: 2rem;
+  font-family: var(--font-serif-en);
+  font-size: var(--fs-micro);
+  letter-spacing: 0.35em;
+  color: rgba(192, 168, 120, 0.35);
+  background: var(--color-bg-deep);
+  padding: 0 0.8rem;
+}
+.session-dialogue::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.2), transparent);
+}
+.session-dialogue p {
+  margin-bottom: 1.2em;
+  line-height: 2.2;
+}
+.session-dialogue .line-yanai {
+  border-left: 2px solid rgba(192, 168, 120, 0.25);
+  padding-left: 1.2rem;
+  background: linear-gradient(90deg, rgba(192, 168, 120, 0.03) 0%, transparent 40%);
+}
+.session-dialogue .line-character {
+  margin-left: 1.4rem;
+  padding-left: 1.2rem;
+  border-left: 2px solid rgba(184, 160, 216, 0.12);
+  background: linear-gradient(90deg, rgba(184, 160, 216, 0.02) 0%, transparent 40%);
+}
+.session-dialogue .silence {
+  color: rgba(235, 232, 225, 0.25);
+  font-style: italic;
+  text-align: center;
+  margin: 2.5em 0;
+  font-size: var(--fs-small);
+  letter-spacing: 0.2em;
+  position: relative;
+}
+.session-dialogue .silence::before,
+.session-dialogue .silence::after {
+  content: "";
+  display: inline-block;
+  width: 32px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.15));
+  vertical-align: middle;
+  margin: 0 1.2em;
+}
+.session-dialogue .silence::after {
+  background: linear-gradient(90deg, rgba(192, 168, 120, 0.15), transparent);
+}
+.session-dialogue p:nth-child(10n) {
+  margin-bottom: 2.2em;
+  padding-bottom: 1.8em;
+  border-bottom: 1px solid rgba(192, 168, 120, 0.06);
+}
+@media (max-width: 600px) {
+  .session-dialogue {
+    padding: 2rem 1.2rem;
+    margin: 2rem auto;
+  }
+  .session-dialogue .line-yanai { padding-left: 0.8rem; }
+  .session-dialogue .line-character { margin-left: 0.6rem; padding-left: 0.8rem; }
+}
+@media (max-width: 480px) {
+  .session-dialogue p br:not(.sp-only) {
+    display: none;
+  }
+  .session-dialogue p:nth-child(10n) {
+    margin-bottom: 1.5em;
+    padding-bottom: 1em;
+  }
+}
+
+/* ============================================
+   Accessibility: Focus Indicators
+   ============================================ */
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+}
+.btn:focus-visible {
+  outline: 2px solid var(--color-gold-light);
+  outline-offset: 4px;
+  box-shadow: 0 0 0 6px rgba(192, 168, 120, 0.15),
+              0 0 25px rgba(192, 168, 120, 0.2),
+              inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+.btn--outline:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 4px;
+  box-shadow: 0 0 0 6px rgba(192, 168, 120, 0.1);
+}
+.global-nav a:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+.back-to-top:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+}
+
+/* ============================================
+   Accessibility: Reduced Motion
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .hero-title--shimmer,
+  .cta-block__title,
+  .cta-block__desc {
+    background-size: 100% 100%;
+  }
+  .fade-in {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ============================================
+   Performance: content-visibility
+   ============================================ */
+.text-panel,
+.def-box,
+.highlight-block,
+.profiling-block,
+.session-dialogue,
+.cta-block,
+.site-footer {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
 }

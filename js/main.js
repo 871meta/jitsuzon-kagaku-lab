@@ -315,6 +315,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (tocNav) tocNav.style.display = 'none';
       return;
     }
+    var tocLinks = [];
     headings.forEach(function (h, i) {
       if (!h.id) h.id = 'toc-section-' + i;
       var li = document.createElement('li');
@@ -333,7 +334,42 @@ document.addEventListener('DOMContentLoaded', function () {
       });
       li.appendChild(a);
       list.appendChild(li);
+      tocLinks.push({ a: a, id: h.id });
     });
+
+    // Highlight current section in TOC on scroll
+    if (tocLinks.length > 1) {
+      var currentActive = null;
+      window.addEventListener('scroll', function () {
+        var scrollPos = window.scrollY + 120;
+        var active = null;
+        for (var i = tocLinks.length - 1; i >= 0; i--) {
+          var el = document.getElementById(tocLinks[i].id);
+          if (el && el.offsetTop <= scrollPos) {
+            active = i;
+            break;
+          }
+        }
+        if (active !== currentActive) {
+          if (currentActive !== null) tocLinks[currentActive].a.classList.remove('is-active');
+          if (active !== null) tocLinks[active].a.classList.add('is-active');
+          currentActive = active;
+        }
+      }, { passive: true });
+    }
+  })();
+
+  // --- Reading Time Estimate ---
+  (function () {
+    var meta = document.querySelector('.reading-time');
+    if (!meta) return;
+    var main = document.querySelector('main') || document.querySelector('#main');
+    if (!main) return;
+    var text = main.textContent || main.innerText || '';
+    // Japanese: ~400-500 chars/min. Mixed content: use 500
+    var charCount = text.replace(/\s/g, '').length;
+    var minutes = Math.max(1, Math.round(charCount / 500));
+    meta.textContent = '読了まで約' + minutes + '分';
   })();
 
   // --- Sticky CTA: show after HERO ---
