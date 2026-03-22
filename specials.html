@@ -169,9 +169,16 @@
       display: block;
       font-size: 0.92rem;
       font-weight: 500;
-      color: rgba(235, 232, 225, 0.7);
       letter-spacing: 0.02em;
       line-height: 1.7;
+      background: linear-gradient(90deg, #b8a0d8 0%, #b8a0d8 40%, #e0d0f0 50%, #b8a0d8 60%, #b8a0d8 100%);
+      background-size: 200% 100%;
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: sp-purple-shimmer 5s ease-in-out infinite;
+      will-change: background-position;
+      backface-visibility: hidden;
+      transform: translateZ(0);
     }
     .sp-card p {
       font-size: var(--fs-body);
