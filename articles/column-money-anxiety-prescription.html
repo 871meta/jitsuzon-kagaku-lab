@@ -30,19 +30,119 @@
     .page-header .subtitle { font-size: var(--fs-body); color: var(--text-secondary); }
     p { margin-bottom: 1rem; text-align: justify; }
     strong { font-weight: 700; }
-    h2.section-heading { font-size: var(--fs-h3); font-weight: 700; margin-top: 3.5rem; margin-bottom: 1rem; line-height: 1.6; border-bottom: 2px solid var(--accent); padding-bottom: 0.6rem; }
-    h3.subsection-heading { font-size: var(--fs-lead); font-weight: 700; margin-top: 2rem; margin-bottom: 0.8rem; line-height: 1.6; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
-    blockquote { border-left: 3px solid var(--blockquote-border); padding: 0.8rem 1.5rem; margin: 1.5rem 0; color: var(--text-secondary); background: rgba(255,255,255,0.03); }
+    /* ── セクション見出し：ゴールドシマー ── */
+    h2.section-heading {
+      font-size: var(--fs-h3); font-weight: 700; margin-top: 3.5rem; margin-bottom: 1rem; line-height: 1.6; padding-bottom: 0.6rem;
+      border-bottom: 2px solid rgba(192,168,120,0.35);
+      background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
+      background-size: 200% 100%;
+      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+      animation: gold-shimmer 4s ease-in-out infinite;
+      filter: drop-shadow(0 0 12px rgba(192,168,120,0.2));
+    }
+    @keyframes gold-shimmer { 0%,100% { background-position: 100% 0; } 50% { background-position: -100% 0; } }
+
+    /* ── 小見出し：ゴールドアクセント ── */
+    h3.subsection-heading {
+      font-size: var(--fs-lead); font-weight: 700; margin-top: 2rem; margin-bottom: 0.8rem; line-height: 1.6; padding-bottom: 0.4rem;
+      border-bottom: none; border-left: 3px solid rgba(192,168,120,0.5); padding-left: 0.8rem;
+      color: rgba(235,232,225,0.95);
+      text-shadow: 0 0 20px rgba(192,168,120,0.12);
+    }
+
+    /* ── blockquote：ゴールドボーダー強化 ── */
+    blockquote {
+      border-left: 3px solid rgba(192,168,120,0.5); padding: 1.2rem 1.5rem; margin: 1.5rem 0;
+      color: var(--text-secondary);
+      background: linear-gradient(90deg, rgba(192,168,120,0.06), transparent 40%);
+      border-radius: 0 6px 6px 0;
+    }
     blockquote p:last-child { margin-bottom: 0; }
+
+    /* ── リスト ── */
     .item-list { margin: 1rem 0 1rem 1.5rem; line-height: 2; }
     .item-list li { margin-bottom: 0.4rem; }
-    .core-insight { background: var(--definition-bg); border: 1px solid var(--border); border-left: 4px solid var(--accent); padding: 1.5rem 2rem; margin: 2rem 0; font-size: var(--fs-h3); font-weight: 700; text-align: center; line-height: 1.8; }
-    hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
+
+    /* ── core-insight：ゴールドグロー＋シマーテキスト ── */
+    .core-insight {
+      background: linear-gradient(135deg, rgba(192,168,120,0.08) 0%, rgba(15,12,25,0.6) 50%, rgba(192,168,120,0.06) 100%);
+      border: 1px solid rgba(192,168,120,0.25); border-left: 4px solid #c0a878;
+      padding: 1.8rem 2rem; margin: 2rem 0;
+      font-size: var(--fs-h3); font-weight: 700; text-align: center; line-height: 1.8;
+      box-shadow: inset 0 1px 0 rgba(192,168,120,0.15), 0 0 30px rgba(192,168,120,0.06);
+      backdrop-filter: blur(8px);
+      border-radius: 4px;
+      color: #c0a878;
+      text-shadow: 0 0 24px rgba(192,168,120,0.15);
+    }
+
+    /* ── text-panel：高級カード化 ── */
+    .text-panel {
+      border-left: 2px solid rgba(192,168,120,0.35);
+      background: linear-gradient(90deg, rgba(192,168,120,0.06), transparent 35%);
+      padding: 1.5rem 1.5rem 0.5rem;
+      margin: 1.5rem 0;
+      backdrop-filter: blur(6px);
+      border-radius: 0 6px 6px 0;
+    }
+
+    /* ── pull-quote：パープルシマー ── */
+    .pull-quote p {
+      background: linear-gradient(90deg, #b8a0d8 0%, #b8a0d8 40%, #e0d0f0 50%, #b8a0d8 60%, #b8a0d8 100%);
+      background-size: 200% 100%;
+      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+      animation: purple-shimmer 5s ease-in-out infinite;
+      filter: drop-shadow(0 0 12px rgba(160,130,210,0.2));
+    }
+    @keyframes purple-shimmer { 0%,100% { background-position: 100% 0; } 50% { background-position: -100% 0; } }
+
+    /* ── highlight-block：ゴールドグロー強化 ── */
+    .highlight-block {
+      background: linear-gradient(135deg, rgba(192,168,120,0.1) 0%, rgba(15,12,25,0.7) 50%, rgba(192,168,120,0.08) 100%);
+      border: 1px solid rgba(192,168,120,0.3);
+      border-radius: 6px;
+      padding: 2rem;
+      margin: 3rem 0;
+      box-shadow: 0 0 40px rgba(192,168,120,0.08), inset 0 1px 0 rgba(192,168,120,0.2);
+      backdrop-filter: blur(10px);
+    }
+    .highlight-block p {
+      background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
+      background-size: 200% 100%;
+      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+      animation: gold-shimmer 4s ease-in-out infinite;
+      font-weight: 700; font-size: var(--fs-lead); text-align: center; line-height: 1.8;
+      filter: drop-shadow(0 0 16px rgba(192,168,120,0.25));
+    }
+
+    /* ── 区切り線 ── */
+    hr { border: none; border-top: 1px solid rgba(192,168,120,0.15); margin: 3rem 0; }
+
     .back-nav { margin-top: 4rem; padding: 1.5rem 2rem; background: var(--highlight); border: 1px solid var(--border); text-align: center; }
     .back-nav a { color: var(--accent); text-decoration: none; font-weight: 700; }
     .back-nav a:hover { opacity: 0.7; }
-    @media (max-width: 600px) { html { font-size: 15px; } .page-container { padding: 2rem 1rem 4rem; } .page-header h1 { font-size: var(--fs-h3); } h2.section-heading { font-size: var(--fs-h3); } }
 
+    /* ── 署名 ── */
+    .author-sign {
+      text-align: right; margin-top: 2rem;
+      background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
+      background-size: 200% 100%;
+      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+      animation: gold-shimmer 4s ease-in-out infinite;
+      font-weight: 600;
+      filter: drop-shadow(0 0 8px rgba(192,168,120,0.15));
+    }
+
+    @media (max-width: 600px) {
+      html { font-size: 15px; }
+      .page-container { padding: 2rem 1rem 4rem; }
+      .page-header h1 { font-size: var(--fs-h3); }
+      h2.section-heading { font-size: var(--fs-h3); }
+      .core-insight { padding: 1.4rem 1.2rem; font-size: var(--fs-lead); }
+      .text-panel { padding: 1.2rem 1rem 0.5rem; }
+      .highlight-block { padding: 1.5rem 1.2rem; }
+      .highlight-block p { font-size: var(--fs-body); }
+    }
 
 </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -104,7 +204,7 @@
   </header>
   <div class="reading-progress"></div>
 
-  <div class="pull-quote fade-in"><p>お金の不安は、消えない。消えないことが、処方箋である。</p></div>
+  <div class="pull-quote fade-in"><p>お金の不安は、消えない。<br class="sp-only">消えないことが、処方箋である。</p></div>
 
   <article>
 
@@ -116,11 +216,11 @@
     <p>お金の不安は、消えない。</p>
     <p>消そうとしなくていい。</p>
     <p>消せると思わなくていい。</p>
-    <p>不安が来るのも去るのも、<strong>「Metaの計らい」</strong>である。</p>
-    <p>消えた人がいるとしたら、それもまた計らいの結果であって、意図して消したのではない。</p>
+    <p>不安が来るのも去るのも、<br class="sp-only"><strong>「Metaの計らい」</strong>である。</p>
+    <p>消えた人がいるとしたら、<br class="sp-only">それもまた計らいの結果であって、<br class="sp-only">意図して消したのではない。</p>
     </div>
 
-    <div class="core-insight">これが、自由意志なき世界における、お金の不安に対する最も誠実な処方箋である。</div>
+    <div class="core-insight">これが、自由意志なき世界における、<br class="sp-only">お金の不安に対する<br class="sp-only">最も誠実な処方箋である。</div>
 
     <p>「処方箋」と書いた。</p>
     <p>しかしこの処方箋は、不安を治さない。</p>
@@ -151,10 +251,10 @@
     <p>あの感覚を、私はよく知っている。</p>
 
     <div class="text-panel fade-in">
-    <p>あの人の声にあったのは、<strong>「自分がなんとかしなければならない」</strong>という前提だった。</p>
+    <p>あの人の声にあったのは、<br class="sp-only"><strong>「自分がなんとかしなければならない」</strong><br class="sp-only">という前提だった。</p>
     <p>「自分が動かなければ、この状況は変わらない」</p>
     <p>「自分が稼がなければ、生活が立ちゆかなくなる」</p>
-    <p>──つまり、<strong>自分の意志と行動によって現実を変えられるという前提</strong>で、あの人は苦しんでいた。</p>
+    <p>──つまり、<br class="sp-only"><strong>自分の意志と行動によって<br class="sp-only">現実を変えられるという前提</strong>で、<br class="sp-only">あの人は苦しんでいた。</p>
     <p>自由意志がある、という前提である。</p>
     </div>
 
@@ -167,7 +267,7 @@
     <p>私は「自由意志はない」という前提で世界を見ている。</p>
     <p>Metaがある限り自由意志はない。</p>
     <p>起こることが、起こるときに起こる。</p>
-    <p>お金が入るのも入らないのも、「Metaの計らい」であって、自分の意志で制御できるものではない。</p>
+    <p>お金が入るのも入らないのも、<br class="sp-only">「Metaの計らい」であって、<br class="sp-only">自分の意志で制御できるものではない。</p>
     <p>ここまでは、実存科学の第一公理である。</p>
     </div>
 
@@ -181,7 +281,7 @@
     <p>これは、自由意志の有無とは関係なく起こる<strong>身体反応</strong>である。</p>
 
     <div class="text-panel fade-in">
-    <p>自由意志がないと「知っている」ことと、お金の不安が「起こらない」ことは、別の話である。</p>
+    <p>自由意志がないと「知っている」ことと、<br class="sp-only">お金の不安が「起こらない」ことは、<br class="sp-only">別の話である。</p>
     <p>知っていても来る。</p>
     <p>理解していても来る。</p>
     <p>腹落ちしていても来る。</p>
@@ -192,13 +292,13 @@
     <p>理由は二つある。</p>
 
     <h3 class="subsection-heading fade-in">理由一：Metaの原理との矛盾</h3>
-    <p>不安を消そうとした瞬間、それは「自分の意志で内面を制御しよう」という行為であり、自由意志の行使そのものになる。</p>
+    <p>不安を消そうとした瞬間、<br class="sp-only">それは「自分の意志で内面を制御しよう」<br class="sp-only">という行為であり、<br class="sp-only">自由意志の行使そのものになる。</p>
     <p>Metaの原理と矛盾する。</p>
 
     <h3 class="subsection-heading fade-in">理由二：センサーとしての機能</h3>
     <p>不安は、現象レイヤーのセンサーとして正しく機能している場合がある。</p>
     <p>口座残高が実際に危険な水準にあるなら、体がざわつくのは正常な反応である。</p>
-    <p>「来月の支払いが足りない」という不安は、意味の加工ではなく、現象に対する適切なアラームかもしれない。</p>
+    <p>「来月の支払いが足りない」という不安は、<br class="sp-only">意味の加工ではなく、<br class="sp-only">現象に対する適切なアラームかもしれない。</p>
     <p>そのアラームを消してしまえば、必要な行動すら起きなくなる。</p>
 
     <div class="core-insight">不安は敵ではない。<br>不安は、現象を教えてくれるセンサーである。</div>
@@ -217,8 +317,8 @@
 
     <div class="text-panel fade-in">
     <p>私たちは、資本主義という文脈の中に生まれ落ちた。</p>
-    <p>この文脈は「お金で人を支配できる」という前提の上に構築されており、人類は2000年以上にわたってこの構造を繰り返してきた。</p>
-    <p><strong>「お金がないとダメだ」という信念は、個人の思い込みではなく、文化・社会のレイヤーに刻まれたMetaである。</strong></p>
+    <p>この文脈は<br class="sp-only">「お金で人を支配できる」という前提の上に<br class="sp-only">構築されており、<br class="sp-only">人類は2000年以上にわたって<br class="sp-only">この構造を繰り返してきた。</p>
+    <p><strong>「お金がないとダメだ」という信念は、<br class="sp-only">個人の思い込みではなく、<br class="sp-only">文化・社会のレイヤーに刻まれたMetaである。</strong></p>
     </div>
 
     <p>Metaは「変えられない前提条件」である。</p>
@@ -229,12 +329,12 @@
     <p>その時に体が反応する。</p>
     <p>胸がざわつく。</p>
     <p>先のことを考え始める。</p>
-    <p>これは現象であり、身体反応であり、<strong>Metaの第5層（生物基盤）と第3層（文化・社会）が同時に作動した結果</strong>である。</p>
+    <p>これは現象であり、身体反応であり、<br class="sp-only"><strong>Metaの第5層（生物基盤）と<br class="sp-only">第3層（文化・社会）が<br class="sp-only">同時に作動した結果</strong>である。</p>
 
     <div class="text-panel fade-in">
     <p>「不安をなくそう」と意図した瞬間、それは自由意志の行使になる。</p>
     <p>Metaがある限り自由意志はない。</p>
-    <p>したがって、不安をなくそうとする試み自体が、Metaの原理と矛盾する。</p>
+    <p>したがって、<br class="sp-only">不安をなくそうとする試み自体が、<br class="sp-only">Metaの原理と矛盾する。</p>
     <p><strong>この矛盾が、人をさらに苦しめる。</strong></p>
     </div>
 
@@ -257,7 +357,7 @@
     <h3 class="subsection-heading fade-in">構造</h3>
     <p>「お金がないとダメだ」「稼げない自分には価値がない」「天命で食えなければ天命の価値が下がる」</p>
 
-    <div class="core-insight">多くの場合、苦しみの原因は現象そのものではなく、<br>意味レイヤーと構造レイヤーの混線にある。</div>
+    <div class="core-insight">多くの場合、<br class="sp-only">苦しみの原因は現象そのものではなく、<br>意味レイヤーと構造レイヤーの<br class="sp-only">混線にある。</div>
 
     <p>口座にたった数万円、たった数千円しかないという現象は、ただの数字である。</p>
     <p>その数字に「終わる」「ダメだ」「価値がない」という意味を載せているのは、構造レイヤーで作動している前提である。</p>
@@ -282,11 +382,11 @@
     <p>しかし、そこに至るまでの間に、いくつもの制度と人の手がある。</p>
     </div>
 
-    <div class="core-insight">「お金がなくなったら死ぬ」は、意味レイヤーの解釈である。<br>現象レイヤーでは、人はそう簡単に死なない。</div>
+    <div class="core-insight">「お金がなくなったら死ぬ」は、<br class="sp-only">意味レイヤーの解釈である。<br>現象レイヤーでは、<br class="sp-only">人はそう簡単に死なない。</div>
 
     <p>制度がある。人がいる。時間がある。</p>
     <p>この認識は、不安を消すためのものではない。</p>
-    <p><strong>不安が載せている「意味」の重さを、現象の重さに戻すためのものである。</strong></p>
+    <p><strong>不安が載せている「意味」の重さを、<br class="sp-only">現象の重さに戻すためのものである。</strong></p>
 
     <hr>
 
@@ -338,15 +438,15 @@
     <h2 class="section-heading fade-in">天命との関係</h2>
 
     <div class="text-panel fade-in">
-    <p>以前、私は「天命の言語化セッション™だけが唯一の収入源であるべきだ」という無意識の前提に囚われていた。</p>
-    <p>この構造に気づき、手放した過程は<a href="column-meta7-misalignment.html" style="color: var(--accent); text-decoration: underline;">「天命で稼ぐという誤配列に気づいた話」</a>に詳しく書いた。</p>
+    <p>以前、私は<br class="sp-only">「天命の言語化セッション™だけが<br class="sp-only">唯一の収入源であるべきだ」という<br class="sp-only">無意識の前提に囚われていた。</p>
+    <p>この構造に気づき、手放した過程は<br class="sp-only"><a href="column-meta7-misalignment.html" style="color: var(--accent); text-decoration: underline;">「天命で稼ぐという誤配列に気づいた話」</a><br class="sp-only">に詳しく書いた。</p>
     </div>
 
     <p>この前提を手放した時、深い静止が訪れた。</p>
 
     <div class="core-insight">天命は天命の高さに保ち、収入は現象に任せる。</div>
 
-    <p>この分離が成立した時、天命は濁りを失い、収入は「起こることが起こる」という「Metaの計らい」に戻った。</p>
+    <p>この分離が成立した時、<br class="sp-only">天命は濁りを失い、<br class="sp-only">収入は「起こることが起こる」という<br class="sp-only">「Metaの計らい」に戻った。</p>
     <p>お金の不安が来ても、天命の高さは変わらない。</p>
     <p>口座残高と天命は、別のレイヤーにある。</p>
     <p><strong>これを混ぜた瞬間に、天命が濁り、不安が増幅される。</strong></p>
@@ -378,18 +478,18 @@
     <p>この問いが立った瞬間、不安との関係が変わる。</p>
     <p>不安を消そうとしているのではない。</p>
     <p>不安を我慢しているのでもない。</p>
-    <p><strong>不安がある。それはそれとして、今この瞬間を楽しむ。</strong></p>
+    <p><strong>不安がある。それはそれとして、<br class="sp-only">今この瞬間を楽しむ。</strong></p>
 
     <div class="core-insight">不安と楽しさは、同じ瞬間に共存できる。</div>
 
     <p>これは不安の否定ではない。</p>
     <p>不安があるまま、楽しいを選ぶということである。</p>
-    <p>自由意志なき世界を軽く生きるための力があるとすれば、それは<strong>「楽しむ力」</strong>である。</p>
+    <p>自由意志なき世界を<br class="sp-only">軽く生きるための力があるとすれば、<br class="sp-only">それは<strong>「楽しむ力」</strong>である。</p>
 
     <div class="text-panel fade-in">
     <p>起こることが起こる。起こるべきことが起こる。</p>
     <p>その中には不安も含まれるし、恐怖も含まれる。</p>
-    <p>しかし、同じ「起こること」の中には、朝の空気も、ふとした静けさも、誰かの笑い声も含まれている。</p>
+    <p>しかし、同じ「起こること」の中には、<br class="sp-only">朝の空気も、ふとした静けさも、<br class="sp-only">誰かの笑い声も含まれている。</p>
     <p>どちらも現象である。</p>
     <p>であれば、楽しい方を見ていい。</p>
     </div>
@@ -397,9 +497,9 @@
     <p>不安をなくそうとしないこと。</p>
     <p>そして、不安があるまま、楽しむこと。</p>
 
-    <div class="highlight-block fade-in"><p>これが、自由意志なき世界における、最も静かで、最も誠実な処方箋である。</p></div>
+    <div class="highlight-block fade-in"><p>これが、自由意志なき世界における、<br class="sp-only">最も静かで、最も誠実な処方箋である。</p></div>
 
-    <p style="text-align: right; margin-top: 2rem; color: var(--text-secondary);">箭内宏紀　実存科学研究所</p>
+    <p class="author-sign">箭内宏紀　実存科学研究所</p>
 
   </article>
 </div>
