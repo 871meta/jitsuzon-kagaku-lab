@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-frieren/fern.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>フェルンのMeta ── 自由意志なき世界の天命論 | 実存科学研究所</title>
+  <meta name="description" content="『葬送のフリーレン』のフェルンを、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。崖の上で凍結した少女が「一緒にいたい」を選ぶまでの構造。">
+  <meta property="og:title" content="フェルンのMeta ── 自由意志なき世界の天命論 | 実存科学研究所">
+  <meta property="og:description" content="『葬送のフリーレン』のフェルンを、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。崖の上で凍結した少女が「一緒にいたい」を選ぶまでの構造。">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="実存科学研究所">
+  <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+  <meta property="og:url" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-frieren/fern.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"></noscript>
+  <link rel="stylesheet" href="../../css/style.min.css?v=40">
+
+<style>
+/* =============================================
+   視認性・読みやすさ強化CSS
+   ============================================= */
+
+/* === 1. 章見出し — 中央配置＋装飾 === */
+h2.chapter-heading {
+  font-size: var(--fs-section);
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  color: var(--color-text-primary);
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  position: relative;
+  padding-top: 2rem;
+}
+h2.chapter-heading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 1px;
+  background: var(--color-gold);
+}
+h2.chapter-heading::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(192,168,120,0.5), transparent);
+  margin: 1.2rem auto 0;
+}
+.chapter-number {
+  display: block;
+  font-family: var(--font-serif-en);
+  font-size: var(--fs-caption);
+  font-weight: 400;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 0.6rem;
+}
+
+/* === 2. 区切り線 — 装飾付き === */
+hr {
+  border: none;
+  height: auto;
+  background: none;
+  margin: 4.5rem 0;
+  text-align: center;
+  overflow: visible;
+}
+hr::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(192,168,120,0.08) 15%, rgba(192,168,120,0.2) 50%, rgba(192,168,120,0.08) 85%, transparent 100%);
+}
+hr::after {
+  content: "\25C6";
+  display: block;
+  font-size: 0.5rem;
+  color: rgba(192,168,120,0.3);
+  margin-top: -0.35em;
+  letter-spacing: 1em;
+  line-height: 1;
+}
+
+/* === 4. text-panel の単調さ解消 === */
+section > .text-panel:nth-of-type(even) {
+  background: rgba(8, 6, 16, 0.45);
+  border-color: transparent;
+}
+section > .text-panel:nth-of-type(even)::before {
+  display: none;
+}
+
+/* === 5. highlight-block の存在感微増 === */
+.highlight-block {
+  background: rgba(192,168,120,0.06);
+  border-left: 2px solid;
+  border-image: linear-gradient(180deg, var(--color-gold) 0%, rgba(192,168,120,0.15) 100%) 1;
+  padding: 2rem 2rem 2rem 2.2rem;
+  margin: 2.5rem 0;
+}
+.highlight-block p {
+  font-size: var(--fs-lead);
+  font-weight: 500;
+  line-height: 2.2;
+  color: var(--color-text-primary);
+}
+
+/* === 6. セクション見出し（h3） === */
+h3.section-heading {
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  color: var(--color-text-body);
+  letter-spacing: 0.08em;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1.2rem;
+  border-left: 2px solid rgba(192,168,120,0.4);
+  line-height: 1.6;
+}
+
+/* === Profiling Block === */
+.profiling-block {
+  background: rgba(15,12,25,0.5);
+  border: 1px solid rgba(192,168,120,0.1);
+  padding: 2.5rem 2rem;
+  margin: 2rem 0;
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+.profiling-block::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(192,168,120,0.4), transparent);
+}
+.profiling-block h3 {
+  font-size: var(--fs-body);
+  color: var(--color-gold);
+  letter-spacing: 0.15em;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(192,168,120,0.1);
+}
+.profiling-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+.profiling-block ul li {
+  margin-bottom: 1rem;
+  color: var(--color-text-reading);
+  font-size: var(--fs-body);
+  line-height: 1.9;
+  padding-left: 1.6em;
+  position: relative;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(192,168,120,0.04);
+}
+.profiling-block ul li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.profiling-block ul li::before {
+  content: "\2500\2500";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgba(192,168,120,0.35);
+  font-size: 0.75em;
+}
+.profiling-block p {
+  color: var(--color-text-reading);
+  font-size: var(--fs-body);
+  line-height: 1.9;
+  margin-bottom: 1rem;
+}
+.profiling-block p:last-child {
+  margin-bottom: 0;
+}
+
+/* === Session Dialogue — speaker colors === */
+.speaker-yanai { color: var(--color-gold); }
+.speaker-fern { color: #b8a0d8; }
+
+/* === Author Block === */
+.author-block {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(192,168,120,0.15);
+}
+.author-block p { font-size: var(--fs-body); color: var(--color-text-reading); line-height: 2; }
+.author-block strong { color: var(--color-text-body); }
+
+/* === Source Note === */
+.source-note {
+  margin-top: 2rem;
+  font-size: var(--fs-small);
+  color: rgba(235,232,225,0.35);
+}
+
+/* === 7. モバイル対応 === */
+@media (max-width: 600px) {
+  h2.chapter-heading {
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    padding-top: 1.5rem;
+  }
+  .chapter-number {
+    font-size: var(--fs-micro);
+    letter-spacing: 0.25em;
+    margin-bottom: 0.4rem;
+  }
+  h3.section-heading {
+    font-size: var(--fs-lead);
+    margin-top: 2rem;
+    padding-left: 1rem;
+  }
+  hr { margin: 3rem 0; }
+  .profiling-block { padding: 1.5rem 1.2rem; }
+  .highlight-block { padding: 1.5rem 1.2rem 1.5rem 1.4rem; }
+  .text-panel { padding: 2rem 1.5rem; }
+}
+@media (max-width: 480px) {
+  .text-panel p br,
+  .pull-quote p br,
+  .highlight-block p br,
+  .def-box p br { display: none; }
+  h2.chapter-heading { font-size: var(--fs-h3); }
+}
+</style>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="../../index.html" class="site-logo">実存科学研究所</a>
+      <button class="search-toggle" aria-label="検索"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+            <nav class="global-nav">
+        <a href="../../index.html">Top</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">The Meta</button>
+          <div class="nav-dropdown__menu">
+            <a href="../../beginner.html">はじめての方へ</a>
+            <a href="../../lp.html">ダークサイド診断</a>
+            <a href="../../omoidasu/">身体的知性診断</a>
+          </div>
+        </div>
+        <a href="../../session.html">Session</a>
+        <a href="../../founder.html">Founder</a>
+        <a href="../../specials.html">Specials</a>
+      </nav>
+    </div>
+  </header>
+  <div class="reading-progress"></div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="パンくずリスト">
+        <ol class="breadcrumb__list">
+          <li class="breadcrumb__item"><a href="../../index.html" class="breadcrumb__link">TOP</a></li>
+          <li class="breadcrumb__item"><a href="../../specials.html" class="breadcrumb__link">Specials</a></li>
+          <li class="breadcrumb__item"><a href="./" class="breadcrumb__link">葬送のフリーレン篇</a></li>
+          <li class="breadcrumb__item"><span class="breadcrumb__current">フェルンのMeta</span></li>
+        </ol>
+      </nav>
+      <p class="page-hero__sub">Frieren &times; Existential Science</p>
+      <h1 class="hero-title--shimmer">フェルンのMeta</h1>
+      <p class="page-hero__lead">自由意志なき世界の天命論<br>箭内宏紀｜実存科学研究所</p>
+    </div>
+  </section>
+
+  <main class="container article-page">
+
+    <!-- Inline TOC -->
+    <nav class="inline-toc fade-in" aria-label="目次">
+      <details open>
+        <summary>目次</summary>
+        <span class="reading-time"></span>
+        <ol id="inlineTocList"></ol>
+      </details>
+    </nav>
+
+    <!-- ========== ネタバレ注意 ========== -->
+    <div class="text-panel fade-in">
+      <p style="font-size:0.85rem; color:rgba(235,232,225,0.5); text-align:center;">※本稿は『葬送のフリーレン』全体のネタバレを含みます。</p>
+    </div>
+
+    <!-- ========== 導入 ========== -->
+    <section class="fade-in">
+
+      <div class="text-panel fade-in">
+        <p>彼女は甘いものを食べていた。</p>
+        <p>串焼き。焼き菓子。蜂蜜パン。機嫌が悪くなるたびに買い、黙々と食べ、頬を膨らませたまま一言も喋らない。</p>
+        <p>師匠のフリーレンが散財すれば叱り、起きなければ引きずり出し、髪を乾かさなければ説教する。旅程の管理。食事の準備。予算の計算。</p>
+        <p>──「これ私完全にお母さんですよね」と自嘲する十代の少女。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>彼女はゾルトラークを撃った。</p>
+        <p>一般攻撃魔法。基本中の基本。──しかし、その速度は師匠フリーレンが「私よりも速い」と認めるほどだった。</p>
+        <p>魔族リュグナーは防御が間に合わず冷や汗を流した。大魔法使いゼーリエは弟子入りを請うた。史上最年少で一級魔法使い試験に合格した。基本魔法だけで。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>彼女は崖の上に立っていた。</p>
+        <p>九歳。両手に両親の写真。足元は空。南側諸国の戦争がすべてを奪った後、フェルンに残ったのは、飛び降りるための崖だけだった。</p>
+        <p>落ちるのが怖くなかった。怖くなかったということは──もう何も感じていなかったということだ。</p>
+        <p>僧侶ハイターが声をかけた。「今死ぬのは勿体ないと思いますよ」。フェルンは泣いた。落ちるのは怖くなかったのに、優しくされるのが怖かった。</p>
+      </div>
+
+      <div class="pull-quote fade-in">
+        <p>なぜ、あの崖の上の少女は、それほどまでに強くなろうとしたのか。なぜ、師匠より速い魔法を撃てるようになってもなお、「まだ足りない」と言い続けるのか。なぜ、大魔法使いゼーリエの弟子入りの申し出を、一秒の躊躇もなく断ったのか。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>なぜ、甘いものを食べるのか。なぜ、頬を膨らませるのか。なぜ、誰かの世話を焼き続けるのか。</p>
+        <p>その問いの先に、天命がある。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== シャドウ・プロファイリング ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Shadow Profiling</span>シャドウ・プロファイリング</h2>
+
+      <div class="profiling-block fade-in">
+        <h3>【Meta（変えられない前提条件）】</h3>
+        <ul>
+          <li>南側諸国の戦争で両親を失った戦災孤児。世界に自分を知る人間が一人もいなくなる体験──「大切な人は消える」という刻印</li>
+          <li>崖の上で身を投げようとした原初的凍結。感情が停止し、死を恐れないほどの解離状態</li>
+          <li>勇者パーティーの元僧侶ハイターに救われ、聖都シュトラールで育てられる。ハイターは彼女のために酒を断った</li>
+          <li>魔力操作の精度が生得的に異常に高い──フリーレンの探知にすらほぼ引っかからない。「努力で強くなった」のではなく、「強くなれてしまう器」を持って生まれた</li>
+          <li>人間。エルフではない。師匠フリーレンより先に死ぬ存在。フリーレンにとっての「二度目のヒンメル」になり得る宿命</li>
+        </ul>
+      </div>
+
+      <div class="profiling-block fade-in">
+        <h3>【シャドウ（抑圧された本音）】</h3>
+        <ul>
+          <li>覆い方の類型：凍結＋偽装の複合型。崖の上で感情を凍結させ、ハイターに救われた後に「生真面目さ」という偽装で凍結面を覆い直した。潔癖な几帳面さ、フリーレンの保護者役、甘いもので感情を代理充足する行動パターン──すべてが偽装の道具</li>
+          <li>S4「本音を出したら居場所を失う」：弱さを見せたら見捨てられる──崖の上の凍結体験から派生した根源的恐怖</li>
+          <li>S1「ありのままでは無価値だ」：救われた子供としての無価値感。「拾ってよかった」と思わせなければ存在が正当化されない</li>
+          <li>核心：「ただ、そばにいてほしかった」──強さも魔法も恩返しも、すべては「見捨てられないための条件」だった</li>
+          <li>非合理的信念：「弱さを見せたら、見捨てられる。強くなければ、一緒にいてもらえない」</li>
+          <li>深層の欲求：弱くても、ダメでも、条件なしに一緒にいてくれる人がいること</li>
+          <li>代償行動：(1)過度な生真面目さ──「ちゃんとしていれば見捨てられない」 (2)フリーレンの保護者役──世話を焼くことで「一緒にいる理由」を自己生成 (3)感情の凍結──「むっすー」以上の感情表出を抑制 (4)甘いもので感情を代理充足 (5)努力の加速──「いずれでは間に合わない」という切迫感</li>
+        </ul>
+      </div>
+
+      <div class="profiling-block fade-in">
+        <h3>【ゼーリエとの対比】</h3>
+        <p style="font-size:0.85rem; color:#c0bbb4; margin-bottom:1.5rem; line-height:1.8;">フランメの系譜、圧倒的な魔法の才能、千年の時間の重み──同じ前提条件の中で、「力」と「絆」の選択が正反対に分岐した。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-bottom:0.8rem;">ゼーリエは力を選び続けた。千年以上を生き、無数の弟子を育て、弟子が死に、また次の弟子を取る。弟子は「有用な道具」であり、弟子の死は「交換可能な喪失」でしかない。頂点にいて、誰よりも遠い。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-bottom:0.8rem;">フェルンは絆を選んだ。「嫌です」の一言で弟子入りを断り、フリーレンのそばに留まった。力では遠く及ばないエルフの傍で、人間の時間を生きることを選んだ。遠い場所から来て、近い場所にいる。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2;">ゼーリエはフェルンに自分の「あり得たかもしれないもう一つの姿」を見たのかもしれない。フリーレンを選んだフェルンに、かつてフランメを選ばなかった自分の影を。</p>
+      </div>
+
+      <div class="profiling-block fade-in">
+        <h3>【フリーレンとの対比】</h3>
+        <p style="font-size:0.85rem; color:#c0bbb4; margin-bottom:1.5rem; line-height:1.8;">師弟でありながら、構造は鏡像的に反転している。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-bottom:0.8rem;">フリーレンの核心的欠落は「知ろうとしなかったこと」──千年以上を生きながら、ヒンメルを知ろうとしなかった後悔。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-bottom:0.8rem;">フェルンの核心的欠落は「知ってもらおうとしなかったこと」──自分の弱さも渇望も、誰にも見せずに凍結させた孤立。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2;">フリーレンが「知ること」を学ぶ旅をしているなら、フェルンは「知られること」を受け入れる旅をしている。蝶の髪飾りの場面は、この二つの旅が交差した瞬間だった。</p>
+      </div>
+
+      <div class="profiling-block fade-in">
+        <h3>【ハイターとの対比】</h3>
+        <p style="font-size:0.85rem; color:#c0bbb4; margin-bottom:1.5rem; line-height:1.8;">フェルンを救ったハイターもまた、「他者の夢を借りて生きた」人間だった。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-bottom:0.8rem;">ハイターがフェルンを救った動機は「ヒンメルならそうした」。自分自身の意志ではなく、かつての盟友の生き方を参照して行動した。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-bottom:0.8rem;">余命わずかの身でフェルンを育て、酒を断ち、フリーレンに弟子として託すまでのすべてが、「ヒンメルの夢の延長」として構成されていた。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-bottom:0.8rem;">フェルンの「ハイター様に拾ってよかったと思ってもらいたい」という動機は、ハイターの「ヒンメルならそうした」の構造的反復である。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-bottom:0.8rem;">どちらも「自分自身の欲望」ではなく、「他者からの承認」を存在の条件にしている。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-bottom:0.8rem;">ハイターの最期──「間に合いましたか」──は、この構造の完成であると同時に、フェルンへの呪いの完成でもあった。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2;">「間に合った」という安堵は、フェルンに「義務を果たせば存在が正当化される」という信念を決定的に刻み込んだ。</p>
+      </div>
+
+      <div class="profiling-block fade-in">
+        <h3>【天命への転換点】</h3>
+        <ul>
+          <li>喪失：ハイターの死。最後の肉親的存在を失う。「義務を果たした」という達成感の裏に、「また一人になった」という凍結の再起動</li>
+          <li>亀裂：蝶の髪飾りの場面。フリーレンが「知ろうとした」──条件なしに関心を向けられた初めての体験が、「強くなければ一緒にいてもらえない」という信念に亀裂を入れる</li>
+          <li>反転：ゼーリエの弟子入りを断る。「力」よりも「絆」を選択。「最強になること」ではなく「一緒にいること」に天命の方向が確定</li>
+          <li>天命の方向：「遠い場所から来た少女が、もう遠くない場所にいる」──崖の上で全てを失った少女が、再び「失うもの」を持つことを、怖がりながらも選んだ</li>
+        </ul>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>──ここまでが、フェルンの構造の地図だ。しかし、地図は地図でしかない。この構造が本人の口から、本人の声で露呈する瞬間を、見届けてほしい。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== セッション対話 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Session</span>天命の言語化セッション&trade;</h2>
+
+      <div class="session-dialogue fade-in">
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>フェルンさん、セッションに来てくださってありがとうございます。あなたはあなたに何をプレゼントしてあげたいですか？</p>
+        <p class="silence">（沈黙。フェルンは背筋を伸ばし、膝の上で手を組んでいる。杖を壁に立てかけ、姿勢は完璧だ。優等生の座り方。一分の隙もない）</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>&hellip;&hellip;プレゼント、ですか。</p>
+        <p class="silence">（間。考えているのではない。答えを整えている）</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>&hellip;&hellip;強さ、でしょうか。一人で生きていける力。誰にも迷惑をかけず、自分の足で立てる&hellip;&hellip;そういう力を、自分にあげたいです。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、それをプレゼントできていないんですか？</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>できていないわけではないのです。一級魔法使いの称号もいただきましたし、フリーレン様の旅にもお供しています。戦闘でも、足を引っ張ることは&hellip;&hellip;ほとんどないと思います。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>&hellip;&hellip;ほとんど、と言ったのは&hellip;&hellip;まだ足りないからです。フリーレン様に追いつくには、まだまだ修行が必要ですから。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、追いつかなければならないんですか？</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>&hellip;&hellip;それは&hellip;&hellip;フリーレン様の弟子だからです。弟子が師匠の足手まといになるわけにはいきません。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、足手まといになってはいけないんですか？</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>&hellip;&hellip;当たり前のことです。足手まといは迷惑です。迷惑をかける人間は&hellip;&hellip;。</p>
+        <p class="silence">（一瞬、言葉を切る。しかしすぐに丁寧語で覆い直す）</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>&hellip;&hellip;いないほうがいいに決まっています。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="silence">（フェルンの表情は変わらない。むっすーですらない。完璧に整った無表情。だが指先が、わずかに手首のブレスレットに触れている）</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>&hellip;&hellip;変なことを聞きますね、箭内様。迷惑をかけてはいけないなんて、当たり前のことでしょう。セッションというのは、こういうことを聞く場なのですか？</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>&hellip;&hellip;フリーレン様の話をしたほうがいいのではないですか。あの方のほうが、よほど面白い話ができると思いますが。朝は起きませんし、魔導書を見つけると何日も動きませんし、お金の管理もできませんし。私がいないとあの方は&hellip;&hellip;。</p>
+        <p class="silence">（ふと、口を閉じる）</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>&hellip;&hellip;いえ。何でもありません。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>&hellip;&hellip;あの。串焼きはありますか。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>&hellip;&hellip;ないですか。そうですか。</p>
+        <p class="silence">（手が、再びブレスレットに触れる。鏡蓮華のブレスレット。花言葉は「久遠の愛情」。意味も知らずに贈った馬鹿の顔が、一瞬だけ浮かぶ）</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>&hellip;&hellip;わかりました。続けてください。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="silence">（長い沈黙。フェルンは串焼きを求め、フリーレンの話で逸らし、沈黙を無視しようとした。三段階の回避のすべてが通用しなかった。彼女はようやく、姿勢を少しだけ崩す）</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>&hellip;&hellip;ハイター様の話をしてもいいですか。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>&hellip;&hellip;ハイター様は、私を育てるために、大好きだったお酒を断ったのです。あの方は本当にお酒が好きでした。酒は百薬の長なんですよと、いつもおっしゃっていて&hellip;&hellip;。でも、私が来てからは一滴も飲まなかった。私のせいで。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、「私のせいで」なんですか？</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>&hellip;&hellip;私がいなければ、ハイター様はもっと楽に過ごせたはずです。好きなお酒を飲んで、好きなように最期を迎えられたはずです。私はあの方の人生に、突然入り込んだ&hellip;&hellip;余計なものです。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「余計なもの」？</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>&hellip;&hellip;崖の上にいた子供を、たまたま見つけて、拾っただけです。ハイター様が優しいから拾ってくださった。ヒンメル様ならそうしただろうからと。&hellip;&hellip;でも、拾われた側には義務があるのです。「拾ってよかった」と思ってもらえるだけの人間になる義務が。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>あの方は正しいことをしたのです。救ったことを後悔してほしくない。救ってよかったと、もう大丈夫だと、そう思ってほしかったのです。だから私は&hellip;&hellip;早く強くならなければならなかった。</p>
+        <p class="silence">（声に力が入る）</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>「いずれ」ではダメだったのです。いずれでは、ハイター様が死んでしまうから。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、「いずれ」ではダメだったんですか？</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>&hellip;&hellip;ハイター様の身体はもう限界でした。間に合わなければ、私が一人前になったところを見せられないまま、あの方は逝ってしまう。そうしたら、あの方は最期まで私のことを心配したまま死んでいくことになる。</p>
+        <p class="silence">（声が震え始める）</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>それだけは&hellip;&hellip;それだけは嫌だったのです。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>だから四年で詰め込みました。普通なら十年かかるところを。寝る時間を削って、手が震えるまで魔法を撃って。ハイター様が「もう休みなさい」と言っても止められなかった。止まったら間に合わない。止まったら、私がいた意味がなくなる。ハイター様が酒を断ってまで育ててくれた意味が、なくなるのです。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「止められなかった」？</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>&hellip;&hellip;はい。</p>
+        <p class="silence">（間。少しだけ、丁寧語の鎧に罅が入る）</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>&hellip;&hellip;フリーレン様が言ってくださいました。「一人前と言っても遜色ないレベルだよ」と。それをハイター様に伝えたら、あの方は&hellip;&hellip;静かに笑って。</p>
+        <p class="silence">（声がかすれる）</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>「そうですか。間に合いましたか」と。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>あの笑顔を見たとき、私は──ああ、間に合ったのだと。これでハイター様は安心して逝ける。私は義務を果たしたのだと。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「義務」？</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>はい。救われた者の義務です。救ってくれた人に後悔させないこと。それが──。</p>
+        <p class="silence">（突然、口を閉じる。自分の言葉に追いつかれたように）</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>&hellip;&hellip;箭内様。これ以上は答えたくありません。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>聞いてどうするのですか。私は強くなりました。一級魔法使いにもなりました。ハイター様も安心して逝かれました。何も問題はないのです。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>問題はないのです。</p>
+        <p class="silence">（繰り返す。声のトーンが少し高い。自分を納得させるための声）</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>フリーレン様の旅も順調です。シュタルク様も&hellip;&hellip;あの人も、います。私は、ちゃんとやれています。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>ちゃんとやれているのです。甘いものが食べたくなるのは&hellip;&hellip;ただの癖です。フリーレン様の世話を焼くのは、あの方がだらしないからです。別に、私が&hellip;&hellip;。</p>
+        <p class="silence">（言葉が止まる。「私が」の先が出てこない）</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>&hellip;&hellip;別に&hellip;&hellip;寂しいわけでは&hellip;&hellip;。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="silence">（長い沈黙。フェルンの姿勢が、初めて崩れる。背筋が丸くなる。優等生の座り方が、九歳の子供の座り方に戻っていく）</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>&hellip;&hellip;崖の上で。あの日。私は、死のうとしていました。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>両親がいなくなって&hellip;&hellip;世界に、私を知っている人が一人もいなくなって。写真だけ握って、あそこに立って。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>怖くなかったのです。落ちるのが怖くなかった。</p>
+        <p class="silence">（声のトーンが変わる。「〜なのです」の丁寧語が消え始める。地の声が出てくる）</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>それが一番怖いことだと&hellip;&hellip;今ならわかります。怖くなかったということは、もう、何も感じていなかったということです。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>ハイター様が声をかけてくれなかったら、私はそのまま落ちていました。「今死ぬのは勿体ないと思いますよ」と。そのとき、私は──。</p>
+        <p class="silence">（声が小さくなる。ほとんど聞こえない）</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>&hellip;&hellip;泣いた。声を出さずに。落ちるのは怖くなかったのに、あの一言が怖かった。優しくされるのが怖かった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>また、失うものができてしまうから。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、「失うもの」が怖いんですか？</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>&hellip;&hellip;大切な人は、いなくなる。両親がそうだった。ハイター様もそうだった。フリーレン様は千年以上生きるエルフだから&hellip;&hellip;私のほうが先に&hellip;&hellip;。</p>
+        <p class="silence">（言葉が途切れる）</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>だから、せめて迷惑をかけない人間でいなければ。強い人間でいなければ。ちゃんとした人間でいなければ。そうでなければ、一緒にいる理由がなくなってしまう。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>「一緒にいる理由」？</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>&hellip;&hellip;強いから弟子にしてもらえる。役に立つから旅に連れて行ってもらえる。ちゃんとしているから、見捨てられない。</p>
+        <p class="silence">（自分の声を聞いて、初めて気づくように）</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>&hellip;&hellip;そういうことなのです。だから私は強くなった。ゾルトラークを誰よりも速く撃てるようになった。フリーレン様の生活の面倒を見ている。旅程も管理している。全部&hellip;&hellip;全部、ちゃんとやっている。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>&hellip;&hellip;でも。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="silence">（沈黙。フェルンの指がブレスレットを握っている。花言葉も知らずに贈った馬鹿。三時間かけて選んだ馬鹿）</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>&hellip;&hellip;ゼーリエ様が、弟子にならないかとおっしゃったとき。あの方のもとに行けば、もっと強くなれた。フリーレン様より高い場所に行けたかもしれない。なのに私は&hellip;&hellip;嫌ですと言った。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>なぜ断ったのか、あのときは自分でもよくわからなかった。フリーレン様の弟子だからと言いました。それは本当です。でも、理由は、それだけではなかった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>怖かった。フリーレン様のそばを離れるのが。シュタルク様のそばを離れるのが。また&hellip;&hellip;何もない場所に戻るのが。</p>
+        <p class="silence">（声が変わる。丁寧語が完全に消える。九歳の子供の声に戻っている）</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>&hellip;&hellip;私は。</p>
+        <p class="silence">（ブレスレットを両手で握る）</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>ハイター様に、強い子だと思ってもらいたかったわけじゃない。</p>
+        <p class="silence">（涙が落ちる）</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>ただ──もう少しだけ、一緒にいたかった。それだけだった。お酒を断らなくてよかった。魔法を教えなくてよかった。何もしてくれなくてよかった。ただ──あの家で、一緒にいてくれるだけでよかった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>強くなりたかったのは──一緒にいてもらうための条件だと思っていたから。弱い子は捨てられると思っていたから。でも──ハイター様は、弱い私を拾った。崖の上の、何もできない九歳の私を。強かったから拾ったんじゃない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>わかっていた。ずっとわかっていた。認めるのが怖かった。認めてしまったら、強くなる理由がなくなると思ったから。</p>
+        <p class="silence">（長い沈黙。涙が止まらない。しかし声は静かだ）</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>&hellip;&hellip;でも、なくならなかった。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>フリーレン様が蝶の髪飾りをくれたとき。何が欲しいかわからなくて、一生懸命選んでくださった。あのとき私は──「知ろうとしてくれたことが嬉しい」と言った。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>あれは本当のこと。知ろうとしてくれた。それだけで十分だった。強いから好かれたんじゃない。役に立つから一緒にいるんじゃない。フリーレン様は、私を知りたいと思ってくれた。それだけで。</p>
+        <p class="silence">（静かに息を吸う。涙を拭う。しかし、声に力が戻ってくる）</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>&hellip;&hellip;都合がよすぎるかもしれない。こんな簡単なことを、ずっと信じられなかった自分が情けない。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>&hellip;&hellip;本当にそうなのか、まだわからない。また一人になるかもしれない。フリーレン様より先に死ぬ。それは変わらない。シュタルク様だって──いつか──。</p>
+        <p class="silence">（声が震える。しかし、止まらない）</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>でも。シュタルク様がブレスレットを選ぶのに三時間かけたと聞いたとき。花言葉の意味も知らないで、ただ「これがいい」と思って選んだと聞いたとき。あの人は馬鹿だけど──。</p>
+        <p class="silence">（微笑む。泣きながら）</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>大切なものが増えていくのが、嬉しい。戦争で故郷も何もかも失ってしまったから。こうして大事なものが増えていくのが。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>崖の上の私は、もう何も持っていなかった。でも今は──蝶の髪飾りがある。鏡蓮華のブレスレットがある。フリーレン様がいる。シュタルク様がいる。ハイター様がくれた杖がある。</p>
+        <p class="line-yanai"><span class="speaker-yanai">箭内：</span>&hellip;&hellip;。</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>失うのは怖い。今でも。でも──。</p>
+        <p class="silence">（ブレスレットを撫でる。静かに）</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>ハイター様は、ヒンメル様に救われて、私を救った。フリーレン様は、ハイター様に託されて、私を弟子にしてくれた。私も──私も、誰かに渡せるものがあるかもしれない。強さじゃなくて。「一緒にいたい」と思う気持ちを。</p>
+        <p class="silence">（間）</p>
+        <p class="line-character"><span class="speaker-fern">フェルン：</span>&hellip;&hellip;それが、私の旅の理由です。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== セッション解説 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Session Analysis</span>セッション解説</h2>
+
+      <div class="text-panel fade-in">
+        <p>このセッションで私が最も注意深く待ったのは、フェルンの言語的装甲が解体される瞬間だった。</p>
+        <p>彼女の「〜なのです」「〜でしょうか」という丁寧語は、生真面目さの表出であると同時に、感情を凍結させたまま世界と接触するための防護壁として機能していた。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>セッションの前半、フェルンは三段階の回避を試みた。</p>
+        <p>第一に、串焼きの要求──感情的な場から物理的に逃れようとする。第二に、フリーレンの話で逸らす──「私の話より面白い人がいます」という自己消去。第三に、「これ以上は答えたくありません」という直接的な拒否。</p>
+        <p>私はそのすべてに沈黙で応じた。沈黙は、フェルンの回避パターンを映す鏡として機能した。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>崖の上の記憶に触れた瞬間、言語構造に変化が起きた。「〜なのです」が消え、「怖かった」「泣いた」という短い断言に変わった。これは丁寧語という装甲の解除であり、凍結されていた九歳の感情が融解し始めたことの言語的証拠だ。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>一撃──「ただ、もう少しだけ、一緒にいたかった」──の瞬間、丁寧語は完全に消滅していた。残っていたのは、九歳の子供の声だけだった。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>そしてセッションの最後の一文──「それが、私の旅の理由です」──で丁寧語が戻る。しかしそれは鎧としての丁寧語ではなく、確信の一言だ。留保も躊躇もない。</p>
+        <p>同じ言語構造が、Metaの産物から天命の表現へと質的に変容した瞬間だった。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>「なぜ？」は、フェルンが「当たり前」だと思い込んでいた前提──「迷惑をかけてはいけない」「強くなければならない」──の根拠を、本人自身に検証させる装置として機能した。</p>
+        <p>「何のために？」は直接問いかけていないが、フェルン自身がセッションの最後にその問いに到達した。</p>
+        <p>強さは何のためだったのか。一緒にいてもらうためだった。しかし、一緒にいてもらうのに強さは必要なかった。この矛盾を、フェルンは自分で発見した。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>私は一度も、答えを与えていない。</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- ========== 中間CTA ========== -->
+    <section class="cta-block fade-in">
+      <div class="container">
+        <p class="cta-block__desc" style="margin-bottom:1.2rem;">上のセッションでフェルンに行ったことと、同じことを、あなたに対して行います。</p>
+        <h2 class="cta-block__title">天命の言語化セッション&trade;</h2>
+        <p class="cta-block__desc">2時間で天命が言語化できる場所。</p>
+        <div class="cta-block__features">
+          <span class="cta-block__feature">Zoom完結</span>
+          <span class="cta-block__feature">事前学習不要</span>
+          <span class="cta-block__feature">対話のみ</span>
+        </div>
+        <a href="../../trial.html" class="btn">無料トライアルに申し込む &rarr;</a>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== 本文導入 ========== -->
+    <section class="fade-in">
+      <div class="text-panel fade-in">
+        <p>ここからは、フェルンの構造を、物語の時系列に沿って解体していく。</p>
+        <p>セッション対話では本人の口から露呈したものを、本文では私の視点から構造として記述する。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== 第1章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading fade-in"><span class="chapter-number">Chapter One</span>崖の上の凍結──二つの喪失がもたらした原初のMeta</h2>
+
+      <div class="text-panel fade-in">
+        <p>フェルンの存在を規定するMeta（前提構造）は、五つの層から成り立っている。そのすべてが、彼女自身が選んだものではない。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>第一の層、生物基盤。人間の女性として南側諸国に生まれた。魔力操作の精度は生得的に異常に高く、フリーレンが初見で「魔力探査にほとんど引っかからない」と内心で驚嘆するレベルだった。</p>
+        <p>これは努力の産物ではない。生まれ持った器の形だ。強くなれてしまう体に生まれたこと自体が、彼女のMetaの第一層を形成している。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>第二の層、記憶と情動。崖の上の凍結体験──これがすべての起点だ。</p>
+        <p>両親を戦争で失い、世界に自分を知る人間が一人もいなくなった九歳の少女は、崖の縁で感情を凍結させた。落ちるのが怖くなかった。怖くなかったということは、もう何も感じていなかったということだ。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>ハイターの声が凍結を中断させた。「今死ぬのは勿体ないと思いますよ」。フェルンは泣いた。落ちるのは怖くなかったのに、優しさが怖かった。</p>
+        <p>──「大切な人ができると、失ったときにまた壊れる」。この恐怖が、以降のすべての行動を規定するシャドウ（抑圧された影）の原型となる。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>しかしハイターは去らなかった。酒を断ち、フェルンを育てた。凍結は完全には維持できなくなる。感情が融け始める。</p>
+        <p>その融解を、彼女は別の鎧で覆い直した。「ちゃんとした人間でいなければならない」という鎧で。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>これはリヴァイ・アッカーマンの潔癖症と構造的に相似している。リヴァイが「拭く」行為で仲間の血の記憶を贖い続けたように、フェルンは「ちゃんとする」行為で崖の上の凍結を覆い続けている。どちらも、本人がその意味に気づいていない強迫反復だ。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>第三の層、文化と社会。聖都シュトラールで育てられた宗教的・規律的な環境Meta。ハイターは司教であり、フェルンの几帳面さにはこの養育環境の刻印がある。</p>
+        <p>さらに、フリーレンの弟子として「エルフの時間感覚」に浸される特殊な文化的位置に立たされた。千年を生きるエルフの傍で、人間の短い命を生きるという構造は、フェルンの「今を大切にする」姿勢と「失うことへの恐怖」を同時に強化する。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>第四の層、価値観と信念。「救ってくれた人に後悔させてはいけない」──これがフェルンの核心的信念であり、セッション対話で「義務」と呼ばれたものだ。</p>
+        <p>この信念は非合理的信念として機能する。ハイターは「後悔させないため」に拾ったのではない。「ヒンメルならそうした」から拾ったのだ。しかしフェルンはそれを「条件付きの救済」として受け取った。</p>
+        <p>無条件の善意を、条件付きの契約に変換してしまう認知構造──これが、彼女のシャドウの最深部を形成している。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>第五の層、言語構造。「〜なのです」「〜でしょうか」「〜ですから」──丁寧語は生真面目さの表出であると同時に、感情を凍結させたまま世界と接触するための防護壁として機能する。</p>
+        <p>セッション対話の中で観察されたように、この言語的装甲は二段階で解体された。崖の記憶に触れた瞬間に丁寧語が消え始め、一撃の瞬間に完全に消滅し、天命の言語化の瞬間に──鎧ではなく自分の言葉として──再構築された。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>Metaがある限り自由意志は存在しない（M &rArr; &not;F）。フェルンが「自分の意志で」強くなったと感じているとしても、その意志自体が崖の上の凍結と、ハイターの優しさと、「また失うかもしれない」という恐怖によって構造的に生成されたものだ。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== 第2章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading fade-in"><span class="chapter-number">Chapter Two</span>「いずれではダメなのです」──シャドウの加速装置</h2>
+
+      <div class="text-panel fade-in">
+        <p>ハイターの死期が近づいたとき、フェルンのシャドウは最も純粋な形で駆動した。</p>
+        <p>通常十年かかる魔法の修行を四年で走破する。寝る時間を削り、手が震えるまで魔法を撃ち続ける。ハイターが休めと言っても止まらない。</p>
+        <p>「いずれではダメなのです」──この言葉は、フェルンの非合理的信念の最も切迫した表出だ。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>表面的には「恩返し」に見える。しかし構造を見れば、これは「見捨てられる前に、見捨てられない自分になる」という生存戦略だ。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>ハイターが死ぬ前に一人前になれなければ、ハイターは「この子を救ったのは間違いだったかもしれない」と思って死んでいく──フェルンはそう信じている。</p>
+        <p>だが実際には、ハイターにそのような思いはなかった。彼がフェルンを救ったのは「ヒンメルならそうした」からであり、フェルンの強さとは無関係だ。フェルンの努力は、存在しない条件を満たすための疾走だった。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>ここに、実存科学が定義するシャドウの構造が鮮明に見える。</p>
+        <p>シャドウとは「抑圧された未成熟な人格側面」であり、天命への整合を阻害する未整合の構造だ。フェルンが抑圧しているのは「弱くてもそばにいてほしい」という素朴な渇望であり、その渇望を覆い隠すために「強い自分」を差し出し続ける。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>しかし、シャドウは欠陥ではない。天命が形になるための必須の素材だ。</p>
+        <p>フェルンの生真面目さ、努力、几帳面さ──これらはすべてシャドウの産物だが、同時に、彼女を一級魔法使いにまで押し上げた推進力でもあった。シャドウが統合されるとき、同じ力が別の動機で駆動し始める。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>フリーレンが「一人前だ」と認め、ハイターが「間に合いましたか」と微笑んだとき、フェルンは「義務を果たした」と感じた。しかし義務の完了は、構造の解消ではない。</p>
+        <p>ハイターが死んでも、「強くなければ見捨てられる」という信念は消えない。むしろ、ハイターという「見捨てない人」を失ったことで、信念はさらに強化された。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>「間に合いましたか」──あのハイターの笑顔は、安堵であると同時に、呪いの完成でもあった。「義務を果たせば存在が正当化される」という認知構造を、最も温かい形で刻み込んだのだ。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== 第3章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading fade-in"><span class="chapter-number">Chapter Three</span>保護者の逆転──世話を焼くことの構造的意味</h2>
+
+      <div class="text-panel fade-in">
+        <p>フリーレンとの師弟関係は、フェルンのシャドウが最も巧妙に偽装される場所だ。</p>
+        <p>フェルンはフリーレンの保護者役を完璧にこなす。朝起こし、食事を用意し、散財を戒め、髪を乾かすよう注意し、旅程を管理する。フリーレンが寝言で「お母さん&hellip;&hellip;」と呟けば「誰がお母さんですか」と怒る。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>読者の多くはこれを微笑ましいコメディとして受容している。しかしここに、フェルンのシャドウの最も精緻な偽装がある。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>「世話を焼く」行為は、「一緒にいる理由」の自己生成装置として機能している。フリーレンがだらしないほど、フェルンの存在は正当化される。「私がいなければフリーレン様は生活できない」──この認知は、「私がいなくても大丈夫かもしれない」という現実に直面することを回避させる。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>さらに深い層がある。フェルンがフリーレンの世話を焼くという構造は、「かつてハイターにしてもらいたかったこと」の反転投影でもある。</p>
+        <p>ハイターは酒を断ち、自分を犠牲にしてフェルンの面倒を見た。フェルンはその構造を無意識に引き受け、今度は自分がフリーレンの面倒を見る側に立った。</p>
+        <p>「世話をする側」に立つことで、「世話をされる側」の脆弱さを二度と経験しなくて済む。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>これは実存科学における「継承の鎧」の変形だ。ハイターの献身的な養育パターンを内面化し、同じ構造を自分が演じ直すことで、シャドウを覆い隠している。</p>
+      </div>
+
+      <h3 class="section-heading">蝶の髪飾り──転換点</h3>
+
+      <div class="text-panel fade-in">
+        <p>フリーレンは千年を生きるエルフでありながら、かつてヒンメルを「知ろうとしなかった」ことを悔やんでいた。フェルンの誕生日に髪飾りを選んだ行為は、「今度こそ知ろうとする」というフリーレンの変化の証明だった。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>フェルンの返答──「知ろうとしてくれたことが嬉しい」──は、「強さ＝一緒にいてもらえる条件」という等式に初めて亀裂を入れた一言だ。知ろうとされること。条件なしに、関心を向けられること。それは、崖の上の九歳の少女が最も必要としていたものだった。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>しかし、この亀裂はまだ小さい。フェルンはこの瞬間以降も世話を焼き続ける。信念の構造は、一つの出来事では崩壊しない。亀裂が入っただけだ。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== 第4章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading fade-in"><span class="chapter-number">Chapter Four</span>「嫌です」──ゼーリエの前で天命が起きた</h2>
+
+      <div class="text-panel fade-in">
+        <p>一級魔法使い試験の最終段階で、ゼーリエはフェルンに弟子入りを申し出た。</p>
+        <p>ゼーリエは千年を超える大魔法使いであり、フリーレンの同門である。彼女のもとで学べば、フェルンは「未だかつて魔法使いがたどり着いたことのない高み」に到達できるとゼーリエは言った。魔法使いとしては断る理由がない申し出だ。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>フェルンの答えは即答だった。「嫌です」。そして「私は、フリーレン様の弟子です」。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>この瞬間の構造的意味を見逃してはならない。</p>
+        <p>フェルンのシャドウの核心は「強くなければ見捨てられる」だった。ゼーリエの申し出は、その信念の究極的な充足を約束するものだ。最強になれる。誰にも見捨てられない力を手に入れられる。</p>
+        <p>──しかしフェルンはそれを断った。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>つまり、「強さ＝一緒にいてもらえる条件」という等式が、この瞬間に崩壊したということだ。フェルンは「最強になること」よりも「一緒にいること」を選んだ。条件を満たす手段を捨てて、条件なしの絆を選んだ。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>これは「する」でもなく「される」でもない。実存科学における中動態（Middle Voice）として──出来事が「私を通して起きた」と語るべき瞬間だ。フェルンが「選んだ」のではない。崖の上から始まったMetaの構造が、ハイターの優しさとフリーレンの髪飾りとシュタルクのブレスレットを通過して、必然的にあの「嫌です」に収束したのだ。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>ゼーリエとフェルンは鏡像の関係にある。同じ魔法の才能を持ちながら、ゼーリエは千年以上にわたって力を選び続け、弟子を道具として扱い、頂点の孤独に至った。フェルンは十代の少女でありながら、力ではなく絆を選んだ。</p>
+        <p>ゼーリエがフェルンに見たものは何だったのか。「有望な魔法使い」だけではない。「自分が千年前に選ばなかった道」を選んだ少女の姿だったのかもしれない。フランメの傍に留まらず、力の頂点を選んだかつての自分。その分岐点の「もう一つの出力」が、目の前に立っていた。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>フリーレンはこの瞬間を「人間の時代がやってきた」と評した。</p>
+        <p>しかし、フェルンにとってのこの瞬間の本質は、時代論ではない。もっと個人的で、もっと静かだ。「また一人になるかもしれない」という恐怖を超えて、「一緒にいたい」を選んだ──ただそれだけのことだ。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== 第5章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading fade-in"><span class="chapter-number">Chapter Five</span>「遠い」から「近い」へ──名前が語る天命の着地点</h2>
+
+      <div class="text-panel fade-in">
+        <p>フェルン（Fern）はドイツ語で「遠い」を意味する。</p>
+        <p>戦争が奪った故郷は遠い。死んだ両親は遠い。千年を生きるエルフの師匠の時間は、人間のフェルンには永遠に遠い。</p>
+        <p>人間であるフェルンは、エルフであるフリーレンより先に死ぬ。フリーレンにとって、フェルンはいずれ「葬送」の対象になる──かつてのヒンメルがそうであったように。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>「遠い」という名は、彼女の孤独の刻印であると同時に、物語全体の構造を予告する名前でもある。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>しかし「遠い」には、もう一つの意味がある。遠い場所から来たからこそ、近くにいることの重さを知っている。遠い未来に自分が先に死ぬとわかっているからこそ、今この瞬間の価値が研ぎ澄まされる。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>フリーレンがかつてヒンメルに教えられた「今を大切にする生き方」を、フェルンもまた──フリーレンとは異なる方向から──体現し始めている。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>ヒンメルの優しさがハイターに伝わり、ハイターの救済がフェルンを生かし、フェルンの存在がフリーレンに「知ろうとすること」を教えた。</p>
+        <p>この連鎖は、実存科学における「触媒としての他者」の構造そのものだ。</p>
+        <p>天命の言語化セッション&trade;では、箭内の「問い」がクライアントの内部構造を再起動させる。しかし問いの本質は言語ではなく「構造的刺激」である。</p>
+        <p>──ハイターの「今死ぬのは勿体ない」は問いの形をしていないが、フェルンの凍結された回路を再起動させた。フリーレンの蝶の髪飾りは問いの形をしていないが、フェルンの信念構造に亀裂を入れた。他者の存在そのものが「生きた問い」として機能した。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>フェルンの天命は、まだ完成していない。物語は連載中であり、彼女の旅は続いている。しかし方向性は確定した。</p>
+        <p>天命とは「見つける」ものではなく、Metaが個体に与えた初期条件が必然的に向かう収束点だ。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>フェルンの初期条件は「すべてを失った戦災孤児」。そこから収束する一点は「最強の魔法使い」ではない。「大切な人と一緒にいること」だ。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>崖の上で「何も持っていなかった」少女が、蝶の髪飾りと鏡蓮華のブレスレットと、だらしない師匠と、馬鹿だけど優しい戦士と、修復された杖を抱えて歩いている。大切なものが増えていくことを、怖がりながらも喜んでいる。</p>
+        <p>「遠い」場所から来た少女は、もう遠くない場所にいる。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== 結び ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Conclusion</span>結び</h2>
+
+      <div class="text-panel fade-in">
+        <p>変えられないものがある。</p>
+        <p>両親の死は変えられない。崖の上に立った記憶は消えない。ハイターの死は覆せない。人間であるフェルンは、エルフであるフリーレンより先に死ぬ。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>だが、変えられないものの中で──変えられないものを通して──天命は立ち上がる。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>フェルンが強くなったのは、見捨てられないためだった。しかし、強さが不要だと知った後も、彼女は強くあり続けている。動機が変わったのだ。</p>
+        <p>「条件を満たすための強さ」から、「大切な人と歩き続けるための強さ」へ。同じゾルトラークを撃っている。同じ基本魔法だ。しかし、その魔法の奥にある構造が、根本から変わった。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>あなたの「強さ」は、何のための強さだろうか。</p>
+        <p>「ちゃんとしなければ」は、誰に向けた言葉だろうか。</p>
+        <p>その鎧の内側に──崖の上で凍結させた感情が、まだ残っていないだろうか。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>あなたの中にも、凍結させたままの感情がある。</p>
+        <p>「弱みを見せたら居場所を失う」「この役割を降りたら何も残らない」「ちゃんとしていなければ愛されない」──フェルンの構造は、どこかであなた自身の構造と重なっている。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>天命の言語化セッション&trade;は、上の対話で私がフェルンに行ったことと同じことを、あなたに対して行います。私は答えを与えません。「なぜ？」「何のために？」──問いを渡すだけです。</p>
+        <p>あなたのMetaの中に、あなたの天命はすでに存在しています。それを言語化する120分間を、一度体験してみてください。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== 同シリーズナビ ========== -->
+    <nav class="series-nav fade-in" aria-label="同じシリーズの記事">
+      <p class="series-nav__label">── 同じシリーズの記事 ──</p>
+      <div class="series-nav__list">
+        <a href="./" class="series-nav__link">フリーレンのMeta</a>
+        <span class="series-nav__link is-current">フェルンのMeta</span>
+      </div>
+    </nav>
+
+    <!-- ========== 最終CTA ========== -->
+    <section class="cta-block fade-in">
+      <div class="container">
+        <h2 class="cta-block__title">天命の言語化セッション&trade;</h2>
+        <p class="cta-block__desc">2時間で天命が言語化できる場所。</p>
+        <div class="cta-block__features">
+          <span class="cta-block__feature">Zoom完結</span>
+          <span class="cta-block__feature">事前学習不要</span>
+          <span class="cta-block__feature">対話のみ</span>
+        </div>
+        <a href="../../trial.html" class="btn">無料トライアルに申し込む &rarr;</a>
+      </div>
+    </section>
+
+    <!-- ========== 著者ブロック ========== -->
+    <div class="author-block fade-in">
+      <p><strong>箭内宏紀（やないひろき）</strong><br>
+      実存科学研究所 代表。「天命の言語化セッション&trade;」を提供。「Metaがある限り自由意志は存在しない」（M &rArr; &not;F）を第一公理とする実存科学を提唱。著書に『Metaがある限り──自由意志・自分・他人は存在しない』『自由意志なき世界の歩き方』ほか。<br>
+      <a href="../../index.html">公式サイトはこちら</a>。</p>
+    </div>
+
+    <!-- ========== 出典表記 ========== -->
+    <p class="source-note fade-in">※ 本稿で扱った作品：山田鐘人・アベツカサ『葬送のフリーレン』（小学館、週刊少年サンデー連載、2020年〜）。</p>
+    <p class="source-note fade-in">作品の著作権は原著者・制作会社に帰属します。</p>
+
+  </main>
+
+  <!-- Floating TOC -->
+  <nav class="floating-toc" id="floatingToc" aria-label="目次">
+    <p class="floating-toc__title">Contents</p>
+    <ol class="floating-toc__list" id="floatingTocList"></ol>
+  </nav>
+  <button class="floating-toc-toggle" id="floatingTocToggle" aria-label="目次を開閉">&#9776;</button>
+
+  <script>
+  (function(){
+    var headings = document.querySelectorAll('h2.chapter-heading');
+    var list = document.getElementById('floatingTocList');
+    var toc = document.getElementById('floatingToc');
+    var toggle = document.getElementById('floatingTocToggle');
+    if (!headings.length || !list) return;
+
+    headings.forEach(function(h, i){
+      var id = 'toc-section-' + i;
+      h.id = id;
+      var li = document.createElement('li');
+      li.className = 'floating-toc__item';
+      var a = document.createElement('a');
+      a.className = 'floating-toc__link';
+      a.href = '#' + id;
+      var text = h.textContent.replace(/\s+/g, ' ').trim();
+      var numSpan = h.querySelector('.chapter-number');
+      if (numSpan) {
+        text = text.replace(numSpan.textContent.replace(/\s+/g, ' ').trim(), '').trim();
+      if (text.length > 28) text = text.substring(0, 28) + '\u2026';
+      a.textContent = text;
+      } else {
+        if (text.length > 28) text = text.substring(0, 28) + '\u2026';
+        a.textContent = text;
+      }
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+
+    if (toggle) toggle.addEventListener('click', function(){ toc.classList.toggle('is-open'); });
+  })();
+  </script>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+  <div class="container--wide">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <p class="footer-col__title">The Meta</p>
+        <a href="../../about-existential-science.html">実存科学とは</a>
+        <a href="../../epistemology.html">認識論</a>
+        <a href="../../semantics.html">意味論</a>
+        <a href="../../society.html">社会論</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Contents</p>
+        <a href="../../specials.html">特別シリーズ</a>
+        <a href="../../archives.html">記事一覧</a>
+        <a href="../../video-list.html">動画一覧</a>
+        <a href="../../glossary.html">用語集</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Session</p>
+        <a href="../../session.html">天命の言語化セッション&trade;</a>
+        <a href="../../session-flow.html">セッションの流れ</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Institute</p>
+        <a href="../../founder.html">創始者</a>
+        <a href="../../contact.html">お問い合わせ</a>
+        <a href="../../legal/legal-tokushoho.html">特定商取引法</a>
+        <a href="../../legal/legal-privacy-policy.html">プライバシーポリシー</a>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; 実存科学研究所 ── Existential Science Institute</p>
+  </div>
+</footer>
+
+  <script src="../../js/main.min.js?v=13"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "フェルンのMeta ── 自由意志なき世界の天命論",
+  "description": "『葬送のフリーレン』のフェルンを、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。崖の上で凍結した少女が「一緒にいたい」を選ぶまでの構造。",
+  "author": {
+    "@type": "Person",
+    "name": "箭内宏紀",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/founder.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  },
+  "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-frieren/fern.html",
+  "inLanguage": "ja",
+  "datePublished": "2026-03-27"
+}
+</script>
+  <!-- Search Modal -->
+  <div class="search-overlay">
+    <div class="search-modal"><button class="search-close" aria-label="閉じる">&times;</button>
+      <div class="search-input-wrap">
+        <span class="search-input-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+        <input type="text" class="search-input" placeholder="キーワードで検索..." autocomplete="off">
+      </div>
+      <div class="search-results"></div>
+      <div class="search-hint"><span class="search-hint__desktop">ESC to close · ⌘K to toggle</span><span class="search-hint__mobile">背景タップまたは ✕ で閉じる</span></div>
+    </div>
+  </div>
+</body>
+</html>
