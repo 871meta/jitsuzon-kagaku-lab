@@ -197,6 +197,21 @@ h3.section-heading {
   font-size: 0.75em;
 }
 
+/* === Speaker Colors === */
+.speaker-yanai { color: var(--color-gold); font-weight: 600; font-size: var(--fs-body); }
+.speaker-belfort { color: #b8a0d8; font-weight: 600; font-size: var(--fs-body); }
+
+/* === Profiling Block Paragraphs === */
+.profiling-block p {
+  color: var(--color-text-reading);
+  font-size: var(--fs-body);
+  line-height: 1.9;
+  margin-bottom: 1rem;
+}
+.profiling-block p:last-child {
+  margin-bottom: 0;
+}
+
 /* === CTA Block === */
 /* === Author Block === */
 .author-block {
@@ -244,7 +259,7 @@ h3.section-heading {
   .text-panel p br,
   .pull-quote p br,
   .highlight-block p br,
-  .def-box p br,
+  .def-box p br { display: none; }
 
   h2.chapter-heading { font-size: var(--fs-h3); }
 
