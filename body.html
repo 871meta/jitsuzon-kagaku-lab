@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<html lang="ja" style="--accent: #c0a878;">
+
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/body.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>身体論 — 天命を全うするための身体の方程式 | 実存科学研究所</title>
+  <meta name="description" content="天命（T）とアロスタシス（A）の整合が成立する限り、パフォーマンスはその個体の上限に向かって最大化される。15領域・38名の世界的権威の研究知見を参照枠として設計。">
+  <meta property="og:title" content="身体論 — 天命を全うするための身体の方程式 | 実存科学研究所">
+  <meta property="og:description" content="天命（T）とアロスタシス（A）の整合が成立する限り、パフォーマンスはその個体の上限に向かって最大化される。15領域・38名の世界的権威の研究知見を参照枠として設計。">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="実存科学研究所">
+  <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+  <meta property="og:url" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/body.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"></noscript>
+  <link rel="stylesheet" href="css/style.min.css?v=40">
+  <style>
+    /* --- body.html page-specific styles --- */
+
+    /* Axiom block — the most prominent block */
+    .axiom-block {
+      background: rgba(15, 12, 25, 0.55);
+      border: 2px solid var(--color-gold-a30);
+      border-radius: 12px;
+      padding: 3rem 2.5rem;
+      margin: 2.5rem 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 4px 32px var(--color-gold-a08);
+    }
+    .axiom-block::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--color-gold-a60), var(--color-gold), var(--color-gold-a60), transparent);
+    }
+    .axiom-block__formula {
+      font-family: var(--font-serif-en);
+      font-size: 2rem;
+      font-weight: 500;
+      color: var(--color-gold);
+      letter-spacing: 0.08em;
+      margin-bottom: 1.2rem;
+      line-height: 1.5;
+      filter: drop-shadow(0 0 12px rgba(192,168,120,0.25));
+    }
+    .axiom-block__desc {
+      font-size: var(--fs-body);
+      color: var(--color-text-soft);
+      line-height: 2;
+      max-width: 540px;
+      margin: 0 auto;
+    }
+    .axiom-block__label {
+      font-size: var(--fs-xs);
+      color: var(--color-gold-a50);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    /* TOC nav card */
+    .toc-nav {
+      background: var(--color-panel);
+      border: 1px solid var(--color-gold-a12);
+      border-radius: 10px;
+      padding: 2.5rem 2rem;
+      margin: 2.5rem 0;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 24px var(--color-gold-a05);
+    }
+    .toc-nav::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--color-gold-a40), transparent);
+    }
+    .toc-nav__title {
+      font-size: var(--fs-h3);
+      color: var(--color-gold);
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.05em;
+    }
+    .toc-nav__list {
+      list-style: none;
+      counter-reset: toc;
+    }
+    .toc-nav__list li {
+      counter-increment: toc;
+      margin-bottom: 0.6rem;
+    }
+    .toc-nav__list li a {
+      color: var(--color-text-soft);
+      text-decoration: none;
+      font-size: var(--fs-body);
+      line-height: 1.8;
+      display: inline-block;
+      transition: color 0.3s;
+    }
+    .toc-nav__list li a::before {
+      content: counter(toc) ".";
+      color: var(--color-gold-a50);
+      margin-right: 0.8rem;
+      font-size: var(--fs-small);
+      min-width: 1.8rem;
+      display: inline-block;
+    }
+    .toc-nav__list li a:hover {
+      color: var(--color-gold);
+    }
+
+    /* Equation block */
+    .equation-block {
+      background: var(--color-panel-light);
+      border: 1px solid var(--color-gold-a12);
+      border-radius: 10px;
+      padding: 2.5rem 2rem;
+      margin: 2rem 0;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 2px 24px var(--color-gold-a05);
+    }
+    .equation-block::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--color-gold-a40), transparent);
+    }
+    .equation-block__line {
+      font-family: var(--font-serif-en), var(--font-serif);
+      font-size: 1.15rem;
+      color: var(--color-gold-light);
+      line-height: 2.2;
+      text-align: center;
+    }
+    .equation-block__note {
+      font-size: var(--fs-small);
+      color: var(--color-text-dim);
+      line-height: 1.8;
+      margin-top: 1.5rem;
+      text-align: left;
+    }
+
+    /* Cascade flow */
+    .cascade-flow {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      margin: 2rem 0;
+    }
+    .cascade-flow__step {
+      background: var(--color-panel);
+      border: 1px solid var(--color-gold-a12);
+      border-radius: 8px;
+      padding: 1rem 2rem;
+      text-align: center;
+      font-size: var(--fs-body);
+      color: var(--color-text-soft);
+      position: relative;
+      width: 100%;
+      max-width: 480px;
+      backdrop-filter: blur(6px);
+    }
+    .cascade-flow__step::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--color-gold-a25), transparent);
+    }
+    .cascade-flow__arrow {
+      color: var(--color-gold-a40);
+      font-size: 1.2rem;
+      padding: 0.3rem 0;
+    }
+
+    /* Symbol table & luxury tables */
+    .luxury-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+    }
+    .luxury-table th {
+      background: rgba(192,168,120,0.08);
+      color: var(--color-gold);
+      font-weight: 600;
+      font-size: var(--fs-small);
+      letter-spacing: 0.05em;
+      padding: 0.8rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--color-gold-a25);
+    }
+    .luxury-table td {
+      padding: 0.7rem 1rem;
+      font-size: var(--fs-body);
+      color: var(--color-text-soft);
+      border-bottom: 1px solid var(--color-gold-a08);
+      line-height: 1.8;
+      vertical-align: top;
+    }
+    .luxury-table td:first-child {
+      color: var(--color-gold-light);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .luxury-table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 1.5rem 0;
+    }
+
+    /* Scholar section — accordion per category */
+    .scholar-section {
+      margin: 2rem 0;
+    }
+    .scholar-section details {
+      background: var(--color-panel);
+      border: 1px solid var(--color-gold-a12);
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      backdrop-filter: blur(8px);
+    }
+    .scholar-section details::before {
+      content: "";
+      display: block;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--color-gold-a30), transparent);
+    }
+    .scholar-section summary {
+      padding: 1.2rem 1.5rem;
+      cursor: pointer;
+      font-size: var(--fs-h3);
+      font-weight: 600;
+      color: var(--color-gold);
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background 0.3s;
+    }
+    .scholar-section summary::-webkit-details-marker { display: none; }
+    .scholar-section summary::after {
+      content: "+";
+      font-size: 1.2rem;
+      color: var(--color-gold-a50);
+      transition: transform 0.3s;
+    }
+    .scholar-section details[open] summary::after {
+      content: "\2212";
+    }
+    .scholar-section summary:hover {
+      background: var(--color-gold-a04);
+    }
+    .scholar-section .scholar-content {
+      padding: 0 1.5rem 1.5rem;
+    }
+    .scholar-field {
+      margin-bottom: 2rem;
+    }
+    .scholar-field:last-child {
+      margin-bottom: 0;
+    }
+    .scholar-field__title {
+      font-size: var(--fs-body);
+      font-weight: 600;
+      color: var(--color-gold-light);
+      margin-bottom: 0.5rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--color-gold-a10);
+    }
+    .scholar-field__desc {
+      font-size: var(--fs-small);
+      color: var(--color-text-dim);
+      margin-bottom: 0.8rem;
+      line-height: 1.8;
+    }
+
+    /* Principle list */
+    .principle-list {
+      list-style: none;
+      counter-reset: principle;
+      margin: 2rem 0;
+    }
+    .principle-list li {
+      counter-increment: principle;
+      position: relative;
+      padding: 1.2rem 1.5rem 1.2rem 3.5rem;
+      margin-bottom: 0.8rem;
+      background: var(--color-panel);
+      border: 1px solid var(--color-gold-a08);
+      border-radius: 8px;
+      color: var(--color-text-soft);
+      font-size: var(--fs-body);
+      line-height: 1.8;
+      backdrop-filter: blur(6px);
+    }
+    .principle-list li::before {
+      content: counter(principle);
+      position: absolute;
+      left: 1.2rem;
+      top: 1.2rem;
+      color: var(--color-gold-a40);
+      font-size: var(--fs-h3);
+      font-weight: 700;
+      font-family: var(--font-serif-en);
+    }
+
+    /* Section subtitle */
+    .section-sub {
+      font-size: var(--fs-small);
+      color: var(--color-text-dim);
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+    }
+
+    /* Three-layer flow diagram for priming */
+    .priming-flow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin: 1.5rem 0;
+      flex-wrap: wrap;
+    }
+    .priming-flow__node {
+      background: var(--color-panel);
+      border: 1px solid var(--color-gold-a15);
+      border-radius: 8px;
+      padding: 0.8rem 1.5rem;
+      color: var(--color-gold-light);
+      font-size: var(--fs-body);
+      font-weight: 600;
+      text-align: center;
+      backdrop-filter: blur(6px);
+    }
+    .priming-flow__arrow {
+      color: var(--color-gold-a40);
+      font-size: 1.1rem;
+    }
+
+    /* Emphasis box (page-specific, matching site pattern) */
+    .body-emphasis {
+      background: rgba(15, 12, 25, 0.45);
+      border-left: 4px solid var(--color-gold-a40);
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .body-emphasis p {
+      margin-bottom: 0;
+      color: var(--color-text-primary);
+      font-weight: 600;
+      font-size: var(--fs-lead);
+      line-height: 2;
+    }
+
+    /* Subsection anchor offset */
+    [id] {
+      scroll-margin-top: 80px;
+    }
+
+    /* Content body text */
+    .body-text {
+      font-size: var(--fs-body);
+      line-height: 2;
+      color: var(--color-text-soft);
+      text-align: justify;
+      margin-bottom: 1rem;
+    }
+    .body-text strong {
+      color: var(--color-text-primary);
+      font-weight: 700;
+    }
+
+    /* Note text */
+    .note-text {
+      font-size: var(--fs-small);
+      color: var(--color-text-dim);
+      line-height: 1.8;
+      margin: 1rem 0;
+    }
+
+    /* Definition block reuse */
+    .definition-block {
+      background: var(--color-panel-light);
+      border: 1px solid var(--color-gold-a12);
+      box-shadow: 0 2px 24px var(--color-gold-a05);
+      backdrop-filter: blur(8px);
+      padding: 2.5rem 2rem;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+    .definition-block::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--color-gold-a40), transparent);
+    }
+
+    /* Bullet list styling */
+    .body-list {
+      list-style: none;
+      margin: 1.5rem 0;
+      padding: 0;
+    }
+    .body-list li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.8rem;
+      font-size: var(--fs-body);
+      color: var(--color-text-soft);
+      line-height: 2;
+    }
+    .body-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.85rem;
+      width: 6px;
+      height: 6px;
+      background: var(--color-gold-a40);
+      border-radius: 50%;
+    }
+
+    /* QED block */
+    .qed-block {
+      text-align: center;
+      margin: 2.5rem 0;
+      padding: 2rem;
+      background: var(--color-panel-light);
+      border: 1px solid var(--color-gold-a15);
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(8px);
+    }
+    .qed-block::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--color-gold-a40), transparent);
+    }
+    .qed-block__formula {
+      font-family: var(--font-serif-en);
+      font-size: 1.5rem;
+      color: var(--color-gold);
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 0 8px rgba(192,168,120,0.2));
+    }
+    .qed-block__text {
+      font-size: var(--fs-body);
+      color: var(--color-text-soft);
+      line-height: 2;
+    }
+    .qed-block__qed {
+      font-family: var(--font-serif-en);
+      font-size: 1.2rem;
+      color: var(--color-gold-a50);
+      margin-top: 1.5rem;
+      letter-spacing: 0.15em;
+    }
+
+    /* --- Mobile --- */
+    @media (max-width: 600px) {
+      .axiom-block { padding: 2rem 1.2rem; }
+      .axiom-block__formula { font-size: 1.4rem; }
+      .toc-nav { padding: 2rem 1.2rem; }
+      .equation-block { padding: 2rem 1.2rem; }
+      .definition-block { padding: 2rem 1.2rem; }
+      .cascade-flow__step { padding: 0.8rem 1.2rem; }
+      .principle-list li { padding: 1rem 1.2rem 1rem 3rem; }
+      .body-emphasis { padding: 1.2rem 1.5rem; }
+      .body-emphasis p { font-size: var(--fs-body); }
+      .scholar-section summary { padding: 1rem 1.2rem; font-size: var(--fs-body); }
+      .scholar-section .scholar-content { padding: 0 1rem 1rem; }
+      .luxury-table td, .luxury-table th { padding: 0.5rem 0.6rem; font-size: var(--fs-small); }
+      .priming-flow { flex-direction: column; }
+      .priming-flow__arrow { transform: rotate(90deg); }
+    }
+
+    @media (max-width: 480px) {
+      .text-panel p br,
+      .pull-quote p br,
+      .highlight-block p br,
+      .def-box p br,
+      .quote-block br,
+      .cta-block__desc br {
+        display: none;
+      }
+    }
+  </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "身体論 — 天命を全うするための身体の方程式",
+  "description": "天命（T）とアロスタシス（A）の整合が成立する限り、パフォーマンスはその個体の上限に向かって最大化される。15領域・38名の世界的権威の研究知見を参照枠として設計。",
+  "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/body.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/"
+  }
+}
+</script>
+</head>
+
+<body>
+  <a href="#main" class="skip-link">メインコンテンツへスキップ</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="index.html" class="site-logo">実存科学研究所</a>
+      <button class="search-toggle" aria-label="検索"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+            <nav class="global-nav">
+        <a href="index.html">Top</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">The Meta</button>
+          <div class="nav-dropdown__menu">
+            <a href="beginner.html">はじめての方へ</a>
+            <a href="lp.html">ダークサイド診断</a>
+            <a href="omoidasu/">身体的知性診断</a>
+          </div>
+        </div>
+        <a href="session.html">Session</a>
+        <a href="founder.html">Founder</a>
+        <a href="specials.html">Specials</a>
+      </nav>
+    </div>
+  </header>
+  <div class="reading-progress"></div>
+
+  <!-- Page Hero -->
+  <section class="page-hero" id="main">
+    <div class="container">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="パンくずリスト">
+        <ol class="breadcrumb__list">
+          <li class="breadcrumb__item"><a href="index.html" class="breadcrumb__link">TOP</a></li>
+          <li class="breadcrumb__item"><a href="about-existential-science.html" class="breadcrumb__link">The Meta</a></li>
+          <li class="breadcrumb__item"><span class="breadcrumb__current">身体論</span></li>
+        </ol>
+      </nav>
+      <p style="margin-bottom:2rem;"><a href="about-existential-science.html" style="color:#c0a878; font-size:0.85rem; text-decoration:none; letter-spacing:0.05em;">&larr; THE META</a></p>
+      <svg width="64" height="64" viewBox="0 0 48 48" fill="none" style="display:block;margin:0 auto 1.5rem;">
+        <circle cx="24" cy="24" r="6" stroke="#c0a878" stroke-width=".5" fill="none" opacity=".5"/>
+        <circle cx="24" cy="24" r="12" stroke="#c0a878" stroke-width=".5" fill="none" opacity=".35"/>
+        <circle cx="24" cy="24" r="18" stroke="#c0a878" stroke-width=".5" fill="none" opacity=".2"/>
+        <circle cx="24" cy="24" r="2" fill="#c0a878" opacity=".5"/>
+      </svg>
+      <p class="page-hero__sub fade-in">Body Theory ── Physical Equation for Tenmei</p>
+      <h1 class="hero-title--shimmer fade-in">天命を全うするための身体の方程式</h1>
+      <p class="page-hero__lead fade-in">
+        ── 今の肉体は、天命を全うするに値する身体か。
+      </p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="section">
+    <div class="container">
+
+      <!-- ===================== はじめに ===================== -->
+      <div class="content-block text-panel fade-in">
+        <h2 class="section__title section__title--left">はじめに ── 天命と身体</h2>
+
+        <p class="body-text">
+          <a href="epistemology.html">認識論</a>は「Metaがある限り自由意志はない」（M ⇒ &not;F）と示した。<br>
+          <a href="semantics.html">意味論</a>は「自由意志なき世界において、最も合理的な生き方は、天命を悟り日々全うすることである」と示した。<br>
+          <a href="society.html">社会論</a>は「生きる意味を語れる社会を作るためには、天命を全うし、天命を語り合える関係──すなわち心友──が不可欠である」と示した。
+        </p>
+
+        <p class="body-text">
+          The Meta（三部作）は「どこに向かうか」を示した。<br>
+          天命の言語化セッション&trade;は、その目的地を確定する実践だ。
+        </p>
+
+        <div class="body-emphasis fade-in">
+          <p>では、その目的地に向かう身体はあるか。</p>
+        </div>
+
+        <p class="body-text">
+          身体は、Metaの物理的な現れそのものである。身体の設定値──体温、ホルモンバランス、筋量、神経系の制御精度──は、主体が「選んだ」ものではない。環境と入力の必然的帰結として、今この瞬間に収束している状態だ。
+        </p>
+
+        <p class="body-text">
+          天命はBeing（いかに在るか）の次元に属する。しかしBeingは身体なしには存在しない。身体が劣化すれば、天命への整合プロセスそのものが阻害される。逆に、身体が最適化されれば、整合はより精密に、より速く進行する。
+        </p>
+
+        <p class="body-text">
+          The Meta（三部作）が「どこに向かうか」を示す理論だとすれば、本書は「今の肉体で天命を全うできるのか」を問う基盤である。The Meta（三部作）のすべては、身体が機能していることを暗黙の前提としていた。本書はその前提を明示する。
+        </p>
+
+        <p class="note-text">
+          ※ 天命の定義は<a href="semantics.html">意味論</a>において確立済みであり、本書はその定義を前提とする。本書における天命（T）は「天命の言語化セッション&trade;によって確定された、整合の収束点──生まれてきた意味および生きる目的」として運用される。
+        </p>
+
+        <p class="body-text">
+          本書の方程式は、神経科学、運動生理学、栄養生化学、分子生物学、内分泌学、睡眠医学、免疫学、腸内微生物学、精神神経免疫学、身体性認知科学、筋膜科学、老化生物学──15の学術領域にわたる、ノーベル賞受賞者を含む38名の世界的権威の研究知見を参照枠として設計した。机上の空論ではない。現時点で人類が到達している最高水準のエビデンスを背景とする構造である。
+        </p>
+      </div>
+
+      <hr class="separator">
+
+      <!-- ===================== 目次 ===================== -->
+      <nav class="toc-nav fade-in" aria-label="目次">
+        <p class="toc-nav__title">目次</p>
+        <ol class="toc-nav__list">
+          <li><a href="#転回">転回 ── 健康は状態ではない</a></li>
+          <li><a href="#公理">第一公理</a></li>
+          <li><a href="#定義">天命を全うする身体とは何か</a></li>
+          <li><a href="#全体像">全体像 ── 統合方程式</a></li>
+          <li><a href="#身体">I. 身体のアロスタシス ── 回復</a></li>
+          <li><a href="#認知">II. 認知のアロスタシス ── 合理性</a></li>
+          <li><a href="#行動">III. 行動のアロスタシス ── 継続</a></li>
+          <li><a href="#帰結">帰結</a></li>
+          <li><a href="#原理">構造原理 ── 7つの原理</a></li>
+          <li><a href="#付記">付記 ── 知的基盤（15領域・38名の世界的権威）</a></li>
+        </ol>
+      </nav>
+
+      <hr class="separator">
+
+      <!-- ===================== 転回 ===================== -->
+      <div class="content-block text-panel fade-in" id="転回">
+        <h2 class="section__title section__title--left">転回 ── 健康は状態ではない</h2>
+
+        <p class="body-text">
+          世の中の健康論はすべて、健康を「達成すべき状態」として扱っている。体脂肪率何%、血圧いくつ、BMIいくつ──すべて数値で定義される「状態」だ。その状態に到達すれば「健康になった」と言い、そこから逸脱すれば「不健康になった」と言う。
+        </p>
+
+        <div class="body-emphasis fade-in">
+          <p>しかし健康は状態ではない。</p>
+        </div>
+
+        <p class="body-text">
+          神経科学では、身体の設定値を環境に応じて再調整し続けるプロセスをアロスタシスと呼ぶ。アロスタシスの観点からは、体脂肪率15%は健康ではない。体脂肪率が今この瞬間も最適に向かって更新され続けていることが健康だ。数値が良くても更新が止まっていれば、それは健康ではなく固定──変化のないまま劣化を待つ状態──にすぎない。
+        </p>
+
+        <div class="pull-quote fade-in">
+          <p>健康は「良い/悪い」の問題ではなく、更新が持続しているかどうかの問題として閉じられる。</p>
+        </div>
+
+        <p class="body-text">
+          <a href="epistemology.html">認識論</a>が自由意志を「ある/ない」の問題から「生成可能性」の問題へと転回させたように、身体論は健康を「状態」の問題から「プロセス」の問題へと転回させる。
+        </p>
+
+        <p class="body-text">
+          健康をプロセスとして捉えること自体は、アロスタシス概念の提唱以来、学術的には既知だ。しかし本書の独自性は、そのプロセスに<strong>天命という方向変数</strong>を結合させたことにある。方向なきプロセスは迷走する。天命が方向を与えたとき、プロセスは整合に向かう。
+        </p>
+      </div>
+
+      <hr class="separator">
+
+      <!-- ===================== 第一公理 ===================== -->
+      <div class="content-block fade-in" id="公理">
+        <h2 class="section__title section__title--left">第一公理</h2>
+
+        <div class="axiom-block fade-in">
+          <p class="axiom-block__label">First Axiom</p>
+          <p class="axiom-block__formula">T &middot; A &rArr; P<sub>max</sub></p>
+          <p class="axiom-block__desc">
+            天命（T）とアロスタシス（A）の整合が成立する限り、<br>
+            パフォーマンス（P）はその個体の上限に向かって最大化される。
+          </p>
+        </div>
+
+        <p class="note-text">
+          ※ 本体系における「公理」とは、構造から導かれた不可避の帰結を体系の出発点として宣言したものである。数学における公理（証明なしに受け入れる前提）とは異なり、<a href="epistemology.html">認識論</a>における M &rArr; &not;F と同形式で、構造的閉包を出発点に据える用法である。
+        </p>
+
+        <!-- Symbol Table -->
+        <div class="text-panel fade-in" style="margin-top: 2rem;">
+          <h3 style="font-size: var(--fs-h3); color: var(--color-gold); margin-bottom: 1rem;">記号表</h3>
+          <div class="luxury-table-wrap">
+            <table class="luxury-table">
+              <thead>
+                <tr><th>記号</th><th>意味</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>T</td>
+                  <td>天命（天命の言語化セッション&trade;によって確定された、整合の収束点）</td>
+                </tr>
+                <tr>
+                  <td>A</td>
+                  <td>アロスタシス（身体の設定値を最適に更新し続けるプロセス）</td>
+                </tr>
+                <tr>
+                  <td>P<sub>max</sub></td>
+                  <td>パフォーマンスの最大化（その個体の生物学的条件下での上限への漸近。なお、この上限は加齢とともに変化する。アロスタシスの最適化はその変化の速度を最小化するが、不可逆的な加齢プロセスそのものを停止させるものではない）</td>
+                </tr>
+                <tr>
+                  <td>&rArr;</td>
+                  <td>含意（TとAが成立する限り、P<sub>max</sub>は必然的に生じる）</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Inverse -->
+        <div class="axiom-block fade-in" style="margin-top: 2rem;">
+          <p class="axiom-block__label">Inverse</p>
+          <p class="axiom-block__formula">&not;T &or; &not;A &rArr; &not;P<sub>max</sub></p>
+          <p class="axiom-block__desc">
+            天命が不在であるか、アロスタシスが破綻しているならば、<br>
+            パフォーマンスは最大化されない。
+          </p>
+        </div>
+      </div>
+
+      <hr class="separator">
+
+      <!-- ===================== 天命を全うする身体とは何か ===================== -->
+      <div class="content-block text-panel fade-in" id="定義">
+        <h2 class="section__title section__title--left">天命を全うする身体とは何か</h2>
+
+        <div class="pull-quote fade-in">
+          <p>天命を全うする身体とは、身体を通じた整合が進行し続けている状態である。</p>
+        </div>
+
+        <p class="body-text">
+          アロスタシスが3つの次元で機能し、かつ天命という方向性を持っている状態。
+        </p>
+
+        <p class="note-text">
+          ※ アロスタシスの概念はBruce McEwenらの研究に基づく。ホメオスタシス（一定値の維持）に対し、アロスタシスは「環境に応じて設定値そのものを変える」動的安定を意味する。本書はこの概念を身体・認知・行動の3次元に拡張して運用する。
+        </p>
+
+        <div class="definition-block fade-in" style="margin: 2rem 0;">
+          <p style="font-size: var(--fs-body); line-height: 2; color: var(--color-text-soft);">
+            <strong style="color: var(--color-gold-light);">身体のアロスタシス（回復）。</strong>
+            運動・栄養・睡眠の3入力を通じて、身体の設定値が環境に応じて最適に更新され続けている状態。数値が良いことではなく、更新が持続していることが本質。
+          </p>
+        </div>
+
+        <div class="definition-block fade-in" style="margin: 2rem 0;">
+          <p style="font-size: var(--fs-body); line-height: 2; color: var(--color-text-soft);">
+            <strong style="color: var(--color-gold-light);">認知のアロスタシス（合理性）。</strong>
+            信念・解釈・判断の枠組みが、天命との整合に向かって更新され続けている状態。過去の信念体系に固着せず、新しい情報や経験に応じて認知構造そのものが再編成される。
+          </p>
+        </div>
+
+        <div class="definition-block fade-in" style="margin: 2rem 0;">
+          <p style="font-size: var(--fs-body); line-height: 2; color: var(--color-text-soft);">
+            <strong style="color: var(--color-gold-light);">行動のアロスタシス（継続）。</strong>
+            動機づけと報酬系が、天命との整合に向かって機能している状態。短期的な快楽への収束ではなく、天命に基づく長期的な行動パターンが自動化されている。
+          </p>
+        </div>
+      </div>
+
+      <hr class="separator">
+
+      <!-- ===================== 全体像 ===================== -->
+      <div class="content-block fade-in" id="全体像">
+        <h2 class="section__title section__title--left">全体像 ── 統合方程式</h2>
+
+        <div class="equation-block fade-in">
+          <p class="equation-block__line">健康 ＝ 運動 &times; 栄養 &times; 睡眠 ＝ 回復</p>
+          <p class="equation-block__line">回復 ＝ アロスタシス（身体の設定値を最適に更新し続けるプロセス）</p>
+          <p class="equation-block__line">パフォーマンス ＝ プライミング &times; 健康</p>
+        </div>
+
+        <div class="text-panel fade-in" style="margin-top: 2rem;">
+          <p class="body-text">
+            健康は3つの入力の積である。どれか1つが0なら、全体が0になる。運動だけ、栄養だけ、睡眠だけでは健康は成立しない。
+          </p>
+          <p class="body-text">
+            パフォーマンスは、健康にプライミングを掛け合わせたものである。プライミングとは、その日の身体を天命の遂行に最適化する初期設定──起床後の呼吸・身体操作・状態管理によって、身体と神経系を「今日、天命を全うする」方向に整えるプロセスだ。
+          </p>
+          <p class="body-text">
+            <strong>方法は構造に従属する。</strong>何を食べるか、どう動くか、いつ寝るかは、すべてこの構造の中で位置づけられる。構造なき方法は迷走する。構造を理解すれば、方法は自明に導かれる。
+          </p>
+        </div>
+      </div>
+
+      <hr class="separator">
+
+      <!-- ===================== I. 身体のアロスタシス ===================== -->
+      <div class="content-block fade-in" id="身体">
+        <h2 class="section__title section__title--left">I. 身体のアロスタシス ── 回復</h2>
+
+        <!-- プライミング -->
+        <div class="text-panel fade-in" style="margin-top: 2rem;">
+          <h3 style="font-size: var(--fs-h3); color: var(--color-gold); margin-bottom: 1rem;">プライミング</h3>
+
+          <p class="body-text">
+            プライミングとは、その日の身体を天命の遂行に最適化する初期設定である。起床後の最初の30分に行う3段階のプロセスで、神経系を「今日、天命を全うする」方向に整える。
+          </p>
+
+          <div class="priming-flow fade-in">
+            <span class="priming-flow__node">呼吸</span>
+            <span class="priming-flow__arrow">&rarr;</span>
+            <span class="priming-flow__node">身体（Mobility）</span>
+            <span class="priming-flow__arrow">&rarr;</span>
+            <span class="priming-flow__node">状態（State）</span>
+          </div>
+
+          <div class="luxury-table-wrap">
+            <table class="luxury-table">
+              <thead>
+                <tr><th>層</th><th>目的</th><th>内容</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>呼吸</td>
+                  <td>自律神経の起動</td>
+                  <td>意図的な呼吸パターンによって交感神経と副交感神経のバランスを設定する。呼吸は自律神経に直接アクセスできる唯一の随意的経路である。</td>
+                </tr>
+                <tr>
+                  <td>身体</td>
+                  <td>関節・筋膜の可動性確保</td>
+                  <td>Mobility（可動性）ワークによって、筋膜の滑走性と関節の可動域を確保する。身体が動く状態を作ることで、その日の運動入力の質が決まる。</td>
+                </tr>
+                <tr>
+                  <td>状態</td>
+                  <td>認知と感情の方向づけ</td>
+                  <td>天命との接続を確認し、その日の行動を天命の遂行として位置づける。プライミングの最終層は「なぜ動くか」の確認である。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 入力 -->
+        <div class="text-panel fade-in" style="margin-top: 2.5rem;">
+          <h3 style="font-size: var(--fs-h3); color: var(--color-gold); margin-bottom: 1rem;">入力</h3>
+
+          <!-- 運動 -->
+          <h4 style="font-size: var(--fs-lead); color: var(--color-gold-light); margin: 2rem 0 1rem; font-weight: 600;">運動の価値 ＝ 刺激の質 &times; 刺激の量</h4>
+
+          <p class="body-text">
+            運動の本質は、筋肉を動かすことではない。身体に対して適切な刺激を入力し、アロスタシスの更新を促すことである。刺激が弱すぎれば身体は現状を維持し、強すぎれば損傷する。最適な刺激とは、現在の設定値をわずかに超える負荷──つまり漸進的過負荷──である。
+          </p>
+
+          <p class="section-sub">刺激の質</p>
+          <div class="luxury-table-wrap">
+            <table class="luxury-table">
+              <thead>
+                <tr><th>要素</th><th>定義</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>可動域</td>
+                  <td>関節の全可動域を使った動作。短縮した可動域での運動は刺激の質を低下させる。</td>
+                </tr>
+                <tr>
+                  <td>制御</td>
+                  <td>筋肉が負荷をコントロールしている状態。反動や慣性による動作は刺激を分散させる。</td>
+                </tr>
+                <tr>
+                  <td>漸進性</td>
+                  <td>前回よりわずかに高い負荷または難度。同じ刺激の反復はアロスタシスの更新を停止させる。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="section-sub" style="margin-top: 1.5rem;">刺激の量</p>
+          <div class="luxury-table-wrap">
+            <table class="luxury-table">
+              <thead>
+                <tr><th>要素</th><th>定義</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>頻度</td>
+                  <td>週あたりの刺激回数。回復能力に応じた最適頻度が存在する。</td>
+                </tr>
+                <tr>
+                  <td>強度</td>
+                  <td>1セッションあたりの負荷の大きさ。最大筋力に対する割合で測定される。</td>
+                </tr>
+                <tr>
+                  <td>容量</td>
+                  <td>総仕事量（セット数 &times; 反復数 &times; 負荷）。回復を超える容量はアロスタティック負荷となる。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- 栄養 -->
+          <h4 style="font-size: var(--fs-lead); color: var(--color-gold-light); margin: 2.5rem 0 1rem; font-weight: 600;">栄養の価値 ＝ 素材の質 &times; 設計の精度</h4>
+
+          <p class="body-text">
+            栄養の本質は、カロリーを摂ることではない。身体のアロスタシスに必要な素材を、必要なタイミングで、必要な量だけ供給することである。素材が劣悪であれば、設計がいかに精密でも効果は低下する。設計が雑であれば、素材がいかに良質でも効率は落ちる。
+          </p>
+
+          <p class="section-sub">素材の質</p>
+          <div class="luxury-table-wrap">
+            <table class="luxury-table">
+              <thead>
+                <tr><th>要素</th><th>定義</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>タンパク質</td>
+                  <td>筋タンパク質合成の基質。アミノ酸スコアとロイシン含有量が質を決定する。</td>
+                </tr>
+                <tr>
+                  <td>脂質</td>
+                  <td>細胞膜の構成素材およびホルモン前駆体。オメガ3/6比率が炎症応答を調節する。</td>
+                </tr>
+                <tr>
+                  <td>微量栄養素</td>
+                  <td>酵素反応の補因子。ビタミンD、マグネシウム、亜鉛は現代の食事で不足しやすい。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="section-sub" style="margin-top: 1.5rem;">設計の精度</p>
+          <div class="luxury-table-wrap">
+            <table class="luxury-table">
+              <thead>
+                <tr><th>要素</th><th>定義</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>タイミング</td>
+                  <td>運動前後の栄養摂取。筋タンパク質合成のウィンドウに合わせた供給が効率を最大化する。</td>
+                </tr>
+                <tr>
+                  <td>比率</td>
+                  <td>三大栄養素の配分。目的（筋肥大・脂肪減少・維持）に応じた最適比率が存在する。</td>
+                </tr>
+                <tr>
+                  <td>総量</td>
+                  <td>エネルギー収支。アロスタシスの維持に必要な最低量を下回ると、身体は適応ではなく節約モードに入る。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="note-text">
+            ※ サプリメントは素材の質を補完するものであり、食事の代替ではない。ただし、現代の農業・食品加工による栄養密度の低下を考慮すると、ビタミンD・マグネシウム・オメガ3脂肪酸等の戦略的補充は合理的選択となり得る。
+          </p>
+
+          <!-- 睡眠 -->
+          <h4 style="font-size: var(--fs-lead); color: var(--color-gold-light); margin: 2.5rem 0 1rem; font-weight: 600;">睡眠の価値 ＝ 構造の質 &times; 環境の質</h4>
+
+          <p class="body-text">
+            睡眠の本質は、時間を寝ることではない。睡眠中に進行する回復・記憶固定・老廃物除去のプロセスが、最適に遂行される条件を整えることである。
+          </p>
+
+          <p class="section-sub">構造の質</p>
+          <div class="luxury-table-wrap">
+            <table class="luxury-table">
+              <thead>
+                <tr><th>要素</th><th>定義</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>サイクル完遂</td>
+                  <td>ノンレム睡眠（深い睡眠）とレム睡眠（夢見る睡眠）の完全なサイクルを4〜5回通過すること。中途覚醒はサイクルを中断し、回復効率を低下させる。</td>
+                </tr>
+                <tr>
+                  <td>深睡眠比率</td>
+                  <td>睡眠前半に集中する深い睡眠（ステージN3）の割合。成長ホルモン分泌と組織修復はこの段階に依存する。</td>
+                </tr>
+                <tr>
+                  <td>レム密度</td>
+                  <td>睡眠後半に増加するレム睡眠の密度。記憶の固定・感情の処理・創造的統合はこの段階で行われる。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="section-sub" style="margin-top: 1.5rem;">環境の質</p>
+          <div class="luxury-table-wrap">
+            <table class="luxury-table">
+              <thead>
+                <tr><th>要素</th><th>定義</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>温度</td>
+                  <td>室温18〜20℃。深部体温の低下が入眠を促進する。高すぎる室温は深睡眠を阻害する。</td>
+                </tr>
+                <tr>
+                  <td>光</td>
+                  <td>完全遮光。微弱な光でもメラトニン分泌を抑制し、睡眠の質を低下させる。</td>
+                </tr>
+                <tr>
+                  <td>一貫性</td>
+                  <td>就寝・起床時刻の規則性。概日リズムの安定が睡眠構造の質を決定する。週末のズレは「ソーシャル・ジェットラグ」を引き起こす。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 出力 -->
+        <div class="text-panel fade-in" style="margin-top: 2.5rem;">
+          <h3 style="font-size: var(--fs-h3); color: var(--color-gold); margin-bottom: 1rem;">出力：回復・適応</h3>
+
+          <p class="body-text">
+            3つの入力（運動・栄養・睡眠）が適切に供給されたとき、身体は以下のプロセスを通じて設定値を更新する：
+          </p>
+
+          <ul class="body-list">
+            <li><strong>筋タンパク質合成（MPS）</strong>──運動刺激とアミノ酸供給によって筋線維が再構築・強化される。</li>
+            <li><strong>ミトコンドリア新生</strong>──持久的刺激に応じて細胞内のエネルギー工場が増殖・効率化する。</li>
+            <li><strong>神経適応</strong>──運動パターンの反復によって神経-筋接合部の効率が向上し、同じ筋量でもより大きな力を発揮できるようになる。</li>
+            <li><strong>内分泌系の最適化</strong>──適切な刺激と回復のサイクルが、テストステロン・成長ホルモン・コルチゾールのバランスを最適に維持する。</li>
+            <li><strong>グリンファティック系の活性化</strong>──深睡眠中に脳脊髄液が脳内の老廃物（アミロイドβ等）を洗浄する。</li>
+          </ul>
+
+          <p class="note-text">
+            ※ mTOR（mechanistic Target of Rapamycin）経路は、筋タンパク質合成の主要な制御因子である。運動刺激とロイシンがこの経路を活性化し、筋肥大のシグナルを発する。一方、mTORの過剰な活性化は老化を促進するという知見もあり、「刺激と回復のサイクル」が重要となる。この点は老化生物学の領域と交差する。
+          </p>
+        </div>
+      </div>
+
+      <hr class="separator">
+
+      <!-- ===================== II. 認知のアロスタシス ===================== -->
+      <div class="content-block fade-in" id="認知">
+        <h2 class="section__title section__title--left">II. 認知のアロスタシス ── 合理性</h2>
+
+        <!-- アロスタティック負荷 -->
+        <div class="text-panel fade-in" style="margin-top: 2rem;">
+          <h3 style="font-size: var(--fs-h3); color: var(--color-gold); margin-bottom: 1rem;">アロスタティック負荷と破綻のカスケード</h3>
+
+          <p class="body-text">
+            アロスタシスが最適に機能している状態では、ストレスは適応の刺激として作用する。しかしストレスが慢性化し、回復が追いつかなくなると、アロスタティック負荷が蓄積する。負荷が閾値を超えると、以下のカスケード（連鎖反応）が生じる：
+          </p>
+
+          <div class="cascade-flow fade-in">
+            <div class="cascade-flow__step">慢性ストレス（回復を超える負荷の持続）</div>
+            <div class="cascade-flow__arrow">&darr;</div>
+            <div class="cascade-flow__step">HPA軸の過活性化（コルチゾールの慢性的上昇）</div>
+            <div class="cascade-flow__arrow">&darr;</div>
+            <div class="cascade-flow__step">慢性炎症（IL-6, TNF-&alpha;の上昇）</div>
+            <div class="cascade-flow__arrow">&darr;</div>
+            <div class="cascade-flow__step">脳機能への影響（海馬の萎縮・前頭前野の機能低下）</div>
+            <div class="cascade-flow__arrow">&darr;</div>
+            <div class="cascade-flow__step">認知の硬直化（信念の固着・判断力の低下）</div>
+            <div class="cascade-flow__arrow">&darr;</div>
+            <div class="cascade-flow__step">天命との整合の破綻</div>
+          </div>
+
+          <p class="body-text">
+            このカスケードの要点は、身体の破綻が認知の破綻を引き起こし、認知の破綻が天命との整合を不可能にするという構造的連鎖である。身体論が認識論の延長線上にある理由はここにある。
+          </p>
+        </div>
+
+        <!-- 信念は身体に刻まれる -->
+        <div class="text-panel fade-in" style="margin-top: 2.5rem;">
+          <h3 style="font-size: var(--fs-h3); color: var(--color-gold); margin-bottom: 1rem;">信念は身体に刻まれる</h3>
+
+          <p class="body-text">
+            Damasioのソマティック・マーカー仮説が示したように、感情は身体状態と不可分である。信念もまた、純粋に「頭の中」にあるのではない。信念は身体に刻まれている。
+          </p>
+
+          <p class="body-text">
+            「自分にはできない」という信念は、筋緊張のパターン、呼吸の浅さ、姿勢の崩れとして身体に表現される。「天命を全うする」という信念は、胸郭の開き、呼吸の深さ、視線の安定として身体に表現される。
+          </p>
+
+          <p class="body-text">
+            これは比喩ではない。Craigの内受容感覚（interoception）研究が示すように、脳は身体の状態を常にモニタリングしており、その情報が感情・判断・意思決定の基盤となる。身体の状態が変われば、認知の基盤が変わる。
+          </p>
+        </div>
+
+        <!-- 双方向ループ -->
+        <div class="text-panel fade-in" style="margin-top: 2.5rem;">
+          <h3 style="font-size: var(--fs-h3); color: var(--color-gold); margin-bottom: 1rem;">信念とアロスタシスの双方向ループ</h3>
+
+          <p class="body-text">
+            信念は身体に影響し、身体は信念に影響する。この双方向ループが、認知のアロスタシスの核心である。
+          </p>
+
+          <p class="body-text">
+            Aderの精神神経免疫学が実証したように、心理的ストレスは免疫機能を抑制する。逆に、運動による身体状態の改善は、うつ症状の軽減や認知機能の向上をもたらす。身体と認知は分離できない。
+          </p>
+
+          <p class="body-text">
+            このループが天命に向かって回転しているとき、身体の最適化が認知の明晰さを生み、認知の明晰さがより精密な身体操作を可能にする。正のスパイラルが生じる。逆に、このループが天命から逸脱しているとき、身体の劣化が認知を鈍らせ、鈍った認知がさらなる身体の劣化を許容する。負のスパイラルが生じる。
+          </p>
+        </div>
+
+        <!-- 信念変更の2つの経路 -->
+        <div class="text-panel fade-in" style="margin-top: 2.5rem;">
+          <h3 style="font-size: var(--fs-h3); color: var(--color-gold); margin-bottom: 1rem;">信念変更の2つの経路</h3>
+
+          <p class="body-text">
+            信念を変える経路は2つある：
+          </p>
+
+          <p class="body-text">
+            <strong>1. 認知から身体へ（トップダウン）。</strong>
+            天命の言語化セッション&trade;によって天命が確定されると、認知の枠組みが変わる。認知の変化は行動パターンを変え、行動パターンの変化は身体の入力を変え、身体の入力の変化はアロスタシスの方向を変える。
+          </p>
+
+          <p class="body-text">
+            <strong>2. 身体から認知へ（ボトムアップ）。</strong>
+            運動・栄養・睡眠の最適化によって身体の状態が変わると、内受容感覚を通じて認知の基盤が変わる。身体が「天命を全うできる状態」にあるとき、認知は自然とその方向に整合する。
+          </p>
+
+          <p class="body-text">
+            本書が提示するのは、この2つの経路を同時に作動させることの構造的合理性である。天命の言語化セッション&trade;が認知を整え、身体論が身体を整える。両方が揃ったとき、整合は加速する。
+          </p>
+        </div>
+      </div>
+
+      <hr class="separator">
+
+      <!-- ===================== III. 行動のアロスタシス ===================== -->
+      <div class="content-block fade-in" id="行動">
+        <h2 class="section__title section__title--left">III. 行動のアロスタシス ── 継続</h2>
+
+        <!-- ドーパミン系 -->
+        <div class="text-panel fade-in" style="margin-top: 2rem;">
+          <h3 style="font-size: var(--fs-h3); color: var(--color-gold); margin-bottom: 1rem;">ドーパミン系の本来の機能</h3>
+
+          <p class="body-text">
+            ドーパミンは「快楽の神経伝達物質」として一般に知られているが、この理解は不正確だ。ドーパミンの本来の機能は、快楽そのものではなく、<strong>予測と動機づけ</strong>である。
+          </p>
+
+          <p class="body-text">
+            ドーパミンは「報酬が来るぞ」という予測信号であり、「それを取りに行け」という動機づけ信号である。報酬そのものを感じるのはオピオイド系であり、ドーパミンは「行動を開始し、維持する」ことに特化している。
+          </p>
+
+          <p class="body-text">
+            この区別が重要な理由は、行動の継続がドーパミン系の機能に直接依存しているからだ。天命を全うする行動を継続できるかどうかは、意志力の問題ではなく、ドーパミン系がどこに収束しているかの問題として閉じられる。
+          </p>
+        </div>
+
+        <!-- 何がドーパミンの収束先を決めるか -->
+        <div class="text-panel fade-in" style="margin-top: 2.5rem;">
+          <h3 style="font-size: var(--fs-h3); color: var(--color-gold); margin-bottom: 1rem;">何がドーパミンの収束先を決めるか</h3>
+
+          <p class="body-text">
+            ドーパミンの収束先──つまり何に対して「予測と動機づけ」が最も強く反応するか──を決めるのは、以下の3つの条件である：
+          </p>
+
+          <p class="body-text">
+            <strong>1. 反復（繰り返しの刺激）。</strong>
+            特定の行動パターンを反復するほど、その行動に対するドーパミン応答が強化される。神経可塑性の原理により、使われる回路は強化される。
+          </p>
+
+          <p class="body-text">
+            <strong>2. 予測誤差（期待と結果のズレ）。</strong>
+            予測より良い結果が得られたとき、ドーパミンが大きく放出される。予測通りの結果ではドーパミンは放出されない。予測より悪い結果ではドーパミンが抑制される。この仕組みが学習を駆動する。
+          </p>
+
+          <p class="body-text">
+            <strong>3. 環境（ドーパミンの基礎レベル）。</strong>
+            睡眠不足、慢性ストレス、超加工食品、SNSの過剰使用は、ドーパミンの基礎レベルを乱す。基礎レベルが乱れると、短期的な高刺激にしか反応できなくなり、天命のような長期的な報酬への動機づけが機能しなくなる。
+          </p>
+        </div>
+
+        <!-- 条件が揃えば収束は必然 -->
+        <div class="text-panel fade-in" style="margin-top: 2.5rem;">
+          <h3 style="font-size: var(--fs-h3); color: var(--color-gold); margin-bottom: 1rem;">条件が揃えば収束は必然</h3>
+
+          <p class="body-text">
+            天命が確定し（T）、身体のアロスタシスが機能し（A<sub>身体</sub>）、認知のアロスタシスが機能しているとき（A<sub>認知</sub>）、行動のアロスタシスは必然的に天命へ収束する。
+          </p>
+
+          <p class="body-text">
+            なぜなら：
+          </p>
+
+          <ul class="body-list">
+            <li>天命が確定しているので、ドーパミン系の収束先が明確になる。</li>
+            <li>身体のアロスタシスが機能しているので、ドーパミンの基礎レベルが最適に維持される。</li>
+            <li>認知のアロスタシスが機能しているので、短期的な刺激に対する耐性（認知的制御）が保たれる。</li>
+          </ul>
+
+          <p class="body-text">
+            この3条件が揃ったとき、天命を全うする行動を「続ける」ことは意志力の問題ではなくなる。構造が継続を生成する。<a href="epistemology.html">認識論</a>が示した「M &rArr; &not;F」と同形で、条件が揃えば結果は必然的に生じる。
+          </p>
+        </div>
+      </div>
+
+      <hr class="separator">
+
+      <!-- ===================== 帰結 ===================== -->
+      <div class="content-block fade-in" id="帰結">
+        <h2 class="section__title section__title--left">帰結</h2>
+
+        <div class="text-panel fade-in">
+          <p class="body-text">
+            認識論は M &rArr; &not;F を示した。<br>
+            意味論は天命（T）を導出した。<br>
+            社会論は心友と文明の更新を示した。<br>
+            身体論は T &middot; A &rArr; P<sub>max</sub> を示した。
+          </p>
+
+          <p class="body-text">
+            天命が確定し、アロスタシスが3次元で機能しているとき、パフォーマンスはその個体の上限に向かって最大化される。これは願望ではない。構造的帰結である。
+          </p>
+        </div>
+
+        <div class="qed-block fade-in">
+          <p class="qed-block__formula">T &middot; A &rArr; P<sub>max</sub></p>
+          <p class="qed-block__text">
+            天命（T）とアロスタシス（A）の整合が成立する限り、<br>
+            パフォーマンス（P）はその個体の上限に向かって最大化される。
+          </p>
+          <p class="qed-block__qed">Q.E.D.</p>
+        </div>
+
+        <p class="note-text">
+          ※ Q.E.D.（quod erat demonstrandum）は「示すべきことが示された」の意。数学・論理学において証明の終結を示す慣用表現である。
+        </p>
+      </div>
+
+      <hr class="separator">
+
+      <!-- ===================== 構造原理 ===================== -->
+      <div class="content-block fade-in" id="原理">
+        <h2 class="section__title section__title--left">構造原理 ── 7つの原理</h2>
+
+        <ol class="principle-list fade-in">
+          <li><strong>方向原理。</strong>アロスタシスは天命なしには迷走する。天命が方向を与えたとき、プロセスは整合に向かう。</li>
+          <li><strong>積の原理。</strong>健康は運動・栄養・睡眠の積である。どれか1つが0なら、全体が0になる。</li>
+          <li><strong>プロセス原理。</strong>健康は状態ではなくプロセスである。数値が良いことではなく、更新が持続していることが本質。</li>
+          <li><strong>刺激原理。</strong>アロスタシスの更新には、現在の設定値をわずかに超える刺激が必要である。過少も過剰も更新を停止させる。</li>
+          <li><strong>双方向原理。</strong>身体は認知に影響し、認知は身体に影響する。この双方向ループが天命に向かって回転するとき、整合は加速する。</li>
+          <li><strong>収束原理。</strong>天命が確定し、アロスタシスが機能しているとき、行動は天命へ収束する。これは意志力の問題ではなく構造の問題である。</li>
+          <li><strong>前提原理。</strong>The Meta（三部作）のすべては、身体が機能していることを暗黙の前提としていた。身体論はその前提を明示する。</li>
+        </ol>
+      </div>
+
+      <hr class="separator">
+
+      <!-- ===================== 付記 ===================== -->
+      <div class="content-block fade-in" id="付記">
+        <h2 class="section__title section__title--left">付記 ── 知的基盤（15領域・38名の世界的権威）</h2>
+
+        <div class="text-panel fade-in">
+          <p class="body-text">
+            本書の方程式は、以下の15の学術領域にわたる38名の世界的権威の研究知見を参照枠として設計した。各学者の業績は、本書の構造を支える知的基盤である。
+          </p>
+        </div>
+
+        <div class="scholar-section fade-in">
+
+          <!-- 基盤科学 -->
+          <details>
+            <summary>基盤科学（4領域・14名）</summary>
+            <div class="scholar-content">
+
+              <!-- 1. 神経科学 -->
+              <div class="scholar-field">
+                <p class="scholar-field__title">1. 神経科学</p>
+                <p class="scholar-field__desc">神経系の構造と機能に関する基礎科学。本書におけるアロスタシス、神経可塑性、ドーパミン系の理論的基盤。</p>
+                <div class="luxury-table-wrap">
+                  <table class="luxury-table">
+                    <thead>
+                      <tr><th>氏名</th><th>読み</th><th>主要業績</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Santiago Ram&oacute;n y Cajal</td><td>カハール</td><td>ニューロン説の確立。神経系が個別の細胞（ニューロン）から成ることを証明。ノーベル生理学・医学賞（1906年）。</td></tr>
+                      <tr><td>Eric Kandel</td><td>カンデル</td><td>記憶の分子メカニズムの解明。シナプス可塑性の研究。ノーベル生理学・医学賞（2000年）。</td></tr>
+                      <tr><td>Charles Sherrington</td><td>シェリントン</td><td>シナプスの概念の確立。反射弓と統合的神経機能の研究。ノーベル生理学・医学賞（1932年）。</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- 2. 運動生理学 -->
+              <div class="scholar-field">
+                <p class="scholar-field__title">2. 運動生理学</p>
+                <p class="scholar-field__desc">運動が身体に及ぼす生理学的影響の研究。本書における運動入力の設計原理の基盤。</p>
+                <div class="luxury-table-wrap">
+                  <table class="luxury-table">
+                    <thead>
+                      <tr><th>氏名</th><th>読み</th><th>主要業績</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>A. V. Hill</td><td>ヒル</td><td>筋収縮の熱力学的研究。筋肉のエネルギー代謝メカニズムの解明。ノーベル生理学・医学賞（1922年）。</td></tr>
+                      <tr><td>John Holloszy</td><td>ホロスジー</td><td>持久運動がミトコンドリア新生を誘導することを発見。運動による代謝適応の研究の先駆者。</td></tr>
+                      <tr><td>Stuart Phillips</td><td>フィリップス</td><td>筋タンパク質合成とタンパク質摂取に関する世界的権威。運動後の栄養タイミングと筋肥大の関係を体系化。</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- 3. 栄養生化学 -->
+              <div class="scholar-field">
+                <p class="scholar-field__title">3. 栄養生化学</p>
+                <p class="scholar-field__desc">栄養素の生化学的作用と疾病予防の研究。本書における栄養入力の設計原理の基盤。</p>
+                <div class="luxury-table-wrap">
+                  <table class="luxury-table">
+                    <thead>
+                      <tr><th>氏名</th><th>読み</th><th>主要業績</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Walter Willett</td><td>ウィレット</td><td>栄養疫学の世界的権威。大規模コホート研究に基づく食事と疾病の関係の体系化。</td></tr>
+                      <tr><td>Bruce Ames</td><td>エイムス</td><td>微量栄養素欠乏がDNA損傷を引き起こすことを発見（トリアージ理論）。エイムス試験の開発者。</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- 4. 分子生物学 -->
+              <div class="scholar-field">
+                <p class="scholar-field__title">4. 分子生物学・細胞生物学</p>
+                <p class="scholar-field__desc">細胞内のシグナル伝達と代謝制御の研究。本書におけるmTOR経路、オートファジーの理論的基盤。</p>
+                <div class="luxury-table-wrap">
+                  <table class="luxury-table">
+                    <thead>
+                      <tr><th>氏名</th><th>読み</th><th>主要業績</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>David Hall</td><td>ホール</td><td>TOR（Target of Rapamycin）シグナル経路の発見。細胞成長の制御メカニズムの解明。</td></tr>
+                      <tr><td>David Sabatini</td><td>サバティーニ</td><td>mTOR複合体（mTORC1/mTORC2）の分子構造と機能の解明。栄養センシング経路の研究。</td></tr>
+                      <tr><td>大隅良典</td><td>おおすみ よしのり</td><td>オートファジーの分子メカニズムの解明。細胞の自己浄化機構の発見。ノーベル生理学・医学賞（2016年）。</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+          </details>
+
+          <!-- 統合・応用領域 -->
+          <details>
+            <summary>統合・応用領域（8領域・18名）</summary>
+            <div class="scholar-content">
+
+              <!-- 5. 内分泌学 -->
+              <div class="scholar-field">
+                <p class="scholar-field__title">5. 内分泌学</p>
+                <p class="scholar-field__desc">ホルモンによる身体制御の研究。本書におけるHPA軸、コルチゾール、テストステロンの理論的基盤。</p>
+                <div class="luxury-table-wrap">
+                  <table class="luxury-table">
+                    <thead>
+                      <tr><th>氏名</th><th>読み</th><th>主要業績</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Robert Sapolsky</td><td>サポルスキー</td><td>ストレスとコルチゾールの慢性的影響の研究。ストレス応答の神経内分泌学的メカニズムの体系化。</td></tr>
+                      <tr><td>Roger Guillemin</td><td>ギユマン</td><td>視床下部放出ホルモンの発見。脳がホルモン系を制御するメカニズムの解明。ノーベル生理学・医学賞（1977年）。</td></tr>
+                      <tr><td>Andrew Schally</td><td>シャリー</td><td>視床下部放出ホルモンの構造決定。ギユマンと独立して同時期に発見。ノーベル生理学・医学賞（1977年）。</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- 6. 睡眠医学 -->
+              <div class="scholar-field">
+                <p class="scholar-field__title">6. 睡眠医学</p>
+                <p class="scholar-field__desc">睡眠の神経科学的・医学的研究。本書における睡眠入力の設計原理の基盤。</p>
+                <div class="luxury-table-wrap">
+                  <table class="luxury-table">
+                    <thead>
+                      <tr><th>氏名</th><th>読み</th><th>主要業績</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Emmanuel Mignot</td><td>ミニョ</td><td>ナルコレプシーの原因遺伝子・オレキシンの発見。覚醒制御メカニズムの解明。</td></tr>
+                      <tr><td>J. Allan Hobson</td><td>ホブソン</td><td>レム睡眠の神経メカニズムの研究。活性化-合成仮説の提唱。夢の科学的研究の先駆者。</td></tr>
+                      <tr><td>Matthew Walker</td><td>ウォーカー</td><td>睡眠と記憶固定・感情処理の関係の研究。睡眠不足が認知機能に及ぼす影響の体系化。</td></tr>
+                      <tr><td>Maiken Nedergaard</td><td>ネーダゴー</td><td>グリンファティック系の発見。睡眠中に脳脊髄液が脳内老廃物を洗浄するメカニズムの解明。</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- 7. 免疫学 -->
+              <div class="scholar-field">
+                <p class="scholar-field__title">7. 免疫学・炎症生物学</p>
+                <p class="scholar-field__desc">免疫応答と慢性炎症の研究。本書におけるアロスタティック負荷と慢性炎症の理論的基盤。</p>
+                <div class="luxury-table-wrap">
+                  <table class="luxury-table">
+                    <thead>
+                      <tr><th>氏名</th><th>読み</th><th>主要業績</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Charles Janeway</td><td>ジェインウェイ</td><td>自然免疫のパターン認識受容体理論の提唱。免疫学の教科書的体系の構築。</td></tr>
+                      <tr><td>Ruslan Medzhitov</td><td>メジトフ</td><td>Toll様受容体（TLR）の機能解明。自然免疫と獲得免疫の橋渡しメカニズムの研究。</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- 8. 腸内微生物学 -->
+              <div class="scholar-field">
+                <p class="scholar-field__title">8. 腸内微生物学</p>
+                <p class="scholar-field__desc">腸内細菌叢と宿主の相互作用の研究。本書における栄養入力と免疫・神経系の接続に関する理論的基盤。</p>
+                <div class="luxury-table-wrap">
+                  <table class="luxury-table">
+                    <thead>
+                      <tr><th>氏名</th><th>読み</th><th>主要業績</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Jeffrey Gordon</td><td>ゴードン</td><td>腸内細菌叢と肥満・代謝の関係の発見。ヒトマイクロバイオーム研究の創始者。</td></tr>
+                      <tr><td>Rob Knight</td><td>ナイト</td><td>腸内細菌叢の大規模解析手法の開発。American Gut Projectの主導者。</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- 9. 精神神経免疫学 -->
+              <div class="scholar-field">
+                <p class="scholar-field__title">9. 精神神経免疫学</p>
+                <p class="scholar-field__desc">心理状態が神経系・免疫系に及ぼす影響の研究。本書における認知と身体の双方向ループの理論的基盤。</p>
+                <div class="luxury-table-wrap">
+                  <table class="luxury-table">
+                    <thead>
+                      <tr><th>氏名</th><th>読み</th><th>主要業績</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Robert Ader</td><td>アダー</td><td>精神神経免疫学（PNI）の創始者。条件づけによる免疫応答の変化を実証。心と免疫系の接続を科学的に証明。</td></tr>
+                      <tr><td>Bruce McEwen</td><td>マキューエン</td><td>アロスタシスとアロスタティック負荷の概念の体系化。慢性ストレスが脳に及ぼす構造的影響の解明。</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- 10. 身体性認知科学 -->
+              <div class="scholar-field">
+                <p class="scholar-field__title">10. 身体性認知科学</p>
+                <p class="scholar-field__desc">身体が認知・感情・意思決定に及ぼす影響の研究。本書における「信念は身体に刻まれる」の理論的基盤。</p>
+                <div class="luxury-table-wrap">
+                  <table class="luxury-table">
+                    <thead>
+                      <tr><th>氏名</th><th>読み</th><th>主要業績</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Antonio Damasio</td><td>ダマシオ</td><td>ソマティック・マーカー仮説の提唱。感情が合理的意思決定に不可欠であることの証明。</td></tr>
+                      <tr><td>A. D. Craig</td><td>クレイグ</td><td>内受容感覚（interoception）の神経解剖学的基盤の解明。島皮質における身体状態の表象研究。</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- 11. モビリティ・筋膜科学 -->
+              <div class="scholar-field">
+                <p class="scholar-field__title">11. モビリティ・筋膜科学</p>
+                <p class="scholar-field__desc">筋膜の構造・機能と関節可動性の研究。本書におけるプライミングとMobilityの理論的基盤。</p>
+                <div class="luxury-table-wrap">
+                  <table class="luxury-table">
+                    <thead>
+                      <tr><th>氏名</th><th>読み</th><th>主要業績</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Robert Schleip</td><td>シュライプ</td><td>筋膜の感覚受容体と運動制御への関与の研究。筋膜研究の世界的リーダー。</td></tr>
+                      <tr><td>Helene Langevin</td><td>ランジュヴァン</td><td>筋膜の結合組織としての機能と慢性痛への関与の研究。NIH統合医学センター長。</td></tr>
+                      <tr><td>Donald Ingber</td><td>インバー</td><td>テンセグリティ（張力統合）モデルの提唱。細胞と組織の力学的構造の解明。</td></tr>
+                      <tr><td>Andreo Spina</td><td>スピナ</td><td>FRC（Functional Range Conditioning）の開発。関節の制御された可動性トレーニング体系の構築。</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- 12. 老化生物学 -->
+              <div class="scholar-field">
+                <p class="scholar-field__title">12. 老化生物学</p>
+                <p class="scholar-field__desc">老化の分子メカニズムの研究。本書におけるPmaxの加齢に伴う変化と、mTOR経路の二面性の理論的基盤。</p>
+                <div class="luxury-table-wrap">
+                  <table class="luxury-table">
+                    <thead>
+                      <tr><th>氏名</th><th>読み</th><th>主要業績</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Cynthia Kenyon</td><td>ケニヨン</td><td>線虫の寿命を決定する遺伝子（daf-2）の発見。インスリン/IGF-1シグナル経路と老化の関係の解明。</td></tr>
+                      <tr><td>Carlos L&oacute;pez-Ot&iacute;n</td><td>ロペス=オティン</td><td>老化の9つのホールマーク（hallmarks of aging）の体系化。老化研究の統合的枠組みの構築。</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+          </details>
+
+          <!-- 認識論的枠組み -->
+          <details>
+            <summary>認識論的枠組み（3領域・6名）</summary>
+            <div class="scholar-content">
+
+              <!-- 13. エビデンス評価方法論 -->
+              <div class="scholar-field">
+                <p class="scholar-field__title">13. エビデンス評価方法論</p>
+                <p class="scholar-field__desc">科学的エビデンスの質を評価する方法論の研究。本書における「参照枠」の選定基準の理論的基盤。</p>
+                <div class="luxury-table-wrap">
+                  <table class="luxury-table">
+                    <thead>
+                      <tr><th>氏名</th><th>読み</th><th>主要業績</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Archie Cochrane</td><td>コクラン</td><td>エビデンスに基づく医療（EBM）の先駆者。ランダム化比較試験の重要性を体系的に主張。コクラン共同計画の名の由来。</td></tr>
+                      <tr><td>Gordon Guyatt</td><td>ガイアット</td><td>「エビデンスに基づく医療（EBM）」という用語の命名者。GRADEシステムによるエビデンスの質評価体系の構築。</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- 14. 因果推論 -->
+              <div class="scholar-field">
+                <p class="scholar-field__title">14. 因果推論</p>
+                <p class="scholar-field__desc">相関と因果の区別、因果関係の推定方法論の研究。本書における構造的帰結（&rArr;）の論理的基盤。</p>
+                <div class="luxury-table-wrap">
+                  <table class="luxury-table">
+                    <thead>
+                      <tr><th>氏名</th><th>読み</th><th>主要業績</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Austin Bradford Hill</td><td>ヒル</td><td>因果推論の9基準（ヒルの基準）の提唱。疫学における因果関係の評価枠組みの確立。</td></tr>
+                      <tr><td>Judea Pearl</td><td>パール</td><td>因果推論の数学的枠組み（構造的因果モデル、do-計算法）の構築。チューリング賞（2011年）。</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- 15. システム思考 -->
+              <div class="scholar-field">
+                <p class="scholar-field__title">15. システム思考・複雑系科学</p>
+                <p class="scholar-field__desc">複雑系としての生命体の理解。本書における統合方程式（積のモデル）とアロスタシスのシステム的理解の基盤。</p>
+                <div class="luxury-table-wrap">
+                  <table class="luxury-table">
+                    <thead>
+                      <tr><th>氏名</th><th>読み</th><th>主要業績</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Ludwig von Bertalanffy</td><td>ベルタランフィ</td><td>一般システム理論の創始者。生命体を「開放系」として捉える枠組みの構築。</td></tr>
+                      <tr><td>Stuart Kauffman</td><td>カウフマン</td><td>自己組織化と複雑系の理論。「秩序は無償で得られる」（order for free）の概念。生命の起源と複雑性の研究。</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+          </details>
+
+        </div>
+      </div>
+
+      <!-- Highlight Block — ページ末尾 -->
+      <div class="highlight-block fade-in">
+        <p>
+          天命を全うする身体とは、身体を通じた整合が進行し続けている状態である。
+        </p>
+      </div>
+
+      <!-- Trilogy Nav -->
+      <div class="trilogy-nav fade-in">
+        <a href="society.html">&larr; 社会論</a>
+        <span class="trilogy-nav__pos">Body Theory</span>
+        <span></span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-block fade-in">
+    <div class="container">
+      <h2 class="cta-block__title">天命の言語化セッション&trade;</h2>
+      <p class="cta-block__desc">
+        2時間で天命が言語化できる場所。
+      </p>
+      <div class="cta-block__features">
+        <span class="cta-block__feature">Zoom完結</span>
+        <span class="cta-block__feature">事前学習不要</span>
+        <span class="cta-block__feature">対話のみ</span>
+      </div>
+      <a href="trial.html" class="btn">無料トライアルに申し込む &rarr;</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+  <div class="container--wide">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <p class="footer-col__title">The Meta</p>
+        <a href="about-existential-science.html">実存科学とは</a>
+        <a href="epistemology.html">認識論</a>
+        <a href="semantics.html">意味論</a>
+        <a href="society.html">社会論</a>
+        <a href="body.html">身体論</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Contents</p>
+        <a href="specials.html">特別シリーズ</a>
+        <a href="archives.html">記事一覧</a>
+        <a href="video-list.html">動画一覧</a>
+        <a href="glossary.html">用語集</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Session</p>
+        <a href="session.html">天命の言語化セッション&trade;</a>
+        <a href="session-flow.html">セッションの流れ</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Institute</p>
+        <a href="founder.html">創始者</a>
+        <a href="contact.html">お問い合わせ</a>
+        <a href="legal/legal-tokushoho.html">特定商取引法</a>
+        <a href="legal/legal-privacy-policy.html">プライバシーポリシー</a>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; 実存科学研究所 ── Existential Science Institute</p>
+  </div>
+</footer>
+
+  <script src="js/main.min.js?v=13"></script>
+  <!-- Search Modal -->
+  <div class="search-overlay">
+    <div class="search-modal"><button class="search-close" aria-label="閉じる">&times;</button>
+      <div class="search-input-wrap">
+        <span class="search-input-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+        <input type="text" class="search-input" placeholder="キーワードで検索..." autocomplete="off">
+      </div>
+      <div class="search-results"></div>
+      <div class="search-hint"><span class="search-hint__desktop">ESC to close · ⌘K to toggle</span><span class="search-hint__mobile">背景タップまたは ✕ で閉じる</span></div>
+    </div>
+  </div>
+</body>
+
+</html>
