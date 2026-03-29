@@ -104,6 +104,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/meta-install.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- ===== 12 SESSIONS (対話) ===== -->
   <url>
@@ -399,6 +405,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-money-anxiety-prescription.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-observation-basics.html</loc>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -617,6 +629,14 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- ===== SPECIALS: tenmei-alchemist ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-alchemist/</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- ===== SPECIALS: tenmei-baki ===== -->
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-baki/</loc>
@@ -759,6 +779,14 @@
     <priority>0.6</priority>
   </url>
 
+  <!-- ===== SPECIALS: tenmei-confessions ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-confessions/</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- ===== SPECIALS: tenmei-deathnote ===== -->
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-deathnote/</loc>
@@ -783,6 +811,14 @@
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+
+  <!-- ===== SPECIALS: tenmei-doctorstrange ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-doctorstrange/</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <!-- ===== SPECIALS: tenmei-evangelion ===== -->
@@ -837,6 +873,32 @@
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <!-- ===== SPECIALS: tenmei-frieren ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-frieren/</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-frieren/fern.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-frieren/frieren.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-frieren/himmel.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <!-- ===== SPECIALS: tenmei-fullmetalalchemist ===== -->
@@ -911,6 +973,62 @@
     <priority>0.6</priority>
   </url>
 
+  <!-- ===== SPECIALS: tenmei-harrypotter ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-harrypotter/</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-harrypotter/draco.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-harrypotter/dumbledore.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-harrypotter/harry.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-harrypotter/hermione.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-harrypotter/mcgonagall.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-harrypotter/ron.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-harrypotter/snape.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-harrypotter/voldemort.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
   <!-- ===== SPECIALS: tenmei-howl ===== -->
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-howl/</loc>
@@ -957,6 +1075,14 @@
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+
+  <!-- ===== SPECIALS: tenmei-kafkaontheshore ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-kafkaontheshore/</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <!-- ===== SPECIALS: tenmei-laputa ===== -->
@@ -1011,6 +1137,14 @@
     <priority>0.6</priority>
   </url>
 
+  <!-- ===== SPECIALS: tenmei-lifeisbeautiful ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-lifeisbeautiful/</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- ===== SPECIALS: tenmei-madokamagica ===== -->
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-madokamagica/</loc>
@@ -1059,6 +1193,20 @@
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-matrix/revolutions.html</loc>
     <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===== SPECIALS: tenmei-mcu ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-mcu/</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-mcu/tony-stark.html</loc>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1177,6 +1325,14 @@
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+
+  <!-- ===== SPECIALS: tenmei-norwegianwood ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-norwegianwood/</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <!-- ===== SPECIALS: tenmei-onepiece ===== -->
@@ -1417,6 +1573,14 @@
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+
+  <!-- ===== SPECIALS: tenmei-spiderman ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-spiderman/</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <!-- ===== SPECIALS: tenmei-suits ===== -->
