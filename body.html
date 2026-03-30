@@ -55,13 +55,29 @@
     }
     .axiom-block__formula {
       font-family: var(--font-serif-en);
-      font-size: 2rem;
+      font-size: 3.5rem;
       font-weight: 500;
-      color: var(--color-gold);
       letter-spacing: 0.08em;
       margin-bottom: 1.2rem;
       line-height: 1.5;
-      filter: drop-shadow(0 0 12px rgba(192,168,120,0.25));
+      background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
+      background-size: 200% 100%;
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gold-shimmer 4s ease-in-out infinite;
+      filter: drop-shadow(0 0 16px rgba(192,168,120,0.3)) drop-shadow(0 0 40px rgba(192,168,120,0.12));
+    }
+    .axiom-block__formula--purple {
+      background: linear-gradient(90deg, #b8a0d8 0%, #b8a0d8 40%, #e0d0f0 50%, #b8a0d8 60%, #b8a0d8 100%);
+      background-size: 200% 100%;
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: purple-shimmer 5s ease-in-out infinite;
+      filter: drop-shadow(0 0 12px rgba(160,130,210,0.25)) drop-shadow(0 0 30px rgba(160,130,210,0.1));
+    }
+    @keyframes purple-shimmer {
+      0%,100% { background-position: 100% 50%; }
+      50% { background-position: 0% 50%; }
     }
     .axiom-block__desc {
       font-size: var(--fs-body);
@@ -71,7 +87,7 @@
       margin: 0 auto;
     }
     .axiom-block__label {
-      font-size: var(--fs-xs);
+      font-size: 0.7rem;
       color: var(--color-gold-a50);
       letter-spacing: 0.15em;
       text-transform: uppercase;
@@ -152,10 +168,18 @@
     }
     .equation-block__line {
       font-family: var(--font-serif-en), var(--font-serif);
-      font-size: 1.15rem;
+      font-size: 1.35rem;
       color: var(--color-gold-light);
-      line-height: 2.2;
-      text-align: center;
+      line-height: 2.4;
+      text-align: left;
+    }
+    .equation-block__line-sub {
+      font-size: var(--fs-small);
+      color: var(--color-text-dim);
+      line-height: 1.8;
+      margin-bottom: 0.8rem;
+      text-align: left;
+      padding-left: 1.5rem;
     }
     .equation-block__note {
       font-size: var(--fs-small);
@@ -221,7 +245,7 @@
       color: var(--color-text-soft);
       border-bottom: 1px solid var(--color-gold-a08);
       line-height: 1.8;
-      vertical-align: top;
+      vertical-align: middle;
     }
     .luxury-table td:first-child {
       color: var(--color-gold-light);
@@ -380,6 +404,19 @@
       line-height: 2;
     }
 
+    /* Definition block purple shimmer title */
+    .def-title--purple {
+      display: inline;
+      background: linear-gradient(90deg, #b8a0d8 0%, #b8a0d8 40%, #e0d0f0 50%, #b8a0d8 60%, #b8a0d8 100%);
+      background-size: 200% 100%;
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: purple-shimmer 5s ease-in-out infinite;
+      filter: drop-shadow(0 0 12px rgba(160,130,210,0.25));
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
     /* Subsection anchor offset */
     [id] {
       scroll-margin-top: 80px;
@@ -492,7 +529,7 @@
     /* --- Mobile --- */
     @media (max-width: 600px) {
       .axiom-block { padding: 2rem 1.2rem; }
-      .axiom-block__formula { font-size: 1.4rem; }
+      .axiom-block__formula { font-size: 2.5rem; }
       .toc-nav { padding: 2rem 1.2rem; }
       .equation-block { padding: 2rem 1.2rem; }
       .definition-block { padding: 2rem 1.2rem; }
@@ -725,7 +762,7 @@
               <tbody>
                 <tr>
                   <td>T</td>
-                  <td>天命（天命の言語化セッション&trade;によって確定された、整合の収束点）</td>
+                  <td>天命（天命の言語化セッション&trade;によって確定された、整合の収束点──生まれてきた意味および生きる目的）</td>
                 </tr>
                 <tr>
                   <td>A</td>
@@ -747,7 +784,7 @@
         <!-- Inverse -->
         <div class="axiom-block fade-in" style="margin-top: 2rem;">
           <p class="axiom-block__label">Inverse</p>
-          <p class="axiom-block__formula">&not;T &or; &not;A &rArr; &not;P<sub>max</sub></p>
+          <p class="axiom-block__formula axiom-block__formula--purple">&not;T &or; &not;A &rArr; &not;P<sub>max</sub></p>
           <p class="axiom-block__desc">
             天命が不在であるか、アロスタシスが破綻しているならば、<br>
             パフォーマンスは最大化されない。
@@ -759,10 +796,10 @@
 
       <!-- ===================== 天命を全うする身体とは何か ===================== -->
       <div class="content-block text-panel fade-in" id="定義">
-        <h2 class="section__title section__title--left">天命を全うする身体とは何か</h2>
+        <h2 class="section__title section__title--left">天命を全うする身体とは<br class="sp-only">何か？</h2>
 
-        <div class="pull-quote fade-in">
-          <p>天命を全うする身体とは、身体を通じた整合が進行し続けている状態である。</p>
+        <div class="pull-quote fade-in" style="text-align: left;">
+          <p>天命を全うする身体とは、<br>身体を通じた整合が<br>進行し続けている状態である。</p>
         </div>
 
         <p class="body-text">
@@ -775,21 +812,21 @@
 
         <div class="definition-block fade-in" style="margin: 2rem 0;">
           <p style="font-size: var(--fs-body); line-height: 2; color: var(--color-text-soft);">
-            <strong style="color: var(--color-gold-light);">身体のアロスタシス（回復）。</strong>
+            <span class="def-title--purple">身体のアロスタシス（回復）。</span><br>
             運動・栄養・睡眠の3入力を通じて、身体の設定値が環境に応じて最適に更新され続けている状態。数値が良いことではなく、更新が持続していることが本質。
           </p>
         </div>
 
         <div class="definition-block fade-in" style="margin: 2rem 0;">
           <p style="font-size: var(--fs-body); line-height: 2; color: var(--color-text-soft);">
-            <strong style="color: var(--color-gold-light);">認知のアロスタシス（合理性）。</strong>
+            <span class="def-title--purple">認知のアロスタシス（合理性）。</span><br>
             信念・解釈・判断の枠組みが、天命との整合に向かって更新され続けている状態。過去の信念体系に固着せず、新しい情報や経験に応じて認知構造そのものが再編成される。
           </p>
         </div>
 
         <div class="definition-block fade-in" style="margin: 2rem 0;">
           <p style="font-size: var(--fs-body); line-height: 2; color: var(--color-text-soft);">
-            <strong style="color: var(--color-gold-light);">行動のアロスタシス（継続）。</strong>
+            <span class="def-title--purple">行動のアロスタシス（継続）。</span><br>
             動機づけと報酬系が、天命との整合に向かって機能している状態。短期的な快楽への収束ではなく、天命に基づく長期的な行動パターンが自動化されている。
           </p>
         </div>
@@ -803,7 +840,8 @@
 
         <div class="equation-block fade-in">
           <p class="equation-block__line">健康 ＝ 運動 &times; 栄養 &times; 睡眠 ＝ 回復</p>
-          <p class="equation-block__line">回復 ＝ アロスタシス（身体の設定値を最適に更新し続けるプロセス）</p>
+          <p class="equation-block__line">回復 ＝ アロスタシス</p>
+          <p class="equation-block__line-sub">（身体の設定値を最適に更新し続けるプロセス）</p>
           <p class="equation-block__line">パフォーマンス ＝ プライミング &times; 健康</p>
         </div>
 
@@ -815,7 +853,7 @@
             パフォーマンスは、健康にプライミングを掛け合わせたものである。プライミングとは、その日の身体を天命の遂行に最適化する初期設定──起床後の呼吸・身体操作・状態管理によって、身体と神経系を「今日、天命を全うする」方向に整えるプロセスだ。
           </p>
           <p class="body-text">
-            <strong>方法は構造に従属する。</strong>何を食べるか、どう動くか、いつ寝るかは、すべてこの構造の中で位置づけられる。構造なき方法は迷走する。構造を理解すれば、方法は自明に導かれる。
+            <strong>方法は構造に従属する。</strong><br>何を食べるか、どう動くか、いつ寝るかは、すべてこの構造の中で位置づけられる。構造なき方法は迷走する。構造を理解すれば、方法は自明に導かれる。
           </p>
         </div>
       </div>
@@ -824,7 +862,7 @@
 
       <!-- ===================== I. 身体のアロスタシス ===================== -->
       <div class="content-block fade-in" id="身体">
-        <h2 class="section__title section__title--left">I. 身体のアロスタシス ── 回復</h2>
+        <h2 class="section__title section__title--left">I. 身体のアロスタシス<br class="sp-only"> ── 回復</h2>
 
         <!-- プライミング -->
         <div class="text-panel fade-in" style="margin-top: 2rem;">
@@ -1062,26 +1100,26 @@
 
       <!-- ===================== II. 認知のアロスタシス ===================== -->
       <div class="content-block fade-in" id="認知">
-        <h2 class="section__title section__title--left">II. 認知のアロスタシス ── 合理性</h2>
+        <h2 class="section__title section__title--left">II. 認知のアロスタシス<br class="sp-only"> ── 合理性</h2>
 
         <!-- アロスタティック負荷 -->
         <div class="text-panel fade-in" style="margin-top: 2rem;">
-          <h3 style="font-size: var(--fs-h3); color: var(--color-gold); margin-bottom: 1rem;">アロスタティック負荷と破綻のカスケード</h3>
+          <h3 style="font-size: var(--fs-h3); color: var(--color-gold); margin-bottom: 1rem;">アロスタティック負荷と<br class="sp-only">破綻のカスケード</h3>
 
           <p class="body-text">
             アロスタシスが最適に機能している状態では、ストレスは適応の刺激として作用する。しかしストレスが慢性化し、回復が追いつかなくなると、アロスタティック負荷が蓄積する。負荷が閾値を超えると、以下のカスケード（連鎖反応）が生じる：
           </p>
 
           <div class="cascade-flow fade-in">
-            <div class="cascade-flow__step">慢性ストレス（回復を超える負荷の持続）</div>
+            <div class="cascade-flow__step">慢性ストレス<br class="sp-only">（回復を超える負荷の持続）</div>
             <div class="cascade-flow__arrow">&darr;</div>
-            <div class="cascade-flow__step">HPA軸の過活性化（コルチゾールの慢性的上昇）</div>
+            <div class="cascade-flow__step">HPA軸の過活性化<br class="sp-only">（コルチゾールの慢性的上昇）</div>
             <div class="cascade-flow__arrow">&darr;</div>
-            <div class="cascade-flow__step">慢性炎症（IL-6, TNF-&alpha;の上昇）</div>
+            <div class="cascade-flow__step">慢性炎症<br class="sp-only">（IL-6, TNF-&alpha;の上昇）</div>
             <div class="cascade-flow__arrow">&darr;</div>
-            <div class="cascade-flow__step">脳機能への影響（海馬の萎縮・前頭前野の機能低下）</div>
+            <div class="cascade-flow__step">脳機能への影響<br class="sp-only">（海馬の萎縮・前頭前野の機能低下）</div>
             <div class="cascade-flow__arrow">&darr;</div>
-            <div class="cascade-flow__step">認知の硬直化（信念の固着・判断力の低下）</div>
+            <div class="cascade-flow__step">認知の硬直化<br class="sp-only">（信念の固着・判断力の低下）</div>
             <div class="cascade-flow__arrow">&darr;</div>
             <div class="cascade-flow__step">天命との整合の破綻</div>
           </div>
@@ -1153,7 +1191,7 @@
 
       <!-- ===================== III. 行動のアロスタシス ===================== -->
       <div class="content-block fade-in" id="行動">
-        <h2 class="section__title section__title--left">III. 行動のアロスタシス ── 継続</h2>
+        <h2 class="section__title section__title--left">III. 行動のアロスタシス<br class="sp-only"> ── 継続</h2>
 
         <!-- ドーパミン系 -->
         <div class="text-panel fade-in" style="margin-top: 2rem;">
