@@ -21,30 +21,39 @@ canvas#bg{display:block;position:fixed;top:0;left:0;width:100%;height:100%;z-ind
 #ui{position:fixed;top:0;left:0;width:100%;height:100%;z-index:2}
 .star{position:absolute;width:3px;height:3px;border-radius:50%;
 background:rgba(192,168,120,0.15);pointer-events:none;transition:none}
-.star.bright{background:rgba(192,168,120,0.5);box-shadow:0 0 4px rgba(192,168,120,0.3)}
 #quote-container{position:fixed;top:0;left:0;width:100%;height:100%;
-display:flex;align-items:center;justify-content:center;
+display:flex;align-items:center;justify-content:center;flex-direction:column;
 pointer-events:none;z-index:3;padding:2rem}
-#quote{font-family:'Shippori Mincho',serif;color:rgba(192,168,120,0);
-font-size:clamp(1rem,3.5vw,1.5rem);font-weight:400;
-letter-spacing:.12em;line-height:2.2;text-align:center;
-max-width:min(600px,85vw);transition:none;pointer-events:none}
+#quote-lines{display:flex;flex-direction:column;align-items:center;gap:0;
+max-width:min(700px,88vw)}
+.q-line{font-family:'Shippori Mincho',serif;color:rgba(192,168,120,0);
+font-size:clamp(1.2rem,4.5vw,1.9rem);font-weight:400;
+letter-spacing:.14em;line-height:2.4;text-align:center;
+transform:translateY(8px);white-space:nowrap}
+#gold-line-top,#gold-line-bottom{width:0;height:1px;
+background:linear-gradient(90deg,transparent,rgba(192,168,120,.4),transparent);
+transition:width 1.8s ease;margin:0 auto}
+#gold-line-top{margin-bottom:1.8rem}
+#gold-line-bottom{margin-top:1.8rem}
+#source{font-family:'Cormorant Garamond',serif;font-weight:300;font-style:italic;
+font-size:clamp(.6rem,1.8vw,.78rem);letter-spacing:.28em;color:rgba(192,168,120,0);
+margin-top:2.2rem;text-align:center;transform:translateY(4px)}
 #hint{position:fixed;bottom:2rem;left:0;right:0;text-align:center;
 font-family:'Cormorant Garamond',serif;font-weight:300;
 font-size:.68rem;letter-spacing:.32em;color:rgba(192,168,120,0);
 pointer-events:none;user-select:none;z-index:4}
-#source{position:fixed;bottom:4.5rem;left:0;right:0;text-align:center;
-font-family:'Cormorant Garamond',serif;font-weight:300;font-style:italic;
-font-size:.62rem;letter-spacing:.22em;color:rgba(192,168,120,0);
-pointer-events:none;user-select:none;z-index:4;transition:none}
 </style>
 </head>
 <body>
 <canvas id="bg"></canvas>
 <div id="stars"></div>
 <div id="ui"></div>
-<div id="quote-container"><div id="quote"></div></div>
-<div id="source"></div>
+<div id="quote-container">
+  <div id="gold-line-top"></div>
+  <div id="quote-lines"></div>
+  <div id="gold-line-bottom"></div>
+  <div id="source"></div>
+</div>
 <div id="hint">touch the void</div>
 <script>
 'use strict';
@@ -224,24 +233,43 @@ void main(){
 }
 `;
 
-function createShader(type,src){
-  const s=gl.createShader(type);gl.shaderSource(s,src);gl.compileShader(s);
-  if(!gl.getShaderParameter(s,gl.COMPILE_STATUS)){console.error(gl.getShaderInfoLog(s));return null;}
-  return s;
+let glReady = false;
+let uTime, uRes;
+
+function initGL() {
+  if (!gl) return false;
+  try {
+    function createShader(type,src){
+      const s=gl.createShader(type);gl.shaderSource(s,src);gl.compileShader(s);
+      if(!gl.getShaderParameter(s,gl.COMPILE_STATUS)){
+        console.error('Shader error:',gl.getShaderInfoLog(s));return null;}
+      return s;
+    }
+    const vs=createShader(gl.VERTEX_SHADER,vertSrc);
+    const fs=createShader(gl.FRAGMENT_SHADER,fragSrc);
+    if(!vs||!fs) return false;
+    const prog=gl.createProgram();
+    gl.attachShader(prog,vs);gl.attachShader(prog,fs);gl.linkProgram(prog);
+    if(!gl.getProgramParameter(prog,gl.LINK_STATUS)){
+      console.error('Program error:',gl.getProgramInfoLog(prog));return false;}
+    gl.useProgram(prog);
+    const buf=gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER,buf);
+    gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
+    const aPos=gl.getAttribLocation(prog,'a_pos');
+    gl.enableVertexAttribArray(aPos);gl.vertexAttribPointer(aPos,2,gl.FLOAT,false,0,0);
+    uTime=gl.getUniformLocation(prog,'u_time');
+    uRes=gl.getUniformLocation(prog,'u_resolution');
+    return true;
+  } catch(e) { console.error('WebGL init failed:',e); return false; }
 }
-const vs=createShader(gl.VERTEX_SHADER,vertSrc);
-const fs=createShader(gl.FRAGMENT_SHADER,fragSrc);
-const prog=gl.createProgram();
-gl.attachShader(prog,vs);gl.attachShader(prog,fs);gl.linkProgram(prog);gl.useProgram(prog);
 
-const buf=gl.createBuffer();
-gl.bindBuffer(gl.ARRAY_BUFFER,buf);
-gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
-const aPos=gl.getAttribLocation(prog,'a_pos');
-gl.enableVertexAttribArray(aPos);gl.vertexAttribPointer(aPos,2,gl.FLOAT,false,0,0);
+glReady = initGL();
 
-const uTime=gl.getUniformLocation(prog,'u_time');
-const uRes=gl.getUniformLocation(prog,'u_resolution');
+// CSS fallback if WebGL fails
+if (!glReady) {
+  canvas.style.background = 'radial-gradient(ellipse at 30% 40%, rgba(14,8,32,1) 0%, rgba(6,5,10,1) 60%)';
+}
 
 // ══════════════════════════════════════
 // Stars — scattered points of light
@@ -287,15 +315,17 @@ function updateStars(t) {
 }
 
 // ══════════════════════════════════════
-// Quote animation
+// Cinematic Quote Animation
 // ══════════════════════════════════════
-const quoteEl = document.getElementById('quote');
+const quoteLinesEl = document.getElementById('quote-lines');
 const sourceEl = document.getElementById('source');
 const hintEl = document.getElementById('hint');
+const goldTop = document.getElementById('gold-line-top');
+const goldBottom = document.getElementById('gold-line-bottom');
 
 let quoteVisible = false;
 let quoteAnimating = false;
-let quoteTimer = null;
+let fadeOutTimer = null;
 let hintShown = false;
 
 function showQuote() {
@@ -304,63 +334,136 @@ function showQuote() {
 
   const q = nextQuote();
 
-  // Fade out current if visible
   if (quoteVisible) {
-    fadeOut(() => {
-      setQuoteText(q);
-      fadeIn();
+    cinematicFadeOut(() => {
+      cinematicReveal(q);
     });
   } else {
-    setQuoteText(q);
-    fadeIn();
+    cinematicReveal(q);
   }
 }
 
-function setQuoteText(q) {
-  quoteEl.innerHTML = q.text.replace(/\n/g, '<br>');
-  sourceEl.textContent = '── ' + q.source;
-}
-
-function fadeIn() {
+function cinematicReveal(q) {
   quoteVisible = true;
+  const lines = q.text.split('\n');
+
+  // Clear previous
+  quoteLinesEl.innerHTML = '';
+  sourceEl.textContent = '── ' + q.source;
+  sourceEl.style.color = 'rgba(192,168,120,0)';
+  sourceEl.style.transform = 'translateY(4px)';
+
+  // Create line elements
+  const lineEls = lines.map(text => {
+    const el = document.createElement('div');
+    el.className = 'q-line';
+    el.textContent = text;
+    quoteLinesEl.appendChild(el);
+    return el;
+  });
+
+  // Gold lines expand
+  goldTop.style.width = '0';
+  goldBottom.style.width = '0';
+  requestAnimationFrame(() => {
+    goldTop.style.width = 'min(320px, 60vw)';
+    goldBottom.style.width = 'min(320px, 60vw)';
+  });
+
+  // Reveal each line with delay
+  lineEls.forEach((el, i) => {
+    const delay = 400 + i * 500; // 500ms between each line
+    setTimeout(() => {
+      animateLineIn(el);
+    }, delay);
+  });
+
+  // Source appears after all lines
+  const sourceDelay = 400 + lineEls.length * 500 + 600;
+  setTimeout(() => {
+    animateElement(sourceEl, 0, 0.35, 0.005, 4, 0);
+  }, sourceDelay);
+
+  // Mark animation complete
+  const totalDelay = sourceDelay + 800;
+  setTimeout(() => {
+    quoteAnimating = false;
+    // Auto fade out
+    clearTimeout(fadeOutTimer);
+    fadeOutTimer = setTimeout(() => {
+      cinematicFadeOut(() => { quoteVisible = false; });
+    }, 5000 + Math.random() * 2000);
+  }, totalDelay);
+}
+
+function animateLineIn(el) {
   let alpha = 0;
+  let y = 8;
   const step = () => {
-    alpha += 0.008;
-    if (alpha >= 0.85) {
-      alpha = 0.85;
-      quoteEl.style.color = `rgba(192,168,120,${alpha})`;
-      sourceEl.style.color = `rgba(192,168,120,${alpha * 0.4})`;
-      quoteAnimating = false;
-      // Auto fade after a while
-      clearTimeout(quoteTimer);
-      quoteTimer = setTimeout(() => {
-        fadeOut(() => { quoteVisible = false; });
-      }, 6000 + Math.random() * 3000);
+    alpha += 0.012;
+    y *= 0.92;
+    if (alpha >= 0.88) {
+      el.style.color = 'rgba(192,168,120,0.88)';
+      el.style.transform = 'translateY(0)';
       return;
     }
-    quoteEl.style.color = `rgba(192,168,120,${alpha})`;
-    sourceEl.style.color = `rgba(192,168,120,${alpha * 0.4})`;
+    el.style.color = `rgba(192,168,120,${alpha})`;
+    el.style.transform = `translateY(${y}px)`;
     requestAnimationFrame(step);
   };
   requestAnimationFrame(step);
 }
 
-function fadeOut(cb) {
-  let alpha = 0.85;
+function animateElement(el, from, to, speed, yFrom, yTo) {
+  let alpha = from;
+  let y = yFrom;
   const step = () => {
-    alpha -= 0.012;
-    if (alpha <= 0) {
-      alpha = 0;
-      quoteEl.style.color = `rgba(192,168,120,0)`;
-      sourceEl.style.color = `rgba(192,168,120,0)`;
-      if (cb) cb();
+    alpha += speed;
+    y += (yTo - y) * 0.08;
+    if ((speed > 0 && alpha >= to) || (speed < 0 && alpha <= to)) {
+      el.style.color = `rgba(192,168,120,${to})`;
+      el.style.transform = `translateY(${yTo}px)`;
       return;
     }
-    quoteEl.style.color = `rgba(192,168,120,${alpha})`;
-    sourceEl.style.color = `rgba(192,168,120,${alpha * 0.4})`;
+    el.style.color = `rgba(192,168,120,${alpha})`;
+    el.style.transform = `translateY(${y}px)`;
     requestAnimationFrame(step);
   };
   requestAnimationFrame(step);
+}
+
+function cinematicFadeOut(cb) {
+  const lines = quoteLinesEl.querySelectorAll('.q-line');
+
+  // Fade gold lines
+  goldTop.style.width = '0';
+  goldBottom.style.width = '0';
+
+  // Fade source first
+  animateElement(sourceEl, 0.35, 0, -0.008, 0, -4);
+
+  // Fade lines in reverse order
+  const lineArr = Array.from(lines).reverse();
+  lineArr.forEach((el, i) => {
+    setTimeout(() => {
+      let alpha = 0.88;
+      const step = () => {
+        alpha -= 0.018;
+        if (alpha <= 0) {
+          el.style.color = 'rgba(192,168,120,0)';
+          return;
+        }
+        el.style.color = `rgba(192,168,120,${alpha})`;
+        requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    }, i * 150);
+  });
+
+  // Callback after all faded
+  setTimeout(() => {
+    if (cb) cb();
+  }, lineArr.length * 150 + 600);
 }
 
 // ══════════════════════════════════════
@@ -386,9 +489,11 @@ const t0 = performance.now();
 function frame() {
   const t = (performance.now() - t0) * 0.001;
 
-  gl.uniform1f(uTime, t);
-  gl.uniform2f(uRes, canvas.width, canvas.height);
-  gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+  if (glReady) {
+    gl.uniform1f(uTime, t);
+    gl.uniform2f(uRes, canvas.width, canvas.height);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+  }
 
   updateStars(t);
 
