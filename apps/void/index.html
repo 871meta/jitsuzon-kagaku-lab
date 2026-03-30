@@ -9,308 +9,407 @@
 <meta property="og:title" content="void — 実存科学研究所">
 <meta property="og:description" content="闇の中に触れる──実存科学研究所が提供するインタラクティブ体験。画面に触れると、金色の粒子が闇の中で反応する。">
 <meta property="og:url" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/apps/void/index.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:100%;height:100%;overflow:hidden;background:#06050a;
--webkit-tap-highlight-color:transparent;touch-action:none}
-canvas{display:block;position:fixed;top:0;left:0;width:100%;height:100%}
+-webkit-tap-highlight-color:transparent;touch-action:none;cursor:default}
+canvas#bg{display:block;position:fixed;top:0;left:0;width:100%;height:100%;z-index:0}
+#stars{position:fixed;top:0;left:0;width:100%;height:100%;z-index:1;pointer-events:none}
+#ui{position:fixed;top:0;left:0;width:100%;height:100%;z-index:2}
+.star{position:absolute;width:3px;height:3px;border-radius:50%;
+background:rgba(192,168,120,0.15);pointer-events:none;transition:none}
+.star.bright{background:rgba(192,168,120,0.5);box-shadow:0 0 4px rgba(192,168,120,0.3)}
+#quote-container{position:fixed;top:0;left:0;width:100%;height:100%;
+display:flex;align-items:center;justify-content:center;
+pointer-events:none;z-index:3;padding:2rem}
+#quote{font-family:'Shippori Mincho',serif;color:rgba(192,168,120,0);
+font-size:clamp(1rem,3.5vw,1.5rem);font-weight:400;
+letter-spacing:.12em;line-height:2.2;text-align:center;
+max-width:min(600px,85vw);transition:none;pointer-events:none}
+#hint{position:fixed;bottom:2rem;left:0;right:0;text-align:center;
+font-family:'Cormorant Garamond',serif;font-weight:300;
+font-size:.68rem;letter-spacing:.32em;color:rgba(192,168,120,0);
+pointer-events:none;user-select:none;z-index:4}
+#source{position:fixed;bottom:4.5rem;left:0;right:0;text-align:center;
+font-family:'Cormorant Garamond',serif;font-weight:300;font-style:italic;
+font-size:.62rem;letter-spacing:.22em;color:rgba(192,168,120,0);
+pointer-events:none;user-select:none;z-index:4;transition:none}
 </style>
 </head>
 <body>
-<canvas id="c"></canvas>
+<canvas id="bg"></canvas>
+<div id="stars"></div>
+<div id="ui"></div>
+<div id="quote-container"><div id="quote"></div></div>
+<div id="source"></div>
+<div id="hint">touch the void</div>
 <script>
 'use strict';
 
-const canvas = document.getElementById('c');
+// ══════════════════════════════════════
+// QUOTES — 実存科学研究所の名言・概念
+// ══════════════════════════════════════
+const QUOTES = [
+  { text: '実存とは、\n「生きる意味」である', source: '実存科学' },
+  { text: 'Metaがある限り\n自由意志はない', source: '第一公理' },
+  { text: '天命を悟り、日々全うする', source: '天命' },
+  { text: '意味は作るものではなく、\n整合が進むと\n収束してしまう', source: '意味論' },
+  { text: 'あなたは自分の意思で\n「考えている」のではなく、\n構造の影響下で\n「考えさせられている」', source: 'Meta' },
+  { text: '構造が見えれば、\n恐怖は自然に崩壊する', source: '恐怖論' },
+  { text: '自由とは「選ぶこと」ではなく、\n「選ばれている構造を\n観ること」である', source: '認識の転回' },
+  { text: '恐怖が解体されたとき、\n残るのは「愛」である', source: '恐怖論' },
+  { text: 'シャドウは欠陥ではない。\n天命が形になるための\n素材である', source: 'Shadow' },
+  { text: '理解とは\n「努力して得るもの」ではなく、\n「構造が見えたときに\n自動的に起きるもの」', source: '知識論' },
+  { text: '時間は変わらない。\n変わるのは\n「認識の位置」だけである', source: '時間論' },
+  { text: '人類は、\n「生きる意味」を語る言葉を\n失った', source: '実存科学' },
+  { text: '極意とは、\n何もしないことではなく、\n余計な一手を\n入れないこと', source: '認識の転回' },
+  { text: 'Metaとは\n"舞台そのもの"であり、\n私たちはその舞台の上で\n演じる俳優である', source: 'Meta' },
+  { text: '理不尽だった愛が、\n必然だった愛へと\n昇華する', source: '家族論' },
+  { text: '「あの日の自分を赦す」。\nこの一点だけが、\n人生を取り戻す鍵になる', source: '許し' },
+  { text: '個体の整合は関係を変え、\n関係の整合は文化を変える', source: '社会論' },
+  { text: '知性とは才能ではない。\n「理解の装置」を\nインストールすれば、\n誰にでも起動する', source: '知識論' },
+  { text: '人生をやり直すとは\n物理的に過去に戻ることではない。\n今という現実を\nもう一度まっすぐに\n生きることである', source: '時間論' },
+  { text: '天命は、\nDoing（何をするか）の\n次元にはない。\nBeing（いかに在るか）の\n次元に属する', source: '天命' },
+  { text: '許す・許さないの\n二元論そのものが、\n一段上から見ると\n成立しない', source: '家族論' },
+  { text: '「自分を赦す」という\n生き方だけは、\n誰にも奪わせてはいけない', source: '許し' },
+  { text: '完成されているがゆえの檻', source: 'ゴールデンシャドウ' },
+  { text: '「自分を愛する」ではなく、\n「愛そのものとして\n存在する」状態に至る', source: '完全構造' },
+  { text: 'これぞ我が人生', source: '遺作' },
+  { text: '構造が整った瞬間に、\n意味は自然に露呈し、\n主体は悟るのではなく\n「悟らされてしまう」', source: '意味論' },
+  { text: '「私がやっている」\nというより、\n「やらされている」に\n近い感覚', source: '中動態' },
+  { text: '「では、自分を\n心から愛せていると\n言えるだろうか？」', source: '実存科学' },
+  { text: '生きる意味を語れる\n社会を創る', source: '社会論' },
+  { text: '宿命と天命は、\nはじめから\n別宇宙に属している', source: '宿命論' },
+  { text: '「やり直したい」という\n願いの正体は、\n「本来の構造への\n帰還欲求」である', source: '時間論' },
+  { text: '情が包み、理が照らす。\n両者が同時に作動するとき、\n完全構造が顕現する', source: '完全構造' },
+  { text: '光そのものが\n影を生むという\n逆転した構造', source: 'Shadow' },
+  { text: '天命を語り合える関係', source: '心友' },
+  { text: '自己否定とは、\n自己保存のための\n防衛構造である', source: 'Shadow' },
+  { text: '認識が歪むと、\n時間が歪む', source: '時間論' },
+  { text: '意味を操作することではなく、\n意味が発生してしまう構造を、\nそのまま見ること', source: '観照' },
+  { text: 'あの瞬間、Metaは\nあなたの天命の入口を──\n一度だけ、照らした', source: '啓示論' },
+];
+
+// Shuffle quotes for this session
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.random() * (i + 1) | 0;
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+let quoteQueue = shuffle(QUOTES);
+let quoteIndex = 0;
+
+function nextQuote() {
+  if (quoteIndex >= quoteQueue.length) {
+    quoteQueue = shuffle(QUOTES);
+    quoteIndex = 0;
+  }
+  return quoteQueue[quoteIndex++];
+}
+
+// ══════════════════════════════════════
+// WebGL Background Shader
+// ══════════════════════════════════════
+const canvas = document.getElementById('bg');
 const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
 
-// ── Resize ──
+let W, H;
+
 function resize() {
-  const dpr = Math.min(window.devicePixelRatio || 1, 2);
-  canvas.width = window.innerWidth * dpr;
-  canvas.height = window.innerHeight * dpr;
+  const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+  W = window.innerWidth;
+  H = window.innerHeight;
+  canvas.width = W * dpr;
+  canvas.height = H * dpr;
   gl.viewport(0, 0, canvas.width, canvas.height);
 }
-resize();
-window.addEventListener('resize', resize);
 
-// ── Shaders ──
-const vertSrc = `
-attribute vec2 a_pos;
-void main() { gl_Position = vec4(a_pos, 0.0, 1.0); }
-`;
+const vertSrc = `attribute vec2 a_pos;void main(){gl_Position=vec4(a_pos,0,1);}`;
 
 const fragSrc = `
 precision highp float;
-
 uniform float u_time;
 uniform vec2 u_resolution;
-uniform vec2 u_touch;
-uniform float u_touchStrength;
 
-// --- Noise functions ---
-vec3 mod289(vec3 x) { return x - floor(x * (1.0/289.0)) * 289.0; }
-vec4 mod289(vec4 x) { return x - floor(x * (1.0/289.0)) * 289.0; }
-vec4 permute(vec4 x) { return mod289(((x*34.0)+1.0)*x); }
-vec4 taylorInvSqrt(vec4 r) { return 1.79284291400159 - 0.85373472095314 * r; }
+vec3 mod289(vec3 x){return x-floor(x*(1./289.))*289.;}
+vec4 mod289(vec4 x){return x-floor(x*(1./289.))*289.;}
+vec4 permute(vec4 x){return mod289(((x*34.)+1.)*x);}
+vec4 taylorInvSqrt(vec4 r){return 1.79284291400159-.85373472095314*r;}
 
-float snoise(vec3 v) {
-  const vec2 C = vec2(1.0/6.0, 1.0/3.0);
-  const vec4 D = vec4(0.0, 0.5, 1.0, 2.0);
-  vec3 i = floor(v + dot(v, C.yyy));
-  vec3 x0 = v - i + dot(i, C.xxx);
-  vec3 g = step(x0.yzx, x0.xyz);
-  vec3 l = 1.0 - g;
-  vec3 i1 = min(g.xyz, l.zxy);
-  vec3 i2 = max(g.xyz, l.zxy);
-  vec3 x1 = x0 - i1 + C.xxx;
-  vec3 x2 = x0 - i2 + C.yyy;
-  vec3 x3 = x0 - D.yyy;
-  i = mod289(i);
-  vec4 p = permute(permute(permute(
-    i.z + vec4(0.0, i1.z, i2.z, 1.0))
-    + i.y + vec4(0.0, i1.y, i2.y, 1.0))
-    + i.x + vec4(0.0, i1.x, i2.x, 1.0));
-  float n_ = 0.142857142857;
-  vec3 ns = n_ * D.wyz - D.xzx;
-  vec4 j = p - 49.0 * floor(p * ns.z * ns.z);
-  vec4 x_ = floor(j * ns.z);
-  vec4 y_ = floor(j - 7.0 * x_);
-  vec4 x = x_ * ns.x + ns.yyyy;
-  vec4 y = y_ * ns.x + ns.yyyy;
-  vec4 h = 1.0 - abs(x) - abs(y);
-  vec4 b0 = vec4(x.xy, y.xy);
-  vec4 b1 = vec4(x.zw, y.zw);
-  vec4 s0 = floor(b0)*2.0 + 1.0;
-  vec4 s1 = floor(b1)*2.0 + 1.0;
-  vec4 sh = -step(h, vec4(0.0));
-  vec4 a0 = b0.xzyw + s0.xzyw*sh.xxyy;
-  vec4 a1 = b1.xzyw + s1.xzyw*sh.zzww;
-  vec3 p0 = vec3(a0.xy, h.x);
-  vec3 p1 = vec3(a0.zw, h.y);
-  vec3 p2 = vec3(a1.xy, h.z);
-  vec3 p3 = vec3(a1.zw, h.w);
-  vec4 norm = taylorInvSqrt(vec4(dot(p0,p0), dot(p1,p1), dot(p2,p2), dot(p3,p3)));
-  p0 *= norm.x; p1 *= norm.y; p2 *= norm.z; p3 *= norm.w;
-  vec4 m = max(0.6 - vec4(dot(x0,x0), dot(x1,x1), dot(x2,x2), dot(x3,x3)), 0.0);
-  m = m * m;
-  return 42.0 * dot(m*m, vec4(dot(p0,x0), dot(p1,x1), dot(p2,x2), dot(p3,x3)));
+float snoise(vec3 v){
+  const vec2 C=vec2(1./6.,1./3.);const vec4 D=vec4(0,.5,1,2);
+  vec3 i=floor(v+dot(v,C.yyy));vec3 x0=v-i+dot(i,C.xxx);
+  vec3 g=step(x0.yzx,x0.xyz);vec3 l=1.-g;
+  vec3 i1=min(g.xyz,l.zxy);vec3 i2=max(g.xyz,l.zxy);
+  vec3 x1=x0-i1+C.xxx;vec3 x2=x0-i2+C.yyy;vec3 x3=x0-D.yyy;
+  i=mod289(i);
+  vec4 p=permute(permute(permute(i.z+vec4(0,i1.z,i2.z,1))+i.y+vec4(0,i1.y,i2.y,1))+i.x+vec4(0,i1.x,i2.x,1));
+  float n_=.142857142857;vec3 ns=n_*D.wyz-D.xzx;
+  vec4 j=p-49.*floor(p*ns.z*ns.z);vec4 x_=floor(j*ns.z);vec4 y_=floor(j-7.*x_);
+  vec4 x=x_*ns.x+ns.yyyy;vec4 y=y_*ns.x+ns.yyyy;vec4 h=1.-abs(x)-abs(y);
+  vec4 b0=vec4(x.xy,y.xy);vec4 b1=vec4(x.zw,y.zw);
+  vec4 s0=floor(b0)*2.+1.;vec4 s1=floor(b1)*2.+1.;
+  vec4 sh=-step(h,vec4(0));
+  vec4 a0=b0.xzyw+s0.xzyw*sh.xxyy;vec4 a1=b1.xzyw+s1.xzyw*sh.zzww;
+  vec3 p0=vec3(a0.xy,h.x);vec3 p1=vec3(a0.zw,h.y);vec3 p2=vec3(a1.xy,h.z);vec3 p3=vec3(a1.zw,h.w);
+  vec4 norm=taylorInvSqrt(vec4(dot(p0,p0),dot(p1,p1),dot(p2,p2),dot(p3,p3)));
+  p0*=norm.x;p1*=norm.y;p2*=norm.z;p3*=norm.w;
+  vec4 m=max(.6-vec4(dot(x0,x0),dot(x1,x1),dot(x2,x2),dot(x3,x3)),0.);m=m*m;
+  return 42.*dot(m*m,vec4(dot(p0,x0),dot(p1,x1),dot(p2,x2),dot(p3,x3)));
 }
 
-// Fractal Brownian Motion
-float fbm(vec3 p) {
-  float f = 0.0;
-  float amp = 0.5;
-  float freq = 1.0;
-  for (int i = 0; i < 6; i++) {
-    f += amp * snoise(p * freq);
-    freq *= 2.1;
-    amp *= 0.48;
-    p.xy = mat2(0.8, 0.6, -0.6, 0.8) * p.xy;
-  }
+float fbm(vec3 p){
+  float f=0.,a=.5;
+  for(int i=0;i<5;i++){f+=a*snoise(p);p=p*2.1+vec3(.3);a*=.48;
+    p.xy=mat2(.8,.6,-.6,.8)*p.xy;}
   return f;
 }
 
-// Domain warping - creates the organic, flowing forms
-float warpedNoise(vec3 p) {
-  float t = u_time * 0.06;
-
-  vec3 q = vec3(
-    fbm(p + vec3(1.7, 9.2, 0.0) + t * 0.3),
-    fbm(p + vec3(8.3, 2.8, 0.0) + t * 0.2),
-    fbm(p + vec3(0.0, 0.0, t * 0.4))
-  );
-
-  vec3 r = vec3(
-    fbm(p + 4.0 * q + vec3(1.7, 9.2, 0.0) + t * 0.15),
-    fbm(p + 4.0 * q + vec3(8.3, 2.8, 0.0) + t * 0.12),
-    0.0
-  );
-
-  return fbm(p + 3.5 * r);
+float warped(vec3 p){
+  float t=u_time*0.04;
+  vec3 q=vec3(fbm(p+vec3(1.7,9.2,0)+t*.3),fbm(p+vec3(8.3,2.8,0)+t*.2),0.);
+  vec3 r=vec3(fbm(p+3.5*q+vec3(1.7,9.2,0)+t*.15),fbm(p+3.5*q+vec3(8.3,2.8,0)+t*.12),0.);
+  return fbm(p+3.*r);
 }
 
-void main() {
-  vec2 uv = gl_FragCoord.xy / u_resolution;
-  vec2 p = (gl_FragCoord.xy * 2.0 - u_resolution) / min(u_resolution.x, u_resolution.y);
+void main(){
+  vec2 uv=gl_FragCoord.xy/u_resolution;
+  vec2 p=(gl_FragCoord.xy*2.-u_resolution)/min(u_resolution.x,u_resolution.y);
+  float t=u_time*0.03;
 
-  // Touch distortion
-  if (u_touchStrength > 0.01) {
-    vec2 touchUV = u_touch / u_resolution * 2.0 - 1.0;
-    touchUV.x *= u_resolution.x / u_resolution.y;
-    p.x *= u_resolution.x / u_resolution.y;
-    float d = length(p - touchUV);
-    float influence = u_touchStrength * 0.4 / (d * 2.0 + 0.3);
-    vec2 dir = normalize(p - touchUV + 0.001);
-    p += dir * influence * 0.3;
-    p.x /= u_resolution.x / u_resolution.y;
-  }
+  float n1=warped(vec3(p*.7,t*.5));
+  float n2=warped(vec3(p*1.3+3.,t*.6));
+  float n3=fbm(vec3(p*2.+n1*.5,t*.8));
+  float lum=n1*.45+n2*.3+n3*.25+.5;
 
-  float t = u_time * 0.04;
-
-  // Layer 1: Deep background flow
-  float n1 = warpedNoise(vec3(p * 0.8, t * 0.5));
-
-  // Layer 2: Mid-ground detail
-  float n2 = warpedNoise(vec3(p * 1.5 + 3.0, t * 0.7));
-
-  // Layer 3: Fine luminous detail
-  float n3 = fbm(vec3(p * 2.5 + n1 * 0.5, t * 0.9));
-
-  // Compose layers
-  float base = n1 * 0.5 + 0.5;
-  float detail = n2 * 0.3 + 0.5;
-  float fine = n3 * 0.2 + 0.5;
-
-  float luminance = base * 0.5 + detail * 0.3 + fine * 0.2;
-
-  // Color palette: alcohol ink art — deep navy, purple, gold veins, lavender
-  // Sampled from haikei2.jpg background image
-
-  // Deep void / darkest navy
-  vec3 c_void = vec3(0.03, 0.02, 0.06);
-
-  // Deep navy blue
-  vec3 c_navy = vec3(0.08, 0.06, 0.22);
-
-  // Rich indigo-purple
-  vec3 c_indigo = vec3(0.18, 0.10, 0.38);
-
-  // Violet / purple
-  vec3 c_violet = vec3(0.42, 0.22, 0.55);
-
-  // Soft lavender (light areas)
-  vec3 c_lavender = vec3(0.58, 0.50, 0.72);
+  // Alcohol ink palette: deep navy, indigo, violet, lavender, gold veins
+  vec3 c_void=vec3(.02,.015,.05);
+  vec3 c_navy=vec3(.06,.04,.18);
+  vec3 c_indigo=vec3(.14,.08,.32);
+  vec3 c_violet=vec3(.35,.18,.50);
+  vec3 c_lavender=vec3(.50,.44,.65);
+  vec3 c_gold=vec3(.75,.62,.30);
 
   // Gold veins
-  vec3 c_gold = vec3(0.78, 0.64, 0.32);
+  float gv=abs(fbm(vec3(p*1.6+n1*1.,t*.25)));
+  float vein=1.-smoothstep(0.,.07,gv);
+  float glow=1.-smoothstep(0.,.22,gv);
 
-  // Bright gold highlights
-  vec3 c_gold_hi = vec3(0.88, 0.76, 0.40);
+  vec3 col=c_void;
+  col=mix(col,c_navy,smoothstep(.3,.5,lum));
+  col=mix(col,c_indigo,smoothstep(.4,.6,lum)*.7);
 
-  // Use separate noise layers for color channels (like real ink diffusion)
-  float n_purple = warpedNoise(vec3(p * 0.9 + 1.0, t * 0.6));
-  float purple_mask = smoothstep(-0.2, 0.6, n_purple);
+  float pm=smoothstep(-.15,.5,warped(vec3(p*.8+1.,t*.5)));
+  col=mix(col,c_violet,pm*.5);
+  col=mix(col,c_lavender,smoothstep(.65,.85,lum)*.3);
 
-  // Gold veins: sharp, thin lines using derivative of noise
-  float n_gold_raw = fbm(vec3(p * 1.8 + n1 * 1.2, t * 0.3));
-  float n_gold_edge = abs(n_gold_raw);
-  float gold_vein = 1.0 - smoothstep(0.0, 0.08, n_gold_edge);
-  // Broader gold glow around veins
-  float gold_glow = 1.0 - smoothstep(0.0, 0.25, n_gold_edge);
+  col=mix(col,c_gold*.6,glow*.25);
+  col=mix(col,c_gold,vein*.5);
 
-  // Build color in layers like alcohol ink
-  vec3 color = c_void;
+  // Darken significantly for text readability — this is a background
+  col*=0.35;
 
-  // Layer 1: Navy base
-  float navy_mask = smoothstep(0.25, 0.55, luminance);
-  color = mix(color, c_navy, navy_mask);
+  float vig=1.-length(uv-.5)*.7;
+  col*=smoothstep(0.,1.,vig);
 
-  // Layer 2: Indigo mid-tones
-  float indigo_mask = smoothstep(0.35, 0.6, luminance) * smoothstep(0.5, 0.0, abs(n2));
-  color = mix(color, c_indigo, indigo_mask * 0.8);
-
-  // Layer 3: Purple / violet pools
-  color = mix(color, c_violet, purple_mask * 0.55);
-
-  // Layer 4: Lavender in the lightest areas
-  float light_mask = smoothstep(0.6, 0.85, luminance);
-  color = mix(color, c_lavender, light_mask * 0.4);
-
-  // Layer 5: Gold veins threading through
-  color = mix(color, c_gold, gold_glow * 0.3);
-  color = mix(color, c_gold_hi, gold_vein * 0.7);
-
-  // Subtle vignette
-  float vig = 1.0 - length(uv - 0.5) * 0.8;
-  vig = smoothstep(0.0, 1.0, vig);
-  color *= vig;
-
-  // Very subtle film grain
-  float grain = (fract(sin(dot(gl_FragCoord.xy, vec2(12.9898, 78.233))) * 43758.5453) - 0.5) * 0.015;
-  color += grain;
-
-  gl_FragColor = vec4(color, 1.0);
+  col+=((fract(sin(dot(gl_FragCoord.xy,vec2(12.9898,78.233)))*43758.5453)-.5)*.012);
+  gl_FragColor=vec4(col,1);
 }
 `;
 
-// ── Compile shaders ──
-function createShader(type, src) {
-  const s = gl.createShader(type);
-  gl.shaderSource(s, src);
-  gl.compileShader(s);
-  if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) {
-    console.error(gl.getShaderInfoLog(s));
-    return null;
-  }
+function createShader(type,src){
+  const s=gl.createShader(type);gl.shaderSource(s,src);gl.compileShader(s);
+  if(!gl.getShaderParameter(s,gl.COMPILE_STATUS)){console.error(gl.getShaderInfoLog(s));return null;}
   return s;
 }
+const vs=createShader(gl.VERTEX_SHADER,vertSrc);
+const fs=createShader(gl.FRAGMENT_SHADER,fragSrc);
+const prog=gl.createProgram();
+gl.attachShader(prog,vs);gl.attachShader(prog,fs);gl.linkProgram(prog);gl.useProgram(prog);
 
-const vs = createShader(gl.VERTEX_SHADER, vertSrc);
-const fs = createShader(gl.FRAGMENT_SHADER, fragSrc);
-const prog = gl.createProgram();
-gl.attachShader(prog, vs);
-gl.attachShader(prog, fs);
-gl.linkProgram(prog);
-gl.useProgram(prog);
+const buf=gl.createBuffer();
+gl.bindBuffer(gl.ARRAY_BUFFER,buf);
+gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
+const aPos=gl.getAttribLocation(prog,'a_pos');
+gl.enableVertexAttribArray(aPos);gl.vertexAttribPointer(aPos,2,gl.FLOAT,false,0,0);
 
-// ── Geometry: fullscreen quad ──
-const buf = gl.createBuffer();
-gl.bindBuffer(gl.ARRAY_BUFFER, buf);
-gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
-const aPos = gl.getAttribLocation(prog, 'a_pos');
-gl.enableVertexAttribArray(aPos);
-gl.vertexAttribPointer(aPos, 2, gl.FLOAT, false, 0, 0);
+const uTime=gl.getUniformLocation(prog,'u_time');
+const uRes=gl.getUniformLocation(prog,'u_resolution');
 
-// ── Uniforms ──
-const uTime = gl.getUniformLocation(prog, 'u_time');
-const uRes = gl.getUniformLocation(prog, 'u_resolution');
-const uTouch = gl.getUniformLocation(prog, 'u_touch');
-const uTouchStr = gl.getUniformLocation(prog, 'u_touchStrength');
+// ══════════════════════════════════════
+// Stars — scattered points of light
+// ══════════════════════════════════════
+const starsEl = document.getElementById('stars');
+const NUM_STARS = 80;
+const starEls = [];
 
-// ── Touch state ──
-let touchX = 0, touchY = 0;
-let touchStrength = 0;
-let touching = false;
-
-canvas.addEventListener('pointerdown', (e) => {
-  e.preventDefault();
-  touching = true;
-  touchX = e.clientX * (canvas.width / canvas.clientWidth);
-  touchY = (canvas.clientHeight - e.clientY) * (canvas.height / canvas.clientHeight);
-  touchStrength = 1.0;
-});
-
-canvas.addEventListener('pointermove', (e) => {
-  e.preventDefault();
-  if (touching) {
-    touchX = e.clientX * (canvas.width / canvas.clientWidth);
-    touchY = (canvas.clientHeight - e.clientY) * (canvas.height / canvas.clientHeight);
+function createStars() {
+  for (let i = 0; i < NUM_STARS; i++) {
+    const el = document.createElement('div');
+    el.className = 'star';
+    const x = Math.random() * 100;
+    const y = Math.random() * 100;
+    el.style.left = x + '%';
+    el.style.top = y + '%';
+    const size = 1 + Math.random() * 2.5;
+    el.style.width = size + 'px';
+    el.style.height = size + 'px';
+    // Twinkle
+    el.dataset.phase = Math.random() * Math.PI * 2;
+    el.dataset.speed = 0.3 + Math.random() * 0.7;
+    el.dataset.baseAlpha = 0.06 + Math.random() * 0.18;
+    starsEl.appendChild(el);
+    starEls.push(el);
   }
+}
+
+function updateStars(t) {
+  for (const el of starEls) {
+    const phase = parseFloat(el.dataset.phase);
+    const speed = parseFloat(el.dataset.speed);
+    const base = parseFloat(el.dataset.baseAlpha);
+    const twinkle = Math.sin(t * speed + phase) * 0.5 + 0.5;
+    const alpha = base + twinkle * 0.15;
+    el.style.background = `rgba(192,168,120,${alpha})`;
+    if (twinkle > 0.85) {
+      el.style.boxShadow = `0 0 ${3 + twinkle * 3}px rgba(192,168,120,${alpha * 0.5})`;
+    } else {
+      el.style.boxShadow = 'none';
+    }
+  }
+}
+
+// ══════════════════════════════════════
+// Quote animation
+// ══════════════════════════════════════
+const quoteEl = document.getElementById('quote');
+const sourceEl = document.getElementById('source');
+const hintEl = document.getElementById('hint');
+
+let quoteVisible = false;
+let quoteAnimating = false;
+let quoteTimer = null;
+let hintShown = false;
+
+function showQuote() {
+  if (quoteAnimating) return;
+  quoteAnimating = true;
+
+  const q = nextQuote();
+
+  // Fade out current if visible
+  if (quoteVisible) {
+    fadeOut(() => {
+      setQuoteText(q);
+      fadeIn();
+    });
+  } else {
+    setQuoteText(q);
+    fadeIn();
+  }
+}
+
+function setQuoteText(q) {
+  quoteEl.innerHTML = q.text.replace(/\n/g, '<br>');
+  sourceEl.textContent = '── ' + q.source;
+}
+
+function fadeIn() {
+  quoteVisible = true;
+  let alpha = 0;
+  const step = () => {
+    alpha += 0.008;
+    if (alpha >= 0.85) {
+      alpha = 0.85;
+      quoteEl.style.color = `rgba(192,168,120,${alpha})`;
+      sourceEl.style.color = `rgba(192,168,120,${alpha * 0.4})`;
+      quoteAnimating = false;
+      // Auto fade after a while
+      clearTimeout(quoteTimer);
+      quoteTimer = setTimeout(() => {
+        fadeOut(() => { quoteVisible = false; });
+      }, 6000 + Math.random() * 3000);
+      return;
+    }
+    quoteEl.style.color = `rgba(192,168,120,${alpha})`;
+    sourceEl.style.color = `rgba(192,168,120,${alpha * 0.4})`;
+    requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+
+function fadeOut(cb) {
+  let alpha = 0.85;
+  const step = () => {
+    alpha -= 0.012;
+    if (alpha <= 0) {
+      alpha = 0;
+      quoteEl.style.color = `rgba(192,168,120,0)`;
+      sourceEl.style.color = `rgba(192,168,120,0)`;
+      if (cb) cb();
+      return;
+    }
+    quoteEl.style.color = `rgba(192,168,120,${alpha})`;
+    sourceEl.style.color = `rgba(192,168,120,${alpha * 0.4})`;
+    requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+
+// ══════════════════════════════════════
+// Interaction
+// ══════════════════════════════════════
+const ui = document.getElementById('ui');
+
+ui.addEventListener('pointerdown', (e) => {
+  e.preventDefault();
+  if (!hintShown) {
+    hintShown = true;
+    hintEl.style.transition = 'color 2s ease';
+    hintEl.style.color = 'rgba(192,168,120,0)';
+  }
+  showQuote();
 });
 
-canvas.addEventListener('pointerup', () => { touching = false; });
-canvas.addEventListener('pointercancel', () => { touching = false; });
-
-// ── Render loop ──
-let startTime = performance.now();
+// ══════════════════════════════════════
+// Main loop
+// ══════════════════════════════════════
+const t0 = performance.now();
 
 function frame() {
-  const t = (performance.now() - startTime) * 0.001;
-
-  // Fade touch strength
-  if (!touching) {
-    touchStrength *= 0.96;
-  }
+  const t = (performance.now() - t0) * 0.001;
 
   gl.uniform1f(uTime, t);
   gl.uniform2f(uRes, canvas.width, canvas.height);
-  gl.uniform2f(uTouch, touchX, touchY);
-  gl.uniform1f(uTouchStr, touchStrength);
-
   gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+
+  updateStars(t);
+
   requestAnimationFrame(frame);
 }
+
+// ══════════════════════════════════════
+// Init
+// ══════════════════════════════════════
+resize();
+window.addEventListener('resize', resize);
+createStars();
+
+// Show hint
+setTimeout(() => {
+  hintEl.style.transition = 'color 3s ease';
+  hintEl.style.color = 'rgba(192,168,120,.25)';
+}, 800);
+
+// Show first quote automatically after a moment
+setTimeout(() => showQuote(), 2800);
 
 frame();
 </script>
