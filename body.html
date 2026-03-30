@@ -55,7 +55,7 @@
     }
     .axiom-block__formula {
       font-family: var(--font-serif-en);
-      font-size: 3.5rem;
+      font-size: 5rem;
       font-weight: 500;
       letter-spacing: 0.08em;
       margin-bottom: 1.2rem;
@@ -173,13 +173,13 @@
       line-height: 2.4;
       text-align: left;
     }
-    .equation-block__line-sub {
+    .equation-block__note {
       font-size: var(--fs-small);
       color: var(--color-text-dim);
       line-height: 1.8;
+      margin-top: 0.3rem;
       margin-bottom: 0.8rem;
       text-align: left;
-      padding-left: 1.5rem;
     }
     .equation-block__note {
       font-size: var(--fs-small);
@@ -529,7 +529,7 @@
     /* --- Mobile --- */
     @media (max-width: 600px) {
       .axiom-block { padding: 2rem 1.2rem; }
-      .axiom-block__formula { font-size: 2.5rem; }
+      .axiom-block__formula { font-size: 3.5rem; }
       .toc-nav { padding: 2rem 1.2rem; }
       .equation-block { padding: 2rem 1.2rem; }
       .definition-block { padding: 2rem 1.2rem; }
@@ -559,6 +559,11 @@
       .quote-block br,
       .cta-block__desc br {
         display: none;
+      }
+      .definition-block p br,
+      .cascade-flow__step br,
+      .principle-list li br {
+        display: inline !important;
       }
     }
   </style>
@@ -705,7 +710,7 @@
 
       <!-- ===================== 転回 ===================== -->
       <div class="content-block text-panel fade-in" id="転回">
-        <h2 class="section__title section__title--left">転回 ── 健康は状態ではない</h2>
+        <h2 class="section__title section__title--left">転回<br class="sp-only"> ── 健康は状態ではない</h2>
 
         <p class="body-text">
           世の中の健康論はすべて、健康を「達成すべき状態」として扱っている。体脂肪率何%、血圧いくつ、BMIいくつ──すべて数値で定義される「状態」だ。その状態に到達すれば「健康になった」と言い、そこから逸脱すれば「不健康になった」と言う。
@@ -719,8 +724,8 @@
           神経科学では、身体の設定値を環境に応じて再調整し続けるプロセスをアロスタシスと呼ぶ。アロスタシスの観点からは、体脂肪率15%は健康ではない。体脂肪率が今この瞬間も最適に向かって更新され続けていることが健康だ。数値が良くても更新が止まっていれば、それは健康ではなく固定──変化のないまま劣化を待つ状態──にすぎない。
         </p>
 
-        <div class="pull-quote fade-in">
-          <p>健康は「良い/悪い」の問題ではなく、更新が持続しているかどうかの問題として閉じられる。</p>
+        <div class="pull-quote fade-in" style="text-align: left;">
+          <p>健康は「良い/悪い」の問題ではなく、<br>更新が持続しているかどうかの問題として閉じられる。</p>
         </div>
 
         <p class="body-text">
@@ -813,7 +818,7 @@
         <div class="definition-block fade-in" style="margin: 2rem 0;">
           <p style="font-size: var(--fs-body); line-height: 2; color: var(--color-text-soft);">
             <span class="def-title--purple">身体のアロスタシス（回復）。</span><br>
-            運動・栄養・睡眠の3入力を通じて、身体の設定値が環境に応じて最適に更新され続けている状態。数値が良いことではなく、更新が持続していることが本質。
+            運動・栄養・睡眠の3入力を通じて、<br class="sp-only">身体の設定値が環境に応じて最適に更新され続けている状態。数値が良いことではなく、更新が持続していることが本質。
           </p>
         </div>
 
@@ -841,7 +846,7 @@
         <div class="equation-block fade-in">
           <p class="equation-block__line">健康 ＝ 運動 &times; 栄養 &times; 睡眠 ＝ 回復</p>
           <p class="equation-block__line">回復 ＝ アロスタシス</p>
-          <p class="equation-block__line-sub">（身体の設定値を最適に更新し続けるプロセス）</p>
+          <p class="equation-block__note">※ アロスタシスとは──身体の設定値を最適に更新し続けるプロセス</p>
           <p class="equation-block__line">パフォーマンス ＝ プライミング &times; 健康</p>
         </div>
 
@@ -1111,15 +1116,15 @@
           </p>
 
           <div class="cascade-flow fade-in">
-            <div class="cascade-flow__step">慢性ストレス<br class="sp-only">（回復を超える負荷の持続）</div>
+            <div class="cascade-flow__step">慢性ストレス<br>（回復を超える負荷の持続）</div>
             <div class="cascade-flow__arrow">&darr;</div>
-            <div class="cascade-flow__step">HPA軸の過活性化<br class="sp-only">（コルチゾールの慢性的上昇）</div>
+            <div class="cascade-flow__step">HPA軸の過活性化<br>（コルチゾールの慢性的上昇）</div>
             <div class="cascade-flow__arrow">&darr;</div>
-            <div class="cascade-flow__step">慢性炎症<br class="sp-only">（IL-6, TNF-&alpha;の上昇）</div>
+            <div class="cascade-flow__step">慢性炎症<br>（IL-6, TNF-&alpha;の上昇）</div>
             <div class="cascade-flow__arrow">&darr;</div>
-            <div class="cascade-flow__step">脳機能への影響<br class="sp-only">（海馬の萎縮・前頭前野の機能低下）</div>
+            <div class="cascade-flow__step">脳機能への影響<br>（海馬の萎縮・前頭前野の機能低下）</div>
             <div class="cascade-flow__arrow">&darr;</div>
-            <div class="cascade-flow__step">認知の硬直化<br class="sp-only">（信念の固着・判断力の低下）</div>
+            <div class="cascade-flow__step">認知の硬直化<br>（信念の固着・判断力の低下）</div>
             <div class="cascade-flow__arrow">&darr;</div>
             <div class="cascade-flow__step">天命との整合の破綻</div>
           </div>
@@ -1148,7 +1153,7 @@
 
         <!-- 双方向ループ -->
         <div class="text-panel fade-in" style="margin-top: 2.5rem;">
-          <h3 style="font-size: var(--fs-h3); color: var(--color-gold); margin-bottom: 1rem;">信念とアロスタシスの双方向ループ</h3>
+          <h3 style="font-size: var(--fs-h3); color: var(--color-gold); margin-bottom: 1rem;">信念とアロスタシスの<br class="sp-only">双方向ループ</h3>
 
           <p class="body-text">
             信念は身体に影響し、身体は信念に影響する。この双方向ループが、認知のアロスタシスの核心である。
@@ -1172,12 +1177,12 @@
           </p>
 
           <p class="body-text">
-            <strong>1. 認知から身体へ（トップダウン）。</strong>
+            <strong>1. 認知から身体へ（トップダウン）。</strong><br>
             天命の言語化セッション&trade;によって天命が確定されると、認知の枠組みが変わる。認知の変化は行動パターンを変え、行動パターンの変化は身体の入力を変え、身体の入力の変化はアロスタシスの方向を変える。
           </p>
 
           <p class="body-text">
-            <strong>2. 身体から認知へ（ボトムアップ）。</strong>
+            <strong>2. 身体から認知へ（ボトムアップ）。</strong><br>
             運動・栄養・睡眠の最適化によって身体の状態が変わると、内受容感覚を通じて認知の基盤が変わる。身体が「天命を全うできる状態」にあるとき、認知は自然とその方向に整合する。
           </p>
 
@@ -1212,24 +1217,24 @@
 
         <!-- 何がドーパミンの収束先を決めるか -->
         <div class="text-panel fade-in" style="margin-top: 2.5rem;">
-          <h3 style="font-size: var(--fs-h3); color: var(--color-gold); margin-bottom: 1rem;">何がドーパミンの収束先を決めるか</h3>
+          <h3 style="font-size: var(--fs-h3); color: var(--color-gold); margin-bottom: 1rem;">何がドーパミンの収束先を<br class="sp-only">決めるか</h3>
 
           <p class="body-text">
             ドーパミンの収束先──つまり何に対して「予測と動機づけ」が最も強く反応するか──を決めるのは、以下の3つの条件である：
           </p>
 
           <p class="body-text">
-            <strong>1. 反復（繰り返しの刺激）。</strong>
+            <strong>1. 反復（繰り返しの刺激）。</strong><br>
             特定の行動パターンを反復するほど、その行動に対するドーパミン応答が強化される。神経可塑性の原理により、使われる回路は強化される。
           </p>
 
           <p class="body-text">
-            <strong>2. 予測誤差（期待と結果のズレ）。</strong>
+            <strong>2. 予測誤差（期待と結果のズレ）。</strong><br>
             予測より良い結果が得られたとき、ドーパミンが大きく放出される。予測通りの結果ではドーパミンは放出されない。予測より悪い結果ではドーパミンが抑制される。この仕組みが学習を駆動する。
           </p>
 
           <p class="body-text">
-            <strong>3. 環境（ドーパミンの基礎レベル）。</strong>
+            <strong>3. 環境（ドーパミンの基礎レベル）。</strong><br>
             睡眠不足、慢性ストレス、超加工食品、SNSの過剰使用は、ドーパミンの基礎レベルを乱す。基礎レベルが乱れると、短期的な高刺激にしか反応できなくなり、天命のような長期的な報酬への動機づけが機能しなくなる。
           </p>
         </div>
@@ -1295,16 +1300,16 @@
 
       <!-- ===================== 構造原理 ===================== -->
       <div class="content-block fade-in" id="原理">
-        <h2 class="section__title section__title--left">構造原理 ── 7つの原理</h2>
+        <h2 class="section__title section__title--left">構造原理<br class="sp-only"> ── 7つの原理</h2>
 
         <ol class="principle-list fade-in">
-          <li><strong>方向原理。</strong>アロスタシスは天命なしには迷走する。天命が方向を与えたとき、プロセスは整合に向かう。</li>
-          <li><strong>積の原理。</strong>健康は運動・栄養・睡眠の積である。どれか1つが0なら、全体が0になる。</li>
-          <li><strong>プロセス原理。</strong>健康は状態ではなくプロセスである。数値が良いことではなく、更新が持続していることが本質。</li>
-          <li><strong>刺激原理。</strong>アロスタシスの更新には、現在の設定値をわずかに超える刺激が必要である。過少も過剰も更新を停止させる。</li>
-          <li><strong>双方向原理。</strong>身体は認知に影響し、認知は身体に影響する。この双方向ループが天命に向かって回転するとき、整合は加速する。</li>
-          <li><strong>収束原理。</strong>天命が確定し、アロスタシスが機能しているとき、行動は天命へ収束する。これは意志力の問題ではなく構造の問題である。</li>
-          <li><strong>前提原理。</strong>The Meta（三部作）のすべては、身体が機能していることを暗黙の前提としていた。身体論はその前提を明示する。</li>
+          <li><strong>方向原理。</strong><br>アロスタシスは天命なしには迷走する。天命が方向を与えたとき、プロセスは整合に向かう。</li>
+          <li><strong>積の原理。</strong><br>健康は運動・栄養・睡眠の積である。どれか1つが0なら、全体が0になる。</li>
+          <li><strong>プロセス原理。</strong><br>健康は状態ではなくプロセスである。数値が良いことではなく、更新が持続していることが本質。</li>
+          <li><strong>刺激原理。</strong><br>アロスタシスの更新には、現在の設定値をわずかに超える刺激が必要である。過少も過剰も更新を停止させる。</li>
+          <li><strong>双方向原理。</strong><br>身体は認知に影響し、認知は身体に影響する。この双方向ループが天命に向かって回転するとき、整合は加速する。</li>
+          <li><strong>収束原理。</strong><br>天命が確定し、アロスタシスが機能しているとき、行動は天命へ収束する。これは意志力の問題ではなく構造の問題である。</li>
+          <li><strong>前提原理。</strong><br>The Meta（三部作）のすべては、身体が機能していることを暗黙の前提としていた。身体論はその前提を明示する。</li>
         </ol>
       </div>
 
