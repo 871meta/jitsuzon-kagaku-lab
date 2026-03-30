@@ -13,365 +13,270 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:100%;height:100%;overflow:hidden;background:#06050a;
 -webkit-tap-highlight-color:transparent;touch-action:none}
-canvas{display:block;position:fixed;top:0;left:0}
-#hint{position:fixed;bottom:2rem;left:0;right:0;text-align:center;
-font-family:'Cormorant Garamond',serif;
-font-size:.68rem;letter-spacing:.32em;color:rgba(192,168,120,0);
-transition:color 3s ease;pointer-events:none;user-select:none}
-#hint.show{color:rgba(192,168,120,.25)}
-#hint.fade{color:rgba(192,168,120,0)}
+canvas{display:block;position:fixed;top:0;left:0;width:100%;height:100%}
 </style>
 </head>
 <body>
 <canvas id="c"></canvas>
-<div id="hint">touch to disturb</div>
 <script>
 'use strict';
 
 const canvas = document.getElementById('c');
-const ctx = canvas.getContext('2d');
-const hint = document.getElementById('hint');
-
-let W, H, dpr;
-let interacted = false;
-let time = 0;
+const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
 
 // ── Resize ──
 function resize() {
-  dpr = Math.min(window.devicePixelRatio || 1, 2);
-  W = window.innerWidth;
-  H = window.innerHeight;
-  canvas.width = W * dpr;
-  canvas.height = H * dpr;
-  canvas.style.width = W + 'px';
-  canvas.style.height = H + 'px';
-  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  canvas.width = window.innerWidth * dpr;
+  canvas.height = window.innerHeight * dpr;
+  gl.viewport(0, 0, canvas.width, canvas.height);
+}
+resize();
+window.addEventListener('resize', resize);
+
+// ── Shaders ──
+const vertSrc = `
+attribute vec2 a_pos;
+void main() { gl_Position = vec4(a_pos, 0.0, 1.0); }
+`;
+
+const fragSrc = `
+precision highp float;
+
+uniform float u_time;
+uniform vec2 u_resolution;
+uniform vec2 u_touch;
+uniform float u_touchStrength;
+
+// --- Noise functions ---
+vec3 mod289(vec3 x) { return x - floor(x * (1.0/289.0)) * 289.0; }
+vec4 mod289(vec4 x) { return x - floor(x * (1.0/289.0)) * 289.0; }
+vec4 permute(vec4 x) { return mod289(((x*34.0)+1.0)*x); }
+vec4 taylorInvSqrt(vec4 r) { return 1.79284291400159 - 0.85373472095314 * r; }
+
+float snoise(vec3 v) {
+  const vec2 C = vec2(1.0/6.0, 1.0/3.0);
+  const vec4 D = vec4(0.0, 0.5, 1.0, 2.0);
+  vec3 i = floor(v + dot(v, C.yyy));
+  vec3 x0 = v - i + dot(i, C.xxx);
+  vec3 g = step(x0.yzx, x0.xyz);
+  vec3 l = 1.0 - g;
+  vec3 i1 = min(g.xyz, l.zxy);
+  vec3 i2 = max(g.xyz, l.zxy);
+  vec3 x1 = x0 - i1 + C.xxx;
+  vec3 x2 = x0 - i2 + C.yyy;
+  vec3 x3 = x0 - D.yyy;
+  i = mod289(i);
+  vec4 p = permute(permute(permute(
+    i.z + vec4(0.0, i1.z, i2.z, 1.0))
+    + i.y + vec4(0.0, i1.y, i2.y, 1.0))
+    + i.x + vec4(0.0, i1.x, i2.x, 1.0));
+  float n_ = 0.142857142857;
+  vec3 ns = n_ * D.wyz - D.xzx;
+  vec4 j = p - 49.0 * floor(p * ns.z * ns.z);
+  vec4 x_ = floor(j * ns.z);
+  vec4 y_ = floor(j - 7.0 * x_);
+  vec4 x = x_ * ns.x + ns.yyyy;
+  vec4 y = y_ * ns.x + ns.yyyy;
+  vec4 h = 1.0 - abs(x) - abs(y);
+  vec4 b0 = vec4(x.xy, y.xy);
+  vec4 b1 = vec4(x.zw, y.zw);
+  vec4 s0 = floor(b0)*2.0 + 1.0;
+  vec4 s1 = floor(b1)*2.0 + 1.0;
+  vec4 sh = -step(h, vec4(0.0));
+  vec4 a0 = b0.xzyw + s0.xzyw*sh.xxyy;
+  vec4 a1 = b1.xzyw + s1.xzyw*sh.zzww;
+  vec3 p0 = vec3(a0.xy, h.x);
+  vec3 p1 = vec3(a0.zw, h.y);
+  vec3 p2 = vec3(a1.xy, h.z);
+  vec3 p3 = vec3(a1.zw, h.w);
+  vec4 norm = taylorInvSqrt(vec4(dot(p0,p0), dot(p1,p1), dot(p2,p2), dot(p3,p3)));
+  p0 *= norm.x; p1 *= norm.y; p2 *= norm.z; p3 *= norm.w;
+  vec4 m = max(0.6 - vec4(dot(x0,x0), dot(x1,x1), dot(x2,x2), dot(x3,x3)), 0.0);
+  m = m * m;
+  return 42.0 * dot(m*m, vec4(dot(p0,x0), dot(p1,x1), dot(p2,x2), dot(p3,x3)));
 }
 
-// ── Strange Attractors ──
-const attractors = [];
-const NUM_ATTRACTORS = 4;
-
-function initAttractors() {
-  attractors.length = 0;
-  for (let i = 0; i < NUM_ATTRACTORS; i++) {
-    const a = {
-      x: 0, y: 0, z: 0,
-      sigma: 10 + (Math.random() - 0.5) * 2,
-      rho: 28 + (Math.random() - 0.5) * 4,
-      beta: 8/3 + (Math.random() - 0.5) * 0.3,
-      scale: 8 + Math.random() * 4,
-      offsetX: window.innerWidth * (0.3 + Math.random() * 0.4),
-      offsetY: window.innerHeight * (0.3 + Math.random() * 0.4),
-      phase: Math.random() * Math.PI * 2,
-      ix: (Math.random() - 0.5) * 20,
-      iy: (Math.random() - 0.5) * 20,
-      iz: 20 + Math.random() * 10,
-    };
-    a.x = a.ix;
-    a.y = a.iy;
-    a.z = a.iz;
-    attractors.push(a);
+// Fractal Brownian Motion
+float fbm(vec3 p) {
+  float f = 0.0;
+  float amp = 0.5;
+  float freq = 1.0;
+  for (int i = 0; i < 6; i++) {
+    f += amp * snoise(p * freq);
+    freq *= 2.1;
+    amp *= 0.48;
+    p.xy = mat2(0.8, 0.6, -0.6, 0.8) * p.xy;
   }
+  return f;
 }
 
-function stepAttractor(a, dt) {
-  const dx = a.sigma * (a.y - a.x);
-  const dy = a.x * (a.rho - a.z) - a.y;
-  const dz = a.x * a.y - a.beta * a.z;
-  a.x += dx * dt;
-  a.y += dy * dt;
-  a.z += dz * dt;
+// Domain warping - creates the organic, flowing forms
+float warpedNoise(vec3 p) {
+  float t = u_time * 0.06;
+
+  vec3 q = vec3(
+    fbm(p + vec3(1.7, 9.2, 0.0) + t * 0.3),
+    fbm(p + vec3(8.3, 2.8, 0.0) + t * 0.2),
+    fbm(p + vec3(0.0, 0.0, t * 0.4))
+  );
+
+  vec3 r = vec3(
+    fbm(p + 4.0 * q + vec3(1.7, 9.2, 0.0) + t * 0.15),
+    fbm(p + 4.0 * q + vec3(8.3, 2.8, 0.0) + t * 0.12),
+    0.0
+  );
+
+  return fbm(p + 3.5 * r);
 }
 
-function getAttractorScreen(a, t) {
-  const angle = t * 0.03 + a.phase;
-  const cos = Math.cos(angle), sin = Math.sin(angle);
-  const rx = a.x * cos - a.z * sin;
-  const ry = a.y;
-  return {
-    x: a.offsetX + rx * a.scale,
-    y: a.offsetY + ry * a.scale * 0.6
-  };
+void main() {
+  vec2 uv = gl_FragCoord.xy / u_resolution;
+  vec2 p = (gl_FragCoord.xy * 2.0 - u_resolution) / min(u_resolution.x, u_resolution.y);
+
+  // Touch distortion
+  if (u_touchStrength > 0.01) {
+    vec2 touchUV = u_touch / u_resolution * 2.0 - 1.0;
+    touchUV.x *= u_resolution.x / u_resolution.y;
+    p.x *= u_resolution.x / u_resolution.y;
+    float d = length(p - touchUV);
+    float influence = u_touchStrength * 0.4 / (d * 2.0 + 0.3);
+    vec2 dir = normalize(p - touchUV + 0.001);
+    p += dir * influence * 0.3;
+    p.x /= u_resolution.x / u_resolution.y;
+  }
+
+  float t = u_time * 0.04;
+
+  // Layer 1: Deep background flow
+  float n1 = warpedNoise(vec3(p * 0.8, t * 0.5));
+
+  // Layer 2: Mid-ground detail
+  float n2 = warpedNoise(vec3(p * 1.5 + 3.0, t * 0.7));
+
+  // Layer 3: Fine luminous detail
+  float n3 = fbm(vec3(p * 2.5 + n1 * 0.5, t * 0.9));
+
+  // Compose layers
+  float base = n1 * 0.5 + 0.5;
+  float detail = n2 * 0.3 + 0.5;
+  float fine = n3 * 0.2 + 0.5;
+
+  float luminance = base * 0.5 + detail * 0.3 + fine * 0.2;
+
+  // Color palette: dark void -> gold -> soft purple highlights
+  // Background: deep void
+  vec3 void_color = vec3(0.024, 0.020, 0.040);
+
+  // Gold: #c0a878 = rgb(192, 168, 120) / 255
+  vec3 gold = vec3(0.75, 0.66, 0.47);
+
+  // Deep gold / amber
+  vec3 deep_gold = vec3(0.55, 0.42, 0.22);
+
+  // Purple accent: #b8a0d8
+  vec3 purple = vec3(0.72, 0.63, 0.85);
+
+  // Map luminance to color with smooth transitions
+  float goldMask = smoothstep(0.35, 0.65, luminance);
+  float brightMask = smoothstep(0.6, 0.85, luminance);
+  float purpleMask = smoothstep(0.7, 0.95, luminance) * 0.3;
+
+  vec3 color = void_color;
+  color = mix(color, deep_gold, goldMask * 0.5);
+  color = mix(color, gold, brightMask * 0.45);
+  color = mix(color, purple, purpleMask);
+
+  // Subtle vignette
+  float vig = 1.0 - length(uv - 0.5) * 0.8;
+  vig = smoothstep(0.0, 1.0, vig);
+  color *= vig;
+
+  // Very subtle film grain
+  float grain = (fract(sin(dot(gl_FragCoord.xy, vec2(12.9898, 78.233))) * 43758.5453) - 0.5) * 0.015;
+  color += grain;
+
+  gl_FragColor = vec4(color, 1.0);
+}
+`;
+
+// ── Compile shaders ──
+function createShader(type, src) {
+  const s = gl.createShader(type);
+  gl.shaderSource(s, src);
+  gl.compileShader(s);
+  if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) {
+    console.error(gl.getShaderInfoLog(s));
+    return null;
+  }
+  return s;
 }
 
-// ── Particles ──
-const MAX_PARTICLES = 2800;
-const particles = [];
+const vs = createShader(gl.VERTEX_SHADER, vertSrc);
+const fs = createShader(gl.FRAGMENT_SHADER, fragSrc);
+const prog = gl.createProgram();
+gl.attachShader(prog, vs);
+gl.attachShader(prog, fs);
+gl.linkProgram(prog);
+gl.useProgram(prog);
 
-class Particle {
-  constructor(x, y, attIdx) {
-    this.x = x || Math.random() * W;
-    this.y = y || Math.random() * H;
-    this.vx = 0;
-    this.vy = 0;
-    this.ox = this.x;
-    this.oy = this.y;
-    this.life = 0;
-    this.maxLife = 400 + Math.random() * 600;
-    this.attIdx = attIdx !== undefined ? attIdx : (Math.random() * NUM_ATTRACTORS) | 0;
-    this.drift = Math.random() * 0.4 + 0.1;
-    this.size = 0.3 + Math.random() * 0.7;
-    this.hue = Math.random();
-    this.orbitRadius = 20 + Math.random() * 80;
-    this.orbitSpeed = (0.5 + Math.random() * 1.5) * (Math.random() < 0.5 ? 1 : -1);
-    this.orbitAngle = Math.random() * Math.PI * 2;
-    this.wobble = Math.random() * Math.PI * 2;
-  }
+// ── Geometry: fullscreen quad ──
+const buf = gl.createBuffer();
+gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+const aPos = gl.getAttribLocation(prog, 'a_pos');
+gl.enableVertexAttribArray(aPos);
+gl.vertexAttribPointer(aPos, 2, gl.FLOAT, false, 0, 0);
 
-  update(t) {
-    this.life++;
-    if (this.life > this.maxLife) return false;
+// ── Uniforms ──
+const uTime = gl.getUniformLocation(prog, 'u_time');
+const uRes = gl.getUniformLocation(prog, 'u_resolution');
+const uTouch = gl.getUniformLocation(prog, 'u_touch');
+const uTouchStr = gl.getUniformLocation(prog, 'u_touchStrength');
 
-    this.ox = this.x;
-    this.oy = this.y;
-
-    const att = attractors[this.attIdx];
-    const target = getAttractorScreen(att, t);
-
-    this.orbitAngle += this.orbitSpeed * 0.008;
-    this.wobble += 0.02;
-    const wobbleR = Math.sin(this.wobble) * 15;
-    const orbitX = target.x + Math.cos(this.orbitAngle) * (this.orbitRadius + wobbleR);
-    const orbitY = target.y + Math.sin(this.orbitAngle) * (this.orbitRadius + wobbleR) * 0.7;
-
-    const dx = orbitX - this.x;
-    const dy = orbitY - this.y;
-    this.vx += dx * this.drift * 0.008;
-    this.vy += dy * this.drift * 0.008;
-
-    this.vx *= 0.96;
-    this.vy *= 0.96;
-
-    this.x += this.vx;
-    this.y += this.vy;
-
-    return true;
-  }
-
-  draw(ctx) {
-    const progress = this.life / this.maxLife;
-    const fadeIn = Math.min(this.life / 50, 1);
-    const fadeOut = progress > 0.75 ? 1 - (progress - 0.75) / 0.25 : 1;
-    const alpha = fadeIn * fadeOut;
-
-    if (alpha <= 0.01) return;
-
-    const h = this.hue;
-    const r = 192 - h * 30;
-    const g = 168 - h * 50 - progress * 20;
-    const b = 120 + h * 70 + progress * 40;
-
-    const dist = Math.hypot(this.x - this.ox, this.y - this.oy);
-    if (dist > 0.5 && dist < 50) {
-      ctx.strokeStyle = `rgba(${r|0},${g|0},${b|0},${alpha * 0.35})`;
-      ctx.lineWidth = this.size;
-      ctx.beginPath();
-      ctx.moveTo(this.ox, this.oy);
-      ctx.lineTo(this.x, this.y);
-      ctx.stroke();
-    }
-
-    ctx.fillStyle = `rgba(${r|0},${g|0},${b|0},${alpha * 0.7})`;
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-    ctx.fill();
-  }
-}
-
-// ── Glow ──
-function drawGlow(t) {
-  ctx.globalCompositeOperation = 'lighter';
-  for (const a of attractors) {
-    const pos = getAttractorScreen(a, t);
-    const pulse = 0.5 + Math.sin(t * 0.5 + a.phase) * 0.15;
-    const grad = ctx.createRadialGradient(pos.x, pos.y, 0, pos.x, pos.y, 120);
-    grad.addColorStop(0, `rgba(192,168,120,${0.025 * pulse})`);
-    grad.addColorStop(0.4, `rgba(170,150,130,${0.012 * pulse})`);
-    grad.addColorStop(1, 'rgba(170,150,130,0)');
-    ctx.fillStyle = grad;
-    ctx.beginPath();
-    ctx.arc(pos.x, pos.y, 120, 0, Math.PI * 2);
-    ctx.fill();
-  }
-  ctx.globalCompositeOperation = 'source-over';
-}
-
-// ── Connections ──
-function drawConnections() {
-  const threshold = 60;
-  const threshold2 = threshold * threshold;
-
-  ctx.globalCompositeOperation = 'lighter';
-  const sample = particles.length > 500
-    ? particles.filter(() => Math.random() < 0.35)
-    : particles;
-
-  for (let i = 0; i < sample.length; i++) {
-    const a = sample[i];
-    const aProgress = a.life / a.maxLife;
-    const aAlpha = Math.min(a.life / 50, 1) * (aProgress > 0.75 ? 1 - (aProgress - 0.75) / 0.25 : 1);
-    if (aAlpha < 0.1) continue;
-
-    for (let j = i + 1; j < sample.length; j++) {
-      const b = sample[j];
-      if (a.attIdx !== b.attIdx) continue;
-
-      const dx = a.x - b.x, dy = a.y - b.y;
-      const d2 = dx * dx + dy * dy;
-      if (d2 > threshold2) continue;
-
-      const bProgress = b.life / b.maxLife;
-      const bAlpha = Math.min(b.life / 50, 1) * (bProgress > 0.75 ? 1 - (bProgress - 0.75) / 0.25 : 1);
-      const d = Math.sqrt(d2);
-      const lineAlpha = (1 - d / threshold) * aAlpha * bAlpha * 0.08;
-
-      if (lineAlpha < 0.005) continue;
-
-      ctx.strokeStyle = `rgba(192,168,120,${lineAlpha})`;
-      ctx.lineWidth = 0.4;
-      ctx.beginPath();
-      ctx.moveTo(a.x, a.y);
-      ctx.lineTo(b.x, b.y);
-      ctx.stroke();
-    }
-  }
-  ctx.globalCompositeOperation = 'source-over';
-}
-
-// ── Touch interaction ──
-let touchAttractors = [];
-
-function addTouchAttractor(x, y) {
-  if (!interacted) {
-    interacted = true;
-    hint.classList.remove('show');
-    hint.classList.add('fade');
-  }
-
-  const ta = {
-    x, y,
-    strength: 1,
-    birth: time,
-    life: 180 + Math.random() * 120,
-  };
-  touchAttractors.push(ta);
-
-  const count = 30 + (Math.random() * 30) | 0;
-  for (let i = 0; i < count; i++) {
-    const angle = Math.random() * Math.PI * 2;
-    const dist = 30 + Math.random() * 100;
-    const p = new Particle(
-      x + Math.cos(angle) * dist,
-      y + Math.sin(angle) * dist,
-      (Math.random() * NUM_ATTRACTORS) | 0
-    );
-    p.vx = (x - p.x) * 0.02;
-    p.vy = (y - p.y) * 0.02;
-    p.maxLife = 200 + Math.random() * 300;
-    if (particles.length < MAX_PARTICLES + 200) {
-      particles.push(p);
-    }
-  }
-}
+// ── Touch state ──
+let touchX = 0, touchY = 0;
+let touchStrength = 0;
+let touching = false;
 
 canvas.addEventListener('pointerdown', (e) => {
   e.preventDefault();
-  addTouchAttractor(e.clientX, e.clientY);
+  touching = true;
+  touchX = e.clientX * (canvas.width / canvas.clientWidth);
+  touchY = (canvas.clientHeight - e.clientY) * (canvas.height / canvas.clientHeight);
+  touchStrength = 1.0;
 });
 
 canvas.addEventListener('pointermove', (e) => {
   e.preventDefault();
-  if (e.buttons > 0 || e.pointerType === 'touch') {
-    if (Math.random() < 0.25) {
-      addTouchAttractor(e.clientX, e.clientY);
-    }
+  if (touching) {
+    touchX = e.clientX * (canvas.width / canvas.clientWidth);
+    touchY = (canvas.clientHeight - e.clientY) * (canvas.height / canvas.clientHeight);
   }
 });
 
-// ── Spawn ──
-function spawnParticles() {
-  while (particles.length < MAX_PARTICLES) {
-    const attIdx = (Math.random() * NUM_ATTRACTORS) | 0;
-    const att = attractors[attIdx];
-    const pos = getAttractorScreen(att, time);
-    const angle = Math.random() * Math.PI * 2;
-    const dist = Math.random() * 100;
-    particles.push(new Particle(
-      pos.x + Math.cos(angle) * dist,
-      pos.y + Math.sin(angle) * dist,
-      attIdx
-    ));
-  }
-}
+canvas.addEventListener('pointerup', () => { touching = false; });
+canvas.addEventListener('pointercancel', () => { touching = false; });
 
-// ── Main loop ──
+// ── Render loop ──
+let startTime = performance.now();
+
 function frame() {
-  time += 0.016;
+  const t = (performance.now() - startTime) * 0.001;
 
-  for (const a of attractors) {
-    stepAttractor(a, 0.005);
-    a.offsetX += Math.sin(time * 0.1 + a.phase) * 0.15;
-    a.offsetY += Math.cos(time * 0.08 + a.phase * 1.3) * 0.1;
-    a.offsetX = Math.max(W * 0.1, Math.min(W * 0.9, a.offsetX));
-    a.offsetY = Math.max(H * 0.1, Math.min(H * 0.9, a.offsetY));
+  // Fade touch strength
+  if (!touching) {
+    touchStrength *= 0.96;
   }
 
-  touchAttractors = touchAttractors.filter(ta => {
-    const age = (time - ta.birth) * 60;
-    ta.strength = 1 - age / ta.life;
-    return ta.strength > 0;
-  });
+  gl.uniform1f(uTime, t);
+  gl.uniform2f(uRes, canvas.width, canvas.height);
+  gl.uniform2f(uTouch, touchX, touchY);
+  gl.uniform1f(uTouchStr, touchStrength);
 
-  for (const ta of touchAttractors) {
-    for (const p of particles) {
-      const dx = ta.x - p.x, dy = ta.y - p.y;
-      const d = Math.hypot(dx, dy) + 1;
-      if (d < 200) {
-        const f = ta.strength * 0.3 / (d * 0.05 + 1);
-        p.vx += (dx / d) * f;
-        p.vy += (dy / d) * f;
-      }
-    }
-  }
-
-  // Fade
-  ctx.fillStyle = 'rgba(6,5,10,0.12)';
-  ctx.fillRect(0, 0, W, H);
-
-  drawGlow(time);
-
-  for (let i = particles.length - 1; i >= 0; i--) {
-    if (particles[i].update(time)) {
-      particles[i].draw(ctx);
-    } else {
-      particles.splice(i, 1);
-    }
-  }
-
-  drawConnections();
-  spawnParticles();
-
+  gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
   requestAnimationFrame(frame);
 }
-
-// ── Init ──
-resize();
-initAttractors();
-window.addEventListener('resize', () => {
-  const oldW = W, oldH = H;
-  resize();
-  for (const a of attractors) {
-    a.offsetX *= W / oldW;
-    a.offsetY *= H / oldH;
-  }
-});
-
-ctx.fillStyle = '#06050a';
-ctx.fillRect(0, 0, W, H);
-
-spawnParticles();
-setTimeout(() => hint.classList.add('show'), 1200);
 
 frame();
 </script>
