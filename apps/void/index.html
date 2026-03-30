@@ -47,23 +47,27 @@ function resize() {
 const attractors = [];
 const NUM_ATTRACTORS = 4;
 
-for (let i = 0; i < NUM_ATTRACTORS; i++) {
-  attractors.push({
-    x: 0, y: 0, z: 0,
-    sigma: 10 + (Math.random() - 0.5) * 2,
-    rho: 28 + (Math.random() - 0.5) * 4,
-    beta: 8/3 + (Math.random() - 0.5) * 0.3,
-    scale: 8 + Math.random() * 4,
-    offsetX: W * (0.3 + Math.random() * 0.4),
-    offsetY: H * (0.3 + Math.random() * 0.4),
-    phase: Math.random() * Math.PI * 2,
-    ix: (Math.random() - 0.5) * 20,
-    iy: (Math.random() - 0.5) * 20,
-    iz: 20 + Math.random() * 10,
-  });
-  attractors[i].x = attractors[i].ix;
-  attractors[i].y = attractors[i].iy;
-  attractors[i].z = attractors[i].iz;
+function initAttractors() {
+  attractors.length = 0;
+  for (let i = 0; i < NUM_ATTRACTORS; i++) {
+    const a = {
+      x: 0, y: 0, z: 0,
+      sigma: 10 + (Math.random() - 0.5) * 2,
+      rho: 28 + (Math.random() - 0.5) * 4,
+      beta: 8/3 + (Math.random() - 0.5) * 0.3,
+      scale: 8 + Math.random() * 4,
+      offsetX: window.innerWidth * (0.3 + Math.random() * 0.4),
+      offsetY: window.innerHeight * (0.3 + Math.random() * 0.4),
+      phase: Math.random() * Math.PI * 2,
+      ix: (Math.random() - 0.5) * 20,
+      iy: (Math.random() - 0.5) * 20,
+      iz: 20 + Math.random() * 10,
+    };
+    a.x = a.ix;
+    a.y = a.iy;
+    a.z = a.iz;
+    attractors.push(a);
+  }
 }
 
 function stepAttractor(a, dt) {
@@ -348,6 +352,7 @@ function frame() {
 
 // ── Init ──
 resize();
+initAttractors();
 window.addEventListener('resize', () => {
   const oldW = W, oldH = H;
   resize();
