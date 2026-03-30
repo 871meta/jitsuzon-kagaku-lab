@@ -164,28 +164,62 @@ void main() {
 
   float luminance = base * 0.5 + detail * 0.3 + fine * 0.2;
 
-  // Color palette: dark void -> gold -> soft purple highlights
-  // Background: deep void
-  vec3 void_color = vec3(0.024, 0.020, 0.040);
+  // Color palette: alcohol ink art — deep navy, purple, gold veins, lavender
+  // Sampled from haikei2.jpg background image
 
-  // Gold: #c0a878 = rgb(192, 168, 120) / 255
-  vec3 gold = vec3(0.75, 0.66, 0.47);
+  // Deep void / darkest navy
+  vec3 c_void = vec3(0.03, 0.02, 0.06);
 
-  // Deep gold / amber
-  vec3 deep_gold = vec3(0.55, 0.42, 0.22);
+  // Deep navy blue
+  vec3 c_navy = vec3(0.08, 0.06, 0.22);
 
-  // Purple accent: #b8a0d8
-  vec3 purple = vec3(0.72, 0.63, 0.85);
+  // Rich indigo-purple
+  vec3 c_indigo = vec3(0.18, 0.10, 0.38);
 
-  // Map luminance to color with smooth transitions
-  float goldMask = smoothstep(0.35, 0.65, luminance);
-  float brightMask = smoothstep(0.6, 0.85, luminance);
-  float purpleMask = smoothstep(0.7, 0.95, luminance) * 0.3;
+  // Violet / purple
+  vec3 c_violet = vec3(0.42, 0.22, 0.55);
 
-  vec3 color = void_color;
-  color = mix(color, deep_gold, goldMask * 0.5);
-  color = mix(color, gold, brightMask * 0.45);
-  color = mix(color, purple, purpleMask);
+  // Soft lavender (light areas)
+  vec3 c_lavender = vec3(0.58, 0.50, 0.72);
+
+  // Gold veins
+  vec3 c_gold = vec3(0.78, 0.64, 0.32);
+
+  // Bright gold highlights
+  vec3 c_gold_hi = vec3(0.88, 0.76, 0.40);
+
+  // Use separate noise layers for color channels (like real ink diffusion)
+  float n_purple = warpedNoise(vec3(p * 0.9 + 1.0, t * 0.6));
+  float purple_mask = smoothstep(-0.2, 0.6, n_purple);
+
+  // Gold veins: sharp, thin lines using derivative of noise
+  float n_gold_raw = fbm(vec3(p * 1.8 + n1 * 1.2, t * 0.3));
+  float n_gold_edge = abs(n_gold_raw);
+  float gold_vein = 1.0 - smoothstep(0.0, 0.08, n_gold_edge);
+  // Broader gold glow around veins
+  float gold_glow = 1.0 - smoothstep(0.0, 0.25, n_gold_edge);
+
+  // Build color in layers like alcohol ink
+  vec3 color = c_void;
+
+  // Layer 1: Navy base
+  float navy_mask = smoothstep(0.25, 0.55, luminance);
+  color = mix(color, c_navy, navy_mask);
+
+  // Layer 2: Indigo mid-tones
+  float indigo_mask = smoothstep(0.35, 0.6, luminance) * smoothstep(0.5, 0.0, abs(n2));
+  color = mix(color, c_indigo, indigo_mask * 0.8);
+
+  // Layer 3: Purple / violet pools
+  color = mix(color, c_violet, purple_mask * 0.55);
+
+  // Layer 4: Lavender in the lightest areas
+  float light_mask = smoothstep(0.6, 0.85, luminance);
+  color = mix(color, c_lavender, light_mask * 0.4);
+
+  // Layer 5: Gold veins threading through
+  color = mix(color, c_gold, gold_glow * 0.3);
+  color = mix(color, c_gold_hi, gold_vein * 0.7);
 
   // Subtle vignette
   float vig = 1.0 - length(uv - 0.5) * 0.8;
