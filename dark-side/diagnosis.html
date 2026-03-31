@@ -234,10 +234,21 @@
             </p>
             <p class="ds-newsletter__sub">ワークシートに加えて、あなたの構造を動かす問いが届きます。──1万時間のセッションから生まれた問いです。</p>
 
-            <form class="ds-newsletter__form" id="newsletterForm" action="https://my26p.com/p/r/FR9eE6OG" method="post">
-              <input type="email" name="mail" class="ds-newsletter__input" placeholder="メールアドレス" required>
+            <form class="ds-newsletter__form" id="newsletterForm" action="https://my26p.com/p/r/FR9eE6OG" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+              <input type="hidden" name="_method" value="POST"/>
+              <input type="text" name="data[User][mail]" class="ds-newsletter__input" placeholder="メールアドレス" required autocomplete="email" inputmode="email">
               <button type="submit" class="ds-newsletter__btn">ワークシートと問いを受け取る &rarr;</button>
+              <input type="hidden" name="data[User][referer_form_url]" value="" class="UserRefererFormUrl"/>
+              <input type="hidden" name="data[User][referer_url]" value="" class="UserRefererUrl"/>
             </form>
+            <script>
+            (function(){
+              var r = document.getElementsByClassName("UserRefererUrl");
+              for(var i=0;i<r.length;i++) r[i].value = document.referrer||"";
+              var f = document.getElementsByClassName("UserRefererFormUrl");
+              for(var i=0;i<f.length;i++) f[i].value = location.href;
+            })();
+            </script>
             <p class="ds-newsletter__note">※ 第三者への提供はありません</p>
           </div>
 
@@ -646,12 +657,12 @@
     });
 
     document.getElementById("ctaCaseBtn").addEventListener("click", () => {
-      window.open("https://jitsuzon-kagaku-lab.yanaihiroki.com/kandou.html#cases", "_blank", "noopener,noreferrer");
+      window.open("https://jitsuzon-kagaku-lab.yanaihiroki.com/testimonials.html", "_blank", "noopener,noreferrer");
     });
 
     // メルマガ登録フォーム送信（MyASP）
     document.getElementById("newsletterForm").addEventListener("submit", function(e) {
-      const emailInput = this.querySelector('input[type="email"]');
+      const emailInput = this.querySelector('input[name="data[User][mail]"]');
       const email = emailInput.value.trim();
       if (!email) { e.preventDefault(); return; }
 
