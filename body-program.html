@@ -469,6 +469,10 @@ function Res({data,setData}){
       {tab==="sim"&&<Sim w={w} gender={data.gender} goal={data.goal} lv={data.level} bf={data.bf} onBfChange={v=>setData({...data,bf:v})}/>}
 
       <div style={{marginTop:28,textAlign:"center",padding:"32px 0"}}>
+        <div style={{marginBottom:24,padding:"20px 24px",background:C.sf,border:`1px solid ${C.bd}`,borderLeft:`3px solid ${C.ac}`,borderRadius:"0 10px 10px 0"}}>
+          <div style={{fontSize:14,color:C.tm,marginBottom:12,lineHeight:1.8}}>このプログラムを実践した全記録：天命ボディ・ヒストリー</div>
+          <a href="/body-history-001.html" style={{display:"inline-block",padding:"10px 24px",border:`1px solid ${C.ac}`,color:C.ac,borderRadius:8,fontSize:13,fontWeight:700,textDecoration:"none",letterSpacing:.5}}>全記録を読む →</a>
+        </div>
         <div style={{marginBottom:24,padding:"20px 24px",background:C.sf,border:`1px solid ${C.bd}`,borderRadius:10}}>
           <div style={{fontSize:14,fontWeight:700,color:C.tx,marginBottom:8}}>この方程式の全体像を理解する</div>
           <div style={{fontSize:12,color:C.tm,marginBottom:12,lineHeight:1.7}}>なぜ運動\u00d7栄養\u00d7睡眠が掛け算なのか。なぜ天命が必要なのか。<br/>身体論の7つの構造原理を、わかりやすく解説しています。</div>
