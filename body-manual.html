@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>天命ボディマニュアル | 実存科学研究所</title>
+<meta name="description" content="身体論 — 天命を全うするための身体の方程式の要点と実践ポイントをまとめたマニュアル">
+<!-- OGP -->
+<meta property="og:title" content="天命ボディマニュアル | 実存科学研究所">
+<meta property="og:description" content="身体論 — 天命を全うするための身体の方程式の要点と実践ポイントをまとめたマニュアル">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/body-manual.html">
+<meta property="og:site_name" content="実存科学研究所">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="天命ボディマニュアル | 実存科学研究所">
+<meta name="twitter:description" content="身体論 — 天命を全うするための身体の方程式の要点と実践ポイントをまとめたマニュアル">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0c;
+    --surface: #111114;
+    --surface-raised: #1a1a1f;
+    --border: #2a2a30;
+    --text: #e8e6e3;
+    --text-muted: #8a8890;
+    --accent: #c8a44e;
+    --accent-dim: #a0832e;
+    --accent-glow: rgba(200, 164, 78, 0.12);
+    --red: #c45c5c;
+    --green: #5ca06a;
+    --blue: #5c8ec4;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.9;
+    font-size: 15px;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 80px 0 60px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: var(--accent);
+  }
+
+  .hero-label {
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+  }
+
+  .hero-sub {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  /* Section */
+  section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  section:last-of-type {
+    border-bottom: none;
+  }
+
+  .section-number {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 21px;
+    font-weight: 900;
+    margin-bottom: 28px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+  }
+
+  h3 {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 32px 0 16px;
+    color: var(--accent);
+    letter-spacing: 0.5px;
+  }
+
+  p {
+    margin-bottom: 16px;
+    color: var(--text);
+  }
+
+  .lead {
+    font-size: 16px;
+    line-height: 2;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+  }
+
+  /* Key Points */
+  .key-points {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 28px 28px 12px;
+    margin: 24px 0;
+  }
+
+  .key-points-title {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+
+  .key-point {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 16px;
+    line-height: 1.8;
+  }
+
+  .key-point-marker {
+    flex-shrink: 0;
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    margin-top: 10px;
+  }
+
+  .key-point-text {
+    font-size: 14.5px;
+    font-weight: 400;
+  }
+
+  /* Equation Box */
+  .equation-box {
+    background: var(--surface-raised);
+    border-left: 3px solid var(--accent);
+    padding: 24px 28px;
+    margin: 28px 0;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .equation {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--accent);
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+
+  .equation-desc {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    line-height: 1.8;
+  }
+
+  /* Warning / Note */
+  .callout {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .callout-warning {
+    border-left: 3px solid var(--red);
+  }
+
+  .callout-info {
+    border-left: 3px solid var(--blue);
+  }
+
+  .callout-success {
+    border-left: 3px solid var(--green);
+  }
+
+  .callout-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+
+  .callout-warning .callout-label { color: var(--red); }
+  .callout-info .callout-label { color: var(--blue); }
+  .callout-success .callout-label { color: var(--green); }
+
+  /* Table-like structure */
+  .item-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 20px 0;
+  }
+
+  .item-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px 24px;
+  }
+
+  .item-card-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+
+  .item-card-text {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.8;
+  }
+
+  /* Flow */
+  .flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin: 28px 0;
+    flex-wrap: wrap;
+  }
+
+  .flow-step {
+    background: var(--surface-raised);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 22px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    min-width: 100px;
+  }
+
+  .flow-arrow {
+    color: var(--accent);
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  /* Cascade */
+  .cascade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    margin: 24px 0;
+  }
+
+  .cascade-step {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 13.5px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .cascade-arrow {
+    color: var(--red);
+    font-size: 16px;
+  }
+
+  /* Divider */
+  .divider {
+    width: 40px;
+    height: 1px;
+    background: var(--border);
+    margin: 32px auto;
+  }
+
+  /* Principles */
+  .principle {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+  }
+
+  .principle-num {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    background: var(--accent-glow);
+    border: 1px solid var(--accent-dim);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  .principle-content {
+    flex: 1;
+  }
+
+  .principle-title {
+    font-weight: 700;
+    font-size: 14.5px;
+    margin-bottom: 4px;
+  }
+
+  .principle-desc {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    line-height: 1.8;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 40px 0;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 12px;
+    border-top: 1px solid var(--border);
+  }
+
+  .footer a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .hero { padding: 56px 0 40px; }
+    .hero h1 { font-size: 22px; }
+    h2 { font-size: 18px; }
+    .container { padding: 0 18px; }
+    section { padding: 40px 0; }
+    .flow { gap: 10px; }
+    .flow-step { min-width: 80px; padding: 10px 14px; font-size: 13px; }
+    .key-points { padding: 20px 18px 8px; }
+    .equation-box { padding: 20px 22px; }
+    .equation { font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-label">Tenmei Body Manual</div>
+    <h1>天命ボディマニュアル</h1>
+    <p class="hero-sub">
+      「身体論 — 天命を全うするための身体の方程式」の<br>
+      要点と実践ポイントをまとめたもの
+    </p>
+  </div>
+
+  <!-- 01: 前提 -->
+  <section>
+    <div class="section-number">01 — 前提</div>
+    <h2>この文書が言っていること</h2>
+
+    <p class="lead">身体論は「何を食べるか」「どう鍛えるか」の前に、もっと根本的な問いに答えている。</p>
+
+    <div class="key-points">
+      <div class="key-points-title">要点</div>
+      <div class="key-point">
+        <div class="key-point-marker"></div>
+        <div class="key-point-text">あなたには<strong>天命</strong>がある。生まれてきた意味、生きる目的のこと</div>
+      </div>
+      <div class="key-point">
+        <div class="key-point-marker"></div>
+        <div class="key-point-text">天命を全うするには、<strong>それに値する身体</strong>が必要</div>
+      </div>
+      <div class="key-point">
+        <div class="key-point-marker"></div>
+        <div class="key-point-text">健康は「数値が良い状態」のことではない。<strong>身体が今この瞬間も更新され続けていること</strong>が健康</div>
+      </div>
+      <div class="key-point">
+        <div class="key-point-marker"></div>
+        <div class="key-point-text">体脂肪率15%でも、更新が止まっていたら不健康。体脂肪率25%でも、今まさに改善に向かっていたら健康</div>
+      </div>
+    </div>
+
+    <div class="callout callout-info">
+      <div class="callout-label">ポイント</div>
+      健康は「ゴール」ではなく「プロセス」。走り続けていることが大事であって、どこにいるかは二の次。
+    </div>
+  </section>
+
+  <!-- 02: 第一公理 -->
+  <section>
+    <div class="section-number">02 — 第一公理</div>
+    <h2>すべての土台になる法則</h2>
+
+    <div class="equation-box">
+      <div class="equation">T · A ⇒ Pmax</div>
+      <div class="equation-desc">
+        <strong>天命（T）</strong>× <strong>アロスタシス（A）</strong>が揃えば、<strong>パフォーマンス（P）</strong>はあなたの上限に向かって最大化される
+      </div>
+    </div>
+
+    <div class="key-points">
+      <div class="key-points-title">要点の確認</div>
+      <div class="key-point">
+        <div class="key-point-marker"></div>
+        <div class="key-point-text"><strong>天命（T）</strong>＝ 自分が何のために生きているか。目的地</div>
+      </div>
+      <div class="key-point">
+        <div class="key-point-marker"></div>
+        <div class="key-point-text"><strong>アロスタシス（A）</strong>＝ 身体が環境に合わせて自分を更新し続けるしくみ。エンジン</div>
+      </div>
+      <div class="key-point">
+        <div class="key-point-marker"></div>
+        <div class="key-point-text"><strong>Pmax</strong> ＝ あなたが出せる最高のパフォーマンス。速度</div>
+      </div>
+      <div class="key-point">
+        <div class="key-point-marker"></div>
+        <div class="key-point-text">目的地がなければ、どんなにエンジンが良くても迷走する</div>
+      </div>
+      <div class="key-point">
+        <div class="key-point-marker"></div>
+        <div class="key-point-text">エンジンが壊れていたら、目的地がわかっても到達できない</div>
+      </div>
+      <div class="key-point">
+        <div class="key-point-marker"></div>
+        <div class="key-point-text"><strong>両方揃ったときだけ、あなたは最大速度で天命に向かう</strong></div>
+      </div>
+    </div>
+
+    <div class="callout callout-warning">
+      <div class="callout-label">逆も真</div>
+      天命がないか、身体が壊れていたら、パフォーマンスは最大化されない。どちらか一つでも欠ければアウト。
+    </div>
+  </section>
+
+  <!-- 03: 健康の方程式 -->
+  <section>
+    <div class="section-number">03 — 健康の方程式</div>
+    <h2>健康 ＝ 運動 × 栄養 × 睡眠</h2>
+
+    <div class="equation-box">
+      <div class="equation">健康 ＝ 運動 × 栄養 × 睡眠 ＝ 回復</div>
+      <div class="equation-desc">掛け算であって、足し算ではない</div>
+    </div>
+
+    <div class="key-points">
+      <div class="key-points-title">なぜ掛け算なのか</div>
+      <div class="key-point">
+        <div class="key-point-marker"></div>
+        <div class="key-point-text">足し算なら、運動100点＋栄養0点＋睡眠100点＝200点。まあまあに見える</div>
+      </div>
+      <div class="key-point">
+        <div class="key-point-marker"></div>
+        <div class="key-point-text">掛け算なら、運動100点 × 栄養0点 × 睡眠100点＝<strong>0点</strong></div>
+      </div>
+      <div class="key-point">
+        <div class="key-point-marker"></div>
+        <div class="key-point-text">どれか一つが0なら、全部が0になる。これが現実</div>
+      </div>
+      <div class="key-point">
+        <div class="key-point-marker"></div>
+        <div class="key-point-text">どんなに鍛えても、食事がめちゃくちゃなら身体は回復しない。どんなに食事が完璧でも、寝てなければ壊れる</div>
+      </div>
+    </div>
+
+    <div class="equation-box">
+      <div class="equation">パフォーマンス ＝ プライミング × 健康</div>
+      <div class="equation-desc">プライミング＝その日の最初に身体と心を整える準備のこと</div>
+    </div>
+  </section>
+
+  <!-- 04: プライミング -->
+  <section>
+    <div class="section-number">04 — プライミング</div>
+    <h2>朝の30分で一日が決まる</h2>
+
+    <p class="lead">プライミングとは、起きてすぐに身体と神経を「今日、やるべきことをやる」モードに切り替える準備。</p>
+
+    <div class="flow">
+      <div class="flow-step">呼吸</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">身体</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">状態</div>
+    </div>
+
+    <div class="item-grid">
+      <div class="item-card">
+        <div class="item-card-label">① 呼吸 — 自律神経のスイッチを入れる</div>
+        <div class="item-card-text">意識的に深く呼吸することで、交感神経（アクセル）と副交感神経（ブレーキ）のバランスを設定する。呼吸だけが、自律神経に自分の意思でアクセスできる唯一の方法。</div>
+      </div>
+      <div class="item-card">
+        <div class="item-card-label">② 身体 — 関節と筋膜を動かす</div>
+        <div class="item-card-text">モビリティワーク（関節を大きく動かすドリル）で、身体が動ける状態を作る。ストレッチとは違う。関節を「自分の力で制御できる範囲」を広げる作業。</div>
+      </div>
+      <div class="item-card">
+        <div class="item-card-label">③ 状態 — なぜ動くかを確認する</div>
+        <div class="item-card-text">天命との接続を確認する。「今日、自分は何のために生きるのか」を意識に上げる。これがプライミングの最終層であり、最も重要。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05: 運動 -->
+  <section>
+    <div class="section-number">05 — 運動</div>
+    <h2>運動の価値 ＝ 刺激の質 × 刺激の量</h2>
+
+    <p class="lead">運動の目的は「筋肉を動かすこと」ではない。身体に「今のままじゃダメだ、もっと強くなれ」という信号を送ること。</p>
+
+    <h3>刺激の質</h3>
+    <div class="key-points">
+      <div class="key-points-title">質を決める3つの要素</div>
+      <div class="key-point">
+        <div class="key-point-marker"></div>
+        <div class="key-point-text"><strong>可動域</strong> — 関節を目一杯使って動かすこと。チョコチョコ動かしても刺激は弱い</div>
+      </div>
+      <div class="key-point">
+        <div class="key-point-marker"></div>
+        <div class="key-point-text"><strong>制御</strong> — 自分の筋肉で重りをコントロールすること。反動や勢いで振り回すのは刺激の無駄遣い</div>
+      </div>
+      <div class="key-point">
+        <div class="key-point-marker"></div>
+        <div class="key-point-text"><strong>漸進性</strong> — 前回よりちょっとだけキツくすること。同じことを繰り返すと身体は「もう適応済み」と判断して成長を止める</div>
+      </div>
+    </div>
+
+    <h3>刺激の量</h3>
+    <div class="key-points">
+      <div class="key-points-title">量を決める3つの要素</div>
+      <div class="key-point">
+        <div class="key-point-marker"></div>
+        <div class="key-point-text"><strong>頻度</strong> — 週に何回やるか。回復できる範囲で最大の頻度が最適</div>
+      </div>
+      <div class="key-point">
+        <div class="key-point-marker"></div>
+        <div class="key-point-text"><strong>強度</strong> — 1回のトレーニングでどれだけ重い負荷をかけるか</div>
+      </div>
+      <div class="key-point">
+        <div class="key-point-marker"></div>
+        <div class="key-point-text"><strong>容量</strong> — 合計の仕事量（セット数 × 回数 × 重量）。回復を超えると逆効果になる</div>
+      </div>
+    </div>
+
+    <div class="callout callout-warning">
+      <div class="callout-label">注意</div>
+      刺激が弱すぎたら身体は変わらない。刺激が強すぎたら身体は壊れる。最適なのは「今の自分をちょっとだけ超える負荷」。これを漸進的過負荷（ぜんしんてきかふか）と呼ぶ。
+    </div>
+  </section>
+
+  <!-- 06: 栄養 -->
+  <section>
+    <div class="section-number">06 — 栄養</div>
+    <h2>栄養の価値 ＝ 素材の質 × 設計の精度</h2>
+
+    <p class="lead">栄養の目的は「カロリーを摂ること」ではない。身体の回復に必要な素材を、正しいバランスで、正しいタイミングで、正しい量だけ届けること。三大栄養素（PFC）のどれか一つでも欠ければ、積の原理により全体が崩れる。</p>
+
+    <h3>三大栄養素（PFC）</h3>
+    <div class="item-grid">
+      <div class="item-card">
+        <div class="item-card-label">P — タンパク質（Protein）</div>
+        <div class="item-card-text">筋肉・臓器・酵素・ホルモンの材料。特にロイシン（必須アミノ酸の一つ）がmTOR経路を活性化し、筋タンパク質合成の信号を出す。鶏肉、魚、卵、大豆に多い。体重1kgあたり1.6〜2.2gが筋肥大に必要とされる目安。</div>
+      </div>
+      <div class="item-card">
+        <div class="item-card-label">F — 脂質（Fat）</div>
+        <div class="item-card-text">細胞膜の構成素材、ホルモン（テストステロン含む）の前駆体、脂溶性ビタミン（A・D・E・K）の吸収に不可欠。オメガ3（魚油・亜麻仁油）とオメガ6の比率が炎症応答を調節する。極端な低脂質はホルモンバランスを崩す。</div>
+      </div>
+      <div class="item-card">
+        <div class="item-card-label">C — 炭水化物（Carbohydrate）</div>
+        <div class="item-card-text">筋収縮の主要燃料（筋グリコーゲン）であり、高強度トレーニングのパフォーマンスを直接左右する。インスリン分泌を介して筋タンパク質合成をサポートし、コルチゾールの抑制にも寄与する。白米、オートミール、芋類、果物が主な供給源。トレーニング日と休息日で摂取量を調整するのが合理的。</div>
+      </div>
+    </div>
+
+    <h3>微量栄養素</h3>
+    <div class="item-grid">
+      <div class="item-card">
+        <div class="item-card-label">ビタミン・ミネラル</div>
+        <div class="item-card-text">体内の数千の化学反応を動かす補因子（スイッチ役）。ビタミンD（免疫・骨代謝・テストステロン合成）、マグネシウム（筋収縮・神経伝達・睡眠の質）、亜鉛（免疫・タンパク質合成・ホルモン代謝）は現代の食事で不足しやすい。</div>
+      </div>
+    </div>
+
+    <h3>設計の精度</h3>
+    <div class="key-points">
+      <div class="key-points-title">3つの設計要素</div>
+      <div class="key-point">
+        <div class="key-point-marker"></div>
+        <div class="key-point-text"><strong>タイミング</strong> — 運動前後にタンパク質と炭水化物を摂ると、筋タンパク質合成の効率が上がり、グリコーゲンの回復も促進される</div>
+      </div>
+      <div class="key-point">
+        <div class="key-point-marker"></div>
+        <div class="key-point-text"><strong>PFCバランス</strong> — タンパク質・脂質・炭水化物の配分比率。目的（筋肥大・脂肪減少・維持）によって最適な比率が異なる。どれか一つを極端に削ると、掛け算の一項が0に近づくのと同じ構造になる</div>
+      </div>
+      <div class="key-point">
+        <div class="key-point-marker"></div>
+        <div class="key-point-text"><strong>総量</strong> — エネルギー摂取量が必要量を下回ると、身体は適応ではなく節約モードに入る。アロスタシスの更新に必要な最低量を確保することが前提</div>
+      </div>
+    </div>
+
+    <div class="callout callout-info">
+      <div class="callout-label">サプリメントについて</div>
+      サプリは食事の代替ではない。PFCの土台が整っていることが前提。そのうえで、現代の食事では不足しやすいビタミンD・マグネシウム・オメガ3脂肪酸を戦略的に補完するのは合理的な選択。
+    </div>
+  </section>
+
+  <!-- 07: 睡眠 -->
+  <section>
+    <div class="section-number">07 — 睡眠</div>
+    <h2>睡眠の価値 ＝ 構造の質 × 環境の質</h2>
+
+    <p class="lead">睡眠の目的は「時間を寝ること」ではない。寝ている間に身体が修理・清掃・整理をする。そのプロセスが最大限に機能する条件を整えること。</p>
+
+    <h3>構造の質 — 睡眠の中身</h3>
+    <div class="key-points">
+      <div class="key-points-title">良い睡眠の3条件</div>
+      <div class="key-point">
+        <div class="key-point-marker"></div>
+        <div class="key-point-text"><strong>サイクル完遂</strong> — 深い睡眠と浅い睡眠のセットを4〜5回繰り返すこと。途中で起きるとサイクルが壊れる</div>
+      </div>
+      <div class="key-point">
+        <div class="key-point-marker"></div>
+        <div class="key-point-text"><strong>深い睡眠の割合</strong> — 前半に集中する深い睡眠で成長ホルモンが出て、身体が修理される</div>
+      </div>
+      <div class="key-point">
+        <div class="key-point-marker"></div>
+        <div class="key-point-text"><strong>レム睡眠の密度</strong> — 後半に増えるレム睡眠で記憶が整理され、感情が処理される</div>
+      </div>
+    </div>
+
+    <h3>環境の質 — 寝室の条件</h3>
+    <div class="item-grid">
+      <div class="item-card">
+        <div class="item-card-label">温度 — 18〜20℃</div>
+        <div class="item-card-text">体の深部体温が下がることで眠りに入る。部屋が暑いと深い睡眠が阻害される。</div>
+      </div>
+      <div class="item-card">
+        <div class="item-card-label">光 — 完全に暗く</div>
+        <div class="item-card-text">わずかな光でも睡眠ホルモン（メラトニン）の分泌が抑えられる。遮光カーテン推奨。</div>
+      </div>
+      <div class="item-card">
+        <div class="item-card-label">一貫性 — 毎日同じ時刻に寝て起きる</div>
+        <div class="item-card-text">体内時計のリズムが安定すると睡眠の質が上がる。週末の夜更かしは「時差ボケ」と同じ。</div>
+      </div>
+    </div>
+
+    <div class="callout callout-success">
+      <div class="callout-label">睡眠中に起きていること</div>
+      脳脊髄液が脳内の老廃物を洗い流す（グリンファティック系）。これは深い睡眠中にしか起きない。寝不足は、脳にゴミが溜まり続ける状態。
+    </div>
+  </section>
+
+  <!-- 08: 認知のアロスタシス -->
+  <section>
+    <div class="section-number">08 — 身体と心のつながり</div>
+    <h2>身体が壊れると、考え方も壊れる</h2>
+
+    <p class="lead">身体と心は別物ではない。身体が壊れると認知（ものの考え方・判断力）も壊れる。これは比喩ではなく、実際に脳が物理的にダメージを受ける。</p>
+
+    <h3>破綻のカスケード（連鎖崩壊）</h3>
+    <div class="cascade">
+      <div class="cascade-step">ストレスが回復を超えて慢性化する</div>
+      <div class="cascade-arrow">↓</div>
+      <div class="cascade-step">ストレスホルモン（コルチゾール）が出続ける</div>
+      <div class="cascade-arrow">↓</div>
+      <div class="cascade-step">身体中で慢性的な炎症が起きる</div>
+      <div class="cascade-arrow">↓</div>
+      <div class="cascade-step">脳の海馬（記憶）が萎縮、前頭前野（判断）が機能低下</div>
+      <div class="cascade-arrow">↓</div>
+      <div class="cascade-step">考えが固くなり、正しい判断ができなくなる</div>
+      <div class="cascade-arrow">↓</div>
+      <div class="cascade-step">天命を全うすることが不可能になる</div>
+    </div>
+
+    <div class="callout callout-warning">
+      <div class="callout-label">つまり</div>
+      「メンタルが弱い」のではない。身体が壊れているから、心も壊れている。身体を直せば、心も直る。これが双方向ループ。
+    </div>
+
+    <h3>信念を変える2つの道</h3>
+    <div class="key-points">
+      <div class="key-points-title">トップダウンとボトムアップ</div>
+      <div class="key-point">
+        <div class="key-point-marker"></div>
+        <div class="key-point-text"><strong>トップダウン（頭→身体）</strong> — 天命がはっきりすると考え方が変わり、行動が変わり、身体が変わる</div>
+      </div>
+      <div class="key-point">
+        <div class="key-point-marker"></div>
+        <div class="key-point-text"><strong>ボトムアップ（身体→頭）</strong> — 運動・栄養・睡眠を整えると身体が変わり、気分が変わり、考え方が変わる</div>
+      </div>
+      <div class="key-point">
+        <div class="key-point-marker"></div>
+        <div class="key-point-text"><strong>この2つを同時にやるのが最速</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09: 行動のアロスタシス -->
+  <section>
+    <div class="section-number">09 — 継続の構造</div>
+    <h2>「続かない」のは意志が弱いからではない</h2>
+
+    <p class="lead">ドーパミンは「気持ちいい」の物質ではない。「あれをやれ、取りに行け」という予測と動機づけの信号。</p>
+
+    <div class="key-points">
+      <div class="key-points-title">ドーパミンの収束先を決める3条件</div>
+      <div class="key-point">
+        <div class="key-point-marker"></div>
+        <div class="key-point-text"><strong>反復</strong> — 繰り返した行動ほど、脳はそれに対して「もっとやれ」と反応するようになる</div>
+      </div>
+      <div class="key-point">
+        <div class="key-point-marker"></div>
+        <div class="key-point-text"><strong>予測誤差</strong> — 期待以上の結果が出たとき、ドーパミンが大きく出る。だから小さな成功体験が重要</div>
+      </div>
+      <div class="key-point">
+        <div class="key-point-marker"></div>
+        <div class="key-point-text"><strong>環境</strong> — 睡眠不足、慢性ストレス、ジャンクフード、SNSの見すぎはドーパミンのベースラインを狂わせる。短期的な刺激にしか反応できなくなる</div>
+      </div>
+    </div>
+
+    <div class="callout callout-success">
+      <div class="callout-label">結論</div>
+      天命が確定していて（目的地がある）、身体が整っていて（エンジンが動いている）、考え方が整っている（ナビが正しい）なら、行動は自動的に天命に向かう。「頑張って続ける」のではなく、構造が継続を生み出す。
+    </div>
+  </section>
+
+  <!-- 10: 7つの原理 -->
+  <section>
+    <div class="section-number">10 — 構造原理</div>
+    <h2>7つの原理</h2>
+
+    <p class="lead">身体論の全体を貫く7つのルール。</p>
+
+    <div class="principle">
+      <div class="principle-num">1</div>
+      <div class="principle-content">
+        <div class="principle-title">方向原理</div>
+        <div class="principle-desc">天命がなければ、身体を整えても迷走する。目的地が先。</div>
+      </div>
+    </div>
+
+    <div class="principle">
+      <div class="principle-num">2</div>
+      <div class="principle-content">
+        <div class="principle-title">積の原理</div>
+        <div class="principle-desc">運動・栄養・睡眠は掛け算。一つが0なら全部が0。</div>
+      </div>
+    </div>
+
+    <div class="principle">
+      <div class="principle-num">3</div>
+      <div class="principle-content">
+        <div class="principle-title">プロセス原理</div>
+        <div class="principle-desc">健康は状態ではなくプロセス。数値が良いことではなく、更新が続いていることが本質。</div>
+      </div>
+    </div>
+
+    <div class="principle">
+      <div class="principle-num">4</div>
+      <div class="principle-content">
+        <div class="principle-title">刺激原理</div>
+        <div class="principle-desc">今の自分をちょっとだけ超える刺激が必要。弱すぎても強すぎても成長は止まる。</div>
+      </div>
+    </div>
+
+    <div class="principle">
+      <div class="principle-num">5</div>
+      <div class="principle-content">
+        <div class="principle-title">双方向原理</div>
+        <div class="principle-desc">身体が変われば心が変わる。心が変われば身体が変わる。両方回すのが最速。</div>
+      </div>
+    </div>
+
+    <div class="principle">
+      <div class="principle-num">6</div>
+      <div class="principle-content">
+        <div class="principle-title">収束原理</div>
+        <div class="principle-desc">条件が揃えば、行動は自動的に天命に向かう。意志力ではなく構造の問題。</div>
+      </div>
+    </div>
+
+    <div class="principle">
+      <div class="principle-num">7</div>
+      <div class="principle-content">
+        <div class="principle-title">前提原理</div>
+        <div class="principle-desc">どんな素晴らしい理念も哲学も、身体が動かなければ実現できない。身体はすべての前提。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11: 最後の問い -->
+  <section>
+    <div class="section-number">11 — 最後の問い</div>
+    <h2>では、あなたの天命は？</h2>
+
+    <p class="lead">この文書を読んで、アロスタシス（身体の更新）は今日から始められる。運動・栄養・睡眠を整えることはすぐにできる。</p>
+
+    <p>しかし、天命（T）が空欄のままでは、方程式は起動しない。</p>
+
+    <p>方向のないプロセスは迷走する。</p>
+
+    <div class="equation-box">
+      <div class="equation">T · A ⇒ Pmax</div>
+      <div class="equation-desc">天命を確定し、身体を整えたとき、あなたのパフォーマンスはあなたの上限に向かって最大化される。</div>
+    </div>
+
+    <div class="callout callout-info">
+      <div class="callout-label">原典</div>
+      本マニュアルは「身体論 — 天命を全うするための身体の方程式」（実存科学研究所）を要約したものです。<br>
+      原典：<a href="https://jitsuzon-kagaku-lab.yanaihiroki.com/body.html" style="color: var(--accent);">jitsuzon-kagaku-lab.yanaihiroki.com/body.html</a>
+    </div>
+  </section>
+
+  <div style="text-align: center; padding: 48px 0 32px;">
+    <div style="font-size: 16px; font-weight: 700; line-height: 2; color: #e8e6e3; margin-bottom: 20px;">
+      天命ボディを<br>
+      最短最速で手に入れたい方は<br>
+      <span style="color: #c8a44e;">「天命の言語化セッション™」</span>へ！
+    </div>
+    <a href="https://jitsuzon-kagaku-lab.yanaihiroki.com/trial.html" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 16px 36px; background: #c8a44e; color: #0a0a0c; border-radius: 8px; font-size: 15px; font-weight: 700; text-decoration: none; letter-spacing: 0.5px;">
+      無料トライアルはこちら →
+    </a>
+  </div>
+
+  <div class="footer">
+    <p>Based on「身体論 — 天命を全うするための身体の方程式」</p>
+    <p>© <a href="https://jitsuzon-kagaku-lab.yanaihiroki.com/">実存科学研究所</a></p>
+  </div>
+
+</div>
+
+</body>
+</html>

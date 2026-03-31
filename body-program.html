@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>天命ボディプログラム | 実存科学研究所</title>
+<meta name="description" content="問診に答えるだけで、あなた専用のPFC・トレーニング・睡眠・シミュレーションが手に入る">
+<!-- OGP -->
+<meta property="og:title" content="天命ボディプログラム | 実存科学研究所">
+<meta property="og:description" content="問診に答えるだけで、あなた専用のPFC・トレーニング・睡眠・シミュレーションが手に入る">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/body-program.html">
+<meta property="og:site_name" content="実存科学研究所">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="天命ボディプログラム | 実存科学研究所">
+<meta name="twitter:description" content="問診に答えるだけで、あなた専用のPFC・トレーニング・睡眠・シミュレーションが手に入る">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap"></noscript>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #0a0a0c; }
+#root { min-height: 100vh; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { useState, useMemo } = React;
+const C={bg:"#0a0a0c",sf:"#111114",sr:"#1a1a1f",bd:"#2a2a30",tx:"#e8e6e3",tm:"#8a8890",td:"#5a5a62",ac:"#c8a44e",ad:"#a0832e",ag:"rgba(200,164,78,.1)",rd:"#c45c5c",gr:"#5ca06a",bl:"#5c8ec4",pp:"#c49bdb"};
+function calcBMR(g,w,h,a){return g==="male"?10*w+6.25*h-5*a+5:10*w+6.25*h-5*a-161}
+function calcTDEE(b,d){return b*(d<=1?1.2:d<=3?1.375:d<=5?1.55:1.725)}
+function calcPFC(tdee,w,goal){
+  const p=w*2,cal=goal==="bulk"?tdee+300:goal==="cut"?tdee-500:tdee;
+  const f=(cal*.25)/9,carb=Math.max((cal-p*4-f*9)/4,50);
+  return{cal:Math.round(p*4+f*9+carb*4),p:Math.round(p),f:Math.round(f),c:Math.round(carb)};
+}
+function getProg(env,lv,days,goal){
+  const g=env==="gym";
+  const setsC = goal==="cut"?(lv==="none"?"2":"2-3"):goal==="bulk"?(lv==="none"||lv==="beginner"?"3":"3-4"):(lv==="none"||lv==="beginner"?"3":"3");
+  const setsI = goal==="cut"?(lv==="none"?"2":"2"):goal==="bulk"?(lv==="none"||lv==="beginner"?"3":"3-4"):(lv==="none"||lv==="beginner"?"2-3":"3");
+  const repC = goal==="cut"?(lv==="none"?"8-10":"6-8"):goal==="bulk"?(lv==="none"?"10-12":lv==="beginner"?"8-12":"8-12"):(lv==="none"?"8-10":lv==="beginner"?"8-10":"6-10");
+  const repI = goal==="cut"?(lv==="none"?"10-12":"8-10"):goal==="bulk"?(lv==="none"?"12-15":"10-12"):(lv==="none"?"12-15":"10-12");
+  const sc=`${setsC}×${repC}`,si=`${setsI}×${repI}`;
+  const chest=g?[
+    {n:"チェストプレス / ベンチプレス",t:"胸",nt:"胸まで下ろし制御して挙上",s:sc},
+    {n:"インクラインプレス",t:"胸（上部）",nt:"30〜45°で上部を狙う",s:sc},
+    {n:"ペックフライ",t:"胸",nt:"ストレッチポジションを意識",s:si},
+  ]:[
+    {n:"プッシュアップ（ワイド）",t:"胸",nt:"全可動域。胸が床につくまで",s:sc},
+    {n:"デクラインプッシュアップ",t:"胸（上部）",nt:"足を台に乗せて角度をつける",s:sc},
+    {n:"ナロープッシュアップ",t:"胸内側・三頭",nt:"手幅を狭めて",s:si},
+  ];
+  const arms=g?[
+    {n:"バーベルカール",t:"二頭筋",nt:"肘を固定。ストリクトに",s:si},
+    {n:"インクラインダンベルカール",t:"二頭（長頭）",nt:"肘を後ろに引きストレッチ",s:si},
+    {n:"トライセプスプッシュダウン",t:"三頭筋",nt:"肘を固定して伸展",s:si},
+    {n:"オーバーヘッドトライセプスEX",t:"三頭（長頭）",nt:"頭上でストレッチを最大化",s:si},
+  ]:[
+    {n:"逆手懸垂（チンアップ）",t:"二頭筋",nt:"ドアフレーム用バーがあれば最強",s:sc},
+    {n:"ダイヤモンドプッシュアップ",t:"三頭筋",nt:"手をダイヤモンド型に",s:si},
+    {n:"ディップス（椅子使用）",t:"三頭筋",nt:"椅子2脚で体を下ろす",s:si},
+  ];
+  const back=g?[
+    {n:"懸垂 / ラットプルダウン",t:"背中（広背筋）",nt:"加重推奨。肩甲骨から引く",s:sc},
+    {n:"ベントオーバーロウ",t:"背中（僧帽・菱形）",nt:"上体45°、肘を引く",s:sc},
+    {n:"デッドリフト",t:"背中・臀部・ハム",nt:"腰を丸めない。全身連動",s:sc},
+  ]:[
+    {n:"懸垂（順手ワイド）",t:"背中（広背筋）",nt:"肩甲骨を寄せてから引く",s:sc},
+    {n:"タオルロウ",t:"背中（僧帽筋）",nt:"ドアにタオルをかけて引く",s:sc},
+    {n:"スーパーマン",t:"脊柱起立筋",nt:"うつ伏せで手脚を持ち上げる",s:si},
+  ];
+  const shoulders=g?[
+    {n:"オーバーヘッドプレス",t:"肩（前部・中部）",nt:"体幹を固めて真上に押す",s:sc},
+    {n:"サイドレイズ",t:"肩（中部）",nt:"軽い重量で制御重視",s:si},
+    {n:"フェイスプル / リアデルトフライ",t:"肩（後部）",nt:"姿勢改善にも有効",s:si},
+  ]:[
+    {n:"パイクプッシュアップ",t:"肩",nt:"腰を高く上げて垂直に押す",s:sc},
+    {n:"ウォールスライド",t:"肩（可動性＋安定性）",nt:"壁に背中をつけ腕を上下",s:si},
+    {n:"YTWレイズ",t:"肩（後部）・僧帽",nt:"うつ伏せでY→T→Wの形に",s:si},
+  ];
+  const legs=g?[
+    {n:"スクワット",t:"脚・臀部",nt:"全可動域。ATGスクワット推奨",s:sc},
+    {n:"レッグプレス / ブルガリアンSQ",t:"大腿四頭・臀部",nt:"スクワットの補助。片脚も有効",s:sc},
+    {n:"レッグカール",t:"ハムストリング",nt:"エキセントリックをゆっくり",s:si},
+    {n:"カーフレイズ",t:"ふくらはぎ",nt:"全可動域で3秒かけて下ろす",s:si},
+  ]:[
+    {n:"ブルガリアンスクワット",t:"脚・臀部",nt:"片脚で高負荷。椅子に後ろ脚を",s:sc},
+    {n:"自重スクワット（ATG）",t:"大腿四頭・臀部",nt:"かかとをつけたまま最深部まで",s:sc},
+    {n:"ヒップスラスト（椅子使用）",t:"臀部",nt:"椅子に背中をつけ腰を持ち上げ",s:si},
+    {n:"カーフレイズ（段差使用）",t:"ふくらはぎ",nt:"階段の段差でフルレンジ",s:si},
+  ];
+  if(days<=2) return[
+    {day:"Day A \u2014 全身（押す系＋脚）",ex:[chest[0],shoulders[0],legs[0],chest[2]]},
+    {day:"Day B \u2014 全身（引く系＋腕）",ex:[back[0],back[1],arms[0],arms.length>2?arms[2]:arms[1]]},
+  ];
+  if(days===3) return[
+    {day:"Day 1 \u2014 胸＋肩",ex:[...chest,shoulders[1]]},
+    {day:"Day 2 \u2014 腕＋脚",ex:[...arms.slice(0,2),legs[0],legs[legs.length-1]]},
+    {day:"Day 3 \u2014 背中＋肩",ex:[...back,shoulders[2]]},
+  ];
+  if(days===4) return[
+    {day:"Day 1 \u2014 胸",ex:[...chest,shoulders[1]]},
+    {day:"Day 2 \u2014 腕",ex:arms},
+    {day:"Day 3 \u2014 背中",ex:[...back,shoulders[2]]},
+    {day:"Day 4 \u2014 脚",ex:legs},
+  ];
+  const full=[
+    {day:"Day 1 \u2014 胸",ex:chest},
+    {day:"Day 2 \u2014 腕",ex:arms},
+    {day:"Day 3 \u2014 背中",ex:back},
+    {day:"Day 4 \u2014 肩",ex:shoulders},
+    {day:"Day 5 \u2014 脚",ex:legs},
+  ];
+  if(days>=6) full.push({day:"Day 6 \u2014 弱点部位",ex:[
+    {n:"弱点部位のコンパウンド種目",t:"個人による",nt:"最も成長が遅い部位を優先。胸・背中・脚のどれか",s:sc},
+    {n:"弱点部位のアイソレーション種目",t:"個人による",nt:"制御とストレッチを重視。追い込みすぎない",s:si},
+    {n:"弱点部位の補助種目",t:"個人による",nt:"別角度・別刺激で同じ筋群を狙う",s:si},
+  ]});
+  return full.slice(0,days);
+}
+const SLEEP=[
+  {cat:"環境",items:["室温を18〜20℃に設定する","完全遮光にする（遮光カーテン or アイマスク）","スマホを寝室に持ち込まない or 機内モード"]},
+  {cat:"リズム",items:["就寝・起床時刻を毎日±30分以内に揃える","週末も同じ時刻に起きる（ソーシャル・ジェットラグ防止）","起床後30分以内に日光を浴びる"]},
+  {cat:"準備",items:["就寝90分前にカフェインを摂らない","就寝60分前に入浴（深部体温の低下を誘導）","就寝30分前からブルーライトを遮断"]},
+];
+const PRIM=[
+  {ph:"呼吸（5分）",pur:"自律神経の起動",st:["鼻から4秒かけて吸う","7秒間息を止める","口から8秒かけて吐く","5〜8サイクル繰り返す","※ 4-7-8呼吸法。副交感神経を活性化しバランスを整える"]},
+  {ph:"身体 \u2014 Mobility（15分）",pur:"関節・筋膜の可動性確保",st:["CARs：主要関節を全可動域で円を描くように回す","対象：首→肩→肘→手首→胸椎→股関節→膝→足首","各関節3〜5回、ゆっくり制御を保って","※ 動きながら「この関節はどこまで動くか」を感じ取る。痛みがあれば手前で止める"]},
+  {ph:"状態 \u2014 State（5〜10分）",pur:"天命との接続",st:["自分の天命を、自分の言葉で語る。声に出して語ることが重要。唱えるのではなく、語る","天命が言語化されていない場合、ここが空白になる。空白のままでは方向が定まらない","天命を語ったうえで「今日、その天命のために何をするか」を1つ決める","※ 最も重要な層。呼吸と身体が整った状態で行うからこそ、天命が身体に浸透する"]},
+];
+const EVIDENCE=[
+  {title:"基礎代謝量（BMR）",body:"Mifflin-St Jeor式（1990年）。ADA（2005年）が複数式を比較しMifflin-St Jeorが最も正確と結論。",ref:"Mifflin MD et al. Am J Clin Nutr. 1990;51(2):241-247 / Frankenfield D et al. J Am Diet Assoc. 2005;105(5):775-789"},
+  {title:"総消費カロリー（TDEE）",body:"BMR × 活動係数（FAO/WHO/UNU 2001年）。自己申告ベースのため±10-15%の誤差あり。2〜3週の体重変動で補正推奨。",ref:"FAO/WHO/UNU. Human Energy Requirements. 2001"},
+  {title:"タンパク質摂取量",body:"体重×2.0g/kg。Morton RWらのSR/MA（49研究・1,863名）で筋肥大に最適な量は1.6〜2.2g/kg/日と結論。カロリー制限時は筋量維持のため2.0g/kg以上の維持が特に重要。",ref:"Morton RW et al. Br J Sports Med. 2018;52(6):376-384 / Helms ER et al. Int J Sport Nutr Exerc Metab. 2014;24(2):127-138"},
+  {title:"脂質摂取量",body:"総カロリーの25%。20%未満でテストステロン低下が観察される。25%は安全域。",ref:"Hamalainen E et al. J Steroid Biochem. 1984;20(1):459-464"},
+  {title:"炭水化物摂取量",body:"P・Fを確保した残余。ISSNはレジスタンストレーニング従事者に4〜7g/kg/日を推奨。",ref:"Kerksick CM et al. J Int Soc Sports Nutr. 2018;15(1):38"},
+  {title:"目的別カロリー調整",body:"筋肥大+300kcal/脂肪減少−500kcal。週0.5〜1.0%体重の減量速度が筋量維持に最適。",ref:"Garthe I et al. Int J Sport Nutr Exerc Metab. 2011;21(2):97-104"},
+  {title:"トレーニング設計",body:"コンパウンド種目中心。週10〜20セット/筋群が筋肥大に最適。漸進的過負荷はSelyeのGASに由来。",ref:"ACSM. Med Sci Sports Exerc. 2009;41(3):687-708 / Schoenfeld BJ et al. J Sports Sci. 2017;35(11):1073-1082"},
+  {title:"目的別セット・レップ設計",body:"脂肪減少（cut）時はボリュームを下げ強度を維持（2-3セット×6-8回）。カロリー制限下では回復能力が低下するため、総ボリュームの削減が筋量維持に最適。筋肥大（bulk）時は総ボリュームを最大化（3-4セット×8-12回）。",ref:"Helms ER et al. Int J Sport Nutr Exerc Metab. 2014;24(2):127-138 / Schoenfeld BJ et al. J Sports Sci. 2017;35(11):1073-1082"},
+  {title:"体脂肪率の到達ライン",body:"男性10%・女性20%を健康維持可能な到達ラインに設定。女性は20%以下でエストロゲン低下による月経不順・骨密度低下のリスクが上昇（Female Athlete Triad）。男性は10%以下はコンテスト時の一時的水準であり長期維持は非推奨。",ref:"ACSM. Female Athlete Triad Position Stand. Med Sci Sports Exerc. 2007;39(10):1867-1882 / Logue DM et al. Br J Sports Med. 2020;54(21):1300-1308"},
+  {title:"睡眠",body:"室温18〜20℃はNSFガイドライン。20lux以下でもメラトニン抑制。グリンファティック系は深睡眠中に活性化。",ref:"Gooley JJ et al. J Clin Endocrinol Metab. 2011;96(3):E463 / Xie L et al. Science. 2013;342(6156):373-377"},
+  {title:"プライミング",body:"呼吸法による自律神経調整はZaccaroらのSRで支持。CARsはSchleip・Langevinの筋膜研究をFRC\u00AEが実践翻訳。",ref:"Zaccaro A et al. Front Hum Neurosci. 2018;12:353"},
+  {title:"シミュレーター",body:"筋肥大速度はLyle McDonald/Alan Aragonモデル。脂肪量変化はカロリー収支ベース（7,700kcal\u2248 1kg）。",ref:"McDonald L. What's My Genetic Muscular Potential? / Aragon A. AARR Research Review"},
+  {title:"サプリメント推奨",body:"ビタミンD3（免疫・骨代謝・テストステロン合成）、マグネシウム（筋収縮・神経伝達・睡眠の質）、オメガ3（抗炎症・細胞膜流動性）、亜鉛（免疫・タンパク質合成・ホルモン代謝）の4種を推奨。現代の食事で不足しやすい栄養素を戦略的に補完。",ref:"Owens DJ et al. Eur J Sport Sci. 2015;15(1):63-72 / Zhang Y et al. Nutrients. 2020;12(5):1266 / Calder PC. Ann Nutr Metab. 2021;77(Suppl 4):1-15 / Prasad AS. Mol Med. 2008;14(5-6):353-357"},
+];
+function simulate(w,gender,goal,lv,months,inputBf){
+  const male=gender==="male",base=male?.9:.45;
+  const lvM=lv==="none"?1:lv==="beginner"?.85:lv==="intermediate"?.5:.3;
+  const bfFloor=male?10:20,sRatio=lv==="none"||lv==="beginner"?.65:.5;
+  const slowZone=male?5:3;
+  const bmi=w/(1.7*1.7);
+  let bf=inputBf?parseFloat(inputBf):male?Math.max(10,Math.min(40,bmi*1.2+.23*30-16.2)):Math.max(20,Math.min(48,bmi*1.2+.23*30-5.4));
+  const belowFloor=bf<=bfFloor;
+  let fm=w*(bf/100),lm=w-fm,cw=w;
+  const res=[{m:0,w:r1(cw),lm:r1(lm),fm:r1(fm),bf:r1(bf)}];
+  for(let i=1;i<=months;i++){
+    if(goal==="cut"&&belowFloor){
+      res.push({m:i,w:r1(cw),lm:r1(lm),fm:r1(fm),bf:r1(bf)});
+      continue;
+    }
+    const td=1/(1+.03*i);
+    let mg=base*lvM*td;
+    if(goal==="cut"){
+      mg*=lv==="none"?.4:.15;
+      const curBf2=(fm/cw)*100;
+      const dist2=Math.max(0,curBf2-bfFloor);
+      if(dist2<slowZone) mg*=dist2/slowZone;
+    }
+    let fc=0;
+    if(goal==="cut"){
+      const curBf=(fm/cw)*100;
+      const dist=Math.max(0,curBf-bfFloor);
+      if(dist<0.5){fc=0;}
+      else{
+        const adapt=dist>=slowZone?1:dist/slowZone;
+        const metaAdapt=1-Math.min(0.2,i*0.015);
+        fc=(-500*adapt*metaAdapt*30)/7700;
+      }
+    }
+    else if(goal==="bulk") fc=(300*30/7700)*(1-sRatio);
+    lm+=mg;fm+=fc;
+    const minF=lm*(bfFloor/(100-bfFloor));
+    fm=Math.max(fm,minF);cw=lm+fm;bf=(fm/cw)*100;
+    res.push({m:i,w:r1(cw),lm:r1(lm),fm:r1(fm),bf:r1(bf)});
+  }
+  return {res,belowFloor};
+}
+function r1(v){return Math.round(v*10)/10}
+const st={
+  app:{minHeight:"100vh",background:C.bg,color:C.tx,fontFamily:"'Noto Sans JP','Hiragino Sans',sans-serif",fontSize:15,fontWeight:300,lineHeight:1.8,WebkitFontSmoothing:"antialiased"},
+  ctn:{maxWidth:680,margin:"0 auto",padding:"0 20px"},
+  hdr:{textAlign:"center",padding:"48px 0 36px",borderBottom:`1px solid ${C.bd}`},
+  hdrL:{fontSize:10,letterSpacing:4,textTransform:"uppercase",color:C.ac,fontWeight:500,marginBottom:12},
+  h1:{fontSize:24,fontWeight:900,letterSpacing:1,lineHeight:1.5,margin:0},
+  hdrS:{color:C.tm,fontSize:13,marginTop:8},
+  dots:{display:"flex",justifyContent:"center",gap:8,padding:"24px 0"},
+  dot:a=>({width:a?24:8,height:8,borderRadius:4,background:a?C.ac:C.bd,transition:"all .3s"}),
+  sec:{padding:"32px 0"},
+  secL:{fontSize:11,letterSpacing:3,textTransform:"uppercase",color:C.ac,fontWeight:500,marginBottom:6},
+  h2:{fontSize:19,fontWeight:900,lineHeight:1.5,marginBottom:20,letterSpacing:.5},
+  lbl:{display:"block",fontSize:13,fontWeight:700,marginBottom:6,marginTop:20,letterSpacing:.5},
+  inp:{width:"100%",padding:"12px 16px",background:C.sf,border:`1px solid ${C.bd}`,borderRadius:8,color:C.tx,fontSize:15,fontWeight:400,outline:"none",fontFamily:"inherit",boxSizing:"border-box"},
+  rg:{display:"flex",gap:8,flexWrap:"wrap",marginTop:4},
+  rb:s=>({padding:"10px 18px",background:s?C.ag:C.sf,border:`1px solid ${s?C.ac:C.bd}`,borderRadius:8,color:s?C.ac:C.tm,fontSize:13.5,fontWeight:s?700:400,cursor:"pointer",transition:"all .2s",fontFamily:"inherit"}),
+  btn:p=>({padding:"14px 32px",background:p?C.ac:"transparent",color:p?C.bg:C.tm,border:p?"none":`1px solid ${C.bd}`,borderRadius:8,fontSize:14,fontWeight:700,cursor:"pointer",fontFamily:"inherit",letterSpacing:.5,transition:"all .2s"}),
+  btnR:{display:"flex",gap:12,justifyContent:"flex-end",marginTop:28,flexWrap:"wrap"},
+  card:{background:C.sf,border:`1px solid ${C.bd}`,borderRadius:10,padding:"22px 24px",marginBottom:14},
+  cardL:{fontSize:13,fontWeight:700,color:C.ac,marginBottom:8,letterSpacing:1},
+  eq:{background:C.sr,borderLeft:`3px solid ${C.ac}`,padding:"18px 22px",borderRadius:"0 8px 8px 0",marginBottom:20},
+  eqT:{fontSize:17,fontWeight:900,color:C.ac,letterSpacing:1},
+  eqD:{fontSize:13,color:C.tm,marginTop:4,lineHeight:1.7},
+  tabR:{display:"flex",gap:8,marginBottom:24,overflowX:"auto",WebkitOverflowScrolling:"touch",padding:"8px 0"},
+  tab:a=>({padding:"12px 10px",fontSize:11,fontWeight:700,color:a?C.ac:C.tm,background:a?C.ag:C.sf,border:a?`1.5px solid ${C.ac}`:`1px solid ${C.bd}`,borderRadius:10,cursor:"pointer",fontFamily:"inherit",transition:"all .2s",whiteSpace:"nowrap",flexShrink:0,textAlign:"center",minWidth:60,letterSpacing:.3}),
+  note:{background:C.sf,borderLeft:`3px solid ${C.bl}`,borderRadius:"0 10px 10px 0",padding:"16px 20px",fontSize:13.5,color:C.tm,lineHeight:1.9,marginTop:18},
+  tag:c=>({display:"inline-block",padding:"2px 8px",background:`${c}18`,color:c,borderRadius:4,fontSize:11,fontWeight:600,letterSpacing:.5}),
+  exR:{display:"flex",justifyContent:"space-between",alignItems:"flex-start",padding:"12px 0",borderBottom:`1px solid ${C.bd}`,gap:12},
+  chk:{display:"flex",alignItems:"flex-start",gap:10,padding:"8px 0",fontSize:14,color:C.tx},
+  chkB:{flexShrink:0,width:18,height:18,border:`1.5px solid ${C.bd}`,borderRadius:4,marginTop:2},
+  ft:{textAlign:"center",padding:"32px 0",borderTop:`1px solid ${C.bd}`,fontSize:12,color:C.td,marginTop:20},
+  mg:{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:10,marginTop:14},
+  mc:c=>({background:C.sf,border:`1px solid ${C.bd}`,borderRadius:8,padding:"14px 16px",textAlign:"center",borderTop:`3px solid ${c}`}),
+};
+function RG({opts,val,onChange}){
+  return <div style={st.rg}>{opts.map(o=><button key={o.v} style={st.rb(val===o.v)} onClick={()=>onChange(o.v)} type="button">{o.l}</button>)}</div>;
+}
+function S1({d,set}){
+  const toHalf=v=>v.replace(/[\uff10-\uff19]/g,c=>String.fromCharCode(c.charCodeAt(0)-0xFEE0)).replace(/[^0-9.]/g,"");
+  return(
+  <div style={st.sec}>
+    <div style={st.secL}>Step 1 / 3</div>
+    <h2 style={st.h2}>基本情報</h2>
+    <label style={{...st.lbl,color:C.ac}}>性別</label>
+    <RG opts={[{v:"male",l:"男性"},{v:"female",l:"女性"}]} val={d.gender} onChange={v=>set({...d,gender:v})}/>
+    <label style={{...st.lbl,color:C.bl}}>年齢</label>
+    <input style={st.inp} type="text" inputMode="numeric" placeholder="30" value={d.age} onChange={e=>set({...d,age:toHalf(e.target.value)})}/>
+    <label style={{...st.lbl,color:C.gr}}>身長（cm）</label>
+    <input style={st.inp} type="text" inputMode="numeric" placeholder="170" value={d.height} onChange={e=>set({...d,height:toHalf(e.target.value)})}/>
+    <label style={{...st.lbl,color:C.pp}}>体重（kg）</label>
+    <input style={st.inp} type="text" inputMode="numeric" placeholder="70" value={d.weight} onChange={e=>set({...d,weight:toHalf(e.target.value)})}/>
+    <label style={{...st.lbl,color:C.rd}}>体脂肪率（%）<span style={{fontWeight:400,fontSize:11,color:C.td,marginLeft:6}}>\u2014 わかれば入力（任意）</span></label>
+    <input style={st.inp} type="text" inputMode="numeric" placeholder="未入力でもOK" value={d.bf||""} onChange={e=>set({...d,bf:toHalf(e.target.value)})}/>
+  </div>
+)}
+function S2({d,set}){
+  return(
+  <div style={st.sec}>
+    <div style={st.secL}>Step 2 / 3</div>
+    <h2 style={st.h2}>トレーニング環境</h2>
+    <label style={{...st.lbl,color:C.ac}}>トレーニング環境</label>
+    <RG opts={[{v:"gym",l:"ジム"},{v:"home",l:"自宅"}]} val={d.env} onChange={v=>set({...d,env:v})}/>
+    <label style={{...st.lbl,color:C.bl}}>経験レベル</label>
+    <RG opts={[{v:"none",l:"未経験"},{v:"beginner",l:"初心者"},{v:"intermediate",l:"中級者"},{v:"advanced",l:"上級者"}]} val={d.level} onChange={v=>set({...d,level:v})}/>
+    <label style={{...st.lbl,color:C.gr}}>目的</label>
+    <RG opts={[{v:"bulk",l:"筋肉を増やす"},{v:"cut",l:"脂肪を落とす"},{v:"recomp",l:"体重キープで見た目を変える"}]} val={d.goal} onChange={v=>set({...d,goal:v})}/>
+    {d.goal==="recomp"&&<div style={{fontSize:12,color:C.td,marginTop:6,lineHeight:1.7}}>※ 体重を維持しながら、脂肪を筋肉に置き換えます</div>}
+    <label style={{...st.lbl,color:C.pp}}>週のトレーニング可能日数</label>
+    <RG opts={[{v:"2",l:"2日"},{v:"3",l:"3日"},{v:"4",l:"4日"},{v:"5",l:"5日"},{v:"6",l:"6日"}]} val={d.days} onChange={v=>set({...d,days:v})}/>
+  </div>
+)}
+function S3({d,set}){
+  return(
+  <div style={st.sec}>
+    <div style={st.secL}>Step 3 / 3</div>
+    <h2 style={st.h2}>食事の制約</h2>
+    <label style={{...st.lbl,color:C.ac}}>食事の制約（あれば選択）</label>
+    <RG opts={[{v:"none",l:"なし"},{v:"lactose",l:"乳製品NG"},{v:"gluten",l:"グルテンNG"},{v:"vegan",l:"ヴィーガン"},{v:"other",l:"その他"}]} val={d.diet} onChange={v=>set({...d,diet:v})}/>
+    {d.diet==="other"&&<><label style={{...st.lbl,color:C.bl}}>詳細（任意）</label><input style={st.inp} placeholder="例：甲殻類アレルギー" value={d.dietNote||""} onChange={e=>set({...d,dietNote:e.target.value})}/></>}
+  </div>
+)}
+function Sim({w,gender,goal,lv,bf,onBfChange}){
+  const [localBf,setLocalBf]=useState(bf||"");
+  const bmi=w/(1.7*1.7);
+  const male=gender==="male";
+  const estimatedBf=male?Math.max(10,Math.min(40,bmi*1.2+.23*30-16.2)):Math.max(20,Math.min(48,bmi*1.2+.23*30-5.4));
+  const isEstimated=!bf;
+
+  const sim=useMemo(()=>simulate(w,gender,goal,lv,12,bf),[w,gender,goal,lv,bf]);
+  const res=sim.res,belowFloor=sim.belowFloor;
+  const bfFloor=male?10:20;
+  const ms=[0,3,6,9,12],cW=600,cH=200,pL=48,pR=16,pT=16,pB=32,iW=cW-pL-pR,iH=cH-pT-pB;
+  const aw=res.map(r=>r.w),al=res.map(r=>r.lm),af=res.map(r=>r.fm);
+  const mn=Math.floor(Math.min(...aw,...al,...af)-2),mx=Math.ceil(Math.max(...aw,...al,...af)+2),rng=mx-mn||1;
+  const tX=m=>pL+(m/12)*iW, tY=v=>pT+iH-((v-mn)/rng)*iH;
+  const mp=d=>d.map((v,i)=>`${i===0?"M":"L"}${tX(i)},${tY(v)}`).join(" ");
+  const s0=res[0],s12=res[12],gl=goal==="bulk"?"筋肉を増やす":goal==="cut"?"脂肪を落とす":"体重キープで見た目を変える";
+  return(
+    <div>
+      <div style={{...st.card,borderLeft:`3px solid ${C.ac}`,marginBottom:16}}>
+        <div style={st.cardL}>体脂肪率の設定</div>
+        <div style={{fontSize:13,color:C.tm,lineHeight:1.8,marginBottom:12}}>
+          {isEstimated
+            ?<>体脂肪率が未入力のため、身長・体重から<strong style={{color:C.tx}}>約{Math.round(estimatedBf)}%</strong>と推定しています。正確な値がわかれば入力してください。</>
+            :<>現在<strong style={{color:C.tx}}>{bf}%</strong>で計算しています。変更する場合は下で修正してください。</>
+          }
+        </div>
+        <div style={{display:"flex",alignItems:"center",gap:8}}>
+          <label style={{fontSize:13,color:C.ac,fontWeight:700,flexShrink:0}}>体脂肪率</label>
+          <input style={{...st.inp,width:80}} type="text" inputMode="numeric" placeholder={Math.round(estimatedBf)+""} value={localBf} onChange={e=>setLocalBf(e.target.value.replace(/[\uff10-\uff19]/g,c=>String.fromCharCode(c.charCodeAt(0)-0xFEE0)).replace(/[^0-9.]/g,""))}/>
+          <span style={{fontSize:13,color:C.td}}>%</span>
+          <button onClick={()=>{if(localBf)onBfChange(localBf)}} style={{...st.btn(true),padding:"10px 18px",fontSize:13,opacity:localBf?1:.4}}>反映</button>
+        </div>
+      </div>
+      {belowFloor&&goal==="cut"&&<div style={{...st.note,borderLeftColor:C.rd,marginBottom:16}}>
+        <strong style={{color:C.rd}}>到達ラインに達しています</strong><br/><br/>
+        入力された体脂肪率は、健康を維持できる到達ライン（{male?"男性10%":"女性20%"}）以下です。<br/><br/>
+        これ以上の脂肪減少は推奨されないため、<br/>シミュレーションは現状維持で表示しています。<br/><br/>
+        目的を「筋肉を増やす」や「体重キープで見た目を変える」に変更することを検討してください。
+      </div>}
+      <div style={st.card}>
+        <div style={st.cardL}>12ヶ月シミュレーション \u2014 {gl}</div>
+        <div style={{fontSize:12,color:C.tm,marginBottom:16,lineHeight:1.7}}>現在の体重・目的・経験レベルに基づく推定変化。McDonald/Aragonモデル使用。{isEstimated?" （体脂肪率は推定値を使用中）":""}</div>
+        <div style={{overflowX:"auto",marginBottom:16}}>
+          <svg viewBox={`0 0 ${cW} ${cH}`} style={{width:"100%",maxWidth:cW,height:"auto"}}>
+            {[0,.25,.5,.75,1].map(p=>{const y=pT+iH*(1-p); return <g key={p}><line x1={pL} y1={y} x2={cW-pR} y2={y} stroke={C.bd} strokeWidth=".5"/><text x={pL-6} y={y+4} textAnchor="end" fill={C.td} fontSize="10">{(mn+rng*p).toFixed(0)}</text></g>})}
+            {ms.map(m=><text key={m} x={tX(m)} y={cH-4} textAnchor="middle" fill={C.td} fontSize="10">{m===0?"現在":`${m}M`}</text>)}
+            <path d={mp(aw)} fill="none" stroke={C.tx} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d={mp(al)} fill="none" stroke={C.gr} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d={mp(af)} fill="none" stroke={C.rd} strokeWidth="1.5" strokeDasharray="4,3" strokeLinecap="round"/>
+            {ms.map(m=><g key={`d${m}`}><circle cx={tX(m)} cy={tY(res[m].w)} r="3" fill={C.tx}/><circle cx={tX(m)} cy={tY(res[m].lm)} r="3" fill={C.gr}/><circle cx={tX(m)} cy={tY(res[m].fm)} r="2.5" fill={C.rd}/></g>)}
+          </svg>
+        </div>
+        <div style={{display:"flex",gap:18,fontSize:12,color:C.tm,flexWrap:"wrap"}}>
+          <span><span style={{display:"inline-block",width:12,height:2,background:C.tx,marginRight:6,verticalAlign:"middle"}}/>体重</span>
+          <span><span style={{display:"inline-block",width:12,height:2,background:C.gr,marginRight:6,verticalAlign:"middle"}}/>除脂肪体重</span>
+          <span><span style={{display:"inline-block",width:12,height:2,background:C.rd,marginRight:6,verticalAlign:"middle"}}/>体脂肪量</span>
+        </div>
+      </div>
+      <div style={{display:"grid",gridTemplateColumns:"repeat(2,1fr)",gap:10,marginTop:14}}>
+        {[3,6,9,12].map(m=>{const d=res[m],wd=d.w-s0.w,bd=d.bf-s0.bf,ld=d.lm-s0.lm;return(
+          <div key={m} style={st.card}>
+            <div style={{fontSize:11,color:C.ac,fontWeight:700,letterSpacing:1,marginBottom:8}}>{m}ヶ月後</div>
+            <div style={{fontSize:20,fontWeight:900}}>{d.w}<span style={{fontSize:12,fontWeight:400,color:C.tm}}> kg</span></div>
+            <div style={{fontSize:12,color:C.tm,marginTop:6,lineHeight:1.7}}>体脂肪率 {d.bf}%（<span style={{color:bd<=0?C.gr:C.rd}}>{bd>0?"+":""}{bd.toFixed(1)}%</span>）<br/>除脂肪体重 <span style={{color:ld>=0?C.gr:C.rd}}>{ld>0?"+":""}{ld.toFixed(1)}kg</span></div>
+          </div>
+        )})}
+      </div>
+      <div style={{...st.card,marginTop:14,borderLeft:`3px solid ${C.ac}`}}>
+        <div style={st.cardL}>12ヶ月後の変化サマリー</div>
+        <div style={{fontSize:14,lineHeight:1.9}}>体重：{s0.w}kg → {s12.w}kg（{(s12.w-s0.w)>0?"+":""}{(s12.w-s0.w).toFixed(1)}kg）<br/>除脂肪体重：{s0.lm}kg → {s12.lm}kg（<span style={{color:C.gr}}>+{(s12.lm-s0.lm).toFixed(1)}kg</span>）<br/>体脂肪率：{s0.bf}% → {s12.bf}%（<span style={{color:(s12.bf-s0.bf)<=0?C.gr:C.rd}}>{(s12.bf-s0.bf)>0?"+":""}{(s12.bf-s0.bf).toFixed(1)}%</span>）</div>
+      </div>
+      <div style={st.note}><strong style={{color:C.ac}}>この数値はゴールではなく軌道です</strong><br/><br/>大事なのは「この数値にぴったり到達すること」ではなく、<br/>「更新が続いているかどうか」。<br/><br/>2〜3週ごとに体重を量り、<br/>ズレがあれば食事量を調整してください。</div>
+      <div style={{...st.note,marginTop:10,borderLeftColor:C.ad}}>
+        <strong style={{color:C.ac}}>到達ラインについて</strong>
+        <br/><br/>
+        本シミュレーターでは、健康を維持しながら到達できる体脂肪率の目安を設定しています。
+        <br/><br/>
+        <strong style={{color:C.tx}}>男性：約10%</strong>{"\u3000"}／{"\u3000"}<strong style={{color:C.tx}}>女性：約20%</strong>
+        <br/><br/>
+        {!male&&<>女性の体脂肪率20%は、ホルモンバランス・月経周期・骨密度を維持できる範囲で、引き締まった体型に相当します。<br/><br/>これ以下を目指すと、エストロゲンの低下による月経不順や骨密度低下のリスクが上昇します。<br/><br/>一般的な健康目的では、20%前後が最適な到達ラインです。<br/><span style={{fontSize:11,color:C.td}}>（参考：ACSM, Female Athlete Triad Position Stand）</span></>}
+        {male&&<>男性の体脂肪率10%は、腹筋が明確に見える水準です。ホルモンバランスを維持しながら到達できる範囲です。<br/><br/>これ以下はコンテスト時の一時的な水準であり、長期維持は推奨されません。</>}
+      </div>
+    </div>
+  );
+}
+function Res({data,setData}){
+  const[tab,setTab]=useState("pfc");
+  const w=parseFloat(data.weight)||70,h=parseFloat(data.height)||170,a=parseInt(data.age)||30,days=parseInt(data.days)||3;
+  const bmr=calcBMR(data.gender,w,h,a),tdee=calcTDEE(bmr,days),pfc=calcPFC(tdee,w,data.goal),prog=getProg(data.env,data.level,days,data.goal);
+  const tot=pfc.p+pfc.f+pfc.c,pp=Math.round(pfc.p/tot*100),fp=Math.round(pfc.f/tot*100),cp=100-pp-fp;
+  const gl=data.goal==="bulk"?"筋肉を増やす":data.goal==="cut"?"脂肪を落とす":"体重キープで見た目を変える";
+  const rn=data.diet==="lactose"?"乳製品を避け、タンパク質は肉・魚・卵・大豆から確保。":data.diet==="gluten"?"小麦を避け、炭水化物は白米・芋類・GFオートミールから確保。":data.diet==="vegan"?"大豆・レンズ豆・ヘンプシードからタンパク質を確保。B12・鉄・亜鉛の補給を特に意識。":null;
+  const chickenG=Math.round((pfc.p*.5)/.23),salmonPcs=Math.max(1,Math.round((pfc.p*.2)/18)),eggs=Math.max(1,Math.round((pfc.p*.1)/7)),riceGou=Math.max(1.5,Math.round(pfc.c*.7/55*10)/10);
+  const foods=[
+    {nm:"白米",amt:`${riceGou}合`,dt:"主要な炭水化物源。トレーニング日は多め、休息日は控えめに"},
+    {nm:"鶏胸肉（皮付き）",amt:`約${chickenG}g`,dt:"最もコスパの良い高タンパク食材"},
+    {nm:"鮭",amt:`${salmonPcs}切れ`,dt:"良質なオメガ3とタンパク質"},
+    {nm:"卵",amt:`${eggs}個`,dt:"完全栄養食品。ビタミンD・B群の供給源"},
+    {nm:"バナナ",amt:"1〜2本",dt:"トレーニング前後の即効エネルギー"},
+    {nm:"納豆＋キムチ",amt:"各1パック",dt:"発酵食品。腸内環境の改善"},
+    {nm:"味噌汁（あおさ入り）",amt:"1〜2杯",dt:"ミネラル補給。マグネシウム・鉄"},
+  ];
+  return(
+    <div style={st.sec}>
+      <div style={st.eq}><div style={st.eqT}>T \u00b7 A \u21d2 Pmax</div><div style={st.eqD}>あなた専用のアロスタシス設計 \u2014 目的：{gl} / {data.env==="gym"?"ジム":"自宅"} / 週{days}日</div></div>
+      <div style={{fontSize:12,color:C.tm,textAlign:"center",marginBottom:8}}>\u25bc タップして切り替え</div>
+      <div style={st.tabR}>{[{k:"pfc",l:"栄養",icon:"\ud83c\udf7d"},{k:"training",l:"筋トレ",icon:"\ud83d\udcaa"},{k:"sleep",l:"睡眠",icon:"\ud83c\udf19"},{k:"priming",l:"朝の準備",icon:"\u2600\ufe0f"},{k:"sim",l:"予測",icon:"\ud83d\udcca"}].map(t=><button key={t.k} style={st.tab(tab===t.k)} onClick={()=>setTab(t.k)}><div style={{fontSize:18,marginBottom:2}}>{t.icon}</div>{t.l}</button>)}</div>
+
+      {tab==="pfc"&&<div>
+        <div style={st.card}>
+          <div style={st.cardL}>1日に食べる量の目安</div>
+          <div style={{fontSize:12,color:C.tm,marginBottom:10,lineHeight:1.7}}>あなたの身体・活動量・目的から計算した、<strong style={{color:C.tx}}>1日に食事から摂るべき合計カロリー</strong>です。基礎代謝＋活動消費に、目的に応じた調整を加えた数値です。</div>
+          <div><span style={{fontSize:32,fontWeight:900,color:C.ac,letterSpacing:1}}>{pfc.cal}</span><span style={{fontSize:14,fontWeight:400,color:C.tm,marginLeft:4}}>kcal / 日</span></div>
+          <div style={{fontSize:12,color:C.td,marginTop:6,marginBottom:12}}>{data.goal==="bulk"?"筋肉を増やすため、消費カロリーより少し多め（+300kcal）":data.goal==="cut"?"脂肪を落とすため、消費カロリーより少し少なめ（\u2212500kcal）":"体組成を改善するため、消費カロリーとほぼ同量"}</div>
+          <div style={{display:"flex",height:10,borderRadius:5,overflow:"hidden",marginTop:12,marginBottom:8}}>
+            <div style={{width:`${pp}%`,background:C.bl,transition:"width .4s"}}/>
+            <div style={{width:`${fp}%`,background:C.ac,transition:"width .4s"}}/>
+            <div style={{width:`${cp}%`,background:C.gr,transition:"width .4s"}}/>
+          </div>
+          <div style={{display:"flex",gap:16,fontSize:12,color:C.tm,flexWrap:"wrap"}}>
+            <span><span style={{display:"inline-block",width:8,height:8,borderRadius:"50%",background:C.bl,marginRight:4}}/>P {pp}%</span>
+            <span><span style={{display:"inline-block",width:8,height:8,borderRadius:"50%",background:C.ac,marginRight:4}}/>F {fp}%</span>
+            <span><span style={{display:"inline-block",width:8,height:8,borderRadius:"50%",background:C.gr,marginRight:4}}/>C {cp}%</span>
+          </div>
+        </div>
+        <div style={st.mg}>
+          <div style={st.mc(C.bl)}><div style={{fontSize:22,fontWeight:900}}>{pfc.p}g</div><div style={{fontSize:11,color:C.tm,marginTop:2,letterSpacing:1}}>タンパク質</div></div>
+          <div style={st.mc(C.ac)}><div style={{fontSize:22,fontWeight:900}}>{pfc.f}g</div><div style={{fontSize:11,color:C.tm,marginTop:2,letterSpacing:1}}>脂質</div></div>
+          <div style={st.mc(C.gr)}><div style={{fontSize:22,fontWeight:900}}>{pfc.c}g</div><div style={{fontSize:11,color:C.tm,marginTop:2,letterSpacing:1}}>炭水化物</div></div>
+        </div>
+        {rn&&<div style={{...st.note,marginTop:16}}><strong style={{color:C.ac}}>食事制約への対応：</strong><br/>{rn}</div>}
+        <div style={{...st.card,marginTop:16}}>
+          <div style={st.cardL}>1日の食材目安（参考例）</div>
+          <div style={{fontSize:12,color:C.td,marginBottom:12}}>目標PFCを満たすための食材量の目安。体重・目的に応じて増減してください。</div>
+          {foods.map((f,i)=><div key={i} style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",padding:"10px 0",borderBottom:i<foods.length-1?`1px solid ${C.bd}`:"none",gap:12}}>
+            <div style={{flex:1}}><div style={{fontWeight:500,fontSize:14}}>{f.nm}</div><div style={{fontSize:12,color:C.td}}>{f.dt}</div></div>
+            <div style={{flexShrink:0}}><span style={{...st.tag(C.gr),fontSize:12}}>{f.amt}</span></div>
+          </div>)}
+        </div>
+        <div style={{...st.card,marginTop:16}}>
+          <div style={st.cardL}>サプリメント（戦略的補完）</div>
+          <div style={{fontSize:12,color:C.td,marginBottom:12}}>食事が土台。そのうえで、現代の食事では不足しやすい栄養素を補う。</div>
+          {[
+            {nm:"ビタミンD3",amt:"2,000〜4,000 IU/日",dt:"免疫・骨代謝・テストステロン合成に関与。日光を十分に浴びない人は不足しやすい。血中25(OH)D濃度40〜60ng/mLが目安"},
+            {nm:"マグネシウム（ビスグリシネート）",amt:"200〜400mg/日",dt:"筋収縮・神経伝達・睡眠の質に関与。日本人の多くが所要量未満。吸収率の高いビスグリシネート形を推奨。就寝前の摂取で睡眠改善の報告あり"},
+            {nm:"オメガ3脂肪酸（EPA/DHA）",amt:"1,000〜2,000mg/日",dt:"抗炎症作用。細胞膜の流動性維持。魚を毎日食べない場合に補完。EPA+DHAの合計量で判断する"},
+            {nm:"亜鉛",amt:"15〜30mg/日",dt:"免疫・タンパク質合成・ホルモン代謝に関与。トレーニングで消耗しやすい。銅とのバランスに注意（亜鉛15mg以上なら銅1〜2mgの併用を推奨）"},
+          ].map((s,i)=><div key={i} style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",padding:"10px 0",borderBottom:i<3?`1px solid ${C.bd}`:"none",gap:12}}>
+            <div style={{flex:1}}><div style={{fontWeight:500,fontSize:14}}>{s.nm}</div><div style={{fontSize:12,color:C.td,lineHeight:1.7}}>{s.dt}</div></div>
+            <div style={{flexShrink:0}}><span style={{...st.tag(C.bl),fontSize:11}}>{s.amt}</span></div>
+          </div>)}
+          <div style={{fontSize:12,color:C.td,marginTop:12,lineHeight:1.7,borderTop:`1px solid ${C.bd}`,paddingTop:10}}>※ サプリメントは食事の代替ではなく補完。PFCの土台が整っていることが前提です。持病がある方・服薬中の方は医師にご相談ください。</div>
+        </div>
+        <div style={{...st.note,marginTop:12,borderLeftColor:C.ac}}><strong style={{color:C.ac}}>なぜバランスが大事？</strong><br/><br/>タンパク質・脂質・炭水化物は掛け算の関係です。<br/><br/>どれか一つでも極端に足りないと、<br/>他がどんなに完璧でも身体は回復できません。<br/><br/>3つとも揃えることがスタートライン。</div>
+      </div>}
+
+      {tab==="training"&&<div>
+        {prog.map((d,i)=><div key={i} style={{...st.card,marginBottom:14}}>
+          <div style={st.cardL}>{d.day}</div>
+          {d.ex.map((e,j)=>{const p=e.s.split("\u00d7");return(
+            <div key={j} style={st.exR}>
+              <div style={{flex:1}}><div style={{fontWeight:500,fontSize:14,marginBottom:2}}>{e.n}</div><div style={{fontSize:12,color:C.tm}}>{e.nt}</div></div>
+              <div style={{textAlign:"right",flexShrink:0}}>
+                <div style={{display:"flex",gap:6,justifyContent:"flex-end",alignItems:"center"}}>
+                  <span style={{...st.tag(C.ac),fontSize:12}}>{p[0]}セット</span>
+                  <span style={{color:C.td,fontSize:11}}>\u00d7</span>
+                  <span style={{...st.tag(C.bl),fontSize:12}}>{p[1]}回</span>
+                </div>
+                <div style={{fontSize:11,color:C.td,marginTop:4}}>{e.t}</div>
+              </div>
+            </div>
+          )})}
+        </div>)}
+        <div style={st.note}><strong style={{color:C.ac}}>成長のカギ</strong><br/><br/>毎回のトレーニングで、前回より少しだけキツくする。<br/>（重量・回数・セットのどれか）<br/><br/>同じことを繰り返すだけでは、<br/>身体は「もう十分」と判断して成長を止めます。</div>
+      </div>}
+
+      {tab==="sleep"&&<div>
+        {SLEEP.map((c,i)=><div key={i} style={{...st.card,marginBottom:12}}>
+          <div style={st.cardL}>{c.cat}</div>
+          {c.items.map((item,j)=><div key={j} style={st.chk}><div style={st.chkB}/><span>{item}</span></div>)}
+        </div>)}
+        <div style={st.note}><strong style={{color:C.ac}}>睡眠を削ると全部崩れる</strong><br/><br/>運動と栄養がどんなに完璧でも、<br/>睡眠がゼロなら回復もゼロ。<br/><br/>運動 \u00d7 栄養 \u00d7 睡眠は掛け算。<br/>一つが0なら、全体が0になります。</div>
+      </div>}
+
+      {tab==="priming"&&<div>
+        {PRIM.map((p,i)=><div key={i} style={{...st.card,marginBottom:12}}>
+          <div style={st.cardL}>{p.ph}</div>
+          <div style={{fontSize:12,color:C.td,marginBottom:10}}>目的：{p.pur}</div>
+          {p.st.map((s,j)=><div key={j} style={{...st.chk,borderBottom:j<p.st.length-1?`1px solid ${C.bd}`:"none",paddingBottom:8}}>
+            <span style={{color:C.ac,fontWeight:700,fontSize:13,flexShrink:0,width:20}}>{j+1}</span>
+            <span style={{fontSize:14}}>{s}</span>
+          </div>)}
+        </div>)}
+        <div style={st.note}><strong style={{color:C.ac}}>「なぜ」が最も大事</strong><br/><br/>呼吸を整え、身体を動かし、<br/>最後に「今日、自分は何のために動くのか？」を確認する。<br/><br/>この「なぜ」がないと、<br/>ただの朝のルーティンで終わります。</div>
+      </div>}
+
+      {tab==="sim"&&<Sim w={w} gender={data.gender} goal={data.goal} lv={data.level} bf={data.bf} onBfChange={v=>setData({...data,bf:v})}/>}
+
+      <div style={{marginTop:28,textAlign:"center",padding:"32px 0"}}>
+        <div style={{marginBottom:24,padding:"20px 24px",background:C.sf,border:`1px solid ${C.bd}`,borderRadius:10}}>
+          <div style={{fontSize:14,fontWeight:700,color:C.tx,marginBottom:8}}>この方程式の全体像を理解する</div>
+          <div style={{fontSize:12,color:C.tm,marginBottom:12,lineHeight:1.7}}>なぜ運動\u00d7栄養\u00d7睡眠が掛け算なのか。なぜ天命が必要なのか。<br/>身体論の7つの構造原理を、わかりやすく解説しています。</div>
+          <a href="/body-manual.html" style={{display:"inline-block",padding:"10px 24px",border:`1px solid ${C.ac}`,color:C.ac,borderRadius:8,fontSize:13,fontWeight:700,textDecoration:"none",letterSpacing:.5}}>天命ボディマニュアルを読む \u2192</a>
+        </div>
+        <div style={{fontSize:15,fontWeight:700,lineHeight:2}}>天命ボディを<br/>最短最速で手に入れたい方は<br/><span style={{color:C.ac}}>「天命の言語化セッション\u2122」</span>へ！</div>
+        <a href="/trial.html" style={{display:"inline-block",marginTop:16,padding:"14px 32px",background:C.ac,color:C.bg,borderRadius:8,fontSize:14,fontWeight:700,textDecoration:"none",letterSpacing:.5}}>無料トライアルはこちら \u2192</a>
+      </div>
+    </div>
+  );
+}
+function App(){
+  const[step,setStep]=useState(0),[src,setSrc]=useState(false);
+  const[data,setData]=useState({gender:"male",age:"",height:"",weight:"",bf:"",env:"gym",level:"beginner",goal:"recomp",days:"3",diet:"none",dietNote:""});
+  const ok=step===0?data.age&&data.height&&data.weight:step===1?data.env&&data.level&&data.goal&&data.days:true;
+  return(
+    <div style={st.app}><div style={st.ctn}>
+      <div style={st.hdr}><div style={st.hdrL}>Tenmei Body Program</div><h1 style={st.h1}>天命ボディプログラム</h1><p style={st.hdrS}>T \u00b7 A \u21d2 Pmax \u2014 天命を全うするための身体の方程式</p></div>
+      <div style={st.dots}>{["a","b","c","d"].map((s,i)=><div key={s} style={st.dot(i===step)}/>)}</div>
+      {step===0&&<S1 d={data} set={setData}/>}
+      {step===1&&<S2 d={data} set={setData}/>}
+      {step===2&&<S3 d={data} set={setData}/>}
+      {step===3&&<Res data={data} setData={setData}/>}
+      {step<3&&<div style={st.btnR}>{step>0&&<button style={st.btn(false)} onClick={()=>setStep(step-1)}>戻る</button>}<button style={{...st.btn(true),opacity:ok?1:.4,pointerEvents:ok?"auto":"none"}} onClick={()=>setStep(step+1)}>{step===2?"結果を見る":"次へ"}</button></div>}
+      {step===3&&<div style={st.btnR}><button style={st.btn(false)} onClick={()=>setStep(0)}>最初からやり直す</button></div>}
+      <div style={st.ft}>Based on「身体論 \u2014 天命を全うするための身体の方程式」<br/>\u00a9 実存科学研究所<div style={{marginTop:16}}><button onClick={()=>setSrc(!src)} style={{background:"none",border:`1px solid ${C.bd}`,borderRadius:6,padding:"8px 18px",color:C.tm,fontSize:12,fontFamily:"inherit",cursor:"pointer",letterSpacing:.5}}>{src?"閉じる":"算出根拠・参考文献 \u2192"}</button></div></div>
+      {src&&<div style={{paddingBottom:48}}><div style={{borderTop:`1px solid ${C.bd}`,paddingTop:32}}>
+        <div style={st.secL}>Evidence Base</div>
+        <h2 style={{...st.h2,marginBottom:24}}>算出根拠・参考文献</h2>
+        {EVIDENCE.map((e,i)=><div key={i} style={{...st.card,marginBottom:14}}>
+          <div style={st.cardL}>{e.title}</div>
+          <div style={{fontSize:13,color:C.tm,lineHeight:1.8,marginBottom:8}}>{e.body}</div>
+          <div style={{fontSize:11,color:C.td,fontStyle:"italic"}}>{e.ref}</div>
+        </div>)}
+        <div style={{...st.card,borderLeft:`3px solid ${C.ac}`}}>
+          <div style={st.cardL}>理論的基盤</div>
+          <div style={{fontSize:13,color:C.tm,lineHeight:1.8}}>本プログラムは「身体論 \u2014 天命を全うするための身体の方程式」（実存科学研究所）に基づく。T\u00b7A\u21d2Pmax、積のモデル、三層アロスタシスモデル、7つの構造原理が設計の骨格。15学術領域・38名の世界的権威の研究知見を参照枠とする。</div>
+          <div style={{fontSize:11,color:C.td,marginTop:8}}>原典：<a href="/body.html" style={{color:C.ac}}>jitsuzon-kagaku-lab.yanaihiroki.com/body.html</a></div>
+        </div>
+        <div style={{...st.note,borderLeftColor:C.td,marginTop:20}}><strong style={{color:C.tm}}>注記：</strong> 本プログラムの数値はエビデンスに基づく推定値であり個体差があります。開始値として使用し、2〜3週間の体重変動を観察して調整を推奨します。既往歴のある方は医師にご相談ください。</div>
+      </div></div>}
+    </div></div>
+  );
+}
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
+</script>
+</body>
+</html>
