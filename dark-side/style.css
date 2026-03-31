@@ -1269,6 +1269,92 @@ body .progress-bar-wrap + .wrap {
   margin: 2rem 0;
 }
 
+/* ----- Punchline ----- */
+.ds-punchline {
+  text-align: center;
+  padding: 2rem 1rem;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.ds-punchline__text {
+  font-family: "Shippori Mincho", "Noto Serif JP", serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  margin: 0;
+  background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gold-shimmer 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 16px rgba(192,168,120,0.2)) drop-shadow(0 0 40px rgba(192,168,120,0.08));
+}
+
+@keyframes gold-shimmer {
+  0%, 100% { background-position: 100% 0; }
+  50% { background-position: -100% 0; }
+}
+
+/* ----- Narrative Card ----- */
+.ds-narrative {
+  padding: 2.5rem 2rem;
+  margin: 0 0 2rem;
+  border: 1px solid var(--border);
+  background: rgba(15, 12, 25, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  position: relative;
+  border-radius: 2px;
+}
+
+.ds-narrative::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.5), transparent);
+}
+
+.ds-narrative__body {
+  color: var(--text);
+  font-size: 0.92rem;
+  line-height: 2.2;
+  text-align: left;
+}
+
+.ds-narrative__body strong {
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.ds-narrative__body .uline {
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  color: var(--text-bright);
+}
+
+/* ----- Bridge CTA ----- */
+.ds-bridge {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin: 0 0 0.5rem;
+}
+
+.ds-bridge__text {
+  font-family: "Shippori Mincho", "Noto Serif JP", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gold-dim);
+  letter-spacing: 0.06em;
+  margin: 0;
+  line-height: 1.8;
+}
+
 /* ----- Enhanced CTA Box ----- */
 .ctaBox-enhanced {
   margin-top: 2.5rem;
@@ -1350,6 +1436,8 @@ body .progress-bar-wrap + .wrap {
   .rtype-enhanced__name { font-size: 1.3rem; }
   .ctaBox-enhanced { padding: 2rem 1.5rem; }
   .ctaBox-enhanced__lead { font-size: 1.15rem; }
+  .ds-punchline__text { font-size: 1.1rem; }
+  .ds-narrative { padding: 2rem 1.5rem; }
 }
 
 @media (max-width: 480px) {
@@ -1365,6 +1453,10 @@ body .progress-bar-wrap + .wrap {
   .ctaBox-enhanced__lead { font-size: 1.05rem; }
   .btn-cta { width: 100%; text-align: center; padding: 1rem 2rem; }
   .btn-cta-secondary { width: 100%; text-align: center; padding: 0.85rem 2rem; }
+  .ds-punchline { padding: 1.5rem 0.5rem; }
+  .ds-punchline__text { font-size: 1rem; }
+  .ds-narrative { padding: 1.5rem 1.2rem; }
+  .ds-narrative__body { font-size: 0.88rem; }
 }
 
 /* ===========================
