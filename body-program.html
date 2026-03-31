@@ -93,28 +93,28 @@ function getProg(env,lv,days,goal){
     {n:"カーフレイズ（段差使用）",t:"ふくらはぎ",nt:"階段の段差でフルレンジ",s:si},
   ];
   if(days<=2) return[
-    {day:"Day A \u2014 全身（押す系＋脚）",ex:[chest[0],shoulders[0],legs[0],chest[2]]},
-    {day:"Day B \u2014 全身（引く系＋腕）",ex:[back[0],back[1],arms[0],arms.length>2?arms[2]:arms[1]]},
+    {day:"Day A ── 全身（押す系＋脚）",ex:[chest[0],shoulders[0],legs[0],chest[2]]},
+    {day:"Day B ── 全身（引く系＋腕）",ex:[back[0],back[1],arms[0],arms.length>2?arms[2]:arms[1]]},
   ];
   if(days===3) return[
-    {day:"Day 1 \u2014 胸＋肩",ex:[...chest,shoulders[1]]},
-    {day:"Day 2 \u2014 腕＋脚",ex:[...arms.slice(0,2),legs[0],legs[legs.length-1]]},
-    {day:"Day 3 \u2014 背中＋肩",ex:[...back,shoulders[2]]},
+    {day:"Day 1 ── 胸＋肩",ex:[...chest,shoulders[1]]},
+    {day:"Day 2 ── 腕＋脚",ex:[...arms.slice(0,2),legs[0],legs[legs.length-1]]},
+    {day:"Day 3 ── 背中＋肩",ex:[...back,shoulders[2]]},
   ];
   if(days===4) return[
-    {day:"Day 1 \u2014 胸",ex:[...chest,shoulders[1]]},
-    {day:"Day 2 \u2014 腕",ex:arms},
-    {day:"Day 3 \u2014 背中",ex:[...back,shoulders[2]]},
-    {day:"Day 4 \u2014 脚",ex:legs},
+    {day:"Day 1 ── 胸",ex:[...chest,shoulders[1]]},
+    {day:"Day 2 ── 腕",ex:arms},
+    {day:"Day 3 ── 背中",ex:[...back,shoulders[2]]},
+    {day:"Day 4 ── 脚",ex:legs},
   ];
   const full=[
-    {day:"Day 1 \u2014 胸",ex:chest},
-    {day:"Day 2 \u2014 腕",ex:arms},
-    {day:"Day 3 \u2014 背中",ex:back},
-    {day:"Day 4 \u2014 肩",ex:shoulders},
-    {day:"Day 5 \u2014 脚",ex:legs},
+    {day:"Day 1 ── 胸",ex:chest},
+    {day:"Day 2 ── 腕",ex:arms},
+    {day:"Day 3 ── 背中",ex:back},
+    {day:"Day 4 ── 肩",ex:shoulders},
+    {day:"Day 5 ── 脚",ex:legs},
   ];
-  if(days>=6) full.push({day:"Day 6 \u2014 弱点部位",ex:[
+  if(days>=6) full.push({day:"Day 6 ── 弱点部位",ex:[
     {n:"弱点部位のコンパウンド種目",t:"個人による",nt:"最も成長が遅い部位を優先。胸・背中・脚のどれか",s:sc},
     {n:"弱点部位のアイソレーション種目",t:"個人による",nt:"制御とストレッチを重視。追い込みすぎない",s:si},
     {n:"弱点部位の補助種目",t:"個人による",nt:"別角度・別刺激で同じ筋群を狙う",s:si},
@@ -128,8 +128,8 @@ const SLEEP=[
 ];
 const PRIM=[
   {ph:"呼吸（5分）",pur:"自律神経の起動",st:["鼻から4秒かけて吸う","7秒間息を止める","口から8秒かけて吐く","5〜8サイクル繰り返す","※ 4-7-8呼吸法。副交感神経を活性化しバランスを整える"]},
-  {ph:"身体 \u2014 Mobility（15分）",pur:"関節・筋膜の可動性確保",st:["CARs：主要関節を全可動域で円を描くように回す","対象：首→肩→肘→手首→胸椎→股関節→膝→足首","各関節3〜5回、ゆっくり制御を保って","※ 動きながら「この関節はどこまで動くか」を感じ取る。痛みがあれば手前で止める"]},
-  {ph:"状態 \u2014 State（5〜10分）",pur:"天命との接続",st:["自分の天命を、自分の言葉で語る。声に出して語ることが重要。唱えるのではなく、語る","天命が言語化されていない場合、ここが空白になる。空白のままでは方向が定まらない","天命を語ったうえで「今日、その天命のために何をするか」を1つ決める","※ 最も重要な層。呼吸と身体が整った状態で行うからこそ、天命が身体に浸透する"]},
+  {ph:"身体 ── Mobility（15分）",pur:"関節・筋膜の可動性確保",st:["CARs：主要関節を全可動域で円を描くように回す","対象：首→肩→肘→手首→胸椎→股関節→膝→足首","各関節3〜5回、ゆっくり制御を保って","※ 動きながら「この関節はどこまで動くか」を感じ取る。痛みがあれば手前で止める"]},
+  {ph:"状態 ── State（5〜10分）",pur:"天命との接続",st:["自分の天命を、自分の言葉で語る。声に出して語ることが重要。唱えるのではなく、語る","天命が言語化されていない場合、ここが空白になる。空白のままでは方向が定まらない","天命を語ったうえで「今日、その天命のために何をするか」を1つ決める","※ 最も重要な層。呼吸と身体が整った状態で行うからこそ、天命が身体に浸透する"]},
 ];
 const EVIDENCE=[
   {title:"基礎代謝量（BMR）",body:"Mifflin-St Jeor式（1990年）。ADA（2005年）が複数式を比較しMifflin-St Jeorが最も正確と結論。",ref:"Mifflin MD et al. Am J Clin Nutr. 1990;51(2):241-247 / Frankenfield D et al. J Am Diet Assoc. 2005;105(5):775-789"},
@@ -240,7 +240,7 @@ function S1({d,set}){
     <input style={st.inp} type="text" inputMode="numeric" placeholder="170" value={d.height} onChange={e=>set({...d,height:toHalf(e.target.value)})}/>
     <label style={{...st.lbl,color:C.pp}}>体重（kg）</label>
     <input style={st.inp} type="text" inputMode="numeric" placeholder="70" value={d.weight} onChange={e=>set({...d,weight:toHalf(e.target.value)})}/>
-    <label style={{...st.lbl,color:C.rd}}>体脂肪率（%）<span style={{fontWeight:400,fontSize:11,color:C.td,marginLeft:6}}>\u2014 わかれば入力（任意）</span></label>
+    <label style={{...st.lbl,color:C.rd}}>体脂肪率（%）<span style={{fontWeight:400,fontSize:11,color:C.td,marginLeft:6}}>── わかれば入力（任意）</span></label>
     <input style={st.inp} type="text" inputMode="numeric" placeholder="未入力でもOK" value={d.bf||""} onChange={e=>set({...d,bf:toHalf(e.target.value)})}/>
   </div>
 )}
@@ -310,7 +310,7 @@ function Sim({w,gender,goal,lv,bf,onBfChange}){
         目的を「筋肉を増やす」や「体重キープで見た目を変える」に変更することを検討してください。
       </div>}
       <div style={st.card}>
-        <div style={st.cardL}>12ヶ月シミュレーション \u2014 {gl}</div>
+        <div style={st.cardL}>12ヶ月シミュレーション ── {gl}</div>
         <div style={{fontSize:12,color:C.tm,marginBottom:16,lineHeight:1.7}}>現在の体重・目的・経験レベルに基づく推定変化。McDonald/Aragonモデル使用。{isEstimated?" （体脂肪率は推定値を使用中）":""}</div>
         <div style={{overflowX:"auto",marginBottom:16}}>
           <svg viewBox={`0 0 ${cW} ${cH}`} style={{width:"100%",maxWidth:cW,height:"auto"}}>
@@ -374,7 +374,7 @@ function Res({data,setData}){
   ];
   return(
     <div style={st.sec}>
-      <div style={st.eq}><div style={st.eqT}>T \u00b7 A \u21d2 Pmax</div><div style={st.eqD}>あなた専用のアロスタシス設計 \u2014 目的：{gl} / {data.env==="gym"?"ジム":"自宅"} / 週{days}日</div></div>
+      <div style={st.eq}><div style={st.eqT}>T · A ⇒ Pmax</div><div style={st.eqD}>あなた専用のアロスタシス設計 ── 目的：{gl} / {data.env==="gym"?"ジム":"自宅"} / 週{days}日</div></div>
       <div style={{fontSize:12,color:C.tm,textAlign:"center",marginBottom:8}}>\u25bc タップして切り替え</div>
       <div style={st.tabR}>{[{k:"pfc",l:"栄養",icon:"\ud83c\udf7d"},{k:"training",l:"筋トレ",icon:"\ud83d\udcaa"},{k:"sleep",l:"睡眠",icon:"\ud83c\udf19"},{k:"priming",l:"朝の準備",icon:"\u2600\ufe0f"},{k:"sim",l:"予測",icon:"\ud83d\udcca"}].map(t=><button key={t.k} style={st.tab(tab===t.k)} onClick={()=>setTab(t.k)}><div style={{fontSize:18,marginBottom:2}}>{t.icon}</div>{t.l}</button>)}</div>
 
@@ -472,10 +472,10 @@ function Res({data,setData}){
         <div style={{marginBottom:24,padding:"20px 24px",background:C.sf,border:`1px solid ${C.bd}`,borderRadius:10}}>
           <div style={{fontSize:14,fontWeight:700,color:C.tx,marginBottom:8}}>この方程式の全体像を理解する</div>
           <div style={{fontSize:12,color:C.tm,marginBottom:12,lineHeight:1.7}}>なぜ運動\u00d7栄養\u00d7睡眠が掛け算なのか。なぜ天命が必要なのか。<br/>身体論の7つの構造原理を、わかりやすく解説しています。</div>
-          <a href="/body-manual.html" style={{display:"inline-block",padding:"10px 24px",border:`1px solid ${C.ac}`,color:C.ac,borderRadius:8,fontSize:13,fontWeight:700,textDecoration:"none",letterSpacing:.5}}>天命ボディマニュアルを読む \u2192</a>
+          <a href="/body-manual.html" style={{display:"inline-block",padding:"10px 24px",border:`1px solid ${C.ac}`,color:C.ac,borderRadius:8,fontSize:13,fontWeight:700,textDecoration:"none",letterSpacing:.5}}>天命ボディマニュアルを読む →</a>
         </div>
         <div style={{fontSize:15,fontWeight:700,lineHeight:2}}>天命ボディを<br/>最短最速で手に入れたい方は<br/><span style={{color:C.ac}}>「天命の言語化セッション\u2122」</span>へ！</div>
-        <a href="/trial.html" style={{display:"inline-block",marginTop:16,padding:"14px 32px",background:C.ac,color:C.bg,borderRadius:8,fontSize:14,fontWeight:700,textDecoration:"none",letterSpacing:.5}}>無料トライアルはこちら \u2192</a>
+        <a href="/trial.html" style={{display:"inline-block",marginTop:16,padding:"14px 32px",background:C.ac,color:C.bg,borderRadius:8,fontSize:14,fontWeight:700,textDecoration:"none",letterSpacing:.5}}>無料トライアルはこちら →</a>
       </div>
     </div>
   );
@@ -486,7 +486,7 @@ function App(){
   const ok=step===0?data.age&&data.height&&data.weight:step===1?data.env&&data.level&&data.goal&&data.days:true;
   return(
     <div style={st.app}><div style={st.ctn}>
-      <div style={st.hdr}><div style={st.hdrL}>Tenmei Body Program</div><h1 style={st.h1}>天命ボディプログラム</h1><p style={st.hdrS}>T \u00b7 A \u21d2 Pmax \u2014 天命を全うするための身体の方程式</p></div>
+      <div style={st.hdr}><div style={st.hdrL}>Tenmei Body Program</div><h1 style={st.h1}>天命ボディプログラム</h1><p style={st.hdrS}>T · A ⇒ Pmax ── 天命を全うするための身体の方程式</p></div>
       <div style={st.dots}>{["a","b","c","d"].map((s,i)=><div key={s} style={st.dot(i===step)}/>)}</div>
       {step===0&&<S1 d={data} set={setData}/>}
       {step===1&&<S2 d={data} set={setData}/>}
@@ -494,7 +494,7 @@ function App(){
       {step===3&&<Res data={data} setData={setData}/>}
       {step<3&&<div style={st.btnR}>{step>0&&<button style={st.btn(false)} onClick={()=>setStep(step-1)}>戻る</button>}<button style={{...st.btn(true),opacity:ok?1:.4,pointerEvents:ok?"auto":"none"}} onClick={()=>setStep(step+1)}>{step===2?"結果を見る":"次へ"}</button></div>}
       {step===3&&<div style={st.btnR}><button style={st.btn(false)} onClick={()=>setStep(0)}>最初からやり直す</button></div>}
-      <div style={st.ft}>Based on「身体論 \u2014 天命を全うするための身体の方程式」<br/>\u00a9 実存科学研究所<div style={{marginTop:16}}><button onClick={()=>setSrc(!src)} style={{background:"none",border:`1px solid ${C.bd}`,borderRadius:6,padding:"8px 18px",color:C.tm,fontSize:12,fontFamily:"inherit",cursor:"pointer",letterSpacing:.5}}>{src?"閉じる":"算出根拠・参考文献 \u2192"}</button></div></div>
+      <div style={st.ft}>Based on「身体論 ── 天命を全うするための身体の方程式」<br/>© 実存科学研究所<div style={{marginTop:16}}><button onClick={()=>setSrc(!src)} style={{background:"none",border:`1px solid ${C.bd}`,borderRadius:6,padding:"8px 18px",color:C.tm,fontSize:12,fontFamily:"inherit",cursor:"pointer",letterSpacing:.5}}>{src?"閉じる":"算出根拠・参考文献 →"}</button></div></div>
       {src&&<div style={{paddingBottom:48}}><div style={{borderTop:`1px solid ${C.bd}`,paddingTop:32}}>
         <div style={st.secL}>Evidence Base</div>
         <h2 style={{...st.h2,marginBottom:24}}>算出根拠・参考文献</h2>
@@ -505,7 +505,7 @@ function App(){
         </div>)}
         <div style={{...st.card,borderLeft:`3px solid ${C.ac}`}}>
           <div style={st.cardL}>理論的基盤</div>
-          <div style={{fontSize:13,color:C.tm,lineHeight:1.8}}>本プログラムは「身体論 \u2014 天命を全うするための身体の方程式」（実存科学研究所）に基づく。T\u00b7A\u21d2Pmax、積のモデル、三層アロスタシスモデル、7つの構造原理が設計の骨格。15学術領域・38名の世界的権威の研究知見を参照枠とする。</div>
+          <div style={{fontSize:13,color:C.tm,lineHeight:1.8}}>本プログラムは「身体論 ── 天命を全うするための身体の方程式」（実存科学研究所）に基づく。T·A⇒Pmax、積のモデル、三層アロスタシスモデル、7つの構造原理が設計の骨格。15学術領域・38名の世界的権威の研究知見を参照枠とする。</div>
           <div style={{fontSize:11,color:C.td,marginTop:8}}>原典：<a href="/body.html" style={{color:C.ac}}>jitsuzon-kagaku-lab.yanaihiroki.com/body.html</a></div>
         </div>
         <div style={{...st.note,borderLeftColor:C.td,marginTop:20}}><strong style={{color:C.tm}}>注記：</strong> 本プログラムの数値はエビデンスに基づく推定値であり個体差があります。開始値として使用し、2〜3週間の体重変動を観察して調整を推奨します。既往歴のある方は医師にご相談ください。</div>
