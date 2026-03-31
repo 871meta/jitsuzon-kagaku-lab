@@ -582,17 +582,17 @@ blockquote strong {
 
 .results-header {
   text-align: center;
-  padding: 6rem 0 3rem;
+  padding: 5rem 0 2.5rem;
   position: relative;
 }
 
 .results-header::after {
   content: "";
   display: block;
-  width: 32px;
-  height: 1px;
-  background: var(--gold);
-  margin: 2rem auto 0;
+  width: 48px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 1.5rem auto 0;
 }
 
 .results-header h2 {
@@ -600,38 +600,74 @@ blockquote strong {
   font-size: 1.65rem;
   font-weight: 600;
   letter-spacing: 0.08em;
-  color: var(--text-bright);
+  background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gold-shimmer 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 16px rgba(192,168,120,0.3));
   margin-bottom: 0.8rem;
 }
 
+@keyframes gold-shimmer {
+  0%, 100% { background-position: 100% 50%; }
+  50% { background-position: 0% 50%; }
+}
+
+@keyframes purple-shimmer {
+  0%, 100% { background-position: 100% 50%; }
+  50% { background-position: 0% 50%; }
+}
+
 .results-type-name {
-  font-family: var(--garamond);
-  font-size: 0.8rem;
-  letter-spacing: 0.25em;
-  color: var(--gold);
-  text-transform: uppercase;
-  font-weight: 400;
+  font-family: var(--serif);
+  font-size: 0.9rem;
+  letter-spacing: 0.15em;
+  background: linear-gradient(90deg, #b8a0d8 0%, #b8a0d8 40%, #e0d0f0 50%, #b8a0d8 60%, #b8a0d8 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: purple-shimmer 5s ease-in-out infinite;
+  filter: drop-shadow(0 0 12px rgba(160,130,210,0.25));
+  font-weight: 600;
 }
 
 /* ── Score Panel ── */
 
 .score-panel {
-  padding: 2.5rem 0;
+  padding: 2.5rem 1.5rem;
+  background: rgba(15, 12, 25, 0.85);
+  border: 1px solid rgba(192, 168, 120, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(192, 168, 120, 0.08);
+}
+
+.score-panel::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 5%, rgba(192, 168, 120, 0.6) 50%, transparent 95%);
 }
 
 .total-score {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(192, 168, 120, 0.08);
 }
 
 .total-score .big-num {
   font-family: var(--garamond);
-  font-size: 4rem;
+  font-size: 4.5rem;
   font-weight: 300;
   color: var(--gold);
   line-height: 1;
   letter-spacing: 0.1em;
-  text-shadow: 0 0 40px rgba(192, 168, 120, 0.15);
+  text-shadow: 0 0 40px rgba(192, 168, 120, 0.2), 0 0 80px rgba(192, 168, 120, 0.08);
 }
 
 .total-score .of {
@@ -680,14 +716,16 @@ blockquote strong {
 .bar-track {
   flex: 1;
   height: 28px;
-  background: rgba(15, 12, 25, 0.5);
-  border: 1px solid var(--gold-border);
+  background: rgba(12, 10, 20, 0.6);
+  border: 1px solid rgba(192, 168, 120, 0.1);
+  border-radius: 4px;
   overflow: hidden;
 }
 
 .bar-fill {
   height: 100%;
   width: 0%;
+  border-radius: 4px;
   transition: width 1s cubic-bezier(.4, 0, .2, 1);
 }
 
@@ -724,40 +762,51 @@ blockquote strong {
 .bar-status.status-stable  { color: var(--status-stable); }
 .bar-status.status-caution { color: var(--status-caution); }
 .bar-status.status-alert   { color: var(--status-alert); }
-.bar-status.status-crisis  { color: #fff; background: rgba(255, 107, 107, 0.4); }
+.bar-status.status-crisis  { color: #fff; background: rgba(255, 107, 107, 0.4); border-radius: 3px; }
 
 /* ── Letter Cards ── */
 
 .letter {
-  padding: 2rem 0;
+  padding: 1.5rem 0;
 }
 
 .letter-card {
-  background: var(--surface);
-  border: 1px solid var(--gold-border);
-  padding: 3rem 2.5rem;
-  backdrop-filter: blur(8px);
+  background: rgba(15, 12, 25, 0.88);
+  border: 1px solid rgba(192, 168, 120, 0.12);
+  border-radius: 12px;
+  padding: 2.5rem 2.5rem;
+  backdrop-filter: blur(12px);
   position: relative;
   overflow: hidden;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(192, 168, 120, 0.08);
 }
 
 .letter-card::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 5%, rgba(192, 168, 120, 0.5) 50%, transparent 95%);
+}
+
+.letter-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(192, 168, 120, 0.5), transparent);
+  background: linear-gradient(90deg, transparent 10%, rgba(184, 160, 216, 0.2) 50%, transparent 90%);
 }
 
 .letter-card h2 {
   font-family: var(--serif);
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 600;
   letter-spacing: 0.06em;
-  color: var(--text-bright);
+  color: var(--gold);
   border-bottom: 1px solid rgba(192, 168, 120, 0.15);
   padding-bottom: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.8rem;
+  text-shadow: 0 0 20px rgba(192, 168, 120, 0.15);
 }
 
 .letter-card h3 {
@@ -788,7 +837,7 @@ blockquote strong {
 
 .letter-card ul,
 .letter-card ol {
-  margin: 0.5rem 0 1.5rem 1rem;
+  margin: 0.8rem 0 1.5rem 0;
   font-size: 0.95rem;
   line-height: 2.2;
   color: var(--text-sub);
@@ -803,24 +852,31 @@ blockquote strong {
 }
 
 .letter-card li::before {
-  content: "—";
+  content: "";
   position: absolute;
   left: 0;
-  color: rgba(192, 168, 120, 0.5);
+  top: 0.85em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(192, 168, 120, 0.5);
 }
 
 .letter-card .insight-box {
   border-left: 2px solid var(--gold);
-  background: var(--gold-bg);
+  background: linear-gradient(135deg, rgba(192, 168, 120, 0.06), rgba(184, 160, 216, 0.04));
   padding: 1.5rem 2rem;
   margin: 1.8rem 0;
   font-size: 0.95rem;
   line-height: 2.2;
+  border-radius: 0 8px 8px 0;
+  box-shadow: inset 0 0 20px rgba(192, 168, 120, 0.03);
 }
 
 .letter-card .insight-box strong {
-  color: var(--text-bright);
+  color: var(--gold);
 }
+
 
 /* ── Copy / Retry Buttons ── */
 
