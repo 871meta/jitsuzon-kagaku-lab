@@ -912,7 +912,8 @@ h3.section-heading {
       var text = h.textContent.replace(/\s+/g, ' ').trim();
       var numSpan = h.querySelector('.chapter-number');
       if (numSpan) {
-        text = text.replace(numSpan.textContent.replace(/\s+/g, ' ').trim(), '').trim();
+        text = text.replace(numSpan.textContent.replace(/\\s+/g, ' ').trim(), '').trim();
+      }
       // Truncate long titles
       if (text.length > 28) text = text.substring(0, 28) + '\u2026';
       a.textContent = text;
@@ -944,6 +945,7 @@ h3.section-heading {
       links.forEach(function(a, i){
         a.classList.toggle('is-active', i === current);
       });
+    }
 
     window.addEventListener('scroll', updateToc, {passive: true});
     updateToc();
@@ -957,6 +959,7 @@ h3.section-heading {
     document.addEventListener('click', function(e){
       if (!toc.contains(e.target) && e.target !== toggle) {
         toc.classList.remove('is-open');
+      }
     });
   })();
   </script>

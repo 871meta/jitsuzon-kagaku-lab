@@ -23,7 +23,7 @@
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="実存科学研究所">
   <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
-  <meta property="og:url" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-confessions/index.html">
+  <meta property="og:url" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-confessions/">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -789,26 +789,26 @@ h3.section-heading {
 
       <div class="text-panel fade-in">
         <p>『告白』には三人の母親が登場する。森口悠子（娘を殺された母）、下村直樹の母親（息子を溺愛する母）、渡辺修哉の母親（息子を捨てた母）。</p>
-        <p>この三者が相互に鏡映する構造は、「母親であること」がMetaとしてどう機能するかを可視化��る。</p>
+        <p>この三者が相互に鏡映する構造は、「母親であること」がMetaとしてどう機能するかを可視化する。</p>
       </div>
 
       <div class="text-panel fade-in">
         <p>直樹の母親は、息子の関与を知った時、愛美ではなく直樹を「可哀想」と憐れんだ。自分の理想を息子に投影し、息子の実像を見ようとしない。</p>
         <p>最終的に心中を図り、直樹に殺される。<strong>母の愛が窒息装置になる</strong>構造──愛の過剰が子どもの自律を奪う。</p>
         <p>修哉の母親は、研究のために家庭を捨てた。修哉のすべての行動は「母に認められたい」という一点に収束するが、母はその存在すら忘れている。</p>
-        <p><strong>母の不在が永続的な渇望を生���</strong>構造──愛の欠落が、埋められない穴として子どもの内部に残る。</p>
+        <p><strong>母の不在が永続的な渇望を生む</strong>構造──愛の欠落が、埋められない穴として子どもの内部に残る。</p>
       </div>
 
       <div class="text-panel fade-in">
         <p>そして森口。彼女は三者の中で「最も健全な母」として出発したはずだった。</p>
-        <p>しかし復讐によって、直樹の母に通じる「子どもを道具にする」支配構造と、修哉���母に通じる「子どもとの断絶」構造の両方の影を帯びていく。</p>
-        <p>森口は修哉を道具として操作し（直樹の母的な支配）、同時に愛美への感情を復讐に置換することで愛美との関係を凍結させている（修哉の���的な断絶）。</p>
+        <p>しかし復讐によって、直樹の母に通じる「子どもを道具にする」支配構造と、修哉の母に通じる「子どもとの断絶」構造の両方の影を帯びていく。</p>
+        <p>森口は修哉を道具として操作し（直樹の母的な支配）、同時に愛美への感情を復讐に置換することで愛美との関係を凍結させている（修哉の構造的な断絶）。</p>
       </div>
 
       <div class="highlight-block fade-in">
         <p>中動態（する／されるの二項対立を超え、出来事が「私を通して起きる」という態）の視点から言えば、三人の母親はいずれも「母親であること」を選んだわけではない。</p>
         <p><strong>母親であるという生物学的・社会的条件が、彼女たちを通して異なる出力を生成している。</p>
-        <p></strong>同じ「母である」というMetaが、初期条件の違いによって──溺愛・放棄・喪失という三つの異なる歪みとして出力���れる。</p>
+        <p></strong>同じ「母である」というMetaが、初期条件の違いによって──溺愛・放棄・喪失という三つの異なる歪みとして出力される。</p>
       </div>
 
     </section>
@@ -948,6 +948,7 @@ h3.section-heading {
       var numSpan = h.querySelector('.chapter-number');
       if (numSpan) {
         text = text.replace(numSpan.textContent.replace(/\s+/g, ' ').trim(), '').trim();
+      }
       if (text.length > 28) text = text.substring(0, 28) + '\u2026';
       a.textContent = text;
       a.addEventListener('click', function(e){
@@ -974,6 +975,7 @@ h3.section-heading {
       links.forEach(function(a, i){
         a.classList.toggle('is-active', i === current);
       });
+    }
 
     window.addEventListener('scroll', updateToc, {passive: true});
     updateToc();
@@ -985,6 +987,7 @@ h3.section-heading {
     document.addEventListener('click', function(e){
       if (!toc.contains(e.target) && e.target !== toggle) {
         toc.classList.remove('is-open');
+      }
     });
   })();
   </script>
@@ -1032,7 +1035,7 @@ h3.section-heading {
   "@type": "Article",
   "headline": "森口悠子のMeta ── 自由意志なき世界の天命論",
   "description": "映画『告白』の森口悠子を、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。教壇の言語が復讐の器になったとき、天命は現れかけて自ら閉じられた。",
-  "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-confessions/index.html",
+  "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-confessions/",
   "author": {
     "@type": "Person",
     "name": "箭内宏紀",

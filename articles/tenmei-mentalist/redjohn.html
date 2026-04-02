@@ -675,7 +675,6 @@ h3.section-heading {
       <div class="highlight-block fade-in">
         <p>本物の光と偽りの光の見分け方は一つしかない。</p>
         <p>光を剥がしたとき、何が残るか。</p>
-        </div>
       </div>
     </section>
 
@@ -738,7 +737,6 @@ h3.section-heading {
         <p>ここに、ジェーンとマカリスターの最終的な対比がある。</p>
         <p>二人は同じ能力を持っていた。 観察力、知性、他者の感情的脆弱性を読む力。</p>
         <p>しかしMetaの出力が異なった。</p>
-        </div>
         <p style="margin-top:1.5rem;">どちらがMetaの出力として本物だったかは、明白だ。</p>
       </div>
     </section>
@@ -907,7 +905,8 @@ h3.section-heading {
       var text = h.textContent.replace(/\s+/g, ' ').trim();
       var numSpan = h.querySelector('.chapter-number');
       if (numSpan) {
-        text = text.replace(numSpan.textContent.replace(/\s+/g, ' ').trim(), '').trim();
+        text = text.replace(numSpan.textContent.replace(/\\s+/g, ' ').trim(), '').trim();
+      }
       // Truncate long titles
       if (text.length > 28) text = text.substring(0, 28) + '\u2026';
       a.textContent = text;
@@ -939,6 +938,7 @@ h3.section-heading {
       links.forEach(function(a, i){
         a.classList.toggle('is-active', i === current);
       });
+    }
 
     window.addEventListener('scroll', updateToc, {passive: true});
     updateToc();
@@ -952,6 +952,7 @@ h3.section-heading {
     document.addEventListener('click', function(e){
       if (!toc.contains(e.target) && e.target !== toggle) {
         toc.classList.remove('is-open');
+      }
     });
   })();
   </script>

@@ -1094,7 +1094,8 @@ input:focus, textarea:focus, select:focus { border-color: rgba(201,168,76,0.5); 
       var text = h.textContent.replace(/\s+/g, ' ').trim();
       var numSpan = h.querySelector('.chapter-number');
       if (numSpan) {
-        text = text.replace(numSpan.textContent.replace(/\s+/g, ' ').trim(), '').trim();
+        text = text.replace(numSpan.textContent.replace(/\\s+/g, ' ').trim(), '').trim();
+      }
       }
       // Truncate long titles
       if (text.length > 28) text = text.substring(0, 28) + '\u2026';
