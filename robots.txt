@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /legal/
+Disallow: /_archive/
 
 Sitemap: https://jitsuzon-kagaku-lab.yanaihiroki.com/sitemap.xml

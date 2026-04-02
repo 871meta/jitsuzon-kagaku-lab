@@ -41,7 +41,14 @@
     .back-nav { margin-top: 4rem; padding: 1.5rem 2rem; background: var(--highlight); border: 1px solid var(--border); text-align: center; }
     .back-nav a { color: var(--accent); text-decoration: none; font-weight: 700; }
     .back-nav a:hover { opacity: 0.7; }
-    @media (max-width: 600px) { html { font-size: 15px; } .page-container { padding: 2rem 1rem 4rem; } .page-header h1 { font-size: var(--fs-h3); } h2.section-heading { font-size: var(--fs-h3); } }
+    .article-toc { max-width: var(--max-width); margin: 0 auto 2.5rem; padding: 1.8rem 2.2rem; background: rgba(15, 12, 25, 0.45); border: 1px solid var(--border); border-left: 3px solid var(--accent); backdrop-filter: blur(8px); }
+    .article-toc__title { font-family: var(--font-sans); font-size: var(--fs-small); letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; font-weight: 600; }
+    .article-toc__list { margin: 0; padding: 0; list-style: none; counter-reset: toc-counter; }
+    .article-toc__list li { counter-increment: toc-counter; margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-toc__list li::before { content: counter(toc-counter) "."; color: var(--accent); font-weight: 600; margin-right: 0.6rem; font-size: 0.9em; }
+    .article-toc__list a { color: var(--text); text-decoration: none; transition: color 0.2s; }
+    .article-toc__list a:hover { color: var(--accent); }
+    @media (max-width: 600px) { html { font-size: 15px; } .page-container { padding: 2rem 1rem 4rem; } .page-header h1 { font-size: var(--fs-h3); } h2.section-heading { font-size: var(--fs-h3); } .article-toc { padding: 1.4rem 1.5rem; } }
 
 
 </style>
@@ -105,6 +112,19 @@
 
   <div class="pull-quote fade-in"><p>一度も「愛」という言葉を使わずに、愛を描いている。</p></div>
 
+  <nav class="article-toc fade-in" aria-label="目次">
+    <p class="article-toc__title">Contents</p>
+    <ol class="article-toc__list">
+      <li><a href="#sec-1">突然、大金を拾ってしまう</a></li>
+      <li><a href="#sec-2">腕はあるのに働かない男</a></li>
+      <li><a href="#sec-3">妻の嘘という賭け</a></li>
+      <li><a href="#sec-4">3年後の勝五郎が別人になっている</a></li>
+      <li><a href="#sec-5">除夜の鐘と夫婦の間（あわい）</a></li>
+      <li><a href="#sec-6">「よそう。また夢になるといけねえ」</a></li>
+      <li><a href="#sec-7">なぜ「芝浜」は愛の話なのか</a></li>
+    </ol>
+  </nav>
+
   <article>
 
     <div class="text-panel fade-in">
@@ -122,7 +142,7 @@
     <hr>
 
     <!-- 1 -->
-    <h2 class="section-heading fade-in">1. 突然、大金を拾ってしまう</h2>
+    <h2 class="section-heading fade-in" id="sec-1">1. 突然、大金を拾ってしまう</h2>
 
     <div class="text-panel fade-in">
     <p>「芝浜」の主人公は、<br class="sp-only">腕のいい魚屋の勝五郎。</p>
@@ -143,7 +163,7 @@
     <hr>
 
     <!-- 2 -->
-    <h2 class="section-heading fade-in">2. 腕はあるのに働かない男</h2>
+    <h2 class="section-heading fade-in" id="sec-2">2. 腕はあるのに働かない男</h2>
 
     <div class="text-panel fade-in">
     <p>勝五郎は、ダメな男として描かれる。<br class="sp-only">酒に溺れて働かない。<br class="sp-only">朝起きられない。<br class="sp-only">妻に叩き起こされても動かない。</p>
@@ -162,7 +182,7 @@
     <hr>
 
     <!-- 3 -->
-    <h2 class="section-heading fade-in">3. 妻の嘘という賭け</h2>
+    <h2 class="section-heading fade-in" id="sec-3">3. 妻の嘘という賭け</h2>
 
     <div class="text-panel fade-in">
     <p>42両を拾って帰った勝五郎は、<br class="sp-only">有頂天になって飲み仲間を集め、<br class="sp-only">酒を飲んで騒いで、<br class="sp-only">そのまま酔い潰れて寝てしまう。</p>
@@ -192,7 +212,7 @@
     <hr>
 
     <!-- 4 -->
-    <h2 class="section-heading fade-in">4. 3年後の勝五郎が別人になっている</h2>
+    <h2 class="section-heading fade-in" id="sec-4">4. 3年後の勝五郎が別人になっている</h2>
 
     <div class="text-panel fade-in">
     <p>「芝浜」という噺の構造で、<br class="sp-only">最も凄いと思うのがここだ。</p>
@@ -213,7 +233,7 @@
     <hr>
 
     <!-- 5 -->
-    <h2 class="section-heading fade-in">5. 除夜の鐘と夫婦の間（あわい）</h2>
+    <h2 class="section-heading fade-in" id="sec-5">5. 除夜の鐘と夫婦の間（あわい）</h2>
 
     <div class="text-panel fade-in">
     <p>大晦日の夜。</p>
@@ -255,7 +275,7 @@
     <hr>
 
     <!-- 6 -->
-    <h2 class="section-heading fade-in">6. 「よそう。また夢になるといけねえ」</h2>
+    <h2 class="section-heading fade-in" id="sec-6">6. 「よそう。また夢になるといけねえ」</h2>
 
     <div class="text-panel fade-in">
     <p>妻は、勝五郎の機嫌を直してもらいたくて<br class="sp-only">酒を用意していた。<br class="sp-only">久しぶりにどうかと勧める。</p>
@@ -298,7 +318,7 @@
     <hr>
 
     <!-- 7 -->
-    <h2 class="section-heading fade-in">7. なぜ「芝浜」は愛の話なのか</h2>
+    <h2 class="section-heading fade-in" id="sec-7">7. なぜ「芝浜」は愛の話なのか</h2>
 
     <div class="text-panel fade-in">
     <p>芝浜の中に「愛」という言葉は<br class="sp-only">一度も出てこない。</p>
@@ -387,6 +407,8 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
+"datePublished": "2026-04-02",
+"dateModified": "2026-04-03",
   "headline": "落語「芝浜」はなぜ泣けるのか──感動の言語化シリーズ",
   "description": "落語「芝浜」はなぜ泣けるのか。究極のラブストーリーが一度も「愛」という言葉を使わずに愛を描く構造を、感動の言語化シリーズとして解き明かす。",
   "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-shibahama.html",

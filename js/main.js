@@ -279,7 +279,8 @@ document.addEventListener('DOMContentLoaded', function () {
         results.sort(function (a, b) { return b.score - a.score; });
 
         if (results.length === 0) {
-          searchResults.innerHTML = '<div class="search-empty">「' + query + '」に一致するページが見つかりませんでした</div>';
+          var safeQuery = query.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+          searchResults.innerHTML = '<div class="search-empty">「' + safeQuery + '」に一致するページが見つかりませんでした</div>';
           return;
         }
 
