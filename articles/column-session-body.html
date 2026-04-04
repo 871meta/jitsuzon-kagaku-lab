@@ -238,6 +238,37 @@ hr {
   h3 { font-size: 16px; margin-top: 32px; }
   blockquote { padding: 12px 16px; }
 }
+
+/* -- Article Accordion -- */
+.article-acc { margin-top: 24px; }
+.article-acc__item { border-bottom: 1px solid rgba(192,168,120,0.12); }
+.article-acc__item:first-child { border-top: 1px solid rgba(192,168,120,0.12); }
+.article-acc__header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 20px 4px; cursor: pointer; user-select: none;
+  transition: color 0.2s ease;
+}
+.article-acc__header:hover { color: #c0a878; }
+.article-acc__title {
+  font-size: 18px; font-weight: 700; line-height: 1.7;
+  margin: 0; padding: 0; border: none;
+}
+.article-acc__icon {
+  font-size: 20px; color: #c0a878; transition: transform 0.3s ease;
+  min-width: 24px; text-align: center; flex-shrink: 0; margin-left: 12px;
+}
+.article-acc__item.is-open .article-acc__icon { transform: rotate(45deg); }
+.article-acc__body {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.article-acc__content { padding: 0 4px 32px; }
+.article-acc__content h3 { margin-top: 32px; }
+.article-acc__content .text-panel { margin-bottom: 0; }
+@media (max-width: 600px) {
+  .article-acc__title { font-size: 16px; }
+  .article-acc__header { padding: 16px 2px; }
+}
 </style>
   <meta property="og:title" content="天命の言語化セッション™が身体にもたらすもの｜実存科学研究所">
   <meta property="og:description" content="セッション中に脳で起きている生理学的変化と、それが身体の構造そのものを書き換えるメカニズムを解説。">
@@ -296,25 +327,14 @@ hr {
   </header>
 
 <div class="pull-quote fade-in"><p>椅子に座って話しているだけ。<br class="sp-only">なのに、なぜこんなに消耗するのか。<br class="sp-only">──この疲労には、<br class="sp-only">明確な生理学的根拠がある。</p></div>
-
-  <!-- 目次 -->
-  <nav class="text-panel fade-in" style="padding: 24px 28px;" aria-label="目次">
-    <p style="font-size: 15px; font-weight: 600; color: var(--color-gold); margin-bottom: 12px; letter-spacing: 0.06em;">目　次</p>
-    <ol style="list-style: none; margin: 0; padding: 0; font-size: 15px; line-height: 2.2;">
-      <li><a href="#sec-why-tired" style="color: rgba(235,232,225,0.78); text-decoration: none; border-bottom: 1px solid rgba(192,168,120,0.15);">「話しただけ」なのに、なぜ疲れるのか</a></li>
-      <li><a href="#sec-brain" style="color: rgba(235,232,225,0.78); text-decoration: none; border-bottom: 1px solid rgba(192,168,120,0.15);">脳の中で起きていること</a></li>
-      <li><a href="#sec-rewiring" style="color: rgba(235,232,225,0.78); text-decoration: none; border-bottom: 1px solid rgba(192,168,120,0.15);">脳の配線が書き換わるとは、どういうことか</a></li>
-      <li><a href="#sec-health" style="color: rgba(235,232,225,0.78); text-decoration: none; border-bottom: 1px solid rgba(192,168,120,0.15);">なぜ健康にいいのか</a></li>
-      <li><a href="#sec-tapmax" style="color: rgba(235,232,225,0.78); text-decoration: none; border-bottom: 1px solid rgba(192,168,120,0.15);">T · A ⇒ Pmax──セッションは方程式の起点</a></li>
-      <li><a href="#sec-more" style="color: rgba(235,232,225,0.78); text-decoration: none; border-bottom: 1px solid rgba(192,168,120,0.15);">やればやるほど、健康になる</a></li>
-      <li><a href="#sec-record" style="color: rgba(235,232,225,0.78); text-decoration: none; border-bottom: 1px solid rgba(192,168,120,0.15);">脳が変わると、身体が変わる──実践者の記録</a></li>
-      <li><a href="#sec-no-study" style="color: rgba(235,232,225,0.78); text-decoration: none; border-bottom: 1px solid rgba(192,168,120,0.15);">何かを学ぶ必要はない</a></li>
-    </ol>
-  </nav>
-
-  <!-- 導入：「話しただけ」なのに、なぜ疲れるのか -->
-  <h2 id="sec-why-tired" class="fade-in">「話しただけ」なのに、<br class="sp-only">なぜ疲れるのか</h2>
-
+<div class="article-acc fade-in">
+<div class="article-acc__item" id="sec-why-tired">
+  <div class="article-acc__header" role="button" tabindex="0" aria-expanded="false">
+    <span class="article-acc__title">「話しただけ」なのに、なぜ疲れるのか</span>
+    <span class="article-acc__icon">+</span>
+  </div>
+  <div class="article-acc__body">
+    <div class="article-acc__content">
 <div class="text-panel fade-in">
   <p>「天命の言語化セッション™」を受けた方から、こんな声をいただくことがあります。</p>
 
@@ -326,12 +346,16 @@ hr {
 
   <p>そしてその疲労の正体を知ると、<br class="sp-only">このセッションが単なる「心の話」ではなく、<br class="sp-only"><strong>身体の構造そのものを変える営み</strong><br class="sp-only">であることが見えてきます。</p>
 </div>
-
-  <hr>
-
-  <!-- 脳の中で起きていること -->
-  <h2 id="sec-brain" class="fade-in">脳の中で起きていること</h2>
-
+    </div>
+  </div>
+</div>
+<div class="article-acc__item" id="sec-brain">
+  <div class="article-acc__header" role="button" tabindex="0" aria-expanded="false">
+    <span class="article-acc__title">脳の中で起きていること</span>
+    <span class="article-acc__icon">+</span>
+  </div>
+  <div class="article-acc__body">
+    <div class="article-acc__content">
 <div class="text-panel fade-in">
   <p>セッション中、あなたの脳では最もエネルギーを消費する領域がフル稼働しています。</p>
 
@@ -386,12 +410,16 @@ hr {
 
   <p>だから疲れる。<br>そして、だからこそ脳が変わる。</p>
 </div>
-
-  <hr>
-
-  <!-- 脳の配線が書き換わるとは、どういうことか -->
-  <h2 id="sec-rewiring" class="fade-in">脳の配線が書き換わるとは、<br class="sp-only">どういうことか</h2>
-
+    </div>
+  </div>
+</div>
+<div class="article-acc__item" id="sec-rewiring">
+  <div class="article-acc__header" role="button" tabindex="0" aria-expanded="false">
+    <span class="article-acc__title">脳の配線が書き換わるとは、どういうことか</span>
+    <span class="article-acc__icon">+</span>
+  </div>
+  <div class="article-acc__body">
+    <div class="article-acc__content">
 <div class="text-panel fade-in">
   <p>セッションで起きていることは「気持ちの整理」ではありません。</p>
 
@@ -513,12 +541,16 @@ hr {
 
   <p>天命を悟り、日々を全うする。<br>その生き方に、自然とつながっていく。</p>
 </div>
-
-  <hr>
-
-  <!-- なぜ健康にいいのか -->
-  <h2 id="sec-health" class="fade-in">なぜ健康にいいのか<br class="sp-only">──すべての信念は身体に刻まれている</h2>
-
+    </div>
+  </div>
+</div>
+<div class="article-acc__item" id="sec-health">
+  <div class="article-acc__header" role="button" tabindex="0" aria-expanded="false">
+    <span class="article-acc__title">なぜ健康にいいのか──すべての信念は身体に刻まれている</span>
+    <span class="article-acc__icon">+</span>
+  </div>
+  <div class="article-acc__body">
+    <div class="article-acc__content">
 <div class="text-panel fade-in">
   <p>「メンタルの問題」と「身体の問題」は、別物ではありません。</p>
 </div>
@@ -586,12 +618,16 @@ hr {
   <blockquote class="fade-in">
     <p>信念と身体の双方向ループ、<br class="sp-only">アロスタティック負荷のメカニズム、<br class="sp-only">運動・栄養・睡眠の統合方程式について、<br class="sp-only">より専門的な内容を読みたい方は<br class="sp-only"><a href="../body.html">身体論（原典）</a>をご覧ください。<br class="sp-only">15の学術領域・38名の世界的権威の研究知見を<br class="sp-only">参照枠として詳述しています。</p>
   </blockquote>
-
-  <hr>
-
-  <!-- T · A ⇒ Pmax -->
-  <h2 id="sec-tapmax" class="fade-in">T · A ⇒ Pmax<br class="sp-only">──セッションは方程式の起点</h2>
-
+    </div>
+  </div>
+</div>
+<div class="article-acc__item" id="sec-tapmax">
+  <div class="article-acc__header" role="button" tabindex="0" aria-expanded="false">
+    <span class="article-acc__title">T · A ⇒ Pmax──セッションは方程式の起点</span>
+    <span class="article-acc__icon">+</span>
+  </div>
+  <div class="article-acc__body">
+    <div class="article-acc__content">
 <div class="text-panel fade-in">
   <p>身体論の第一公理を思い出してください。</p>
 </div>
@@ -628,12 +664,16 @@ hr {
     <p>身体のアロスタシスを起動するための基本を知りたい方は、<br class="sp-only"><a href="../body-manual.html">天命ボディマニュアル</a>をご覧ください。<br class="sp-only">運動・栄養・睡眠の要点をわかりやすくまとめた<br class="sp-only">実践ガイドです。</p>
     <p>さらに具体的なプログラムに取り組みたい方は、<br class="sp-only"><a href="../body-program.html">天命ボディプログラム</a>へどうぞ。</p>
   </blockquote>
-
-  <hr>
-
-  <!-- やればやるほど、健康になる -->
-  <h2 id="sec-more" class="fade-in">やればやるほど、健康になる<br class="sp-only">──ただし条件がある</h2>
-
+    </div>
+  </div>
+</div>
+<div class="article-acc__item" id="sec-more">
+  <div class="article-acc__header" role="button" tabindex="0" aria-expanded="false">
+    <span class="article-acc__title">やればやるほど、健康になる──ただし条件がある</span>
+    <span class="article-acc__icon">+</span>
+  </div>
+  <div class="article-acc__body">
+    <div class="article-acc__content">
 <div class="text-panel fade-in">
   <p>セッションは、やればやるほど脳にいい。これは事実です。</p>
 
@@ -665,12 +705,16 @@ hr {
 
   <p>その反復が、脳の配線を不可逆的に書き換える。</p>
 </div>
-
-  <hr>
-
-  <!-- 脳が変わると、身体が変わる──実践者の記録 -->
-  <h2 id="sec-record" class="fade-in">脳が変わると、身体が変わる<br class="sp-only">──実践者の記録</h2>
-
+    </div>
+  </div>
+</div>
+<div class="article-acc__item" id="sec-record">
+  <div class="article-acc__header" role="button" tabindex="0" aria-expanded="false">
+    <span class="article-acc__title">脳が変わると、身体が変わる──実践者の記録</span>
+    <span class="article-acc__icon">+</span>
+  </div>
+  <div class="article-acc__body">
+    <div class="article-acc__content">
 <div class="text-panel fade-in">
   <p>私自身の話をします。</p>
 
@@ -732,12 +776,16 @@ hr {
   <blockquote class="fade-in">
     <p>この身体変化の全記録は<br class="sp-only"><a href="../body-history-001.html">天命ボディ・ヒストリー Vol. 001</a>に掲載しています。<br class="sp-only">16週間の体組成変化、全部位の重量推移、<br class="sp-only">栄養設計の詳細を公開しています。</p>
   </blockquote>
-
-  <hr>
-
-  <!-- 何かを学ぶ必要はない -->
-  <h2 id="sec-no-study" class="fade-in">何かを学ぶ必要はない</h2>
-
+    </div>
+  </div>
+</div>
+<div class="article-acc__item" id="sec-no-study">
+  <div class="article-acc__header" role="button" tabindex="0" aria-expanded="false">
+    <span class="article-acc__title">何かを学ぶ必要はない</span>
+    <span class="article-acc__icon">+</span>
+  </div>
+  <div class="article-acc__body">
+    <div class="article-acc__content">
 <div class="text-panel fade-in">
   <p>セッションの効果を得るために、<br class="sp-only">このコラムの内容を理解する必要はありません。</p>
 
@@ -753,10 +801,12 @@ hr {
 
   <p>次のセッションを、楽しみにしていてください。</p>
 </div>
+    </div>
+  </div>
+</div>
+</div><!-- /article-acc -->
 
-  <hr>
-
-  <!-- 参考文献 -->
+<!-- 参考文献 -->
   <div class="references fade-in">
     <p><strong>参考文献</strong></p>
     <ul>
@@ -859,6 +909,31 @@ hr {
   }
 }
 </script>
+  
+<script>
+(function(){
+  document.querySelectorAll('.article-acc__header').forEach(function(header){
+    header.addEventListener('click',function(){
+      var item=this.parentElement;
+      var body=item.querySelector('.article-acc__body');
+      var content=body.querySelector('.article-acc__content');
+      var isOpen=item.classList.contains('is-open');
+      this.setAttribute('aria-expanded',!isOpen);
+      if(isOpen){
+        body.style.maxHeight='0';
+        item.classList.remove('is-open');
+      }else{
+        body.style.maxHeight=content.scrollHeight+'px';
+        item.classList.add('is-open');
+      }
+    });
+    header.addEventListener('keydown',function(e){
+      if(e.key==='Enter'||e.key===' '){e.preventDefault();this.click();}
+    });
+  });
+})();
+</script>
+
   <!-- Search Modal -->
   <div class="search-overlay">
     <div class="search-modal"><button class="search-close" aria-label="閉じる">&times;</button>
