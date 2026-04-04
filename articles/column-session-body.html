@@ -245,17 +245,45 @@ hr {
 .article-acc__item:first-child { border-top: 1px solid rgba(192,168,120,0.12); }
 .article-acc__header {
   display: flex; justify-content: space-between; align-items: center;
-  padding: 20px 4px; cursor: pointer; user-select: none;
+  padding: 18px 4px; cursor: pointer; user-select: none;
   transition: color 0.2s ease;
 }
 .article-acc__header:hover { color: #c0a878; }
+.article-acc__header-text {
+  display: flex; align-items: flex-start; gap: 14px; min-width: 0;
+}
+.article-acc__num {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.05em;
+  min-width: 28px; height: 28px; line-height: 28px; text-align: center;
+  border-radius: 50%; flex-shrink: 0; margin-top: 2px;
+}
+/* Color variants for number badge */
+.article-acc--gold .article-acc__num {
+  background: rgba(192,168,120,0.15); color: #c0a878;
+}
+.article-acc--rose .article-acc__num {
+  background: rgba(200,120,120,0.15); color: #c87878;
+}
+.article-acc--purple .article-acc__num {
+  background: rgba(160,120,200,0.15); color: #a078c8;
+}
+/* Color variants for left border */
+.article-acc--gold { border-left: 3px solid rgba(192,168,120,0.3); }
+.article-acc--rose { border-left: 3px solid rgba(200,120,120,0.3); }
+.article-acc--purple { border-left: 3px solid rgba(160,120,200,0.3); }
 .article-acc__title {
-  font-size: 18px; font-weight: 700; line-height: 1.7;
-  margin: 0; padding: 0; border: none;
+  font-size: 17px; font-weight: 700; line-height: 1.7;
+  display: block;
+}
+.article-acc__sub {
+  font-size: 13px; line-height: 1.6; display: block; margin-top: 2px;
+  color: rgba(235,232,225,0.45); font-weight: 400;
 }
 .article-acc__icon {
   font-size: 20px; color: #c0a878; transition: transform 0.3s ease;
   min-width: 24px; text-align: center; flex-shrink: 0; margin-left: 12px;
+  align-self: center;
 }
 .article-acc__item.is-open .article-acc__icon { transform: rotate(45deg); }
 .article-acc__body {
@@ -266,8 +294,10 @@ hr {
 .article-acc__content h3 { margin-top: 32px; }
 .article-acc__content .text-panel { margin-bottom: 0; }
 @media (max-width: 600px) {
-  .article-acc__title { font-size: 16px; }
-  .article-acc__header { padding: 16px 2px; }
+  .article-acc__title { font-size: 15px; }
+  .article-acc__header { padding: 14px 2px; }
+  .article-acc__num { min-width: 24px; height: 24px; line-height: 24px; font-size: 11px; }
+  .article-acc__header-text { gap: 10px; }
 }
 </style>
   <meta property="og:title" content="天命の言語化セッション™が身体にもたらすもの｜実存科学研究所">
@@ -328,9 +358,15 @@ hr {
 
 <div class="pull-quote fade-in"><p>椅子に座って話しているだけ。<br class="sp-only">なのに、なぜこんなに消耗するのか。<br class="sp-only">──この疲労には、<br class="sp-only">明確な生理学的根拠がある。</p></div>
 <div class="article-acc fade-in">
-<div class="article-acc__item" id="sec-why-tired">
-  <div class="article-acc__header" role="button" tabindex="0" aria-expanded="false">
-    <span class="article-acc__title">「話しただけ」なのに、なぜ疲れるのか</span>
+<div class="article-acc__item article-acc--rose is-open" id="sec-01">
+  <div class="article-acc__header" role="button" tabindex="0" aria-expanded="true">
+    <div class="article-acc__header-text">
+      <span class="article-acc__num">01</span>
+      <div>
+        <span class="article-acc__title">なぜ、話しただけで疲れるのか</span>
+        <span class="article-acc__sub">セッション中の疲労には、明確な生理学的根拠がある</span>
+      </div>
+    </div>
     <span class="article-acc__icon">+</span>
   </div>
   <div class="article-acc__body">
@@ -345,13 +381,18 @@ hr {
   <p>この疲労には、明確な生理学的根拠があります。</p>
 
   <p>そしてその疲労の正体を知ると、<br class="sp-only">このセッションが単なる「心の話」ではなく、<br class="sp-only"><strong>身体の構造そのものを変える営み</strong><br class="sp-only">であることが見えてきます。</p>
-</div>
     </div>
   </div>
 </div>
-<div class="article-acc__item" id="sec-brain">
+<div class="article-acc__item article-acc--gold" id="sec-02">
   <div class="article-acc__header" role="button" tabindex="0" aria-expanded="false">
-    <span class="article-acc__title">脳の中で起きていること</span>
+    <div class="article-acc__header-text">
+      <span class="article-acc__num">02</span>
+      <div>
+        <span class="article-acc__title">前頭前野がフル稼働している</span>
+        <span class="article-acc__sub">脳で最もエネルギーを食う領域が休みなく動く</span>
+      </div>
+    </div>
     <span class="article-acc__icon">+</span>
   </div>
   <div class="article-acc__body">
@@ -386,9 +427,22 @@ hr {
 
   <p>セッション中は、その中でも最もエネルギーを食う<strong>前頭前野</strong>を休みなく使い続けている。</p>
 </div>
-
-  <h3 class="fade-in">なぜ疲れるのか──筋トレとの共通構造</h3>
-
+    </div>
+  </div>
+</div>
+<div class="article-acc__item article-acc--rose" id="sec-03">
+  <div class="article-acc__header" role="button" tabindex="0" aria-expanded="false">
+    <div class="article-acc__header-text">
+      <span class="article-acc__num">03</span>
+      <div>
+        <span class="article-acc__title">筋トレと同じ原理で脳が変わる</span>
+        <span class="article-acc__sub">過剰負荷が入力されるから疲れる──だからこそ変わる</span>
+      </div>
+    </div>
+    <span class="article-acc__icon">+</span>
+  </div>
+  <div class="article-acc__body">
+    <div class="article-acc__content">
 <div class="text-panel fade-in">
   <p>筋トレで疲れるのは、<br class="sp-only">筋肉に対してこれまでの出力を超えた負荷──<br class="sp-only">過剰負荷──を入力しているからです。</p>
 
@@ -409,13 +463,18 @@ hr {
   <p>これまでの認知パターンでは<br class="sp-only">処理しきれない負荷が入力されている。</p>
 
   <p>だから疲れる。<br>そして、だからこそ脳が変わる。</p>
-</div>
     </div>
   </div>
 </div>
-<div class="article-acc__item" id="sec-rewiring">
+<div class="article-acc__item article-acc--gold" id="sec-04">
   <div class="article-acc__header" role="button" tabindex="0" aria-expanded="false">
-    <span class="article-acc__title">脳の配線が書き換わるとは、どういうことか</span>
+    <div class="article-acc__header-text">
+      <span class="article-acc__num">04</span>
+      <div>
+        <span class="article-acc__title">漏電している電気回路</span>
+        <span class="article-acc__sub">非合理的な信念が、信号を余計なところに漏らしている</span>
+      </div>
+    </div>
     <span class="article-acc__icon">+</span>
   </div>
   <div class="article-acc__body">
@@ -479,9 +538,22 @@ hr {
 
   <p>それは心が弱いからではありません。<br>本来1kmの距離を、100kmかけて歩いているからです。</p>
 </div>
-
-  <h3 class="fade-in">セッションは通行止めを解除する作業</h3>
-
+    </div>
+  </div>
+</div>
+<div class="article-acc__item article-acc--purple" id="sec-05">
+  <div class="article-acc__header" role="button" tabindex="0" aria-expanded="false">
+    <div class="article-acc__header-text">
+      <span class="article-acc__num">05</span>
+      <div>
+        <span class="article-acc__title">通行止めが解除されるとき</span>
+        <span class="article-acc__sub">100kmの迂回が1kmになると、人生が変わる</span>
+      </div>
+    </div>
+    <span class="article-acc__icon">+</span>
+  </div>
+  <div class="article-acc__body">
+    <div class="article-acc__content">
 <div class="text-panel fade-in">
   <p>「天命の言語化セッション™」で<br class="sp-only">やっていることは、<br class="sp-only">この通行止めを特定し、解除する作業です。</p>
 
@@ -540,13 +612,18 @@ hr {
   <p>これまで「自分はダメだ」という<br class="sp-only">迂回に費やしていたエネルギーが、<br class="sp-only">「自分は何のために生きているのか」という問いに向かう。</p>
 
   <p>天命を悟り、日々を全うする。<br>その生き方に、自然とつながっていく。</p>
-</div>
     </div>
   </div>
 </div>
-<div class="article-acc__item" id="sec-health">
+<div class="article-acc__item article-acc--rose" id="sec-06">
   <div class="article-acc__header" role="button" tabindex="0" aria-expanded="false">
-    <span class="article-acc__title">なぜ健康にいいのか──すべての信念は身体に刻まれている</span>
+    <div class="article-acc__header-text">
+      <span class="article-acc__num">06</span>
+      <div>
+        <span class="article-acc__title">すべての信念は身体に刻まれている</span>
+        <span class="article-acc__sub">メンタルの問題と身体の問題は、別物ではない</span>
+      </div>
+    </div>
     <span class="article-acc__icon">+</span>
   </div>
   <div class="article-acc__body">
@@ -621,9 +698,15 @@ hr {
     </div>
   </div>
 </div>
-<div class="article-acc__item" id="sec-tapmax">
+<div class="article-acc__item article-acc--purple" id="sec-07">
   <div class="article-acc__header" role="button" tabindex="0" aria-expanded="false">
-    <span class="article-acc__title">T · A ⇒ Pmax──セッションは方程式の起点</span>
+    <div class="article-acc__header-text">
+      <span class="article-acc__num">07</span>
+      <div>
+        <span class="article-acc__title">T · A ⇒ Pmax</span>
+        <span class="article-acc__sub">天命が確定すれば、身体を整える理由が生まれる</span>
+      </div>
+    </div>
     <span class="article-acc__icon">+</span>
   </div>
   <div class="article-acc__body">
@@ -667,9 +750,15 @@ hr {
     </div>
   </div>
 </div>
-<div class="article-acc__item" id="sec-more">
+<div class="article-acc__item article-acc--gold" id="sec-08">
   <div class="article-acc__header" role="button" tabindex="0" aria-expanded="false">
-    <span class="article-acc__title">やればやるほど、健康になる──ただし条件がある</span>
+    <div class="article-acc__header-text">
+      <span class="article-acc__num">08</span>
+      <div>
+        <span class="article-acc__title">脳は何歳でも変わり続ける</span>
+        <span class="article-acc__sub">シナプスは生涯書き換わる──ただし条件がある</span>
+      </div>
+    </div>
     <span class="article-acc__icon">+</span>
   </div>
   <div class="article-acc__body">
@@ -704,13 +793,18 @@ hr {
   <p>気づいたことを、翌日から実践する。<br>1日、1週間、1ヶ月と続ける。</p>
 
   <p>その反復が、脳の配線を不可逆的に書き換える。</p>
-</div>
     </div>
   </div>
 </div>
-<div class="article-acc__item" id="sec-record">
+<div class="article-acc__item article-acc--purple" id="sec-09">
   <div class="article-acc__header" role="button" tabindex="0" aria-expanded="false">
-    <span class="article-acc__title">脳が変わると、身体が変わる──実践者の記録</span>
+    <div class="article-acc__header-text">
+      <span class="article-acc__num">09</span>
+      <div>
+        <span class="article-acc__title">壊れた脳が2年で生まれ変わった</span>
+        <span class="article-acc__sub">35年分が全部壊れた後、それを超えるものが生まれた</span>
+      </div>
+    </div>
     <span class="article-acc__icon">+</span>
   </div>
   <div class="article-acc__body">
@@ -779,9 +873,15 @@ hr {
     </div>
   </div>
 </div>
-<div class="article-acc__item" id="sec-no-study">
+<div class="article-acc__item article-acc--purple" id="sec-10">
   <div class="article-acc__header" role="button" tabindex="0" aria-expanded="false">
-    <span class="article-acc__title">何かを学ぶ必要はない</span>
+    <div class="article-acc__header-text">
+      <span class="article-acc__num">10</span>
+      <div>
+        <span class="article-acc__title">何も学ぶ必要はない</span>
+        <span class="article-acc__sub">知らなくても、セッションは効く</span>
+      </div>
+    </div>
     <span class="article-acc__icon">+</span>
   </div>
   <div class="article-acc__body">
@@ -800,7 +900,6 @@ hr {
   <p>身体が変わる。<br>人生が変わる。</p>
 
   <p>次のセッションを、楽しみにしていてください。</p>
-</div>
     </div>
   </div>
 </div>
@@ -931,6 +1030,14 @@ hr {
       if(e.key==='Enter'||e.key===' '){e.preventDefault();this.click();}
     });
   });
+
+  // Auto-open first item
+  var firstItem = document.querySelector('.article-acc__item.is-open');
+  if(firstItem){
+    var b=firstItem.querySelector('.article-acc__body');
+    var c=b.querySelector('.article-acc__content');
+    b.style.maxHeight=c.scrollHeight+'px';
+  }
 })();
 </script>
 
