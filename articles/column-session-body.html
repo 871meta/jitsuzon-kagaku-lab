@@ -108,12 +108,6 @@ p {
 
 strong {
   font-weight: 700;
-  color: rgba(210, 195, 160, 1);
-}
-
-/* ── Strong inside highlight-box: keep default ── */
-.highlight-box strong {
-  color: rgba(235, 232, 225, 0.96);
 }
 
 /* ── Blockquote ── */
@@ -144,24 +138,9 @@ li {
   margin-bottom: 4px;
 }
 
-/* ── Highlight Box ── */
-.highlight-box {
-  background: var(--color-gold-a04);
-  border-left: 4px solid var(--color-gold);
-  padding: 20px 24px;
-  margin: 28px 0;
-}
-
-.highlight-box + .highlight-box {
+/* ── Highlight Block: 連続時の間隔調整 ── */
+.highlight-block + .highlight-block {
   margin-top: 12px;
-}
-
-.highlight-box p {
-  margin-bottom: 8px;
-}
-
-.highlight-box p:last-child {
-  margin-bottom: 0;
 }
 
 /* ── Ordered List (styled) ── */
@@ -258,7 +237,6 @@ hr {
   h2 { font-size: 19px; margin-top: 48px; }
   h3 { font-size: 16px; margin-top: 32px; }
   blockquote { padding: 12px 16px; }
-  .highlight-box { padding: 16px 18px; }
 }
 </style>
   <meta property="og:title" content="天命の言語化セッション™が身体にもたらすもの｜実存科学研究所">
@@ -350,15 +328,15 @@ hr {
   <p>「なぜですか？」「何のためですか？」という問いに<br class="sp-only">答えようとするとき、<br class="sp-only">あなたの<strong>前頭前野</strong>は3つのことを<br class="sp-only">同時にやっています。</p>
 </div>
 
-  <div class="highlight-box fade-in">
+  <div class="highlight-block fade-in">
     <p><strong>① 自分の記憶と信念を検索する。</strong><br>「なぜ自分はこう感じるのか」を考えるために、<br class="sp-only">過去の経験、思い込み、価値観を<br class="sp-only">引っ張り出してくる。</p>
   </div>
 
-  <div class="highlight-box fade-in">
+  <div class="highlight-block fade-in">
     <p><strong>② 感情を制御する。</strong><br>自分の矛盾に直面すると<br class="sp-only">不快感や悲しみが湧いてくる。<br class="sp-only">それに飲まれずに対話を続けるために、<br class="sp-only"><strong>前頭前野</strong>が感情にブレーキをかけ続けている。</p>
   </div>
 
-  <div class="highlight-box fade-in">
+  <div class="highlight-block fade-in">
     <p><strong>③ 答えを言語化する。</strong><br>感じていることを言葉にする作業そのものが、<br class="sp-only">大量のエネルギーを消費する。<br>「わかっているけど言葉にできない」から<br class="sp-only">「言葉にした」への変換は、<br class="sp-only">脳にとって重労働です。</p>
   </div>
 
@@ -376,7 +354,7 @@ hr {
   <p>身体が「今の筋力では足りない」と<br class="sp-only">認識するレベルの刺激を受けることで、<br class="sp-only">その刺激に適応しようとする<br class="sp-only">回復プロセスが起動する。<br>その適応の結果として、<br class="sp-only">筋肉はより強く、より大きくなる。</p>
 </div>
 
-  <div class="highlight-box fade-in">
+  <div class="highlight-block fade-in">
     <p><strong>疲労は、適応のための必要コストです。</strong></p>
   </div>
 
@@ -443,7 +421,7 @@ hr {
   <p>信号がそこに到達するたびに、迂回が発生する。<br>エネルギーが余計に消費される。<br>判断が遅れる。<br>感情が不安定になる。<br>身体が消耗する。</p>
 </div>
 
-  <div class="highlight-box fade-in">
+  <div class="highlight-block fade-in">
     <p><strong>そして本人は、迂回していることに気づいていない。</strong></p>
   </div>
 
@@ -475,7 +453,7 @@ hr {
   <p>これは比喩ではありません。<br class="sp-only">分子レベルで起きている物理的な変化です。</p>
 </div>
 
-  <div class="highlight-box fade-in">
+  <div class="highlight-block fade-in">
     <p><strong>一度見つけた通行止めは、見つける前には戻れない。</strong></p>
   </div>
 
@@ -503,7 +481,7 @@ hr {
   <p>「やるかやらないか」で悩んでいた時間がなくなり、<br class="sp-only">「どうやるか」に集中できるようになる。<br>人間関係で消耗していたエネルギーが、<br class="sp-only">本来やるべきことに向かう。<br>朝起きたときの気分が違う。<br>身体が軽い。</p>
 </div>
 
-  <div class="highlight-box fade-in">
+  <div class="highlight-block fade-in">
     <p><strong>つまり、人生が生きやすくなるということです。</strong></p>
   </div>
 
@@ -572,7 +550,7 @@ hr {
     <li>さらに非合理的な信念が強化される<br class="sp-only">（悪循環）</li>
   </ol>
 
-  <div class="highlight-box fade-in">
+  <div class="highlight-block fade-in">
     <p><strong>思い込みが身体を壊し、壊れた身体がさらに思い込みを強化する。</strong></p>
   </div>
 
@@ -655,7 +633,7 @@ hr {
   <p>ノーベル賞の根拠となった<br class="sp-only">カンデルの研究が証明したのは、<br class="sp-only">まさにこのこと──<br class="sp-only">経験によってシナプスの物理的構造は<br class="sp-only">何歳であっても変わり続けるということです。</p>
 </div>
 
-  <div class="highlight-box fade-in">
+  <div class="highlight-block fade-in">
     <p><strong>ただし、条件が一つあります。</strong></p>
   </div>
 
@@ -694,7 +672,7 @@ hr {
   <p>100kmの迂回路を、一本ずつ特定し、<br class="sp-only">通行止めを解除していく作業です。</p>
 </div>
 
-  <div class="highlight-box fade-in">
+  <div class="highlight-block fade-in">
     <p><strong>35年かけて積み上げたものが全部壊れた後、たった2年で、それを超えるものが生まれた。</strong></p>
   </div>
 
