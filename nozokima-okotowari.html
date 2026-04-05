@@ -23,21 +23,11 @@
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"></noscript>
 <style>
+/* ============================================
+   Crimson Column — based on column-session-body.html template
+   Gold → Crimson color substitution
+   ============================================ */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-/* ── Crimson World ── */
-:root {
-  --crimson: #a04040;
-  --crimson-light: #c86060;
-  --crimson-pale: #e0a0a0;
-  --crimson-a04: rgba(160, 64, 64, 0.04);
-  --crimson-a08: rgba(160, 64, 64, 0.08);
-  --crimson-a12: rgba(160, 64, 64, 0.12);
-  --crimson-a15: rgba(160, 64, 64, 0.15);
-  --crimson-a25: rgba(160, 64, 64, 0.25);
-  --crimson-a30: rgba(160, 64, 64, 0.30);
-  --crimson-a40: rgba(160, 64, 64, 0.40);
-}
 
 body {
   background: #0a0608;
@@ -75,7 +65,7 @@ body {
   font-weight: 500;
   letter-spacing: 0.08em;
   color: #fff;
-  background: var(--crimson);
+  background: #a04040;
   padding: 3px 12px;
   margin-bottom: 20px;
 }
@@ -88,24 +78,24 @@ body {
   margin-bottom: 8px;
 }
 
+.header .subtitle {
+  font-size: 16px;
+  color: rgba(235, 232, 225, 0.55);
+  line-height: 1.8;
+}
+
 /* ── Crimson Shimmer for h1 ── */
 @keyframes crimson-shimmer {
   0%   { background-position: 200% 50%; }
   100% { background-position: -200% 50%; }
 }
-.header h1 {
+.hero-title--shimmer {
   background: linear-gradient(90deg, #a04040 0%, #a04040 40%, #e0a0a0 50%, #a04040 60%, #a04040 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: crimson-shimmer 4s ease-in-out infinite;
   filter: drop-shadow(0 0 16px rgba(160,64,64,0.3)) drop-shadow(0 0 40px rgba(160,64,64,0.12));
-}
-
-.header .subtitle {
-  font-size: 16px;
-  color: rgba(235, 232, 225, 0.55);
-  line-height: 1.8;
 }
 
 /* ── Headings ── */
@@ -116,7 +106,17 @@ h2 {
   margin-top: 64px;
   margin-bottom: 24px;
   padding-bottom: 10px;
-  border-bottom: 2px solid var(--crimson-a30);
+  border-bottom: 2px solid rgba(160, 64, 64, 0.30);
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.6;
+  margin-top: 40px;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(160, 64, 64, 0.15);
 }
 
 /* ── Body ── */
@@ -126,12 +126,11 @@ p {
 
 strong {
   font-weight: 700;
-  color: var(--crimson-light);
 }
 
 /* ── Blockquote ── */
 blockquote {
-  border-left: 3px solid var(--crimson-a40);
+  border-left: 3px solid rgba(160, 64, 64, 0.40);
   background: rgba(160, 64, 64, 0.03);
   padding: 16px 24px;
   margin: 24px 0;
@@ -146,11 +145,11 @@ blockquote p:last-child {
   margin-bottom: 0;
 }
 
-/* ── Highlight Block (Crimson) ── */
+/* ── Highlight Block ── */
 .highlight-block {
-  background: var(--crimson-a04);
-  border: 1px solid var(--crimson-a15);
-  border-left: 4px solid var(--crimson);
+  background: rgba(160, 64, 64, 0.04);
+  border: 1px solid rgba(160, 64, 64, 0.15);
+  border-left: 4px solid #a04040;
   padding: 24px 32px;
   margin: 32px 0;
   font-size: 18px;
@@ -163,10 +162,14 @@ blockquote p:last-child {
   margin-bottom: 0;
 }
 
+.highlight-block + .highlight-block {
+  margin-top: 12px;
+}
+
 /* ── Separator ── */
 hr {
   border: none;
-  border-top: 1px solid var(--crimson-a15);
+  border-top: 1px solid rgba(160, 64, 64, 0.15);
   margin: 48px 0;
 }
 
@@ -187,16 +190,16 @@ hr {
   100% { background-position: -100% 50%; }
 }
 .pull-quote {
-  border-color: var(--crimson-a15);
+  border-color: rgba(160, 64, 64, 0.15);
   box-shadow:
-    0 2px 24px var(--crimson-a08),
-    inset 0 1px 0 var(--crimson-a12);
+    0 2px 24px rgba(160, 64, 64, 0.08),
+    inset 0 1px 0 rgba(160, 64, 64, 0.12);
 }
 .pull-quote::before {
-  background: linear-gradient(90deg, var(--crimson-a40), var(--crimson-a25), transparent 70%);
+  background: linear-gradient(90deg, rgba(160,64,64,0.4), rgba(160,64,64,0.25), transparent 70%);
 }
 .pull-quote::after {
-  background: linear-gradient(180deg, var(--crimson-a40), transparent);
+  background: linear-gradient(180deg, rgba(160,64,64,0.4), transparent);
 }
 .pull-quote p {
   background: linear-gradient(90deg, #a04040 0%, #a04040 40%, #e0a0a0 50%, #a04040 60%, #a04040 100%);
@@ -213,6 +216,7 @@ hr {
   .container { padding: 40px 20px 60px; }
   .header h1 { font-size: 23px; }
   h2 { font-size: 19px; margin-top: 48px; }
+  h3 { font-size: 16px; margin-top: 32px; }
   blockquote { padding: 12px 16px; }
   .highlight-block { padding: 20px 20px; font-size: 16px; }
 }
@@ -269,8 +273,10 @@ hr {
     <div class="institute-label">EXISTENTIAL SCIENCE RESEARCH INSTITUTE</div>
     <div class="category-tag">コラム</div>
     <h1 class="hero-title--shimmer">覗き魔お断り</h1>
-    <p class="subtitle">匿名の問いに、答えない理由</p>
+    <p class="page-hero__lead">匿名の問いに、答えない理由<br>箭内宏紀｜実存科学研究所</p>
   </header>
+
+  <hr>
 
 <div class="pull-quote fade-in"><p>実存科学研究所は、覗き魔お断りです。</p></div>
 
@@ -298,7 +304,7 @@ hr {
 
     <blockquote class="fade-in">
       <p>怪物と戦う者は、その過程で自分自身が怪物にならないように気をつけなければならない。そして、深淵を長く見つめれば、深淵もまたあなたを見つめている。</p>
-      <p style="text-align:right;margin-bottom:0;color:var(--crimson-light);">──フリードリヒ・ニーチェ</p>
+      <p style="text-align:right;margin-bottom:0;color:#c86060;">──フリードリヒ・ニーチェ</p>
     </blockquote>
 
     <div class="text-panel fade-in">
@@ -316,7 +322,7 @@ hr {
     </div>
 
     <div class="highlight-block fade-in">
-      <p>「匿名をやめて、自分の名前で生きる」ということを<br class="sp-only">始めてはいかがでしょうか。<br>それだけで弱虫をやめることができるからです。</p>
+      <p>「匿名をやめて、自分の名前で生きる」ということを始めてはいかがでしょうか。<br>それだけで弱虫をやめることができるからです。</p>
     </div>
 
     <div class="text-panel fade-in">
