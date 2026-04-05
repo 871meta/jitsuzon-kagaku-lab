@@ -32,7 +32,7 @@
   <link rel="stylesheet" href="css/style.min.css?v=41">
   <style>
     /* ============================================
-       Contact Page — Luxury Form Styles
+       Contact Page — Dark Luxury Form
        ============================================ */
 
     .contact-body {
@@ -43,28 +43,41 @@
       max-width: 680px;
     }
 
-    /* --- Form card --- */
+    /* --- Form card: high-opacity glass --- */
     .contact-form-card {
       position: relative;
-      padding: 3rem 2.5rem;
-      background: var(--color-panel);
-      border: 1px solid var(--color-gold-a12);
-      box-shadow: 0 2px 24px var(--color-gold-a04);
-      backdrop-filter: blur(8px);
+      padding: 3.5rem 3rem;
+      background: rgba(15, 12, 28, 0.88);
+      border: 1px solid rgba(192, 168, 120, 0.18);
+      box-shadow:
+        0 4px 48px rgba(0, 0, 0, 0.5),
+        0 2px 24px rgba(192, 168, 120, 0.04),
+        inset 0 1px 0 rgba(192, 168, 120, 0.08);
+      backdrop-filter: blur(16px);
       overflow: hidden;
     }
 
+    /* Top gold gradient line */
     .contact-form-card::before {
       content: "";
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 1px;
-      background: linear-gradient(90deg, transparent, var(--color-gold-a50), transparent);
+      background: linear-gradient(90deg, transparent 5%, rgba(192, 168, 120, 0.6) 50%, transparent 95%);
+    }
+
+    /* Bottom subtle gold line */
+    .contact-form-card::after {
+      content: "";
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent 10%, rgba(192, 168, 120, 0.2) 50%, transparent 90%);
     }
 
     /* --- Form groups --- */
     .form-group {
-      margin-bottom: 2.2rem;
+      margin-bottom: 2.4rem;
     }
 
     .form-group:last-of-type {
@@ -75,17 +88,17 @@
       display: block;
       font-size: var(--fs-body);
       font-weight: 600;
-      color: var(--color-text-primary);
+      color: rgba(235, 232, 225, 0.92);
       margin-bottom: 0.8rem;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.06em;
     }
 
     .form-group .required {
       font-family: var(--font-serif-en);
-      font-size: 0.68rem;
+      font-size: 0.65rem;
       font-weight: 400;
-      color: var(--color-gold-a50);
-      letter-spacing: 0.15em;
+      color: rgba(192, 168, 120, 0.5);
+      letter-spacing: 0.18em;
       text-transform: uppercase;
       margin-left: 0.6rem;
     }
@@ -94,15 +107,15 @@
     .form-group input[type="email"],
     .form-group textarea {
       width: 100%;
-      padding: 0.9rem 1.1rem;
+      padding: 1rem 1.2rem;
       font-family: "Shippori Mincho", var(--font-serif-reading);
       font-size: var(--fs-body);
       line-height: 1.9;
       color: rgba(235, 232, 225, 0.92);
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid var(--color-gold-a15);
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(192, 168, 120, 0.12);
       border-radius: 0;
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      transition: border-color 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
       -webkit-appearance: none;
     }
 
@@ -110,36 +123,46 @@
     .form-group input[type="email"]:focus,
     .form-group textarea:focus {
       outline: none;
-      border-color: var(--color-gold-a50);
-      box-shadow: 0 0 16px var(--color-gold-a08);
+      border-color: rgba(192, 168, 120, 0.45);
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow:
+        0 0 20px rgba(192, 168, 120, 0.06),
+        inset 0 0 12px rgba(192, 168, 120, 0.02);
     }
 
     .form-group input::placeholder,
     .form-group textarea::placeholder {
-      color: rgba(235, 232, 225, 0.2);
+      color: rgba(235, 232, 225, 0.18);
+      letter-spacing: 0.02em;
     }
 
     .form-group textarea {
-      min-height: 180px;
+      min-height: 200px;
       resize: vertical;
     }
 
     .form-group .input-note {
       font-size: var(--fs-xs);
       color: var(--color-text-faint);
-      margin-top: 0.5rem;
-      line-height: 1.8;
+      margin-top: 0.6rem;
+      line-height: 1.9;
     }
 
-    /* --- Submit button --- */
+    /* --- Submit button: gold with shine --- */
+    @keyframes btn-gold-shine {
+      0%   { left: -100%; }
+      100% { left: 200%; }
+    }
+
     .contact-submit-wrap {
       text-align: center;
-      margin-top: 2.5rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--color-gold-a08);
+      margin-top: 2.8rem;
+      padding-top: 2.2rem;
+      border-top: 1px solid rgba(192, 168, 120, 0.1);
     }
 
     .contact-submit {
+      position: relative;
       display: inline-block;
       padding: 1.2rem 4rem;
       font-family: var(--font-serif-en);
@@ -147,18 +170,48 @@
       font-weight: 600;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--color-bg-deep);
-      background: var(--color-gold);
-      border: 1px solid var(--color-gold);
+      color: #0c0a16;
+      background: linear-gradient(135deg, #a08050, #c0a068, #d4b878, #c0a068, #a08050);
+      background-size: 300% 300%;
+      animation: btn-gold-bg 5s ease-in-out infinite;
+      border: none;
       border-radius: 0;
       cursor: pointer;
-      transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      white-space: nowrap;
+    }
+
+    @keyframes btn-gold-bg {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    .contact-submit::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+      animation: btn-gold-shine 4s ease-in-out infinite;
     }
 
     .contact-submit:hover {
-      background: transparent;
-      color: var(--color-gold);
-      border-color: var(--color-gold);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 24px rgba(192, 168, 120, 0.25);
+    }
+
+    /* --- Form intro note --- */
+    .form-intro-note {
+      font-size: var(--fs-xs);
+      color: rgba(192, 168, 120, 0.45);
+      line-height: 2;
+      margin-bottom: 2.4rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(192, 168, 120, 0.08);
+      letter-spacing: 0.02em;
     }
 
     /* --- Thank you --- */
@@ -172,7 +225,7 @@
       font-family: var(--font-serif-en);
       font-size: var(--fs-xs);
       letter-spacing: 0.3em;
-      color: var(--color-gold-a50);
+      color: rgba(192, 168, 120, 0.5);
       text-transform: uppercase;
       margin-bottom: 1.5rem;
     }
@@ -203,7 +256,7 @@
     /* --- Responsive 768px --- */
     @media (max-width: 768px) {
       .contact-form-card {
-        padding: 2.5rem 2rem;
+        padding: 2.8rem 2rem;
       }
     }
 
@@ -214,11 +267,11 @@
       }
 
       .contact-form-card {
-        padding: 2rem 1.2rem;
+        padding: 2.2rem 1.4rem;
       }
 
       .form-group {
-        margin-bottom: 1.8rem;
+        margin-bottom: 2rem;
       }
 
       .form-group label {
@@ -229,12 +282,12 @@
       .form-group input[type="text"],
       .form-group input[type="email"],
       .form-group textarea {
-        padding: 0.8rem 0.9rem;
+        padding: 0.9rem 1rem;
         font-size: var(--fs-body);
       }
 
       .form-group textarea {
-        min-height: 150px;
+        min-height: 160px;
       }
 
       .contact-submit-wrap {
@@ -328,7 +381,7 @@
             <input type="hidden" name="_next" value="">
             <input type="text" name="_gotcha" style="display:none">
 
-            <p class="input-note" style="margin-bottom:2rem;color:var(--color-text-dim);line-height:2;">匿名でのお問い合わせにはご返信いたしかねます。<br>ご本名・有効なメールアドレスをご記入ください。</p>
+            <p class="form-intro-note">匿名でのお問い合わせにはご返信いたしかねます。<br>ご本名・有効なメールアドレスをご記入ください。</p>
 
             <div class="form-group">
               <label for="name">お名前<span class="required">Required</span></label>
