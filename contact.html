@@ -328,14 +328,16 @@
             <input type="hidden" name="_next" value="">
             <input type="text" name="_gotcha" style="display:none">
 
+            <p class="input-note" style="margin-bottom:2rem;color:var(--color-text-dim);line-height:2;">匿名でのお問い合わせにはご返信いたしかねます。<br>ご本名・有効なメールアドレスをご記入ください。</p>
+
             <div class="form-group">
               <label for="name">お名前<span class="required">Required</span></label>
-              <input type="text" id="name" name="name" required placeholder="例：山田太郎">
+              <input type="text" id="name" name="name" required placeholder="ご本名をご入力ください">
             </div>
 
             <div class="form-group">
               <label for="email">メールアドレス<span class="required">Required</span></label>
-              <input type="email" id="email" name="email" required placeholder="例：example@mail.com">
+              <input type="email" id="email" name="email" required placeholder="ご返信先のメールアドレス">
               <p class="input-note">ご返信先となりますので、お間違いのないようご入力ください。</p>
             </div>
 
@@ -421,6 +423,78 @@
       var form = document.getElementById('contact-form');
       form.addEventListener('submit', function (e) {
         e.preventDefault();
+
+        var nameVal = document.getElementById('name').value.trim();
+        var emailVal = document.getElementById('email').value.trim();
+
+        // --- Name validation ---
+        // Too short
+        if (nameVal.length < 2) {
+          alert('恐れ入りますが、お名前をご入力ください。');
+          return;
+        }
+
+        // Block placeholder / dummy names
+        var blockedNames = ['山田太郎','山田花子','田中太郎','田中花子','佐藤太郎','佐藤花子',
+          'テスト','てすと','test','名無し','名無','匿名','ななし','anonymous',
+          'あああ','いいい','ううう','aaa','xxx','abc','nobody','noname',
+          '例：山田太郎','名前','お名前','なまえ','sample','dummy'];
+        var nameLower = nameVal.replace(/\s/g, '').toLowerCase();
+        for (var i = 0; i < blockedNames.length; i++) {
+          if (nameLower === blockedNames[i].toLowerCase().replace(/\s/g, '')) {
+            alert('恐れ入りますが、ご本名をご入力ください。');
+            return;
+          }
+        }
+
+        // All same character (ああああ, xxxx, etc.)
+        if (/^(.)\1+$/.test(nameLower)) {
+          alert('恐れ入りますが、ご本名をご入力ください。');
+          return;
+        }
+
+        // Numbers only
+        if (/^\d+$/.test(nameLower)) {
+          alert('恐れ入りますが、ご本名をご入力ください。');
+          return;
+        }
+
+        // --- Email validation ---
+        var emailLower = emailVal.toLowerCase();
+        var domain = emailLower.split('@')[1] || '';
+
+        // Block dummy email patterns
+        if (emailLower.indexOf('example') !== -1 ||
+            emailLower.indexOf('test@') === 0 ||
+            emailLower.indexOf('aaa@') === 0 ||
+            emailLower.indexOf('xxx@') === 0 ||
+            emailLower.indexOf('abc@') === 0 ||
+            emailLower.indexOf('admin@') === 0 ||
+            emailLower.indexOf('info@') === 0 ||
+            /^[a-z]@/.test(emailLower) ||
+            /^(.)\1+@/.test(emailLower)) {
+          alert('恐れ入りますが、有効なメールアドレスをご入力ください。');
+          return;
+        }
+
+        // Block disposable email domains
+        var disposable = ['guerrillamail','mailinator','tempmail','throwaway','yopmail',
+          'sharklasers','grr.la','dispostable','tempinbox','fakeinbox','trashmail',
+          'guerrilla','maildrop','10minutemail','minutemail'];
+        for (var j = 0; j < disposable.length; j++) {
+          if (domain.indexOf(disposable[j]) !== -1) {
+            alert('恐れ入りますが、有効なメールアドレスをご入力ください。');
+            return;
+          }
+        }
+
+        // Domain must contain a dot
+        if (domain.indexOf('.') === -1) {
+          alert('恐れ入りますが、有効なメールアドレスをご入力ください。');
+          return;
+        }
+
+        // --- Submit ---
         var data = new FormData(form);
         fetch(form.action, {
           method: 'POST',
