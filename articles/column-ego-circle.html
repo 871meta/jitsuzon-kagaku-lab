@@ -275,6 +275,48 @@ hr {
   color: rgba(235, 232, 225, 0.5);
   font-style: italic;
 }
+
+/* ── Article Images ── */
+.article-figure {
+  margin: 32px 0;
+  text-align: center;
+}
+.article-figure img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid rgba(192,168,120,0.15);
+}
+.article-figure--pair {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: flex-end;
+}
+.article-figure--pair .article-figure__item {
+  flex: 1;
+  max-width: 300px;
+}
+.article-figure--pair img {
+  width: 100%;
+}
+.article-figure figcaption,
+.article-figure__caption {
+  font-size: 12px;
+  color: rgba(235,232,225,0.4);
+  margin-top: 8px;
+  line-height: 1.6;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+@media (max-width: 600px) {
+  .article-figure--pair {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .article-figure--pair .article-figure__item {
+    max-width: 260px;
+  }
+}
 </style>
   <meta property="og:title" content="エゴの果てには化け物が完成するので、私は円環の外に立つことにした｜実存科学研究所">
   <meta property="og:description" content="エリファス・レヴィの円環図像から始まる、エゴの構造分析。支配と共感の力学、ゴッドファーザーのメタファー、八百万の神の水平構造。">
@@ -333,6 +375,18 @@ hr {
   </header>
 
 <hr>
+
+<!-- ── レヴィの図像 ── -->
+<div class="article-figure article-figure--pair fade-in">
+  <div class="article-figure__item">
+    <img src="../images/eliphas-levi-1862.jpg" alt="エリファス・レヴィ（1862年）" loading="lazy">
+    <p class="article-figure__caption">エリファス・レヴィ（1862年）</p>
+  </div>
+  <div class="article-figure__item">
+    <img src="../images/levi-great-symbol-solomon.jpg" alt="ソロモンの大いなる象徴──マクロプロソプスとミクロプロソプス" loading="lazy">
+    <p class="article-figure__caption">『高等魔術の教理と儀式』より<br>ソロモンの大いなる象徴</p>
+  </div>
+</div>
 
 <div class="pull-quote fade-in"><p>天命を悟り、日々全うせよ。</p></div>
 
