@@ -250,11 +250,6 @@
 
     .terms-payment {
       margin-top: 2rem;
-      display: none;
-    }
-
-    .terms-payment.is-visible {
-      display: block;
     }
 
     .terms-payment__group {
@@ -272,11 +267,11 @@
     .terms-payment__btn {
       display: block;
       text-align: center;
-      padding: 1rem 2rem;
+      padding: 1.1rem 2rem;
       font-family: var(--font-sans);
       font-size: var(--fs-body);
-      font-weight: 600;
-      color: #0c0a16;
+      font-weight: 700;
+      color: #080610;
       background: linear-gradient(135deg, #a08050, #c0a068, #d4b878, #c0a068, #a08050);
       background-size: 300% 300%;
       animation: btn-gold 5s ease-in-out infinite;
@@ -287,13 +282,30 @@
       position: relative;
       overflow: hidden;
       margin-bottom: 0.6rem;
+      letter-spacing: 0.04em;
+    }
+
+    .terms-payment__btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+      animation: btn-shine 4s ease-in-out infinite;
+    }
+
+    @keyframes btn-shine {
+      0%, 100% { left: -100%; }
+      50% { left: 120%; }
     }
 
     .terms-payment__btn:hover {
-      opacity: 0.85;
+      opacity: 0.9;
     }
 
-    .terms-payment__btn--split {
+    .terms-payment__btn--outline {
       background: transparent;
       color: var(--accent);
       border: 1px solid var(--color-gold-a40);
@@ -301,7 +313,11 @@
       font-weight: 500;
     }
 
-    .terms-payment__btn--split:hover {
+    .terms-payment__btn--outline::before {
+      display: none;
+    }
+
+    .terms-payment__btn--outline:hover {
       background: var(--color-gold-a06);
       opacity: 1;
     }
@@ -645,7 +661,7 @@
       <p class="terms-action__date" id="agreeDate"></p>
 
       <!-- 決済ボタン群 -->
-      <div class="terms-payment" id="paymentBlock">
+      <div class="terms-payment">
         <div class="terms-payment__group">
           <p class="terms-payment__heading">一括決済</p>
           <a href="https://buy.stripe.com/fZu7sDdP49ljb2EdFP3ks01" target="_blank" rel="noopener noreferrer" class="terms-payment__btn">クレジットカードで支払う（550,000円） &rarr;</a>
@@ -657,8 +673,8 @@
 
         <div class="terms-payment__group">
           <p class="terms-payment__heading">分割決済（2回払い）</p>
-          <a href="https://buy.stripe.com/fZu7sDdP4fJH8Uw6dn3ks02" target="_blank" rel="noopener noreferrer" class="terms-payment__btn terms-payment__btn--split">1回目：300,000円 &rarr;</a>
-          <a href="https://buy.stripe.com/6oU28j8uKeFDb2EgS13ks03" target="_blank" rel="noopener noreferrer" class="terms-payment__btn terms-payment__btn--split">2回目：250,000円 &rarr;</a>
+          <a href="https://buy.stripe.com/fZu7sDdP4fJH8Uw6dn3ks02" target="_blank" rel="noopener noreferrer" class="terms-payment__btn terms-payment__btn--outline">1回目：300,000円 &rarr;</a>
+          <a href="https://buy.stripe.com/6oU28j8uKeFDb2EgS13ks03" target="_blank" rel="noopener noreferrer" class="terms-payment__btn terms-payment__btn--outline">2回目：250,000円 &rarr;</a>
         </div>
 
         <div class="terms-payment__divider">
@@ -667,7 +683,7 @@
 
         <div class="terms-payment__group">
           <p class="terms-payment__heading">銀行振込</p>
-          <a href="https://my26p.com/p/r/5fFQzIX2" target="_blank" rel="noopener noreferrer" class="terms-payment__btn terms-payment__btn--split">銀行振込で申し込む &rarr;</a>
+          <a href="https://my26p.com/p/r/5fFQzIX2" target="_blank" rel="noopener noreferrer" class="terms-payment__btn terms-payment__btn--outline">銀行振込で申し込む &rarr;</a>
           <p class="note">※ お申込み後、振込先情報をメールでお送りします。</p>
         </div>
       </div>
@@ -746,15 +762,13 @@
         endEl.textContent = (y + 1) + '年' + (m + 1) + '月' + d + '日';
       }
 
-      // === 同意チェック → 決済ボタン表示 ===
+      // === 同意チェック → 日時記録 ===
       var cb = document.getElementById('agreeCheck');
       var dateEl = document.getElementById('agreeDate');
-      var payBlock = document.getElementById('paymentBlock');
 
-      if (cb && payBlock) {
+      if (cb) {
         cb.addEventListener('change', function () {
           if (cb.checked) {
-            payBlock.classList.add('is-visible');
             var t = new Date();
             var ty = t.getFullYear();
             var tm = ('0' + (t.getMonth() + 1)).slice(-2);
@@ -763,7 +777,6 @@
             var tmin = ('0' + t.getMinutes()).slice(-2);
             if (dateEl) dateEl.textContent = '同意日時：' + ty + '年' + tm + '月' + td + '日 ' + th + ':' + tmin;
           } else {
-            payBlock.classList.remove('is-visible');
             if (dateEl) dateEl.textContent = '';
           }
         });
