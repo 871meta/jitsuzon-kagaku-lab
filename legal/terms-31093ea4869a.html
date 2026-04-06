@@ -179,6 +179,163 @@
       font-size: var(--fs-small);
     }
 
+    /* 同意・決済セクション */
+    .terms-action {
+      margin-top: 4rem;
+      padding-top: 3rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .terms-action__label {
+      font-family: var(--font-serif-en);
+      font-size: var(--fs-xs);
+      font-weight: 400;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 2rem;
+    }
+
+    .terms-checkbox {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      cursor: pointer;
+      margin-bottom: 1rem;
+    }
+
+    .terms-checkbox input[type="checkbox"] {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 18px;
+      height: 18px;
+      min-width: 18px;
+      border: 1px solid var(--color-gold-a40);
+      background: rgba(255,255,255,0.03);
+      border-radius: 2px;
+      cursor: pointer;
+      margin-top: 0.35rem;
+      transition: border-color 0.3s ease, background 0.3s ease;
+      position: relative;
+    }
+
+    .terms-checkbox input[type="checkbox"]:checked {
+      border-color: var(--accent);
+      background: var(--color-gold-a15);
+    }
+
+    .terms-checkbox input[type="checkbox"]:checked::after {
+      content: "✓";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 12px;
+      color: var(--accent);
+    }
+
+    .terms-checkbox__label {
+      font-size: var(--fs-body);
+      color: var(--text);
+      line-height: 1.8;
+      cursor: pointer;
+    }
+
+    .terms-action__date {
+      font-size: var(--fs-small);
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+      min-height: 1.5em;
+    }
+
+    .terms-payment {
+      margin-top: 2rem;
+      display: none;
+    }
+
+    .terms-payment.is-visible {
+      display: block;
+    }
+
+    .terms-payment__group {
+      margin-bottom: 1.5rem;
+    }
+
+    .terms-payment__heading {
+      font-size: var(--fs-body);
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 1rem;
+      letter-spacing: 0.04em;
+    }
+
+    .terms-payment__btn {
+      display: block;
+      text-align: center;
+      padding: 1rem 2rem;
+      font-family: var(--font-sans);
+      font-size: var(--fs-body);
+      font-weight: 600;
+      color: #0c0a16;
+      background: linear-gradient(135deg, #a08050, #c0a068, #d4b878, #c0a068, #a08050);
+      background-size: 300% 300%;
+      animation: btn-gold 5s ease-in-out infinite;
+      text-decoration: none;
+      border: none;
+      transition: opacity 0.3s ease;
+      white-space: nowrap;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 0.6rem;
+    }
+
+    .terms-payment__btn:hover {
+      opacity: 0.85;
+    }
+
+    .terms-payment__btn--split {
+      background: transparent;
+      color: var(--accent);
+      border: 1px solid var(--color-gold-a40);
+      animation: none;
+      font-weight: 500;
+    }
+
+    .terms-payment__btn--split:hover {
+      background: var(--color-gold-a06);
+      opacity: 1;
+    }
+
+    .terms-payment__divider {
+      text-align: center;
+      margin: 1.5rem 0;
+      position: relative;
+    }
+
+    .terms-payment__divider::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .terms-payment__divider span {
+      position: relative;
+      background: var(--bg);
+      padding: 0 1.5rem;
+      font-size: var(--fs-small);
+      color: var(--text-secondary);
+      letter-spacing: 0.1em;
+    }
+
+    @keyframes btn-gold {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
     .note { font-size: var(--fs-small); color: var(--text-secondary); margin-top: 0.3rem; }
 
     hr { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
@@ -320,7 +477,7 @@
     <!-- ========== 第４条 ========== -->
     <div class="consent-article fade-in">
       <h3 class="consent-article__title">第４条（契約期間）</h3>
-      <p>契約期間：2026年4月6日 〜 2027年4月6日</p>
+      <p>契約期間：<span id="contractStart"></span> 〜 <span id="contractEnd"></span></p>
       <p>解約：希望日の７日前までに申し出ることとします。</p>
     </div>
 
@@ -476,23 +633,49 @@
       </ul>
     </div>
 
-    <!-- ========== 署名欄 ========== -->
-    <div class="consent-signature fade-in">
-      <p>ファシリテーター及びクライアントは、本書2通に署名押印又は記名捺印を行うことで、本同意書の内容に合意したこととし、各自各1通を保管します。</p>
+    <!-- ========== 同意・決済セクション ========== -->
+    <div class="terms-action fade-in">
+      <p class="terms-action__label">Consent &amp; Payment</p>
 
-      <p style="margin-top: 2rem; color: var(--text-secondary);">２０２6年　　　月　　　日</p>
+      <label class="terms-checkbox">
+        <input type="checkbox" id="agreeCheck">
+        <span class="terms-checkbox__label">上記の利用規約の内容をすべて確認し、同意します。</span>
+      </label>
 
-      <div class="consent-signature__block" style="margin-top: 2.5rem;">
-        <p><strong>実存科学研究所</strong></p>
-        <p>電話番号：08041171774</p>
-        <p>住所：270-2252 千葉県松戸市千駄堀1484-64</p>
-        <p>ファシリテーター名：箭内宏紀　　　　印</p>
-      </div>
+      <p class="terms-action__date" id="agreeDate"></p>
 
-      <div class="consent-signature__block">
-        <p><strong>クライアント</strong></p>
-        <p>住所：</p>
-        <p>氏名：　　　　　　　　　　　　　　　印</p>
+      <!-- 決済ボタン群 -->
+      <div class="terms-payment" id="paymentBlock">
+        <div class="terms-payment__group">
+          <p class="terms-payment__heading">一括決済</p>
+          <a href="https://buy.stripe.com/fZu7sDdP49ljb2EdFP3ks01" target="_blank" rel="noopener noreferrer" class="terms-payment__btn">クレジットカードで支払う（550,000円） &rarr;</a>
+        </div>
+
+        <div class="terms-payment__divider">
+          <span>または</span>
+        </div>
+
+        <div class="terms-payment__group">
+          <p class="terms-payment__heading">分割決済（2回払い）</p>
+          <a href="https://buy.stripe.com/fZu7sDdP4fJH8Uw6dn3ks02" target="_blank" rel="noopener noreferrer" class="terms-payment__btn terms-payment__btn--split">1回目：300,000円 &rarr;</a>
+          <a href="https://buy.stripe.com/6oU28j8uKeFDb2EgS13ks03" target="_blank" rel="noopener noreferrer" class="terms-payment__btn terms-payment__btn--split">2回目：250,000円 &rarr;</a>
+        </div>
+
+        <div class="terms-payment__divider">
+          <span>または</span>
+        </div>
+
+        <div class="terms-payment__group">
+          <p class="terms-payment__heading">銀行振込</p>
+          <div class="consent-bank">
+            <p>楽天銀行</p>
+            <p>支店：リズム支店（209）</p>
+            <p>口座番号：4291910</p>
+            <p>ヤナイヒロキ</p>
+            <p style="margin-top: 0.8rem;"><strong>振込金額：550,000円（税込）</strong></p>
+          </div>
+          <p class="note">※ 振込手数料はクライアントのご負担となります。</p>
+        </div>
       </div>
     </div>
 
@@ -555,6 +738,44 @@
 </footer>
 
   <script src="../js/main.min.js?v=13"></script>
+  <script>
+    (function () {
+      // === 契約期間の自動日付（第4条） ===
+      var now = new Date();
+      var y = now.getFullYear();
+      var m = now.getMonth(); // 0-indexed
+      var d = now.getDate();
+      var startEl = document.getElementById('contractStart');
+      var endEl = document.getElementById('contractEnd');
+      if (startEl && endEl) {
+        startEl.textContent = y + '年' + (m + 1) + '月' + d + '日';
+        endEl.textContent = (y + 1) + '年' + (m + 1) + '月' + d + '日';
+      }
+
+      // === 同意チェック → 決済ボタン表示 ===
+      var cb = document.getElementById('agreeCheck');
+      var dateEl = document.getElementById('agreeDate');
+      var payBlock = document.getElementById('paymentBlock');
+
+      if (cb && payBlock) {
+        cb.addEventListener('change', function () {
+          if (cb.checked) {
+            payBlock.classList.add('is-visible');
+            var t = new Date();
+            var ty = t.getFullYear();
+            var tm = ('0' + (t.getMonth() + 1)).slice(-2);
+            var td = ('0' + t.getDate()).slice(-2);
+            var th = ('0' + t.getHours()).slice(-2);
+            var tmin = ('0' + t.getMinutes()).slice(-2);
+            if (dateEl) dateEl.textContent = '同意日時：' + ty + '年' + tm + '月' + td + '日 ' + th + ':' + tmin;
+          } else {
+            payBlock.classList.remove('is-visible');
+            if (dateEl) dateEl.textContent = '';
+          }
+        });
+      }
+    })();
+  </script>
   <!-- Search Modal -->
   <div class="search-overlay">
     <div class="search-modal"><button class="search-close" aria-label="閉じる">&times;</button>
