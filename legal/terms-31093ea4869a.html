@@ -32,32 +32,6 @@
     p { margin-bottom: 1rem; text-align: justify; }
     strong { font-weight: 700; }
 
-    /* ===== プログレスバー ===== */
-    .terms-progress {
-      margin-bottom: 2.5rem;
-      padding: 1.2rem 1.5rem;
-      background: rgba(192,168,120,0.04);
-      border: 1px solid var(--border);
-    }
-    .terms-progress__text {
-      font-size: var(--fs-small);
-      color: var(--text-secondary);
-      margin-bottom: 0.6rem;
-      font-family: var(--font-sans);
-    }
-    .terms-progress__bar {
-      width: 100%;
-      height: 4px;
-      background: rgba(255,255,255,0.06);
-      overflow: hidden;
-    }
-    .terms-progress__fill {
-      height: 100%;
-      width: 0%;
-      background: linear-gradient(90deg, var(--accent), #d4b878);
-      transition: width 0.5s ease;
-    }
-
     /* ===== アコーディオンカード ===== */
     .tc {
       margin-bottom: 1rem;
@@ -65,9 +39,6 @@
       background: rgba(12,10,22,0.85);
       backdrop-filter: blur(8px);
       transition: border-color 0.3s ease;
-    }
-    .tc.is-confirmed {
-      border-color: rgba(192,168,120,0.35);
     }
     .tc__header {
       display: flex;
@@ -84,17 +55,6 @@
       color: var(--text);
       letter-spacing: 0.02em;
       flex: 1;
-    }
-    .tc__status {
-      font-size: 0.75rem;
-      font-family: var(--font-sans);
-      letter-spacing: 0.1em;
-      color: var(--text-secondary);
-      white-space: nowrap;
-      transition: color 0.3s ease;
-    }
-    .tc.is-confirmed .tc__status {
-      color: var(--accent);
     }
     .tc__icon {
       width: 20px;
@@ -125,43 +85,6 @@
     .tc__content ol li { margin-bottom: 0.6em; padding-left: 2.2em; position: relative; counter-increment: clause; line-height: 2; }
     .tc__content ol li::before { content: "（" counter(clause) "）"; position: absolute; left: 0; color: var(--text-secondary); font-size: var(--fs-small); }
 
-    .tc__confirm {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      margin-top: 1rem;
-      padding: 0.8rem 1rem;
-      background: rgba(192,168,120,0.06);
-      border: 1px solid rgba(192,168,120,0.12);
-      cursor: pointer;
-      transition: background 0.3s ease, border-color 0.3s ease;
-    }
-    .tc__confirm:hover { background: rgba(192,168,120,0.1); }
-    .tc__confirm.is-checked { background: rgba(192,168,120,0.1); border-color: rgba(192,168,120,0.3); }
-    .tc__confirm-icon {
-      width: 20px;
-      height: 20px;
-      min-width: 20px;
-      border: 1px solid var(--color-gold-a40);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
-      color: transparent;
-      transition: all 0.3s ease;
-    }
-    .tc__confirm.is-checked .tc__confirm-icon {
-      border-color: var(--accent);
-      background: var(--color-gold-a15);
-      color: var(--accent);
-    }
-    .tc__confirm-text {
-      font-size: var(--fs-small);
-      color: var(--text-secondary);
-      font-family: var(--font-sans);
-    }
-    .tc__confirm.is-checked .tc__confirm-text { color: var(--accent); }
-
     /* ===== 銀行情報カード ===== */
     .consent-bank {
       margin: 1rem 0;
@@ -177,9 +100,7 @@
       margin-top: 3rem;
       padding-top: 2.5rem;
       border-top: 2px solid var(--accent);
-      display: none;
     }
-    .terms-payment-section.is-visible { display: block; }
 
     .terms-payment-section__label {
       font-family: var(--font-serif-en);
@@ -364,19 +285,11 @@
       本同意書は「天命の言語化セッション™︎」を提供するファシリテーターと、そのクライアントとのすべての関係に適用します。各条項をご確認ください。
     </p>
 
-    <!-- プログレスバー -->
-    <div class="terms-progress">
-      <p class="terms-progress__text"><span id="progressCount">0</span> / <span id="progressTotal">0</span> 確認済み</p>
-      <div class="terms-progress__bar">
-        <div class="terms-progress__fill" id="progressFill"></div>
-      </div>
-    </div>
-
     <!-- ===== 第１条 ===== -->
-    <div class="tc" data-tc>
+    <div class="tc">
       <div class="tc__header">
         <span class="tc__title">第１条（定義）</span>
-        <span class="tc__status">未確認</span>
+
         <span class="tc__icon">+</span>
       </div>
       <div class="tc__body">
@@ -384,16 +297,16 @@
           <p>ファシリテーターとは、クライアントに対し「天命の言語化セッション™︎」を提供する者をいいます。</p>
           <p>クライアントとは、「天命の言語化セッション™︎」を受けるための申込みをし、ファシリテーターが「天命の言語化セッション™︎」を提供することを承認した者をいいます。</p>
           <p>「天命の言語化セッション™︎」のサービスを提供することを「セッション」といいます。</p>
-          <div class="tc__confirm" data-confirm><span class="tc__confirm-icon">✓</span><span class="tc__confirm-text">確認しました</span></div>
+
         </div>
       </div>
     </div>
 
     <!-- ===== 第２条 ===== -->
-    <div class="tc" data-tc>
+    <div class="tc">
       <div class="tc__header">
         <span class="tc__title">第２条（契約期間中の提供内容）</span>
-        <span class="tc__status">未確認</span>
+
         <span class="tc__icon">+</span>
       </div>
       <div class="tc__body">
@@ -408,16 +321,16 @@
             <li>「天命の饗宴」として国内外にて開催されるオフライン・イベントの参加権利をお渡しします。その際、参加費用は都度、別途徴収とします。開催時期は未定で諸般の事情が整ったのちに告知されるものとします。</li>
             <li>満足保証としてクライアントは本項の提供内容の改善点を何度でもファシリテーターにリクエストできるものとします（ファシリテーターはリクエストに誠実に向き合います。クライアントは自分のリクエストが叶えられない場合があることにも合意します）。</li>
           </ul>
-          <div class="tc__confirm" data-confirm><span class="tc__confirm-icon">✓</span><span class="tc__confirm-text">確認しました</span></div>
+
         </div>
       </div>
     </div>
 
     <!-- ===== 第３条 ===== -->
-    <div class="tc" data-tc>
+    <div class="tc">
       <div class="tc__header">
         <span class="tc__title">第３条（費用）</span>
-        <span class="tc__status">未確認</span>
+
         <span class="tc__icon">+</span>
       </div>
       <div class="tc__body">
@@ -433,47 +346,47 @@
           </div>
           <p>振込手数料等の支払いに関する費用は、全てクライアントの負担になります。</p>
           <p>費用には交通費、宿泊費、食費、またそれに準ずる費用や、「天命の言語化セッション™︎」がオンラインで開催される場合の接続費用や接続機器については含まれません。これらについては、クライアントの負担になります。</p>
-          <div class="tc__confirm" data-confirm><span class="tc__confirm-icon">✓</span><span class="tc__confirm-text">確認しました</span></div>
+
         </div>
       </div>
     </div>
 
     <!-- ===== 第４条 ===== -->
-    <div class="tc" data-tc>
+    <div class="tc">
       <div class="tc__header">
         <span class="tc__title">第４条（契約期間）</span>
-        <span class="tc__status">未確認</span>
+
         <span class="tc__icon">+</span>
       </div>
       <div class="tc__body">
         <div class="tc__content">
           <p>契約期間：<span id="contractStart"></span> 〜 <span id="contractEnd"></span></p>
           <p>解約：希望日の７日前までに申し出ることとします。</p>
-          <div class="tc__confirm" data-confirm><span class="tc__confirm-icon">✓</span><span class="tc__confirm-text">確認しました</span></div>
+
         </div>
       </div>
     </div>
 
     <!-- ===== 第５条 ===== -->
-    <div class="tc" data-tc>
+    <div class="tc">
       <div class="tc__header">
         <span class="tc__title">第５条（機密情報）</span>
-        <span class="tc__status">未確認</span>
+
         <span class="tc__icon">+</span>
       </div>
       <div class="tc__body">
         <div class="tc__content">
           <p>本同意書において、「機密情報」とは、個人が特定される形でのファシリテーターから「天命の言語化セッション™︎」を受けている事実、及び「天命の言語化セッション™︎」のセッションの中で、クライアントから話された全ての情報（例えば、対話の内容、目標達成の状況、クライアントの資産に関する情報、クライアントをとりまく環境〔家庭、勤務先〕に関する情報など）をいいます。</p>
-          <div class="tc__confirm" data-confirm><span class="tc__confirm-icon">✓</span><span class="tc__confirm-text">確認しました</span></div>
+
         </div>
       </div>
     </div>
 
     <!-- ===== 第６条 ===== -->
-    <div class="tc" data-tc>
+    <div class="tc">
       <div class="tc__header">
         <span class="tc__title">第６条（ファシリテーターの守秘義務）</span>
-        <span class="tc__status">未確認</span>
+
         <span class="tc__icon">+</span>
       </div>
       <div class="tc__body">
@@ -489,32 +402,32 @@
             <li>書面により事前にクライアントの同意を得た情報</li>
             <li>法令、規則、命令等に基づいて官公庁、裁判所等の公的機関から開示の要求を受けた情報、裁判所、行政機関、地域包括支援センター、児童相談所等に対し、法令によって通報が義務付けられているとファシリテーターが判断した情報</li>
           </ol>
-          <div class="tc__confirm" data-confirm><span class="tc__confirm-icon">✓</span><span class="tc__confirm-text">確認しました</span></div>
+
         </div>
       </div>
     </div>
 
     <!-- ===== 第７条 ===== -->
-    <div class="tc" data-tc>
+    <div class="tc">
       <div class="tc__header">
         <span class="tc__title">第７条（本同意書の変更）</span>
-        <span class="tc__status">未確認</span>
+
         <span class="tc__icon">+</span>
       </div>
       <div class="tc__body">
         <div class="tc__content">
           <p>ファシリテーターは、本同意書を必要に応じて変更、追加、削除することができるものとし、この場合には、電子メールによるお知らせ、口頭によるお知らせ、ホームページヘの掲示その他ファシリテーターが合理的と考える方法によりクライアントに通知します。</p>
           <p>本同意書に変更がなされたことが通知された後にクライアントが「天命の言語化セッション™︎」の提供を受けることを継続した場合は、本同意書の変更を承諾したものとみなします。</p>
-          <div class="tc__confirm" data-confirm><span class="tc__confirm-icon">✓</span><span class="tc__confirm-text">確認しました</span></div>
+
         </div>
       </div>
     </div>
 
     <!-- ===== 第８条 ===== -->
-    <div class="tc" data-tc>
+    <div class="tc">
       <div class="tc__header">
         <span class="tc__title">第８条（契約内容）</span>
-        <span class="tc__status">未確認</span>
+
         <span class="tc__icon">+</span>
       </div>
       <div class="tc__body">
@@ -525,32 +438,32 @@
           <p>ファシリテーターは、クライアントに対し、第４条に定められた契約期間中に消化されなかったセッション分のセッション料を返金することはないものとします。</p>
           <p>クライアントは、第４条に定められた期間中において「天命の言語化セッション™︎」の提供を受けることを休止したいときには、セッション終了後１ヶ月以内に申出を行うことにより、最大３ヶ月までの休止をすることができるものとします。なお、クライアントから休止の申出がなくクライアントが２ヶ月以上「天命の言語化セッション™︎」の提供を受けなくなったときには、クライアントが「天命の言語化セッション™︎」の提供を受ける権利を放棄したものとみなし、クライアントは料金の返還その他一切の請求ができないものとします。</p>
           <p>「天命の言語化セッション™︎」の個人セッションの役務提供は各回２時間とし、時間の超過が起きないように最大限に双方が配慮するものとします（ファシリテーターから注意がされたにも関わらず、クライアントの都合で複数回の時間超過が起こる場合は、注意（1回目）、警告（2回目）、契約解除（３回目）の対応を行います）。</p>
-          <div class="tc__confirm" data-confirm><span class="tc__confirm-icon">✓</span><span class="tc__confirm-text">確認しました</span></div>
+
         </div>
       </div>
     </div>
 
     <!-- ===== 第９条 ===== -->
-    <div class="tc" data-tc>
+    <div class="tc">
       <div class="tc__header">
         <span class="tc__title">第９条（クーリング・オフについて）</span>
-        <span class="tc__status">未確認</span>
+
         <span class="tc__icon">+</span>
       </div>
       <div class="tc__body">
         <div class="tc__content">
           <p class="note" style="margin-bottom: 1em;">※この条項は法人契約の方には適用がありません</p>
           <p>申込日から8日間は、特定記録郵便または簡易書留などの書面又は電子メールでの申し出により申し込みのキャンセルをすることができます。お申し込みをキャンセルされた場合、既払金は速やかに指定の口座に返金させていただきます。ご契約いただく契約内容が特定商取引に関する法律の適用を受ける場合には、この契約書と＜別紙＞を十分お読みください。</p>
-          <div class="tc__confirm" data-confirm><span class="tc__confirm-icon">✓</span><span class="tc__confirm-text">確認しました</span></div>
+
         </div>
       </div>
     </div>
 
     <!-- ===== 第１０条 ===== -->
-    <div class="tc" data-tc>
+    <div class="tc">
       <div class="tc__header">
         <span class="tc__title">第１０条（知的財産権等の侵害の禁止）</span>
-        <span class="tc__status">未確認</span>
+
         <span class="tc__icon">+</span>
       </div>
       <div class="tc__body">
@@ -565,31 +478,31 @@
             <li>ノウハウ、ツール等の内容を不特定又は多数人に告知すること（個人にノウハウを教える、伝授することも含む）</li>
             <li>その他前各号に該当するおそれのある行為又はこれに類する行為</li>
           </ol>
-          <div class="tc__confirm" data-confirm><span class="tc__confirm-icon">✓</span><span class="tc__confirm-text">確認しました</span></div>
+
         </div>
       </div>
     </div>
 
     <!-- ===== 第１１条 ===== -->
-    <div class="tc" data-tc>
+    <div class="tc">
       <div class="tc__header">
         <span class="tc__title">第１１条（録音）</span>
-        <span class="tc__status">未確認</span>
+
         <span class="tc__icon">+</span>
       </div>
       <div class="tc__body">
         <div class="tc__content">
           <p>クライアントは、ファシリテーターがサービスの品質向上のために必要に応じて「天命の言語化セッション™︎」の内容を録音すること、ファシリテーターが当該録音内容を特定の個人、企業が識別不能な形に加工し、分析、研究（社外公表を含む）、商品開発その他の目的で利用することをあらかじめ承諾します。</p>
-          <div class="tc__confirm" data-confirm><span class="tc__confirm-icon">✓</span><span class="tc__confirm-text">確認しました</span></div>
+
         </div>
       </div>
     </div>
 
     <!-- ===== 第１２条 ===== -->
-    <div class="tc" data-tc>
+    <div class="tc">
       <div class="tc__header">
         <span class="tc__title">第１２条（損害賠償）</span>
-        <span class="tc__status">未確認</span>
+
         <span class="tc__icon">+</span>
       </div>
       <div class="tc__body">
@@ -597,62 +510,62 @@
           <p>ファシリテーターは「天命の言語化セッション™︎」に際し発生したクライアントの損害に対して、ファシリテーターに故意又は重過失がある場合に限り責任を負うものとします。ファシリテーターが責任を負う場合の損害賠償額は、既に支払われた「天命の言語化セッション™︎」の料金を上限とします（クライアント自身の意思決定に基づく過失や損害に対しては一切の責任を負いません）。</p>
           <p>クライアントが本同意書に反した行為又は不正もしくは違法な行為によってファシリテーターに損害を与えた場合、ファシリテーターは当該クライアントに対して損害賠償の請求を行うことができるものとします。</p>
           <p>ファシリテーターがクライアントの「天命の言語化セッション™︎」の提供を受ける権利を取消又はノウハウやツール等の返還を求めたことにつき、ファシリテーターは事由のいかんを問わず一切の損害賠償義務及び料金の返還義務を負わないものとします。</p>
-          <div class="tc__confirm" data-confirm><span class="tc__confirm-icon">✓</span><span class="tc__confirm-text">確認しました</span></div>
+
         </div>
       </div>
     </div>
 
     <!-- ===== 第１３条 ===== -->
-    <div class="tc" data-tc>
+    <div class="tc">
       <div class="tc__header">
         <span class="tc__title">第１３条（解約について）</span>
-        <span class="tc__status">未確認</span>
+
         <span class="tc__icon">+</span>
       </div>
       <div class="tc__body">
         <div class="tc__content">
           <p>クライアントが「天命の言語化セッション™︎」の提供を受ける前に解約する場合、解約の手続きを行い、かつノウハウやツール等を返却するものとします。</p>
           <p>クライアントが第４条に定められた期間を終了する前に「天命の言語化セッション™︎」の提供を解約する場合、速やかにその旨の申出を行うものとします。このとき第２条に記載された提供物の未消化分の料金の返還請求はできないものとします。</p>
-          <div class="tc__confirm" data-confirm><span class="tc__confirm-icon">✓</span><span class="tc__confirm-text">確認しました</span></div>
+
         </div>
       </div>
     </div>
 
     <!-- ===== 第１４条 ===== -->
-    <div class="tc" data-tc>
+    <div class="tc">
       <div class="tc__header">
         <span class="tc__title">第１４条（法律の適用、公序良俗の遵守）</span>
-        <span class="tc__status">未確認</span>
+
         <span class="tc__icon">+</span>
       </div>
       <div class="tc__body">
         <div class="tc__content">
           <p>クライアントは、日本国の法令に従うものとします。また、クライアントの言動が、公序良俗に反する場合、日本国の法令に抵触する場合、ファシリテーターは本クライアントヘの「天命の言語化セッション™︎」の提供を直ちに停止することができます。またこのとき、「天命の言語化セッション™︎」の料金の返還請求はできないものとします。</p>
-          <div class="tc__confirm" data-confirm><span class="tc__confirm-icon">✓</span><span class="tc__confirm-text">確認しました</span></div>
+
         </div>
       </div>
     </div>
 
     <!-- ===== 第１５条 ===== -->
-    <div class="tc" data-tc>
+    <div class="tc">
       <div class="tc__header">
         <span class="tc__title">第１５条（合意管轄）</span>
-        <span class="tc__status">未確認</span>
+
         <span class="tc__icon">+</span>
       </div>
       <div class="tc__body">
         <div class="tc__content">
           <p>ファシリテーターとクライアントとの間で紛争が生じた場合、千葉地方裁判所松戸支部を専属的合意管轄裁判所とします。</p>
-          <div class="tc__confirm" data-confirm><span class="tc__confirm-icon">✓</span><span class="tc__confirm-text">確認しました</span></div>
+
         </div>
       </div>
     </div>
 
     <!-- ===== 確認事項 ===== -->
-    <div class="tc" data-tc>
+    <div class="tc">
       <div class="tc__header">
         <span class="tc__title">お申込みにあたっての確認事項</span>
-        <span class="tc__status">未確認</span>
+
         <span class="tc__icon">+</span>
       </div>
       <div class="tc__body">
@@ -700,16 +613,16 @@
             <li>天災、戦争、暴動等の不可抗力により提供ができなくなった場合</li>
             <li>運営上、一時的に中断を必要と判断した場合</li>
           </ul>
-          <div class="tc__confirm" data-confirm><span class="tc__confirm-icon">✓</span><span class="tc__confirm-text">確認しました</span></div>
+
         </div>
       </div>
     </div>
 
     <!-- ===== 別紙 ===== -->
-    <div class="tc" data-tc>
+    <div class="tc">
       <div class="tc__header">
         <span class="tc__title">＜別紙＞クーリングオフのお知らせ</span>
-        <span class="tc__status">未確認</span>
+
         <span class="tc__icon">+</span>
       </div>
       <div class="tc__body">
@@ -723,15 +636,14 @@
             <li>役務の提供に伴い、工作物の現状が変更された場合には、無料で元の状態にもどすよう請求することができること</li>
           </ul>
           <p>３　クライアントが、第１項のクーリングオフ期間経過後の解約を願い出た場合については、第３条に定める費用の残債の支払いを免れない。</p>
-          <div class="tc__confirm" data-confirm><span class="tc__confirm-icon">✓</span><span class="tc__confirm-text">確認しました</span></div>
+
         </div>
       </div>
     </div>
 
     <!-- ===== 決済セクション ===== -->
-    <div class="terms-payment-section" id="paymentSection">
+    <div class="terms-payment-section">
       <p class="terms-payment-section__label">Payment</p>
-      <p class="terms-payment-section__date" id="consentDate"></p>
 
       <div class="terms-payment__group">
         <p class="terms-payment__heading">一括決済</p>
@@ -807,49 +719,13 @@
     if (s) s.textContent = y + '年' + (m + 1) + '月' + d + '日';
     if (e) e.textContent = (y + 1) + '年' + (m + 1) + '月' + d + '日';
 
-    // === アコーディオン + 確認ロジック ===
-    var cards = document.querySelectorAll('[data-tc]');
-    var total = cards.length;
-    var confirmed = 0;
-    var progressCount = document.getElementById('progressCount');
-    var progressTotal = document.getElementById('progressTotal');
-    var progressFill = document.getElementById('progressFill');
-    var paymentSection = document.getElementById('paymentSection');
-    var consentDate = document.getElementById('consentDate');
-
-    if (progressTotal) progressTotal.textContent = total;
-
-    function updateProgress() {
-      confirmed = document.querySelectorAll('.tc.is-confirmed').length;
-      if (progressCount) progressCount.textContent = confirmed;
-      if (progressFill) progressFill.style.width = (confirmed / total * 100) + '%';
-
-      if (confirmed === total) {
-        paymentSection.classList.add('is-visible');
-        var t = new Date();
-        var ty = t.getFullYear();
-        var tm = ('0' + (t.getMonth() + 1)).slice(-2);
-        var td = ('0' + t.getDate()).slice(-2);
-        var th = ('0' + t.getHours()).slice(-2);
-        var tmin = ('0' + t.getMinutes()).slice(-2);
-        if (consentDate) consentDate.textContent = '全条項確認・同意日時：' + ty + '年' + tm + '月' + td + '日 ' + th + ':' + tmin;
-      } else {
-        paymentSection.classList.remove('is-visible');
-        if (consentDate) consentDate.textContent = '';
-      }
-    }
-
-    cards.forEach(function (card) {
+    // === アコーディオン開閉 ===
+    document.querySelectorAll('.tc').forEach(function (card) {
       var header = card.querySelector('.tc__header');
       var body = card.querySelector('.tc__body');
       var content = card.querySelector('.tc__content');
-      var confirmBtn = card.querySelector('[data-confirm]');
-      var status = card.querySelector('.tc__status');
-
-      // アコーディオン開閉
       header.addEventListener('click', function () {
-        var isOpen = card.classList.contains('is-open');
-        if (isOpen) {
+        if (card.classList.contains('is-open')) {
           card.classList.remove('is-open');
           body.style.maxHeight = '0';
         } else {
@@ -857,39 +733,6 @@
           body.style.maxHeight = content.scrollHeight + 40 + 'px';
         }
       });
-
-      // 確認ボタン
-      if (confirmBtn) {
-        confirmBtn.addEventListener('click', function (ev) {
-          ev.stopPropagation();
-          var isChecked = confirmBtn.classList.contains('is-checked');
-          if (isChecked) {
-            confirmBtn.classList.remove('is-checked');
-            card.classList.remove('is-confirmed');
-            status.textContent = '未確認';
-          } else {
-            confirmBtn.classList.add('is-checked');
-            card.classList.add('is-confirmed');
-            status.textContent = '✓ 確認済';
-            // 自動で閉じて次を開く
-            setTimeout(function () {
-              card.classList.remove('is-open');
-              body.style.maxHeight = '0';
-              // 次の未確認カードを開く
-              var next = card.nextElementSibling;
-              while (next && !next.hasAttribute('data-tc')) next = next.nextElementSibling;
-              if (next && !next.classList.contains('is-confirmed')) {
-                next.classList.add('is-open');
-                var nb = next.querySelector('.tc__body');
-                var nc = next.querySelector('.tc__content');
-                if (nb && nc) nb.style.maxHeight = nc.scrollHeight + 40 + 'px';
-                next.scrollIntoView({ behavior: 'smooth', block: 'start' });
-              }
-            }, 300);
-          }
-          updateProgress();
-        });
-      }
     });
   })();
   </script>
