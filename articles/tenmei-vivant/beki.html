@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-vivant/beki.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="箭内宏紀">
+  <title>ノゴーン・ベキのMeta ── 自由意志なき世界の天命論 | 実存科学研究所</title>
+  <meta name="description" content="ドラマ『VIVANT』のノゴーン・ベキ（乃木卓）を、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。復讐は目的ではなかった。明美の声を聞き続けるための装置だった。">
+  <meta property="og:title" content="ノゴーン・ベキのMeta ── 自由意志なき世界の天命論 | 実存科学研究所">
+  <meta property="og:description" content="ドラマ『VIVANT』のノゴーン・ベキ（乃木卓）を、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。復讐は目的ではなかった。明美の声を聞き続けるための装置だった。">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="実存科学研究所">
+  <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+  <meta property="og:url" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-vivant/beki.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"></noscript>
+  <link rel="stylesheet" href="../../css/style.min.css?v=41">
+
+<style>
+/* =============================================
+   視認性・読みやすさ強化CSS
+   ============================================= */
+
+/* === 1. 章見出し — 中央配置＋装飾 === */
+h2.chapter-heading {
+  font-size: var(--fs-section);
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  color: var(--color-text-primary);
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  position: relative;
+  padding-top: 2rem;
+}
+h2.chapter-heading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 1px;
+  background: var(--color-gold);
+}
+h2.chapter-heading::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(192,168,120,0.5), transparent);
+  margin: 1.2rem auto 0;
+}
+.chapter-number {
+  display: block;
+  font-family: var(--font-serif-en);
+  font-size: var(--fs-caption);
+  font-weight: 400;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 0.6rem;
+}
+
+/* === 2. 区切り線 — 装飾付き === */
+hr {
+  border: none;
+  height: auto;
+  background: none;
+  margin: 4.5rem 0;
+  text-align: center;
+  overflow: visible;
+}
+hr::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(192,168,120,0.08) 15%, rgba(192,168,120,0.2) 50%, rgba(192,168,120,0.08) 85%, transparent 100%);
+}
+hr::after {
+  content: "\25C6";
+  display: block;
+  font-size: 0.5rem;
+  color: rgba(192,168,120,0.3);
+  margin-top: -0.35em;
+  letter-spacing: 1em;
+  line-height: 1;
+}
+
+/* === 4. text-panel の単調さ解消 === */
+section > .text-panel:nth-of-type(even) {
+  background: rgba(8, 6, 16, 0.45);
+  border-color: transparent;
+}
+section > .text-panel:nth-of-type(even)::before {
+  display: none;
+}
+
+/* === 5. highlight-block の存在感微増 === */
+.highlight-block {
+  background: rgba(192,168,120,0.06);
+  border-left: 2px solid;
+  border-image: linear-gradient(180deg, var(--color-gold) 0%, rgba(192,168,120,0.15) 100%) 1;
+  padding: 2rem 2rem 2rem 2.2rem;
+  margin: 2.5rem 0;
+}
+.highlight-block p {
+  font-size: var(--fs-lead);
+  font-weight: 500;
+  line-height: 2.2;
+  color: var(--color-text-primary);
+}
+
+/* === 6. セクション見出し（h3） === */
+h3.section-heading {
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  color: var(--color-text-body);
+  letter-spacing: 0.08em;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1.2rem;
+  border-left: 2px solid rgba(192,168,120,0.4);
+  line-height: 1.6;
+}
+
+/* === Profiling Block === */
+.profiling-block {
+  background: rgba(15,12,25,0.5);
+  border: 1px solid rgba(192,168,120,0.1);
+  padding: 2.5rem 2rem;
+  margin: 2rem 0;
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+.profiling-block::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(192,168,120,0.4), transparent);
+}
+.profiling-block h3 {
+  font-size: var(--fs-body);
+  color: var(--color-gold);
+  letter-spacing: 0.15em;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(192,168,120,0.1);
+}
+.profiling-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+.profiling-block ul li {
+  margin-bottom: 1rem;
+  color: var(--color-text-reading);
+  font-size: var(--fs-body);
+  line-height: 1.9;
+  padding-left: 1.6em;
+  position: relative;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(192,168,120,0.04);
+}
+.profiling-block ul li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.profiling-block ul li::before {
+  content: "\2500\2500";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgba(192,168,120,0.35);
+  font-size: 0.75em;
+}
+.profiling-block p {
+  color: var(--color-text-reading);
+  font-size: var(--fs-body);
+  line-height: 1.9;
+  margin-bottom: 1rem;
+}
+.profiling-block p:last-child {
+  margin-bottom: 0;
+}
+
+/* === Author Block === */
+.author-block {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(192,168,120,0.15);
+}
+.author-block p { font-size: var(--fs-body); color: var(--color-text-reading); line-height: 2; }
+.author-block strong { color: var(--color-text-body); }
+
+/* === Source Note === */
+.source-note {
+  margin-top: 2rem;
+  font-size: var(--fs-small);
+  color: rgba(235,232,225,0.35);
+}
+
+/* === Speaker Colors === */
+.speaker-yanai { color: var(--color-gold); font-weight: 600; }
+.speaker-beki { color: #b8a0d8; font-weight: 600; }
+
+/* === 7. モバイル対応 === */
+@media (max-width: 600px) {
+  h2.chapter-heading {
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    padding-top: 1.5rem;
+  }
+  .chapter-number {
+    font-size: var(--fs-micro);
+    letter-spacing: 0.25em;
+    margin-bottom: 0.4rem;
+  }
+  h3.section-heading {
+    font-size: var(--fs-lead);
+    margin-top: 2rem;
+    padding-left: 1rem;
+  }
+  hr { margin: 3rem 0; }
+  .profiling-block { padding: 1.5rem 1.2rem; }
+  .highlight-block { padding: 1.5rem 1.2rem 1.5rem 1.4rem; }
+  .text-panel { padding: 2rem 1.5rem; }
+}
+@media (max-width: 480px) {
+  .text-panel p br,
+  .pull-quote p br,
+  .highlight-block p br,
+  .def-box p br,
+
+  h2.chapter-heading { font-size: var(--fs-h3); }
+}
+</style>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="../../index.html" class="site-logo">実存科学研究所</a>
+      <button class="search-toggle" aria-label="検索"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+            <nav class="global-nav">
+        <a href="../../index.html">Top</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">The Meta</button>
+          <div class="nav-dropdown__menu">
+            <a href="../../beginner.html">はじめての方へ</a>
+            <a href="../../lp.html">ダークサイド診断</a>
+            <a href="../../omoidasu/">身体的知性診断</a>
+          </div>
+        </div>
+        <a href="../../session.html">Session</a>
+        <a href="../../founder.html">Founder</a>
+        <a href="../../specials.html">Specials</a>
+      </nav>
+    </div>
+  </header>
+  <div class="reading-progress"></div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="パンくずリスト">
+        <ol class="breadcrumb__list">
+          <li class="breadcrumb__item"><a href="../../index.html" class="breadcrumb__link">TOP</a></li>
+          <li class="breadcrumb__item"><a href="../../specials.html" class="breadcrumb__link">Specials</a></li>
+          <li class="breadcrumb__item"><a href="./" class="breadcrumb__link">VIVANT篇</a></li>
+          <li class="breadcrumb__item"><span class="breadcrumb__current">ノゴーン・ベキのMeta</span></li>
+        </ol>
+      </nav>
+      <p class="page-hero__sub">VIVANT &times; Existential Science</p>
+      <h1 class="hero-title--shimmer">ノゴーン・ベキのMeta</h1>
+      <p class="page-hero__lead">自由意志なき世界の天命論<br>箭内宏紀｜実存科学研究所</p>
+    </div>
+  </section>
+
+  <main class="container article-page">
+
+    <!-- Inline TOC -->
+    <nav class="inline-toc fade-in" aria-label="目次">
+      <details open>
+        <summary>目次</summary>
+        <span class="reading-time"></span>
+        <ol id="inlineTocList"></ol>
+      </details>
+    </nav>
+
+    <!-- ========== ネタバレ注意 ========== -->
+    <div class="text-panel fade-in">
+      <p style="font-size:0.85rem; color:rgba(235,232,225,0.5); text-align:center;">※本稿は『VIVANT』全10話の重大なネタバレを含みます。未視聴の方はご注意ください。</p>
+    </div>
+
+    <!-- ========== 導入 ========== -->
+    <section class="fade-in">
+
+      <div class="text-panel fade-in">
+        <p>彼は銃に弾を入れなかった。</p>
+        <p>40年間、復讐だけを燃料にして生きてきた男が、復讐の最終地点に立った時、弾倉は空だった。</p>
+        <p>テロ組織テントの創設者。バルカ共和国で数百人の孤児を救った「緑の魔術師」。元警視庁公安部外事第1課の諜報員。</p>
+        <p>妻を拷問で失い、3歳の息子を人身売買で奪われ、祖国に存在ごと抹消された男──ノゴーン・ベキ、本名、乃木卓。</p>
+        <p>復讐の標的は特定されていた。40年前、救助ヘリを引き返させて家族を見捨てた元上司・上原史郎。名前も顔も地位も、全部わかっていた。探す必要すらなかった。</p>
+        <p>それなのに、40年間行かなかった。</p>
+        <p>そして最後の夜、ようやく行った。銃を持って。弾を入れずに。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>「息子に止めてほしかった」──そう語られることが多い。しかし私が見ているのは、その手前にある問いだ。</p>
+        <p>止めてほしかっただけなら、なぜ上原の家まで行ったのか。</p>
+        <p>40年間行かなかった場所に、なぜ今夜に限って行ったのか。</p>
+        <p>弾を入れなかったのは、いつの時点で決まったのか。</p>
+        <p>あの夜、乃木卓の内部で何かが変わった。</p>
+        <p>変えたのは、ベキ自身ではない。変えられないもの──Meta──が、彼を通してそうさせた。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>その問いの先に、天命がある。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== シャドウ・プロファイリング ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading fade-in"><span class="chapter-number">Shadow Profiling</span>シャドウ・プロファイリング</h2>
+
+      <div class="text-panel fade-in">
+        <p>本稿に入る前に、彼の深層心理を構造的にプロファイリングする。</p>
+        <p>これはドラマの表層的なキャラクター解説ではない。</p>
+        <p>彼の行動と選択のすべてを駆動している、無意識の構造の地図だ。</p>
+      </div>
+
+      <!-- Meta -->
+      <div class="profiling-block fade-in">
+        <h3>【Meta（変えられない前提条件）】</h3>
+        <ul>
+          <li>島根県奥出雲のたたら製鉄御三家・乃木家の次男。名門の血統を持つが、次男であるため家を継ぐことはできない。勉学に励み東京大学に合格、警視庁に入庁。表向きは第三機動隊だが、実態は公安部外事第1課──諜報員だった</li>
+          <li>1980年代初頭、バルカ共和国の内乱勃発の可能性を探るため、農業使節団を表向きの肩書としてバルカに潜入。妻の明美は公安の任務であることを知った上で同行。ノバク村の砂漠を緑地化する事業を成功させ、現地住民から「ノゴーン（緑の）ベキ（魔術師）」と呼ばれる英雄となる</li>
+          <li>1984年、バルカ内乱。当時の上司・上原史郎が救助ヘリを引き返させ、家族を見捨てた。さらに公安は「乃木卓という人間は存在しない」と回答し、国家が一つの家族の存在を完全に抹消した</li>
+          <li>妻・乃木明美が武装勢力に1ヶ月にわたる拷問を受け、獄死。死の間際の遺言──「憂助を探して」「復讐して…」。この二つの遺言が、ベキの40年間のすべてを規定している</li>
+          <li>3歳の息子・憂助が人身売買され、以後40年間消息不明。ベキは常に明美と幼い憂助の写真を携行し、テントのマークに乃木家の家紋を使い続けた</li>
+        </ul>
+      </div>
+
+      <!-- シャドウ -->
+      <div class="profiling-block fade-in">
+        <h3>【シャドウ（抑圧された本音）】</h3>
+        <ul>
+          <li>覆い方の類型：闇の抑圧＋偽装。「家族を守れなかった」という闇を、「テントのリーダー」「孤児たちの父」「復讐者」という三重の役割で偽装している。偽装が精巧すぎて、本人自身が「これが自分の生き方だ」と信じ込んでいる</li>
+          <li>S6「正しかったはずなのに痛い」：明美の遺言に従い復讐を追い続けたことは「正しい」はずだった──だが40年経っても痛みは消えない。正しさで蓋をしても、その下にある悲しみは腐らないまま残っている</li>
+          <li>S2「この役割を脱いだら空っぽだ」：テントのリーダーを降りたら、ノゴーン・ベキという人格そのものが消滅する──40年間の行動の全てが代償行動だったと認めることになる</li>
+          <li>核心：「私は家族を守れなかった人間だ」──この自己認識が、ベキの全行動を駆動している。テントの創設、孤児院の運営、復讐計画、そして「息子に撃たれることを望む」行為の全てが、この核心から派生している</li>
+          <li>非合理的信念：「明美の遺言を果たさなければ、明美は私を許さない」──しかし明美はもう一つの遺言「憂助を探して」も残している。二つのうち「復讐」だけを絶対化したのは、復讐が「行動」として明確であり、痛みを麻痺させる機能を持っていたからだ</li>
+          <li>深層の欲求：家族と共に穏やかに暮らしたい。ただそれだけ。ノバク村で明美と憂助と三人で過ごした日々──あれが、ベキが本当に望んでいた人生の全体だった</li>
+          <li>代償行動：①孤児の保護＝「憂助を守れなかった」への贖罪。全ての孤児が「もう一人の憂助」として機能している ②ノコルを息子として育てる＝失った憂助の代替 ③日本刀と家紋の保持＝日本を捨てきれない証拠 ④復讐計画＝痛みの麻痺装置。明美の声を聞き続けるための回路 ⑤「息子に撃たれる」ことを望む＝許しの渇望の変形</li>
+        </ul>
+      </div>
+
+      <!-- 乃木憂助との対比 -->
+      <div class="profiling-block fade-in">
+        <h3>【乃木憂助との対比】</h3>
+        <p style="font-size:0.85rem; color:#c0bbb4; margin-bottom:1.5rem; line-height:1.8;">同じ出来事（1984年のバルカ内乱）から傷を負った父と子。対処法が正反対だ。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-bottom:0.8rem;">ベキは「守れなかった」罪に駆動されて外に向かった──テロ、復讐、組織の構築。憂助は「見捨てられた」痛みに駆動されて内に向かった──人格の分裂、感情の凍結、別人格「F」の生成。ベキは復讐で痛みを麻痺させた。憂助は別人格で痛みを分離した。ベキはテントのマーク＝乃木家の家紋で日本を手放せなかった。憂助は神田明神への日課の参拝で日本を守ることに命を懸けた。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2;">最終的に二人は同じ場所に辿り着いた──「もう終わりにする」。ベキは銃に弾を入れず、憂助は急所を外して撃った。暴力を手放す方向への転換において、親子が鏡像的に同じ天命に触れている。</p>
+      </div>
+
+      <!-- ノコルとの対比 -->
+      <div class="profiling-block fade-in">
+        <h3>【ノコルとの対比】</h3>
+        <p style="font-size:0.85rem; color:#c0bbb4; margin-bottom:1.5rem; line-height:1.8;">「息子」という同じ役割を、血縁と非血縁から担った二人。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2; margin-bottom:0.8rem;">ノコルは兄を亡くし、飢えで瀕死の状態でベキに拾われた孤児だった。ベキはノコルに「この子は憂助だ」と重ねて引き取り、テントのNo.2に据え、白いデールを着せ、バルカの未来を託した。ノコルにとってベキは「父」そのものだった。だが憂助の出現は、その父子関係の構造を根底から揺さぶった。有能な実子の登場はNo.2の地位を脅かす脅威であり、ノコルは嫉妬と不安から憂助を冷遇した。しかし最終話、ノコルは涙をこらえながら憂助を「兄さん」と呼んだ──ベキが託した「兄弟」という構造を、血縁を超えて受け入れた瞬間だった。</p>
+        <p style="font-size:0.9rem; color:#c0bbb4; line-height:2.2;">ベキのシャドウの構造がここに鮮明に映る。ベキは憂助を「守れなかった」罪をノコルで埋めようとした。ノコルはその「代替の息子」であることを無意識に感じ取り、実子の出現に揺らいだ。ベキの代償行動が、もう一人の息子にまで構造的な痛みを連鎖させていた。</p>
+      </div>
+
+      <!-- 天命への転換点 -->
+      <div class="profiling-block fade-in">
+        <h3>【天命への転換点】</h3>
+        <ul>
+          <li>喪失：妻と息子の喪失。国家による存在の抹消。40年間の復讐が空砲に帰した瞬間</li>
+          <li>反転：銃に弾を入れなかったこと──それは復讐の放棄ではなく、40年間聞き間違えていた明美の声を、初めて正しく聞いた瞬間だった</li>
+          <li>天命の萌芽：「憂助に止められるなら、明美も許してくれるだろう」──復讐ではなく「託す」ことが天命であると、ベキ自身はまだ完全には言語化していない</li>
+        </ul>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== ブリッジ ========== -->
+    <section class="fade-in">
+      <div class="text-panel fade-in">
+        <p>──ここまでが、ベキの構造の地図だ。しかし、地図は地図でしかない。この構造が本人の口から、本人の声で露呈する瞬間を、見届けてほしい。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== セッション対話 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading fade-in"><span class="chapter-number">Session</span>天命の言語化セッション&trade;</h2>
+
+      <div class="session-dialogue fade-in">
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>ベキさん、セッションに来てくださってありがとうございます。あなたはあなたに何をプレゼントしてあげたいですか？</p>
+
+<p class="silence">（長い沈黙。ベキは椅子に深く座り、低い目線で箭内を見据えている。値踏みしているのではない。見通そうとしている）</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……プレゼント、か。</p>
+
+<p class="silence">（間。部屋の空気が重い）</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……ずいぶんと平和な問いだな。……私にプレゼントなど、40年考えたことがない。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、「40年考えたことがない」んですか？</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……そんなものを考えている暇がなかった。やらなければならないことがあった。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>「やらなければならないこと」とは、何のためだったんですか？</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……家族のためだ。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……最初から最後まで。明美のため。憂助のため。子どもたちのため。……それ以外に、何がある。</p>
+
+<p class="silence">（ベキが箭内の目を正面から見る。まるで「それで終わりだ」と告げるような目）</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……あんたは、私に何を言わせたいんだ。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……私の話を聞いたところで、何も変わらない。死んだ者は戻らない。壊れた家族は元に戻らない。……時間の無駄だ。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="silence">（ベキが立ち上がりかける。しかし、立ち上がらない。代わりに、視線を窓の外に移す）</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……バルカの風は、砂の匂いがした。……こんな小さな部屋にいると、息が詰まる。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="silence">（長い沈黙の後、ベキが静かに席に戻る。まだ腕を組んでいる。だが、先ほどより姿勢がわずかに緩んでいる）</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……まぁいい。……何が聞きたい。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、「家族のため」なんですか？</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……守った。あの砂漠で、私は子どもたちを守った。武装勢力に怯えて逃げ回っていた子どもたちに銃の撃ち方を教えた。村を守る仕事を請け負い、金を稼ぎ、孤児院を建てた。……ノコルを引き取り、息子として育てた。テントを作った。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、それほどまでに守ったんですか？</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……守れなかったからだ。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……明美を。……守れなかった。……ヘリが来た。目の前まで来た。あと少しだった。……上原が引き返させた。あの男が。……私は明美と憂助を乗せるはずだった。手を伸ばしていた。……ヘリが離れていった。明美が泣いていた。憂助が泣いていた。……私の手は、空を掴んだ。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>「空を掴んだ」？</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……あの瞬間から、私の手は何も掴めなくなった。……明美を掴めなかった。憂助を掴めなかった。……だから、もう二度と手放さないと決めた。子どもたちを。ノコルを。テントの仲間を。……握り続けた。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、握り続けたんですか？</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……もう一度手放したら、今度こそ何も残らないからだ。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……明美が死んだ。拷問で。1ヶ月だ。……あの女は私の秘密を最後まで守った。公安だと言わなかった。一言も。……そして最後にこう言った。「憂助を探して」と。……そして、もう一つ。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……「復讐して」と。</p>
+
+<p class="silence">（長い沈黙）</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……あれは遺言だ。死にゆく妻の、最後の言葉だ。……私はそれを果たすために生きてきた。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>「それを果たすために」？</p>
+
+<p class="silence">（ベキの目が、わずかに揺れる）</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……そうだ。……明美の遺言は二つあった。「憂助を探して」と「復讐して」だ。……私は……復讐のほうに、走った。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、そちらに走ったんですか？</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……憂助は見つからなかった。40年探した。砂漠を歩いた。人に聞いた。手がかりはなかった。……見つけられなかった。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>「見つけられなかった」？</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……復讐は、相手がわかっていた。上原だ。あの男は日本にいる。名前も顔も地位も知っている。……探す必要がなかった。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、探す必要がないほうに40年を費やしたんですか？</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……何を言っている。……私は憂助も探していた。ずっと探していた。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……ずっと、探して……。</p>
+
+<p class="silence">（沈黙が長くなる。ベキの声が、初めてかすかに震える）</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……探していた。……はずだ。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……待て。……私は……。……テントを作り、孤児院を建て、護衛の仕事を請け負い、テロを請け負い、土地を買い、フローライトの鉱脈を見つけ……。……憂助を探す時間は……あったのか。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……あった。……あったはずだ。……だが私は、テントの仕事を優先した。……なぜだ。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、テントの仕事を優先したんですか？</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……孤児たちがいたからだ。守らなければならない命が目の前にあった。……憂助を探す旅に出れば、この子どもたちを置いていくことになる。……それはできなかった。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、できなかったんですか？</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……もう一度……子どもを見捨てることになるからだ。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>「もう一度」？</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……憂助を守れなかった。……目の前で連れて行かれた。3歳の子どもが人身売買されるのを……止められなかった。……あの時、もっと早く動いていれば。もっと強ければ。……だから、もう二度と。目の前の子どもを失うわけにはいかなかった。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……ノコルが来た時。……飢えて死にかけた少年が、兄を亡くして一人で車の中に隠れていた。……あの目を見た瞬間、わかった。……この子は憂助だ、と。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>「この子は憂助だ」？</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……憂助ではない。わかっている。……だが、あの目だった。……3歳の憂助が、ヘリが離れていく空を見上げていた時と、同じ目をしていた。……捨てられた子どもの目だ。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……だから守った。命に代えても守ると決めた。……ノコルだけではない。アリも。ピヨも。バトラカも。……全員が、憂助だった。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>「全員が、憂助だった」？</p>
+
+<p class="silence">（長い沈黙）</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……本物の憂助は……。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……探さなかったのではない。……探しても見つからなかった。……それは事実だ。……だが。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……探す代わりに、私は「憂助の代わり」を守り続けた。……目の前の子どもたちを守ることで、憂助を守れなかった罪を埋めようとした。……それは……本当に「憂助のため」だったのか。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、今その問いが出てきたんですか？</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……憂助が来たからだ。……向こうから来た。私のところに。……探していたのは私のはずだった。だが見つけたのは憂助のほうだ。……あの子は、別班の任務として私の前に現れた。父を探しに来たのではない。テントのリーダーを捕らえに来たのだ。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……それでも。……DNA鑑定の結果を見た時。99.999%。……あの数字を見た時、私の手が震えた。……40年間震えなかった手が。……写真を取り出した。明美と3歳の憂助の写真を。……「明美、憂助が生きてた……生きてたんだ」と。……あの瞬間、私は初めて……40年で初めて……。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……泣いた。</p>
+
+<p class="silence">（長い沈黙）</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、泣いたんですか？</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……復讐のために泣いたのではない。……上原への怒りで泣いたのではない。……ただ……嬉しかった。……息子が生きていた。……それだけで。……あの夜、部屋で一人で泣いた。テントのリーダーとしてではなく。……ただの父親として。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>「ただの父親」？</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……ただの父親だ。……テントなど、どうでもよかった。復讐など、どうでもよかった。……あの瞬間だけは。……息子が生きていた。それだけでよかった。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>その「それだけでよかった」という感覚は、何のためにあったんですか？</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……何のため、だと。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……何のためでもない。……ただ、あった。……復讐のためではない。孤児たちのためでもない。テントのためでもない。……何の理由もなく……ただ、嬉しかった。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>では、復讐は何のためだったんですか？</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……明美のためだ。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、「明美のため」なんですか？</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……あの女がそう望んだからだ。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……「復讐して」と言った。……死の間際に。……あれは明美の最後の願いだ。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>「最後の願い」？</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……そうだ。……だが、明美はもう一つ言っていた。……「憂助を探して」と。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……「憂助を探して」のほうが……先に叶った。……だが、叶えたのは私ではない。……憂助が、自分で来た。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……私は叶えていない。……40年かけて、どちらの遺言も……私の手では果たせなかった。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、果たせなかったんですか？</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……復讐はできたはずだ。上原の居場所はわかっていた。いつでも行けた。……だが行かなかった。40年間、行かなかった。……なぜだ。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……行けば、終わる。……復讐を果たせば、明美の遺言が完了する。……完了したら……。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>「完了したら」？</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……何も、残らない。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……復讐を果たしたら、もう……生きている理由がなくなる。……明美の遺言だけが、私を40年間生かしていた。……その遺言が終わったら、私は……。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……待て。……待ってくれ。</p>
+
+<p class="silence">（ベキの声が低く震えている）</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……私は復讐を「果たさなかった」のではない。……「果たせなかった」のだ。……果たしたくなかったのだ。……果たしたら終わるから。……明美との繋がりが切れるから。……復讐は、明美の声を聞き続けるための……装置だった。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……上原を憎んでいる間は、明美が生きていた。……あの声が聞こえていた。「復讐して」と。……その声を聞いている限り、明美は私のそばにいた。……復讐を果たしたら、あの声が消える。……それが怖かった。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>「怖かった」？</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……怖かった。……テントのリーダーが、恐怖を認めるのは初めてだ。……だが認める。……明美の声が消えるのが、上原を殺すことよりも怖かった。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>では、最後の夜。……銃に弾を入れなかったのは、なぜですか？</p>
+
+<p class="silence">（最も長い沈黙）</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……わからなかった。……あの時は、わからなかった。……だが今なら……。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……あの夜、上原の家に行く前に、明美の写真を見た。……いつもの写真だ。明美と、3歳の憂助。……40年間、毎日見てきた写真だ。……だがあの夜は、違った。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、違ったんですか？</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……憂助がいたからだ。……もう写真の中の3歳の子どもではなく、42歳の男として、別班の工作員として、私の前に立っていた。……明美が「探して」と言った子どもは、もういない。……あの子は、自分の力で生きていた。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……写真を見た時……明美の顔が、違って見えた。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>「違って見えた」？</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……40年間、あの写真の明美は「復讐して」と言っていた。……私にはそう聞こえていた。……だがあの夜は……。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……笑っていた。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……明美が、笑っていた。……3歳の憂助を抱いて、笑っていた。……あの写真は最初から笑顔の写真だった。……40年間、毎日見ていたのに、笑顔だとは思っていなかった。……「復讐して」の顔にしか見えなかった。……だがあの夜は、ただ笑っていた。……「よかったね」と。</p>
+
+<p class="silence">（ベキの声が途切れる。長い沈黙）</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……都合がよすぎるかもしれない。……死者の顔に、自分の望む言葉を読み込んでいるだけかもしれない。……40年間「復讐して」を読み込んでいたのと同じように、今度は「よかったね」を読み込んでいるだけだ。……そうかもしれない。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……だが。……ひとつだけ、確かなことがある。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……弾を入れなかった手は、震えていなかった。……40年で初めて震えたのは、憂助のDNA鑑定の結果を見た時だ。……息子が生きていたと知った時だ。……上原の家に向かう時、手は震えなかった。……弾を入れない選択をした時も、震えなかった。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、震えなかったんですか？</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……復讐を手放すのは、恐怖ではなかったからだ。……恐怖だったのは明美の声が消えることだった。……だが、明美の声は消えていなかった。……変わっていた。……「復讐して」から……「もう、いいよ」に。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……そしてノコルに言った。「憂助は必ず私を追ってくる。任務のため、大義のため、父親の命より国を守ることを優先する。憂助が私を殺すなら、日本もまだまだ見どころがあるということだ。憂助に止められるなら、明美も許してくれるだろう」と。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>なぜ、「許してもらいたい」んですか？</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……守れなかったことだ。……明美を守れなかった。憂助を守れなかった。……そのことを、ずっと……。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……いや。……違う。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……許してほしかったのは……「守れなかった」ことではない。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……守れなかったことを理由にして、40年間……復讐という名の逃避を続けたことだ。……明美の遺言を都合よく使い、自分の悲しみから目を逸らし続けたことだ。……本当は、ただ泣きたかった。……妻を亡くして。息子を失って。……ただ泣きたかった。……だが泣く代わりに、銃を握った。子どもたちを集めた。組織を作った。……泣く時間を、全部埋めた。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……憂助が来てくれた夜、部屋で一人で泣いた時。……あれが40年で初めての涙だった。……復讐のためではなく、怒りのためでもなく。……「嬉しい」から泣いた。……あの涙が流れた時、私は初めて……40年間の鎧が、一枚剥がれた。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>「鎧」？</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……テントだ。……テントそのものが、私の鎧だった。……孤児院も。復讐計画も。ノゴーン・ベキという名前も。……全部が、乃木卓という人間が泣かずに済むための……鎧だった。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>では、鎧を脱いだ乃木卓さんは、あなたに何をプレゼントしてあげたいですか？</p>
+
+<p class="silence">（長い沈黙。ベキの目に光が揺れている）</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……時間だ。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……家族と過ごす時間だ。……ノバク村にいた頃の。……明美が子どもたちに日本語を教えていた。憂助が庭を走り回っていた。……あの時間を。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……もう二度と戻らない。わかっている。……明美は死んだ。憂助はもう42歳だ。あの村はもうない。……だが。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……ノコルにバルカを託した。……憂助に私を止めさせた。……それは……あの時間の続きを……次の世代に渡したかったからだ。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……私が握り続けていたものを、手放す。……銃ではなく。復讐ではなく。……「守る」という鎧を脱ぐ。……鎧を脱いだ手で、渡す。……ノコルに。憂助に。……あの子どもたちに。……私が明美と過ごしたかった時間を、あの子たちが生きてくれればいい。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……天命か。……そういうことか。……私の天命は、握ることではなかった。……手放すことだった。……弾を入れなかったのは、復讐を手放したからではない。……「手放しても消えないもの」を、初めて見つけたからだ。</p>
+
+<p class="line-yanai"><span class="speaker-yanai">箭内：</span>……。</p>
+
+<p class="line-character"><span class="speaker-beki">ベキ：</span>……明美。……聞こえているか。……お前が笑っていたのは、最初からだったな。……私が40年間聞いていた声は、お前の声ではなかった。……私自身の怒りの声だった。……お前はただ……笑っていた。……「生きていてくれてよかった」と。……それだけで、よかったんだな。</p>
+
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== セッション解説 ========== -->
+    <section class="fade-in">
+      <h3 class="section-heading">セッション解説</h3>
+
+      <div class="text-panel fade-in">
+        <p>このセッションでは、「なぜ？」と「何のために？」の二つの問いだけを使った。</p>
+        <p>「なぜ？」は、ベキが40年間「当然だ」と信じていた前提を掘り返した。</p>
+        <p>「家族のために生きてきた」── その前提の奥にあったのは、「守れなかった罪を埋めるための代償行動」だった。</p>
+        <p>「明美の遺言を果たすために復讐を追い続けた」── その前提の奥にあったのは、「復讐を続けることで、明美の声を聞き続けたい」という渇望だった。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>「何のために？」は、行動の先にある真の動機を浮かび上がらせた。</p>
+        <p>40年間握り続けた銃を手放した先に見えたもの。それは「手放しても消えないもの」──明美の笑顔と、息子が生きていたという事実だった。</p>
+        <p>彼が自分の人生の中ですでに実行していたことが、彼自身の口から天命として語られた──「私の天命は、握ることではなかった。手放すことだった」。</p>
+        <p>私は一度も、「答え」を与えていないことに注目してほしい。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>上の対話でベキに行ったことと、同じことを、あなたに対して行います。</p>
+        <p><a href="../../trial.html" style="color:var(--color-gold);">天命の言語化セッション&trade; トライアルの詳細はこちら &rarr;</a></p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>ここからは、ベキの構造を、物語の時系列に沿って解体していく。セッション対話では本人の口から露呈したものを、本文では私の視点から構造として記述する。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== 第1章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Chapter One</span>ノゴーン・ベキという名前の構造──二つの国に帰れない男</h2>
+
+      <div class="text-panel fade-in">
+        <p>乃木卓という名前は、日本の公安が抹消した。</p>
+        <p>1984年、バルカ共和国の内乱。救助ヘリが引き返した後、公安は「乃木卓という人間は存在しない」と回答した。国家が、一人の人間の存在を公的に消した。</p>
+        <p>名前を奪われた男は、砂漠で新しい名前を得た。「ノゴーン」はモンゴル語で「緑」、「ベキ」は「魔術師」。砂漠を緑に変えた魔術師。公安の偽装工作が、皮肉にも本物の実績になった。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>ここにMeta（前提構造）の重層性がある。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>乃木卓は「選んで」ベキになったのではない。日本に存在を消され（Meta第三層：文化・社会の剥奪）、妻を殺され息子を奪われた（Meta第四層：記憶・情動の破壊）。</p>
+        <p>生き延びるためにバルカの土地に根を張るしかなかった。</p>
+        <p>ノゴーン・ベキという名前は、Metaが彼に与えた名前である。自由意志で選び取った名前ではない。</p>
+        <p>しかし、ベキはもう一つのシンボルを手放さなかった。テントのマーク──乃木家の家紋。日本刀も常に携行していた。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>日本に存在を消された男が、日本の象徴を捨てられない。この矛盾は、ベキが「日本を恨んでいる」という表層的な理解を完全に否定する。ベキが恨んでいたのは日本ではない。上原史郎という一人の人間だ。</p>
+        <p>そして上原を恨むことで、ベキは逆説的に日本との繋がりを維持していた。恨みは帰属の代替物だった。復讐が「明美との繋がり」の代替物であったのと同じように、恨みは「日本との繋がり」の代替物だった。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>ベキの言語構造（Meta第一層）にも、この二重性が刻まれている。バルカの言語を流暢に操りながら、テント内では日本語で思考し、日本の漢文を息子に伝え、日本刀を手入れし続けた。</p>
+        <p>二つの言語の間を行き来する男──どちらにも完全には帰属できない男。</p>
+        <p>これが「ノゴーン・ベキ」という名前の構造だ。「乃木卓」でもなく「ベキ」でもなく、二つの名前の間に宙づりになった男。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== 第2章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Chapter Two</span>二つの遺言──復讐は痛みの麻痺装置だった</h2>
+
+      <div class="text-panel fade-in">
+        <p>明美の遺言は二つあった。</p>
+        <p>「憂助を探して」──これは愛の延長線上にある。生者を見つけ、守り、共に生きるための行動を要請する。</p>
+        <p>「復讐して…」──これは喪失の延長線上にある。加害者を見つけ、罰し、過去を清算する行動を要請する。</p>
+        <p>ベキは後者に駆動された。正確に言えば、後者に「走った」。なぜか。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>ここにシャドウ（抑圧された未成熟な人格側面）の構造がある。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>ベキのシャドウは「私は家族を守れなかった人間だ」という核心的な自己認識だ。この核心から逃れるために、二つの代償行動が走った。</p>
+        <p>一つ目は、「もう一度守ること」。孤児たちを守り、ノコルを育て、テントを運営する。これは「守れなかった罪」を「守ること」で帳消しにしようとする構造だ。</p>
+        <p>二つ目は、「守れなかった原因を排除すること」。上原を殺す。これは「守れなかった罪」を「加害者の排除」で清算しようとする構造だ。</p>
+        <p>どちらも代償行動であり、どちらも核心には触れていない。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>核心は「守れなかった」ではない。核心は「悲しい」だ。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>妻が死んだ。息子がいなくなった。その悲しみに蓋をするために、ベキは「守る」と「復讐する」の二つの行動で40年間を埋め尽くした。セッション対話でベキ自身が語った──「泣く代わりに、銃を握った」。</p>
+        <p>この構造を理解すると、ベキが40年間上原を殺しに行かなかった理由が見える。復讐を果たしたら、明美の遺言が完了する。完了したら、明美の声が消える。</p>
+        <p>40年間、「復讐して」という声が聞こえ続けていたからこそ、ベキは明美と繋がっていられた。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>復讐は目的ではなかった。明美の声を聞き続けるための装置だった。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>この構造は、実存科学が定義するS6「正しかったはずなのに痛い」──正当化の構造──の変形として読める。明美の遺言に従って復讐を追い続けたことは「正しい」はずだった。妻の最後の願いを果たす行為だから。</p>
+        <p>しかし40年経っても痛みは消えない。正しさで蓋をしても、その下にある悲しみは腐らないまま残っている。</p>
+        <p>ベキの悲嘆は、中動態的に彼の中で40年間「起き続けていた」。彼が「する」のでもなく、外部から「させられる」のでもなく、Metaによって駆動された悲嘆がベキの中で自律的に回り続けていた。</p>
+        <p>復讐という装置は、その回転を意識から遮断するための遮蔽壁だった。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== 第3章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Chapter Three</span>孤児たちという名の「代替の憂助」──代償行動の連鎖</h2>
+
+      <div class="text-panel fade-in">
+        <p>テントの真の目的が第8話で明かされた時、視聴者を驚かせたのは「テロの収益で孤児院を運営していた」という事実だった。「テロ組織ではなく義賊だったのか」──しかし、構造の半分しか見ていない。</p>
+        <p>もう半分を見る。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>ベキが守った孤児たちは、全員が「憂助の代替」である。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>セッション対話でベキ自身がそう語った。ノコルを引き取った時、「この子は憂助だ」と思ったと。ノコルの目が、3歳の憂助がヘリを見送った時と同じ目をしていたと。</p>
+        <p>ベキが守ったのは孤児たちではない。「もう一人の憂助」を守り続けたのだ。何百人もの「憂助」を。</p>
+        <p>これは「善行」だろうか。客観的には善行だ。孤児たちは救われた。しかし構造的に見れば、これは「守れなかった」という原罪への贖罪行為であり、本物の憂助を探す代わりに代替物を集める行為でもある。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>さらに深刻なのは、この代償行動がノコルに構造的な痛みを連鎖させていたことだ。ノコルはベキにとって「最も憂助に近い代替」だった。だからこそNo.2に据え、白いデールを着せ、バルカの未来を託した。</p>
+        <p>しかし本物の憂助が現れた瞬間、ノコルの立場は根底から揺らいだ。</p>
+        <p>ノコルの嫉妬と冷遇は、キャラクターの性格ではない。ベキの代償行動が作り出した構造的な帰結だ。「代替の息子」として育てられたことが、実子の出現によって露呈した。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>テントという組織名自体がこの構造を映している。ベキは「キャンプで家族や仲間など大切な人たちが集まる場所」の意味を込めてテントと名付けた。</p>
+        <p>テントとは帰る場所だ。ベキ自身が失った「帰る場所」を、組織という形で再構築しようとした。</p>
+        <p>しかし再構築されたテントは、本物の家族ではなかった。組織だった。リーダーと部下がいて、任務があり、裏切りには粛清がある世界だった。</p>
+        <p>乃木卓が明美と憂助と三人で過ごしたノバク村の日々とは、根本的に異なるものだった。</p>
+        <p>この落差こそが、ベキのシャドウの深さを物語っている。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== 第4章 ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Chapter Four</span>銃に弾を入れなかった夜──天命の瞬間的完成</h2>
+
+      <div class="text-panel fade-in">
+        <p>最終話。ベキは上原の家を急襲する。しかし銃に弾が入っていなかった。</p>
+        <p>ベキが日本に来る前にノコルに語った言葉がある。</p>
+        <p>──「憂助は必ず私を追ってくる。任務のため、大義のため、父親の命より国を守ることを優先する。憂助が私を殺すなら、日本もまだまだ見どころがあるということだ。憂助に止められるなら、明美も許してくれるだろう」。</p>
+        <p>この言葉は一般に「息子に止めてほしかった」と解釈される。しかし構造を丁寧に読む。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>ベキは二つの条件を立てている。「殺すなら」と「止められるなら」。殺すことと止めることは異なる。ベキは両方の可能性を見ていた。</p>
+        <p>そして「明美も許してくれるだろう」と続けた。許しを求めている。何を？──セッション対話で明らかになった。守れなかったことではなく、守れなかったことを理由に40年間逃げ続けたことを。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>銃に弾を入れなかったあの瞬間、ベキの内部で何が起きたのか。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>セッション対話でベキ自身が語った構造がそれを照射する。あの夜、明美の写真を見た時に、40年間聞こえ続けていた声が変わった。あるいは──声が変わったのではなく、ベキ自身の耳が変わった。</p>
+        <p>憂助との再会を経て、息子が生きていたという事実に触れて、40年分の鎧が一枚剥がれた。その剥がれた隙間から、写真の中の明美の笑顔が、初めて笑顔として見えた。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>実存科学が定義する天命の三様態のうち、ベキの天命は「瞬間的完成」の形態を取る。</p>
+        <p>銃に弾を入れなかったあの瞬間、ベキは天命に触れた。それは「握ることではなく手放すこと」──復讐を手放し、組織を手放し、自分が築いた全てをノコルと憂助に託すこと。</p>
+        <p>ベキは「守る人」から「託す人」に変わった。しかしこの変化は、ベキが「選んだ」のではない。Metaが彼をそこに導いた。</p>
+        <p>息子の再来、明美の笑顔の再発見、40年間の復讐の空虚さ──全てが収束して、弾を入れない手を作った。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>中動態的に──「する／される」の二項対立を超えて──弾を入れないという出来事が、ベキを通して起きた。</p>
+        <p>Metaがある限り自由意志は存在しない（M &rArr; &not;F）。しかし、すべてが剥奪された後に──名前も、国も、妻も、息子も、復讐の大義さえも剥がされた後に──天命だけが残った。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>「VIVANT」はフランス語で「生きている」。それはベキの生存を示唆するだけではない。40年間の鎧の下で、乃木卓という人間がずっと「生きていた」ことを意味する。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== 結び ========== -->
+    <section class="fade-in">
+      <h2 class="chapter-heading"><span class="chapter-number">Conclusion</span>結び</h2>
+
+      <div class="text-panel fade-in">
+        <p>乃木卓は、砂漠を緑に変えた男だった。</p>
+        <p>バルカの荒れ地を耕し、作物を育て、「緑の魔術師」と呼ばれた。その手は、土を掴み、水を引き、命を生み出す手だった。</p>
+        <p>しかし1984年以降、その手は銃を握った。子どもたちを守るために。復讐を果たすために。40年間、手放すことを知らなかった。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>天命は、握った先にはなかった。<br>手放した先に、あった。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>弾を入れなかった銃。ノコルに託したバルカの未来。憂助に委ねた自分の最期。</p>
+        <p>全てを手放した時、ベキの手は40年ぶりに空になった。だがその空は、1984年にヘリの方に伸ばして空を掴んだ時の空とは、違っていた。</p>
+        <p>あの時は、空しかなかった。</p>
+        <p>今度は、手放した手の中に、何も握っていないのに──明美の笑顔があった。</p>
+      </div>
+
+      <div class="text-panel fade-in">
+        <p>変えられないものを──妻の死を、息子との40年間の空白を、国家に消された自分の名前を──すべて引き受けた先に、天命が露呈した。</p>
+        <p>「復讐して」── 明美はそう言った。</p>
+        <p>「もう、いいよ」── 写真の中の明美は、最初からそう笑っていた。</p>
+        <p>40年間の聞き間違いが終わった夜に、乃木卓は初めて──ノゴーン・ベキでもテントのリーダーでもなく──ただの父親として、息子に撃たれた。</p>
+      </div>
+
+      <div class="highlight-block fade-in">
+        <p>それは罰ではなかった。<br>帰還だった。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== 読者への問いかけ + 最終CTA ========== -->
+    <section class="fade-in">
+      <div class="text-panel fade-in">
+        <p>あなたが40年間握り続けているものは、何ですか。</p>
+        <p>「復讐」と名付けたそれは、本当に復讐ですか。「家族のため」と言い続けたそれは、本当に家族のためですか。「やらなければならない」と信じたそれは、本当にやらなければならないことですか。</p>
+        <p>ベキは、銃に弾を入れないことで、初めて声を正しく聞いた。</p>
+        <p>天命の言語化セッション&trade;は、上の対話で私がベキに行ったことと同じことを、あなたに対して行います。私は答えを与えません。「なぜ？」「何のために？」──問いを渡すだけです。</p>
+        <p>あなたのMetaの中に、あなたの天命はすでに存在しています。それを言語化する120分間を、一度体験してみてください。</p>
+        <p><a href="../../trial.html" style="color:var(--color-gold);">天命の言語化セッション&trade; トライアルの詳細はこちら &rarr;</a></p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ========== 最終CTA ========== -->
+    <section class="cta-block fade-in">
+  <div class="container">
+    <h2 class="cta-block__title">天命の言語化セッション&trade;</h2>
+    <p class="cta-block__desc">2時間で天命が言語化できる場所。</p>
+    <div class="cta-block__features">
+      <span class="cta-block__feature">Zoom完結</span>
+      <span class="cta-block__feature">事前学習不要</span>
+      <span class="cta-block__feature">対話のみ</span>
+    </div>
+    <a href="../../trial.html" class="btn">無料トライアルに申し込む &rarr;</a>
+  </div>
+</section>
+
+    <!-- ========== 同シリーズナビ ========== -->
+    <nav class="series-nav fade-in" aria-label="同じシリーズの記事">
+      <p class="series-nav__label">── 同じシリーズの記事 ──</p>
+      <div class="series-nav__list">
+        <span class="series-nav__link is-current">ノゴーン・ベキのMeta</span>
+        <a href="nogi.html" class="series-nav__link">乃木憂助のMeta</a>
+      </div>
+    </nav>
+
+    <!-- ========== 著者ブロック ========== -->
+    <div class="author-block fade-in">
+      <p><strong>箭内宏紀（やないひろき）</strong><br>
+      実存科学研究所 代表。<br>
+      「天命の言語化セッション&trade;」を提供。</p>
+<p><br>
+      「Metaがある限り自由意志は存在しない」（M &rArr; &not;F）を第一公理とする実存科学を提唱。3000年続いた認識論に終止符を打ち、世界のOSを書き換えることを目指す。</p>
+<p><br>
+      著書に『Metaがある限り──自由意志・自分・他人は存在しない』<br>
+      『自由意志なき世界の歩き方』ほか。</p>
+<p><br>
+      公式サイトはこちら &#9654; <a href="../../index.html" style="color:var(--color-gold);">実存科学研究所</a></p>
+    </div>
+
+    <!-- ========== 出典表記 ========== -->
+    <p class="source-note fade-in">※ 本稿で扱った作品：福澤克雄原作・演出『VIVANT』（TBS、2023年）。</p>
+    <p class="source-note fade-in">作品の著作権は原著者・制作会社に帰属します。</p>
+
+</main>
+
+  <!-- Floating TOC -->
+  <nav class="floating-toc" id="floatingToc" aria-label="目次">
+    <p class="floating-toc__title">Contents</p>
+    <ol class="floating-toc__list" id="floatingTocList"></ol>
+  </nav>
+  <button class="floating-toc-toggle" id="floatingTocToggle" aria-label="目次を開閉">&#9776;</button>
+
+  <script>
+  (function(){
+    var headings = document.querySelectorAll('h2.chapter-heading');
+    var list = document.getElementById('floatingTocList');
+    var toc = document.getElementById('floatingToc');
+    var toggle = document.getElementById('floatingTocToggle');
+    if (!headings.length || !list) return;
+
+    headings.forEach(function(h, i){
+      var id = 'toc-section-' + i;
+      h.id = id;
+      var li = document.createElement('li');
+      li.className = 'floating-toc__item';
+      var a = document.createElement('a');
+      a.className = 'floating-toc__link';
+      a.href = '#' + id;
+      var text = h.textContent.replace(/\s+/g, ' ').trim();
+      var numSpan = h.querySelector('.chapter-number');
+      if (numSpan) {
+        text = text.replace(numSpan.textContent.replace(/\s+/g, ' ').trim(), '').trim();
+      }
+      if (text.length > 28) text = text.substring(0, 28) + '\u2026';
+      a.textContent = text;
+      a.addEventListener('click', function(e){
+        e.preventDefault();
+        document.getElementById(id).scrollIntoView({behavior:'smooth', block:'start'});
+        toc.classList.remove('is-open');
+      });
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+
+    var heroEnd = 400;
+    var links = list.querySelectorAll('.floating-toc__link');
+
+    function updateToc(){
+      var scrollY = window.scrollY || window.pageYOffset;
+      var show = scrollY > heroEnd;
+      toc.classList.toggle('is-visible', show);
+      toggle.classList.toggle('is-visible', show);
+      var current = -1;
+      headings.forEach(function(h, i){
+        if (h.getBoundingClientRect().top < window.innerHeight * 0.35) current = i;
+      });
+      links.forEach(function(a, i){
+        a.classList.toggle('is-active', i === current);
+      });
+    }
+
+    window.addEventListener('scroll', updateToc, {passive: true});
+    updateToc();
+
+    toggle.addEventListener('click', function(){
+      toc.classList.toggle('is-open');
+    });
+
+    document.addEventListener('click', function(e){
+      if (!toc.contains(e.target) && e.target !== toggle) {
+        toc.classList.remove('is-open');
+      }
+    });
+  })();
+  </script>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+  <div class="container--wide">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <p class="footer-col__title">The Meta</p>
+        <a href="../../about-existential-science.html">実存科学とは</a>
+        <a href="../../epistemology.html">認識論</a>
+        <a href="../../semantics.html">意味論</a>
+        <a href="../../society.html">社会論</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Contents</p>
+        <a href="../../specials.html">特別シリーズ</a>
+        <a href="../../archives.html">記事一覧</a>
+        <a href="../../video-list.html">動画一覧</a>
+        <a href="../../glossary.html">用語集</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Session</p>
+        <a href="../../session.html">天命の言語化セッション&trade;</a>
+        <a href="../../session-flow.html">セッションの流れ</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Institute</p>
+        <a href="../../founder.html">創始者 箭内宏紀</a>
+        <a href="../../contact.html">お問い合わせ</a>
+        <a href="../../legal/legal-tokushoho.html">特定商取引法</a>
+        <a href="../../legal/legal-privacy-policy.html">プライバシーポリシー</a>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; 箭内宏紀 / 実存科学研究所 ── Existential Science Institute</p>
+  </div>
+</footer>
+
+  <script src="../../js/main.min.js?v=13"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+"datePublished": "2026-04-08",
+"dateModified": "2026-04-08",
+  "headline": "ノゴーン・ベキのMeta ── 自由意志なき世界の天命論",
+  "description": "ドラマ『VIVANT』のノゴーン・ベキ（乃木卓）を、実存科学の視点──Meta、シャドウ、天命──で構造的に読み解く。復讐は目的ではなかった。明美の声を聞き続けるための装置だった。",
+  "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-vivant/beki.html",
+  "author": {
+    "@type": "Person",
+    "name": "箭内宏紀",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/founder.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  },
+  "inLanguage": "ja"
+}
+</script>
+  <!-- Search Modal -->
+  <div class="search-overlay">
+    <div class="search-modal"><button class="search-close" aria-label="閉じる">&times;</button>
+      <div class="search-input-wrap">
+        <span class="search-input-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+        <input type="text" class="search-input" placeholder="キーワードで検索..." autocomplete="off" aria-label="サイト内検索">
+      </div>
+      <div class="search-results"></div>
+      <div class="search-hint"><span class="search-hint__desktop">ESC to close · ⌘K to toggle</span><span class="search-hint__mobile">背景タップまたは ✕ で閉じる</span></div>
+    </div>
+  </div>
+</body>
+</html>
