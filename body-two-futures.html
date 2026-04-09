@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="箭内宏紀">
+<title>二つの身体、二つの未来 — 運動しない身体と、アップデートし続ける身体のリスク比較 | 実存科学研究所</title>
+<meta name="description" content="運動しない身体と、アップデートし続ける身体。同じ身体から、まったく異なる人生が分岐する。二つのリスクをTop10で対比する。">
+<!-- OGP -->
+<meta property="og:title" content="二つの身体、二つの未来 | 実存科学研究所">
+<meta property="og:description" content="運動しない身体と、アップデートし続ける身体。同じ身体から、まったく異なる人生が分岐する。二つのリスクをTop10で対比する。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/body-two-futures.html">
+<meta property="og:site_name" content="実存科学研究所">
+<meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+<link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/body-two-futures.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="二つの身体、二つの未来 | 実存科学研究所">
+<meta name="twitter:description" content="運動しない身体と、アップデートし続ける身体。同じ身体から、まったく異なる人生が分岐する。二つのリスクをTop10で対比する。">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0c;
+    --surface: #111114;
+    --surface-raised: #1a1a1f;
+    --border: #2a2a30;
+    --text: #e8e6e3;
+    --text-muted: #8a8890;
+    --accent: #c8a44e;
+    --accent-dim: #a0832e;
+    --accent-glow: rgba(200, 164, 78, 0.12);
+    --red: #c45c5c;
+    --red-dim: rgba(196, 92, 92, 0.1);
+    --green: #5ca06a;
+    --green-dim: rgba(92, 160, 106, 0.1);
+    --blue: #5c8ec4;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.9;
+    font-size: 15px;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .hero {
+    padding: 80px 0 60px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: var(--accent);
+  }
+
+  .hero-label {
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+  }
+
+  .hero-sub {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  section:last-of-type { border-bottom: none; }
+
+  .section-number {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 21px;
+    font-weight: 900;
+    margin-bottom: 28px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+  }
+
+  h3 {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 32px 0 16px;
+    letter-spacing: 0.5px;
+  }
+
+  p {
+    margin-bottom: 16px;
+    color: var(--text);
+  }
+
+  .lead {
+    font-size: 16px;
+    line-height: 2;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+  }
+
+  .highlight-quote {
+    text-align: center;
+    padding: 40px 24px;
+    margin: 8px 0 32px;
+  }
+
+  .highlight-quote p {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 1.8;
+    color: var(--accent);
+    margin-bottom: 0;
+  }
+
+  /* Side headers */
+  .side-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding: 14px 20px;
+    border-radius: 8px;
+  }
+
+  .side-header-red {
+    background: var(--red-dim);
+    border: 1px solid rgba(196, 92, 92, 0.25);
+  }
+
+  .side-header-green {
+    background: var(--green-dim);
+    border: 1px solid rgba(92, 160, 106, 0.25);
+  }
+
+  .side-header-icon {
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+
+  .side-header-text {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 15px;
+    font-weight: 900;
+  }
+
+  .side-header-red .side-header-text { color: var(--red); }
+  .side-header-green .side-header-text { color: var(--green); }
+
+  .side-header-sub {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 400;
+  }
+
+  /* Risk Card */
+  .risk-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px 24px;
+    margin-bottom: 12px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .risk-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+  }
+
+  .risk-card-red::before { background: var(--red); }
+  .risk-card-green::before { background: var(--green); }
+
+  .risk-rank {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+
+  .risk-card-red .risk-rank { color: var(--red); }
+  .risk-card-green .risk-rank { color: var(--green); }
+
+  .risk-name {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 15px;
+    font-weight: 900;
+    margin-bottom: 8px;
+  }
+
+  .risk-desc {
+    font-size: 13.5px;
+    line-height: 1.9;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+
+  .risk-scenario {
+    font-size: 13px;
+    line-height: 1.8;
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-top: 10px;
+  }
+
+  .risk-card-red .risk-scenario {
+    background: var(--red-dim);
+    color: var(--text);
+  }
+
+  .risk-card-green .risk-scenario {
+    background: var(--green-dim);
+    color: var(--text);
+  }
+
+  .risk-scenario strong {
+    font-weight: 700;
+  }
+
+  .risk-card-red .risk-scenario strong { color: var(--red); }
+  .risk-card-green .risk-scenario strong { color: var(--green); }
+
+  /* Comparison table */
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-size: 13px;
+  }
+
+  .compare-table th {
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-bottom: 2px solid var(--border);
+  }
+
+  .compare-table th:first-child {
+    background: var(--surface-raised);
+    color: var(--accent);
+  }
+
+  .compare-table th:nth-child(2) {
+    background: var(--red-dim);
+    color: var(--red);
+  }
+
+  .compare-table th:nth-child(3) {
+    background: var(--green-dim);
+    color: var(--green);
+  }
+
+  .compare-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    line-height: 1.7;
+  }
+
+  .compare-table tr:last-child td { border-bottom: none; }
+
+  .compare-table td:first-child {
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 12px;
+  }
+
+  .compare-table td:nth-child(2) { color: var(--text-muted); }
+  .compare-table td:nth-child(3) { color: var(--text-muted); }
+
+  /* Callout */
+  .callout {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .callout-warning { border-left: 3px solid var(--red); }
+  .callout-info { border-left: 3px solid var(--blue); }
+  .callout-success { border-left: 3px solid var(--green); }
+
+  .callout-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+
+  .callout-warning .callout-label { color: var(--red); }
+  .callout-info .callout-label { color: var(--blue); }
+  .callout-success .callout-label { color: var(--green); }
+
+  /* Equation Box */
+  .equation-box {
+    background: var(--surface-raised);
+    border-left: 3px solid var(--accent);
+    padding: 24px 28px;
+    margin: 28px 0;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .equation {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--accent);
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+
+  .equation-desc {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    line-height: 1.8;
+  }
+
+  .footer {
+    padding: 40px 0;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 12px;
+    border-top: 1px solid var(--border);
+  }
+
+  .footer a { color: var(--accent); text-decoration: none; }
+
+  @media (max-width: 600px) {
+    .hero { padding: 56px 0 40px; }
+    .hero h1 { font-size: 22px; }
+    h2 { font-size: 18px; }
+    .container { padding: 0 18px; }
+    section { padding: 40px 0; }
+    .risk-card { padding: 18px 18px; }
+    .equation-box { padding: 20px 22px; }
+    .equation { font-size: 16px; }
+    .compare-table { font-size: 12px; }
+    .compare-table th, .compare-table td { padding: 10px 10px; }
+    .highlight-quote p { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="hero">
+    <div class="hero-label">Tenmei Body Column</div>
+    <h1>二つの身体、二つの未来</h1>
+    <p class="hero-sub">
+      運動しない身体と、アップデートし続ける身体。<br>
+      同じ身体から、まったく異なる人生が分岐する。
+    </p>
+  </div>
+
+  <!-- 01: 導入 -->
+  <section>
+    <div class="section-number">01 — 同じ身体、違う選択</div>
+    <h2>あなたの身体は分岐点にいる</h2>
+
+    <p>年齢を重ねるほど、何もしなければ身体は毎年劣化する。筋肉は年に1%ずつ減り、成長ホルモンの分泌は10年ごとに約15%落ちる。ホルモンバランスは崩れ、骨密度が下がり、慢性炎症が静かに進行する。</p>
+
+    <p>これは全員に起きる。例外はない。</p>
+
+    <p>違いは、この劣化に対して<strong>何をするか</strong>だけだ。</p>
+
+    <div class="highlight-quote">
+      <p>同じ身体から、<br>まったく異なる二つの未来が分岐する。</p>
+    </div>
+
+    <p>一方は、運動・栄養・睡眠の積を回さずに過ごす身体。もう一方は、身体のOSを毎週アップデートし続ける身体。それぞれが抱えるリスクは、質が根本的に違う。</p>
+
+    <p>前者は<strong>「やらないことで壊れるリスク」</strong>を抱えている。<br>後者は<strong>「やり続ける中での管理リスク」</strong>を抱えている。</p>
+
+    <div class="callout callout-info">
+      <div class="callout-label">このコラムの目的</div>
+      二つの身体が抱えるリスクをそれぞれトップ10で並べ、その先にどんな人生のシナリオが待っているかを対比する。
+    </div>
+  </section>
+
+  <!-- 02: Side A -->
+  <section>
+    <div class="section-number">02 — OSアップデートしない身体</div>
+    <h2>Side A：運動しない人のリスク Top 10</h2>
+
+    <div class="side-header side-header-red">
+      <div class="side-header-icon">▼</div>
+      <div>
+        <div class="side-header-text">劣化を放置した身体</div>
+        <div class="side-header-sub">運動習慣なし・栄養管理なし・睡眠管理なし</div>
+      </div>
+    </div>
+
+    <div class="risk-card risk-card-red">
+      <div class="risk-rank">#1</div>
+      <div class="risk-name">生活習慣病（糖尿病・高血圧・脂質異常症）</div>
+      <div class="risk-desc">インスリン感受性が低下し、血糖値が慢性的に高い状態が続く。内臓脂肪が蓄積し、血圧が上がり、LDLコレステロールが増える。初期は自覚症状がほぼないため「健康だ」と思い込む。しかし血管は静かに傷つき続けている。</div>
+      <div class="risk-scenario"><strong>10年後のシナリオ →</strong> 40代半ばで健康診断に引っかかる。薬を飲み始める。薬は一生続く。食事制限を強いられるが、習慣がないから続かない。</div>
+    </div>
+
+    <div class="risk-card risk-card-red">
+      <div class="risk-rank">#2</div>
+      <div class="risk-name">心血管疾患（心筋梗塞・脳卒中）</div>
+      <div class="risk-desc">生活習慣病の延長線上にある。動脈硬化が進行し、ある日突然血管が詰まる。日本人の死因第2位。運動習慣のない人の心血管リスクは、運動習慣のある同年代と比較して2〜3倍高い。</div>
+      <div class="risk-scenario"><strong>10年後のシナリオ →</strong> 40代後半〜50代で発症リスクが急上昇。突然の入院。長期リハビリ。仕事の中断。後遺症が残る可能性。</div>
+    </div>
+
+    <div class="risk-card risk-card-red">
+      <div class="risk-rank">#3</div>
+      <div class="risk-name">肥満・内臓脂肪蓄積</div>
+      <div class="risk-desc">基礎代謝が年々低下する中で、食事量が変わらなければ体脂肪は確実に増える。内臓脂肪は炎症性サイトカイン（TNF-α、IL-6）を持続的に放出し、全身の慢性低度炎症の震源地になる。</div>
+      <div class="risk-scenario"><strong>10年後のシナリオ →</strong> 腹囲が増え続け、見た目の老化が加速。自己イメージが低下し、さらに運動から遠ざかる負のループ。</div>
+    </div>
+
+    <div class="risk-card risk-card-red">
+      <div class="risk-rank">#4</div>
+      <div class="risk-name">メンタルヘルスの悪化（うつ・不安障害）</div>
+      <div class="risk-desc">運動しないとセロトニン合成が低下し、BDNFが上がらず、ドーパミンのベースラインが下がる。脳のOSがアップデートされないまま、ストレスだけが蓄積する。運動不足とうつ病の関連は年齢・性別を問わず強固なエビデンスがある。</div>
+      <div class="risk-scenario"><strong>10年後のシナリオ →</strong> 慢性的な意欲低下、集中力の欠如、不眠。仕事のパフォーマンスが落ち、人間関係が悪化する。受診すると抗うつ薬を処方される。</div>
+    </div>
+
+    <div class="risk-card risk-card-red">
+      <div class="risk-rank">#5</div>
+      <div class="risk-name">腰痛・慢性的な関節痛</div>
+      <div class="risk-desc">筋力不足と柔軟性の喪失が重なり、脊柱を支える筋肉が弱体化。椎間板にかかる負荷が増大し、慢性腰痛に移行する。日本人の有訴率第1位の症状。運動不足による腰痛は年齢とともに急増する。</div>
+      <div class="risk-scenario"><strong>10年後のシナリオ →</strong> 座っていても痛い、立っていても痛い。整体やマッサージに通い続けるが根本解決しない。QOLが慢性的に低下する。</div>
+    </div>
+
+    <div class="risk-card risk-card-red">
+      <div class="risk-rank">#6</div>
+      <div class="risk-name">サルコペニア（筋肉量の加速的喪失）</div>
+      <div class="risk-desc">何もしなければ年に0.5〜1%の筋肉が自然に減少する。運動しないとこの速度が加速し、やがて日常動作に支障が出始める。階段が辛い、重い物が持てない、転倒しやすくなる。</div>
+      <div class="risk-scenario"><strong>10年後のシナリオ →</strong> 50代で「老い」を実感し始める。身体を動かすこと自体が億劫になり、さらに筋肉が減る悪循環。</div>
+    </div>
+
+    <div class="risk-card risk-card-red">
+      <div class="risk-rank">#7</div>
+      <div class="risk-name">睡眠障害</div>
+      <div class="risk-desc">運動不足は睡眠の質を直接低下させる。深い睡眠の割合が減り、GH分泌が不足し、回復が不完全になる。スクリーン時間の増加とカフェイン依存が重なり、概日リズムが崩壊する。</div>
+      <div class="risk-scenario"><strong>10年後のシナリオ →</strong> 慢性的な睡眠不足が常態化。日中の眠気、集中力低下、免疫低下の連鎖。</div>
+    </div>
+
+    <div class="risk-card risk-card-red">
+      <div class="risk-rank">#8</div>
+      <div class="risk-name">がん（生活習慣関連）</div>
+      <div class="risk-desc">肥満・慢性炎症・インスリン抵抗性はがんの微小環境を育てる土壌。大腸がん、肝臓がん、膵臓がんなどは内臓脂肪と強い相関がある。運動不足は大腸がんリスクを約30%上昇させる。</div>
+      <div class="risk-scenario"><strong>10年後のシナリオ →</strong> 生活習慣に起因するがんの発症リスクが蓄積し続ける。健康診断を受けていなければ発見が遅れる。</div>
+    </div>
+
+    <div class="risk-card risk-card-red">
+      <div class="risk-rank">#9</div>
+      <div class="risk-name">認知機能の低下</div>
+      <div class="risk-desc">運動しなければBDNFが上がらず、海馬の神経新生が停滞する。年齢とともに進む認知機能低下が、運動不足でさらに加速する。記憶力、判断速度、創造性がじわじわと落ちる。</div>
+      <div class="risk-scenario"><strong>10年後のシナリオ →</strong> 40代で「最近頭が回らない」と感じ始める。50代で認知症リスクが有意に上昇。</div>
+    </div>
+
+    <div class="risk-card risk-card-red">
+      <div class="risk-rank">#10</div>
+      <div class="risk-name">骨密度の低下（骨粗鬆症の前段階）</div>
+      <div class="risk-desc">骨は荷重をかけないと弱くなる。重力に抗する運動（特にレジスタンストレーニング）がなければ、骨芽細胞の活性が低下し、骨密度が年々減少する。特に女性は閉経後、男性も加齢とともに骨折リスクが上がる。</div>
+      <div class="risk-scenario"><strong>10年後のシナリオ →</strong> 些細な転倒で骨折。回復に数ヶ月。高齢期に大腿骨頸部骨折→寝たきりのリスク。</div>
+    </div>
+  </section>
+
+  <!-- 03: Side B -->
+  <section>
+    <div class="section-number">03 — OSアップデートし続ける身体</div>
+    <h2>Side B：身体を管理し続ける人のリスク Top 10</h2>
+
+    <div class="side-header side-header-green">
+      <div class="side-header-icon">▲</div>
+      <div>
+        <div class="side-header-text">アップデートし続ける身体</div>
+        <div class="side-header-sub">運動・栄養・睡眠の積を回し続けている前提</div>
+      </div>
+    </div>
+
+    <div class="risk-card risk-card-green">
+      <div class="risk-rank">#1</div>
+      <div class="risk-name">関節・腱・靭帯の障害</div>
+      <div class="risk-desc">筋力は週単位で伸びるが、腱と靭帯の適応は筋肉の2〜3倍遅い。コラーゲン組織のターンオーバーは数ヶ月〜1年。筋力が腱の耐久性を追い越す時期に、膝蓋腱、ローテーターカフ、椎間板がリスクゾーンに入る。</div>
+      <div class="risk-scenario"><strong>対処 →</strong> 痛みの前の「違和感」を無視しない。違和感が出たら即座に重量を落とす。モビリティドリルで関節の能動的可動域を維持する。</div>
+    </div>
+
+    <div class="risk-card risk-card-green">
+      <div class="risk-rank">#2</div>
+      <div class="risk-name">長時間座位による血管・代謝リスク</div>
+      <div class="risk-desc">1日8時間以上の座位は全死因死亡リスクを上昇させる。運動習慣でかなりの部分は相殺されるが、連続座位4時間超で下肢の血流とインスリン感受性が一時的に低下する。</div>
+      <div class="risk-scenario"><strong>対処 →</strong> 25〜30分ごとに立ち上がる。2〜3分歩くか、股関節CARsを30秒行う。連続時間の分断が鍵。</div>
+    </div>
+
+    <div class="risk-card risk-card-green">
+      <div class="risk-rank">#3</div>
+      <div class="risk-name">股関節・胸椎のモビリティ低下</div>
+      <div class="risk-desc">長時間座位で腸腰筋が短縮、大殿筋が抑制、胸椎が後弯する。この状態で高重量スクワットをやると腰椎に代償負荷がかかる。怪我の前段階としての機能低下。</div>
+      <div class="risk-scenario"><strong>対処 →</strong> 股関節CARsと胸椎回旋ドリルを毎日実施。トレーニング日だけでなく、毎日やることが重要。結合組織は「使わない範囲を失う」。</div>
+    </div>
+
+    <div class="risk-card risk-card-green">
+      <div class="risk-rank">#4</div>
+      <div class="risk-name">眼精疲労・視力低下</div>
+      <div class="risk-desc">長時間のスクリーン作業で毛様体筋が慢性的に過緊張する。進行すると調節障害、ドライアイ、頭痛として現れる。視力の低下は不可逆になり得る。</div>
+      <div class="risk-scenario"><strong>対処 →</strong> 20-20-20ルール（20分ごとに6m先を20秒見る）。座位の分断タイミングと合わせれば追加コストゼロ。</div>
+    </div>
+
+    <div class="risk-card risk-card-green">
+      <div class="risk-rank">#5</div>
+      <div class="risk-name">睡眠の質（REM睡眠の不足）</div>
+      <div class="risk-desc">分割睡眠では連続睡眠と比較してREM密度が最適化されない。REM睡眠は記憶統合、情動処理、創造的問題解決に関与。直接的な疾患リスクより、認知パフォーマンスに影響する。</div>
+      <div class="risk-scenario"><strong>対処 →</strong> 週に2〜3日、連続7時間以上のブロックを確保する。毎日は無理でも、週の中でバランスを取る。</div>
+    </div>
+
+    <div class="risk-card risk-card-green">
+      <div class="risk-rank">#6</div>
+      <div class="risk-name">がん（確率的リスク）</div>
+      <div class="risk-desc">生活習慣で制御可能な部分はほぼ最大化されている。残るのはDNA複製エラーの確率的蓄積。これは生物学的にゼロにできない。全がんの約3分の2はランダム変異で説明される。</div>
+      <div class="risk-scenario"><strong>対処 →</strong> 年1回の血液検査。予防ではなく「小さいうちに見つける」ための検出。費用対効果の最も高い保険。</div>
+    </div>
+
+    <div class="risk-card risk-card-green">
+      <div class="risk-rank">#7</div>
+      <div class="risk-name">腸内環境の偏り</div>
+      <div class="risk-desc">高タンパク・固定食パターンでは食物繊維の多様性が限定的になりやすい。腸内細菌叢の多様性低下は免疫機能・代謝・脳機能に影響する可能性がある。</div>
+      <div class="risk-scenario"><strong>対処 →</strong> 発酵食品（納豆・キムチ・味噌）の頻度を上げる。週に数種類の色の違う野菜を追加するだけで改善できる。</div>
+    </div>
+
+    <div class="risk-card risk-card-green">
+      <div class="risk-rank">#8</div>
+      <div class="risk-name">椎間板の慢性的圧迫</div>
+      <div class="risk-desc">長時間座位＋高重量デッドリフト・スクワットの組み合わせ。座位で椎間板圧は立位の約1.4倍。長時間座った後に急激な軸方向荷重がかかると椎間板ヘルニアのリスクがある。</div>
+      <div class="risk-scenario"><strong>対処 →</strong> トレーニング前のモビリティドリルに加え、可能であれば15〜20分歩いて椎間板の水和を回復させてからトレーニングに入る。</div>
+    </div>
+
+    <div class="risk-card risk-card-green">
+      <div class="risk-rank">#9</div>
+      <div class="risk-name">オーバートレーニング症候群</div>
+      <div class="risk-desc">重量が上がり続ける限りリスクは低い。しかし今後、重量増加・仕事ストレス・睡眠不足が重なったとき、回復が追いつかなくなる可能性がある。</div>
+      <div class="risk-scenario"><strong>対処 →</strong> 初期症状は「2〜3週の重量停滞」「不自然なモチベーション低下」「安静時心拍数の上昇」。これらが出たらディロード週を入れる。</div>
+    </div>
+
+    <div class="risk-card risk-card-green">
+      <div class="risk-rank">#10</div>
+      <div class="risk-name">心血管イベント</div>
+      <div class="risk-desc">運動習慣、体脂肪管理、栄養管理がすべて心血管保護因子として機能している。運動しない人では上位に来るが、身体を管理し続けている人では最下位に落ちる。</div>
+      <div class="risk-scenario"><strong>対処 →</strong> 現行の運動・栄養・睡眠の維持がそのまま対策。座位の分断を追加すれば実質的にほぼゼロ。</div>
+    </div>
+  </section>
+
+  <!-- 04: 対比表 -->
+  <section>
+    <div class="section-number">04 — 二つの未来</div>
+    <h2>10年後のシナリオ比較</h2>
+
+    <p class="lead">同じ「今」からスタートして、10年後にどこにいるか。</p>
+
+    <div style="overflow-x: auto;">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>領域</th>
+            <th>Side A：アップデートなし</th>
+            <th>Side B：アップデートし続ける</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>体型</td>
+            <td>腹囲増加、内臓脂肪蓄積。見た目の老化が加速</td>
+            <td>体脂肪が管理され、筋肉量が維持・増加。実年齢より若く見える</td>
+          </tr>
+          <tr>
+            <td>エネルギー</td>
+            <td>慢性的な疲労感。午後の眠気が常態化</td>
+            <td>高い活動量を維持。GH・テストステロンのベースラインが高い</td>
+          </tr>
+          <tr>
+            <td>メンタル</td>
+            <td>意欲低下、不安、うつ傾向。抗うつ薬の処方も</td>
+            <td>セロトニン・ドーパミンが最適化。情動が安定し、行動力がある</td>
+          </tr>
+          <tr>
+            <td>認知機能</td>
+            <td>集中力・記憶力の緩やかな低下。「頭が回らない」が口癖に</td>
+            <td>BDNFによる海馬の神経新生が継続。頭が冴え続ける</td>
+          </tr>
+          <tr>
+            <td>病気</td>
+            <td>生活習慣病で薬を飲み始める。心血管リスクが累積</td>
+            <td>生活習慣病リスクはほぼゼロ。残るリスクは確率的ながんのみ</td>
+          </tr>
+          <tr>
+            <td>身体の痛み</td>
+            <td>慢性腰痛、膝痛。整体に通い続ける</td>
+            <td>関節・腱の管理リスクはあるが、モビリティで制御可能</td>
+          </tr>
+          <tr>
+            <td>睡眠</td>
+            <td>睡眠の質が低下。深い睡眠が減り、GH不足に</td>
+            <td>運動がセロトニン→メラトニンの経路を活性化。睡眠の質が維持される</td>
+          </tr>
+          <tr>
+            <td>老化速度</td>
+            <td>生物学的年齢が暦年齢を追い越す</td>
+            <td>GH・BDNF・テストステロン維持により、生物学的年齢が暦年齢より若い</td>
+          </tr>
+          <tr>
+            <td>医療費</td>
+            <td>40代から薬代・通院費が積み上がる</td>
+            <td>ジム代＋食費＋サプリ代。医療費はほぼゼロ</td>
+          </tr>
+          <tr>
+            <td>天命</td>
+            <td>身体が足を引っ張り、やりたいことができなくなる</td>
+            <td>身体がエンジンとして機能し続け、天命に向かい続ける</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 05: 結論 -->
+  <section>
+    <div class="section-number">05 — 結論</div>
+    <h2>リスクの「質」が違う</h2>
+
+    <p>Side Aのリスクは<strong>「やらないことで壊れる」</strong>リスクだ。糖尿病、心筋梗塞、うつ、慢性腰痛——これらはすべて、身体のOSをアップデートしなかった結果として起きる。防ぐ手段は明確で、運動・栄養・睡眠の積を回すこと。つまり行動すれば消えるリスク。</p>
+
+    <p>Side Bのリスクは<strong>「やり続ける中で管理する」</strong>リスクだ。関節の保護、座位の分断、モビリティの維持——これらは身体を高強度で使い続けるからこそ生じるリスクであり、管理すればほぼゼロに近づけられる。</p>
+
+    <p>Side Aでは、リスクが現実化すると人生のシナリオが根本的に変わる。薬を一生飲む、仕事を中断する、身体が動かなくなる。<br>Side Bでは、リスクが現実化しても対処法が明確で、天命の遂行を長期間中断する事態にはなりにくい。</p>
+
+    <div class="equation-box">
+      <div class="equation">健康 ＝ 運動 × 栄養 × 睡眠 ＝ 回復</div>
+      <div class="equation-desc">この方程式を回し続ける限り、Side Aのリスクのほぼ全てが消える。残るのは管理可能なリスクと、確率的なリスクだけ。</div>
+    </div>
+
+    <div class="callout callout-success">
+      <div class="callout-label">最後に</div>
+      二つの身体は、「今」から分岐する。10年後に薬を飲んでいるか、ジムで重量を更新しているか。その差を生むのは才能でも遺伝でもない。OSをアップデートし続けたかどうか。ただそれだけだ。
+    </div>
+  </section>
+
+  <!-- 06: 参考文献 -->
+  <section>
+    <div class="section-number">06 — 参考文献</div>
+    <h2>References</h2>
+
+    <p class="lead">本コラムの主張はすべて査読済み論文に基づく。エビデンスレベル：SR/MA＝システマティックレビュー/メタアナリシス、RCT＝ランダム化比較試験。</p>
+
+    <h3>座位時間・運動・死亡リスク</h3>
+
+    <div style="font-size: 13px; color: var(--text-muted); line-height: 2; margin-bottom: 24px;">
+      <p style="margin-bottom: 12px;"><strong>[1]</strong> Ekelund U, et al. "Does physical activity attenuate, or even eliminate, the detrimental association of sitting time with mortality? A harmonised meta-analysis of data from more than 1 million men and women." <em>The Lancet</em>. 2016;388(10051):1302-1310. — 100万人超のメタアナリシス。1日8時間以上の座位でも、60〜75分/日の中高強度運動で死亡リスクがほぼ相殺されることを示した。</p>
+
+      <p style="margin-bottom: 12px;"><strong>[2]</strong> Stamatakis E, et al. "Sitting time, physical activity, and risk of mortality in adults." <em>Journal of the American College of Cardiology</em>. 2019;73(16):2062-2072. — 149,077人の縦断研究。座位時間と身体活動の組み合わせが全死因・心血管死亡率に及ぼす影響を定量化。</p>
+
+      <p style="margin-bottom: 12px;"><strong>[3]</strong> Pedersen BK, Saltin B. "Exercise as medicine — evidence for prescribing exercise as therapy in 26 different chronic diseases." <em>Scandinavian Journal of Medicine & Science in Sports</em>. 2015;25(Suppl 3):1-72. — 26の慢性疾患に対する運動療法のエビデンスを網羅。糖尿病、心血管疾患、うつ病、がんリスク低減を含む。</p>
+    </div>
+
+    <h3>生活習慣病・心血管リスク</h3>
+
+    <div style="font-size: 13px; color: var(--text-muted); line-height: 2; margin-bottom: 24px;">
+      <p style="margin-bottom: 12px;"><strong>[4]</strong> Gleeson M, et al. "The anti-inflammatory effects of exercise: mechanisms and implications for the prevention and treatment of disease." <em>Nature Reviews Immunology</em>. 2011;11(9):607-615. — 定期的運動が抗炎症性サイトカインを促進し慢性低度炎症を抑制するメカニズムのレビュー。Side Aの慢性炎症カスケードとSide Bの防御メカニズムの根拠。</p>
+
+      <p style="margin-bottom: 12px;"><strong>[5]</strong> Colberg SR, et al. "Physical activity/exercise and diabetes: A position statement of the American Diabetes Association." <em>Diabetes Care</em>. 2016;39(11):2065-2079. — 運動がインスリン感受性を改善し2型糖尿病リスクを低減するエビデンスのポジションステートメント。</p>
+
+      <p style="margin-bottom: 12px;"><strong>[6]</strong> Westcott WL. "Resistance training is medicine: effects of strength training on health." <em>Current Sports Medicine Reports</em>. 2012;11(4):209-216. — レジスタンストレーニングが筋肉量維持、骨密度、代謝率、慢性疾患予防に及ぼす効果の包括的レビュー。</p>
+    </div>
+
+    <h3>運動・メンタルヘルス・認知機能</h3>
+
+    <div style="font-size: 13px; color: var(--text-muted); line-height: 2; margin-bottom: 24px;">
+      <p style="margin-bottom: 12px;"><strong>[7]</strong> Josefsson T, Lindwall M, Archer T. "Physical exercise intervention in depressive disorders: meta-analysis and systematic review." <em>Scandinavian Journal of Medicine & Science in Sports</em>. 2014;24(2):259-272. — 運動がうつ症状を有意に改善することを示したメタアナリシス。効果量は中〜大。Side Aのメンタルヘルスリスクの根拠。</p>
+
+      <p style="margin-bottom: 12px;"><strong>[8]</strong> Szuhany KL, Bugatti M, Otto MW. "A meta-analytic review of the effects of exercise on brain-derived neurotrophic factor." <em>Journal of Psychiatric Research</em>. 2015;60:56-64. — 29研究・N=1,111のメタアナリシス。運動がBDNFを有意に上昇させ、認知機能改善に寄与することを示した。</p>
+
+      <p style="margin-bottom: 12px;"><strong>[9]</strong> Erickson KI, et al. "Exercise training increases size of hippocampus and improves memory." <em>Proceedings of the National Academy of Sciences</em>. 2011;108(7):3017-3022. — 有酸素運動が海馬の容積を2%増加させ、記憶機能を改善することを示したRCT（N=120）。Side Aの認知機能低下とSide Bの防御の根拠。</p>
+    </div>
+
+    <h3>がん・DNA変異・早期発見</h3>
+
+    <div style="font-size: 13px; color: var(--text-muted); line-height: 2; margin-bottom: 24px;">
+      <p style="margin-bottom: 12px;"><strong>[10]</strong> Tomasetti C, Vogelstein B. "Variation in cancer risk among tissues can be explained by the number of stem cell divisions." <em>Science</em>. 2015;347(6217):78-81. — がん発生リスクの約3分の2が正常な幹細胞分裂に伴うランダム変異で説明されることを示した画期的研究。「がんは確率的」の根拠。</p>
+
+      <p style="margin-bottom: 12px;"><strong>[11]</strong> Moore SC, et al. "Association of leisure-time physical activity with risk of 26 types of cancer in 1.44 million adults." <em>JAMA Internal Medicine</em>. 2016;176(6):816-825. — 144万人の前向きコホート。余暇運動が26種中13種のがんリスク低減と関連。運動によるがん予防効果の最大規模エビデンス。</p>
+    </div>
+
+    <h3>筋力・骨密度・サルコペニア</h3>
+
+    <div style="font-size: 13px; color: var(--text-muted); line-height: 2; margin-bottom: 24px;">
+      <p style="margin-bottom: 12px;"><strong>[12]</strong> Peterson MD, Sen A, Gordon PM. "Influence of resistance exercise on lean body mass in aging adults: a meta-analysis." <em>Medicine & Science in Sports & Exercise</em>. 2011;43(2):249-258. — レジスタンストレーニングが加齢に伴う筋量減少を有意に抑制することを示したメタアナリシス。サルコペニア予防の根拠。</p>
+
+      <p style="margin-bottom: 12px;"><strong>[13]</strong> Howe TE, et al. "Exercise for preventing and treating osteoporosis in postmenopausal women." <em>Cochrane Database of Systematic Reviews</em>. 2011;(7):CD000333. — コクランレビュー。荷重運動とレジスタンストレーニングが骨密度を維持・改善することを示した。</p>
+    </div>
+
+    <h3>関節・腱・過負荷リスク</h3>
+
+    <div style="font-size: 13px; color: var(--text-muted); line-height: 2; margin-bottom: 24px;">
+      <p style="margin-bottom: 12px;"><strong>[14]</strong> Magnusson SP, Langberg H, Kjaer M. "The pathogenesis of tendinopathy: balancing the response to loading." <em>Nature Reviews Rheumatology</em>. 2010;6(5):262-268. — 腱の適応速度が筋肉より遅いこと、過負荷が腱障害を引き起こすメカニズムをNature Reviewsで解説。Side Bの#1リスクの根拠。</p>
+
+      <p style="margin-bottom: 12px;"><strong>[15]</strong> Lauersen JB, Bertelsen DM, Andersen LB. "The effectiveness of exercise interventions to prevent sports injuries: a systematic review and meta-analysis of randomised controlled trials." <em>British Journal of Sports Medicine</em>. 2014;48(11):871-877. — 25研究のメタアナリシス。筋力トレーニングがスポーツ傷害を最大69%低減させることを示した。モビリティドリルの根拠。</p>
+    </div>
+
+    <h3>睡眠・ホルモン・回復</h3>
+
+    <div style="font-size: 13px; color: var(--text-muted); line-height: 2; margin-bottom: 24px;">
+      <p style="margin-bottom: 12px;"><strong>[16]</strong> Leproult R, Van Cauter E. "Effect of 1 week of sleep restriction on testosterone levels in young healthy men." <em>JAMA</em>. 2011;305(21):2173-2174. — 睡眠を5時間に制限すると1週間でテストステロンが10〜15%低下することを示したRCT。睡眠とホルモンの直接的関連の根拠。</p>
+
+      <p style="margin-bottom: 12px;"><strong>[17]</strong> Xie L, et al. "Sleep drives metabolite clearance from the adult brain." <em>Science</em>. 2013;342(6156):373-377. — グリンファティック系が睡眠中にβアミロイド等の老廃物を除去することを示した画期的研究。睡眠の脳内洗浄機能の根拠。</p>
+    </div>
+  </section>
+
+  <div style="text-align: center; padding: 48px 0 32px;">
+    <div style="font-size: 16px; font-weight: 700; line-height: 2; color: #e8e6e3; margin-bottom: 20px;">
+      天命ボディを<br>
+      最短最速で手に入れたい方は<br>
+      <span style="color: #c8a44e;">「天命の言語化セッション™」</span>へ！
+    </div>
+    <a href="https://jitsuzon-kagaku-lab.yanaihiroki.com/trial.html" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 16px 36px; background: #c8a44e; color: #0a0a0c; border-radius: 8px; font-size: 15px; font-weight: 700; text-decoration: none; letter-spacing: 0.5px;">
+      無料トライアルはこちら →
+    </a>
+  </div>
+
+  <div class="footer">
+    <p>Based on「身体論 — 天命を全うするための身体の方程式」</p>
+    <p>© <a href="https://jitsuzon-kagaku-lab.yanaihiroki.com/">実存科学研究所</a></p>
+  </div>
+
+</div>
+
+</body>
+</html>
