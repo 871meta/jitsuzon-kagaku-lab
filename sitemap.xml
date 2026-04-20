@@ -1751,6 +1751,14 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- ===== ARTICLES: column-dou-mo-naran ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-dou-mo-naran.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- ===== SPECIALS: tenmei-vivant ===== -->
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/tenmei-vivant/index.html</loc>
