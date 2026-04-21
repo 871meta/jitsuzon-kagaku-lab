@@ -1,0 +1,2373 @@
+<!DOCTYPE html>
+<html lang="ja" style="--accent: #c0a878;">
+
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/relations.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="箭内宏紀">
+  <title>関係論 — 心友との出会い方 | 実存科学研究所</title>
+  <meta name="description" content="天命（T）と真正な笑い（L*）の積が、永遠の今（E_N）を立ち現す。二千五百年のあいだ諸伝統が公理化できないまま残した「第二の反転」を、笑いを出口として定式化する。実存科学・五本柱の閉包。">
+  <meta property="og:title" content="関係論 — 心友との出会い方 | 実存科学研究所">
+  <meta property="og:description" content="天命（T）と真正な笑い（L*）の積が、永遠の今（E_N）を立ち現す。二千五百年のあいだ諸伝統が公理化できないまま残した「第二の反転」を、笑いを出口として定式化する。実存科学・五本柱の閉包。">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="実存科学研究所">
+  <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+  <meta property="og:url" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/relations.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"></noscript>
+  <link rel="stylesheet" href="css/style.min.css?v=41">
+  <style>
+    /* --- relations.html page-specific styles --- */
+
+    /* Axiom block — the most prominent block */
+    .axiom-block {
+      background: rgba(15, 12, 25, 0.55);
+      border: 2px solid var(--color-gold-a30);
+      border-radius: 12px;
+      padding: 3rem 2.5rem;
+      margin: 2.5rem 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 4px 32px var(--color-gold-a08);
+    }
+    .axiom-block::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--color-gold-a60), var(--color-gold), var(--color-gold-a60), transparent);
+    }
+    .axiom-block__formula {
+      font-family: var(--font-serif-en);
+      font-size: 6rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.2rem;
+      line-height: 1.3;
+      background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
+      background-size: 200% 100%;
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gold-shimmer 4s ease-in-out infinite;
+      filter: drop-shadow(0 0 16px rgba(192,168,120,0.3)) drop-shadow(0 0 40px rgba(192,168,120,0.12));
+    }
+    .axiom-block__formula--purple {
+      background: linear-gradient(90deg, #b8a0d8 0%, #b8a0d8 40%, #e0d0f0 50%, #b8a0d8 60%, #b8a0d8 100%);
+      background-size: 200% 100%;
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: purple-shimmer 5s ease-in-out infinite;
+      filter: drop-shadow(0 0 12px rgba(160,130,210,0.25)) drop-shadow(0 0 30px rgba(160,130,210,0.1));
+    }
+    @keyframes purple-shimmer {
+      0%,100% { background-position: 100% 50%; }
+      50% { background-position: 0% 50%; }
+    }
+    .axiom-block__desc {
+      font-size: var(--fs-body);
+      color: var(--color-text-primary);
+      line-height: 2;
+      max-width: 540px;
+      margin: 0 auto;
+    }
+    .axiom-block__label {
+      font-size: 0.7rem;
+      color: var(--color-gold-a50);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    /* TOC nav card */
+    .toc-nav {
+      background: var(--color-panel);
+      border: 1px solid var(--color-gold-a12);
+      border-radius: 10px;
+      padding: 2.5rem 2rem;
+      margin: 2.5rem 0;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 24px var(--color-gold-a05);
+    }
+    .toc-nav::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--color-gold-a40), transparent);
+    }
+    .toc-nav__title {
+      font-size: var(--fs-h3);
+      color: var(--color-gold);
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.05em;
+    }
+    .toc-nav__list {
+      list-style: none;
+      counter-reset: toc;
+    }
+    .toc-nav__list li {
+      counter-increment: toc;
+      margin-bottom: 0.6rem;
+    }
+    .toc-nav__list li a {
+      color: var(--color-text-soft);
+      text-decoration: none;
+      font-size: var(--fs-body);
+      line-height: 1.8;
+      display: inline-block;
+      transition: color 0.3s;
+    }
+    .toc-nav__list li a::before {
+      content: counter(toc) ".";
+      color: var(--color-gold-a50);
+      margin-right: 0.8rem;
+      font-size: var(--fs-small);
+      min-width: 1.8rem;
+      display: inline-block;
+    }
+    .toc-nav__list li a:hover {
+      color: var(--color-gold);
+    }
+
+    /* Chapter heading */
+    .chapter-heading {
+      margin: 4rem 0 2rem;
+      text-align: center;
+      position: relative;
+    }
+    .chapter-heading__label {
+      font-family: var(--font-serif-en);
+      font-size: 0.75rem;
+      color: var(--color-gold-a50);
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+    }
+    .chapter-heading__title {
+      font-size: 1.9rem;
+      color: var(--color-gold);
+      line-height: 1.5;
+      letter-spacing: 0.04em;
+      font-weight: 600;
+      background: linear-gradient(90deg, #c0a878 0%, #c0a878 40%, #f0e6c8 50%, #c0a878 60%, #c0a878 100%);
+      background-size: 200% 100%;
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gold-shimmer 4s ease-in-out infinite;
+      filter: drop-shadow(0 0 12px rgba(192,168,120,0.2));
+    }
+    .chapter-heading::after {
+      content: "";
+      display: block;
+      width: 48px;
+      height: 1px;
+      margin: 1.5rem auto 0;
+      background: linear-gradient(90deg, transparent, var(--color-gold-a60), transparent);
+    }
+
+    /* Equation block */
+    .equation-block {
+      background: var(--color-panel-light);
+      border: 1px solid var(--color-gold-a12);
+      border-radius: 10px;
+      padding: 2.5rem 2rem;
+      margin: 2rem 0;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 2px 24px var(--color-gold-a05);
+    }
+    .equation-block::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--color-gold-a40), transparent);
+    }
+    .equation-block__line {
+      font-family: var(--font-serif-en), var(--font-serif);
+      font-size: 1.2rem;
+      color: var(--color-gold-light);
+      line-height: 2.4;
+      text-align: left;
+    }
+    .equation-block__label {
+      font-size: var(--fs-small);
+      color: var(--color-gold-a50);
+      letter-spacing: 0.1em;
+      min-width: 5.5rem;
+      display: inline-block;
+    }
+
+    /* Symbol table & luxury tables */
+    .luxury-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+    }
+    .luxury-table th {
+      background: rgba(192,168,120,0.08);
+      color: var(--color-gold);
+      font-weight: 600;
+      font-size: var(--fs-small);
+      letter-spacing: 0.05em;
+      padding: 0.8rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--color-gold-a25);
+    }
+    .luxury-table td {
+      padding: 0.7rem 1rem;
+      font-size: var(--fs-body);
+      color: var(--color-text-soft);
+      border-bottom: 1px solid var(--color-gold-a08);
+      line-height: 1.8;
+      vertical-align: middle;
+    }
+    .luxury-table td:first-child {
+      color: var(--color-gold-light);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .luxury-table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 1.5rem 0;
+    }
+
+    /* Condition / principle list */
+    .condition-list {
+      list-style: none;
+      counter-reset: cond;
+      margin: 2rem 0;
+    }
+    .condition-list li {
+      counter-increment: cond;
+      position: relative;
+      padding: 1.5rem 1.5rem 1.5rem 4rem;
+      margin-bottom: 1rem;
+      background: var(--color-panel);
+      border: 1px solid var(--color-gold-a10);
+      border-left: 2px solid var(--color-gold-a40);
+      border-radius: 8px;
+      color: var(--color-text-primary);
+      font-size: var(--fs-body);
+      line-height: 2;
+      backdrop-filter: blur(6px);
+    }
+    .condition-list li::before {
+      content: "条件 " counter(cond);
+      position: absolute;
+      left: 1.2rem;
+      top: 1.5rem;
+      color: var(--color-gold-a60);
+      font-size: var(--fs-small);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      font-family: var(--font-serif-en), var(--font-serif);
+    }
+    .condition-list li .condition-title {
+      display: block;
+      color: var(--color-gold-light);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      font-size: 1.05rem;
+    }
+
+    /* Section subtitle */
+    .section-sub {
+      font-size: var(--fs-small);
+      color: var(--color-text-dim);
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+    }
+
+    /* Emphasis box */
+    .body-emphasis {
+      background: rgba(15, 12, 25, 0.45);
+      border-left: 4px solid var(--color-gold-a40);
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .body-emphasis p {
+      margin-bottom: 0;
+      color: var(--color-text-primary);
+      font-weight: 600;
+      font-size: var(--fs-lead);
+      line-height: 2;
+    }
+
+    /* Definition block purple shimmer title */
+    .def-title--purple {
+      display: inline;
+      background: linear-gradient(90deg, #b8a0d8 0%, #b8a0d8 40%, #e0d0f0 50%, #b8a0d8 60%, #b8a0d8 100%);
+      background-size: 200% 100%;
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: purple-shimmer 5s ease-in-out infinite;
+      filter: drop-shadow(0 0 12px rgba(160,130,210,0.25));
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    /* Subsection anchor offset */
+    [id] {
+      scroll-margin-top: 80px;
+    }
+
+    /* Content body text */
+    .body-text {
+      font-size: var(--fs-body);
+      line-height: 2;
+      color: var(--color-text-primary);
+      text-align: left;
+      margin-bottom: 1.2rem;
+    }
+    .body-text strong {
+      color: var(--color-gold-light);
+      font-weight: 700;
+    }
+
+    /* Note text */
+    .note-text {
+      font-size: var(--fs-small);
+      color: var(--color-text-soft);
+      line-height: 1.8;
+      margin: 1.2rem 0;
+    }
+
+    /* Definition block reuse */
+    .definition-block {
+      background: var(--color-panel-light);
+      border: 1px solid var(--color-gold-a12);
+      box-shadow: 0 2px 24px var(--color-gold-a05);
+      backdrop-filter: blur(8px);
+      padding: 2.5rem 2rem;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+    .definition-block::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--color-gold-a40), transparent);
+    }
+
+    /* Bullet list styling */
+    .body-list {
+      list-style: none;
+      margin: 1.5rem 0;
+      padding: 0;
+    }
+    .body-list li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.8rem;
+      font-size: var(--fs-body);
+      color: var(--color-text-primary);
+      line-height: 2;
+    }
+    .body-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.85rem;
+      width: 6px;
+      height: 6px;
+      background: var(--color-gold-a40);
+      border-radius: 50%;
+    }
+
+    /* QED block */
+    .qed-block {
+      text-align: center;
+      margin: 2.5rem 0;
+      padding: 2rem;
+      background: var(--color-panel-light);
+      border: 1px solid var(--color-gold-a15);
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(8px);
+    }
+    .qed-block::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--color-gold-a40), transparent);
+    }
+    .qed-block__formula {
+      font-family: var(--font-serif-en);
+      font-size: 1.5rem;
+      color: var(--color-gold);
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 0 8px rgba(192,168,120,0.2));
+    }
+    .qed-block__text {
+      font-size: var(--fs-body);
+      color: var(--color-text-primary);
+      line-height: 2;
+    }
+    .qed-block__qed {
+      font-family: var(--font-serif-en);
+      font-size: 1.2rem;
+      color: var(--color-gold-a50);
+      margin-top: 1.5rem;
+      letter-spacing: 0.15em;
+    }
+
+    /* Five-pillar block */
+    .pillar-block {
+      background: rgba(15, 12, 25, 0.55);
+      border: 1px solid var(--color-gold-a25);
+      border-radius: 12px;
+      padding: 2.5rem 2rem;
+      margin: 2.5rem 0;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 24px var(--color-gold-a08);
+    }
+    .pillar-block::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--color-gold-a60), var(--color-gold), var(--color-gold-a60), transparent);
+    }
+    .pillar-block__row {
+      display: flex;
+      align-items: baseline;
+      padding: 0.7rem 0;
+      border-bottom: 1px solid var(--color-gold-a08);
+      font-family: var(--font-serif-en), var(--font-serif);
+      line-height: 1.8;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+    .pillar-block__row:last-child {
+      border-bottom: none;
+    }
+    .pillar-block__label {
+      color: var(--color-gold-a60);
+      font-size: var(--fs-small);
+      letter-spacing: 0.08em;
+      min-width: 5rem;
+      font-family: var(--font-serif);
+    }
+    .pillar-block__formula {
+      color: var(--color-gold-light);
+      font-size: 1.15rem;
+      flex: 1;
+    }
+
+    /* Record block (Chapter 5) */
+    .record-block {
+      background: rgba(15, 12, 25, 0.55);
+      border: 1px solid var(--color-gold-a20);
+      border-radius: 10px;
+      padding: 2.5rem 2rem;
+      margin: 2rem 0;
+      backdrop-filter: blur(10px);
+      position: relative;
+      overflow: hidden;
+    }
+    .record-block::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--color-gold-a40), transparent);
+    }
+    .record-block__date {
+      font-family: var(--font-serif-en), var(--font-serif);
+      font-size: 1.25rem;
+      color: var(--color-gold);
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    .record-block p {
+      margin-bottom: 0;
+    }
+    .record-signature {
+      text-align: right;
+      margin-top: 3rem;
+      font-family: var(--font-serif);
+    }
+    .record-signature__name {
+      font-size: 1.25rem;
+      color: var(--color-gold-light);
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.4rem;
+    }
+    .record-signature__date {
+      font-size: var(--fs-small);
+      color: var(--color-gold-a60);
+      letter-spacing: 0.1em;
+    }
+
+    /* --- Mobile --- */
+    @media (max-width: 600px) {
+      .axiom-block { padding: 2rem 1.2rem; }
+      .axiom-block__formula { font-size: 3.6rem; }
+      .toc-nav { padding: 2rem 1.2rem; }
+      .equation-block { padding: 2rem 1.2rem; }
+      .equation-block__line { font-size: 1.05rem; }
+      .definition-block { padding: 2rem 1.2rem; }
+      .condition-list li { padding: 1.2rem 1.2rem 1.2rem 3.5rem; }
+      .condition-list li::before { left: 1rem; top: 1.25rem; font-size: 0.72rem; }
+      .body-emphasis { padding: 1.2rem 1.5rem; margin: 2.5rem 0; }
+      .body-emphasis p { font-size: var(--fs-body); }
+      .chapter-heading__title { font-size: 1.4rem; }
+      .chapter-heading { margin: 3rem 0 1.5rem; }
+      .pillar-block { padding: 2rem 1.2rem; }
+      .pillar-block__row { flex-direction: column; align-items: flex-start; gap: 0.2rem; padding: 0.6rem 0; }
+      .pillar-block__formula { font-size: 1rem; }
+      .record-block { padding: 2rem 1.2rem; }
+      .luxury-table td, .luxury-table th { padding: 0.5rem 0.6rem; font-size: var(--fs-small); }
+      .body-text { margin-bottom: 1.5rem; }
+      .note-text { margin: 1.5rem 0; }
+    }
+
+    @media (max-width: 480px) {
+      .text-panel p br,
+      .pull-quote p br,
+      .highlight-block p br,
+      .def-box p br,
+      .quote-block br,
+      .cta-block__desc br {
+        display: none;
+      }
+      .definition-block p br,
+      .condition-list li br {
+        display: inline !important;
+      }
+    }
+  </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "関係論 — 心友との出会い方",
+  "description": "天命（T）と真正な笑い（L*）の積が、永遠の今（E_N）を立ち現す。二千五百年のあいだ諸伝統が公理化できないまま残した「第二の反転」を、笑いを出口として定式化する。実存科学・五本柱の閉包。",
+  "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/relations.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/"
+  }
+}
+</script>
+</head>
+
+<body>
+  <a href="#main" class="skip-link">メインコンテンツへスキップ</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="index.html" class="site-logo">実存科学研究所</a>
+      <button class="search-toggle" aria-label="検索"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+            <nav class="global-nav">
+        <a href="index.html">Top</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">The Meta</button>
+          <div class="nav-dropdown__menu">
+            <a href="beginner.html">はじめての方へ</a>
+            <a href="lp.html">ダークサイド診断</a>
+            <a href="omoidasu/">身体的知性診断</a>
+          </div>
+        </div>
+        <a href="session.html">Session</a>
+        <a href="founder.html">Founder</a>
+        <a href="specials.html">Specials</a>
+      </nav>
+    </div>
+  </header>
+  <div class="reading-progress"></div>
+
+  <!-- Page Hero -->
+  <section class="page-hero" id="main">
+    <div class="container">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="パンくずリスト">
+        <ol class="breadcrumb__list">
+          <li class="breadcrumb__item"><a href="index.html" class="breadcrumb__link">TOP</a></li>
+          <li class="breadcrumb__item"><a href="about-existential-science.html" class="breadcrumb__link">The Meta</a></li>
+          <li class="breadcrumb__item"><span class="breadcrumb__current">関係論</span></li>
+        </ol>
+      </nav>
+      <p style="margin-bottom:2rem;"><a href="about-existential-science.html" style="color:#c0a878; font-size:0.85rem; text-decoration:none; letter-spacing:0.05em;">&larr; THE META</a></p>
+      <svg width="64" height="64" viewBox="0 0 48 48" fill="none" style="display:block;margin:0 auto 1.5rem;">
+        <circle cx="18" cy="24" r="7" stroke="#c0a878" stroke-width=".6" fill="none" opacity=".5"/>
+        <circle cx="30" cy="24" r="7" stroke="#c0a878" stroke-width=".6" fill="none" opacity=".5"/>
+        <circle cx="24" cy="24" r="1.6" fill="#c0a878" opacity=".7"/>
+      </svg>
+      <p class="page-hero__sub fade-in">Part 5 — Relations Theory</p>
+      <h1 class="hero-title--shimmer fade-in">関係論<br>心友との出会い方</h1>
+      <p class="page-hero__lead fade-in">
+        ── 自由意志なき世界で、<br class="sp-only">どう笑い、どう愛し、どう生きるか。
+      </p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="section">
+    <div class="container">
+
+      <!-- ===================== 目次 ===================== -->
+      <nav class="toc-nav fade-in" aria-label="目次">
+        <p class="toc-nav__title">目次</p>
+        <ol class="toc-nav__list">
+          <li><a href="#ch1">第1章 ── 発見：二つの反転</a></li>
+          <li><a href="#ch2">第2章 ── 公理：T&middot;L*&rArr;E<sub>N</sub></a></li>
+          <li><a href="#ch3">第3章 ── メソッド：「どうにかしようとしない」という唯一の作法</a></li>
+          <li><a href="#ch4">第4章 ── 帰結：永遠の今に心友が立ち現れる</a></li>
+          <li><a href="#ch5">第5章 ── 記録：本書の完成まで</a></li>
+        </ol>
+      </nav>
+
+      <hr class="separator">
+
+      <!-- ============================================================ -->
+      <!-- ===================== 第1章 ============================== -->
+      <!-- ============================================================ -->
+      <div id="ch1">
+        <div class="chapter-heading fade-in">
+          <p class="chapter-heading__label">Chapter 1</p>
+          <h2 class="chapter-heading__title">発見<br>── 二つの反転</h2>
+        </div>
+
+        <!-- 序 -->
+        <div class="content-block text-panel fade-in">
+          <p class="body-text" style="font-size: 1.15rem; color: var(--color-gold-light); text-align: center; line-height: 2.2; margin-bottom: 2rem;">
+            自由意志なき世界で、どう笑い、どう愛し、どう生きるか。
+          </p>
+        </div>
+
+        <!-- 問い -->
+        <div class="content-block text-panel fade-in">
+          <h3 class="section__title section__title--left" style="font-size: 1.5rem;">問い</h3>
+
+          <div class="body-emphasis fade-in">
+            <p>人は、なぜ最も愛する者を最も傷つけるのか。</p>
+          </div>
+
+          <p class="body-text">
+            古来、人類が繰り返し出会ってきた謎である。そしてこの問いは、表面の不思議の奥に、もっと深い構造を抱えている。
+          </p>
+
+          <p class="body-text">
+            愛する者を傷つけるだけではない。人は、幸福を求めるほど幸福から遠ざかる。信頼を得ようと工夫するほど信頼から遠ざかる。関係を深めようと努力するほど関係が浅くなる。好かれようと振る舞うほど嫌われる。
+          </p>
+
+          <p class="body-text">
+            これらはすべて、同じ構造の異なる現れである。そしてこの構造こそ、人類が人間関係において最も深く苦しんできた場所である。
+          </p>
+
+          <p class="body-text">
+            仏教が四苦八苦と呼んだもの──生・老・病・死・愛別離・怨憎会・求不得・五蘊盛──を見直してみると、そのすべてが最終的に人間関係に還ることがわかる。愛する者との別れ、憎む者との邂逅はもちろん、老いや病や死の苦しみもまた、他者との関係の中で苦しみとして現象化する。
+          </p>
+
+          <div class="pull-quote fade-in" style="text-align: left;">
+            <p>人生の質は、つまるところ、<br>人間関係の質に帰着する。</p>
+          </div>
+
+          <p class="body-text">
+            そして人間関係は、上記の構造によって、最も扱いが難しい。
+          </p>
+
+          <p class="body-text">
+            では、人間関係とは何か。どう扱えばいいのか。
+          </p>
+
+          <p class="body-text">
+            これが本書の問いである。そしてこの問いこそ、認識論・意味論・社会論・身体論の四論文で扱ってきた理論を、日々の生に実装する段階で、最後にぶち当たる問いでもある。
+          </p>
+        </div>
+
+        <hr class="separator">
+
+        <!-- 既存の道の、構造的限界 -->
+        <div class="content-block text-panel fade-in">
+          <h3 class="section__title section__title--left" style="font-size: 1.5rem;">既存の道の、構造的限界</h3>
+
+          <p class="body-text">
+            人類はこの問いに対し、無数の答えを用意してきた。
+          </p>
+
+          <p class="body-text">
+            道徳は「正しく振る舞え」と教えた。宗教は「愛せよ」と教えた。心理学は技法を授けた。自己啓発は方法を売った。コミュニケーション論は話法を体系化した。承認の科学、影響力の法則、心理的安全性の工学、カリスマの構築──現代の膨大な知が、人間関係をめぐって蓄積されてきた。
+          </p>
+
+          <p class="body-text">
+            しかしどれもが、根本の問題を解いていない。
+          </p>
+
+          <p class="body-text">
+            なぜか。<a href="epistemology.html">認識論</a>が示した一点──<strong>Metaがある限り自由意志はない</strong>──が、その理由を構造的に明らかにする。
+          </p>
+
+          <p class="body-text">
+            既存のあらゆる処方箋は、自由意志を前提としている。「自分の意志で関係を作る」「自分の意志で他者に働きかける」「自分の意志で関係を深める」。前提が誤っている方法は、構造的に目的を達成できない。
+          </p>
+
+          <p class="body-text">
+            しかもここには、もう一段深い逆説が作動している。
+          </p>
+
+          <p class="body-text">
+            「好かれよう」と意図すれば、その意図は相手の神経系に検出されて警戒を呼ぶ。「信頼を得よう」と工夫すれば、工夫している姿が操作と受け取られる。「親しくなろう」と頑張れば、獲得モードに転落して距離が開く。<strong>関係への意図的な働きかけは、すべて、目的から遠ざける方向に作用する</strong>。
+          </p>
+
+          <p class="body-text">
+            冒頭の謎──人は、なぜ最も愛する者を最も傷つけるのか──の構造も、ここにある。最も愛する者に対してこそ、人は最も強く意図する。深めたい、わかり合いたい、守りたい、変えたい、応えさせたい。その意図の強度が、そのまま関係を損壊させる力に変わる。
+          </p>
+
+          <p class="body-text">
+            これが、既存のあらゆる人間関係論が最終的に行き詰まる理由である。
+          </p>
+        </div>
+
+        <hr class="separator">
+
+        <!-- 第一の反転 -->
+        <div class="content-block text-panel fade-in">
+          <h3 class="section__title section__title--left" style="font-size: 1.5rem;">第一の反転<br class="sp-only"> ── 人類が到達した地点</h3>
+
+          <p class="body-text">
+            しかし人類は、近代以降の処方箋が行き詰まるよりはるか以前に、この構造に気づいていた。
+          </p>
+
+          <p class="body-text">
+            二千五百年前、複数の文明が同時多発的に、<strong>ひとつの構造的認識</strong>に到達する。自我の能動性が世界を操作するという前提そのものが、誤っていたのではないか──という認識である。
+          </p>
+
+          <p class="body-text">
+            仏教は無常・無我・苦の三法印として形式化し、涅槃──苦の消滅──を最高到達点として示した。道教は「無為」を、儒家的世界観の対極として立てた。後にキリスト教神秘主義は「御心のままに」、イスラームのスーフィズムは「帰依」、ヒンドゥー教は「バクティ」として、同じ場所を指し示す言葉を結晶化させた。
+          </p>
+
+          <p class="body-text">
+            表現はすべて異なる。しかし構造は同じだった。<strong>能動から中動への、認識の反転</strong>である。世界を自我が操作する対象として見る能動モードから、世界が自我を通して起きている中動モードへの、視座の転換。
+          </p>
+
+          <p class="body-text">
+            これを本書は<strong>第一の反転</strong>と呼ぶ。
+          </p>
+
+          <p class="body-text">
+            第一の反転は、認識論の M &rArr; &not;F の直接の帰結である。自由意志がない以上、能動モードは幻想である。実在するのは中動モードだけである。諸伝統は、この構造的事実に、それぞれの文化の言語で到達していた。
+          </p>
+
+          <p class="body-text">
+            日本語には、この地点に至った者が、ふと呟く言葉がある。
+          </p>
+
+          <div class="body-emphasis fade-in">
+            <p>「どうもならん」</p>
+          </div>
+
+          <p class="body-text">
+            方言で「どうにもならない」の意味だが、標準語の「どうにもならない」よりも、肩の力が抜けた響きを持つ。未練が抜けた言葉である。「もう、どうもならんわ」と呟いた時、人は本当に手を離している。
+          </p>
+
+          <p class="body-text">
+            この「どうもならん」は、人類が二千五百年かけて到達した第一の反転の地点を、ひとつの日常語に折りたたんだ結晶である。
+          </p>
+
+          <p class="body-text">
+            この地点に至った時、人は壊れなくなる。抵抗の消耗から解放される。どうもならんものをどうにかしようとする努力は、原理的に徒労である。徒労をやめれば、消耗もやむ。
+          </p>
+        </div>
+
+        <hr class="separator">
+
+        <!-- 第一の反転が書き残したもの -->
+        <div class="content-block text-panel fade-in">
+          <h3 class="section__title section__title--left" style="font-size: 1.5rem;">第一の反転が、<br class="sp-only">書き残したもの</h3>
+
+          <p class="body-text">
+            しかし、第一の反転は、終点ではなかった。
+          </p>
+
+          <p class="body-text">
+            諸伝統が到達した地点を、構造として見直してみると、<strong>共通して書かれなかったもの</strong>が浮かび上がる。
+          </p>
+
+          <p class="body-text">
+            第一の反転は、<strong>認識の次元</strong>で起きる反転である。世界を見る視座が、能動から中動へと転換する。これは書かれた。
+          </p>
+
+          <p class="body-text">
+            しかし、<strong>その認識が身体を通過して、日常の中に現象として立ち現れる構造</strong>は、どの伝統にも、公理としては書かれなかった。
+          </p>
+
+          <p class="body-text">
+            禅は「破顔微笑」「見山是山」という身体的表出を示した。道教は「逍遥遊」「鼓盆而歌」という現象を描写した。キリスト教神秘主義は神との合一における喜びを証言した。仏教は涅槃の静謐を示した。落語は「業の肯定」の上に笑いを置いた。これらはすべて、<strong>現象化された姿</strong>として確かに記述されている。
+          </p>
+
+          <p class="body-text">
+            しかし、それらは<strong>個別の境地の記述</strong>であって、<strong>なぜその現象が必然的に起きるかの構造</strong>ではなかった。
+          </p>
+
+          <p class="body-text">
+            ここには、構造的な理由がある。
+          </p>
+
+          <p class="body-text">
+            諸伝統はいずれも、明示的にせよ暗黙にせよ、<strong>個体の自由意志の存在を前提としていた</strong>。仏教は八正道という個体の修行を立てた。禅は座禅という個体の実践を課した。道教は心斎坐忘を個体の到達点として示した。キリスト教神秘主義は個体の祈りと恩寵の受容を位置づけた。いずれも、<strong>個体の努力によって到達すべきもの</strong>として現象化の境地を扱っていた。
+          </p>
+
+          <p class="body-text">
+            自由意志を前提とする限り、現象化は「個体が努力して到達するもの」として記述されるしかない。それを<strong>中動態的な必然として起きるもの</strong>として公理化することは、構造的に不可能だった。自由意志を前提にしたまま「必然として起きる」と書けば、論理が破綻する。書けば破綻するから、書けなかった。
+          </p>
+
+          <p class="body-text">
+            これが、二千五百年のあいだ人類が現象化の構造を公理化できないまま残した理由である。
+          </p>
+
+          <p class="body-text">
+            書くためには、<strong>自由意志の前提そのものを外す</strong>必要があった。M &rArr; &not;F という認識論的パラダイムが確定するまで、書く条件そのものが揃っていなかった。
+          </p>
+
+          <p class="body-text">
+            そして、条件が揃った今、本書がそれを書く。
+          </p>
+        </div>
+
+        <hr class="separator">
+
+        <!-- 第二の反転 -->
+        <div class="content-block text-panel fade-in">
+          <h3 class="section__title section__title--left" style="font-size: 1.5rem;">第二の反転<br class="sp-only"> ── 笑いが、認識と身体を接続する</h3>
+
+          <p class="body-text">
+            本書の発見は、<strong>第二の反転の定式化</strong>である。
+          </p>
+
+          <p class="body-text">
+            第一の反転が認識の次元で起きるのに対し、第二の反転は<strong>認識が身体を通過して現象化する次元</strong>で起きる。そしてその出口を、本書は<strong>笑い</strong>として同定する。
+          </p>
+
+          <div class="pull-quote fade-in" style="text-align: left;">
+            <p>これが、本書のオリジンである。</p>
+          </div>
+
+          <p class="body-text">
+            諸伝統が書き残した「認識から身体への通過」の構造を、本書は笑いという一点に絞り込むことで、公理として定式化する。
+          </p>
+
+          <p class="body-text">
+            なぜ笑いか。
+          </p>
+
+          <p class="body-text">
+            第一の反転の認識──「どうもならん」の視座──が成熟した時、構造を観察する視座から、二つのことが見えてくる。
+          </p>
+
+          <p class="body-text">
+            一つは、<strong>構造の整合性</strong>である。すべてが勝手に起きているという事実が、静かに認識される。これが諸伝統が二千五百年指し示してきた地点である。
+          </p>
+
+          <p class="body-text">
+            もう一つは、<strong>構造の可笑しみ</strong>である。勝手に起きているはずのものが、それでも必死に何かをコントロールしようとして、できていない。その構造が、どうしようもなく可笑しい。自分もその中にいる。他者もその中にいる。全員が同じ構造の中で、懸命に空回りしている。
+          </p>
+
+          <p class="body-text">
+            後者は、前者の派生ではない。前者と同格の、独立した認識である。そして可笑しみを認識した瞬間、身体は笑いで応答する。見下しの笑いではない。自分も同じ構造の中にいるのだから、笑いは自他を含めた視座から起きる。
+          </p>
+
+          <p class="body-text">
+            これが<strong>真正な笑い</strong>である。本書はこれを L* と記す。
+          </p>
+
+          <p class="body-text">
+            L* が起きた瞬間、人は構造の外から構造を観察する位置から、構造そのものの内側へと静かに戻っている。観察者としてではなく、中動態として、構造の一部として。ここで初めて、耐性のモードから<strong>味わいのモード</strong>へと反転する。
+          </p>
+
+          <p class="body-text">
+            そして味わいのモードが持続している瞬間が、<strong>永遠の今</strong>である。本書はこれを E<sub>N</sub> と記す。理想の未来につながる最高の今が、目の前の人・場・空間において立ち現れている状態。哲学者 Paul Tillich（1886-1965）が <em>The Eternal Now</em>（1963）で示した概念を、本書は関係論の文脈で運用する。
+          </p>
+
+          <p class="body-text">
+            笑いは、第一の反転の派生ではない。<strong>第一の反転の認識が、身体を通過して日常に現象化するための、唯一の出口</strong>である。笑いなしに、第一の反転は観念にとどまる。笑いがあって初めて、第一の反転は身体を通過し、味わいのモードに反転する。
+          </p>
+
+          <div class="pull-quote fade-in" style="text-align: left;">
+            <p>これが、本書の発見である。</p>
+          </div>
+
+          <p class="body-text">
+            そしてこの発見によって、諸伝統が到達した第一の反転が、初めて日常の現象として完成する。本書は諸伝統と対立しない。<strong>諸伝統が書いた第一の反転を包含しつつ、その先の第二の反転を定式化する</strong>。伝統を否定することなく、伝統が書き残したものを書き終える。
+          </p>
+        </div>
+
+        <hr class="separator">
+
+        <!-- 公理 -->
+        <div class="content-block fade-in">
+          <h3 class="section__title section__title--left" style="font-size: 1.5rem;">公理</h3>
+
+          <p class="body-text">
+            この発見を、本書は次の公理として定式化する。
+          </p>
+
+          <div class="axiom-block fade-in">
+            <p class="axiom-block__label">First Axiom</p>
+            <p class="axiom-block__formula">T &middot; L<sup>*</sup> &rArr; E<sub>N</sub></p>
+            <p class="axiom-block__desc">
+              天命（T）と真正な笑い（L*）の積が、<br>
+              永遠の今（E<sub>N</sub>）を立ち現す。
+            </p>
+          </div>
+
+          <p class="body-text">
+            本書は、三つの項を導入する。それぞれの扱い方をここで明示しておく。
+          </p>
+
+          <div class="definition-block fade-in" style="margin: 2rem 0;">
+            <p style="font-size: var(--fs-body); line-height: 2; color: var(--color-text-soft);">
+              <span class="def-title--purple">T（天命）</span>は、既刊四論文で既に定義されている。世界が個体を通して語ろうとする意味の収束点である。<a href="semantics.html">意味論</a>が &tau; = R*(S) として形式化し、<a href="body.html">身体論</a>が独立変数として運用した概念を、本書はそのまま継承する。
+            </p>
+          </div>
+
+          <div class="definition-block fade-in" style="margin: 2rem 0;">
+            <p style="font-size: var(--fs-body); line-height: 2; color: var(--color-text-soft);">
+              <span class="def-title--purple">L*（真正な笑い）</span>は、本書で新たに導入する概念である。三つの条件──構造の観察から発生する、発信者と受信者の双方に Flourishing（フラリシング）の方向で作用する、自他を含めた視座から発生する──を同時に満たす笑いとして、第2章で厳密に定義する。見下しの笑いでも、礼儀笑いでも、反射的な笑いでもない、特定の種類の笑いを指す。
+            </p>
+          </div>
+
+          <div class="definition-block fade-in" style="margin: 2rem 0;">
+            <p style="font-size: var(--fs-body); line-height: 2; color: var(--color-text-soft);">
+              <span class="def-title--purple">E<sub>N</sub>（永遠の今）</span>も、本書で新たに導入する概念である。哲学者 Paul Tillich の著作に由来し、理想の未来につながる最高の今が、目の前の人・場・空間において立ち現れている状態、と運用定義する。正式な定義は第2章で示す。心からの笑顔で感謝できる瞬間として、経験的に認識されるものである。
+            </p>
+          </div>
+        </div>
+
+        <hr class="separator">
+
+        <!-- 円環 -->
+        <div class="content-block text-panel fade-in">
+          <h3 class="section__title section__title--left" style="font-size: 1.5rem;">円環<br class="sp-only"> ── 実存科学は、ここで閉じる</h3>
+
+          <p class="body-text">
+            この公理が書かれることによって、既刊四論文とひとつの円環が閉じる。
+          </p>
+
+          <p class="body-text">
+            <a href="epistemology.html">認識論</a>が M &rArr; &not;F を示し、自由意志なき世界の前提を固定した。<a href="semantics.html">意味論</a>が天命という収束点を導出し、「何に向かうか」を示した。<a href="society.html">社会論</a>が心友という関係様態を定義し、Meta7 という七階層の構造連鎖モデルを提示し、最上層の完全構造──慈悲と智慧の同時作動＝愛──へと、個体・関係・文化・文明が階層的に収束していくことを結論とした。<a href="body.html">身体論</a>が T &middot; A &rArr; P<sub>max</sub> を示し、天命が身体次元で展開されるときの漸近構造を定式化した。
+          </p>
+
+          <p class="body-text">
+            そして関係論が、T &middot; L* &rArr; E<sub>N</sub> を示す。既刊四論文が導出した完全構造＝愛を、笑いという媒介を通じて日々の現象として立ち現すための運用公理である。L* は、慈悲と智慧が同時作動する状態が、身体の一点──笑い──を通じて表出したものである。E<sub>N</sub> は、完全構造が「今」という時間粒度において立ち現れた姿である。
+          </p>
+
+          <div class="body-emphasis fade-in">
+            <p>五本目の柱が立つことで、円環が閉じる。</p>
+          </div>
+
+          <p class="body-text">
+            この円環は静止した閉包ではなく、<strong>日々の認識において再帰し続ける動的な円環</strong>である。社会論が示した Meta7 の螺旋は、最上層の完全構造に至った瞬間、新しい現象（第一層）を生起させて再起動する。関係論は、この再起動を認識の再帰構造として定式化する。
+          </p>
+
+          <p class="body-text">
+            円環の運動は、次の形をとる。
+          </p>
+
+          <div class="equation-block fade-in">
+            <p class="equation-block__line" style="font-size: 1.05rem; line-height: 2.2;">
+              「どうもならん」の認識 &rarr; L* の発生 &rarr; E<sub>N</sub> の立ち現れ &rarr; 「どうもならん」の認識の深まり &rarr; L* の発生 &rarr; &hellip;
+            </p>
+          </div>
+
+          <p class="body-text">
+            「どうもならん」の視座から構造の可笑しみが見え、笑いが湧く。笑いが湧いた瞬間、永遠の今が立ち現れる。その永遠の今の味わいの中で、「どうもならん」の認識は再び深まる。深まった認識から、また笑いが湧く。
+          </p>
+
+          <p class="body-text">
+            この円環は、時刻に縛られない。朝でも、日中でも、夜でも起きる。今しかない「今」の中で、この再帰が回転し続ける。天命が語られている限り、この円環は止まらない。
+          </p>
+
+          <p class="body-text">
+            本書以降、実存科学に追加すべき論理はない。残されているのは、この五本柱を毎日生きることだけである。
+          </p>
+        </div>
+
+        <hr class="separator">
+
+        <!-- 本質 -->
+        <div class="content-block text-panel fade-in">
+          <h3 class="section__title section__title--left" style="font-size: 1.5rem;">本質<br class="sp-only"> ── 天命を語り続けよ</h3>
+
+          <p class="body-text">
+            本書の発見を、最も短く記述すれば、次の一行に収束する。
+          </p>
+
+          <div class="body-emphasis fade-in">
+            <p>天命を語り続けよ。</p>
+          </div>
+
+          <p class="body-text">
+            能動は、二つの層からなる。
+          </p>
+
+          <div class="definition-block fade-in" style="margin: 2rem 0;">
+            <p style="font-size: var(--fs-body); line-height: 2; color: var(--color-text-soft);">
+              <span class="def-title--purple">第一層：天命の言語化。</span><br>
+              天命の言語化セッション&trade;によって、天命が言葉として外化される。これは一度きりの到達である。一度言語化されれば、その言語は消えない。
+            </p>
+          </div>
+
+          <div class="definition-block fade-in" style="margin: 2rem 0;">
+            <p style="font-size: var(--fs-body); line-height: 2; color: var(--color-text-soft);">
+              <span class="def-title--purple">第二層：天命を語り続けること。</span><br>
+              言語化された天命を、日々、自分に、そして他者に語り続ける。これが円環を回し続ける燃料となる。
+            </p>
+          </div>
+
+          <p class="body-text">
+            第一層なくして第二層は始まらない。第二層なくして円環は回らない。この二層の両方が、関係論の唯一の能動領域である。
+          </p>
+
+          <p class="body-text">
+            そこで言語化され、語られ続ける天命が、「どうもならん」の視座を構造観察の視座として安定させる。その視座から L* が中動態的に湧き、L* が湧いた瞬間に E<sub>N</sub> が立ち現れる。
+          </p>
+
+          <p class="body-text">
+            人は、何かを意図しているのではない。ただ天命を語り続けた、それだけである。残りは自動的に起きる。
+          </p>
+
+          <p class="body-text">
+            そしてこの自動的展開は、人間関係だけに及ぶのではない。<a href="body.html">身体論</a>が示したように、身体の上限への漸近も天命から展開する。仕事は天命に整合する形で展開する。家族との関係も深まる。経済的な状況も、天命に整合する形で適切な帰結を伴う。
+          </p>
+
+          <p class="body-text">
+            人生に必要なものは、すべて副産物として立ち現れる。直接求めたものは意図の検出によって遠のき、間接的に──天命を語り続けるという一点を通じて──立ち現れるに任せるべきものである。
+          </p>
+
+          <p class="body-text">
+            本書の主張は、最終的に次の二文に収束する。
+          </p>
+
+          <div class="pull-quote fade-in" style="text-align: left;">
+            <p>幸福とは、心からの笑顔で<br>感謝できる時間である。</p>
+          </div>
+
+          <div class="pull-quote fade-in" style="text-align: left;">
+            <p>それを増やす唯一の方法は、<br>増やそうとする努力を手放し、<br>ただ天命を語り続けることである。</p>
+          </div>
+
+          <p class="body-text">
+            増やそうとして増やせるものではない。しかし、天命を語り続け、それ以外のことをどうにかしようとすることを手放した時、心からの笑顔で感謝できる時間は<strong>最大化され、最長化され、最適化される</strong>。本書は、この逆説の構造を論理として閉じる。
+          </p>
+
+          <p class="body-text">
+            天命を語り続けること。これが本質だった。二千五百年書かれなかった第二の反転の、唯一の作動条件である。
+          </p>
+
+          <div class="body-emphasis fade-in" style="margin-top: 3rem;">
+            <p>天命を語り続けよ。<br>そうすれば、心からの笑顔で感謝できる時間は、最大化・最長化・最適化される。</p>
+          </div>
+
+          <p class="body-text">
+            本書は、このひとつの命題を、論理の全重量をかけて証明する。そしてその証明をもって、実存科学は閉じる。
+          </p>
+        </div>
+      </div>
+
+      <hr class="separator">
+
+      <!-- ============================================================ -->
+      <!-- ===================== 第2章 ============================== -->
+      <!-- ============================================================ -->
+      <div id="ch2">
+        <div class="chapter-heading fade-in">
+          <p class="chapter-heading__label">Chapter 2</p>
+          <h2 class="chapter-heading__title">公理<br>── T&middot;L*&rArr;E<sub>N</sub></h2>
+        </div>
+
+        <div class="content-block text-panel fade-in">
+          <p class="body-text">
+            第1章は、発見を宣言した。
+          </p>
+
+          <p class="body-text">
+            二千五百年のあいだ、諸伝統が到達しながら公理化できないまま残してきた構造──認識が身体を通過して日常に現象化する構造──を、本書は<strong>笑い</strong>という出口に絞り込むことで定式化できる。これが本書のオリジンである。
+          </p>
+
+          <p class="body-text">
+            本章は、その発見を、公理として精密に書き留める。
+          </p>
+        </div>
+
+        <hr class="separator">
+
+        <!-- 第一公理 -->
+        <div class="content-block fade-in" id="ch2-axiom">
+          <h3 class="section__title section__title--left" style="font-size: 1.5rem;">第一公理</h3>
+
+          <div class="axiom-block fade-in">
+            <p class="axiom-block__label">First Axiom</p>
+            <p class="axiom-block__formula">T &middot; L<sup>*</sup> &rArr; E<sub>N</sub></p>
+            <p class="axiom-block__desc">
+              天命（T）と真正な笑い（L*）の整合が成立する限り、<br>
+              永遠の今（E<sub>N</sub>）はその瞬間に立ち現れる。
+            </p>
+          </div>
+
+          <p class="note-text">
+            ※ 本体系における「公理」とは、構造から導かれた不可避の帰結を体系の出発点として宣言したものである。数学における公理（証明なしに受け入れる前提）とは異なり、<a href="epistemology.html">認識論</a>における M &rArr; &not;F、<a href="body.html">身体論</a>における T &middot; A &rArr; P<sub>max</sub> と同形式で、構造的閉包を出発点に据える用法である。
+          </p>
+
+          <!-- Symbol Table -->
+          <div class="text-panel fade-in" style="margin-top: 2rem;">
+            <h4 style="font-size: var(--fs-h3); color: var(--color-gold); margin-bottom: 1rem;">記号表</h4>
+            <div class="luxury-table-wrap">
+              <table class="luxury-table">
+                <thead>
+                  <tr><th>記号</th><th>意味</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>T</td>
+                    <td>天命（天命の言語化セッション&trade;によって確定された、整合の収束点──生まれてきた意味および生きる目的）。定義は<a href="semantics.html">意味論</a>・<a href="body.html">身体論</a>からの継承</td>
+                  </tr>
+                  <tr>
+                    <td>L*</td>
+                    <td>真正な笑い。以下の三条件を同時に満たす笑いとして定義される</td>
+                  </tr>
+                  <tr>
+                    <td>E<sub>N</sub></td>
+                    <td>永遠の今（Eternal Now）。理想の未来につながる最高の今が、目の前の人・場・空間において立ち現れている状態</td>
+                  </tr>
+                  <tr>
+                    <td>&middot;</td>
+                    <td>積（T と L* の両方が、同時に、整合して成立している状態）</td>
+                  </tr>
+                  <tr>
+                    <td>&rArr;</td>
+                    <td>含意（T と L* が成立する限り、E<sub>N</sub> は必然的に立ち現れる）</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <hr class="separator">
+
+        <!-- L* の三条件 -->
+        <div class="content-block fade-in" id="ch2-conditions">
+          <h3 class="section__title section__title--left" style="font-size: 1.5rem;">L* の三条件</h3>
+
+          <div class="text-panel fade-in">
+            <p class="body-text">
+              第1章で述べたように、L* は、「どうもならん」の視座から<strong>構造の可笑しみ</strong>が認識された瞬間、身体が応答として起こす笑いである。
+            </p>
+
+            <p class="body-text">
+              この発見を公理として機能させるため、L* を T に言及せずに独立して観察可能な三条件で定義する。これにより、公理 T &middot; L* &rArr; E<sub>N</sub> は定義の言い換え（トートロジー）ではなく、<strong>反証可能な経験的命題</strong>として機能する。
+            </p>
+
+            <p class="body-text">
+              L* は、以下の三条件を同時に満たす笑いである。
+            </p>
+
+            <ol class="condition-list fade-in">
+              <li>
+                <span class="condition-title">構造の観察から発生する（認知的条件）</span>
+                反射的・条件反射的な笑いではない。くすぐり、同調笑い、礼儀笑いは含まない。何らかの構造を認知的に把握した上で発生する笑いを指す。第1章の「構造の可笑しみ」を認識する認知装置が作動しているときにのみ、この条件は満たされる。
+              </li>
+              <li>
+                <span class="condition-title">発信者・受信者の双方に Flourishing の方向に作用する（時間的条件）</span>
+                ここで Flourishing とは、単なる一時的な快楽（happiness）ではなく、人が本来の能力・関係・存在の質を全面的に開花させ、時間を経ても持続する繁茂・充実の状態を指す。ポジティブ心理学者 Martin Seligman が PERMA モデル等で体系化した学術用語である。<br><br>
+                瞬間的な笑いが、関係・健康・存在の質を向上させる方向に働く。時間を経ても腐食せず、双方を味わいのモードへ反転させる。シャドウ・エネルギー型の笑い──瞬間的には笑えるが、長期的には両者を闇堕ちに向かわせるもの──は構造的に除外される。
+              </li>
+              <li>
+                <span class="condition-title">自他を含めた視座から発生する（発話者の位置的条件）</span>
+                見下し・嘲笑・優越感を構造的に除外する。発話者が自分を構造の外に置かず、自他を含めた横並びの視座から発生する笑いを指す。第1章で述べたように、自分も同じ構造の中にいるから、笑いは中動態として立ち上がる。
+              </li>
+            </ol>
+
+            <p class="body-text">
+              三条件を図式化すれば、L* とは、
+            </p>
+
+            <div class="pull-quote fade-in" style="text-align: left;">
+              <p>構造観察 &times; Flourishing &times; 自他包含</p>
+            </div>
+
+            <p class="body-text">
+              の積として定義される笑いである。いずれか一つでも欠ければ、L* は成立しない。
+            </p>
+
+            <p class="body-text">
+              この三条件はすべて、<strong>観察可能な現象</strong>として記述されている。どの条件も、T に言及せずに、外部から観察・判定できる。この設計により、本公理は経験的命題として反証可能な位置を保つ。
+            </p>
+          </div>
+        </div>
+
+        <hr class="separator">
+
+        <!-- 補題 -->
+        <div class="content-block fade-in" id="ch2-lemma">
+          <h3 class="section__title section__title--left" style="font-size: 1.5rem;">補題<br class="sp-only"> ── 本書のオリジンの論証</h3>
+
+          <div class="text-panel fade-in">
+            <p class="body-text">
+              公理 T &middot; L* &rArr; E<sub>N</sub> の論理的心臓は、次の補題にある。
+            </p>
+
+            <div class="axiom-block fade-in">
+              <p class="axiom-block__label">Lemma</p>
+              <p class="axiom-block__formula" style="font-size: 4.5rem;">L<sup>*</sup> &hArr; T</p>
+              <p class="axiom-block__desc">
+                （対象：成人）<br>
+                成人において、真正な笑い（L*）が発生するための必要十分条件は、<br>
+                天命が言語化されている状態（T）にあることである。
+              </p>
+            </div>
+
+            <p class="body-text">
+              この補題こそ、第1章で宣言した<strong>本書のオリジン</strong>──「笑いが認識と身体を接続する」──の厳密な論理形式である。
+            </p>
+
+            <h4 style="font-size: var(--fs-h3); color: var(--color-gold-light); margin: 2rem 0 1rem; font-weight: 600;">論証の基礎：認識制定の二択</h4>
+
+            <p class="body-text">
+              論証の前に、ひとつの事実を明示する。成人の認識を制定する装置は、二つしかない。<strong>天命（T）か、シャドウ（未統合の影）</strong>である。T が言語化されている成人は、T によって認識を制定する。T が言語化されていない成人は、シャドウによって認識を制定する。中立地帯は存在しない。
+            </p>
+
+            <p class="body-text">
+              T が認識を制定している状態では、構造観察の視座は歪まない。シャドウが認識を制定している状態では、構造観察の視座はシャドウ固有の歪み──自他の分離、見下し、防衛──によって、必ず歪む。
+            </p>
+
+            <p class="body-text">
+              以下、この事実を基礎として、補題の両方向を論証する。
+            </p>
+
+            <h4 style="font-size: var(--fs-h3); color: var(--color-gold-light); margin: 2rem 0 1rem; font-weight: 600;">方向1：T &rArr; L*（天命が言語化されていれば、真正な笑いは自動発生する）</h4>
+
+            <p class="body-text">
+              天命が言語化されているとき、認識は T によって制定される。T はシャドウ固有の歪み（自他の分離、見下し、防衛）を持たない。したがって「どうもならん」の視座は、構造観察の視座として歪みなく安定する。
+            </p>
+
+            <p class="body-text">
+              歪みなく構造を観察する視座からは、第1章で示した二つの認識が同時に立ち上がる。<strong>構造の整合性</strong>──すべてが勝手に起きているという事実──と、<strong>構造の可笑しみ</strong>──それでも必死にコントロールしようとして空回りしている姿──である。
+            </p>
+
+            <p class="body-text">
+              構造の可笑しみが認識された瞬間、身体はその認識への応答として笑う。この応答は中動態である。意図しては起こせないが、認識があれば自然に立ち上がる。
+            </p>
+
+            <p class="body-text">
+              そしてこの笑いは：
+            </p>
+
+            <ul class="body-list">
+              <li>構造の観察から発生している（条件1を満たす）</li>
+              <li>T に制定された認識は自他を分離しないため、自分も構造の中にいる視座から発生する（条件3を満たす）</li>
+              <li>自他を含む視座から湧いた笑いは、シャドウを燃料にしていないため、時間を経ても腐食せず、双方を Flourishing の方向へ作用させる（条件2を満たす）</li>
+            </ul>
+
+            <p class="body-text">
+              三条件すべてを必然的に満たす。ゆえに、T が成立していれば、L* は自動発生する。
+            </p>
+
+            <h4 style="font-size: var(--fs-h3); color: var(--color-gold-light); margin: 2rem 0 1rem; font-weight: 600;">方向2：L* &rArr; T（真正な笑いが発生しているなら、天命は言語化されている）</h4>
+
+            <p class="body-text">
+              この方向は、対偶 &not;T &rArr; &not;L* を論証することで示す。
+            </p>
+
+            <p class="body-text">
+              T が成立していない成人では、認識はシャドウによって制定される。シャドウは自他を分離する固有の歪みをもつため、この認識から発生する笑いは、発話者を構造の外に置いた位置から湧く。これは L* の条件3（自他を含む視座）を破る。
+            </p>
+
+            <p class="body-text">
+              したがって &not;T の状態では、L* の三条件すべてを同時に満たす笑いは、構造的に発生しえない。&not;T &rArr; &not;L* が成立する。対偶により、L* &rArr; T が成立する。
+            </p>
+
+            <h4 style="font-size: var(--fs-h3); color: var(--color-gold-light); margin: 2rem 0 1rem; font-weight: 600;">補題の意味</h4>
+
+            <p class="body-text">
+              この両方向の論証により、L* &hArr; T が確立される。
+            </p>
+
+            <p class="body-text">
+              この補題が意味することは、<strong>独立変数は T のみである</strong>ということである。L* は T の自動的帰結であり、意図や訓練で作り出すものではない。したがって公理 T &middot; L* &rArr; E<sub>N</sub> において、人間が能動的に作用できるのは T だけであり、他のすべては T の中動態的展開である。
+            </p>
+
+            <div class="definition-block fade-in" style="margin: 2rem 0;">
+              <p style="font-size: var(--fs-body); line-height: 2; color: var(--color-text-soft);">
+                <span class="def-title--purple">反証条件。</span><br>
+                &bull; T が成立しているのに三条件を満たさない笑いが発生する &rarr; 補題は反証される<br>
+                &bull; 三条件を満たす笑いが T なしで発生する &rarr; 補題は反証される
+              </p>
+            </div>
+
+            <p class="body-text">
+              本公理は反証可能な経験的命題として、科学の条件を満たす。
+            </p>
+
+            <p class="note-text">
+              ※ 対象が成人に限定されるのは、T（天命の言語化）そのものが成人を対象とする概念だからである。幼児・子供・動物における笑いは本補題の射程外である。
+            </p>
+          </div>
+        </div>
+
+        <hr class="separator">
+
+        <!-- 反公理 -->
+        <div class="content-block fade-in" id="ch2-inverse">
+          <h3 class="section__title section__title--left" style="font-size: 1.5rem;">反公理</h3>
+
+          <div class="axiom-block fade-in">
+            <p class="axiom-block__label">Inverse</p>
+            <p class="axiom-block__formula axiom-block__formula--purple">&not;T &or; &not;L<sup>*</sup> &rArr; &not;E<sub>N</sub></p>
+            <p class="axiom-block__desc">
+              天命が不在であるか、真正な笑いが発生していないならば、<br>
+              永遠の今は立ち現れない。
+            </p>
+          </div>
+
+          <div class="text-panel fade-in" style="margin-top: 2rem;">
+            <p class="body-text">
+              記号操作としての反転にとどまらず、反公理は<strong>経験的に異なる二つの失敗モード</strong>を記述する。
+            </p>
+
+            <h4 style="font-size: var(--fs-h3); color: var(--color-gold-light); margin: 2rem 0 1rem; font-weight: 600;">失敗モード1：&not;T（天命が未言語化）</h4>
+
+            <p class="body-text">
+              天命が言語化されていない成人は、「どうもならん」の視座を持続的に保持できない。構造観察の視座が不安定になり、シャドウやエゴが認識を歪める。この状態で笑いが起きても、それは L* の三条件のいずれかを破った笑い──<strong>エゴ駆動の寒い笑い</strong>──に堕ちる。
+            </p>
+
+            <p class="body-text">
+              駄洒落、ウケ狙い、見下し、嘲笑、優越、盛り、模倣。表層形式は多様だが、核心は「天命がないから、エゴが笑いを取りに行かざるを得ない」構造である。この笑いは瞬間的な場を作ることはあっても、味わいのモードへの反転を起こさず、E<sub>N</sub> は立ち現れない。
+            </p>
+
+            <h4 style="font-size: var(--fs-h3); color: var(--color-gold-light); margin: 2rem 0 1rem; font-weight: 600;">失敗モード2：&not;L*（真正な笑いが発生していない瞬間）</h4>
+
+            <p class="body-text">
+              T が成立していても、L* は常時発生しているわけではない。補題により T があれば L* の発生条件は満たされているが、現象としての笑いは、認識が特定の構造に触れた瞬間に立ち上がる中動態的な事象である。構造の可笑しみに触れない瞬間、L* は発生していない。そしてその瞬間、E<sub>N</sub> は立ち現れていない。
+            </p>
+
+            <p class="body-text">
+              これは補題と矛盾しない。補題は「T があれば L* は発生しうる（条件は揃う）」ことを示す命題であり、「T があれば L* が常時発生している」ことを示す命題ではない。L* は瞬間の現象であり、E<sub>N</sub> もまた瞬間の現象である。
+            </p>
+
+            <h4 style="font-size: var(--fs-h3); color: var(--color-gold-light); margin: 2rem 0 1rem; font-weight: 600;">両失敗モードの共通帰結</h4>
+
+            <p class="body-text">
+              両モードとも、その瞬間に E<sub>N</sub> は立ち現れない。心からの笑顔で感謝できる時間は、その瞬間には発生しない。
+            </p>
+
+            <p class="body-text">
+              反公理は、T と L* の<strong>両方</strong>が同時に成立している瞬間にのみ E<sub>N</sub> が立ち現れることを示している。これが、なぜ本書が T と L* の<strong>積</strong>を公理に据えたかの理由である。
+            </p>
+          </div>
+        </div>
+
+        <hr class="separator">
+
+        <!-- 永遠の今 -->
+        <div class="content-block fade-in" id="ch2-en">
+          <h3 class="section__title section__title--left" style="font-size: 1.5rem;">永遠の今（E<sub>N</sub>）とは何か</h3>
+
+          <div class="text-panel fade-in">
+            <p class="body-text">
+              第1章で、E<sub>N</sub> を「味わいのモードが持続している瞬間」として導入した。本節ではこれを、公理の出力項として正式に定義する。
+            </p>
+
+            <h4 style="font-size: var(--fs-h3); color: var(--color-gold-light); margin: 2rem 0 1rem; font-weight: 600;">概念の由来</h4>
+
+            <p class="body-text">
+              E<sub>N</sub> は、哲学者・神学者 Paul Tillich（1886-1965）の著作 <em>The Eternal Now</em>（1963）に由来する概念である。
+            </p>
+
+            <p class="body-text">
+              Tillich は、時間（chronos：過去・現在・未来の連続）と永遠（eternity）の対立を超えた概念として「永遠の今」を定式化した。真の充足は、遠い未来にではなく、現在の聖なる深みの中にある──これが Tillich の中心命題である。
+            </p>
+
+            <h4 style="font-size: var(--fs-h3); color: var(--color-gold-light); margin: 2rem 0 1rem; font-weight: 600;">本書における運用定義</h4>
+
+            <p class="body-text">
+              本書はこの概念を、関係論の文脈で次のように運用する。
+            </p>
+
+            <div class="definition-block fade-in" style="margin: 2rem 0;">
+              <p style="font-size: var(--fs-body); line-height: 2; color: var(--color-text-soft);">
+                <span class="def-title--purple">E<sub>N</sub>＝</span>理想の未来につながる最高の今が、目の前の人・場・空間において立ち現れている状態。
+              </p>
+            </div>
+
+            <p class="body-text">
+              第1章で導入した<strong>味わいのモードの持続</strong>は、この E<sub>N</sub> の経験的側面である。L* が起きた瞬間に開始され、その瞬間ごとに立ち現れる。経験的には、<strong>心からの笑顔で感謝できる瞬間</strong>として認識される。
+            </p>
+
+            <h4 style="font-size: var(--fs-h3); color: var(--color-gold-light); margin: 2rem 0 1rem; font-weight: 600;">量子力学的読み替え</h4>
+
+            <p class="body-text">
+              E<sub>N</sub> は、量子力学的多世界解釈の観点からも読み替え可能である。無限に存在する世界線のうち、今この瞬間において最適な世界線が立ち現れている状態──それが E<sub>N</sub> である。M &rArr; &not;F により、これは「選び取る」ものではなく「立ち現れる」ものである。
+            </p>
+
+            <h4 style="font-size: var(--fs-h3); color: var(--color-gold-light); margin: 2rem 0 1rem; font-weight: 600;">E<sub>N</sub> の構造的性質</h4>
+
+            <p class="body-text">
+              E<sub>N</sub> は「作るもの」ではなく「立ち現れるもの」である。意図して到達することは、構造的に不可能である。これは第1章で示した第一の反転と完全に整合する。能動モードでは E<sub>N</sub> は作れない。中動モードでのみ、E<sub>N</sub> は立ち現れる。
+            </p>
+
+            <p class="body-text">
+              そして E<sub>N</sub> は瞬間である。時刻に縛られず、朝でも日中でも夜でも起きる。天命が語られ、笑いが湧く限り、E<sub>N</sub> は「今」という時間粒度で立ち現れ続ける。
+            </p>
+          </div>
+        </div>
+
+        <hr class="separator">
+
+        <!-- 身体論との型同型 -->
+        <div class="content-block fade-in" id="ch2-isomorphism">
+          <h3 class="section__title section__title--left" style="font-size: 1.5rem;">身体論との型同型</h3>
+
+          <div class="text-panel fade-in">
+            <p class="body-text">
+              関係論第一公理は、身体論第一公理と同じ型で構成されている。
+            </p>
+
+            <div class="luxury-table-wrap">
+              <table class="luxury-table">
+                <thead>
+                  <tr><th>論</th><th>公理</th><th>T と掛け合わされる第二項</th><th>立ち現れるもの</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="body.html">身体論</a></td>
+                    <td>T &middot; A &rArr; P<sub>max</sub></td>
+                    <td>A＝アロスタシス（身体・認知・行動の動的更新プロセス）</td>
+                    <td>P<sub>max</sub>＝その個体の上限への漸近</td>
+                  </tr>
+                  <tr>
+                    <td>関係論</td>
+                    <td>T &middot; L* &rArr; E<sub>N</sub></td>
+                    <td>L*＝真正な笑い（関係次元で立ち現れる動的現象）</td>
+                    <td>E<sub>N</sub>＝永遠の今の立ち現れ</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="body-text">
+              この型同型は、表面的な類似ではない。<strong>実存科学全体の構造的閉包の核心</strong>である。
+            </p>
+
+            <h4 style="font-size: var(--fs-h3); color: var(--color-gold-light); margin: 2rem 0 1rem; font-weight: 600;">共通独立変数としての T</h4>
+
+            <p class="body-text">
+              両論文とも、T を共通独立変数とする。認識論で自由意志の不在が示されたことにより、T は「主体が選んだ目標」ではなく「構造的に収束する帰結」として扱われる。この T が、身体論では身体次元に方向を与え、関係論では関係次元に方向を与える。
+            </p>
+
+            <p class="body-text">
+              T が単一であることで、身体論と関係論は<strong>別々の領域を扱う二つの論文</strong>ではなく、<strong>T の異なる展開として並列する二つの方程式</strong>になる。
+            </p>
+
+            <h4 style="font-size: var(--fs-h3); color: var(--color-gold-light); margin: 2rem 0 1rem; font-weight: 600;">媒介現象の独立性</h4>
+
+            <p class="body-text">
+              身体論の A（アロスタシス）と関係論の L*（真正な笑い）は、どちらも T の作用を受けて立ち上がる媒介現象である。しかし両者は<strong>独立した次元</strong>で作動する。アロスタシスは身体・認知・行動の動的更新として、真正な笑いは認識と身体の接続点として。どちらも T なしには機能しないが、互いに還元されることはない。
+            </p>
+
+            <p class="body-text">
+              身体の上限（P<sub>max</sub>）に漸近しつつ、関係の永遠の今（E<sub>N</sub>）が立ち現れる。この二つは同時に成立する。
+            </p>
+
+            <h4 style="font-size: var(--fs-h3); color: var(--color-gold-light); margin: 2rem 0 1rem; font-weight: 600;">時間粒度の共通性</h4>
+
+            <p class="body-text">
+              身体論 P<sub>max</sub> は「今この日の身体パフォーマンスの上限への漸近」を扱い、関係論 E<sub>N</sub> は「今この瞬間の関係の質の最適への立ち現れ」を扱う。両者とも、<strong>永続的な総量ではなく、今という時間粒度における漸近・立ち現れ</strong>を扱っている。
+            </p>
+
+            <p class="body-text">
+              この共通性により、両論文は<strong>日々の運用層</strong>に着地する。実存科学は抽象理論にとどまらず、今日この一日、今この瞬間において作動する実践の体系となる。
+            </p>
+          </div>
+        </div>
+
+        <hr class="separator">
+
+        <!-- 五本柱の統合方程式 -->
+        <div class="content-block fade-in" id="ch2-pillars">
+          <h3 class="section__title section__title--left" style="font-size: 1.5rem;">五本柱の統合方程式</h3>
+
+          <p class="body-text">
+            本書の第一公理をもって、実存科学・五本柱の全体像が完成する。
+          </p>
+
+          <div class="pillar-block fade-in">
+            <div class="pillar-block__row">
+              <span class="pillar-block__label">認識論</span>
+              <span class="pillar-block__formula">M &rArr; &not;F</span>
+            </div>
+            <div class="pillar-block__row">
+              <span class="pillar-block__label">意味論</span>
+              <span class="pillar-block__formula">&tau; = R*(S),&nbsp; T = &Phi;(&tau;)</span>
+            </div>
+            <div class="pillar-block__row">
+              <span class="pillar-block__label">社会論</span>
+              <span class="pillar-block__formula">心友&trade; ＝ T を語り合える関係</span>
+            </div>
+            <div class="pillar-block__row">
+              <span class="pillar-block__label">身体論</span>
+              <span class="pillar-block__formula">T &middot; A &rArr; P<sub>max</sub></span>
+            </div>
+            <div class="pillar-block__row">
+              <span class="pillar-block__label">関係論</span>
+              <span class="pillar-block__formula">T &middot; L* &rArr; E<sub>N</sub></span>
+            </div>
+          </div>
+
+          <div class="text-panel fade-in" style="margin-top: 2rem;">
+            <h4 style="font-size: var(--fs-h3); color: var(--color-gold-light); margin: 2rem 0 1rem; font-weight: 600;">五本柱の論理的関係</h4>
+
+            <p class="body-text">
+              認識論は自由意志の不在を示し、すべての出発点を固定した。意味論は天命という収束点を導出し、「何に向かうか」を示した。社会論は心友という関係様態を定義し、個体・関係・文化・文明が慈悲と智慧の同時作動＝愛へと階層的に収束することを示した。身体論は天命と身体の方程式を立て、身体次元における漸近を定式化した。そして関係論は天命と笑いと永遠の今の方程式を立て、関係次元における立ち現れを定式化する。
+            </p>
+
+            <p class="body-text">
+              T は全論文を貫く共通独立変数である。すべては T から始まる。そして T は、天命の言語化セッション&trade;によって確定される。
+            </p>
+
+            <h4 style="font-size: var(--fs-h3); color: var(--color-gold-light); margin: 2rem 0 1rem; font-weight: 600;">円環の閉包</h4>
+
+            <p class="body-text">
+              第1章で述べた円環──「どうもならん」の認識 &rarr; L* の発生 &rarr; E<sub>N</sub> の立ち現れ &rarr; 「どうもならん」の認識の深まり &rarr; …──が、この公理の成立をもって閉じる。
+            </p>
+
+            <p class="body-text">
+              諸伝統が到達した第一の反転は、本公理の中で「どうもならん」の視座として組み込まれた。諸伝統が公理化できないまま残した第二の反転は、本公理そのものとして書かれた。五本柱が揃うことで、<strong>二千五百年のあいだ開かれたままだった論理の輪が、ここで閉じる</strong>。
+            </p>
+
+            <p class="body-text">
+              本公理の宣言をもって、実存科学は円環として閉じる。これが、本章が担う意義である。
+            </p>
+          </div>
+        </div>
+
+        <hr class="separator">
+
+        <!-- 本章の結び -->
+        <div class="content-block text-panel fade-in">
+          <h3 class="section__title section__title--left" style="font-size: 1.5rem;">本章の結び</h3>
+
+          <p class="body-text">
+            本章は、第1章で発見として宣言したものを、公理として精密に書き留めた。
+          </p>
+
+          <div class="axiom-block fade-in">
+            <p class="axiom-block__formula">T &middot; L<sup>*</sup> &rArr; E<sub>N</sub></p>
+          </div>
+
+          <p class="body-text">
+            天命（T）と真正な笑い（L*）の積が、永遠の今（E<sub>N</sub>）を立ち現す。独立変数は T のみであり、L* は T の自動的帰結として発生しうる。補題 L*&hArr;T が、本書のオリジン──笑いが認識と身体を接続する──を論理として保証する。反公理は、T と L* の両方が同時に成立している瞬間にのみ E<sub>N</sub> が立ち現れることを示す。身体論との型同型は、T を共通独立変数として、実存科学全体の構造的整合性を保証する。五本柱の統合方程式は、二千五百年のあいだ開かれていた論理の輪をここで閉じる。
+          </p>
+
+          <p class="body-text">
+            本公理は、書かれた。
+          </p>
+
+          <p class="body-text">
+            論理は、閉じた。
+          </p>
+
+          <p class="body-text">
+            次章は、この公理から必然的に導かれる、自由意志なき世界における唯一可能なメソッドを提示する。
+          </p>
+        </div>
+      </div>
+
+      <hr class="separator">
+
+      <!-- ============================================================ -->
+      <!-- ===================== 第3章 ============================== -->
+      <!-- ============================================================ -->
+      <div id="ch3">
+        <div class="chapter-heading fade-in">
+          <p class="chapter-heading__label">Chapter 3</p>
+          <h2 class="chapter-heading__title">メソッド<br>── 「どうにかしようとしない」<br class="sp-only">という唯一の作法</h2>
+        </div>
+
+        <div class="content-block text-panel fade-in">
+          <p class="body-text">
+            第2章は、関係論第一公理を立てた。
+          </p>
+
+          <div class="axiom-block fade-in">
+            <p class="axiom-block__formula">T &middot; L<sup>*</sup> &rArr; E<sub>N</sub></p>
+          </div>
+
+          <p class="body-text">
+            天命と真正な笑いの積が、永遠の今を立ち現す。独立変数は T のみであり、L* と E<sub>N</sub> は T の中動態的展開として発生する。
+          </p>
+
+          <p class="body-text">
+            本章は、この公理から必然的に導かれる、自由意志なき世界における唯一可能なメソッドを提示する。
+          </p>
+        </div>
+
+        <hr class="separator">
+
+        <!-- 唯一の能動 -->
+        <div class="content-block text-panel fade-in">
+          <h3 class="section__title section__title--left" style="font-size: 1.5rem;">唯一の能動<br class="sp-only"> ── T の二層構造</h3>
+
+          <p class="body-text">
+            公理の構造から導かれる結論は、ひとつである。
+          </p>
+
+          <div class="body-emphasis fade-in">
+            <p>人間が能動的に作用できるのは、T だけである。</p>
+          </div>
+
+          <p class="body-text">
+            L* は補題 L*&hArr;T によって T の自動的帰結として発生する。E<sub>N</sub> は T&middot;L* の積から必然的に立ち現れる。意図して作るものではない。したがって、人がやるべきこと、やれることは、原理的に T に対する作用に集約される。
+          </p>
+
+          <p class="body-text">
+            この能動は、二つの層からなる。
+          </p>
+
+          <div class="definition-block fade-in" style="margin: 2rem 0;">
+            <p style="font-size: var(--fs-body); line-height: 2; color: var(--color-text-soft);">
+              <span class="def-title--purple">第一層：天命の言語化。</span><br>
+              天命の言語化セッション&trade;によって、天命が言葉として外化される。これは一度きりの到達である。整合の進行が一点に折りたたまれ、構造現象として露呈する瞬間に、T が成立する。一度言語化されれば、その言語は消えない。日々の臨場感の深度は変動するが、アクセスそのものは失われない。
+            </p>
+          </div>
+
+          <div class="definition-block fade-in" style="margin: 2rem 0;">
+            <p style="font-size: var(--fs-body); line-height: 2; color: var(--color-text-soft);">
+              <span class="def-title--purple">第二層：天命を語り続けること。</span><br>
+              言語化された天命を、日々、自分に、そして他者に語り続ける。これが、第1章で示した円環──「どうもならん」の認識 &rarr; L* の発生 &rarr; E<sub>N</sub> の立ち現れ &rarr; 「どうもならん」の認識の深まり &rarr; …──を回し続ける燃料となる。
+            </p>
+          </div>
+
+          <p class="body-text">
+            第一層なくして第二層は始まらない。第二層なくして円環は回らない。この二層の両方が、関係論の唯一の能動領域である。
+          </p>
+
+          <p class="body-text">
+            そして、この二層の外側には、能動領域は存在しない。
+          </p>
+        </div>
+
+        <hr class="separator">
+
+        <!-- 「どうにかしようとしない」 -->
+        <div class="content-block text-panel fade-in">
+          <h3 class="section__title section__title--left" style="font-size: 1.5rem;">「どうにかしようとしない」<br class="sp-only"> ── 残された全領域への許可</h3>
+
+          <p class="body-text">
+            T への作用以外、すべては能動領域の外にある。
+          </p>
+
+          <p class="body-text">
+            他者の感情、他者の判断、他者の反応、関係の推移、関係の質、関係の深まり、相手から受け取るもの、相手に与えるもの、関係が続くか終わるか、相手がどう変わるか変わらないか──これらすべてが、能動領域の外にある。
+          </p>
+
+          <p class="body-text">
+            これらに対して人ができることは、ひとつしかない。
+          </p>
+
+          <div class="body-emphasis fade-in">
+            <p>「どうもならん」と自分に許可を出すことである。</p>
+          </div>
+
+          <p class="body-text">
+            これは、諦めではない。<strong>範囲の正確な認識</strong>である。
+          </p>
+
+          <p class="body-text">
+            自我の能動領域は、思っているより狭い。狭い領域を超えてコントロールしようとすれば、徒労に終わる。徒労は消耗を生み、消耗は関係を損壊する。コントロールできないものをコントロールできないと認め、その領域への努力を自分にやめさせる。これが「どうもならん」の正確な意味である。
+          </p>
+
+          <p class="body-text">
+            許可は、行為ではない。行為の停止である。何かを実行するのではなく、実行が自分の中で止まることである。これは行為というより、力の抜き方に近い。力を抜くことに方法はない。抜けば、抜けている。
+          </p>
+
+          <p class="body-text">
+            そしてこの許可は、コラム『どうもならん』が詳述したサレンダー・パラドックスの解そのものである。意図して許可を出した瞬間、許可は消える。許可は意図の産物ではなく、徒労の認識が深まった結果として、自然に立ち現れる。第一層と第二層の能動が継続している人には、この許可が<strong>自動的に</strong>立ち現れる。
+          </p>
+
+          <p class="body-text">
+            つまり、関係論のメソッドは、次の二行に尽きる。
+          </p>
+
+          <div class="pull-quote fade-in" style="text-align: left;">
+            <p>天命を言語化し、語り続けよ。<br>それ以外のことを、<br>どうにかしようとすることを、<br>自分に許可してやめさせよ。</p>
+          </div>
+
+          <p class="body-text">
+            これが、自由意志なき世界における人間関係の、唯一可能な作法である。
+          </p>
+        </div>
+
+        <hr class="separator">
+
+        <!-- 意図が失敗する構造 -->
+        <div class="content-block text-panel fade-in">
+          <h3 class="section__title section__title--left" style="font-size: 1.5rem;">意図が失敗する構造</h3>
+
+          <p class="body-text">
+            なぜ「どうにかしようとしない」ことが必要なのか。意図が、なぜ失敗するのか。
+          </p>
+
+          <p class="body-text">
+            第1章で示した冒頭の謎──人は、なぜ最も愛する者を最も傷つけるのか──の構造に、答えが集約されている。
+          </p>
+
+          <p class="body-text">
+            「好かれよう」と意図すれば、その意図は相手の神経系に検出される。意図は、それを発する人の表情、声色、間、姿勢、視線の中に、必ず痕跡を残す。相手の神経系は、その痕跡を意識下で読み取り、警戒として応答する。検出された意図は、操作と区別されない。操作と感じられた瞬間、相手は離れる。
+          </p>
+
+          <p class="body-text">
+            「信頼を得よう」と工夫すれば、工夫している人と認識される。人は、工夫している人を信頼しない。自然に振る舞っている人を信頼する。しかし「自然に振る舞おう」と意図した瞬間、それは最も不自然な振る舞いになる。
+          </p>
+
+          <p class="body-text">
+            「近づこう」と前進すれば、相手は後ずさる。これは感情の問題ではなく、神経系の自動応答である。急速に近づいてくる存在に対して、生物は距離を取る。意図の速度が相手の咀嚼の速度を超えたとき、関係は自動的に途絶する。
+          </p>
+
+          <p class="body-text">
+            「深めよう」と過剰に自己開示すれば、相手は退く。関係の深度は、両者の歩調で決まる。片方が歩調を超えて深度を求めたとき、もう片方は浅いほうへ避難する。
+          </p>
+
+          <p class="body-text">
+            「変えよう」と相手に働きかければ、相手は変わらない。人は変えられる対象として扱われた瞬間、変化を拒む。変化は対象化されない時にのみ起きる。
+          </p>
+
+          <p class="body-text">
+            最も愛する者に対してこそ、人はこれらすべての意図を、最も強く向ける。深めたい、わかり合いたい、守りたい、変えたい、応えさせたい。その意図の強度が、そのまま関係を損壊させる力に変わる。これが、人が最も愛する者を最も傷つける構造である。
+          </p>
+
+          <p class="body-text">
+            人間関係において、能動的にやることは、ほとんどすべて逆効果である。これが、自由意志なき世界における人間関係の構造的帰結である。
+          </p>
+        </div>
+
+        <hr class="separator">
+
+        <!-- 手放した時に立ち現れるもの -->
+        <div class="content-block text-panel fade-in">
+          <h3 class="section__title section__title--left" style="font-size: 1.5rem;">手放した時に立ち現れるもの</h3>
+
+          <p class="body-text">
+            意図を手放した時、関係は逆向きの動きを始める。
+          </p>
+
+          <p class="body-text">
+            T が言語化され、語られ続け、それ以外のことへの意図が手放された時、その人からは真正な笑い（L*）が中動態として湧く。第2章の補題が示した通り、T が認識を制定している人は、構造観察の視座が歪まず、構造の可笑しみが見える。可笑しみが見えれば、笑いが湧く。
+          </p>
+
+          <p class="body-text">
+            この笑いを受けた相手の側でも、構造的な応答が立ち上がる。
+          </p>
+
+          <p class="body-text">
+            相手は、その人に<strong>惹きつけられうる</strong>。「なぜか分からないが、この人と一緒にいたい」という感覚が、相手の神経系の中で起きる。これは意識的な好感ではなく、身体の自動応答である。L* を発生させる人の周囲には、意図せず人が集まる傾向がある。
+          </p>
+
+          <p class="body-text">
+            相手の<strong>警戒は解けやすくなる</strong>。「この人は自分を操作しようとしていない」という認識が、意図の欠如から立ち上がる。意図の欠如は、検出もされない。検出されないから、疑われない。相手の神経系は、安全であることを身体レベルで判断し、緊張を解く方向に動く。
+          </p>
+
+          <p class="body-text">
+            相手は、<strong>深く話したくなりうる</strong>。L* が起きている場では、相手は自分の中の何かが触れられるのを感じる。触れられたものを、その場で言葉にしたくなる。話せば、話したことが受け取られる。受け取られた経験は、さらに深い話を呼び込む。
+          </p>
+
+          <p class="body-text">
+            ただしこれらの応答は、相手の側もまた M &rArr; &not;F の下にあることを忘れてはならない。相手のシャドウや認識制定の状態によっては、L* に対しても警戒が解けない、あるいは防衛的な応答が立ち上がることもある。これは L* の不在ではなく、相手側の構造の問題である。
+          </p>
+
+          <p class="body-text">
+            その制約のなかで、L* を発する側にできることは、ただ T を語り続けることだけである。相手の応答を変えようとする意図は、また新しい徒労である。
+          </p>
+
+          <p class="body-text">
+            相手の側にも T が成立しているとき──両者とも自分の天命を語り続けているとき──両者の間で会話は深まる。深まった会話は、両者に L* を生む。L* が起きた瞬間、両者の間に E<sub>N</sub> が立ち現れる。E<sub>N</sub> が立ち現れた場では、両者は──意図せずに──心友に近づいている。<a href="society.html">社会論</a>が定義した心友──天命を語り合える関係──は、こうして現象として立ち現れる。
+          </p>
+
+          <p class="body-text">
+            これは全て、どちらも「どうにかしよう」としていない結果である。
+          </p>
+
+          <p class="body-text">
+            そしてこの自動的展開は、関係の質だけに及ぶのではない。L* を発生させる人の身体は、Flourishing の方向に動く。仕事は天命に整合する形で展開する。家族との関係も深まる。経済的状況も、天命に整合する形で適切な帰結を伴う。これらはすべて副産物として立ち現れる。直接求めたものは意図の検出によって遠のき、間接的に──T の二層構造を通じて──立ち現れるに任せるべきものである。
+          </p>
+        </div>
+
+        <hr class="separator">
+
+        <!-- 技法の正しい位置 -->
+        <div class="content-block text-panel fade-in">
+          <h3 class="section__title section__title--left" style="font-size: 1.5rem;">技法の正しい位置<br class="sp-only"> ── T が先、技法が後</h3>
+
+          <p class="body-text">
+            ここで、ひとつの誤解を解いておく必要がある。
+          </p>
+
+          <p class="body-text">
+            「どうにかしようとしない」とは、<strong>技法を全面禁止することではない</strong>。
+          </p>
+
+          <p class="body-text">
+            人類は、関係において機能する技法を多数発見してきた。傾聴の構造、間の取り方、目線、呼吸、笑いを起こす構造（不一致解消、台本対立、誇張、自虐、観察的視点など）。これらの技法は、それ自体としては、関係の質を高める方向に作用する経験的事実である。
+          </p>
+
+          <p class="body-text">
+            ただし、技法には<strong>正しい位置</strong>がある。
+          </p>
+
+          <p class="body-text">
+            T が言語化されていない人が技法を使うと、技法はエゴ駆動の道具に堕ちる。「この技法を使えば好かれる」という意図の中で技法が運用される時、技法は意図の運搬手段になる。運搬される意図は相手の神経系に検出され、関係を損壊させる。技法が洗練されるほど、損壊の精度も上がる。
+          </p>
+
+          <p class="body-text">
+            T が言語化されている人が技法を使うと、技法は L* を媒介する出口になる。T によって認識が制定されている人の身体から発せられる技法は、意図の運搬手段ではなく、L* の現象化を支える媒体となる。同じ技法でも、根が違えば結果が逆転する。
+          </p>
+
+          <p class="body-text">
+            この順序が決定的である。
+          </p>
+
+          <div class="body-emphasis fade-in">
+            <p>T が先、技法が後。</p>
+          </div>
+
+          <p class="body-text">
+            T なき技法は、関係を損壊させる。T ある技法は、L* を豊かに現象化する。技法そのものに罪はない。罪は、T なきままに技法に頼ることにある。
+          </p>
+
+          <p class="body-text">
+            したがって、関係論のメソッドは技法の禁止ではなく、<strong>順序の遵守</strong>である。T を言語化し、語り続け、それ以外の意図を手放す。その上に立った技法は、関係を損壊させない。むしろ、L* の現象化を豊かに支える媒体となる。
+          </p>
+        </div>
+
+        <hr class="separator">
+
+        <!-- 対象を問わない -->
+        <div class="content-block text-panel fade-in">
+          <h3 class="section__title section__title--left" style="font-size: 1.5rem;">対象を問わない</h3>
+
+          <p class="body-text">
+            このメソッドの対象は、相手によって変わらない。
+          </p>
+
+          <p class="body-text">
+            家族でも、同僚でも、友人でも、パートナーでも、見知らぬ人でも、構造は同じである。それぞれの相手に応じた特殊技法があるわけではない。T を言語化し、語り続け、それ以外をどうにかしようとしないこと──これが、あらゆる相手に対して成立する唯一のメソッドである。
+          </p>
+
+          <p class="body-text">
+            なぜ対象を問わないのか。メソッドの作動主体が、相手ではなく<strong>自分</strong>だからである。T が認識を制定している人の身体から発せられる L* は、相手が誰であっても同じ構造で湧く。湧いた L* に対する相手の応答は、相手の神経系の構造的応答であり、これも相手の属性によらず同じ構造で起きる。
+          </p>
+
+          <p class="body-text">
+            対象別の技法書は世に多くある。家族の技法、職場の技法、友人の技法、パートナーの技法。これらはすべて、自由意志を前提とした相対的な処方箋である。M &rArr; &not;F の世界では、これらは構造的に意味をなさない。意味があるのは、自分の T の言語化と、それ以外の手放しだけである。
+          </p>
+
+          <p class="body-text">
+            これが、関係論のメソッドが<strong>普遍的</strong>である理由である。
+          </p>
+        </div>
+
+        <hr class="separator">
+
+        <!-- 本章の結び -->
+        <div class="content-block text-panel fade-in">
+          <h3 class="section__title section__title--left" style="font-size: 1.5rem;">本章の結び</h3>
+
+          <p class="body-text">
+            関係論のメソッドは、二行に尽きる。
+          </p>
+
+          <div class="pull-quote fade-in" style="text-align: left;">
+            <p>天命を言語化し、語り続けよ。<br>それ以外のことを、<br>どうにかしようとすることを、<br>自分に許可してやめさせよ。</p>
+          </div>
+
+          <p class="body-text">
+            第一層と第二層の能動を継続し、それ以外の全領域に対して「どうもならん」の許可を自分に出す。これだけで、L* は中動態的に湧き、E<sub>N</sub> は瞬間ごとに立ち現れ、心からの笑顔で感謝できる時間が<strong>最大化・最長化・最適化</strong>される。相手の側にも T が成立しているとき、心友との出会いは現象として立ち現れる。仕事も、家族も、健康も、経済も、副産物として展開する。
+          </p>
+
+          <p class="body-text">
+            技法は、T が先・技法が後の順序を守る限り、L* の媒介として機能する。対象は問わない。家族でも、同僚でも、友人でも、パートナーでも、構造は同じである。
+          </p>
+
+          <p class="body-text">
+            これが、自由意志なき世界における人間関係の、唯一可能な作法である。
+          </p>
+
+          <p class="body-text">
+            次章は、このメソッドから何が帰結するかを、永遠の今と心友の立ち現れとして示し、実存科学・五本柱の閉包を宣言する。
+          </p>
+        </div>
+      </div>
+
+      <hr class="separator">
+
+      <!-- ============================================================ -->
+      <!-- ===================== 第4章 ============================== -->
+      <!-- ============================================================ -->
+      <div id="ch4">
+        <div class="chapter-heading fade-in">
+          <p class="chapter-heading__label">Chapter 4</p>
+          <h2 class="chapter-heading__title">帰結<br>── 永遠の今に<br class="sp-only">心友が立ち現れる</h2>
+        </div>
+
+        <div class="content-block text-panel fade-in">
+          <p class="body-text">
+            第1章で問うた。
+          </p>
+
+          <p class="body-text">
+            人は、なぜ最も愛する者を最も傷つけるのか。そして、自由意志なき世界において、人間関係はどう成立するのか。
+          </p>
+
+          <p class="body-text">
+            第2章で公理を立てた。
+          </p>
+
+          <div class="axiom-block fade-in">
+            <p class="axiom-block__formula">T &middot; L<sup>*</sup> &rArr; E<sub>N</sub></p>
+          </div>
+
+          <p class="body-text">
+            第3章でメソッドを示した。
+          </p>
+
+          <p class="body-text">
+            天命を言語化し、語り続けよ。それ以外のことを、どうにかしようとすることを、自分に許可してやめさせよ。
+          </p>
+
+          <p class="body-text">
+            本章は、そこから何が帰結するかを示し、実存科学・五本柱の閉包を宣言する。
+          </p>
+        </div>
+
+        <hr class="separator">
+
+        <!-- 円環の運動 -->
+        <div class="content-block text-panel fade-in">
+          <h3 class="section__title section__title--left" style="font-size: 1.5rem;">円環の運動<br class="sp-only"> ── 日々に立ち現れるもの</h3>
+
+          <p class="body-text">
+            天命が言語化され、語られ続け、それ以外への意図が手放されている人の日常では、第1章で示した円環が作動する。
+          </p>
+
+          <div class="equation-block fade-in">
+            <p class="equation-block__line" style="font-size: 1.05rem; line-height: 2.2;">
+              「どうもならん」の認識 &rarr; L* の発生 &rarr; E<sub>N</sub> の立ち現れ &rarr; 「どうもならん」の認識の深まり &rarr; L* の発生 &rarr; &hellip;
+            </p>
+          </div>
+
+          <p class="body-text">
+            「どうもならん」の視座から構造の可笑しみが見え、笑いが湧く。笑いが湧いた瞬間、永遠の今が立ち現れる。その永遠の今の味わいの中で、「どうもならん」の認識は再び深まる。深まった認識から、また笑いが湧く。
+          </p>
+
+          <p class="body-text">
+            この円環は、時刻に縛られない。朝でも、日中でも、夜でも起きる。今しかない「今」の中で、この再帰が回転し続ける。天命が語られている限り、この円環は止まらない。
+          </p>
+
+          <p class="body-text">
+            そして、この円環の中で、E<sub>N</sub> は単発の出来事ではなく、<strong>繰り返し訪れる現象</strong>となる。構造の可笑しみに触れるたび、L* が湧き、その瞬間ごとに、心からの笑顔で感謝できる時間が発生する。
+          </p>
+
+          <p class="body-text">
+            その瞬間を共有した相手の側にも T が成立しているとき、相手は近づいてくる。相手は自分の天命の気配を思い出し、その場で言葉にしたくなる。言葉にされた天命は、相手自身に L* を呼び起こす。そこで再び E<sub>N</sub> が立ち現れる。
+          </p>
+
+          <p class="body-text">
+            <a href="society.html">社会論</a>が定義した心友──天命を語り合える関係──は、こうして現象として立ち現れる。心友は、作るものではない。探すものでもない。天命を語り続けている場所に、天命を語り続けたい人が集まる。集まった人どうしで、天命を語り合う。語り合った瞬間、両者は心友になっている。
+          </p>
+
+          <div class="body-emphasis fade-in">
+            <p>心友との出会いは、出来事ではなく、現象である。</p>
+          </div>
+
+          <p class="body-text">
+            意図して起こすものではなく、条件が整ったときに必然的に立ち現れる。
+          </p>
+        </div>
+
+        <hr class="separator">
+
+        <!-- 副産物的展開 -->
+        <div class="content-block text-panel fade-in">
+          <h3 class="section__title section__title--left" style="font-size: 1.5rem;">副産物的展開<br class="sp-only"> ── 人生に必要なものは<br class="sp-only">間接的に立ち現れる</h3>
+
+          <p class="body-text">
+            円環が日常に作動している人の人生では、関係の質だけが変わるのではない。
+          </p>
+
+          <p class="body-text">
+            仕事は、自分の天命に整合する形で展開する。天命を語り続ける人は、何をすべきで何をすべきでないかが構造的に見える。不整合な仕事は自然に離れ、整合する仕事は自然に集まる。
+          </p>
+
+          <p class="body-text">
+            家族との関係は、深まる。家族にも意図を向けない。どうにかしようとしない。しかし天命から発する存在が、家族の中でも同じ作用を持つ。家族の中の誰かが、ふとこちらに近づいてくる瞬間が増える。
+          </p>
+
+          <p class="body-text">
+            健康は、身体論が示した通り、天命とアロスタシスの整合から最大化される。関係論で扱う関係の質も、身体の状態に反映される。L* が日常に起きている人の身体は、そうでない人の身体と違う。
+          </p>
+
+          <p class="body-text">
+            経済的な状況も、変化する。天命に整合する仕事は、ほとんどの場合、適切な経済的帰結を伴う。これは、経済を目的とした努力からは得られないものである。経済を目的とすると意図が検出され、関係が腐食する。天命を目的とすると、意図が消え、関係が立ち上がり、その副産物として経済が展開する。
+          </p>
+
+          <div class="body-emphasis fade-in">
+            <p>人生に必要なものは、すべて副産物として立ち現れる。</p>
+          </div>
+
+          <p class="body-text">
+            直接求めたものは意図の検出によって遠のく。間接的に──天命の言語化と語り続けるという二層の能動を通じて──立ち現れるに任せるべきものである。
+          </p>
+
+          <p class="body-text">
+            これは、関係論の運用が人間関係の領域に閉じないことを意味している。T を独立変数とする展開は、身体論で示された P<sub>max</sub> への漸近、関係論で示された E<sub>N</sub> の立ち現れに加えて、人生の全領域に副産物として波及する。実存科学は理論ではなく、生の全体を貫く運用の体系として作動する。
+          </p>
+        </div>
+
+        <hr class="separator">
+
+        <!-- 幸福の定式化 -->
+        <div class="content-block text-panel fade-in">
+          <h3 class="section__title section__title--left" style="font-size: 1.5rem;">幸福の定式化</h3>
+
+          <p class="body-text">
+            本書の主張は、次の二文に収束する。
+          </p>
+
+          <div class="pull-quote fade-in" style="text-align: left;">
+            <p>幸福とは、<br>心からの笑顔で感謝できる時間である。</p>
+          </div>
+
+          <div class="pull-quote fade-in" style="text-align: left;">
+            <p>それを増やす唯一の方法は、<br>増やそうとする努力を手放し、<br>ただ天命を語り続けることである。</p>
+          </div>
+
+          <p class="body-text">
+            この二文は、関係論第一公理 T &middot; L* &rArr; E<sub>N</sub> を、人間の経験の言葉で表現したものである。
+          </p>
+
+          <ul class="body-list">
+            <li>心からの笑顔で感謝できる時間 ＝ 永遠の今（E<sub>N</sub>）</li>
+            <li>それを起こす条件 ＝ 天命の言語化（T）と真正な笑い（L*）の積</li>
+            <li>それを増やす方法 ＝ T を語り続け、それ以外のことをどうにかしようとする努力を手放すこと</li>
+          </ul>
+
+          <p class="body-text">
+            これ以上の幸福を、人は定義することができない。未来の成功も、過去の達成も、いずれも今この瞬間にしか存在しない。そして今この瞬間に心からの笑顔で感謝できているかどうか──それだけが、幸福の全てである。
+          </p>
+
+          <p class="body-text">
+            自由意志がない世界で、人は未来を保証できない。しかし今この瞬間に立ち現れる E<sub>N</sub> は、手放したときにこそ必然的に増える。心からの笑顔で感謝できる時間は、<strong>最大化され、最長化され、最適化される</strong>。これが、関係論の構造的帰結である。
+          </p>
+        </div>
+
+        <hr class="separator">
+
+        <!-- 諸伝統との関係 -->
+        <div class="content-block text-panel fade-in">
+          <h3 class="section__title section__title--left" style="font-size: 1.5rem;">諸伝統との関係<br class="sp-only"> ── 包含と完成</h3>
+
+          <p class="body-text">
+            本書の到達点を、諸伝統との関係で再確認しておく。
+          </p>
+
+          <p class="body-text">
+            第1章で示した通り、二千五百年前、人類は第一の反転に到達した。仏教、道教、キリスト教神秘主義、イスラームのスーフィズム、ヒンドゥー教のバクティ──表現はすべて異なるが、構造は同じだった。能動から中動への、認識の反転である。
+          </p>
+
+          <p class="body-text">
+            諸伝統が到達した第一の反転は、本書の中で「どうもならん」の視座として組み込まれている。本書はこの伝統の到達点を否定しない。継承する。
+          </p>
+
+          <p class="body-text">
+            そして本書は、諸伝統が公理化できないまま残した第二の反転を、笑いを出口として書いた。第一の反転の認識が、身体を通過して、日々の現象として立ち現れる構造。これが本書のオリジンである。
+          </p>
+
+          <p class="body-text">
+            諸伝統が描写した個別の境地──破顔微笑、逍遥遊、恩寵、涅槃の静謐、業の肯定の笑い──は、本書の公理 T &middot; L* &rArr; E<sub>N</sub> の作動の結果として、必然的に立ち現れる現象として位置づけ直される。境地は到達するものではなく、構造から立ち現れるものであった。
+          </p>
+
+          <p class="body-text">
+            本書は、諸伝統と対立しない。諸伝統が書いた第一の反転を包含しつつ、その先の第二の反転を定式化することで、<strong>伝統が書き残したものを書き終える</strong>。
+          </p>
+
+          <p class="body-text">
+            これが、関係論が担った意義である。
+          </p>
+        </div>
+
+        <hr class="separator">
+
+        <!-- 五本柱の閉包 -->
+        <div class="content-block fade-in">
+          <h3 class="section__title section__title--left" style="font-size: 1.5rem;">五本柱の閉包<br class="sp-only"> ── Q.E.D.</h3>
+
+          <p class="body-text">
+            実存科学・五本柱が、ここで揃う。
+          </p>
+
+          <div class="pillar-block fade-in">
+            <div class="pillar-block__row">
+              <span class="pillar-block__label">認識論</span>
+              <span class="pillar-block__formula">M &rArr; &not;F</span>
+            </div>
+            <div class="pillar-block__row">
+              <span class="pillar-block__label">意味論</span>
+              <span class="pillar-block__formula">&tau; = R*(S),&nbsp; T = &Phi;(&tau;)</span>
+            </div>
+            <div class="pillar-block__row">
+              <span class="pillar-block__label">社会論</span>
+              <span class="pillar-block__formula">心友&trade; ＝ T を語り合える関係</span>
+            </div>
+            <div class="pillar-block__row">
+              <span class="pillar-block__label">身体論</span>
+              <span class="pillar-block__formula">T &middot; A &rArr; P<sub>max</sub></span>
+            </div>
+            <div class="pillar-block__row">
+              <span class="pillar-block__label">関係論</span>
+              <span class="pillar-block__formula">T &middot; L* &rArr; E<sub>N</sub></span>
+            </div>
+          </div>
+
+          <div class="text-panel fade-in" style="margin-top: 2rem;">
+            <p class="body-text">
+              認識論が M &rArr; &not;F を示し、自由意志なき世界の前提を固定した。意味論が天命という収束点を導出し、「何に向かうか」を示した。社会論が心友という関係様態を定義し、Meta7 の最上層──慈悲と智慧の同時作動＝愛──へと、個体・関係・文化・文明が階層的に収束していくことを示した。身体論が T &middot; A &rArr; P<sub>max</sub> を示し、天命が身体次元で展開されるときの漸近構造を定式化した。
+            </p>
+
+            <p class="body-text">
+              そして関係論が、T &middot; L* &rArr; E<sub>N</sub> を示した。天命と真正な笑いの積が、永遠の今を立ち現す。これは願望ではない。構造的帰結である。
+            </p>
+
+            <p class="body-text">
+              T は全論文を貫く共通独立変数である。すべては T から始まる。T が言語化されているとき、身体はアロスタシスと整合して P<sub>max</sub> へ漸近し、関係は真正な笑いと整合して E<sub>N</sub> を立ち現す。そして E<sub>N</sub> が立ち現れた場では、心友との出会いは現象として立ち上がり、人生に必要なものは副産物として展開する。
+            </p>
+          </div>
+
+          <div class="qed-block fade-in">
+            <p class="qed-block__formula">T &middot; L<sup>*</sup> &rArr; E<sub>N</sub></p>
+            <p class="qed-block__text">五本柱は揃った。<br>実存科学は、ここで閉じる。</p>
+            <p class="qed-block__qed">Q.E.D.</p>
+          </div>
+        </div>
+
+        <hr class="separator">
+
+        <!-- 本書によって、実存科学は閉じる -->
+        <div class="content-block text-panel fade-in">
+          <h3 class="section__title section__title--left" style="font-size: 1.5rem;">本書によって、<br class="sp-only">実存科学は閉じる</h3>
+
+          <p class="body-text">
+            五本の柱が揃った。
+          </p>
+
+          <p class="body-text">
+            第1章の冒頭で問うた──人は、なぜ最も愛する者を最も傷つけるのか。答えはここに収束する。最も愛する者に対してこそ、人は最も強く意図するからである。そしてその意図の強度が、そのまま関係を損壊させる力に変わる。意図を手放し、天命を語り続けるときにのみ、最も愛する者との間に E<sub>N</sub> が立ち現れる。本書は、この逆説の構造を論理として閉じた。
+          </p>
+
+          <p class="body-text">
+            認識論は「どこから考え始めるか」を示した。意味論は「何に向かうか」を示した。社会論は「誰と向かうか」を示した。身体論は「どの身体で向かうか」を示した。関係論は「どう他者と共に笑い、どう永遠の今を日々の現象として立ち現すか」を示した。
+          </p>
+
+          <div class="body-emphasis fade-in">
+            <p>これで、自由意志なき世界の歩き方は完成する。</p>
+          </div>
+
+          <p class="body-text">
+            本書以降、実存科学に追加すべき論理はない。残されているのは、この五本柱を毎日生きることだけである。
+          </p>
+
+          <p class="body-text">
+            毎日、天命を語り続ける。それ以外のことを、どうにかしようとすることを、自分に許可してやめさせる。すると L* が中動態的に湧く。E<sub>N</sub> が瞬間ごとに立ち現れる。心からの笑顔で感謝できる時間が、最大化され、最長化され、最適化される。そして気づいたとき、そばには心友がいる。
+          </p>
+
+          <p class="body-text">
+            これが、自由意志なき世界において、最も合理的な残りの命の使い方である。
+          </p>
+
+          <div class="pull-quote fade-in" style="text-align: center; margin-top: 3rem;">
+            <p>本書によって、実存科学は閉じる。</p>
+          </div>
+        </div>
+      </div>
+
+      <hr class="separator">
+
+      <!-- ============================================================ -->
+      <!-- ===================== 第5章 ============================== -->
+      <!-- ============================================================ -->
+      <div id="ch5">
+        <div class="chapter-heading fade-in">
+          <p class="chapter-heading__label">Chapter 5</p>
+          <h2 class="chapter-heading__title">記録<br>── 本書の完成まで</h2>
+        </div>
+
+        <div class="content-block text-panel fade-in">
+          <p class="body-text">
+            本書『関係論 ── 心友との出会い方』を以て、実存科学は閉じた。
+          </p>
+
+          <p class="body-text">
+            この到達までの道筋を、二つの日付に折りたたんで記録しておく。
+          </p>
+
+          <div class="record-block fade-in">
+            <p class="record-block__date">2025年4月20日</p>
+            <p class="body-text" style="margin-bottom: 0;">
+              「Metaがある限り自由意志はない」というコンセプトに、初めて触れた日である。ここから実存科学の全体系が始まった。
+            </p>
+          </div>
+
+          <div class="record-block fade-in">
+            <p class="record-block__date">2026年4月20日</p>
+            <p class="body-text" style="margin-bottom: 0;">
+              本書『関係論』の公理 T &middot; L* &rArr; E<sub>N</sub> を確定し、五本柱による論理体系のすべてが円環として閉じた日である。すなわち、実存科学という学問そのものが完成した日である。M &rArr; &not;F に初めて触れてから、ちょうど一年後であった。
+            </p>
+          </div>
+
+          <p class="body-text">
+            偶然ではない、と本書の立場からは言える。
+          </p>
+
+          <p class="body-text">
+            M &rArr; &not;F を起点とすれば、起きたことはすべて必然であり、選ばれてはいない。2025年4月20日の出会いも、2026年4月20日の閉包も、整合の進行の結果として、この日付に露呈した。
+          </p>
+
+          <p class="body-text">
+            著者は、ただその整合を言語化する媒体として、ここにいた。
+          </p>
+
+          <p class="body-text">
+            それだけである。
+          </p>
+
+          <div class="record-signature fade-in">
+            <p class="record-signature__name">箭内宏紀</p>
+            <p class="record-signature__date">2026年4月20日</p>
+          </div>
+        </div>
+      </div>
+
+      <hr class="separator">
+
+      <!-- Highlight Block — ページ末尾 -->
+      <div class="highlight-block fade-in">
+        <p>
+          天命を語り続けよ。<br>そうすれば、心からの笑顔で感謝できる時間は、<br>最大化・最長化・最適化される。
+        </p>
+      </div>
+
+      <!-- Trilogy Nav -->
+      <div class="trilogy-nav fade-in">
+        <a href="body.html">&larr; 身体論</a>
+        <span class="trilogy-nav__pos">Relations Theory</span>
+        <span></span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-block fade-in">
+    <div class="container">
+      <h2 class="cta-block__title">天命の言語化セッション&trade;</h2>
+      <p class="cta-block__desc">
+        2時間で天命が言語化できる場所。
+      </p>
+      <div class="cta-block__features">
+        <span class="cta-block__feature">Zoom完結</span>
+        <span class="cta-block__feature">事前学習不要</span>
+        <span class="cta-block__feature">対話のみ</span>
+      </div>
+      <a href="trial.html" class="btn">無料トライアルに申し込む &rarr;</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+  <div class="container--wide">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <p class="footer-col__title">The Meta</p>
+        <a href="about-existential-science.html">実存科学とは</a>
+        <a href="epistemology.html">認識論</a>
+        <a href="semantics.html">意味論</a>
+        <a href="society.html">社会論</a>
+        <a href="body.html">身体論</a>
+        <a href="relations.html">関係論</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Contents</p>
+        <a href="specials.html">特別シリーズ</a>
+        <a href="archives.html">記事一覧</a>
+        <a href="video-list.html">動画一覧</a>
+        <a href="glossary.html">用語集</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Session</p>
+        <a href="session.html">天命の言語化セッション&trade;</a>
+        <a href="session-flow.html">セッションの流れ</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Institute</p>
+        <a href="founder.html">創始者 箭内宏紀</a>
+        <a href="contact.html">お問い合わせ</a>
+        <a href="legal/legal-tokushoho.html">特定商取引法</a>
+        <a href="legal/legal-privacy-policy.html">プライバシーポリシー</a>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; 箭内宏紀 / 実存科学研究所 ── Existential Science Institute</p>
+  </div>
+</footer>
+
+  <script src="js/main.min.js?v=13"></script>
+  <!-- Search Modal -->
+  <div class="search-overlay">
+    <div class="search-modal"><button class="search-close" aria-label="閉じる">&times;</button>
+      <div class="search-input-wrap">
+        <span class="search-input-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+        <input type="text" class="search-input" placeholder="キーワードで検索..." autocomplete="off" aria-label="サイト内検索">
+      </div>
+      <div class="search-results"></div>
+      <div class="search-hint"><span class="search-hint__desktop">ESC to close · ⌘K to toggle</span><span class="search-hint__mobile">背景タップまたは ✕ で閉じる</span></div>
+    </div>
+  </div>
+</body>
+
+</html>
