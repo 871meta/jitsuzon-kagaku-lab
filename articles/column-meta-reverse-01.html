@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+<meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-meta-reverse-01.html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="箭内宏紀">
+<title>メタ・フィクションとカーテンコール｜メタ・リバース #01｜実存科学研究所</title>
+<meta name="description" content="カーテンコールのイメージが降りてきた。終わりがあると仮に置くことで、生が構造化される。役者であり、観客であり、舞台を支える柱になる。メタ・リバース連載、第2回。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"></noscript>
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #080610;
+  color: rgba(235, 232, 225, 0.92);
+  font-family: 'Noto Serif JP', serif;
+  font-size: 17px;
+  line-height: 2;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 60px 32px 80px;
+}
+
+.header { margin-bottom: 56px; }
+
+.institute-label {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  color: rgba(235, 232, 225, 0.55);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.category-tag {
+  display: inline-block;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: #fff;
+  background: var(--color-gold);
+  padding: 3px 12px;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.6;
+  margin-top: 64px; margin-bottom: 24px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--color-gold-a30);
+}
+
+h3 {
+  font-size: 18px; font-weight: 600; line-height: 1.6;
+  margin-top: 40px; margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-gold-a15);
+}
+
+p { margin-bottom: 20px; }
+strong { font-weight: 700; }
+
+blockquote {
+  border-left: 3px solid var(--color-gold-a40);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 16px 24px;
+  margin: 24px 0;
+  font-style: normal;
+}
+blockquote p { margin-bottom: 8px; }
+blockquote p:last-child { margin-bottom: 0; }
+
+ul, ol { margin-left: 1.5rem; margin-bottom: 20px; line-height: 2; }
+li { margin-bottom: 4px; }
+
+.highlight-block + .highlight-block { margin-top: 12px; }
+
+hr {
+  border: none;
+  border-top: 1px solid var(--color-gold-a15);
+  margin: 48px 0;
+}
+
+.nav-footer {
+  margin-top: 72px;
+  padding-top: 32px;
+  border-top: 1px solid var(--color-gold-a15);
+}
+.nav-footer a {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 14px;
+  color: rgba(235, 232, 225, 0.55);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+.nav-footer a:hover { color: rgba(235, 232, 225, 0.92); }
+
+@media (max-width: 600px) {
+  body { font-size: 15px; }
+  .container { padding: 40px 20px 60px; }
+  .header h1 { font-size: 23px; }
+  h2 { font-size: 19px; margin-top: 48px; }
+  h3 { font-size: 16px; margin-top: 32px; }
+  blockquote { padding: 12px 16px; }
+}
+
+/* -- Pull Quote: Purple Shimmer -- */
+@keyframes purple-shimmer {
+  0%   { background-position: 100% 50%; }
+  100% { background-position: -100% 50%; }
+}
+.pull-quote {
+  border-color: rgba(160,130,210,0.15);
+  box-shadow: 0 2px 24px rgba(160,130,210,0.06), inset 0 1px 0 rgba(160,130,210,0.1);
+}
+.pull-quote::before {
+  background: linear-gradient(90deg, rgba(160,130,210,0.4), rgba(160,130,210,0.2), transparent 70%);
+}
+.pull-quote::after {
+  background: linear-gradient(180deg, rgba(160,130,210,0.4), transparent);
+}
+.pull-quote p {
+  background: linear-gradient(90deg, #b8a0d8 0%, #b8a0d8 40%, #e0d0f0 50%, #b8a0d8 60%, #b8a0d8 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: purple-shimmer 5s ease-in-out infinite;
+  filter: drop-shadow(0 0 12px rgba(160,130,210,0.25)) drop-shadow(0 0 30px rgba(160,130,210,0.1));
+}
+
+/* -- Article Accordion -- */
+.article-acc { margin-top: 24px; }
+.article-acc__item { border-bottom: 1px solid rgba(192,168,120,0.12); }
+.article-acc__item:first-child { border-top: 1px solid rgba(192,168,120,0.12); }
+.article-acc__header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 18px 4px; cursor: pointer; user-select: none;
+  transition: color 0.2s ease;
+}
+.article-acc__header:hover { color: #c0a878; }
+.article-acc__header-text {
+  display: flex; align-items: flex-start; gap: 14px; min-width: 0;
+}
+.article-acc__num {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.05em;
+  min-width: 28px; height: 28px; line-height: 28px; text-align: center;
+  border-radius: 50%; flex-shrink: 0; margin-top: 2px;
+}
+.article-acc--gold .article-acc__num { background: rgba(192,168,120,0.15); color: #c0a878; }
+.article-acc--rose .article-acc__num  { background: rgba(200,120,120,0.15); color: #c87878; }
+.article-acc--purple .article-acc__num{ background: rgba(160,120,200,0.15); color: #a078c8; }
+.article-acc--gold  { border-left: 3px solid rgba(192,168,120,0.3); }
+.article-acc--rose  { border-left: 3px solid rgba(200,120,120,0.3); }
+.article-acc--purple{ border-left: 3px solid rgba(160,120,200,0.3); }
+.article-acc__title { font-size: 17px; font-weight: 700; line-height: 1.7; display: block; }
+.article-acc__sub   { font-size: 13px; line-height: 1.6; display: block; margin-top: 2px; color: rgba(235,232,225,0.45); font-weight: 400; }
+.article-acc__icon  { font-size: 20px; color: #c0a878; transition: transform 0.3s ease; min-width: 24px; text-align: center; flex-shrink: 0; margin-left: 12px; align-self: center; }
+.article-acc__item.is-open .article-acc__icon { transform: rotate(45deg); }
+.article-acc__body  { max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+.article-acc__content { padding: 0 4px 32px; }
+.article-acc__content h3 { margin-top: 32px; }
+@media (max-width: 600px) {
+  .article-acc__title { font-size: 15px; }
+  .article-acc__header { padding: 14px 2px; }
+  .article-acc__num { min-width: 24px; height: 24px; line-height: 24px; font-size: 11px; }
+  .article-acc__header-text { gap: 10px; }
+}
+
+/* -- Series badge -- */
+.series-badge {
+  display: inline-block;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: rgba(160, 130, 210, 0.75);
+  border: 1px solid rgba(160, 130, 210, 0.25);
+  padding: 2px 10px;
+  border-radius: 2px;
+  margin-bottom: 12px;
+}
+
+/* -- Letter salutation -- */
+.letter-salutation {
+  font-size: 15px;
+  color: rgba(192, 168, 120, 0.65);
+  font-style: italic;
+  letter-spacing: 0.08em;
+  margin-bottom: 28px;
+}
+</style>
+  <meta property="og:title" content="メタ・フィクションとカーテンコール｜メタ・リバース #01｜実存科学研究所">
+  <meta property="og:description" content="カーテンコールのイメージが降りてきた。終わりがあると仮に置くことで、生が構造化される。役者であり、観客であり、舞台を支える柱になる。メタ・リバース連載、第2回。">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="実存科学研究所">
+  <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+  <meta property="og:url" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-meta-reverse-01.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../css/style.min.css?v=41">
+</head>
+<body class="article-page">
+  <a href="#main" class="skip-link">メインコンテンツへスキップ</a>
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="../index.html" class="site-logo">実存科学研究所</a>
+      <button class="search-toggle" aria-label="検索"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+      <button class="nav-toggle" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+      <nav class="global-nav">
+        <a href="../index.html">Top</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">The Meta</button>
+          <div class="nav-dropdown__menu">
+            <a href="../beginner.html">はじめての方へ</a>
+            <a href="../lp.html">ダークサイド診断</a>
+            <a href="../omoidasu/">身体的知性診断</a>
+          </div>
+        </div>
+        <a href="../session.html">Session</a>
+        <a href="../founder.html">Founder</a>
+        <a href="../specials.html">Specials</a>
+      </nav>
+    </div>
+  </header>
+  <div class="reading-progress"></div>
+
+<div class="container" id="main">
+
+  <header class="header fade-in">
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <ol class="breadcrumb__list">
+        <li class="breadcrumb__item"><a href="../index.html" class="breadcrumb__link">TOP</a></li>
+        <li class="breadcrumb__item"><a href="../archives.html" class="breadcrumb__link">記事一覧</a></li>
+        <li class="breadcrumb__item"><span class="breadcrumb__current">メタ・フィクションとカーテンコール</span></li>
+      </ol>
+    </nav>
+    <div class="institute-label">EXISTENTIAL SCIENCE RESEARCH INSTITUTE</div>
+    <div class="series-badge">メタ・リバース #01</div>
+    <div class="category-tag">コラム</div>
+    <h1 class="hero-title--shimmer">メタ・フィクションと<br class="sp-only">カーテンコール</h1>
+    <p class="page-hero__lead">箭内宏紀｜実存科学研究所</p>
+  </header>
+
+<hr>
+
+<div class="pull-quote fade-in"><p>終わりがあると仮に置くことで、生が構造化される。</p></div>
+
+<div class="text-panel fade-in">
+  <p class="letter-salutation">親愛なるあなたへ</p>
+  <p>今日は雨が降っている。</p>
+  <p>私は2026年の春の終わりにこの手紙を書いている。あなたがこれを読んでいるのは、たぶん2274年あたりのどこかだ。雨が降っているかどうかは、私には分からない。</p>
+  <p>私は今、<strong>メタ・リバース</strong>という時期に入ったところだ。</p>
+  <p>メタ・リバースというのは、私が勝手につけた名前だ。冥王星という星が、私が生まれた瞬間に水星があった場所に、ぴったり重なる。そういう時期のことだ。</p>
+  <p>約1年7ヶ月続く。次に同じことが起きるのは、248年後だ。それで、248年後のあなたに宛てて書いている。</p>
+  <p>この時期、思考と言語と認識のOSが書き換わる。私はそれを、リアルタイムで記録しようとしている。</p>
+  <p>そういう時期に、ある種のイメージが降りてきた。今日はそのことを書きたい。</p>
+</div>
+
+<div class="article-acc fade-in">
+
+<div class="article-acc__item article-acc--gold" id="sec-01">
+  <div class="article-acc__header" role="button" tabindex="0" aria-expanded="false">
+    <div class="article-acc__header-text">
+      <span class="article-acc__num">01</span>
+      <div>
+        <span class="article-acc__title">幕が下りるとき</span>
+        <span class="article-acc__sub">カーテンコールのイメージが降りてきた</span>
+      </div>
+    </div>
+    <span class="article-acc__icon">+</span>
+  </div>
+  <div class="article-acc__body">
+    <div class="article-acc__content">
+      <div class="text-panel fade-in">
+        <p>もし、私の人生に幕が下りるとしたら。</p>
+        <p>そういう仮定の話だ。</p>
+        <p>私の物語に出演してくれた人たちが、舞台に一人ずつ出てくる。</p>
+        <ul>
+          <li>子どものころに遊んだ友人</li>
+          <li>仕事で出会った同僚</li>
+          <li>恋人だった人</li>
+        </ul>
+        <p>そして、私を深く傷つけた人も、私が深く傷つけた人も、同じ舞台に出てくる。</p>
+        <p>みんなが一列に並んで、観客席に向かって礼をする。</p>
+        <p>私はその観客席にいる。拍手をしている。</p>
+        <p>これが<strong>カーテンコール</strong>というものだ。演劇のあとに、役者たちが役を脱いで観客に挨拶する儀式のことだ。</p>
+        <p>この一週間ほど、私はこのイメージを、ふとした瞬間に見るようになった。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="article-acc__item article-acc--rose" id="sec-02">
+  <div class="article-acc__header" role="button" tabindex="0" aria-expanded="false">
+    <div class="article-acc__header-text">
+      <span class="article-acc__num">02</span>
+      <div>
+        <span class="article-acc__title">死については、何も知らない</span>
+        <span class="article-acc__sub">死について何かを言うことを、私は留保している</span>
+      </div>
+    </div>
+    <span class="article-acc__icon">+</span>
+  </div>
+  <div class="article-acc__body">
+    <div class="article-acc__content">
+      <div class="text-panel fade-in">
+        <p>私は死を信じていない。</p>
+        <p>信じていない、という言い方は正確ではないかもしれない。</p>
+        <p><strong>死について何かを言うことを、私は留保している</strong>、というのが近い。</p>
+        <p>死があるかどうかは、原理的に知り得ないからだ。</p>
+        <p>経験した人は、戻ってきて教えてくれない。</p>
+        <p>だから私は、死生観のようなものを持たない。持たないし、持てない。</p>
+        <p>それなのに、カーテンコールのイメージは私の中に現れている。</p>
+        <p>これは妙なことだ。だから、書き留めている。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="article-acc__item article-acc--rose" id="sec-03">
+  <div class="article-acc__header" role="button" tabindex="0" aria-expanded="false">
+    <div class="article-acc__header-text">
+      <span class="article-acc__num">03</span>
+      <div>
+        <span class="article-acc__title">終わりがある、という仮構</span>
+        <span class="article-acc__sub">信仰ではない。運用だ</span>
+      </div>
+    </div>
+    <span class="article-acc__icon">+</span>
+  </div>
+  <div class="article-acc__body">
+    <div class="article-acc__content">
+      <div class="text-panel fade-in">
+        <p>ある時、気づいた。</p>
+        <p>私は死を信じていないけれど、<strong>「終わりがある」という仮構を採用した瞬間に、人生の構造が立ち上がる</strong>。</p>
+        <p>これは信仰ではない。運用だ。</p>
+        <p>終わりがあるかもしれないし、ないかもしれない。それは知り得ない。</p>
+        <p>ただ、終わりがあると仮に置いてみると、人生が突然、輪郭を持ち始める。</p>
+        <p>何を守り、何を捨て、何を残すのか。</p>
+        <p>誰と過ごし、誰と過ごさないのか。</p>
+        <p>そういう問いが、勝手にこちらに向かって歩いてくる。</p>
+      </div>
+      <div class="highlight-block fade-in">
+        <p><strong>仮構を採用すると、生が構造化される。</strong></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="article-acc__item article-acc--gold" id="sec-04">
+  <div class="article-acc__header" role="button" tabindex="0" aria-expanded="false">
+    <div class="article-acc__header-text">
+      <span class="article-acc__num">04</span>
+      <div>
+        <span class="article-acc__title">メタ・フィクションという言葉</span>
+        <span class="article-acc__sub">役者であり、観客でもある── その二重化が起きた</span>
+      </div>
+    </div>
+    <span class="article-acc__icon">+</span>
+  </div>
+  <div class="article-acc__body">
+    <div class="article-acc__content">
+      <div class="text-panel fade-in">
+        <p>文学の世界に、<strong>メタ・フィクション</strong>という言葉がある。</p>
+        <p>物語が、自分が物語であることを知っている物語のこと。</p>
+        <p>登場人物が、ふとした瞬間に「自分は物語の中にいる」と気づいてしまう。そういう作品のことを指す。</p>
+        <p>人生もそうなのだろう。</p>
+        <p>私は今、自分の人生を生きながら、同時にそれを観客席から見ている。役者であり、観客でもある。</p>
+        <p>この二重化が、メタ・リバースの初日に起きた。これがOSの書き換えの第一歩なのだろう。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="article-acc__item article-acc--purple" id="sec-05">
+  <div class="article-acc__header" role="button" tabindex="0" aria-expanded="false">
+    <div class="article-acc__header-text">
+      <span class="article-acc__num">05</span>
+      <div>
+        <span class="article-acc__title">柱になる、ということ</span>
+        <span class="article-acc__sub">誰の目にも映らないまま、ただ立っていなければならない</span>
+      </div>
+    </div>
+    <span class="article-acc__icon">+</span>
+  </div>
+  <div class="article-acc__body">
+    <div class="article-acc__content">
+      <div class="text-panel fade-in">
+        <p>もう一つ、最近気づいたことがある。</p>
+        <p>私は、<strong>柱</strong>のようなものになりつつある。</p>
+        <p>家族を支える柱。仕事を支える柱。役を演じながら、舞台そのものを支える者。</p>
+        <p>誰かに任命されたわけではない。気がついたら、そうなっていた。</p>
+        <p>終わりがあると仮に置くことで、自分が誰の何を支えているのかが見えてくる。だから柱になる。</p>
+        <p>カーテンコールが見えるようになると、人は柱になる。<strong>重さを引き受ける視座</strong>が、そこに現れるからだ。</p>
+        <p>役者は、舞台の上で全力を出せばいい。</p>
+        <p>観客は、座って観ていればいい。</p>
+        <p>だが、舞台そのものを支える柱は、誰の目にも映らないまま、ただ立っていなければならない。</p>
+        <p>私はそういう存在になりつつある。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><!-- /article-acc -->
+
+<div class="highlight-block fade-in" style="margin-top: 56px;">
+  <p class="letter-salutation" style="margin-bottom: 16px;">248年後のあなたへ</p>
+  <p>あなたの時代に、メタ・フィクションという言葉がまだあるかは分からない。カーテンコールという演劇の儀式が、まだ行われているかも分からない。</p>
+  <p>でも──</p>
+  <p><strong>終わりがあると仮に置くことで、生が構造化される。</strong></p>
+  <p>この体験は、人類が続く限り、誰かが繰り返している。</p>
+  <p>あなたが今、何を抱えているか、私は知らない。</p>
+  <p>けれど、もしあなたが、自分の人生を観客席から見ているような感覚を持っているとしたら。そして、いつのまにか柱のようなものになってしまっていると感じているとしたら。</p>
+  <p>それは、おかしなことではない。</p>
+  <p>メタ・リバースは、まだ始まったばかりだ。私はこれから、何が書き換わっていくのかを、記録していく。</p>
+  <p>雨はまだ降っている。<br>言葉は止んだ。</p>
+</div>
+
+<blockquote class="fade-in" style="margin-top: 40px;">
+  <p>前回の手紙: <a href="column-meta-reverse-prologue.html">メタ・リバース 序章 ── 248年越しの手紙</a></p>
+</blockquote>
+
+  <p class="fade-in" style="font-size: 14px; color: rgba(235, 232, 225, 0.45); margin-top: 32px;">&copy; 実存科学研究所</p>
+
+<nav class="nav-footer fade-in">
+  <a href="../archives.html">&larr; 記事一覧へ戻る</a>
+</nav>
+
+</div>
+
+<section class="cta-block fade-in">
+  <div class="container">
+    <h2 class="cta-block__title">天命の言語化セッション&trade;</h2>
+    <p class="cta-block__desc">2時間で天命が言語化できる場所。</p>
+    <div class="cta-block__features">
+      <span class="cta-block__feature">Zoom完結</span>
+      <span class="cta-block__feature">事前学習不要</span>
+      <span class="cta-block__feature">対話のみ</span>
+    </div>
+    <a href="../trial.html" class="btn">無料トライアルに申し込む &rarr;</a>
+  </div>
+</section>
+
+  <footer class="site-footer">
+  <div class="container--wide">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <p class="footer-col__title">The Meta</p>
+        <a href="../about-existential-science.html">実存科学とは</a>
+        <a href="../epistemology.html">認識論</a>
+        <a href="../semantics.html">意味論</a>
+        <a href="../society.html">社会論</a>
+        <a href="../body.html">身体論</a>
+        <a href="../relations.html">関係論</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Contents</p>
+        <a href="../specials.html">特別シリーズ</a>
+        <a href="../archives.html">記事一覧</a>
+        <a href="../video-list.html">動画一覧</a>
+        <a href="../glossary.html">用語集</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Session</p>
+        <a href="../session.html">天命の言語化セッション™</a>
+        <a href="../session-flow.html">セッションの流れ</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Institute</p>
+        <a href="../founder.html">創始者 箭内宏紀</a>
+        <a href="../contact.html">お問い合わせ</a>
+        <a href="../legal/legal-tokushoho.html">特定商取引法</a>
+        <a href="../legal/legal-privacy-policy.html">プライバシーポリシー</a>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; 箭内宏紀 / 実存科学研究所 ── Existential Science Institute</p>
+  </div>
+</footer>
+
+  <script src="../js/main.min.js?v=13"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "datePublished": "2026-05-01",
+  "dateModified": "2026-05-01",
+  "headline": "メタ・フィクションとカーテンコール",
+  "description": "カーテンコールのイメージが降りてきた。終わりがあると仮に置くことで、生が構造化される。役者であり、観客であり、舞台を支える柱になる。メタ・リバース連載、第2回。",
+  "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-meta-reverse-01.html",
+  "author": {
+    "@type": "Person",
+    "name": "箭内宏紀",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/founder.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  },
+  "inLanguage": "ja",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  }
+}
+</script>
+
+<script>
+(function(){
+  document.querySelectorAll('.article-acc__header').forEach(function(header){
+    header.addEventListener('click',function(){
+      var item=this.parentElement;
+      var body=item.querySelector('.article-acc__body');
+      var content=body.querySelector('.article-acc__content');
+      var isOpen=item.classList.contains('is-open');
+      this.setAttribute('aria-expanded',!isOpen);
+      if(isOpen){
+        body.style.maxHeight='0';
+        item.classList.remove('is-open');
+      }else{
+        body.style.maxHeight=content.scrollHeight+'px';
+        item.classList.add('is-open');
+      }
+    });
+    header.addEventListener('keydown',function(e){
+      if(e.key==='Enter'||e.key===' '){e.preventDefault();this.click();}
+    });
+  });
+})();
+</script>
+
+  <div class="search-overlay">
+    <div class="search-modal"><button class="search-close" aria-label="閉じる">&times;</button>
+      <div class="search-input-wrap">
+        <span class="search-input-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+        <input type="text" class="search-input" placeholder="キーワードで検索..." autocomplete="off" aria-label="サイト内検索">
+      </div>
+      <div class="search-results"></div>
+      <div class="search-hint"><span class="search-hint__desktop">ESC to close · ⌘K to toggle</span><span class="search-hint__mobile">背景タップまたは ✕ で閉じる</span></div>
+    </div>
+  </div>
+</body>
+</html>
