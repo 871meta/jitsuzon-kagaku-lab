@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+<meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-meta-reverse-02.html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="箭内宏紀">
+<title>メタ・リバース #02 ── 血と音について｜実存科学研究所</title>
+<meta name="description" content="ある朝、音楽を作ろうという考えと、武士道と仏教を身につけたいという考えが、同時に浮かんできた。外に新しい言語を、内に原点を。二つの運動は、一本の線だった。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"></noscript>
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #080610;
+  color: rgba(235, 232, 225, 0.92);
+  font-family: 'Noto Serif JP', serif;
+  font-size: 17px;
+  line-height: 2;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 60px 32px 80px;
+}
+
+.header { margin-bottom: 56px; }
+
+.institute-label {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  color: rgba(235, 232, 225, 0.55);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.category-tag {
+  display: inline-block;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: #fff;
+  background: var(--color-gold);
+  padding: 3px 12px;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+h3 {
+  font-size: 18px; font-weight: 600; line-height: 1.6;
+  margin-top: 40px; margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-gold-a15);
+}
+
+p { margin-bottom: 20px; }
+strong { font-weight: 700; }
+
+blockquote {
+  border-left: 3px solid var(--color-gold-a40);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 16px 24px;
+  margin: 24px 0;
+  font-style: normal;
+}
+blockquote p { margin-bottom: 8px; }
+blockquote p:last-child { margin-bottom: 0; }
+
+ul, ol { margin-left: 1.5rem; margin-bottom: 20px; line-height: 2; }
+li { margin-bottom: 4px; }
+
+.highlight-block + .highlight-block { margin-top: 12px; }
+
+hr {
+  border: none;
+  border-top: 1px solid var(--color-gold-a15);
+  margin: 48px 0;
+}
+
+.nav-footer {
+  margin-top: 72px;
+  padding-top: 32px;
+  border-top: 1px solid var(--color-gold-a15);
+}
+.nav-footer a {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 14px;
+  color: rgba(235, 232, 225, 0.55);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+.nav-footer a:hover { color: rgba(235, 232, 225, 0.92); }
+
+@media (max-width: 600px) {
+  body { font-size: 15px; }
+  .container { padding: 40px 20px 60px; }
+  .header h1 { font-size: 23px; }
+  h3 { font-size: 16px; margin-top: 32px; }
+  blockquote { padding: 12px 16px; }
+}
+
+/* -- Pull Quote: Purple Shimmer -- */
+@keyframes purple-shimmer {
+  0%   { background-position: 100% 50%; }
+  100% { background-position: -100% 50%; }
+}
+.pull-quote {
+  border-color: rgba(160,130,210,0.15);
+  box-shadow: 0 2px 24px rgba(160,130,210,0.06), inset 0 1px 0 rgba(160,130,210,0.1);
+}
+.pull-quote::before {
+  background: linear-gradient(90deg, rgba(160,130,210,0.4), rgba(160,130,210,0.2), transparent 70%);
+}
+.pull-quote::after {
+  background: linear-gradient(180deg, rgba(160,130,210,0.4), transparent);
+}
+.pull-quote p {
+  background: linear-gradient(90deg, #b8a0d8 0%, #b8a0d8 40%, #e0d0f0 50%, #b8a0d8 60%, #b8a0d8 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: purple-shimmer 5s ease-in-out infinite;
+  filter: drop-shadow(0 0 12px rgba(160,130,210,0.25)) drop-shadow(0 0 30px rgba(160,130,210,0.1));
+}
+
+/* -- Article Accordion -- */
+.article-acc { margin-top: 24px; }
+.article-acc__item { border-bottom: 1px solid rgba(192,168,120,0.12); }
+.article-acc__item:first-child { border-top: 1px solid rgba(192,168,120,0.12); }
+.article-acc__header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 18px 4px; cursor: pointer; user-select: none;
+  transition: color 0.2s ease;
+}
+.article-acc__header:hover { color: #c0a878; }
+.article-acc__header-text {
+  display: flex; align-items: flex-start; gap: 14px; min-width: 0;
+}
+.article-acc__num {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.05em;
+  min-width: 28px; height: 28px; line-height: 28px; text-align: center;
+  border-radius: 50%; flex-shrink: 0; margin-top: 2px;
+}
+.article-acc--gold .article-acc__num  { background: rgba(192,168,120,0.15); color: #c0a878; }
+.article-acc--rose .article-acc__num  { background: rgba(200,120,120,0.15); color: #c87878; }
+.article-acc--purple .article-acc__num{ background: rgba(160,120,200,0.15); color: #a078c8; }
+.article-acc--gold  { border-left: 3px solid rgba(192,168,120,0.3); }
+.article-acc--rose  { border-left: 3px solid rgba(200,120,120,0.3); }
+.article-acc--purple{ border-left: 3px solid rgba(160,120,200,0.3); }
+.article-acc__title { font-size: 17px; font-weight: 700; line-height: 1.7; display: block; }
+.article-acc__sub   { font-size: 13px; line-height: 1.6; display: block; margin-top: 2px; color: rgba(235,232,225,0.45); font-weight: 400; }
+.article-acc__icon  { font-size: 20px; color: #c0a878; transition: transform 0.3s ease; min-width: 24px; text-align: center; flex-shrink: 0; margin-left: 12px; align-self: center; }
+.article-acc__item.is-open .article-acc__icon { transform: rotate(45deg); }
+.article-acc__body  { max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+.article-acc__content { padding: 0 4px 32px; }
+.article-acc__content h3 { margin-top: 32px; }
+@media (max-width: 600px) {
+  .article-acc__title { font-size: 15px; }
+  .article-acc__header { padding: 14px 2px; }
+  .article-acc__num { min-width: 24px; height: 24px; line-height: 24px; font-size: 11px; }
+  .article-acc__header-text { gap: 10px; }
+}
+
+/* -- Series badge -- */
+.series-badge {
+  display: inline-block;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: rgba(160, 130, 210, 0.75);
+  border: 1px solid rgba(160, 130, 210, 0.25);
+  padding: 2px 10px;
+  border-radius: 2px;
+  margin-bottom: 12px;
+}
+
+/* -- Letter salutation -- */
+.letter-salutation {
+  font-size: 15px;
+  color: rgba(192, 168, 120, 0.65);
+  font-style: italic;
+  letter-spacing: 0.08em;
+  margin-bottom: 28px;
+}
+</style>
+  <meta property="og:title" content="メタ・リバース #02 ── 血と音について｜実存科学研究所">
+  <meta property="og:description" content="ある朝、音楽を作ろうという考えと、武士道と仏教を身につけたいという考えが、同時に浮かんできた。外に新しい言語を、内に原点を。二つの運動は、一本の線だった。">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="実存科学研究所">
+  <meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+  <meta property="og:url" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-meta-reverse-02.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../css/style.min.css?v=41">
+</head>
+<body class="article-page">
+  <a href="#main" class="skip-link">メインコンテンツへスキップ</a>
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="../index.html" class="site-logo">実存科学研究所</a>
+      <button class="search-toggle" aria-label="検索"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+      <button class="nav-toggle" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+      <nav class="global-nav">
+        <a href="../index.html">Top</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">The Meta</button>
+          <div class="nav-dropdown__menu">
+            <a href="../beginner.html">はじめての方へ</a>
+            <a href="../lp.html">ダークサイド診断</a>
+            <a href="../omoidasu/">身体的知性診断</a>
+          </div>
+        </div>
+        <a href="../session.html">Session</a>
+        <a href="../founder.html">Founder</a>
+        <a href="../specials.html">Specials</a>
+      </nav>
+    </div>
+  </header>
+  <div class="reading-progress"></div>
+
+<div class="container" id="main">
+
+  <header class="header fade-in">
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <ol class="breadcrumb__list">
+        <li class="breadcrumb__item"><a href="../index.html" class="breadcrumb__link">TOP</a></li>
+        <li class="breadcrumb__item"><a href="../archives.html" class="breadcrumb__link">記事一覧</a></li>
+        <li class="breadcrumb__item"><span class="breadcrumb__current">血と音について</span></li>
+      </ol>
+    </nav>
+    <div class="institute-label">EXISTENTIAL SCIENCE RESEARCH INSTITUTE</div>
+    <div class="series-badge">メタ・リバース #02</div>
+    <div class="category-tag">コラム</div>
+    <h1 class="hero-title--shimmer">血と音について</h1>
+    <p class="page-hero__lead">箭内宏紀｜実存科学研究所</p>
+  </header>
+
+<hr>
+
+<div class="pull-quote fade-in"><p>私が選んだのではなく、血が浮かんできた。</p></div>
+
+<div class="text-panel fade-in">
+  <p class="letter-salutation">親愛なるあなたへ</p>
+  <p>ある朝のことだった。たぶん、特別な朝ではなかったはずだ。コーヒーを淹れて、いつものように一日が始まろうとしていた。</p>
+  <p>ただ、その日の私の中には、前日までは存在しなかった二つのものが、静かに浮かんでいた。</p>
+  <p>一つは、音楽を作ろう、という考えだった。もう一つは、武士道と仏教を、本気で身につけたい、という考えだった。</p>
+  <p>どちらも、前日までの私の中には、これほどの重量を持って存在してはいなかった。それが朝になってみると、当然そこにあるべきもののように、私の中に座っていた。</p>
+  <p>不思議なものだ。</p>
+</div>
+
+<div class="article-acc fade-in">
+
+<div class="article-acc__item article-acc--gold" id="sec-01">
+  <div class="article-acc__header" role="button" tabindex="0" aria-expanded="false">
+    <div class="article-acc__header-text">
+      <span class="article-acc__num">01</span>
+      <div>
+        <span class="article-acc__title">言葉が届かないということ</span>
+        <span class="article-acc__sub">論理と言語というメディアそのものの限界</span>
+      </div>
+    </div>
+    <span class="article-acc__icon">+</span>
+  </div>
+  <div class="article-acc__body">
+    <div class="article-acc__content">
+      <div class="text-panel fade-in">
+        <p>私は長らく、ある学問を作ってきた。<strong>実存科学</strong>という名前を、自分でつけた。約二十年かけて、論理と言語によってその体系を組み上げてきた。</p>
+        <p>そしてそれは、たぶん完成した。</p>
+        <p>完成してみて、わかったことがある。</p>
+        <p>論理と言語というものは、思ったほど人に届かないらしい、ということだ。</p>
+        <p>正確に言えば、届く人には届くが、届かない人にはまったく届かない。</p>
+        <p><strong>それは私の力量の問題ではなく、論理と言語というメディアそのものの限界</strong>なのだと、ようやく腑に落ちた。</p>
+        <p>だから、別の言語が要る。</p>
+        <p>そう思ったときに、音楽が浮かんできた。</p>
+        <p>私は楽器を弾けるわけでもないし、作曲の訓練を受けたわけでもない。</p>
+        <p>それでも、音響というメディアでなら、論理が届かない場所に何かを届けられるかもしれない、という直観があった。</p>
+        <p>これはたぶん、新しい言語を一から習得しようとしているのに近い。</p>
+        <p>母語のように使えるようになるには、何年もかかるのだろう。それでもやる、と決めた。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="article-acc__item article-acc--rose" id="sec-02">
+  <div class="article-acc__header" role="button" tabindex="0" aria-expanded="false">
+    <div class="article-acc__header-text">
+      <span class="article-acc__num">02</span>
+      <div>
+        <span class="article-acc__title">武士道と仏教のこと</span>
+        <span class="article-acc__sub">答えは私の血の中にあった</span>
+      </div>
+    </div>
+    <span class="article-acc__icon">+</span>
+  </div>
+  <div class="article-acc__body">
+    <div class="article-acc__content">
+      <div class="text-panel fade-in">
+        <p>なぜこの二つなのだろう、と私はしばらく考えていた。</p>
+        <p>なぜ一つではなく二つなのか。なぜ他の何かではなく、この二つなのか。</p>
+        <p>考えてみると、<strong>答えは私の血の中にあった</strong>。</p>
+        <p>箭内という家系は、清和源氏の流れを汲む武士の家系らしい。そして実家は曹洞宗である。</p>
+        <p>つまり私の中には、もともと侍の気質と、禅の呼吸が、息づいていた。</p>
+        <p>私が選んだのではなく、最初からそこにあったのだ。</p>
+        <p>ただ、私はそれを長らく使ってこなかった。</p>
+        <p>学問を作ることに集中していたし、家系や血のことは、どこか古臭いものとして扱っていた節がある。</p>
+        <p>それが今になって、当然そこにあるべきものとして、立ち上がってきた。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="article-acc__item article-acc--purple" id="sec-03">
+  <div class="article-acc__header" role="button" tabindex="0" aria-expanded="false">
+    <div class="article-acc__header-text">
+      <span class="article-acc__num">03</span>
+      <div>
+        <span class="article-acc__title">原点に戻る、ということについて</span>
+        <span class="article-acc__sub">最も信頼できる器は、血脈が何百年もかけて検証してきたもの</span>
+      </div>
+    </div>
+    <span class="article-acc__icon">+</span>
+  </div>
+  <div class="article-acc__body">
+    <div class="article-acc__content">
+      <div class="text-panel fade-in">
+        <p>これは原点に戻るということなのだろうか。たぶん、そうなのだと思う。ただ、懐古ではない。</p>
+        <p>248年に一度の通過を前にして、私の中の何かが、最も古いものを掴み直そうとしているのだと思う。</p>
+        <p>新しいものが入ってくるためには、それを受ける器が要る。そして最も信頼できる器は、自分の血脈が、何百年もかけて検証してきたものだ。</p>
+      </div>
+      <div class="highlight-block fade-in">
+        <p><strong>武士道は、所作の型である。</strong><br>立ち方、歩き方、人との対し方。外側の構造を整える。</p>
+        <p><strong>仏教は、心の型である。</strong><br>観察の仕方、執着の手放し方、無常の受け取り方。内側の構造を整える。</p>
+      </div>
+      <div class="text-panel fade-in">
+        <p>この二つは、歴史の中ですでに合流している。鎌倉以降、武士はしばしば禅を学んだ。</p>
+        <p>私が今やろうとしていることは、発明ではなく、合流である。</p>
+        <p>誰かが何百年もかけて検証してきた経路の上に、自分を置こうとしている。だから、たぶん安全なのだ。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="article-acc__item article-acc--gold" id="sec-04">
+  <div class="article-acc__header" role="button" tabindex="0" aria-expanded="false">
+    <div class="article-acc__header-text">
+      <span class="article-acc__num">04</span>
+      <div>
+        <span class="article-acc__title">二つの運動が一つであること</span>
+        <span class="article-acc__sub">後から見ると、一本の線で繋がっていた</span>
+      </div>
+    </div>
+    <span class="article-acc__icon">+</span>
+  </div>
+  <div class="article-acc__body">
+    <div class="article-acc__content">
+      <div class="text-panel fade-in">
+        <p>ここまで書いてきて、ようやく気がついたことがある。</p>
+        <p>外側に新しい言語（音楽）を獲得しに行くことと、内側で原点（武士道と仏教）に戻ることは、<strong>たぶん同じ一つの運動の表裏</strong>なのだ。</p>
+        <p>新しいものを受け取るために、最も古いものを掴み直す。</p>
+        <p>最も古いもので器を作って、その中に最も新しいものを注ぐ。</p>
+        <p>別々に起きた二つの出来事だと思っていたものが、後から見ると一本の線で繋がっていた、ということがある。私の中で今、それが起きているらしい。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="article-acc__item article-acc--purple" id="sec-05">
+  <div class="article-acc__header" role="button" tabindex="0" aria-expanded="false">
+    <div class="article-acc__header-text">
+      <span class="article-acc__num">05</span>
+      <div>
+        <span class="article-acc__title">血が浮かんできた、ということ</span>
+        <span class="article-acc__sub">Metaの計らいとしか呼びようのない何かによって</span>
+      </div>
+    </div>
+    <span class="article-acc__icon">+</span>
+  </div>
+  <div class="article-acc__body">
+    <div class="article-acc__content">
+      <div class="text-panel fade-in">
+        <p>メタ・リバースの通過というものは、どうやら、思っていたより強力なものらしい。</p>
+        <p>これだけの器を要求してくるということは、これから降りてくるものの規模が、それに見合うのだろう。器と中身は釣り合うはずだ。</p>
+        <p>小さい器に大きいものは入らないし、大きい器が用意されるのは、大きいものが来るからだ。</p>
+        <p>私が選んだのではなく、血が浮かんできた。呼吸が立ち上がってきた。</p>
+        <p>それは私の意志ではなく、<strong>Metaの計らい</strong>としか呼びようのない何かによって、起きている。</p>
+        <p>私はそれに乗ろうと思う。乗ることしかできないし、乗ることがたぶん最も自然だ。</p>
+        <p>その先で、どんな音が生まれるのか。私にはまだわからない。ただ、生まれるのだろうとは思っている。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><!-- /article-acc -->
+
+<blockquote class="fade-in" style="margin-top: 48px;">
+  <p>前の手紙: <a href="column-meta-reverse-01.html">メタ・リバース #01 ── メタ・フィクションとカーテンコール</a></p>
+  <p>最初の手紙: <a href="column-meta-reverse-prologue.html">メタ・リバース #00 ── 248年越しの手紙</a></p>
+</blockquote>
+
+  <p class="fade-in" style="font-size: 14px; color: rgba(235, 232, 225, 0.45); margin-top: 32px;">&copy; 実存科学研究所</p>
+
+<nav class="nav-footer fade-in">
+  <a href="../archives.html">&larr; 記事一覧へ戻る</a>
+</nav>
+
+</div>
+
+<section class="cta-block fade-in">
+  <div class="container">
+    <h2 class="cta-block__title">天命の言語化セッション&trade;</h2>
+    <p class="cta-block__desc">2時間で天命が言語化できる場所。</p>
+    <div class="cta-block__features">
+      <span class="cta-block__feature">Zoom完結</span>
+      <span class="cta-block__feature">事前学習不要</span>
+      <span class="cta-block__feature">対話のみ</span>
+    </div>
+    <a href="../trial.html" class="btn">無料トライアルに申し込む &rarr;</a>
+  </div>
+</section>
+
+  <footer class="site-footer">
+  <div class="container--wide">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <p class="footer-col__title">The Meta</p>
+        <a href="../about-existential-science.html">実存科学とは</a>
+        <a href="../epistemology.html">認識論</a>
+        <a href="../semantics.html">意味論</a>
+        <a href="../society.html">社会論</a>
+        <a href="../body.html">身体論</a>
+        <a href="../relations.html">関係論</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Contents</p>
+        <a href="../specials.html">特別シリーズ</a>
+        <a href="../archives.html">記事一覧</a>
+        <a href="../video-list.html">動画一覧</a>
+        <a href="../glossary.html">用語集</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Session</p>
+        <a href="../session.html">天命の言語化セッション™</a>
+        <a href="../session-flow.html">セッションの流れ</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Institute</p>
+        <a href="../founder.html">創始者 箭内宏紀</a>
+        <a href="../contact.html">お問い合わせ</a>
+        <a href="../legal/legal-tokushoho.html">特定商取引法</a>
+        <a href="../legal/legal-privacy-policy.html">プライバシーポリシー</a>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; 箭内宏紀 / 実存科学研究所 ── Existential Science Institute</p>
+  </div>
+</footer>
+
+  <script src="../js/main.min.js?v=13"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "datePublished": "2026-05-05",
+  "dateModified": "2026-05-05",
+  "headline": "メタ・リバース #02 ── 血と音について",
+  "description": "ある朝、音楽を作ろうという考えと、武士道と仏教を身につけたいという考えが、同時に浮かんできた。外に新しい言語を、内に原点を。二つの運動は、一本の線だった。",
+  "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-meta-reverse-02.html",
+  "author": {
+    "@type": "Person",
+    "name": "箭内宏紀",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/founder.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  },
+  "inLanguage": "ja",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  }
+}
+</script>
+
+<script>
+(function(){
+  document.querySelectorAll('.article-acc__header').forEach(function(header){
+    header.addEventListener('click',function(){
+      var item=this.parentElement;
+      var body=item.querySelector('.article-acc__body');
+      var content=body.querySelector('.article-acc__content');
+      var isOpen=item.classList.contains('is-open');
+      this.setAttribute('aria-expanded',!isOpen);
+      if(isOpen){
+        body.style.maxHeight='0';
+        item.classList.remove('is-open');
+      }else{
+        body.style.maxHeight=content.scrollHeight+'px';
+        item.classList.add('is-open');
+      }
+    });
+    header.addEventListener('keydown',function(e){
+      if(e.key==='Enter'||e.key===' '){e.preventDefault();this.click();}
+    });
+  });
+})();
+</script>
+
+  <div class="search-overlay">
+    <div class="search-modal"><button class="search-close" aria-label="閉じる">&times;</button>
+      <div class="search-input-wrap">
+        <span class="search-input-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+        <input type="text" class="search-input" placeholder="キーワードで検索..." autocomplete="off" aria-label="サイト内検索">
+      </div>
+      <div class="search-results"></div>
+      <div class="search-hint"><span class="search-hint__desktop">ESC to close · ⌘K to toggle</span><span class="search-hint__mobile">背景タップまたは ✕ で閉じる</span></div>
+    </div>
+  </div>
+</body>
+</html>

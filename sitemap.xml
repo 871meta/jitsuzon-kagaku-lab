@@ -1757,6 +1757,14 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- ===== ARTICLES: column-meta-reverse-02 ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-meta-reverse-02.html</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- ===== ARTICLES: column-meta-reverse-01 ===== -->
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-meta-reverse-01.html</loc>
