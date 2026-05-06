@@ -1749,6 +1749,14 @@
     <priority>0.4</priority>
   </url>
 
+  <!-- ===== ARTICLES: column-health-as-sport ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-health-as-sport.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- ===== ARTICLES: column-session-body ===== -->
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-session-body.html</loc>
