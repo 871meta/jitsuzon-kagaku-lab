@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFLECHPE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XFLECHPE2');
+</script>
+<meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="canonical" href="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-stimulus-formula.html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="箭内宏紀">
+<title>刺激の公式──運動入力の精密化｜実存科学研究所</title>
+<meta name="description" content="身体論「運動 = 刺激の質 × 刺激の量」の実装レベル定式。S =（テンポ × Failure × 意識的収縮 × ROM）×（ボリューム × 頻度 × インターバル）。重量は従属変数。生涯継続可能な身体設計のための7変数フレームワーク。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"></noscript>
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #080610;
+  color: rgba(235, 232, 225, 0.92);
+  font-family: 'Noto Serif JP', serif;
+  font-size: 17px;
+  line-height: 2;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 60px 32px 80px;
+}
+
+/* ── Header ── */
+.header { margin-bottom: 56px; }
+
+.institute-label {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  color: rgba(235, 232, 225, 0.55);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.category-tag {
+  display: inline-block;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: #fff;
+  background: var(--color-gold);
+  padding: 3px 12px;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.header .subtitle {
+  font-size: 16px;
+  color: rgba(235, 232, 225, 0.55);
+  line-height: 1.8;
+}
+
+/* ── Headings ── */
+h2 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.6;
+  margin-top: 64px;
+  margin-bottom: 24px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--color-gold-a30);
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.6;
+  margin-top: 40px;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-gold-a15);
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.6;
+  margin-top: 28px;
+  margin-bottom: 12px;
+  color: #c0a878;
+}
+
+/* ── Body ── */
+p { margin-bottom: 20px; }
+strong { font-weight: 700; }
+
+/* ── Blockquote ── */
+blockquote {
+  border-left: 3px solid var(--color-gold-a40);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 16px 24px;
+  margin: 24px 0;
+  font-style: normal;
+}
+blockquote p { margin-bottom: 8px; }
+blockquote p:last-child { margin-bottom: 0; }
+
+/* ── Lists ── */
+ul, ol { margin-left: 1.5rem; margin-bottom: 20px; line-height: 2; }
+li { margin-bottom: 4px; }
+
+.highlight-block + .highlight-block { margin-top: 12px; }
+
+/* ── Formula Box ── */
+.formula-box {
+  margin: 24px 0;
+  padding: 20px 24px;
+  background: rgba(15, 12, 25, 0.65);
+  border-left: 3px solid rgba(192,168,120,0.5);
+  border-radius: 2px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 14px;
+  line-height: 2;
+  color: rgba(235,232,225,0.92);
+  overflow-x: auto;
+}
+.formula-box .formula-em {
+  color: #c0a878;
+  font-weight: 600;
+}
+.formula-box .formula-sub {
+  font-size: 12px;
+  color: rgba(235,232,225,0.55);
+  display: block;
+  margin-top: 4px;
+}
+@media (max-width: 600px) {
+  .formula-box { font-size: 12.5px; padding: 16px 18px; }
+}
+
+/* ── Value Table ── */
+.value-table {
+  margin: 24px 0;
+  overflow-x: auto;
+}
+.value-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 1.7;
+  background: rgba(15, 12, 25, 0.45);
+  border: 1px solid rgba(192,168,120,0.18);
+}
+.value-table thead th {
+  text-align: left;
+  padding: 12px 14px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #c0a878;
+  background: rgba(192,168,120,0.06);
+  border-bottom: 1px solid rgba(192,168,120,0.25);
+}
+.value-table tbody td {
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(192,168,120,0.08);
+  vertical-align: top;
+  color: rgba(235, 232, 225, 0.82);
+}
+.value-table tbody tr:last-child td { border-bottom: none; }
+.value-table tbody td:first-child {
+  white-space: nowrap;
+  color: #c0a878;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 500;
+}
+@media (max-width: 600px) {
+  .value-table table { font-size: 13px; }
+  .value-table thead th, .value-table tbody td { padding: 8px 10px; }
+}
+
+/* ── Variable Card ── */
+.var-card {
+  margin: 24px 0;
+  padding: 20px 22px;
+  background: rgba(15, 12, 25, 0.5);
+  border-left: 3px solid rgba(192,168,120,0.35);
+  border-radius: 2px;
+}
+.var-card__no {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: rgba(192,168,120,0.75);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.var-card__name {
+  font-size: 17px;
+  font-weight: 700;
+  color: #d4b878;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(192,168,120,0.18);
+}
+.var-card dl {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.9;
+}
+.var-card dt {
+  display: inline-block;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 600;
+  color: rgba(192,168,120,0.85);
+  margin-right: 8px;
+  min-width: 5em;
+}
+.var-card dd {
+  display: inline;
+  margin: 0;
+  color: rgba(235,232,225,0.85);
+}
+.var-card dd::after {
+  content: "";
+  display: block;
+  margin-bottom: 6px;
+}
+.var-card__refs {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(192,168,120,0.1);
+  font-size: 13px;
+  line-height: 1.85;
+  color: rgba(235,232,225,0.65);
+}
+.var-card__refs ul {
+  list-style: none;
+  margin: 0;
+}
+.var-card__refs li {
+  padding-left: 1em;
+  text-indent: -1em;
+  margin-bottom: 4px;
+}
+.var-card__refs li::before {
+  content: "– ";
+  color: rgba(192,168,120,0.5);
+}
+
+/* ── Note Block ── */
+.note-block {
+  margin: 20px 0;
+  padding: 14px 18px;
+  background: rgba(160,130,210,0.05);
+  border-left: 2px solid rgba(160,130,210,0.3);
+  font-size: 14px;
+  line-height: 1.85;
+  color: rgba(235, 232, 225, 0.7);
+}
+.note-block p { margin-bottom: 6px; }
+.note-block p:last-child { margin-bottom: 0; }
+
+/* ── Separator ── */
+hr {
+  border: none;
+  border-top: 1px solid var(--color-gold-a15);
+  margin: 48px 0;
+}
+
+/* ── Navigation ── */
+.nav-footer {
+  margin-top: 72px;
+  padding-top: 32px;
+  border-top: 1px solid var(--color-gold-a15);
+}
+.nav-footer a {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 14px;
+  color: rgba(235, 232, 225, 0.55);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+.nav-footer a:hover { color: rgba(235, 232, 225, 0.92); }
+
+/* ── References ── */
+.references {
+  margin-top: 40px;
+  font-size: 14px;
+  line-height: 1.9;
+  color: rgba(235, 232, 225, 0.6);
+}
+.references ul, .references ol {
+  list-style: none;
+  margin-left: 0;
+}
+.references li {
+  margin-bottom: 12px;
+  padding-left: 1.4em;
+  text-indent: -1.4em;
+}
+.references li::before {
+  content: "– ";
+  color: var(--color-gold-a40);
+}
+
+/* ── Related Links ── */
+.related-links {
+  margin-top: 32px;
+  padding: 20px 22px;
+  background: rgba(15, 12, 25, 0.45);
+  border-left: 2px solid rgba(192,168,120,0.35);
+  border-radius: 2px;
+}
+.related-links__label {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: rgba(235,232,225,0.5);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.related-links ul { list-style: none; margin: 0; line-height: 1.9; }
+.related-links li { margin-bottom: 4px; }
+.related-links a {
+  color: #c0a878;
+  text-decoration: none;
+  font-size: 15px;
+  border-bottom: 1px dotted rgba(192,168,120,0.3);
+  padding-bottom: 1px;
+}
+.related-links a:hover {
+  color: #d4b878;
+  border-bottom-color: rgba(192,168,120,0.7);
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  body { font-size: 15px; }
+  .container { padding: 40px 20px 60px; }
+  .header h1 { font-size: 23px; }
+  h2 { font-size: 19px; margin-top: 48px; }
+  h3 { font-size: 16px; margin-top: 32px; }
+  blockquote { padding: 12px 16px; }
+}
+
+/* ── Pull Quote: Purple Shimmer ── */
+@keyframes purple-shimmer {
+  0%   { background-position: 100% 50%; }
+  100% { background-position: -100% 50%; }
+}
+.pull-quote {
+  border-color: rgba(160,130,210,0.15);
+  box-shadow:
+    0 2px 24px rgba(160,130,210,0.06),
+    inset 0 1px 0 rgba(160,130,210,0.1);
+}
+.pull-quote::before {
+  background: linear-gradient(90deg, rgba(160,130,210,0.4), rgba(160,130,210,0.2), transparent 70%);
+}
+.pull-quote::after {
+  background: linear-gradient(180deg, rgba(160,130,210,0.4), transparent);
+}
+.pull-quote p {
+  background: linear-gradient(90deg, #b8a0d8 0%, #b8a0d8 40%, #e0d0f0 50%, #b8a0d8 60%, #b8a0d8 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: purple-shimmer 5s ease-in-out infinite;
+  filter: drop-shadow(0 0 12px rgba(160,130,210,0.25)) drop-shadow(0 0 30px rgba(160,130,210,0.1));
+}
+
+/* ── Article Accordion ── */
+.article-acc { margin-top: 24px; }
+.article-acc__item { border-bottom: 1px solid rgba(192,168,120,0.12); }
+.article-acc__item:first-child { border-top: 1px solid rgba(192,168,120,0.12); }
+.article-acc__header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 18px 4px; cursor: pointer; user-select: none;
+  transition: color 0.2s ease;
+}
+.article-acc__header:hover { color: #c0a878; }
+.article-acc__header-text {
+  display: flex; align-items: flex-start; gap: 14px; min-width: 0;
+}
+.article-acc__num {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.05em;
+  min-width: 28px; height: 28px; line-height: 28px; text-align: center;
+  border-radius: 50%; flex-shrink: 0; margin-top: 2px;
+}
+.article-acc--gold .article-acc__num {
+  background: rgba(192,168,120,0.15); color: #c0a878;
+}
+.article-acc--rose .article-acc__num {
+  background: rgba(200,120,120,0.15); color: #c87878;
+}
+.article-acc--purple .article-acc__num {
+  background: rgba(160,120,200,0.15); color: #a078c8;
+}
+.article-acc--gold { border-left: 3px solid rgba(192,168,120,0.3); }
+.article-acc--rose { border-left: 3px solid rgba(200,120,120,0.3); }
+.article-acc--purple { border-left: 3px solid rgba(160,120,200,0.3); }
+.article-acc__title {
+  font-size: 17px; font-weight: 700; line-height: 1.7;
+  display: block;
+}
+.article-acc__sub {
+  font-size: 13px; line-height: 1.6; display: block; margin-top: 2px;
+  color: rgba(235,232,225,0.45); font-weight: 400;
+}
+.article-acc__icon {
+  font-size: 20px; color: #c0a878; transition: transform 0.3s ease;
+  min-width: 24px; text-align: center; flex-shrink: 0; margin-left: 12px;
+  align-self: center;
+}
+.article-acc__item.is-open .article-acc__icon { transform: rotate(45deg); }
+.article-acc__body {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.article-acc__content { padding: 0 4px 32px; }
+.article-acc__content h3 { margin-top: 32px; }
+.article-acc__content h3:first-child { margin-top: 0; }
+.article-acc__content .text-panel { margin-bottom: 0; }
+@media (max-width: 600px) {
+  .article-acc__title { font-size: 15px; }
+  .article-acc__header { padding: 14px 2px; }
+  .article-acc__num { min-width: 24px; height: 24px; line-height: 24px; font-size: 11px; }
+  .article-acc__header-text { gap: 10px; }
+}
+</style>
+  <meta property="og:title" content="刺激の公式──運動入力の精密化｜実存科学研究所">
+  <meta property="og:description" content="身体論「運動 = 刺激の質 × 刺激の量」の実装レベル定式。7変数の積。重量は従属変数。生涯継続可能な身体設計のためのフレームワーク。">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="実存科学研究所">
+<meta property="og:image" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/images/ogp-b.png">
+  <meta property="og:url" content="https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-stimulus-formula.html">
+<meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../css/style.min.css?v=41">
+</head>
+<body class="article-page">
+  <a href="#main" class="skip-link">メインコンテンツへスキップ</a>
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container--wide">
+      <a href="../index.html" class="site-logo">実存科学研究所</a>
+      <button class="search-toggle" aria-label="検索"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+            <nav class="global-nav">
+        <a href="../index.html">Top</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__toggle">The Meta</button>
+          <div class="nav-dropdown__menu">
+            <a href="../beginner.html">はじめての方へ</a>
+            <a href="../lp.html">ダークサイド診断</a>
+            <a href="../omoidasu/">身体的知性診断</a>
+          </div>
+        </div>
+        <a href="../session.html">Session</a>
+        <a href="../founder.html">Founder</a>
+        <a href="../specials.html">Specials</a>
+      </nav>
+    </div>
+  </header>
+  <div class="reading-progress"></div>
+
+
+<div class="container" id="main">
+
+  <!-- Header -->
+  <header class="header fade-in">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="パンくずリスト">
+        <ol class="breadcrumb__list">
+          <li class="breadcrumb__item"><a href="../index.html" class="breadcrumb__link">TOP</a></li>
+          <li class="breadcrumb__item"><a href="../archives.html" class="breadcrumb__link">記事一覧</a></li>
+          <li class="breadcrumb__item"><span class="breadcrumb__current">刺激の公式</span></li>
+        </ol>
+      </nav>
+    <div class="institute-label">EXISTENTIAL SCIENCE RESEARCH INSTITUTE</div>
+    <div class="category-tag">天命ボディ・コラム</div>
+    <h1 class="hero-title--shimmer">刺激の公式</h1>
+    <p class="page-hero__lead">── 運動入力の精密化<br>身体論「運動 = 刺激の質 × 刺激の量」の実装レベル定式<br>箭内宏紀｜実存科学研究所</p>
+  </header>
+
+<div class="pull-quote fade-in"><p>上質な刺激を入れれば、<br class="sp-only">アロスタシスが自律的に更新される。<br class="sp-only">──身体は命令に従うシステムではなく、<br class="sp-only">入力に応答するシステムだ。</p></div>
+
+<div class="article-acc fade-in">
+
+<div class="article-acc__item article-acc--rose" id="sec-01">
+  <div class="article-acc__header" role="button" tabindex="0" aria-expanded="false">
+    <div class="article-acc__header-text">
+      <span class="article-acc__num">01</span>
+      <div>
+        <span class="article-acc__title">なぜこの公式が必要だったか</span>
+        <span class="article-acc__sub">肘の違和感が生んだ問い、そして合理的構造への転回</span>
+      </div>
+    </div>
+    <span class="article-acc__icon">+</span>
+  </div>
+  <div class="article-acc__body">
+    <div class="article-acc__content">
+<div class="text-panel fade-in">
+  <p>5分割トレーニングを23週続けた頃、肘に違和感が出始めた。</p>
+
+  <p>それまでの私は、ボディビル的な知識を参照しながら、重量に対するプログレッシブオーバーロードを追求してきた。</p>
+
+  <p>重量を伸ばすことが進歩であり、進歩が筋肥大を生むと信じていた。</p>
+
+  <p>だが、肘の違和感は問いを生んだ。</p>
+</div>
+
+  <div class="highlight-block fade-in">
+    <p><strong>「これは本当にベストなのか」</strong></p>
+  </div>
+
+<div class="text-panel fade-in">
+  <p>健康を競技として捉える私の立場からすれば、最短最速で筋肉をつけることは目的ではない。</p>
+
+  <p>私が求めているのは、生涯にわたって機能する身体であり、天命遂行のインフラとしての身体である。</p>
+
+  <p>短期最大化を目的とするボディビル的方法論が、私の目的関数に対して本当に合理的なのか──一度立ち止まって考える必要があった。</p>
+
+  <p>そこから国内外の論文を読み始めた。</p>
+
+  <p>Schoenfeld、Burd、Damas、Refalo、Morton、Pedrosa、Maeo、そして石井直方・谷本道哉ら日本の研究者。</p>
+
+  <p>現代の筋肥大科学は、すでに「重量＝進歩」というシンプルなモデルを超えていた。</p>
+
+  <p>低負荷でも failure に到達すれば肥大効果は同等であり、テンポ・意識的収縮・可動域・ボリューム・頻度といった複数の変数が刺激の質を決めることが、メタ解析レベルで確立されていた。</p>
+</div>
+
+  <div class="highlight-block fade-in">
+    <p><strong>つまり最も合理的なものは、ボディビル文化の外にあった。</strong></p>
+  </div>
+
+<div class="text-panel fade-in">
+  <p>本書は、その合理的構造を私自身のために言語化し、身体論の枠組みに統合したものである。</p>
+
+  <p>本書で採用する方法論を <strong>ST主軸（スロートレーニング主軸）</strong>と呼ぶ。</p>
+
+  <p>後述する7変数の最適化を、低〜中強度・スローテンポを基盤として運用するアプローチである。</p>
+</div>
+    </div>
+  </div>
+</div>
+
+<div class="article-acc__item article-acc--rose" id="sec-02">
+  <div class="article-acc__header" role="button" tabindex="0" aria-expanded="false">
+    <div class="article-acc__header-text">
+      <span class="article-acc__num">02</span>
+      <div>
+        <span class="article-acc__title">この公式は誰のためのものか</span>
+        <span class="article-acc__sub">目的関数の明示と、共有可能性の範囲</span>
+      </div>
+    </div>
+    <span class="article-acc__icon">+</span>
+  </div>
+  <div class="article-acc__body">
+    <div class="article-acc__content">
+<div class="text-panel fade-in">
+  <p>本書は私自身の目的関数のために最適化されている。</p>
+
+  <p>「健康を競技として最大化する」<br>「天命遂行のインフラとして身体を設計する」<br>「生涯継続を構造に組み込む」──この3つだ。</p>
+
+  <p>したがって、すべての人に当てはまるとは主張しない。</p>
+
+  <p>しかし、<strong>健康上のメリットの最大化</strong>という観点に特化している以上、ある程度以上は他の人にも当てはまると考える。</p>
+
+  <p>特に：</p>
+</div>
+
+  <ul class="fade-in">
+    <li>重量追求型の筋トレを続けて、関節・腱に違和感が出始めた人</li>
+    <li>ボディビル的方法論の限界を感じ始めた人</li>
+    <li>短期最大化ではなく、生涯継続を求める人</li>
+    <li>機能美 ──「日本刀的設計思想」── を志向する人</li>
+  </ul>
+
+<div class="text-panel fade-in">
+  <p>これらの人にとっては、本書は朗報になり得る。</p>
+
+  <p>私と同じく、関節にダメージが起きている人にとっては、特に。</p>
+</div>
+    </div>
+  </div>
+</div>
+
+<div class="article-acc__item article-acc--gold" id="sec-03">
+  <div class="article-acc__header" role="button" tabindex="0" aria-expanded="false">
+    <div class="article-acc__header-text">
+      <span class="article-acc__num">03</span>
+      <div>
+        <span class="article-acc__title">身体論との接続</span>
+        <span class="article-acc__sub">統合方程式の中で、運動の項を精密化する</span>
+      </div>
+    </div>
+    <span class="article-acc__icon">+</span>
+  </div>
+  <div class="article-acc__body">
+    <div class="article-acc__content">
+  <h3 class="fade-in">身体論の統合方程式</h3>
+
+  <div class="formula-box fade-in">
+<span class="formula-em">健康 = 運動 × 栄養 × 睡眠 = 回復 = アロスタシス</span>
+<br>パフォーマンス = プライミング × 健康
+  </div>
+
+  <h3 class="fade-in">身体論における運動の定義</h3>
+
+  <div class="formula-box fade-in">
+<span class="formula-em">運動 = 刺激の質 × 刺激の量</span>
+  </div>
+
+  <h3 class="fade-in">身体論における刺激の質と量</h3>
+
+  <div class="value-table fade-in">
+    <table>
+      <thead>
+        <tr><th>分類</th><th>要素</th><th>定義</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>質</td><td>可動域</td><td>関節の全可動域を使った動作</td></tr>
+        <tr><td>質</td><td>制御</td><td>筋肉が負荷をコントロールしている状態</td></tr>
+        <tr><td>質</td><td>漸進性</td><td>前回よりわずかに高い負荷または難度</td></tr>
+        <tr><td>量</td><td>頻度</td><td>週あたりの刺激回数</td></tr>
+        <tr><td>量</td><td>強度</td><td>1セッションあたりの負荷の大きさ</td></tr>
+        <tr><td>量</td><td>容量</td><td>総仕事量（セット数 × 反復数 × 負荷）</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="highlight-block fade-in">
+    <p><strong>本書はこの「質」と「量」を実装レベルまで分解する。</strong></p>
+  </div>
+    </div>
+  </div>
+</div>
+
+<div class="article-acc__item article-acc--gold" id="sec-04">
+  <div class="article-acc__header" role="button" tabindex="0" aria-expanded="false">
+    <div class="article-acc__header-text">
+      <span class="article-acc__num">04</span>
+      <div>
+        <span class="article-acc__title">刺激の公式</span>
+        <span class="article-acc__sub">S = 7変数の積。重量は含まれない</span>
+      </div>
+    </div>
+    <span class="article-acc__icon">+</span>
+  </div>
+  <div class="article-acc__body">
+    <div class="article-acc__content">
+<div class="text-panel fade-in">
+  <p>公式そのものはシンプルだ。</p>
+</div>
+
+  <div class="formula-box fade-in">
+<span class="formula-em">S = 刺激の質 × 刺激の量</span>
+  </div>
+
+  <h3 class="fade-in">完全展開</h3>
+
+  <div class="formula-box fade-in">
+<span class="formula-em">S = (テンポ × Failure × 意識的収縮 × ROM)</span>
+<span class="formula-em">　　× (ボリューム × 頻度 × インターバル)</span>
+<span class="formula-sub">前半 = 刺激の質　／　後半 = 刺激の量</span>
+  </div>
+
+  <div class="highlight-block fade-in">
+    <p><strong>7変数。優先度順に配列。すべてジムで直接操作可能。</strong></p>
+  </div>
+
+  <h3 class="fade-in">身体論との対応</h3>
+
+  <div class="value-table fade-in">
+    <table>
+      <thead>
+        <tr><th>身体論</th><th>刺激公式（精密化）</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>制御</td><td>テンポ ＋ 意識的収縮</td></tr>
+        <tr><td>漸進性</td><td>Failure（RIR=0）</td></tr>
+        <tr><td>可動域</td><td>ROM</td></tr>
+        <tr><td>容量</td><td>ボリューム ＋ インターバル</td></tr>
+        <tr><td>頻度</td><td>頻度</td></tr>
+        <tr><td>強度</td><td>Failureに従属（重量は導出変数）</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="highlight-block fade-in">
+    <p><strong>重量は7変数に含まれない。</strong>Failureが決まれば従属的に導出される。</p>
+  </div>
+    </div>
+  </div>
+</div>
+
+<div class="article-acc__item article-acc--purple" id="sec-05">
+  <div class="article-acc__header" role="button" tabindex="0" aria-expanded="false">
+    <div class="article-acc__header-text">
+      <span class="article-acc__num">05</span>
+      <div>
+        <span class="article-acc__title">優先度の根拠と思考順序</span>
+        <span class="article-acc__sub">欠落時の損失で並べる、実装の7ステップ</span>
+      </div>
+    </div>
+    <span class="article-acc__icon">+</span>
+  </div>
+  <div class="article-acc__body">
+    <div class="article-acc__content">
+<div class="text-panel fade-in">
+  <p>各変数を欠いた場合の損失を基準に優先度を決定した。</p>
+</div>
+
+  <h3 class="fade-in">刺激の質（高優先度）</h3>
+
+  <div class="value-table fade-in">
+    <table>
+      <thead>
+        <tr><th>順位</th><th>変数</th><th>欠落時の損失</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>テンポ</td><td>慣性で張力消失 → 刺激の質ゼロ</td></tr>
+        <tr><td>2</td><td>Failure</td><td>高閾値運動単位未動員 → 適応閾値未達</td></tr>
+        <tr><td>3</td><td>意識的収縮</td><td>標的筋への配分↓ → 不均一肥大・関節負担</td></tr>
+        <tr><td>4</td><td>ROM</td><td>一部筋線維のみ刺激 → 部分適応</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="fade-in">刺激の量（中優先度）</h3>
+
+  <div class="value-table fade-in">
+    <table>
+      <thead>
+        <tr><th>順位</th><th>変数</th><th>欠落時の損失</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>5</td><td>ボリューム</td><td>適応閾値未達 → 進歩停滞</td></tr>
+        <tr><td>6</td><td>頻度</td><td>合成サイクル未活用 → 効率↓</td></tr>
+        <tr><td>7</td><td>インターバル</td><td>代謝ストレス↓ → 質低下</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="fade-in">実装時の思考順序</h3>
+
+<div class="text-panel fade-in">
+  <p>優先度順に同期する。</p>
+</div>
+
+  <ol class="fade-in">
+    <li><strong>テンポを守る</strong>（4-1-4厳守）</li>
+    <li><strong>Failureまで追い込む</strong>（RIR=0）</li>
+    <li><strong>意識的収縮で標的精度</strong>（フィニッシュ1秒スクイーズ）</li>
+    <li><strong>ROMを最大化</strong>（ストレッチポジション活用）</li>
+    <li><strong>週ボリューム達成</strong>（10〜20セット/部位）</li>
+    <li><strong>頻度確保</strong>（週1〜2回/部位）</li>
+    <li><strong>インターバル管理</strong>（60〜90秒）</li>
+  </ol>
+    </div>
+  </div>
+</div>
+
+<div class="article-acc__item article-acc--gold" id="sec-06">
+  <div class="article-acc__header" role="button" tabindex="0" aria-expanded="false">
+    <div class="article-acc__header-text">
+      <span class="article-acc__num">06</span>
+      <div>
+        <span class="article-acc__title">7変数の定義とエビデンス</span>
+        <span class="article-acc__sub">各変数の標準値・役割・根拠論文</span>
+      </div>
+    </div>
+    <span class="article-acc__icon">+</span>
+  </div>
+  <div class="article-acc__body">
+    <div class="article-acc__content">
+
+  <div class="var-card fade-in">
+    <div class="var-card__no">Variable 1【最優先】</div>
+    <div class="var-card__name">テンポ</div>
+    <dl>
+      <dt>定義</dt><dd>1レップ内の動作速度配分</dd>
+      <dt>標準値</dt><dd>4-1-4（下ろし4秒・トップ1秒・上げ4秒）</dd>
+      <dt>役割</dt><dd>慣性排除・全可動域で高張力維持・代謝物蓄積</dd>
+      <dt>身体論</dt><dd>制御の精密化</dd>
+    </dl>
+    <div class="var-card__refs">
+      <ul>
+        <li>Burd 2012 RCT：スローテンポで筋タンパク合成↑</li>
+        <li>谷本道哉・石井直方 2006：LSTで高強度群と同等の肥大</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="var-card fade-in">
+    <div class="var-card__no">Variable 2</div>
+    <div class="var-card__name">Failure到達度（RIR）</div>
+    <dl>
+      <dt>定義</dt><dd>各セットでの限界からの距離</dd>
+      <dt>標準値</dt><dd>RIR 0（1セット目で限界到達する重量）</dd>
+      <dt>役割</dt><dd>全運動単位の動員・代謝ストレス最大化</dd>
+      <dt>身体論</dt><dd>漸進性の保証</dd>
+    </dl>
+    <div class="var-card__refs">
+      <ul>
+        <li>Schoenfeld 2017（メタ解析）：failure到達時は30〜85% 1RMで肥大効果同等</li>
+        <li>Refalo 2023：RIR 0-2レンジで肥大効果最大</li>
+        <li>Morton 2016：低負荷failure = 高負荷failureで筋断面積増加同等</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="var-card fade-in">
+    <div class="var-card__no">Variable 3</div>
+    <div class="var-card__name">意識的収縮</div>
+    <dl>
+      <dt>定義</dt><dd>標的筋への意識集中、フィニッシュ位での1秒スクイーズ</dd>
+      <dt>役割</dt><dd>運動単位選択的動員・補助筋への流出防止</dd>
+      <dt>身体論</dt><dd>制御の標的精度</dd>
+    </dl>
+    <div class="var-card__refs">
+      <ul>
+        <li>Schoenfeld 2018 RCT：internal focus群で上腕二頭筋肥大12.4% vs external focus群6.9%</li>
+        <li>Calatayud 2016：意識的収縮でEMG活動15〜22%↑</li>
+        <li>Snyder &amp; Fry 2012：標的筋動員↑</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="var-card fade-in">
+    <div class="var-card__no">Variable 4</div>
+    <div class="var-card__name">ROM（可動域）</div>
+    <dl>
+      <dt>定義</dt><dd>動作の可動範囲、特にストレッチポジションでの負荷</dd>
+      <dt>役割</dt><dd>全筋線維への張力配分・長筋長位での機械的張力</dd>
+      <dt>身体論</dt><dd>可動域そのもの</dd>
+    </dl>
+    <div class="var-card__refs">
+      <ul>
+        <li>Schoenfeld 2020（メタ解析）：フルROM &gt; パーシャルROMで肥大効果↑</li>
+        <li>Pedrosa 2022 RCT：ストレッチポジションでの肥大効果優位</li>
+        <li>Maeo 2021：長筋長位での負荷が筋肥大に有利</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="var-card fade-in">
+    <div class="var-card__no">Variable 5</div>
+    <div class="var-card__name">ボリューム</div>
+    <dl>
+      <dt>算出式</dt><dd>週ボリューム = セット数 × レップ × 部位</dd>
+      <dt>標準値</dt><dd>週10〜20セット/部位</dd>
+      <dt>身体論</dt><dd>容量</dd>
+    </dl>
+    <div class="var-card__refs">
+      <ul>
+        <li>Schoenfeld 2017（メタ解析）：用量反応関係確認</li>
+        <li>Baz-Valle 2019：週10〜20セット/部位が肥大効果の最適レンジ</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="var-card fade-in">
+    <div class="var-card__no">Variable 6</div>
+    <div class="var-card__name">頻度</div>
+    <dl>
+      <dt>標準値</dt><dd>週2〜3回/部位（5分割なら週1〜2回でも代替可）</dd>
+      <dt>身体論</dt><dd>頻度</dd>
+    </dl>
+    <div class="var-card__refs">
+      <ul>
+        <li>筋タンパク合成は刺激後24〜48時間ピーク、72時間で基底（Damas 2016）</li>
+        <li>Schoenfeld 2016（メタ解析）：週2回/部位 &gt; 週1回/部位</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="var-card fade-in">
+    <div class="var-card__no">Variable 7</div>
+    <div class="var-card__name">インターバル</div>
+    <dl>
+      <dt>定義</dt><dd>セット間の休息時間</dd>
+      <dt>標準値</dt><dd>60〜90秒（ST主軸の代謝ストレス維持に最適）</dd>
+      <dt>役割</dt><dd>代謝物クリアランス制御・連続セット間の刺激質維持</dd>
+      <dt>身体論</dt><dd>容量の質的調整</dd>
+    </dl>
+    <div class="var-card__refs">
+      <ul>
+        <li>Schoenfeld 2016 RCT：3分インターバル群で筋肥大↑（高負荷時）</li>
+        <li>Henselmans 2014：ST主軸では60〜90秒で代謝ストレス維持</li>
+        <li>Schoenfeld 2014：短インターバルで成長ホルモン分泌↑</li>
+      </ul>
+    </div>
+  </div>
+    </div>
+  </div>
+</div>
+
+<div class="article-acc__item article-acc--rose" id="sec-07">
+  <div class="article-acc__header" role="button" tabindex="0" aria-expanded="false">
+    <div class="article-acc__header-text">
+      <span class="article-acc__num">07</span>
+      <div>
+        <span class="article-acc__title">乗算構造と進歩の指標</span>
+        <span class="article-acc__sub">1要素ゼロなら全体ゼロ。アロスタシス更新を問う</span>
+      </div>
+    </div>
+    <span class="article-acc__icon">+</span>
+  </div>
+  <div class="article-acc__body">
+    <div class="article-acc__content">
+<div class="text-panel fade-in">
+  <p>7変数はすべて<strong>乗算</strong>であり加算ではない。</p>
+
+  <p>1要素がゼロなら全体がゼロ。</p>
+
+  <p>これは身体論の積の原理と完全整合する。</p>
+</div>
+
+  <blockquote class="fade-in">
+    <p>健康は運動・栄養・睡眠の積である。<br>どれか1つが0なら、全体が0になる。</p>
+  </blockquote>
+
+<div class="text-panel fade-in">
+  <p>刺激公式の内部にも、同じ構造が貫徹している。</p>
+</div>
+
+  <h3 class="fade-in">失敗パターンの診断</h3>
+
+<div class="text-panel fade-in">
+  <p>優先度順に並べると、致命度はこうなる。</p>
+</div>
+
+  <ul class="fade-in">
+    <li><strong>テンポ崩壊</strong> → 張力消失 → 刺激の質ゼロ（最も致命的）</li>
+    <li><strong>RIR=3以上</strong> → 高閾値運動単位未動員</li>
+    <li><strong>意識的収縮なし</strong> → 補助筋優位</li>
+    <li><strong>パーシャルROM</strong> → 部分適応</li>
+    <li><strong>週ボリューム不足</strong> → 適応閾値未達</li>
+    <li><strong>頻度不足</strong> → 合成サイクル未活用</li>
+    <li><strong>インターバル過長</strong> → 代謝ストレス消失（最も影響小）</li>
+  </ul>
+
+  <h3 class="fade-in">進歩の指標</h3>
+
+<div class="text-panel fade-in">
+  <p>身体論のプロセス原理に従い、「肥大したか」ではなく、<strong>アロスタシスの更新が持続しているか</strong>を問う。</p>
+</div>
+
+  <ol class="fade-in">
+    <li>テンポ崩壊なくRIR=0到達できたか</li>
+    <li>レップ減衰の自然性（10→8→6）</li>
+    <li>意識的収縮の深度・パンプの強度</li>
+    <li>ROMの完遂</li>
+    <li>週ボリューム達成度</li>
+    <li>頻度の維持</li>
+    <li>インターバル管理</li>
+  </ol>
+
+<div class="text-panel fade-in">
+  <p>共通指標として、関節違和感ゼロ・翌日の疲労が筋腹に出る（関節ではなく）こと。</p>
+</div>
+    </div>
+  </div>
+</div>
+
+<div class="article-acc__item article-acc--purple" id="sec-08">
+  <div class="article-acc__header" role="button" tabindex="0" aria-expanded="false">
+    <div class="article-acc__header-text">
+      <span class="article-acc__num">08</span>
+      <div>
+        <span class="article-acc__title">重量は導出変数である</span>
+        <span class="article-acc__sub">条件を設定すれば、正解重量は自動で導かれる</span>
+      </div>
+    </div>
+    <span class="article-acc__icon">+</span>
+  </div>
+  <div class="article-acc__body">
+    <div class="article-acc__content">
+
+  <div class="formula-box fade-in">
+<span class="formula-em">重量 = f(テンポ, Failure, 意識的収縮)</span>
+  </div>
+
+<div class="text-panel fade-in">
+  <p>3変数を条件として設定した時点で、重量は一意に決定される。</p>
+</div>
+
+  <h3 class="fade-in">正解重量の導出式</h3>
+
+  <ol class="fade-in">
+    <li>テンポ4-1-4を維持できる</li>
+    <li>8〜10レップでRIR=0到達する</li>
+    <li>意識的収縮を維持できる</li>
+  </ol>
+
+<div class="text-panel fade-in">
+  <p>この3条件を満たす最軽量が、その日の正解重量。</p>
+</div>
+
+  <div class="highlight-block fade-in">
+    <p><strong>重量は選ぶものではなく、条件から自動的に導かれる。</strong></p>
+  </div>
+
+<div class="text-panel fade-in">
+  <p>これが重量追求型POからの構造的転回の核心である。</p>
+</div>
+
+  <h3 class="fade-in">重量追求型POとの最終的差異</h3>
+
+  <div class="value-table fade-in">
+    <table>
+      <thead>
+        <tr><th>項目</th><th>重量追求型</th><th>刺激公式</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>目的</td><td>筋肥大</td><td>上質な刺激</td></tr>
+        <tr><td>結果</td><td>肥大のみ</td><td>全適応階層</td></tr>
+        <tr><td>公式</td><td>重量×レップ</td><td>7変数の積</td></tr>
+        <tr><td>重量の位置</td><td>独立変数</td><td>従属変数</td></tr>
+        <tr><td>進歩変数</td><td>1次元</td><td>7次元</td></tr>
+        <tr><td>優先度</td><td>重量↑のみ</td><td>質4→量3</td></tr>
+        <tr><td>関節・腱</td><td>累積ダメージ</td><td>保全</td></tr>
+        <tr><td>生涯継続</td><td>構造的に困難</td><td>設計に組込済</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="fade-in">適応の階層</h3>
+
+<div class="text-panel fade-in">
+  <p>上質な刺激が入力されたとき、身体のアロスタシスは以下の階層で更新される。</p>
+</div>
+
+  <ul class="fade-in">
+    <li><strong>① 即時適応（数分〜数時間）</strong>：細胞シグナル活性化・遺伝子発現変化</li>
+    <li><strong>② 急性適応（数日）</strong>：筋タンパク合成↑・神経適応・修復反応</li>
+    <li><strong>③ 構造適応（数週〜数ヶ月）</strong>：<strong>筋肥大</strong>・腱剛性・ミトコンドリア新生</li>
+    <li><strong>④ 機能適応（数ヶ月〜数年）</strong>：最大筋力↑・パワー↑・持久性能↑</li>
+    <li><strong>⑤ 系統的適応（年単位）</strong>：筋線維タイプ移行・骨密度・結合組織リモデリング</li>
+  </ul>
+
+  <div class="highlight-block fade-in">
+    <p><strong>筋肥大は③のみ。上質な刺激は①〜⑤すべてを引き起こす。</strong></p>
+  </div>
+
+<div class="text-panel fade-in">
+  <p>身体論の出力（mTOR活性化・ミトコンドリア新生・神経適応・内分泌最適化・グリンファティック系活性化）は、すべてこの階層に位置づけられる。</p>
+</div>
+    </div>
+  </div>
+</div>
+
+<div class="article-acc__item article-acc--purple" id="sec-09">
+  <div class="article-acc__header" role="button" tabindex="0" aria-expanded="false">
+    <div class="article-acc__header-text">
+      <span class="article-acc__num">09</span>
+      <div>
+        <span class="article-acc__title">身体論・実存科学との完全接続</span>
+        <span class="article-acc__sub">T·A⇒Pmax、日本刀的設計、M⇒¬Fとの同形性</span>
+      </div>
+    </div>
+    <span class="article-acc__icon">+</span>
+  </div>
+  <div class="article-acc__body">
+    <div class="article-acc__content">
+
+  <h3 class="fade-in">身体論の統合方程式における位置</h3>
+
+  <div class="formula-box fade-in">
+健康 = 運動 × 栄養 × 睡眠
+　　　　　↑
+　　　ここを精密化したのが本公式
+
+<span class="formula-em">運動 = 刺激の質 × 刺激の量</span>
+　　 = (テンポ × Failure × 意識的収縮 × ROM)
+　　 　× (ボリューム × 頻度 × インターバル)
+  </div>
+
+<div class="text-panel fade-in">
+  <p>刺激公式は身体論の「運動」の項を精密化するものであり、<strong>身体論の枠組みに完全に従属する</strong>。</p>
+
+  <p>栄養・睡眠は同列の入力として身体論に既に位置づけられており、本公式の外部にある。</p>
+</div>
+
+  <h3 class="fade-in">T·A⇒Pmaxとの統合</h3>
+
+  <div class="formula-box fade-in">
+Pmax = プライミング × 健康
+健康 = 運動 × 栄養 × 睡眠
+<span class="formula-em">運動 = S（本公式の対象）</span>
+  </div>
+
+  <ul class="fade-in">
+    <li><strong>天命（T）</strong>：目的関数を規定</li>
+    <li><strong>アロスタシス（A）</strong>：健康そのもの</li>
+    <li><strong>Pmax</strong>：プライミング × 運動 × 栄養 × 睡眠の総合出力</li>
+  </ul>
+
+  <h3 class="fade-in">日本刀的設計思想</h3>
+
+  <ul class="fade-in">
+    <li>折り返し鍛錬 → テンポ・Failure</li>
+    <li>不要な肉を削ぐ → 意識的収縮・ROM</li>
+    <li>適切な回数 → ボリューム・頻度・インターバル</li>
+  </ul>
+
+  <div class="highlight-block fade-in">
+    <p><strong>本公式と完全に同形である。</strong></p>
+  </div>
+
+  <h3 class="fade-in">認識論M⇒¬Fとの同形性</h3>
+
+<div class="text-panel fade-in">
+  <p>両者とも、構造的に同じ転回をしている。</p>
+</div>
+
+  <ul class="fade-in">
+    <li>二値（やる/やらない）から、構造（質）への転回</li>
+    <li>結果を直接操作するのではなく、生成条件を設計</li>
+    <li>強制ではなく、条件設定</li>
+  </ul>
+    </div>
+  </div>
+</div>
+
+<div class="article-acc__item article-acc--gold" id="sec-10">
+  <div class="article-acc__header" role="button" tabindex="0" aria-expanded="false">
+    <div class="article-acc__header-text">
+      <span class="article-acc__num">10</span>
+      <div>
+        <span class="article-acc__title">結論・哲学的含意・知的誠実性</span>
+        <span class="article-acc__sub">公式の最終提示と、本書の位置づけの宣言</span>
+      </div>
+    </div>
+    <span class="article-acc__icon">+</span>
+  </div>
+  <div class="article-acc__body">
+    <div class="article-acc__content">
+
+  <h3 class="fade-in">刺激の公式（最終形）</h3>
+
+  <div class="formula-box fade-in">
+<span class="formula-em">S = (テンポ × Failure × 意識的収縮 × ROM)</span>
+<span class="formula-em">　　× (ボリューム × 頻度 × インターバル)</span>
+<span class="formula-sub">前半 = 刺激の質　／　後半 = 刺激の量</span>
+  </div>
+
+<div class="text-panel fade-in">
+  <p>7変数。優先度順に配列。すべてジムで直接操作可能。</p>
+
+  <p>これは身体論の「運動 = 刺激の質 × 刺激の量」を実装レベルまで分解したものであり、<strong>身体論の枠組みに完全に従属する</strong>。</p>
+
+  <p>栄養・睡眠は身体論の統合方程式に同列の入力として位置づけられており、本公式の外部にある。</p>
+</div>
+
+  <div class="highlight-block fade-in">
+    <p><strong>筋肥大はSの帰結の一つに過ぎない。<br>身体は天命遂行のインフラ。<br>Sを最大化すれば、アロスタシスが更新され、天命整合のプロセスが進行する。</strong></p>
+  </div>
+
+<div class="text-panel fade-in">
+  <p>これがT·A⇒Pmaxの運動入力における実装原理である。</p>
+</div>
+
+  <h3 class="fade-in">哲学的含意</h3>
+
+<div class="text-panel fade-in">
+  <p>重量追求型PO ＝ <strong>結果の最大化</strong>。<br>刺激公式モデル ＝ <strong>生成条件の最大化</strong>。</p>
+
+  <p>身体は命令に従うシステムではなく、<strong>入力に応答するシステム</strong>である。</p>
+
+  <p>「肥大しろ」と命令しても肥大しない。<br>上質な刺激を入れれば、アロスタシスが自律的に更新される。</p>
+
+  <p>これは認識論M⇒¬F・T·A⇒Pmaxと同形の構造であり、<strong>実存科学の根本構造と完全に一致する</strong>。</p>
+
+  <p>身体への介入も「強制」ではなく「条件設定」である。</p>
+</div>
+
+  <h3 class="fade-in">本書の位置づけ──知的誠実性の宣言</h3>
+
+  <h4 class="fade-in">既存知に基づく部分</h4>
+
+<div class="text-panel fade-in">
+  <p>本書で扱う7変数の個別エビデンスは、すべて既存の研究に基づく。</p>
+</div>
+
+  <ul class="fade-in">
+    <li>テンポと筋肥大効果：Burd、谷本道哉、石井直方 ら</li>
+    <li>Failure到達と適応：Schoenfeld、Refalo、Morton、Mitchell ら</li>
+    <li>意識的収縮の効果：Schoenfeld、Calatayud、Snyder &amp; Fry、Wakahara ら</li>
+    <li>ROMの重要性：Schoenfeld、Pedrosa、Maeo ら</li>
+    <li>ボリュームの用量反応関係：Schoenfeld、Baz-Valle、Heaselgrave ら</li>
+    <li>頻度の最適化：Schoenfeld、Damas、Ralston ら</li>
+    <li>インターバルの効果：Schoenfeld、Henselmans ら</li>
+  </ul>
+
+<div class="text-panel fade-in">
+  <p>これらの個別変数は、現代筋肥大科学において確立された既存知である。</p>
+
+  <p>本書はそれらの研究成果を否定するものでも、新たに発見するものでもない。</p>
+</div>
+
+  <h4 class="fade-in">本書の独自構築部分</h4>
+
+  <ol class="fade-in">
+    <li><strong>7変数の優先度設計</strong>：欠落時の損失を基準とした優先順位の決定</li>
+    <li><strong>重量の従属変数化</strong>：テンポ・Failure・意識的収縮から導出される従属変数として明示的に定式化</li>
+    <li><strong>身体論への統合</strong>：「運動 = 刺激の質 × 刺激の量」という身体論の方程式への完全従属化</li>
+    <li><strong>目的関数の転回</strong>：「筋肥大の最大化」から「上質な刺激の最大化」への構造的転回</li>
+    <li><strong>実存科学との同形性</strong>：T·A⇒Pmax・M⇒¬Fとの構造的同形性の明示</li>
+    <li><strong>日本刀的設計思想との対応</strong>：機能美の哲学との接続</li>
+  </ol>
+
+<div class="text-panel fade-in">
+  <p>これらは確認できる範囲で他に類例のない、私独自の統合構造である。</p>
+</div>
+
+  <h4 class="fade-in">本書の性質</h4>
+
+<div class="text-panel fade-in">
+  <p>本書は学術論文ではない。<br>査読を経た新規発見の報告でもない。</p>
+
+  <p>本書は<strong>実存科学・身体論の体系における運動入力の実装フレームワーク</strong>である。</p>
+
+  <p>世界中の研究者が出した既存知を、実存科学の文脈で再統合し、生涯継続可能な身体設計のために再構成したもの──それが本書の正確な位置づけである。</p>
+</div>
+
+  <h4 class="fade-in">適用範囲についての留保</h4>
+
+<div class="text-panel fade-in">
+  <p>本書は私自身の目的関数に最適化されている。</p>
+
+  <p>ただし「健康上のメリットの最大化」「関節保全」「生涯継続」という観点は、ある程度の普遍性を持つ。</p>
+
+  <p>したがって本書は私一人のためのものではなく、同様の目的を持つ人々への共有可能な構造として提示される。</p>
+
+  <p>ただし<strong>普遍的に正しい唯一の方法</strong>を主張するものではない。</p>
+
+  <p>各人の身体・目的・文脈に応じた調整は、各人の判断に委ねられる。</p>
+</div>
+    </div>
+  </div>
+</div>
+
+</div><!-- /article-acc -->
+
+<!-- 次に読むコラム -->
+<div class="related-links fade-in">
+  <p class="related-links__label">次に読むコラム</p>
+  <ul>
+    <li><a href="column-health-as-sport.html">競技としての健康 ── 過去の自分とだけ競うスポーツ &rarr;</a></li>
+    <li><a href="../body-two-futures.html">二つの身体、二つの未来 &rarr;</a></li>
+    <li><a href="../body-gym-pharmacy.html">ジムは薬局 &rarr;</a></li>
+    <li><a href="../body-care.html">天命ボディケア &rarr;</a></li>
+    <li><a href="../body-history-001.html">天命ボディ・ヒストリー &rarr;</a></li>
+  </ul>
+</div>
+
+<!-- 原典 -->
+<div class="related-links fade-in">
+  <p class="related-links__label">原典</p>
+  <ul>
+    <li><a href="../body.html">身体論 ── 天命を全うするための身体の方程式 &rarr;</a></li>
+    <li><a href="../body-manual.html">天命ボディマニュアル &rarr;</a></li>
+    <li><a href="../body-program.html">天命ボディプログラム &rarr;</a></li>
+  </ul>
+</div>
+
+  <p class="fade-in" style="font-size: 14px; color: rgba(235, 232, 225, 0.45); margin-top: 32px; font-style: italic;">本コラムは「身体論──天命を全うするための身体の方程式」（実存科学研究所）の運動入力項を実装レベルまで精密化したものです。確立日：2026年5月11日。</p>
+  <p style="font-size: 14px; color: rgba(235, 232, 225, 0.45);">&copy; 箭内宏紀 / 実存科学研究所</p>
+
+  <!-- Navigation -->
+
+<nav class="nav-footer fade-in">
+    <a href="../archives.html">&larr; 記事一覧へ戻る</a>
+  </nav>
+
+</div>
+
+
+<section class="cta-block fade-in">
+  <div class="container">
+    <h2 class="cta-block__title">天命の言語化セッション&trade;</h2>
+    <p class="cta-block__desc">2時間で天命が言語化できる場所。</p>
+    <div class="cta-block__features">
+      <span class="cta-block__feature">Zoom完結</span>
+      <span class="cta-block__feature">事前学習不要</span>
+      <span class="cta-block__feature">対話のみ</span>
+    </div>
+    <a href="../trial.html" class="btn">無料トライアルに申し込む &rarr;</a>
+  </div>
+</section>
+
+  <footer class="site-footer">
+  <div class="container--wide">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <p class="footer-col__title">The Meta</p>
+        <a href="../about-existential-science.html">実存科学とは</a>
+        <a href="../epistemology.html">認識論</a>
+        <a href="../semantics.html">意味論</a>
+        <a href="../society.html">社会論</a>
+        <a href="../body.html">身体論</a>
+        <a href="../relations.html">関係論</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Contents</p>
+        <a href="../specials.html">特別シリーズ</a>
+        <a href="../archives.html">記事一覧</a>
+        <a href="../video-list.html">動画一覧</a>
+        <a href="../glossary.html">用語集</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Session</p>
+        <a href="../session.html">天命の言語化セッション™</a>
+        <a href="../session-flow.html">セッションの流れ</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">Institute</p>
+        <a href="../founder.html">創始者 箭内宏紀</a>
+        <a href="../contact.html">お問い合わせ</a>
+        <a href="../legal/legal-tokushoho.html">特定商取引法</a>
+        <a href="../legal/legal-privacy-policy.html">プライバシーポリシー</a>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; 箭内宏紀 / 実存科学研究所 ── Existential Science Institute</p>
+  </div>
+</footer>
+
+  <script src="../js/main.min.js?v=13"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+"datePublished": "2026-05-11",
+"dateModified": "2026-05-11",
+  "headline": "刺激の公式──運動入力の精密化",
+  "description": "身体論「運動 = 刺激の質 × 刺激の量」の実装レベル定式。S =（テンポ × Failure × 意識的収縮 × ROM）×（ボリューム × 頻度 × インターバル）。重量は従属変数。生涯継続可能な身体設計のための7変数フレームワーク。",
+  "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-stimulus-formula.html",
+  "author": {
+    "@type": "Person",
+    "name": "箭内宏紀",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com/founder.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  },
+  "inLanguage": "ja",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "実存科学研究所",
+    "url": "https://jitsuzon-kagaku-lab.yanaihiroki.com"
+  }
+}
+</script>
+
+<script>
+(function(){
+  document.querySelectorAll('.article-acc__header').forEach(function(header){
+    header.addEventListener('click',function(){
+      var item=this.parentElement;
+      var body=item.querySelector('.article-acc__body');
+      var content=body.querySelector('.article-acc__content');
+      var isOpen=item.classList.contains('is-open');
+      this.setAttribute('aria-expanded',!isOpen);
+      if(isOpen){
+        body.style.maxHeight='0';
+        item.classList.remove('is-open');
+      }else{
+        body.style.maxHeight=content.scrollHeight+'px';
+        item.classList.add('is-open');
+      }
+    });
+    header.addEventListener('keydown',function(e){
+      if(e.key==='Enter'||e.key===' '){e.preventDefault();this.click();}
+    });
+  });
+
+})();
+</script>
+
+  <!-- Search Modal -->
+  <div class="search-overlay">
+    <div class="search-modal"><button class="search-close" aria-label="閉じる">&times;</button>
+      <div class="search-input-wrap">
+        <span class="search-input-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+        <input type="text" class="search-input" placeholder="キーワードで検索..." autocomplete="off" aria-label="サイト内検索">
+      </div>
+      <div class="search-results"></div>
+      <div class="search-hint"><span class="search-hint__desktop">ESC to close · ⌘K to toggle</span><span class="search-hint__mobile">背景タップまたは ✕ で閉じる</span></div>
+    </div>
+  </div>
+</body>
+</html>

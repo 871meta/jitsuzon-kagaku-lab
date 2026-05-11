@@ -1749,6 +1749,14 @@
     <priority>0.4</priority>
   </url>
 
+  <!-- ===== ARTICLES: column-stimulus-formula ===== -->
+  <url>
+    <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-stimulus-formula.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- ===== ARTICLES: column-health-as-sport ===== -->
   <url>
     <loc>https://jitsuzon-kagaku-lab.yanaihiroki.com/articles/column-health-as-sport.html</loc>
